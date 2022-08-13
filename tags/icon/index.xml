@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>icon on 点滴随记</title>
+        <link>https://hugo.otcg.org/tags/icon/</link>
+        <description>Recent content in icon on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.otcg.org/tags/icon/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在R3300L类&#43;Armbian上安装Hugo服务器</title>
+        <link>https://hugo.otcg.org/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-01.jpg" alt="Featured image of post 在R3300L类&#43;Armbian上安装Hugo服务器" /&gt;&lt;p&gt;在R3300L(及类似架构设备)等使用S905系列的电视盒子上安装Armbian, 在Armbian系统下可以安装Hugo服务器。&lt;/p&gt;
+&lt;h2 id=&#34;编译及安装hugo&#34;&gt;编译及安装Hugo&lt;/h2&gt;
+&lt;p&gt;选择: Hugo最新版本, +extended, 支持linux/arm64系统&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;说明: R3300L的CPU是S905L, Arm架构CPU, 四核A53&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有多种方式可以安装Hugo, Armbian提供的apt工具就可以安装Hugo, 但基于Ubuntu传统, 使用这种方式下载的版本较旧, 很多功能并不支持。&lt;br&gt;
+注: 当前Armbian上使用apt可以安装的Hugo版本仅为0.40.1-1, 如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ apt search hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Sorting... Done
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Full Text Search... Done
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo/bionic 0.40.1-1 arm64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Fast and flexible Static Site Generator written in Go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Hugo当前最新Release版本是v0.101.0, 下载地址: &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.101.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo v0.101.0&lt;/a&gt;&lt;br&gt;
+但是, &lt;strong&gt;Release中仅提供了未+Extended的Linux/Arm64版本&lt;/strong&gt;, 而缺少扩展功能(Extended), 有些功能或主题就无法使用，因此需要重新编译。&lt;/p&gt;
+&lt;p&gt;注意:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不能使用手机+Termux, 借助手机较强的CPU性能和较高的配置进行编译, 因为编译出来的是For Android/Arm64, 而不是For Linux/Arm64, 因而无法使用。&lt;/li&gt;
+&lt;li&gt;同理, 在电脑+Linux上做编译也不行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编译hugo相关参考文档如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/installing/#build-from-source-on-mac&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Build from Source on Mac&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://apoorv.blog/install-hugo-extended-arm/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Install Update Hugo Extended for ARM in Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;编译要求&#34;&gt;编译要求:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;gt;=Go 1.18版本的go&lt;/li&gt;
+&lt;li&gt;最新版本的Hugo源代码包&lt;/li&gt;
+&lt;li&gt;(实际使用)2.8G的内存(含SWAP分区2G), 估计至少需要1G的内存(含SWAP分区)。&lt;br&gt;
+否则会出现报错, 且运行极长的时间(以十数小时数计), 但是最后还无法成功完成编译。&lt;br&gt;
+编译报错信息为:
+&lt;blockquote&gt;
+&lt;p&gt;go build github.com/gohugoio/locales compressed:&lt;br&gt;
+: /usr/local/go/pkg/tool/linux_amd64/compile: signal: killed&lt;/p&gt;
+&lt;/blockquote&gt;
+参考:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cxybb.com/article/sinat_35406909/105383185&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Golang - go build编译项目时出现signal: killed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000012219689&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用SWAP分区’ 解决golang编译项目时出现signal: killed’&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/tmp空间需要大于400M, 估计至少应该超过1G: 否则会报错。&lt;br&gt;
+编译报错信息为:
+&lt;blockquote&gt;
+&lt;p&gt;* Github.com/bep/golibsass/internal/libsass  &lt;br&gt;
+/tmp/cctAMSUf.s: Assembler messages:  &lt;br&gt;
+/tmp/cctAMSUf.s: Fatal error: can’t write 3916 types to section  &lt;br&gt;
+.debug_loc of $WORK/b490/_x032.o: ‘No space left on device’&lt;br&gt;
+/tmp/cctAMSUf.s: Fatal error: can’t close $WORK/b490/_x032.o: No space left on device&lt;/p&gt;
+&lt;/blockquote&gt;
+在运行go build时查看/tmp目录, 确认编译时是使用/tmp做为编译目录, 也基本确认/tmp空间不足会出现错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;编译操作&#34;&gt;编译操作:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装(当前)最新稳定版本的go&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/yaojiawan/article/details/102833371&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;初学GO笔记（1）-Arm64 linux上的安装&lt;/a&gt;。&lt;br&gt;
+同样由于Ubuntu传统, 可以用apt直接安装的go包版本仅为1.10.3, 无法用于编译Hugo, 因此改用tar包安装。&lt;br&gt;
+go包下载列表在&lt;a class=&#34;link&#34; href=&#34;https://go.dev/dl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;go download&lt;/a&gt;, 当前最新稳定版本tar包是&lt;a class=&#34;link&#34; href=&#34;https://go.dev/dl/go1.18.4.linux-arm64.tar.gz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;go1.18.4.linux-arm64.tar.gz&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# wget &lt;a class=&#34;link&#34; href=&#34;https://go.dev/dl/go1.18.4.linux-arm64.tar.gz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://go.dev/dl/go1.18.4.linux-arm64.tar.gz&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解压下载的go包:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# tar zxvf go1.18.4.linux-arm64.tar.gz&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;移到/usr/local下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mv go /usr/local/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看go的版本信息:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# /usr/local/go/bin/go version&lt;br&gt;
+go version go1.18.4 linux/arm64&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;确认go版本没问题后, 开始建立go环境:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mkdir /opt/go&lt;br&gt;
+# vim /etc/profile&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在文件末尾增加:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;export GOROOT=/usr/local/go&lt;br&gt;
+export GOPATH=/opt/go&lt;br&gt;
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;重新登录(新登录一回就行)后, 查看环境变量是否生效:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# echo $PATH&lt;br&gt;
+/opt/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&lt;br&gt;
+# echo $GOROOT&lt;br&gt;
+/usr/local/go&lt;br&gt;
+# echo $GOPATH&lt;br&gt;
+/opt/go&lt;br&gt;
+确认环境变量已生效!&lt;br&gt;
+修改配置, 改用国内仓库以提高速度:&lt;br&gt;
+# go env -w GOPROXY=https://goproxy.cn,direct&lt;br&gt;
+查看, 并确认已修改成功:&lt;br&gt;
+# go env | grep GOPROXY&lt;br&gt;
+GOPROXY=&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://goproxy.cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://goproxy.cn&lt;/a&gt;,direct&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原为: &lt;code&gt;GOPROXY=&amp;quot;https://proxy.golang.org,direct&amp;quot;&lt;/code&gt;&lt;br&gt;
+确认Go1.18.4已安装完成&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在R3300L上准备编译Hugo的环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;准备内存空间, 以配合编译Hugo的内存需求(估计至少大于1G)&lt;br&gt;
+由于R3300L的实际内存仅为805M, 无法满足Hugo编译需要, 因此需要临时增加Swap分区以增加可用内存。&lt;br&gt;
+创建做为swap分区的文件, 命令中创建了一个2G的文件:
+&lt;blockquote&gt;
+&lt;p&gt;# dd if=/dev/zero of=/root/swapfile bs=1M count=2048&lt;/p&gt;
+&lt;/blockquote&gt;
+格式化为交换分区文件, 建立swap的文件系统:
+&lt;blockquote&gt;
+&lt;p&gt;# mkswap /root/swapfile&lt;/p&gt;
+&lt;/blockquote&gt;
+启用交换分区(Swap)文件:
+&lt;blockquote&gt;
+&lt;p&gt;# swapon /root/swapfile&lt;/p&gt;
+&lt;/blockquote&gt;
+查看交换分区状态:
+&lt;blockquote&gt;
+&lt;p&gt;# swapon&lt;br&gt;
+NAME TYPE SIZE USED PRIO&lt;br&gt;
+/dev/zram1 partition 400.5M 166.7M 5&lt;br&gt;
+/root/swapfile file 2G 7.6M -2&lt;/p&gt;
+&lt;/blockquote&gt;
+注意: 这样的设置方法, 系统重启后不再有效!&lt;/li&gt;
+&lt;li&gt;增加/tmp目录空间, 以配合编译Hugo的存储空间需求(估计至少也大于1G)&lt;br&gt;
+使用df命令查看空间:
+&lt;blockquote&gt;
+&lt;p&gt;# df&lt;br&gt;
+Filesystem 1K-blocks Used Available Use% Mounted on&lt;br&gt;
+…&lt;br&gt;
+tmpfs 410140 8 410132 1% /tmp&lt;br&gt;
+…&lt;/p&gt;
+&lt;/blockquote&gt;
+可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。 
+由于/root的空间够用, 因此改为/root下目录做为/tmp:&lt;br&gt;
+新建tmp的目录:
+&lt;blockquote&gt;
+&lt;p&gt;# mkdir /root/tmp&lt;/p&gt;
+&lt;/blockquote&gt;
+给这个目录设置0777权限(避免有什么权限问题):
+&lt;blockquote&gt;
+&lt;p&gt;# chmod 0777 /root/tmp&lt;/p&gt;
+&lt;/blockquote&gt;
+把新建的/root/tmp目录bind到/tmp:
+&lt;blockquote&gt;
+&lt;p&gt;# mount &amp;ndash;bind /root/tmp /tmp&lt;/p&gt;
+&lt;/blockquote&gt;
+再用df命令查看, 已看不到/tmp这一条记录。&lt;br&gt;
+操作方法参考:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/developerof/article/details/23035843&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;• linux 修改/tmp目录的大小&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/zhangmingcheng/p/6743908.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;• mount &amp;ndash;bind 的妙用&lt;/a&gt;&lt;br&gt;
+注: 这样的设置方法, 系统重启后也不再有效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译Hugo&lt;br&gt;
+Hugo源代码包的地址如下:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/archive/v0.101.0.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;• v0.101.0.zip&lt;/a&gt;&lt;br&gt;
+或&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/archive/refs/tags/v0.101.0.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;• v0.101.0.zip&lt;/a&gt;&lt;br&gt;
+解压Hugo源代码tar包:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# tar zxvf v0.101.0.zip&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;进入Hugo目录:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# cd v0.101.0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;开始编译Hugo, 带extended参数:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# go build &amp;ndash;tags extended&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;编译完成只生成一个文件: hugo&lt;br&gt;
+查看版本:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ./hugo version&lt;br&gt;
+hugo v0.101.0+extended linux/amd64 BuildDate=unknown&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注: 在R3300L上两次成功编译Hugo的时长分别是: 24分钟, 3分钟, 很奇怪, 似乎都是这个规律。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;新建hugo目录&#34;&gt;新建hugo目录&lt;/h2&gt;
+&lt;p&gt;新建一个网站(的目录结构):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo mkdir /mnt/hugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo chown jimway:jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd /mnt/hugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo new site blog  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Congratulations! Your new Hugo site is created in /mnt/hugo/blog.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Just a few more steps and you&amp;#39;re ready to go:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. Download a theme into the same-named folder.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Choose a theme from https://themes.gohugo.io/ or
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   create your own with the &amp;#34;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;#34; command.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. Perhaps you want to add some content. You can add single files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   with &amp;#34;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. Start the built-in live server via &amp;#34;hugo server&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;至此, 站点目录已经建立完成。&lt;/p&gt;
+&lt;h2 id=&#34;选择并下载主题themes&#34;&gt;选择并下载主题(themes)&lt;/h2&gt;
+&lt;p&gt;hugo提供了非常丰富的&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;主题库&lt;/a&gt;供下载选用。&lt;br&gt;
+选择了以下几个备用(特点: 简洁):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/blackburn/&#34;  title=&#34;Blackburn主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blackburn主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-diary/&#34;  title=&#34;Diary主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Diary主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-fuji/&#34;  title=&#34;Fuji主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fuji主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-docport/&#34;  title=&#34;docPort主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docPort主题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下载并安装上述主题(根据相应主题中的安装说明)到blog的themes目录下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/yoshiharuyamashita/blackburn.git themes/blackburn
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 注: Diray这个下载是参照blackburn写的, 文档中没有安装说明  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git init  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 注: 使用git subodule add命令前要在同一目录下调用git init, 否则可能会出现以下错误: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###     Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/dsrkafuu/hugo-theme-fuji.git themes/fuji
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 注: 这个是使用git submodule add命令  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/jimway71/hugo-theme-pure.git themes/pure  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/vjeantet/hugo-theme-docport.git themes/hugo-theme-docport  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;themes分析:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-docport/&#34;  title=&#34;docPort主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docPort主题&lt;/a&gt;:&lt;br&gt;
+适合用一个文档做整个网站入口, 即网站入口就是一个文档, 而不是一个页面(分别指向不同文档), 并不适合做普通网站, 比如博客(blog)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;:&lt;br&gt;
+适合做blog:
+&lt;ul&gt;
+&lt;li&gt;分左中右三列布局&lt;/li&gt;
+&lt;li&gt;左/右有文本导航&lt;/li&gt;
+&lt;li&gt;有标签(tags)/目录(Categories)分类&lt;/li&gt;
+&lt;li&gt;左侧导航可以添加link链接&lt;/li&gt;
+&lt;li&gt;左侧有多种配色可选&lt;/li&gt;
+&lt;li&gt;左上标题、说明均可自定义&lt;br&gt;
+&lt;strong&gt;补充: 后面选的&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;也满足上述要求&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;选择主题-启动hugo&#34;&gt;选择主题, 启动hugo&lt;/h2&gt;
+&lt;p&gt;选择&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;, Pure相关说明文档:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;项目文档位于themes\pure目录下的README.MD(英文)+README-ZH.MD(中文)&lt;/li&gt;
+&lt;li&gt;IconFont图标说明文档位于: &lt;a class=&#34;link&#34; href=&#34;http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html&#34;  title=&#34;demo_fontclass-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;demo_fontclass&lt;/a&gt;&lt;br&gt;
+相关的icon文件应该是位于&lt;code&gt;themes\pure\static\fonts&lt;/code&gt;下的文件, 尤其是iconfont.svg这个文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;写了shell以方便调用:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim runh  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt; --baseURL&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;http://mnas.otcg.org&amp;#39;&lt;/span&gt; --port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt; -D &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ chmod +x runh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim runhugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /mnt/hugo/blog&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; hugo server --bind&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt; --baseURL&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;http://mnas.otcg.org&amp;#39;&lt;/span&gt; --port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt; -D &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ chmod +x runhugo  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在Linux命令行中调用runhugo/runh可以方便的启动hugo服务器。&lt;br&gt;
+如果需要跟随Armbian系统启动, 把命令加入到/etc/rc.local文件中即可。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;
+&lt;h2 id=&#34;已解决问题&#34;&gt;已解决问题:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;的config.yml文件中, menu: -&amp;gt; main:中的图标来源不明(其中每一项的文字前都自动加上了图标)&lt;br&gt;
+说明:&lt;br&gt;
+图标的设置同样在config.yml文件中, 在menuIcons:后进行设置, 与menu-&amp;gt;link-&amp;gt;name对应, 格式如下:
+&lt;blockquote&gt;
+&lt;p&gt;name: [这里有个空格]icon-name&lt;/p&gt;
+&lt;/blockquote&gt;
+上述icon-name查&lt;a class=&#34;link&#34; href=&#34;http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html&#34;  title=&#34;demo_fontclass-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;demo_fontclass&lt;/a&gt;中的英文名称&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;在左边导航链接添加Home(主页)的问题:&lt;br&gt;
+如果按ExampleSite中的做法, 在\content\page里+home目录和md文件配置(仿照已有文件), md文件里title的名字应该写&amp;quot;主页&amp;quot;;&lt;br&gt;
+但这样配置后, 当使用浏览器访问网站主页时, 网站主页的名称(在浏览器左上角显示的网站名称)就会变成&amp;quot;主页&amp;quot;, 而不是原来在hugo配置文件config.yaml配置里的title名称。&lt;br&gt;
+处理:&lt;br&gt;
+修改hugo配置文件config.yaml, 在menu:main:中增加Home, 适当配置weight(相当于相对位置的值), 可以得到期望的效果。&lt;br&gt;
+修改配置文件blog/config.yaml, 如下:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;menu:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    main: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        - identifier: Home
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          name: 主页
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          url: /
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          params:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              icon: home
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          weight: -50
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;调整左侧导航栏文字及图标(icon)的颜色问题。&lt;br&gt;
+&lt;strong&gt;说明: &lt;br&gt;
+hugo主题配置中, themes下的配置信息会被网站根目录下相应的配置信息所替代,&lt;br&gt;
+如blog\themes\hugo-theme-stack\assets\scss\中的配置信息, 可以被blog\assets\sccs\下的配置替代。&lt;br&gt;
+这样, 修改配置时, 不需要修改themes目录下的主题原始配置文件, 而是仅在网站目录下进行修改, 而且只设置需要修改的字段即可 - 简单、方便, 且便于代码管理。&lt;/strong&gt;&lt;br&gt;
+左侧导航栏文字原配置的颜色太浅, 需要修改。&lt;br&gt;
+修改方法: &lt;br&gt;
+增加目录blog\assets\sccs, 并将原blog\themes\hugo-theme-stack\assets\scss\custom.scss文件(基本是个空文件, 用于用户自定义的配置)拷贝到该目录下, 在该custome.scss中添加如下配置:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:root {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     --body-text-color: rgba(0, 0, 0, 0.9);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 修改后, 会看到导航栏文字颜色变得更深一些的效果。(最后一位数字大概就是颜色深度, 越大颜色越深 - 最大值是1) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;最开始的操作(错误重现):  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;上述新的custome.scss文件中body-text-color被设置为bababa，像这样:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:root {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     --body-text-color: bababa;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;修改完成后, 左侧导航栏文字明显变深, 但是, 导航栏上方Social栏中的图标变得完全不可见。  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;五级标题和六级标题会导致&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stack主题&lt;/a&gt;的&amp;quot;暗色模式&amp;quot;失效。&lt;br&gt;
+以下语句会导致&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stack主题&lt;/a&gt;的&amp;quot;暗色模式&amp;quot;失效:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###### This is an H6  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##### This is an H5  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;即五级标题 和 六级标题 - 会导致stack主题的&amp;#34;暗色模式&amp;#34;失效。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;原因并不清楚, 避免使用即可。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;修改导航栏的About链接:&lt;br&gt;
+加几张壁纸图就行了~~~&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;的代码框实在太难看了!(好了, 现在已经改用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;了)&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Pure-CFS.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Pure主题代码框图1&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Pure-CodeFrame.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Pure主题代码框图2&#34;
+	
+	
+&gt;
+&lt;del&gt;在&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=markdown&amp;#43;%E5%86%99%E5%87%BA&amp;#43;%E4%BB%A3%E7%A0%81%E6%A1%86&amp;#43;%E8%A1%8C%E6%95%B0&amp;#43;%E5%A4%8D%E5%88%B6&amp;#43;%E8%83%8C%E6%99%AF%E8%89%B2&amp;#43;hugo&amp;#43;theme&amp;amp;newwindow=1&amp;amp;biw=1444&amp;amp;bih=711&amp;amp;sxsrf=ALiCzsYZLtmKy9sfuN8UwinqVdiqec2nxA%3A1659977366460&amp;amp;ei=lj7xYo7gG9qhoASm_LEQ&amp;amp;ved=0ahUKEwiOg43K2bf5AhXaEIgKHSZ-DAI4ChDh1QMIDg&amp;amp;uact=5&amp;amp;oq=markdown&amp;#43;%E5%86%99%E5%87%BA&amp;#43;%E4%BB%A3%E7%A0%81%E6%A1%86&amp;#43;%E8%A1%8C%E6%95%B0&amp;#43;%E5%A4%8D%E5%88%B6&amp;#43;%E8%83%8C%E6%99%AF%E8%89%B2&amp;#43;hugo&amp;#43;theme&amp;amp;gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQwQhYhylgjS1oAXAAeACAAbwBiAGrDJIBBDAuMTGYAQCgAQHAAQE&amp;amp;sclient=gws-wiz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google上搜&amp;quot;markdown 写出 代码框 行数 复制 背景色 hugo theme&amp;quot;&lt;/a&gt;, 搜到的&lt;a class=&#34;link&#34; href=&#34;https://kuang.netlify.app/blog/hugo.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;风月&lt;/a&gt;可能可以参考。&lt;/del&gt;&lt;br&gt;
+备选的主题有:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/blackburn/&#34;  title=&#34;Blackburn主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blackburn主题&lt;/a&gt;?&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-BlackBurn.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;BlackBure Demo&#34;
+	
+	
+&gt;
+[BlackBure主题][]的代码框好看多了, &amp;hellip; 但是, [BlackBure主题][]不符合其他的要求。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-diary/&#34;  title=&#34;Diary主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Diary主题&lt;/a&gt;?&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Diary.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Diary Demo&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://risehere.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Diary的Demo网站&lt;/a&gt;看着还可以吧, 但感觉好像还是差点什么?&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-clarity/&#34;  title=&#34;Clarity主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Clarity主题&lt;/a&gt;?
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Clarity.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Clarity Demo&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://neonmirrors.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Clarity的Demo网站&lt;/a&gt;感觉有点乱&amp;hellip;&lt;br&gt;
+可能还行吧?&lt;/li&gt;
+&lt;li&gt;看到一个Blog叫&lt;a class=&#34;link&#34; href=&#34;https://kuang.netlify.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;风月&lt;/a&gt;, 也是用的Hugo+Theme, 所链接的&lt;a class=&#34;link&#34; href=&#34;https://github.com/vjeantet/hugo-theme-docdock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docDock主题&lt;/a&gt;并未出现在&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;gohugo官方主题网站&lt;/a&gt;上&amp;hellip; 当然, 也不满意。&lt;/li&gt;
+&lt;li&gt;看到一个网站叫&lt;a class=&#34;link&#34; href=&#34;https://gojun.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GoJun&lt;/a&gt;推荐, 也是该网站所用的&lt;a class=&#34;link&#34; href=&#34;https://github.com/varkai/hugo-theme-zozo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-theme-zozo主题&lt;/a&gt;, 在&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;gohugo官方主题网站&lt;/a&gt;上也没有, 但&lt;strong&gt;非常简洁, 感觉很好&lt;/strong&gt;, 有个&lt;a class=&#34;link&#34; href=&#34;https://zozo.varkai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zozo主题Demo&lt;/a&gt;, 看着比较简单, 看&lt;a class=&#34;link&#34; href=&#34;https://gojun.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GoJun&lt;/a&gt;也差不多。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-zozo-tn.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;zozo(tn) Demo&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-journal/&#34;  title=&#34;Journal主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Journal主题&lt;/a&gt;也是简洁风格, 与&lt;a class=&#34;link&#34; href=&#34;https://github.com/varkai/hugo-theme-zozo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-theme-zozo主题&lt;/a&gt;有些类似。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Journal.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Journal Demo&#34;
+	
+	
+&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://dashdashzako.github.io/hugo-journal-demo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Journal的Demo网站&lt;/a&gt;看着就有点太过简单了&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;初看有些太过简单, 看了实际的效果后感觉还不错, 可以一用。
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Stack.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Stack Demo&#34;
+	
+	
+&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://demo.stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题的Demo网站&lt;/a&gt;看着还可以, 只是左边菜单的字颜色有点浅(已修改)。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://jinli.cyou/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;锦李本鲤&lt;/a&gt;也是使用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;的, 可以做参考。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/&#34;  title=&#34;使用stack主题的blog: Echosec @QIN2DIM&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Echosec @QIN2DIM&lt;/a&gt;同样使用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;, 还有一些文档与修改主题样式有关, 比如&lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/p/custom-hugo-theme-styles/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;分享一些有趣的 Hugo-Stack 自定义主题样式&lt;/a&gt;; &lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/&#34;  title=&#34;使用stack主题的blog: Echosec @QIN2DIM&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Echosec @QIN2DIM&lt;/a&gt;有不少文档讲到&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;, 可以在&lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/search/?keyword=stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;搜索stack&lt;/a&gt;中看到。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;的库在&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-theme-stack&lt;/a&gt;。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stack主题中文手册网站&lt;/a&gt;是个较完善的&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;中文手册。&lt;br&gt;
+&lt;del&gt;&lt;strong&gt;考虑使用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;&lt;/strong&gt;&lt;/del&gt;  已改用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;待解决问题&#34;&gt;待解决问题:&lt;/h2&gt;
+&lt;p&gt;暂无&lt;/p&gt;
+&lt;h2 id=&#34;其他问题&#34;&gt;其他问题&lt;/h2&gt;
+&lt;h3 id=&#34;关于在windows10上-使用tortoisegitgit管理在samba服务器基于armbian系统上的仓库时出现的问题&#34;&gt;关于在Windows10上, 使用TortoiseGit(+Git)管理在Samba服务器(基于Armbian系统)上的仓库时出现的问题&lt;/h3&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;问题描述:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+在Armbian系统上使用git clone命令克隆Pure主题仓库(相关目录通过Samba服务器在网络上共享), 在Armbian系统中和Windows共享中修改后, 在Windows上使用TortoiseGit查看diff, 报&amp;quot;fatal: detected dubious ownership in repository&amp;quot;类的错误, 并提示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加环境变量GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;git config --global --add safe.directory &#39;仓库目录全路径&#39; &lt;/code&gt;命令, 应该是添加信任目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;环境变量&lt;/code&gt;可以使用windows的&amp;quot;编辑系统环境变量&amp;quot;工具添加, 在cmd中使用set命令查看确认&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;添加信任目录&lt;/code&gt;可以在cmd中使用已安装的&lt;code&gt;git.exe&lt;/code&gt;程序执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是, 按此操作后, 并没有效果: 使用TortoiseGit查看diff依然报错。&lt;br&gt;
+另外, 在&lt;!-- raw HTML omitted --&gt;内存虚拟磁盘(使用&amp;rsquo;Olof Lagerkvist&amp;rsquo;的&amp;rsquo;ImDisk Virtual Disk&amp;rsquo;建立)&lt;!-- raw HTML omitted --&gt;上, 也会出错同样的问题。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;处理:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;结论:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

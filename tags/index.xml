@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on 点滴随记</title>
+        <link>https://hugo.otcg.org/tags/</link>
+        <description>Recent content in Tags on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.otcg.org/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hugo</title>
+        <link>https://hugo.otcg.org/tags/hugo/</link>
+        <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>markdown</title>
+        <link>https://hugo.otcg.org/tags/markdown/</link>
+        <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/markdown/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>stack主题</title>
+        <link>https://hugo.otcg.org/tags/stack%E4%B8%BB%E9%A2%98/</link>
+        <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/stack%E4%B8%BB%E9%A2%98/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>链接</title>
+        <link>https://hugo.otcg.org/tags/%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/%E9%93%BE%E6%8E%A5/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>learn</title>
+        <link>https://hugo.otcg.org/tags/learn/</link>
+        <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/learn/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>测试</title>
+        <link>https://hugo.otcg.org/tags/%E6%B5%8B%E8%AF%95/</link>
+        <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/%E6%B5%8B%E8%AF%95/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Armbian</title>
+        <link>https://hugo.otcg.org/tags/armbian/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/armbian/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>fatal: detected dubious ownership in repository</title>
+        <link>https://hugo.otcg.org/tags/fatal-detected-dubious-ownership-in-repository/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/fatal-detected-dubious-ownership-in-repository/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>git</title>
+        <link>https://hugo.otcg.org/tags/git/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>go</title>
+        <link>https://hugo.otcg.org/tags/go/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/go/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>hugo &#43;extended</title>
+        <link>https://hugo.otcg.org/tags/hugo-&#43;extended/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/hugo-&#43;extended/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>hugo themes</title>
+        <link>https://hugo.otcg.org/tags/hugo-themes/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/hugo-themes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>icon</title>
+        <link>https://hugo.otcg.org/tags/icon/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/icon/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ImDisk</title>
+        <link>https://hugo.otcg.org/tags/imdisk/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/imdisk/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>pure主题</title>
+        <link>https://hugo.otcg.org/tags/pure%E4%B8%BB%E9%A2%98/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/pure%E4%B8%BB%E9%A2%98/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>R3300L</title>
+        <link>https://hugo.otcg.org/tags/r3300l/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/r3300l/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>S905L</title>
+        <link>https://hugo.otcg.org/tags/s905l/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/s905l/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Samba</title>
+        <link>https://hugo.otcg.org/tags/samba/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/samba/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>svg</title>
+        <link>https://hugo.otcg.org/tags/svg/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/svg/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>TortoiseGit</title>
+        <link>https://hugo.otcg.org/tags/tortoisegit/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/tortoisegit/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>zozo主题</title>
+        <link>https://hugo.otcg.org/tags/zozo%E4%B8%BB%E9%A2%98/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/zozo%E4%B8%BB%E9%A2%98/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>编译hugo</title>
+        <link>https://hugo.otcg.org/tags/%E7%BC%96%E8%AF%91hugo/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/%E7%BC%96%E8%AF%91hugo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>rent car</title>
+        <link>https://hugo.otcg.org/tags/rent-car/</link>
+        <pubDate>Sat, 10 Jun 2017 00:32:16 +0800</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/rent-car/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>美国</title>
+        <link>https://hugo.otcg.org/tags/%E7%BE%8E%E5%9B%BD/</link>
+        <pubDate>Sat, 10 Jun 2017 00:32:16 +0800</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/%E7%BE%8E%E5%9B%BD/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>租车</title>
+        <link>https://hugo.otcg.org/tags/%E7%A7%9F%E8%BD%A6/</link>
+        <pubDate>Sat, 10 Jun 2017 00:32:16 +0800</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/%E7%A7%9F%E8%BD%A6/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>oray</title>
+        <link>https://hugo.otcg.org/tags/oray/</link>
+        <pubDate>Thu, 14 May 2009 21:39:16 +0800</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/oray/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ubuntu</title>
+        <link>https://hugo.otcg.org/tags/ubuntu/</link>
+        <pubDate>Thu, 14 May 2009 21:39:16 +0800</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/ubuntu/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>花生壳</title>
+        <link>https://hugo.otcg.org/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</link>
+        <pubDate>Thu, 14 May 2009 21:39:16 +0800</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CODEBLOCKS</title>
+        <link>https://hugo.otcg.org/tags/codeblocks/</link>
+        <pubDate>Wed, 28 Feb 2007 16:37:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/codeblocks/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MINGW</title>
+        <link>https://hugo.otcg.org/tags/mingw/</link>
+        <pubDate>Wed, 28 Feb 2007 16:37:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/mingw/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WXWIDGETS</title>
+        <link>https://hugo.otcg.org/tags/wxwidgets/</link>
+        <pubDate>Wed, 28 Feb 2007 16:37:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/wxwidgets/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Great Barrier Reef</title>
+        <link>https://hugo.otcg.org/tags/great-barrier-reef/</link>
+        <pubDate>Wed, 28 Feb 2007 07:25:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/great-barrier-reef/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>White Heaven Beach</title>
+        <link>https://hugo.otcg.org/tags/white-heaven-beach/</link>
+        <pubDate>Wed, 28 Feb 2007 07:25:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/white-heaven-beach/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Whitsunday Islands</title>
+        <link>https://hugo.otcg.org/tags/whitsunday-islands/</link>
+        <pubDate>Wed, 28 Feb 2007 07:25:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/whitsunday-islands/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>大堡礁</title>
+        <link>https://hugo.otcg.org/tags/%E5%A4%A7%E5%A0%A1%E7%A4%81/</link>
+        <pubDate>Wed, 28 Feb 2007 07:25:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/%E5%A4%A7%E5%A0%A1%E7%A4%81/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>圣灵岛</title>
+        <link>https://hugo.otcg.org/tags/%E5%9C%A3%E7%81%B5%E5%B2%9B/</link>
+        <pubDate>Wed, 28 Feb 2007 07:25:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/%E5%9C%A3%E7%81%B5%E5%B2%9B/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux/Arm64</title>
+        <link>https://hugo.otcg.org/tags/linux/arm64/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/tags/linux/arm64/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

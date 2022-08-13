@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='记录: 在R3300L类&#43;Armbian上安装Hugo服务器'><title>在R3300L类&#43;Armbian上安装Hugo服务器</title>
+
+<link rel='canonical' href='https://hugo.otcg.org/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='在R3300L类&#43;Armbian上安装Hugo服务器'>
+<meta property='og:description' content='记录: 在R3300L类&#43;Armbian上安装Hugo服务器'>
+<meta property='og:url' content='https://hugo.otcg.org/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='hugo &#43;extended' /><meta property='article:tag' content='Linux/Arm64' /><meta property='article:tag' content='编译hugo' /><meta property='article:tag' content='Armbian' /><meta property='article:tag' content='hugo themes' /><meta property='article:tag' content='stack主题' /><meta property='article:tag' content='pure主题' /><meta property='article:tag' content='zozo主题' /><meta property='article:tag' content='R3300L' /><meta property='article:tag' content='S905L' /><meta property='article:tag' content='git' /><meta property='article:tag' content='TortoiseGit' /><meta property='article:tag' content='Samba' /><meta property='article:tag' content='fatal: detected dubious ownership in repository' /><meta property='article:tag' content='ImDisk' /><meta property='article:tag' content='go' /><meta property='article:tag' content='svg' /><meta property='article:tag' content='icon' /><meta property='article:published_time' content='2022-08-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-08-08T00:00:00&#43;00:00'/><meta property='og:image' content='https://hugo.otcg.org/wallpaper/wallpaper-01.jpg' />
+<meta name="twitter:title" content="在R3300L类&#43;Armbian上安装Hugo服务器">
+<meta name="twitter:description" content="记录: 在R3300L类&#43;Armbian上安装Hugo服务器"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://hugo.otcg.org/wallpaper/wallpaper-01.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/avatar-icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/avatar_huc67763e2c27c0a57d4ba6c6142936f61_34090_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                
+                    <img src="/wallpaper/wallpaper-01.jpg" loading="lazy" alt="Featured image of post 在R3300L类&#43;Armbian上安装Hugo服务器" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tv-box/" >
+                TV Box
+            </a>
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/">在R3300L类&#43;Armbian上安装Hugo服务器</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            记录: 在R3300L类&#43;Armbian上安装Hugo服务器
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 08, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 11 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>在R3300L(及类似架构设备)等使用S905系列的电视盒子上安装Armbian, 在Armbian系统下可以安装Hugo服务器。</p>
+<h2 id="编译及安装hugo">编译及安装Hugo</h2>
+<p>选择: Hugo最新版本, +extended, 支持linux/arm64系统</p>
+<ul>
+<li>说明: R3300L的CPU是S905L, Arm架构CPU, 四核A53</li>
+</ul>
+<p>有多种方式可以安装Hugo, Armbian提供的apt工具就可以安装Hugo, 但基于Ubuntu传统, 使用这种方式下载的版本较旧, 很多功能并不支持。<br>
+注: 当前Armbian上使用apt可以安装的Hugo版本仅为0.40.1-1, 如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ apt search hugo
+</span></span><span class="line"><span class="cl">Sorting... Done
+</span></span><span class="line"><span class="cl">Full Text Search... Done
+</span></span><span class="line"><span class="cl">hugo/bionic 0.40.1-1 arm64
+</span></span><span class="line"><span class="cl">  Fast and flexible Static Site Generator written in Go
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Hugo当前最新Release版本是v0.101.0, 下载地址: <a class="link" href="https://github.com/gohugoio/hugo/releases/tag/v0.101.0"  target="_blank" rel="noopener"
+    >Hugo v0.101.0</a><br>
+但是, <strong>Release中仅提供了未+Extended的Linux/Arm64版本</strong>, 而缺少扩展功能(Extended), 有些功能或主题就无法使用，因此需要重新编译。</p>
+<p>注意:</p>
+<ul>
+<li>不能使用手机+Termux, 借助手机较强的CPU性能和较高的配置进行编译, 因为编译出来的是For Android/Arm64, 而不是For Linux/Arm64, 因而无法使用。</li>
+<li>同理, 在电脑+Linux上做编译也不行。</li>
+</ul>
+<p>编译hugo相关参考文档如下:</p>
+<ul>
+<li><a class="link" href="https://gohugo.io/getting-started/installing/#build-from-source-on-mac"  target="_blank" rel="noopener"
+    >Build from Source on Mac</a></li>
+<li><a class="link" href="https://apoorv.blog/install-hugo-extended-arm/"  target="_blank" rel="noopener"
+    >Install Update Hugo Extended for ARM in Ubuntu</a></li>
+</ul>
+<h3 id="编译要求">编译要求:</h3>
+<ul>
+<li>&gt;=Go 1.18版本的go</li>
+<li>最新版本的Hugo源代码包</li>
+<li>(实际使用)2.8G的内存(含SWAP分区2G), 估计至少需要1G的内存(含SWAP分区)。<br>
+否则会出现报错, 且运行极长的时间(以十数小时数计), 但是最后还无法成功完成编译。<br>
+编译报错信息为:
+<blockquote>
+<p>go build github.com/gohugoio/locales compressed:<br>
+: /usr/local/go/pkg/tool/linux_amd64/compile: signal: killed</p>
+</blockquote>
+参考:
+<ul>
+<li><a class="link" href="https://www.cxybb.com/article/sinat_35406909/105383185"  target="_blank" rel="noopener"
+    >Golang - go build编译项目时出现signal: killed</a></li>
+<li><a class="link" href="https://segmentfault.com/a/1190000012219689"  target="_blank" rel="noopener"
+    >用SWAP分区’ 解决golang编译项目时出现signal: killed’</a></li>
+</ul>
+</li>
+<li>/tmp空间需要大于400M, 估计至少应该超过1G: 否则会报错。<br>
+编译报错信息为:
+<blockquote>
+<p>* Github.com/bep/golibsass/internal/libsass  <br>
+/tmp/cctAMSUf.s: Assembler messages:  <br>
+/tmp/cctAMSUf.s: Fatal error: can’t write 3916 types to section  <br>
+.debug_loc of $WORK/b490/_x032.o: ‘No space left on device’<br>
+/tmp/cctAMSUf.s: Fatal error: can’t close $WORK/b490/_x032.o: No space left on device</p>
+</blockquote>
+在运行go build时查看/tmp目录, 确认编译时是使用/tmp做为编译目录, 也基本确认/tmp空间不足会出现错误。</li>
+</ul>
+<h3 id="编译操作">编译操作:</h3>
+<ul>
+<li>
+<p>安装(当前)最新稳定版本的go<br>
+参考: <a class="link" href="https://blog.csdn.net/yaojiawan/article/details/102833371"  target="_blank" rel="noopener"
+    >初学GO笔记（1）-Arm64 linux上的安装</a>。<br>
+同样由于Ubuntu传统, 可以用apt直接安装的go包版本仅为1.10.3, 无法用于编译Hugo, 因此改用tar包安装。<br>
+go包下载列表在<a class="link" href="https://go.dev/dl/"  target="_blank" rel="noopener"
+    >go download</a>, 当前最新稳定版本tar包是<a class="link" href="https://go.dev/dl/go1.18.4.linux-arm64.tar.gz"  target="_blank" rel="noopener"
+    >go1.18.4.linux-arm64.tar.gz</a>:</p>
+<blockquote>
+<p># wget <a class="link" href="https://go.dev/dl/go1.18.4.linux-arm64.tar.gz"  target="_blank" rel="noopener"
+    >https://go.dev/dl/go1.18.4.linux-arm64.tar.gz</a></p>
+</blockquote>
+<p>解压下载的go包:</p>
+<blockquote>
+<p># tar zxvf go1.18.4.linux-arm64.tar.gz</p>
+</blockquote>
+<p>移到/usr/local下</p>
+<blockquote>
+<p># mv go /usr/local/</p>
+</blockquote>
+<p>查看go的版本信息:</p>
+<blockquote>
+<p># /usr/local/go/bin/go version<br>
+go version go1.18.4 linux/arm64</p>
+</blockquote>
+<p>确认go版本没问题后, 开始建立go环境:</p>
+<blockquote>
+<p># mkdir /opt/go<br>
+# vim /etc/profile</p>
+</blockquote>
+<p>在文件末尾增加:</p>
+<blockquote>
+<p>export GOROOT=/usr/local/go<br>
+export GOPATH=/opt/go<br>
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH</p>
+</blockquote>
+<p>重新登录(新登录一回就行)后, 查看环境变量是否生效:</p>
+<blockquote>
+<p># echo $PATH<br>
+/opt/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games<br>
+# echo $GOROOT<br>
+/usr/local/go<br>
+# echo $GOPATH<br>
+/opt/go<br>
+确认环境变量已生效!<br>
+修改配置, 改用国内仓库以提高速度:<br>
+# go env -w GOPROXY=https://goproxy.cn,direct<br>
+查看, 并确认已修改成功:<br>
+# go env | grep GOPROXY<br>
+GOPROXY=&ldquo;<a class="link" href="https://goproxy.cn"  target="_blank" rel="noopener"
+    >https://goproxy.cn</a>,direct&rdquo;</p>
+</blockquote>
+<p>原为: <code>GOPROXY=&quot;https://proxy.golang.org,direct&quot;</code><br>
+确认Go1.18.4已安装完成</p>
+</li>
+<li>
+<p>在R3300L上准备编译Hugo的环境</p>
+<ul>
+<li>准备内存空间, 以配合编译Hugo的内存需求(估计至少大于1G)<br>
+由于R3300L的实际内存仅为805M, 无法满足Hugo编译需要, 因此需要临时增加Swap分区以增加可用内存。<br>
+创建做为swap分区的文件, 命令中创建了一个2G的文件:
+<blockquote>
+<p># dd if=/dev/zero of=/root/swapfile bs=1M count=2048</p>
+</blockquote>
+格式化为交换分区文件, 建立swap的文件系统:
+<blockquote>
+<p># mkswap /root/swapfile</p>
+</blockquote>
+启用交换分区(Swap)文件:
+<blockquote>
+<p># swapon /root/swapfile</p>
+</blockquote>
+查看交换分区状态:
+<blockquote>
+<p># swapon<br>
+NAME TYPE SIZE USED PRIO<br>
+/dev/zram1 partition 400.5M 166.7M 5<br>
+/root/swapfile file 2G 7.6M -2</p>
+</blockquote>
+注意: 这样的设置方法, 系统重启后不再有效!</li>
+<li>增加/tmp目录空间, 以配合编译Hugo的存储空间需求(估计至少也大于1G)<br>
+使用df命令查看空间:
+<blockquote>
+<p># df<br>
+Filesystem 1K-blocks Used Available Use% Mounted on<br>
+…<br>
+tmpfs 410140 8 410132 1% /tmp<br>
+…</p>
+</blockquote>
+可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。 
+由于/root的空间够用, 因此改为/root下目录做为/tmp:<br>
+新建tmp的目录:
+<blockquote>
+<p># mkdir /root/tmp</p>
+</blockquote>
+给这个目录设置0777权限(避免有什么权限问题):
+<blockquote>
+<p># chmod 0777 /root/tmp</p>
+</blockquote>
+把新建的/root/tmp目录bind到/tmp:
+<blockquote>
+<p># mount &ndash;bind /root/tmp /tmp</p>
+</blockquote>
+再用df命令查看, 已看不到/tmp这一条记录。<br>
+操作方法参考:<br>
+<a class="link" href="https://blog.csdn.net/developerof/article/details/23035843"  target="_blank" rel="noopener"
+    >• linux 修改/tmp目录的大小</a><br>
+<a class="link" href="https://www.cnblogs.com/zhangmingcheng/p/6743908.html"  target="_blank" rel="noopener"
+    >• mount &ndash;bind 的妙用</a><br>
+注: 这样的设置方法, 系统重启后也不再有效</li>
+</ul>
+</li>
+<li>
+<p>编译Hugo<br>
+Hugo源代码包的地址如下:<br>
+<a class="link" href="https://github.com/gohugoio/hugo/archive/v0.101.0.zip"  target="_blank" rel="noopener"
+    >• v0.101.0.zip</a><br>
+或<br>
+<a class="link" href="https://github.com/gohugoio/hugo/archive/refs/tags/v0.101.0.zip"  target="_blank" rel="noopener"
+    >• v0.101.0.zip</a><br>
+解压Hugo源代码tar包:</p>
+<blockquote>
+<p># tar zxvf v0.101.0.zip</p>
+</blockquote>
+<p>进入Hugo目录:</p>
+<blockquote>
+<p># cd v0.101.0</p>
+</blockquote>
+<p>开始编译Hugo, 带extended参数:</p>
+<blockquote>
+<p># go build &ndash;tags extended</p>
+</blockquote>
+<p>编译完成只生成一个文件: hugo<br>
+查看版本:</p>
+<blockquote>
+<p># ./hugo version<br>
+hugo v0.101.0+extended linux/amd64 BuildDate=unknown</p>
+</blockquote>
+<p>注: 在R3300L上两次成功编译Hugo的时长分别是: 24分钟, 3分钟, 很奇怪, 似乎都是这个规律。</p>
+</li>
+</ul>
+<h2 id="新建hugo目录">新建hugo目录</h2>
+<p>新建一个网站(的目录结构):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">$ sudo mkdir /mnt/hugo  
+</span></span><span class="line"><span class="cl">$ sudo chown jimway:jimway  
+</span></span><span class="line"><span class="cl">$ cd /mnt/hugo  
+</span></span><span class="line"><span class="cl">$ hugo new site blog  
+</span></span><span class="line"><span class="cl">Congratulations! Your new Hugo site is created in /mnt/hugo/blog.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Just a few more steps and you&#39;re ready to go:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. Download a theme into the same-named folder.
+</span></span><span class="line"><span class="cl">   Choose a theme from https://themes.gohugo.io/ or
+</span></span><span class="line"><span class="cl">   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
+</span></span><span class="line"><span class="cl">2. Perhaps you want to add some content. You can add single files
+</span></span><span class="line"><span class="cl">   with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+</span></span><span class="line"><span class="cl">3. Start the built-in live server via &#34;hugo server&#34;.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>至此, 站点目录已经建立完成。</p>
+<h2 id="选择并下载主题themes">选择并下载主题(themes)</h2>
+<p>hugo提供了非常丰富的<a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
+    >主题库</a>供下载选用。<br>
+选择了以下几个备用(特点: 简洁):</p>
+<ul>
+<li><a class="link" href="https://themes.gohugo.io/themes/blackburn/"  title="Blackburn主题-&gt;"
+     target="_blank" rel="noopener"
+    >Blackburn主题</a></li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-diary/"  title="Diary主题-&gt;"
+     target="_blank" rel="noopener"
+    >Diary主题</a></li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-fuji/"  title="Fuji主题-&gt;"
+     target="_blank" rel="noopener"
+    >Fuji主题</a></li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-pure/"  title="Pure主题-&gt;"
+     target="_blank" rel="noopener"
+    >Pure主题</a></li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-docport/"  title="docPort主题-&gt;"
+     target="_blank" rel="noopener"
+    >docPort主题</a></li>
+</ul>
+<p>下载并安装上述主题(根据相应主题中的安装说明)到blog的themes目录下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">$ git clone https://github.com/yoshiharuyamashita/blackburn.git themes/blackburn
+</span></span><span class="line"><span class="cl">$ git clone https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
+</span></span><span class="line"><span class="cl"># 注: Diray这个下载是参照blackburn写的, 文档中没有安装说明  
+</span></span><span class="line"><span class="cl">$ git init  
+</span></span><span class="line"><span class="cl">### 注: 使用git subodule add命令前要在同一目录下调用git init, 否则可能会出现以下错误: 
+</span></span><span class="line"><span class="cl">###     Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).  
+</span></span><span class="line"><span class="cl">$ git submodule add https://github.com/dsrkafuu/hugo-theme-fuji.git themes/fuji
+</span></span><span class="line"><span class="cl">### 注: 这个是使用git submodule add命令  
+</span></span><span class="line"><span class="cl">$ git clone https://github.com/jimway71/hugo-theme-pure.git themes/pure  
+</span></span><span class="line"><span class="cl">$ git submodule add https://github.com/vjeantet/hugo-theme-docport.git themes/hugo-theme-docport  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>themes分析:</p>
+<ul>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-docport/"  title="docPort主题-&gt;"
+     target="_blank" rel="noopener"
+    >docPort主题</a>:<br>
+适合用一个文档做整个网站入口, 即网站入口就是一个文档, 而不是一个页面(分别指向不同文档), 并不适合做普通网站, 比如博客(blog)</li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-pure/"  title="Pure主题-&gt;"
+     target="_blank" rel="noopener"
+    >Pure主题</a>:<br>
+适合做blog:
+<ul>
+<li>分左中右三列布局</li>
+<li>左/右有文本导航</li>
+<li>有标签(tags)/目录(Categories)分类</li>
+<li>左侧导航可以添加link链接</li>
+<li>左侧有多种配色可选</li>
+<li>左上标题、说明均可自定义<br>
+<strong>补充: 后面选的<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>也满足上述要求</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="选择主题-启动hugo">选择主题, 启动hugo</h2>
+<p>选择<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-pure/"  title="Pure主题-&gt;"
+     target="_blank" rel="noopener"
+    >Pure主题</a>, Pure相关说明文档:</p>
+<ul>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-pure/"  title="Pure主题-&gt;"
+     target="_blank" rel="noopener"
+    >Pure主题</a>项目文档位于themes\pure目录下的README.MD(英文)+README-ZH.MD(中文)</li>
+<li>IconFont图标说明文档位于: <a class="link" href="http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html"  title="demo_fontclass-&gt;"
+     target="_blank" rel="noopener"
+    >demo_fontclass</a><br>
+相关的icon文件应该是位于<code>themes\pure\static\fonts</code>下的文件, 尤其是iconfont.svg这个文件</li>
+</ul>
+<p>写了shell以方便调用:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ vim runh  
+</span></span><span class="line"><span class="cl">hugo server --bind<span class="o">=</span><span class="s2">&#34;0.0.0.0&#34;</span> --baseURL<span class="o">=</span><span class="s1">&#39;http://mnas.otcg.org&#39;</span> --port<span class="o">=</span><span class="m">8080</span> -D <span class="p">&amp;</span>  
+</span></span><span class="line"><span class="cl">$ chmod +x runh
+</span></span><span class="line"><span class="cl">$ vim runhugo  
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /mnt/hugo/blog<span class="p">;</span> hugo server --bind<span class="o">=</span><span class="s2">&#34;0.0.0.0&#34;</span> --baseURL<span class="o">=</span><span class="s1">&#39;http://mnas.otcg.org&#39;</span> --port<span class="o">=</span><span class="m">8080</span> -D <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">$ chmod +x runhugo  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在Linux命令行中调用runhugo/runh可以方便的启动hugo服务器。<br>
+如果需要跟随Armbian系统启动, 把命令加入到/etc/rc.local文件中即可。</p>
+<hr>
+<h1 id="其他">其他</h1>
+<h2 id="已解决问题">已解决问题:</h2>
+<ul>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-pure/"  title="Pure主题-&gt;"
+     target="_blank" rel="noopener"
+    >Pure主题</a>的config.yml文件中, menu: -&gt; main:中的图标来源不明(其中每一项的文字前都自动加上了图标)<br>
+说明:<br>
+图标的设置同样在config.yml文件中, 在menuIcons:后进行设置, 与menu-&gt;link-&gt;name对应, 格式如下:
+<blockquote>
+<p>name: [这里有个空格]icon-name</p>
+</blockquote>
+上述icon-name查<a class="link" href="http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html"  title="demo_fontclass-&gt;"
+     target="_blank" rel="noopener"
+    >demo_fontclass</a>中的英文名称</li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>在左边导航链接添加Home(主页)的问题:<br>
+如果按ExampleSite中的做法, 在\content\page里+home目录和md文件配置(仿照已有文件), md文件里title的名字应该写&quot;主页&quot;;<br>
+但这样配置后, 当使用浏览器访问网站主页时, 网站主页的名称(在浏览器左上角显示的网站名称)就会变成&quot;主页&quot;, 而不是原来在hugo配置文件config.yaml配置里的title名称。<br>
+处理:<br>
+修改hugo配置文件config.yaml, 在menu:main:中增加Home, 适当配置weight(相当于相对位置的值), 可以得到期望的效果。<br>
+修改配置文件blog/config.yaml, 如下:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">menu:
+</span></span><span class="line"><span class="cl">    main: 
+</span></span><span class="line"><span class="cl">        - identifier: Home
+</span></span><span class="line"><span class="cl">          name: 主页
+</span></span><span class="line"><span class="cl">          url: /
+</span></span><span class="line"><span class="cl">          params:
+</span></span><span class="line"><span class="cl">              icon: home
+</span></span><span class="line"><span class="cl">          weight: -50
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>调整左侧导航栏文字及图标(icon)的颜色问题。<br>
+<strong>说明: <br>
+hugo主题配置中, themes下的配置信息会被网站根目录下相应的配置信息所替代,<br>
+如blog\themes\hugo-theme-stack\assets\scss\中的配置信息, 可以被blog\assets\sccs\下的配置替代。<br>
+这样, 修改配置时, 不需要修改themes目录下的主题原始配置文件, 而是仅在网站目录下进行修改, 而且只设置需要修改的字段即可 - 简单、方便, 且便于代码管理。</strong><br>
+左侧导航栏文字原配置的颜色太浅, 需要修改。<br>
+修改方法: <br>
+增加目录blog\assets\sccs, 并将原blog\themes\hugo-theme-stack\assets\scss\custom.scss文件(基本是个空文件, 用于用户自定义的配置)拷贝到该目录下, 在该custome.scss中添加如下配置:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:root {
+</span></span><span class="line"><span class="cl">     --body-text-color: rgba(0, 0, 0, 0.9);
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"># 修改后, 会看到导航栏文字颜色变得更深一些的效果。(最后一位数字大概就是颜色深度, 越大颜色越深 - 最大值是1) 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">最开始的操作(错误重现):  
+</span></span><span class="line"><span class="cl">上述新的custome.scss文件中body-text-color被设置为bababa，像这样:  
+</span></span><span class="line"><span class="cl">:root {
+</span></span><span class="line"><span class="cl">     --body-text-color: bababa;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">修改完成后, 左侧导航栏文字明显变深, 但是, 导航栏上方Social栏中的图标变得完全不可见。  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>五级标题和六级标题会导致<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >stack主题</a>的&quot;暗色模式&quot;失效。<br>
+以下语句会导致<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >stack主题</a>的&quot;暗色模式&quot;失效:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">###### This is an H6  
+</span></span><span class="line"><span class="cl">##### This is an H5  
+</span></span><span class="line"><span class="cl">即五级标题 和 六级标题 - 会导致stack主题的&#34;暗色模式&#34;失效。
+</span></span><span class="line"><span class="cl">原因并不清楚, 避免使用即可。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>修改导航栏的About链接:<br>
+加几张壁纸图就行了~~~</li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-pure/"  title="Pure主题-&gt;"
+     target="_blank" rel="noopener"
+    >Pure主题</a>的代码框实在太难看了!(好了, 现在已经改用<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>了)<br>
+<img src="/screenshot/screenshot-Pure-CFS.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Pure主题代码框图1"
+	
+	
+>
+<img src="/screenshot/screenshot-Pure-CodeFrame.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Pure主题代码框图2"
+	
+	
+>
+<del>在<a class="link" href="https://www.google.com.hk/search?q=markdown&#43;%E5%86%99%E5%87%BA&#43;%E4%BB%A3%E7%A0%81%E6%A1%86&#43;%E8%A1%8C%E6%95%B0&#43;%E5%A4%8D%E5%88%B6&#43;%E8%83%8C%E6%99%AF%E8%89%B2&#43;hugo&#43;theme&amp;newwindow=1&amp;biw=1444&amp;bih=711&amp;sxsrf=ALiCzsYZLtmKy9sfuN8UwinqVdiqec2nxA%3A1659977366460&amp;ei=lj7xYo7gG9qhoASm_LEQ&amp;ved=0ahUKEwiOg43K2bf5AhXaEIgKHSZ-DAI4ChDh1QMIDg&amp;uact=5&amp;oq=markdown&#43;%E5%86%99%E5%87%BA&#43;%E4%BB%A3%E7%A0%81%E6%A1%86&#43;%E8%A1%8C%E6%95%B0&#43;%E5%A4%8D%E5%88%B6&#43;%E8%83%8C%E6%99%AF%E8%89%B2&#43;hugo&#43;theme&amp;gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQwQhYhylgjS1oAXAAeACAAbwBiAGrDJIBBDAuMTGYAQCgAQHAAQE&amp;sclient=gws-wiz"  target="_blank" rel="noopener"
+    >Google上搜&quot;markdown 写出 代码框 行数 复制 背景色 hugo theme&quot;</a>, 搜到的<a class="link" href="https://kuang.netlify.app/blog/hugo.html"  target="_blank" rel="noopener"
+    >风月</a>可能可以参考。</del><br>
+备选的主题有:
+<ul>
+<li><a class="link" href="https://themes.gohugo.io/themes/blackburn/"  title="Blackburn主题-&gt;"
+     target="_blank" rel="noopener"
+    >Blackburn主题</a>?<br>
+<img src="/screenshot/screenshot-BlackBurn.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="BlackBure Demo"
+	
+	
+>
+[BlackBure主题][]的代码框好看多了, &hellip; 但是, [BlackBure主题][]不符合其他的要求。</li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-diary/"  title="Diary主题-&gt;"
+     target="_blank" rel="noopener"
+    >Diary主题</a>?<br>
+<img src="/screenshot/screenshot-Diary.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Diary Demo"
+	
+	
+><br>
+<a class="link" href="https://risehere.net/"  target="_blank" rel="noopener"
+    >Diary的Demo网站</a>看着还可以吧, 但感觉好像还是差点什么?</li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-clarity/"  title="Clarity主题-&gt;"
+     target="_blank" rel="noopener"
+    >Clarity主题</a>?
+<img src="/screenshot/screenshot-Clarity.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Clarity Demo"
+	
+	
+><br>
+<a class="link" href="https://neonmirrors.net/"  target="_blank" rel="noopener"
+    >Clarity的Demo网站</a>感觉有点乱&hellip;<br>
+可能还行吧?</li>
+<li>看到一个Blog叫<a class="link" href="https://kuang.netlify.app/"  target="_blank" rel="noopener"
+    >风月</a>, 也是用的Hugo+Theme, 所链接的<a class="link" href="https://github.com/vjeantet/hugo-theme-docdock"  target="_blank" rel="noopener"
+    >docDock主题</a>并未出现在<a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
+    >gohugo官方主题网站</a>上&hellip; 当然, 也不满意。</li>
+<li>看到一个网站叫<a class="link" href="https://gojun.me/"  target="_blank" rel="noopener"
+    >GoJun</a>推荐, 也是该网站所用的<a class="link" href="https://github.com/varkai/hugo-theme-zozo"  target="_blank" rel="noopener"
+    >hugo-theme-zozo主题</a>, 在<a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
+    >gohugo官方主题网站</a>上也没有, 但<strong>非常简洁, 感觉很好</strong>, 有个<a class="link" href="https://zozo.varkai.com/"  target="_blank" rel="noopener"
+    >zozo主题Demo</a>, 看着比较简单, 看<a class="link" href="https://gojun.me/"  target="_blank" rel="noopener"
+    >GoJun</a>也差不多。<br>
+<img src="/screenshot/screenshot-zozo-tn.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="zozo(tn) Demo"
+	
+	
+></li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-journal/"  title="Journal主题-&gt;"
+     target="_blank" rel="noopener"
+    >Journal主题</a>也是简洁风格, 与<a class="link" href="https://github.com/varkai/hugo-theme-zozo"  target="_blank" rel="noopener"
+    >hugo-theme-zozo主题</a>有些类似。<br>
+<img src="/screenshot/screenshot-Journal.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Journal Demo"
+	
+	
+>
+<a class="link" href="https://dashdashzako.github.io/hugo-journal-demo/"  target="_blank" rel="noopener"
+    >Journal的Demo网站</a>看着就有点太过简单了&hellip;</li>
+<li><a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>初看有些太过简单, 看了实际的效果后感觉还不错, 可以一用。
+<img src="/screenshot/screenshot-Stack.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Stack Demo"
+	
+	
+>
+<a class="link" href="https://demo.stack.jimmycai.com/"  target="_blank" rel="noopener"
+    >Stack主题的Demo网站</a>看着还可以, 只是左边菜单的字颜色有点浅(已修改)。<br>
+<a class="link" href="https://jinli.cyou/"  target="_blank" rel="noopener"
+    >锦李本鲤</a>也是使用<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>的, 可以做参考。<br>
+<a class="link" href="https://blog.echosec.top/"  title="使用stack主题的blog: Echosec @QIN2DIM"
+     target="_blank" rel="noopener"
+    >Echosec @QIN2DIM</a>同样使用<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>, 还有一些文档与修改主题样式有关, 比如<a class="link" href="https://blog.echosec.top/p/custom-hugo-theme-styles/"  target="_blank" rel="noopener"
+    >分享一些有趣的 Hugo-Stack 自定义主题样式</a>; <a class="link" href="https://blog.echosec.top/"  title="使用stack主题的blog: Echosec @QIN2DIM"
+     target="_blank" rel="noopener"
+    >Echosec @QIN2DIM</a>有不少文档讲到<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>, 可以在<a class="link" href="https://blog.echosec.top/search/?keyword=stack"  target="_blank" rel="noopener"
+    >搜索stack</a>中看到。<br>
+<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>的库在<a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
+    >hugo-theme-stack</a>。<br>
+<a class="link" href="https://docs.stack.jimmycai.com/zh/"  target="_blank" rel="noopener"
+    >stack主题中文手册网站</a>是个较完善的<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a>中文手册。<br>
+<del><strong>考虑使用<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a></strong></del>  已改用<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  title="Stack主题-&gt;"
+     target="_blank" rel="noopener"
+    >Stack主题</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="待解决问题">待解决问题:</h2>
+<p>暂无</p>
+<h2 id="其他问题">其他问题</h2>
+<h3 id="关于在windows10上-使用tortoisegitgit管理在samba服务器基于armbian系统上的仓库时出现的问题">关于在Windows10上, 使用TortoiseGit(+Git)管理在Samba服务器(基于Armbian系统)上的仓库时出现的问题</h3>
+<p><!-- raw HTML omitted -->问题描述:<!-- raw HTML omitted --><br>
+在Armbian系统上使用git clone命令克隆Pure主题仓库(相关目录通过Samba服务器在网络上共享), 在Armbian系统中和Windows共享中修改后, 在Windows上使用TortoiseGit查看diff, 报&quot;fatal: detected dubious ownership in repository&quot;类的错误, 并提示:</p>
+<ul>
+<li>添加环境变量GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true</li>
+<li>使用 <code>git config --global --add safe.directory '仓库目录全路径' </code>命令, 应该是添加信任目录</li>
+</ul>
+<p>其中:</p>
+<ul>
+<li><code>环境变量</code>可以使用windows的&quot;编辑系统环境变量&quot;工具添加, 在cmd中使用set命令查看确认</li>
+<li><code>添加信任目录</code>可以在cmd中使用已安装的<code>git.exe</code>程序执行</li>
+</ul>
+<p>但是, 按此操作后, 并没有效果: 使用TortoiseGit查看diff依然报错。<br>
+另外, 在<!-- raw HTML omitted -->内存虚拟磁盘(使用&rsquo;Olof Lagerkvist&rsquo;的&rsquo;ImDisk Virtual Disk&rsquo;建立)<!-- raw HTML omitted -->上, 也会出错同样的问题。</p>
+<p><!-- raw HTML omitted -->处理:<!-- raw HTML omitted --><br>
+在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。</p>
+<p><!-- raw HTML omitted -->结论:<!-- raw HTML omitted --><br>
+在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">hugo</a>
+        
+            <a href="/tags/hugo-&#43;extended/">hugo &#43;extended</a>
+        
+            <a href="/tags/linux/arm64/">Linux/Arm64</a>
+        
+            <a href="/tags/%E7%BC%96%E8%AF%91hugo/">编译hugo</a>
+        
+            <a href="/tags/armbian/">Armbian</a>
+        
+            <a href="/tags/hugo-themes/">hugo themes</a>
+        
+            <a href="/tags/stack%E4%B8%BB%E9%A2%98/">stack主题</a>
+        
+            <a href="/tags/pure%E4%B8%BB%E9%A2%98/">pure主题</a>
+        
+            <a href="/tags/zozo%E4%B8%BB%E9%A2%98/">zozo主题</a>
+        
+            <a href="/tags/r3300l/">R3300L</a>
+        
+            <a href="/tags/s905l/">S905L</a>
+        
+            <a href="/tags/git/">git</a>
+        
+            <a href="/tags/tortoisegit/">TortoiseGit</a>
+        
+            <a href="/tags/samba/">Samba</a>
+        
+            <a href="/tags/fatal-detected-dubious-ownership-in-repository/">fatal: detected dubious ownership in repository</a>
+        
+            <a href="/tags/imdisk/">ImDisk</a>
+        
+            <a href="/tags/go/">go</a>
+        
+            <a href="/tags/svg/">svg</a>
+        
+            <a href="/tags/icon/">icon</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/markdown-on-hugo-with-theme-stack/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-10.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-10.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">markdown On Hugo With theme Stack</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#编译及安装hugo">编译及安装Hugo</a>
+      <ol>
+        <li><a href="#编译要求">编译要求:</a></li>
+        <li><a href="#编译操作">编译操作:</a></li>
+      </ol>
+    </li>
+    <li><a href="#新建hugo目录">新建hugo目录</a></li>
+    <li><a href="#选择并下载主题themes">选择并下载主题(themes)</a></li>
+    <li><a href="#选择主题-启动hugo">选择主题, 启动hugo</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#已解决问题">已解决问题:</a></li>
+    <li><a href="#待解决问题">待解决问题:</a></li>
+    <li><a href="#其他问题">其他问题</a>
+      <ol>
+        <li><a href="#关于在windows10上-使用tortoisegitgit管理在samba服务器基于armbian系统上的仓库时出现的问题">关于在Windows10上, 使用TortoiseGit(+Git)管理在Samba服务器(基于Armbian系统)上的仓库时出现的问题</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

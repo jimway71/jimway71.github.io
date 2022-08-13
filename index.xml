@@ -1,0 +1,2179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>点滴随记</title>
+        <link>https://hugo.otcg.org/</link>
+        <description>Recent content on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.otcg.org/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>markdown On Hugo With theme Stack</title>
+        <link>https://hugo.otcg.org/p/markdown-on-hugo-with-theme-stack/</link>
+        <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/markdown-on-hugo-with-theme-stack/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-10.jpg" alt="Featured image of post markdown On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt; Markdown 中文文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 主题 Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具链接&#34;&gt;工具链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://192.168.1.40/cgi-bin/resume.cgi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;启动BFL-LS-WVL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;opensubtitles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;markdown在hugostack主题上的使用&#34;&gt;Markdown在Hugo+Stack主题上的使用&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;二级下的引用&#34;&gt;二级下的引用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;111
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
+&amp;gt;=Go 1.18版本的go&lt;br&gt;
+=Go 1.18版本的go&lt;/p&gt;
+&lt;/blockquote&gt;
+222-2&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* 111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        \&amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 333   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;111
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
+&amp;gt;=Go 1.18版本的go&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;=Go 1.18版本的go&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+222-2&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* 111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; \&amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; &amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 333   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;硬回车&#34;&gt;硬回车&lt;/h3&gt;
+&lt;p&gt;111&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;222&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;333&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+444&lt;/p&gt;
+&lt;p&gt;555&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;333  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;444  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;555  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;默认链接&#34;&gt;默认链接&lt;/h3&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt; than from
+&lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I get 10 times more traffic from [Google][] than from
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Yahoo][] or [MSN][].
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [google]: http://google.com/        &amp;#34;Google Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [yahoo]:  http://search.yahoo.com/  &amp;#34;Yahoo Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [msn]:    http://search.msn.com/    &amp;#34;MSN Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;单双重音符号的不同&#34;&gt;单双重音符号的不同&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;There is a literal backtick (&lt;/code&gt;) here.`&lt;br&gt;
+Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`There is a literal backtick (`) here.`
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;
+Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;``There is a literal backtick (`) here.``
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;五级标题和六级标题会导致stack主题的暗色模式失效&#34;&gt;五级标题和六级标题会导致[stack主题][]的&amp;quot;暗色模式&amp;quot;失效。&lt;/h3&gt;
+&lt;p&gt;以下语句会导致[stack主题][]的&amp;quot;暗色模式&amp;quot;失效:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###### This is an H6  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##### This is an H5  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;即五级标题 和 六级标题 - 会导致stack主题的&amp;#34;暗色模式&amp;#34;失效。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;原因并不清楚, 避免使用即可。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Markdown&#43;Hugo测试文件</title>
+        <link>https://hugo.otcg.org/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</link>
+        <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-02.jpg" alt="Featured image of post Markdown&#43;Hugo测试文件" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt; Markdown 中文文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 主题 Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具链接&#34;&gt;工具链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://192.168.1.40/cgi-bin/resume.cgi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;启动BFL-LS-WVL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;opensubtitles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;练习确定区&#34;&gt;练习确定区&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;二级下的引用&#34;&gt;二级下的引用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;111
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
+&amp;gt;=Go 1.18版本的go&lt;br&gt;
+=Go 1.18版本的go&lt;/p&gt;
+&lt;/blockquote&gt;
+222-2&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* 111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        \&amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 333   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;111
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
+&amp;gt;=Go 1.18版本的go&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;=Go 1.18版本的go&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+222-2&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* 111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; \&amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; &amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 333   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;硬回车&#34;&gt;硬回车&lt;/h3&gt;
+&lt;p&gt;111&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;222&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;333&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+444&lt;/p&gt;
+&lt;p&gt;555&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;333  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;444  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;555  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;默认链接&#34;&gt;默认链接&lt;/h3&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt; than from
+&lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I get 10 times more traffic from [Google][] than from
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Yahoo][] or [MSN][].
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [google]: http://google.com/        &amp;#34;Google Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [yahoo]:  http://search.yahoo.com/  &amp;#34;Yahoo Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [msn]:    http://search.msn.com/    &amp;#34;MSN Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;单双重音符号的不同&#34;&gt;单双重音符号的不同&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;There is a literal backtick (&lt;/code&gt;) here.`&lt;br&gt;
+Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`There is a literal backtick (`) here.`
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;
+Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;``There is a literal backtick (`) here.``
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;练习区&#34;&gt;练习区&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;heading-1&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;111&lt;br&gt;
+This is a regular paragraph.&lt;/p&gt;
+&lt;h2 id=&#34;你好&#34;&gt;你好&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This is another regular paragraph.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://images.google.com/images?num=30&amp;amp;q=larry&amp;#43;bird&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://images.google.com/images?num=30&amp;q=larry+bird&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://images.google.com/images?num=30&amp;amp;amp;q=larry&amp;#43;bird&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://images.google.com/images?num=30&amp;amp;q=larry+bird&lt;/a&gt;&lt;br&gt;
+©&lt;br&gt;
+©&lt;br&gt;
+AT&amp;amp;T&lt;br&gt;
+AT&amp;amp;T&lt;br&gt;
+4 &amp;lt; 5&lt;br&gt;
+4 &amp;lt; 5&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;111&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;222&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+333&lt;/p&gt;
+&lt;p&gt;444&lt;/p&gt;
+&lt;h1 id=&#34;this-is-an-h1&#34;&gt;This is an H1&lt;/h1&gt;
+&lt;h2 id=&#34;this-is-an-h2&#34;&gt;This is an H2&lt;/h2&gt;
+&lt;h1 id=&#34;this-is-an-h1-1&#34;&gt;This is an H1&lt;/h1&gt;
+&lt;h2 id=&#34;this-is-an-h2-1&#34;&gt;This is an H2&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;以下语句会导致&amp;#34;暗色模式&amp;#34;失效:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###### This is an H6  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##### This is an H5  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;即五级标题 和 六级标题。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;原因并不清楚, 避免使用即可。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;this-is-an-h1-2&#34;&gt;This is an H1&lt;/h1&gt;
+&lt;h2 id=&#34;this-is-an-h2-2&#34;&gt;This is an H2&lt;/h2&gt;
+&lt;h3 id=&#34;this-is-an-h3&#34;&gt;This is an H3&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is the first level of quoting.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is nested blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Back to the first level.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;000&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下面这个方式可以用哦!&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;111&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/blockquote&gt;
+222-2
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;This&lt;/strong&gt; is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/blockquote&gt;
+222-3
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;222-4&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;111&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/blockquote&gt;
+222-2&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is the &lt;em&gt;&lt;strong&gt;first&lt;/strong&gt;&lt;/em&gt; level of quoting.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is &lt;em&gt;nested&lt;/em&gt; blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Back to the &lt;strong&gt;first&lt;/strong&gt; level.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;this-is-a-header&#34;&gt;This is a header.&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;This is the first list item.&lt;/li&gt;
+&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here&amp;rsquo;s some example code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;this-is-a-header-1&#34;&gt;This is a header.&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;This is the first list item.&lt;/li&gt;
+&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here&amp;rsquo;s some example code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;this-is-a-header-2&#34;&gt;This is a header.&lt;/h2&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;This is the first list item.&lt;/li&gt;
+&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here&amp;rsquo;s some example code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;dd _ End&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McHale&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parish&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McHale&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parish&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;heading-2&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;1&#34;&gt;1&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;heading-3&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;2&#34;&gt;2&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McHale&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parish&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McHale&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parish&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magic&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magic&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;This is a list item with two paragraphs. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+mi posuere lectus.&lt;/p&gt;
+&lt;p&gt;Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+sit amet velit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This is a list item with two paragraphs.&lt;/p&gt;
+&lt;p&gt;This is the second paragraph in the list item. You&amp;rsquo;re
+only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another item in the same list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A list item with a blockquote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a &lt;strong&gt;blockquote&lt;/strong&gt;
+inside a list item.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;` 引用 This is a **blockquote**
+inside a list item.    
+`  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;引用 This is a **blockquote** inside a list item.   &lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ddd&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A list item with a code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;code goes here&amp;gt;    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;1986&#34;&gt;
+&lt;li&gt;What a great season.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1986. What a great season.&lt;/p&gt;
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a code block.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tell application &amp;quot;Foo&amp;quot;
+    beep
+end tell
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;
+    &amp;amp;copy; 2004 Foo Corporation
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;This is &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Title&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;an example&lt;/a&gt; inline link.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;This link&lt;/a&gt; has no title attribute.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;See my &lt;a class=&#34;link&#34; href=&#34;https://hugo.otcg.org/about/&#34; &gt;About&lt;/a&gt; page for details.&lt;/p&gt;
+&lt;p&gt;This is &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Optional Title Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
+&lt;p&gt;This is [an example] &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Optional Title Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;id&lt;/a&gt; reference-style link.&lt;/p&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;1&lt;/a&gt; than from
+&lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Search&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Search&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;3&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt; than from
+&lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt;
+than from &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Search&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; or
+&lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Search&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;un&lt;strong&gt;frigging&lt;/strong&gt;believable&lt;/p&gt;
+&lt;p&gt;*this text is surrounded by literal asterisks*&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;There is a literal backtick (&lt;/code&gt;) here.`&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Please don&amp;rsquo;t use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;amp;#8212;&lt;/code&gt; is the decimal-encoded equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/path/to/img.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/path/to/img.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:address@example.com&#34; &gt;address@example.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:address@example.com&#34; &gt;address@example.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;*literal asterisks*&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;\   backslash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`   backtick
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*   asterisk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;_   underscore
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{}  curly braces
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[]  square brackets
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;()  parentheses
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   hash mark
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+   plus sign
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-   minus sign (hyphen)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.   dot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!   exclamation mark
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>在R3300L类&#43;Armbian上安装Hugo服务器</title>
+        <link>https://hugo.otcg.org/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-01.jpg" alt="Featured image of post 在R3300L类&#43;Armbian上安装Hugo服务器" /&gt;&lt;p&gt;在R3300L(及类似架构设备)等使用S905系列的电视盒子上安装Armbian, 在Armbian系统下可以安装Hugo服务器。&lt;/p&gt;
+&lt;h2 id=&#34;编译及安装hugo&#34;&gt;编译及安装Hugo&lt;/h2&gt;
+&lt;p&gt;选择: Hugo最新版本, +extended, 支持linux/arm64系统&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;说明: R3300L的CPU是S905L, Arm架构CPU, 四核A53&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有多种方式可以安装Hugo, Armbian提供的apt工具就可以安装Hugo, 但基于Ubuntu传统, 使用这种方式下载的版本较旧, 很多功能并不支持。&lt;br&gt;
+注: 当前Armbian上使用apt可以安装的Hugo版本仅为0.40.1-1, 如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ apt search hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Sorting... Done
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Full Text Search... Done
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo/bionic 0.40.1-1 arm64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Fast and flexible Static Site Generator written in Go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Hugo当前最新Release版本是v0.101.0, 下载地址: &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.101.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo v0.101.0&lt;/a&gt;&lt;br&gt;
+但是, &lt;strong&gt;Release中仅提供了未+Extended的Linux/Arm64版本&lt;/strong&gt;, 而缺少扩展功能(Extended), 有些功能或主题就无法使用，因此需要重新编译。&lt;/p&gt;
+&lt;p&gt;注意:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不能使用手机+Termux, 借助手机较强的CPU性能和较高的配置进行编译, 因为编译出来的是For Android/Arm64, 而不是For Linux/Arm64, 因而无法使用。&lt;/li&gt;
+&lt;li&gt;同理, 在电脑+Linux上做编译也不行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编译hugo相关参考文档如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/installing/#build-from-source-on-mac&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Build from Source on Mac&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://apoorv.blog/install-hugo-extended-arm/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Install Update Hugo Extended for ARM in Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;编译要求&#34;&gt;编译要求:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;gt;=Go 1.18版本的go&lt;/li&gt;
+&lt;li&gt;最新版本的Hugo源代码包&lt;/li&gt;
+&lt;li&gt;(实际使用)2.8G的内存(含SWAP分区2G), 估计至少需要1G的内存(含SWAP分区)。&lt;br&gt;
+否则会出现报错, 且运行极长的时间(以十数小时数计), 但是最后还无法成功完成编译。&lt;br&gt;
+编译报错信息为:
+&lt;blockquote&gt;
+&lt;p&gt;go build github.com/gohugoio/locales compressed:&lt;br&gt;
+: /usr/local/go/pkg/tool/linux_amd64/compile: signal: killed&lt;/p&gt;
+&lt;/blockquote&gt;
+参考:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cxybb.com/article/sinat_35406909/105383185&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Golang - go build编译项目时出现signal: killed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000012219689&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用SWAP分区’ 解决golang编译项目时出现signal: killed’&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/tmp空间需要大于400M, 估计至少应该超过1G: 否则会报错。&lt;br&gt;
+编译报错信息为:
+&lt;blockquote&gt;
+&lt;p&gt;* Github.com/bep/golibsass/internal/libsass  &lt;br&gt;
+/tmp/cctAMSUf.s: Assembler messages:  &lt;br&gt;
+/tmp/cctAMSUf.s: Fatal error: can’t write 3916 types to section  &lt;br&gt;
+.debug_loc of $WORK/b490/_x032.o: ‘No space left on device’&lt;br&gt;
+/tmp/cctAMSUf.s: Fatal error: can’t close $WORK/b490/_x032.o: No space left on device&lt;/p&gt;
+&lt;/blockquote&gt;
+在运行go build时查看/tmp目录, 确认编译时是使用/tmp做为编译目录, 也基本确认/tmp空间不足会出现错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;编译操作&#34;&gt;编译操作:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装(当前)最新稳定版本的go&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/yaojiawan/article/details/102833371&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;初学GO笔记（1）-Arm64 linux上的安装&lt;/a&gt;。&lt;br&gt;
+同样由于Ubuntu传统, 可以用apt直接安装的go包版本仅为1.10.3, 无法用于编译Hugo, 因此改用tar包安装。&lt;br&gt;
+go包下载列表在&lt;a class=&#34;link&#34; href=&#34;https://go.dev/dl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;go download&lt;/a&gt;, 当前最新稳定版本tar包是&lt;a class=&#34;link&#34; href=&#34;https://go.dev/dl/go1.18.4.linux-arm64.tar.gz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;go1.18.4.linux-arm64.tar.gz&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# wget &lt;a class=&#34;link&#34; href=&#34;https://go.dev/dl/go1.18.4.linux-arm64.tar.gz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://go.dev/dl/go1.18.4.linux-arm64.tar.gz&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解压下载的go包:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# tar zxvf go1.18.4.linux-arm64.tar.gz&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;移到/usr/local下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mv go /usr/local/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看go的版本信息:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# /usr/local/go/bin/go version&lt;br&gt;
+go version go1.18.4 linux/arm64&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;确认go版本没问题后, 开始建立go环境:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mkdir /opt/go&lt;br&gt;
+# vim /etc/profile&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在文件末尾增加:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;export GOROOT=/usr/local/go&lt;br&gt;
+export GOPATH=/opt/go&lt;br&gt;
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;重新登录(新登录一回就行)后, 查看环境变量是否生效:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# echo $PATH&lt;br&gt;
+/opt/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&lt;br&gt;
+# echo $GOROOT&lt;br&gt;
+/usr/local/go&lt;br&gt;
+# echo $GOPATH&lt;br&gt;
+/opt/go&lt;br&gt;
+确认环境变量已生效!&lt;br&gt;
+修改配置, 改用国内仓库以提高速度:&lt;br&gt;
+# go env -w GOPROXY=https://goproxy.cn,direct&lt;br&gt;
+查看, 并确认已修改成功:&lt;br&gt;
+# go env | grep GOPROXY&lt;br&gt;
+GOPROXY=&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://goproxy.cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://goproxy.cn&lt;/a&gt;,direct&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原为: &lt;code&gt;GOPROXY=&amp;quot;https://proxy.golang.org,direct&amp;quot;&lt;/code&gt;&lt;br&gt;
+确认Go1.18.4已安装完成&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在R3300L上准备编译Hugo的环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;准备内存空间, 以配合编译Hugo的内存需求(估计至少大于1G)&lt;br&gt;
+由于R3300L的实际内存仅为805M, 无法满足Hugo编译需要, 因此需要临时增加Swap分区以增加可用内存。&lt;br&gt;
+创建做为swap分区的文件, 命令中创建了一个2G的文件:
+&lt;blockquote&gt;
+&lt;p&gt;# dd if=/dev/zero of=/root/swapfile bs=1M count=2048&lt;/p&gt;
+&lt;/blockquote&gt;
+格式化为交换分区文件, 建立swap的文件系统:
+&lt;blockquote&gt;
+&lt;p&gt;# mkswap /root/swapfile&lt;/p&gt;
+&lt;/blockquote&gt;
+启用交换分区(Swap)文件:
+&lt;blockquote&gt;
+&lt;p&gt;# swapon /root/swapfile&lt;/p&gt;
+&lt;/blockquote&gt;
+查看交换分区状态:
+&lt;blockquote&gt;
+&lt;p&gt;# swapon&lt;br&gt;
+NAME TYPE SIZE USED PRIO&lt;br&gt;
+/dev/zram1 partition 400.5M 166.7M 5&lt;br&gt;
+/root/swapfile file 2G 7.6M -2&lt;/p&gt;
+&lt;/blockquote&gt;
+注意: 这样的设置方法, 系统重启后不再有效!&lt;/li&gt;
+&lt;li&gt;增加/tmp目录空间, 以配合编译Hugo的存储空间需求(估计至少也大于1G)&lt;br&gt;
+使用df命令查看空间:
+&lt;blockquote&gt;
+&lt;p&gt;# df&lt;br&gt;
+Filesystem 1K-blocks Used Available Use% Mounted on&lt;br&gt;
+…&lt;br&gt;
+tmpfs 410140 8 410132 1% /tmp&lt;br&gt;
+…&lt;/p&gt;
+&lt;/blockquote&gt;
+可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。 
+由于/root的空间够用, 因此改为/root下目录做为/tmp:&lt;br&gt;
+新建tmp的目录:
+&lt;blockquote&gt;
+&lt;p&gt;# mkdir /root/tmp&lt;/p&gt;
+&lt;/blockquote&gt;
+给这个目录设置0777权限(避免有什么权限问题):
+&lt;blockquote&gt;
+&lt;p&gt;# chmod 0777 /root/tmp&lt;/p&gt;
+&lt;/blockquote&gt;
+把新建的/root/tmp目录bind到/tmp:
+&lt;blockquote&gt;
+&lt;p&gt;# mount &amp;ndash;bind /root/tmp /tmp&lt;/p&gt;
+&lt;/blockquote&gt;
+再用df命令查看, 已看不到/tmp这一条记录。&lt;br&gt;
+操作方法参考:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/developerof/article/details/23035843&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;• linux 修改/tmp目录的大小&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/zhangmingcheng/p/6743908.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;• mount &amp;ndash;bind 的妙用&lt;/a&gt;&lt;br&gt;
+注: 这样的设置方法, 系统重启后也不再有效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译Hugo&lt;br&gt;
+Hugo源代码包的地址如下:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/archive/v0.101.0.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;• v0.101.0.zip&lt;/a&gt;&lt;br&gt;
+或&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/archive/refs/tags/v0.101.0.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;• v0.101.0.zip&lt;/a&gt;&lt;br&gt;
+解压Hugo源代码tar包:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# tar zxvf v0.101.0.zip&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;进入Hugo目录:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# cd v0.101.0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;开始编译Hugo, 带extended参数:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# go build &amp;ndash;tags extended&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;编译完成只生成一个文件: hugo&lt;br&gt;
+查看版本:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ./hugo version&lt;br&gt;
+hugo v0.101.0+extended linux/amd64 BuildDate=unknown&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注: 在R3300L上两次成功编译Hugo的时长分别是: 24分钟, 3分钟, 很奇怪, 似乎都是这个规律。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;新建hugo目录&#34;&gt;新建hugo目录&lt;/h2&gt;
+&lt;p&gt;新建一个网站(的目录结构):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo mkdir /mnt/hugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo chown jimway:jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd /mnt/hugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo new site blog  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Congratulations! Your new Hugo site is created in /mnt/hugo/blog.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Just a few more steps and you&amp;#39;re ready to go:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. Download a theme into the same-named folder.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Choose a theme from https://themes.gohugo.io/ or
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   create your own with the &amp;#34;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;#34; command.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. Perhaps you want to add some content. You can add single files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   with &amp;#34;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. Start the built-in live server via &amp;#34;hugo server&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;至此, 站点目录已经建立完成。&lt;/p&gt;
+&lt;h2 id=&#34;选择并下载主题themes&#34;&gt;选择并下载主题(themes)&lt;/h2&gt;
+&lt;p&gt;hugo提供了非常丰富的&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;主题库&lt;/a&gt;供下载选用。&lt;br&gt;
+选择了以下几个备用(特点: 简洁):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/blackburn/&#34;  title=&#34;Blackburn主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blackburn主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-diary/&#34;  title=&#34;Diary主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Diary主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-fuji/&#34;  title=&#34;Fuji主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fuji主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-docport/&#34;  title=&#34;docPort主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docPort主题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下载并安装上述主题(根据相应主题中的安装说明)到blog的themes目录下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/yoshiharuyamashita/blackburn.git themes/blackburn
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 注: Diray这个下载是参照blackburn写的, 文档中没有安装说明  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git init  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 注: 使用git subodule add命令前要在同一目录下调用git init, 否则可能会出现以下错误: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###     Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/dsrkafuu/hugo-theme-fuji.git themes/fuji
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 注: 这个是使用git submodule add命令  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/jimway71/hugo-theme-pure.git themes/pure  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/vjeantet/hugo-theme-docport.git themes/hugo-theme-docport  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;themes分析:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-docport/&#34;  title=&#34;docPort主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docPort主题&lt;/a&gt;:&lt;br&gt;
+适合用一个文档做整个网站入口, 即网站入口就是一个文档, 而不是一个页面(分别指向不同文档), 并不适合做普通网站, 比如博客(blog)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;:&lt;br&gt;
+适合做blog:
+&lt;ul&gt;
+&lt;li&gt;分左中右三列布局&lt;/li&gt;
+&lt;li&gt;左/右有文本导航&lt;/li&gt;
+&lt;li&gt;有标签(tags)/目录(Categories)分类&lt;/li&gt;
+&lt;li&gt;左侧导航可以添加link链接&lt;/li&gt;
+&lt;li&gt;左侧有多种配色可选&lt;/li&gt;
+&lt;li&gt;左上标题、说明均可自定义&lt;br&gt;
+&lt;strong&gt;补充: 后面选的&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;也满足上述要求&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;选择主题-启动hugo&#34;&gt;选择主题, 启动hugo&lt;/h2&gt;
+&lt;p&gt;选择&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;, Pure相关说明文档:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;项目文档位于themes\pure目录下的README.MD(英文)+README-ZH.MD(中文)&lt;/li&gt;
+&lt;li&gt;IconFont图标说明文档位于: &lt;a class=&#34;link&#34; href=&#34;http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html&#34;  title=&#34;demo_fontclass-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;demo_fontclass&lt;/a&gt;&lt;br&gt;
+相关的icon文件应该是位于&lt;code&gt;themes\pure\static\fonts&lt;/code&gt;下的文件, 尤其是iconfont.svg这个文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;写了shell以方便调用:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim runh  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt; --baseURL&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;http://mnas.otcg.org&amp;#39;&lt;/span&gt; --port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt; -D &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ chmod +x runh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim runhugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /mnt/hugo/blog&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; hugo server --bind&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt; --baseURL&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;http://mnas.otcg.org&amp;#39;&lt;/span&gt; --port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt; -D &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ chmod +x runhugo  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在Linux命令行中调用runhugo/runh可以方便的启动hugo服务器。&lt;br&gt;
+如果需要跟随Armbian系统启动, 把命令加入到/etc/rc.local文件中即可。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;
+&lt;h2 id=&#34;已解决问题&#34;&gt;已解决问题:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;的config.yml文件中, menu: -&amp;gt; main:中的图标来源不明(其中每一项的文字前都自动加上了图标)&lt;br&gt;
+说明:&lt;br&gt;
+图标的设置同样在config.yml文件中, 在menuIcons:后进行设置, 与menu-&amp;gt;link-&amp;gt;name对应, 格式如下:
+&lt;blockquote&gt;
+&lt;p&gt;name: [这里有个空格]icon-name&lt;/p&gt;
+&lt;/blockquote&gt;
+上述icon-name查&lt;a class=&#34;link&#34; href=&#34;http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html&#34;  title=&#34;demo_fontclass-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;demo_fontclass&lt;/a&gt;中的英文名称&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;在左边导航链接添加Home(主页)的问题:&lt;br&gt;
+如果按ExampleSite中的做法, 在\content\page里+home目录和md文件配置(仿照已有文件), md文件里title的名字应该写&amp;quot;主页&amp;quot;;&lt;br&gt;
+但这样配置后, 当使用浏览器访问网站主页时, 网站主页的名称(在浏览器左上角显示的网站名称)就会变成&amp;quot;主页&amp;quot;, 而不是原来在hugo配置文件config.yaml配置里的title名称。&lt;br&gt;
+处理:&lt;br&gt;
+修改hugo配置文件config.yaml, 在menu:main:中增加Home, 适当配置weight(相当于相对位置的值), 可以得到期望的效果。&lt;br&gt;
+修改配置文件blog/config.yaml, 如下:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;menu:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    main: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        - identifier: Home
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          name: 主页
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          url: /
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          params:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              icon: home
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          weight: -50
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;调整左侧导航栏文字及图标(icon)的颜色问题。&lt;br&gt;
+&lt;strong&gt;说明: &lt;br&gt;
+hugo主题配置中, themes下的配置信息会被网站根目录下相应的配置信息所替代,&lt;br&gt;
+如blog\themes\hugo-theme-stack\assets\scss\中的配置信息, 可以被blog\assets\sccs\下的配置替代。&lt;br&gt;
+这样, 修改配置时, 不需要修改themes目录下的主题原始配置文件, 而是仅在网站目录下进行修改, 而且只设置需要修改的字段即可 - 简单、方便, 且便于代码管理。&lt;/strong&gt;&lt;br&gt;
+左侧导航栏文字原配置的颜色太浅, 需要修改。&lt;br&gt;
+修改方法: &lt;br&gt;
+增加目录blog\assets\sccs, 并将原blog\themes\hugo-theme-stack\assets\scss\custom.scss文件(基本是个空文件, 用于用户自定义的配置)拷贝到该目录下, 在该custome.scss中添加如下配置:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:root {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     --body-text-color: rgba(0, 0, 0, 0.9);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 修改后, 会看到导航栏文字颜色变得更深一些的效果。(最后一位数字大概就是颜色深度, 越大颜色越深 - 最大值是1) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;最开始的操作(错误重现):  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;上述新的custome.scss文件中body-text-color被设置为bababa，像这样:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:root {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     --body-text-color: bababa;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;修改完成后, 左侧导航栏文字明显变深, 但是, 导航栏上方Social栏中的图标变得完全不可见。  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;五级标题和六级标题会导致&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stack主题&lt;/a&gt;的&amp;quot;暗色模式&amp;quot;失效。&lt;br&gt;
+以下语句会导致&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stack主题&lt;/a&gt;的&amp;quot;暗色模式&amp;quot;失效:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###### This is an H6  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##### This is an H5  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;即五级标题 和 六级标题 - 会导致stack主题的&amp;#34;暗色模式&amp;#34;失效。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;原因并不清楚, 避免使用即可。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;修改导航栏的About链接:&lt;br&gt;
+加几张壁纸图就行了~~~&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-pure/&#34;  title=&#34;Pure主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pure主题&lt;/a&gt;的代码框实在太难看了!(好了, 现在已经改用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;了)&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Pure-CFS.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Pure主题代码框图1&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Pure-CodeFrame.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Pure主题代码框图2&#34;
+	
+	
+&gt;
+&lt;del&gt;在&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=markdown&amp;#43;%E5%86%99%E5%87%BA&amp;#43;%E4%BB%A3%E7%A0%81%E6%A1%86&amp;#43;%E8%A1%8C%E6%95%B0&amp;#43;%E5%A4%8D%E5%88%B6&amp;#43;%E8%83%8C%E6%99%AF%E8%89%B2&amp;#43;hugo&amp;#43;theme&amp;amp;newwindow=1&amp;amp;biw=1444&amp;amp;bih=711&amp;amp;sxsrf=ALiCzsYZLtmKy9sfuN8UwinqVdiqec2nxA%3A1659977366460&amp;amp;ei=lj7xYo7gG9qhoASm_LEQ&amp;amp;ved=0ahUKEwiOg43K2bf5AhXaEIgKHSZ-DAI4ChDh1QMIDg&amp;amp;uact=5&amp;amp;oq=markdown&amp;#43;%E5%86%99%E5%87%BA&amp;#43;%E4%BB%A3%E7%A0%81%E6%A1%86&amp;#43;%E8%A1%8C%E6%95%B0&amp;#43;%E5%A4%8D%E5%88%B6&amp;#43;%E8%83%8C%E6%99%AF%E8%89%B2&amp;#43;hugo&amp;#43;theme&amp;amp;gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQwQhYhylgjS1oAXAAeACAAbwBiAGrDJIBBDAuMTGYAQCgAQHAAQE&amp;amp;sclient=gws-wiz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google上搜&amp;quot;markdown 写出 代码框 行数 复制 背景色 hugo theme&amp;quot;&lt;/a&gt;, 搜到的&lt;a class=&#34;link&#34; href=&#34;https://kuang.netlify.app/blog/hugo.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;风月&lt;/a&gt;可能可以参考。&lt;/del&gt;&lt;br&gt;
+备选的主题有:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/blackburn/&#34;  title=&#34;Blackburn主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blackburn主题&lt;/a&gt;?&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-BlackBurn.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;BlackBure Demo&#34;
+	
+	
+&gt;
+[BlackBure主题][]的代码框好看多了, &amp;hellip; 但是, [BlackBure主题][]不符合其他的要求。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-diary/&#34;  title=&#34;Diary主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Diary主题&lt;/a&gt;?&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Diary.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Diary Demo&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://risehere.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Diary的Demo网站&lt;/a&gt;看着还可以吧, 但感觉好像还是差点什么?&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-clarity/&#34;  title=&#34;Clarity主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Clarity主题&lt;/a&gt;?
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Clarity.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Clarity Demo&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://neonmirrors.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Clarity的Demo网站&lt;/a&gt;感觉有点乱&amp;hellip;&lt;br&gt;
+可能还行吧?&lt;/li&gt;
+&lt;li&gt;看到一个Blog叫&lt;a class=&#34;link&#34; href=&#34;https://kuang.netlify.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;风月&lt;/a&gt;, 也是用的Hugo+Theme, 所链接的&lt;a class=&#34;link&#34; href=&#34;https://github.com/vjeantet/hugo-theme-docdock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docDock主题&lt;/a&gt;并未出现在&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;gohugo官方主题网站&lt;/a&gt;上&amp;hellip; 当然, 也不满意。&lt;/li&gt;
+&lt;li&gt;看到一个网站叫&lt;a class=&#34;link&#34; href=&#34;https://gojun.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GoJun&lt;/a&gt;推荐, 也是该网站所用的&lt;a class=&#34;link&#34; href=&#34;https://github.com/varkai/hugo-theme-zozo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-theme-zozo主题&lt;/a&gt;, 在&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;gohugo官方主题网站&lt;/a&gt;上也没有, 但&lt;strong&gt;非常简洁, 感觉很好&lt;/strong&gt;, 有个&lt;a class=&#34;link&#34; href=&#34;https://zozo.varkai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zozo主题Demo&lt;/a&gt;, 看着比较简单, 看&lt;a class=&#34;link&#34; href=&#34;https://gojun.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GoJun&lt;/a&gt;也差不多。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-zozo-tn.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;zozo(tn) Demo&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-journal/&#34;  title=&#34;Journal主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Journal主题&lt;/a&gt;也是简洁风格, 与&lt;a class=&#34;link&#34; href=&#34;https://github.com/varkai/hugo-theme-zozo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-theme-zozo主题&lt;/a&gt;有些类似。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Journal.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Journal Demo&#34;
+	
+	
+&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://dashdashzako.github.io/hugo-journal-demo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Journal的Demo网站&lt;/a&gt;看着就有点太过简单了&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;初看有些太过简单, 看了实际的效果后感觉还不错, 可以一用。
+&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Stack.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Stack Demo&#34;
+	
+	
+&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://demo.stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题的Demo网站&lt;/a&gt;看着还可以, 只是左边菜单的字颜色有点浅(已修改)。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://jinli.cyou/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;锦李本鲤&lt;/a&gt;也是使用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;的, 可以做参考。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/&#34;  title=&#34;使用stack主题的blog: Echosec @QIN2DIM&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Echosec @QIN2DIM&lt;/a&gt;同样使用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;, 还有一些文档与修改主题样式有关, 比如&lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/p/custom-hugo-theme-styles/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;分享一些有趣的 Hugo-Stack 自定义主题样式&lt;/a&gt;; &lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/&#34;  title=&#34;使用stack主题的blog: Echosec @QIN2DIM&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Echosec @QIN2DIM&lt;/a&gt;有不少文档讲到&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;, 可以在&lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/search/?keyword=stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;搜索stack&lt;/a&gt;中看到。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;的库在&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-theme-stack&lt;/a&gt;。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stack主题中文手册网站&lt;/a&gt;是个较完善的&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;中文手册。&lt;br&gt;
+&lt;del&gt;&lt;strong&gt;考虑使用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;&lt;/strong&gt;&lt;/del&gt;  已改用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;待解决问题&#34;&gt;待解决问题:&lt;/h2&gt;
+&lt;p&gt;暂无&lt;/p&gt;
+&lt;h2 id=&#34;其他问题&#34;&gt;其他问题&lt;/h2&gt;
+&lt;h3 id=&#34;关于在windows10上-使用tortoisegitgit管理在samba服务器基于armbian系统上的仓库时出现的问题&#34;&gt;关于在Windows10上, 使用TortoiseGit(+Git)管理在Samba服务器(基于Armbian系统)上的仓库时出现的问题&lt;/h3&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;问题描述:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+在Armbian系统上使用git clone命令克隆Pure主题仓库(相关目录通过Samba服务器在网络上共享), 在Armbian系统中和Windows共享中修改后, 在Windows上使用TortoiseGit查看diff, 报&amp;quot;fatal: detected dubious ownership in repository&amp;quot;类的错误, 并提示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加环境变量GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;git config --global --add safe.directory &#39;仓库目录全路径&#39; &lt;/code&gt;命令, 应该是添加信任目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;环境变量&lt;/code&gt;可以使用windows的&amp;quot;编辑系统环境变量&amp;quot;工具添加, 在cmd中使用set命令查看确认&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;添加信任目录&lt;/code&gt;可以在cmd中使用已安装的&lt;code&gt;git.exe&lt;/code&gt;程序执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是, 按此操作后, 并没有效果: 使用TortoiseGit查看diff依然报错。&lt;br&gt;
+另外, 在&lt;!-- raw HTML omitted --&gt;内存虚拟磁盘(使用&amp;rsquo;Olof Lagerkvist&amp;rsquo;的&amp;rsquo;ImDisk Virtual Disk&amp;rsquo;建立)&lt;!-- raw HTML omitted --&gt;上, 也会出错同样的问题。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;处理:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;结论:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>文档</title>
+        <link>https://hugo.otcg.org/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>关于</title>
+        <link>https://hugo.otcg.org/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/wallpaper/wallpaper-03.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/wallpaper/wallpaper-04.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/wallpaper/wallpaper-05.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/wallpaper/wallpaper-06.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/wallpaper/wallpaper-07.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/wallpaper/wallpaper-08.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/wallpaper/wallpaper-09.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;凡心所向, 素履以往,&lt;br&gt;
+生如逆旅, 一苇以航&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>在美国租车</title>
+        <link>https://hugo.otcg.org/p/%E5%9C%A8%E7%BE%8E%E5%9B%BD%E7%A7%9F%E8%BD%A6/</link>
+        <pubDate>Sat, 10 Jun 2017 00:32:16 +0800</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/%E5%9C%A8%E7%BE%8E%E5%9B%BD%E7%A7%9F%E8%BD%A6/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-14.png" alt="Featured image of post 在美国租车" /&gt;&lt;p&gt;2017.6.9&lt;/p&gt;
+&lt;h4 id=&#34;使用中国驾照可以开车的州以及证件有效性&#34;&gt;使用中国驾照可以开车的州，以及证件有效性&lt;/h4&gt;
+&lt;p&gt;　　持中国驾照可以在美国大部分州短期内合法驾车，但有少部分州是不可以持中国驾照开车，其中包括肯塔基州、麻萨诸塞州、密歇根州、新泽西州、俄亥俄州、德克萨斯州、佛蒙特州、威斯康辛州等，大多数都位于美国东北部。&lt;br&gt;
+　　下面这个文档是我找到的最详细的相关说明文档:&lt;br&gt;
+　　　&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://zaq.us/china-driver-license/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中国驾照在美国开车的规定(官方文件)&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+　　在上述这些州里，你可能因为租车公司员工不清楚法律规定而拿到车，但万一碰上警察就可能遇上麻烦。&lt;br&gt;
+　　如果只是路上要经过其中某个州，而不方便绕过的话，那就小心点开车，也别招警察注意，因为在这段路程中，不仅不合法，可能租车相关的保险也是无效的。&lt;/p&gt;
+&lt;p&gt;　　持中国驾照，在美国租车最好携带翻译件，这样租车公司员工能看明白驾照上写的是什么。携程上有各租车公司的翻译件模板，照着做一个就ok。&lt;br&gt;
+携程翻译件模板下地址如下:&lt;br&gt;
+　　　&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;http://car.ctrip.com/OSDWeb/o/tool/translation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;免费驾照翻译件下载&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+　　翻译件必须和驾照原件一起使用。&lt;/p&gt;
+&lt;p&gt;　　在美国开车不需要什么驾照公证件，租车公司就不知道这么个东西，你给他公证件，他就当个翻译件来用。&lt;/p&gt;
+&lt;p&gt;　　所谓的国际驾照(IDP)对仅持有中国驾照的人而言是完全无效的，中国没有加入联合国道路交通公约，不能颁发国际驾照。这个骗局十多年前就看到了，到现在还在继续。&lt;/p&gt;
+&lt;p&gt;　　如果你想拿到有效的IDP，你可以通过拿到加入到相关公约国家的驾照，比如韩国，并使用该国有效驾照申请IDP。&lt;br&gt;
+　　IDP有效期应该是一年，需要和相应的驾照一起使用才有效。&lt;/p&gt;
+&lt;h4 id=&#34;交通规则&#34;&gt;交通规则&lt;/h4&gt;
+&lt;p&gt;　这个先不写了，网上好多。&lt;/p&gt;
+&lt;h4 id=&#34;第三方保险&#34;&gt;第三方保险&lt;/h4&gt;
+&lt;p&gt;　租车公司提供的车损险是有免责条款的，比如车顶、车底、玻璃等是不在保险覆盖范围内的，在详细的合同条款里应该会有，我记得在某一家租车公司的文档里看到过，另外还问过Hertz中国的客服并得到确认。&lt;br&gt;
+　　虽然大部分公司不会拿这些损伤说事，比如去年在路易斯安娜州租的车，就被前面卡车掉落的石子把前挡砸出了一个小坑，最终还车也没从信用卡里另外收钱(当时有买车损险)，但万一有事真搬出这条款出来你也没办法。&lt;/p&gt;
+&lt;p&gt;　 第三方保险有车损险，而且包括了这些租车公司不保的项目，另外还包括什么道路救援、轮胎打气、丢钥匙等等各种可能出的问题，保得很全，租车公司分开一项一项给你收钱的项目，第三方保险一个基本上全包了，基本上说，除了三者险、人身伤害险、财产险，第三方的保险都有了。&lt;br&gt;
+　　而且，还不贵，一年的保险不到600RMB，覆盖了全世界(战乱国家除外).&lt;br&gt;
+　　在国内租一次车，七八天的车损补充险，大概就有四五百块了。&lt;/p&gt;
+&lt;p&gt;　　当然用租车公司的车损险，万一有车损处理起来会非常方便。&lt;br&gt;
+　　用第三方保险缺点就是万一出了事故，需要先垫款，而且周期可以会比较长。 　　　&lt;/p&gt;
+&lt;p&gt;　　找的这家是rentalcars用的第三方保险，叫rentalcover，最近发现好像主页上没有年度保险了，不会不卖了吧。&lt;/p&gt;
+&lt;h4 id=&#34;租车费以外的其它费用各种保险罚款道路救援等&#34;&gt;租车费以外的其它费用(各种保险、罚款、道路救援等) 　&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;跟车相关的保险有车损+盗抢(LDW/CDW)，三者(ALI/SLI/EP)&lt;br&gt;
+不同租车公司的写法不太一样。&lt;/li&gt;
+&lt;li&gt;车损盗抢+三者是必须有的&lt;br&gt;
+这没什么好说的。&lt;/li&gt;
+&lt;li&gt;道路救援(RAP)&lt;br&gt;
+其实一般用不到。&lt;/li&gt;
+&lt;li&gt;人身保险(PAI/PEI)&lt;/li&gt;
+&lt;li&gt;财物险(PEP)&lt;br&gt;
+买个旅游保险就都有了&lt;/li&gt;
+&lt;li&gt;加油服务(FUEL SERVICE OPTION)&lt;br&gt;
+如果还车的时候不赶时间，肯定选满油还车(FULL TO FULL)，租车公司的油，贵，还要加税。&lt;/li&gt;
+&lt;li&gt;异地还车费(One way fee/Drop fee)&lt;br&gt;
+有的州不收异地还车费，比如加州、内华达州、佛罗里达州(好像有的公司不免) 。&lt;br&gt;
+　　Avis异地还车起步价$50(budget好像也是), alamo是$100(hertz好像一样), 另加税。&lt;/li&gt;
+&lt;li&gt;增加驾驶员(Additional Driver)&lt;br&gt;
+加州应该是免费的, 其它的都收费。&lt;br&gt;
+不同的租车公司在这块的收费价格差异还是很大的，往往越是号称低价的，在这些不太容易看明白的项目上收费就越高，比如Dollar/Thrifty，最后算起来，总的费用可能比有些看着价格高点的公司还要多。&lt;br&gt;
+其实这跟廉价航空一样，比如spirit航空, 票价便宜, 但随身行李也要收费, 餐食收费，托运行李收费也比别家贵不少, 总得找地方把钱赚出来。&lt;/li&gt;
+&lt;li&gt;过路费&lt;br&gt;
+过路费有三种收法:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;租用etoll pass, 类似国内的ETC.&lt;br&gt;
+车上带的etolls pass一般都有开关, 可以启用或关闭。&lt;br&gt;
+只要租期内用了一次，整个租期内按全部天数计算租用费，部分公司有封顶, 一个月内最多$20左右。每天租金各公司不同，ALAMO/AVIS最低, $3.95/天， Hertz略高, $4.95/天，Dollar/Thrifty更高, $8.99/天，而且没有封顶。&lt;br&gt;
+过路费另算，这个应该只是代收, 没有别的费用。&lt;br&gt;
+这块的费用一般是还车后，租车公司直接从信用卡里扣。&lt;br&gt;
+具体费用明细可以在美国路桥费官网查，地址是: &lt;br&gt;
+　　　&lt;a class=&#34;link&#34; href=&#34;http://www.htallc.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;htallc&lt;/a&gt;&lt;br&gt;
+查的时候，需要租车合同号或用的信用卡号的前6位和后4位。&lt;br&gt;
+结果像这样&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/tollfee-usa.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;toll fee&#34;
+	
+	
+&gt;&lt;br&gt;
+纽约到华盛顿这条路上收费挺贵的。&lt;br&gt;
+有时候会有同一个租车合同会收两次过路费，应该是数据延迟。&lt;br&gt;
+关于etoll pass系统，美国各地都不同, 加州叫FastTrak，伊利诺伊州叫ipass, 东北部十多个州用的ezpass, 德克萨斯州用的EZ Tag，佛罗里达州叫sunpass.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TPW 　　　&lt;br&gt;
+Toll pass waive, 通行费免除, 买了这个后，不再向租车方收取过路费，相当于一价全包。&lt;br&gt;
+比如， Alamo在部分地区提供这种服务，比如伊利诺伊州, $7.99/天, 不含税。&lt;br&gt;
+估计是这些地方通行费收的便宜, 全包租车公司肯定也是赚的。&lt;br&gt;
+曾在芝加哥租到了辆没带etoll pass的车子, 回去找alamo, 就被卖了TPW, 肯定是不划算的, 还好时间不长。&lt;br&gt;
+主要是担心下面的这个坑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Toll by plate/Charge by plate ~ 收通行费+服务费 或 toll pass日租金 　&lt;br&gt;
+车辆上没有etoll pass, 过路费收费公司会把帐单给租车公司，租车公司再转给第三方公司来收费，每一笔都收服务费。 　　　&lt;br&gt;
+Dollar就是这么干的，每一笔收$20左右。&lt;br&gt;
+像alamo这样的公司有可能是按etoll pass租金+过路费的收费模式，当时急着走，就没细问。&lt;br&gt;
+另外，导航虽然有避开收费站的功能，但并不能保证肯定都能避开, 因为路也在变。 &lt;br&gt;
+去年在德州休斯顿, 用谷歌导航，就没能避开两个收费站。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其实还有一种方式，就是自己交费。 　&lt;br&gt;
+旧金山大桥金门大桥的过桥费，就可以自己在网站上交，在网上操作，好像是车牌挂张信用卡就行。&lt;br&gt;
+而佛罗里达州的电子过路费收费系统sunpass, 且支持租车用户时自己买卡交费。&lt;br&gt;
+这家的网站是:  &lt;a class=&#34;link&#34; href=&#34;http://www.sunpass.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;sunpass&lt;/a&gt; 　&lt;br&gt;
+注意: 不知道什么原因，这个网站在我国境内是不存在的，需要通过技术手段访问。&lt;br&gt;
+同时，sunpass也有提供手机app，当然也需要技术手段访问。 　&lt;br&gt;
+在Walgreen超市，或者CVS药店, 会有一种mini sunpass出售, 有的publix超市可能也有, 价格是$4.99+税。&lt;br&gt;
+这种是贴在前挡风玻璃上，在后视镜后面的位置，一次性的，用完撕下来大概就废了(很难撕下来)。在网上看，有人说可以用胶带把pass粘在前风挡上,  但这样不能确认是否有效。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/mini-sunpass.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;mini sunpass&#34;
+	
+	
+&gt;&lt;br&gt;
+买了mini sunpass后，如果还没有sunpass帐户，先用买的这张sunpass的ID去注册一个帐号, 充值, 加上车辆信息, 就能用了。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/mini-sunpass-vehicle-info.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;mini-sunpass-vehicle-info&#34;
+	
+	
+&gt;&lt;br&gt;
+App上增加车车辆信息的操作界面就这样，上面需要的车辆信息，可以在车钥匙的标牌上，或者车辆前挡风玻璃上找到。写车辆信息应该是为了在没有读到卡的情况下，根据车辆牌号等信息，直接从对应帐户扣款。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/etollpass-usa.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;etollpass-usa&#34;
+	
+	
+&gt;
+租用车辆需要设置下面的起止时间，到期后，车辆信息会被自动删除。&lt;br&gt;
+在app上可以查看交费收费的明细信息，见下图:&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/sunpass-bill.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sunpass-bill&#34;
+	
+	
+&gt;
+佛罗里达州的过路费看来收的地方不多，而且比较便宜，主要是大城市周边收费，如果时间不长，10块钱就够了。&lt;br&gt;
+还车后，如果不再用这个帐号，剩下的钱可以退款，或者直接关掉帐户(Close Account).&lt;br&gt;
+这些操作在app上没有, 只能在网页上操作。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/sunpass-app.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sunpass-app&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;导航&#34;&gt;导航&lt;/h4&gt;
+&lt;p&gt;有了谷歌地图，还需要其它导航吗?&lt;br&gt;
+订机票、酒店、租车等等的时候，把确认邮件发到你的gmail邮箱里，谷歌地图上就会在对应的地点显示所有的这些行程。另外，你只需要在规划行程的时间把其它要去的地方在地图上标上，到时间出门打开地图就可以开始导航，根本不需要再去查地址，so easy.&lt;br&gt;
+怕没有网络？谷歌有离线地图，提前下好就行了。&lt;br&gt;
+离线地图除了没有实时路况，别的也不缺什么。&lt;br&gt;
+当然, 流量还是需要的，买美国电话卡是最好的方案，电话流量全部搞定。&lt;br&gt;
+Lycamobile用的是tmobile的网络，价格不错，在美国东部的覆盖也可以，再加上国内手机号漫游过去，实在不行用国内手机(可以漫游到任何一个支持的网络)，通讯就没问题了。&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/Lycamobile-usa.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Lycamobile-usa&#34;
+	
+	
+&gt;&lt;br&gt;
+不过不知道是不是华为系统的问题, mate 7装上lyca的卡后开热点，别的手机联上了却不能上网, 还好的是交易的这家美国当地有客服，跟客服电话里沟通了半天，最后认为可能是手机问题 ~~ 以前也有过华为手机开热点出现类似的情况，后来把sim卡换到另外的手机上就好了。&lt;/p&gt;
+&lt;h4 id=&#34;租车&#34;&gt;租车&lt;/h4&gt;
+&lt;p&gt;租车预定的渠道大概三种&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;租车公司&lt;br&gt;
+租车公司主页要都有一些优惠的页面，可以到里面找找&lt;br&gt;
+一般租车公司都给合作的航空、信用卡公司、或者信用卡组织等提供一些折扣码，有些是在相关公司的页面上能找到。&lt;br&gt;
+但.com的租车网站往往没有包保险的套餐, 加上保险后可能会比较贵。&lt;/li&gt;
+&lt;li&gt;租车公司他国分支机构&lt;br&gt;
+比如.cn的，或者.uk的, 或者.de的&lt;br&gt;
+上面说到的折扣码, 有些公司是全球通用的，比如avis/hertz, 也有些不是, 比如alamo。&lt;br&gt;
+.cn和.uk往往提供包保险的套餐, 而.uk的价格经常会比较便宜一些。&lt;br&gt;
+前些年不少人用.uk的网站预定租车，现在不少租车公司都不让这么干了，用.uk网站订车会有被拒绝提车的风险。&lt;br&gt;
+　　Hertz这家的网站比较有意思，在.cn的网站上也可以订到uk的价格: 其价格策略是根据你选的location来定, 而不是网站是.cn或是别的。所以在.cn的网站上, 只要选择的国家是united kingdom，就能订到uk的价格，不过这样怕是也有问题。&lt;br&gt;
+　　Alamo还可以这么订车，当然也不能保证能拿到车。&lt;br&gt;
+　　如果价格实在太好，也可以去试一下，订个不预付的订单，跟美国租车公司客服确认订单的有效性，并留好后手，避免万一拿不到车打乱行程。&lt;br&gt;
+　　~~~ 如果用其它国家订单, 汇率变化可能会影响到最终价格。&lt;/li&gt;
+&lt;li&gt;代理&lt;br&gt;
+代理也会有好价格，比如国内的携程、租租车什么的，不过好像看到有人报怨携程晚上没客服，那就得靠自己了。&lt;br&gt;
+用Bid方式租车可能并不合适，因为bid只租了车，如果加上保险，没准比套餐的价格还贵。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;　　另外，提车的时候，有的租车点有自助的机器(kiosk), 一般在机场这种大的点会有, 有可能有中文，即使没中文也更好理解，我觉得应该尽量选择使用kiosk,可以避开语言障碍和人为的干扰。&lt;/p&gt;
+&lt;p&gt;　　说到人为干扰，在网上看到过有人被店员加了没有要的项目，好像最多的就是道路救援，如果是预付款的订单，出现要收钱的和未税的项，肯定是另加了东西，有的还放了提车收费单上来，其中后加上的项目很明确，只是有些人就因为不清楚那些英文简写的意思，而看不出来。&lt;br&gt;
+　　还有，如果对车大小类型没有硬性要求，可以尽量订便宜的车，因为便宜的车可能会没有，免费升级会经常碰到，尤其是比较小的网点。&lt;br&gt;
+　　在我的租车经历里，有一半都被升级了，而没被升级的几次中，有一次是在门店直接下的订单(傻了),另外的都是订的mini van, 没法升级。&lt;br&gt;
+　　在一个行程里，租车费用并不是主要的费用，酒店才是大头，所以也不用在租车上花太多时间，差不多就行了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>花生壳动态域名 for Linux 在ubuntu 8.0.4 x86_64系统下的使用</title>
+        <link>https://hugo.otcg.org/p/%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D-for-linux-%E5%9C%A8ubuntu-8.0.4-x86_64%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+        <pubDate>Thu, 14 May 2009 21:39:16 +0800</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D-for-linux-%E5%9C%A8ubuntu-8.0.4-x86_64%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-13.jpg" alt="Featured image of post 花生壳动态域名 for Linux 在ubuntu 8.0.4 x86_64系统下的使用" /&gt;&lt;p&gt;一、花生壳for linux安装包里有phlinux-1.1-install.ubuntu.8.04.tar.gz, 是为ubuntu 8.0.4 i386下使用&lt;br&gt;
+二、在ubuntu 8.0.4 x86_64下使用, 会报错(无文件错误)&lt;br&gt;
+三、分析原因, 是因为在ubuntu x86_64下没有i386的库&lt;br&gt;
+解决方法是安装32位的库文件&lt;br&gt;
+四、安装方法:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# sudo apt-get install ia32-libs*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注:&lt;br&gt;
+新装系统, 需要更新/etc/apt/sources.list&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# sudo vim /etc/apt/sources.list&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;并做update&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# sudo apt-get update&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;嗯, 原来就没写完 :)&lt;br&gt;
+怪不得这么短&lt;br&gt;
+就这样吧&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>CodeBlocks的Windows NT/2K/XP/CE版本的安装及相关说明</title>
+        <link>https://hugo.otcg.org/p/codeblocks%E7%9A%84windows-nt/2k/xp/ce%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
+        <pubDate>Wed, 28 Feb 2007 16:37:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/codeblocks%E7%9A%84windows-nt/2k/xp/ce%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-12.jpg" alt="Featured image of post CodeBlocks的Windows NT/2K/XP/CE版本的安装及相关说明" /&gt;&lt;p&gt;一、相关版本软件的下载&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Windows NT/2K/XP&lt;br&gt;
+　CodeBlocks 1.0rc2版: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/downloads.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.codeblocks.org/downloads.php&lt;/a&gt;)&lt;br&gt;
+　　&lt;a class=&#34;link&#34; href=&#34;http://prdownloads.sourceforge.net/codeblocks/codeblocks-1.0rc2_mingw.exe?download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Code::Blocks IDE 1.0rc2, with MinGW compiler&lt;/a&gt;&lt;br&gt;
+　注: CodeBlocks 1.0rc2所带MinGW的版本不确定, gcc/g++的版本为3.4.4 (mingw special)&lt;br&gt;
+　CodeBlocks Unicode Dll for Windows 2.6.3版: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/nightly/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.codeblocks.org/nightly/&lt;/a&gt;, 应该可以不用)&lt;br&gt;
+　　&lt;a class=&#34;link&#34; href=&#34;http://prdownload.berlios.de/codeblocks/wxmsw26u_gcc_cb_wx2.6.3p2.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CodeBlocks Unicode Dll for Windows 2.6.3版, ZIP格式文件&lt;/a&gt;&lt;br&gt;
+　CodeBlocks Nightly Builds: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/nightly/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.codeblocks.org/nightly/&lt;/a&gt;)&lt;br&gt;
+　　&lt;a class=&#34;link&#34; href=&#34;http://forums.codeblocks.org/index.php?board=20.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Forum about Nightly build&lt;/a&gt;, 找个最新的版本下载&lt;br&gt;
+　MinGW: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.mingw.org/download.shtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.mingw.org/download.shtml&lt;/a&gt;)&lt;br&gt;
+　　因CodeBlocks下载了带了MinGW编译器, 所以不用下载&lt;br&gt;
+　wxWidgets 2.8.0版: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/downloads/&lt;/a&gt;)&lt;br&gt;
+　　&lt;a class=&#34;link&#34; href=&#34;http://prdownloads.sourceforge.net/wxwindows/wxMSW-2.8.0-Setup.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxMSW 2.8.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;二、相应版本的安装&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Windows NT/2K/XP&lt;br&gt;
+　1)安装CodeBlocks带MinGW的版本&lt;br&gt;
+　　略&lt;br&gt;
+　2)安装CodeBlocks的Unicode版本Dll&lt;br&gt;
+　　把文件解压覆盖到CodeBlocks安装目录下(我的安装目录: C:\Program Files\CodeBlocks)&lt;br&gt;
+　3)安装CodeBlocks的新的Nightly Builds版本&lt;br&gt;
+　　把文件解压覆盖到CodeBlocks安装目录下(我的安装目录: C:\Program Files\CodeBlocks)&lt;br&gt;
+　4)安装wxWidgets&lt;br&gt;
+　　可安装到D:\wxWidgets-2.8.0&lt;br&gt;
+注意:&lt;br&gt;
+　　wxWidgets后续的编译需要约1.5G(静态debug库)/0.5G(动态debug库)&lt;em&gt;(注:release库相对较小)的硬盘空间来完成, 在编译完成后, 还需占用约1G(静态debug库)/0.5G(动态debug库)&lt;/em&gt;(注:release库相对较小)的空间, 即需要有1.5G(静态库)/0.5G(动态库)的空间完成后续的编译操作, 所以, 需要注意检查目标磁盘是否有足够空间&lt;br&gt;
+　　安装过程: 略&lt;br&gt;
+　5)编译wxWidgets(支持ODBC)&lt;br&gt;
+　　a. 建立用于设置环境的批处理文件&lt;br&gt;
+　　在目录D:\wxWidgets-2.8.0\build\msw下新建批处理文件envset.bat, 如下:&lt;br&gt;
+　　　　set PATH=%PATH%;C:\Program Files\CodeBlocks\bin;C:\Program Files\CodeBlocks\mingw32\bin;&lt;br&gt;
+　　　　set LIBRARY_PATH=C:\Program Files\CodeBlocks\lib&lt;br&gt;
+　　　　set C_INCLUDE_PATH=C:\Program Files\CodeBlocks\include&lt;br&gt;
+　　　　set CPLUS_INCLUDE_PATH=C:\Program Files\CodeBlocks\include;D:\wxWidgets-2.8.0\include;D:\wxWidgets-2.8.0\contrib\include;&lt;br&gt;
+　　b.编译&lt;br&gt;
+　　a)进入DOS命令行模式&lt;br&gt;
+　　b)切换工作目录至D:\wxWidgets-2.8.0\build\msw&lt;br&gt;
+　　c)执行清理命令(debug版本, 第一次运行应该可以不用)&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 clean&lt;br&gt;
+　　参数说明:&lt;br&gt;
+　　　UNICODE=1表示使用unicode编码&lt;br&gt;
+　　　USE_ODBC=1 表示生成支持ODBC的库&lt;br&gt;
+　　　MONOLITHIC=1 表示生成单一的库文件 (0表示生成多个按模块分割的库文件)&lt;br&gt;
+　　　SHARED=1 表示生成的动态链接库DLL (0表示生成静态链接库)&lt;br&gt;
+　　　BUILD=debug 表示生成带Debug信息的版本方便调试 (release是发布版, 缺省是debug版本)&lt;br&gt;
+　　缺省的参数设置可以参考配置文件config.gcc&lt;br&gt;
+　　d)执行编译命令(动态库debug版本)&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 VENDOR=jimway&lt;br&gt;
+　　然后, 开始漫长的等待, 时间视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
+　　e)执行编译命令(动态库release版本)&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 BUILD=release VENDOR=jimway&lt;br&gt;
+　　然后, 继续漫长的等待, 时间同样视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
+注意:&lt;br&gt;
+　　关于动态库编译的警告(Warning)&lt;br&gt;
+　　当使用“SHARED=1”编译选项时, 在编译中, 会出现大量的Warning, 大致如下:&lt;br&gt;
+　　　&amp;ldquo;type attributes are honored only at type definition&amp;rdquo;&lt;br&gt;
+　　似乎是编译器的问题, 现在仅可以通过降低Warning级别来关掉, 或等待新的版本来处理这个问题&lt;br&gt;
+　　可以参考文档&lt;a class=&#34;link&#34; href=&#34;http://forums.codeblocks.org/index.php/topic,270.0.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxWidgets 2.6 (MSW, GCC) installation instructions&lt;/a&gt;&lt;br&gt;
+　6)测试使用建立一个wxWidgets Project, 并使用动态库编译&lt;br&gt;
+　　成功&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考:&lt;br&gt;
+官方网站:&lt;br&gt;
+wxwidgets: &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/&lt;/a&gt;&lt;br&gt;
+MinGW: &lt;a class=&#34;link&#34; href=&#34;http://www.mingw.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.mingw.org/&lt;/a&gt;&lt;br&gt;
+codeblocks: &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.codeblocks.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说明文档:&lt;br&gt;
+wxWiki: &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/wiki/index.php/Main_Page&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/wiki/index.php/Main_Page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其它下载:&lt;br&gt;
+Codeblocks的Nightly Builds: &lt;a class=&#34;link&#34; href=&#34;http://forums.codeblocks.org/index.php/board,20.0.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://forums.codeblocks.org/index.php/board,20.0.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其它文档:&lt;br&gt;
+Rex的Codeblocks安装说明: &lt;a class=&#34;link&#34; href=&#34;http://flord.net/node/109&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://flord.net/node/109&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;WinCE相关文档:&lt;br&gt;
+Development: wxWinCE &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/wiki/index.php/Development:_wxWinCE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/wiki/index.php/Development:_wxWinCE&lt;/a&gt;&lt;br&gt;
+wxEmbedded: wxWidgets for embedded applications &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/docs/embedded.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/docs/embedded.htm&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>圣灵岛(Whitsunday Islands)和大堡礁(Great Barrier Reef)</title>
+        <link>https://hugo.otcg.org/p/%E5%9C%A3%E7%81%B5%E5%B2%9Bwhitsunday-islands%E5%92%8C%E5%A4%A7%E5%A0%A1%E7%A4%81great-barrier-reef/</link>
+        <pubDate>Wed, 28 Feb 2007 07:25:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/%E5%9C%A3%E7%81%B5%E5%B2%9Bwhitsunday-islands%E5%92%8C%E5%A4%A7%E5%A0%A1%E7%A4%81great-barrier-reef/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-11.jpg" alt="Featured image of post 圣灵岛(Whitsunday Islands)和大堡礁(Great Barrier Reef)" /&gt;&lt;p&gt;说起大堡礁, 一般人都会想到凯恩斯(Cains), 因为这是大多数的来自中国的澳洲旅游团必到的景点之一。其实, 大堡礁位于澳大利亚东北部昆士兰州的东海岸, 由南至北延绵二千多公里, 从昆士兰州的很多地方都能去看大堡礁, 圣灵岛就是其中之一。&lt;br&gt;
+圣灵岛位于凯恩斯的南部, 黄金海岸的北部, 是由74个大大小小的岛屿组成的一个度假胜地, 在这里不仅能看到大堡礁, 还能看到白色的天堂沙滩(WhiteHeaven Beach)和热带雨林。(&lt;a class=&#34;link&#34; href=&#34;http://maps.google.com/maps?f=q&amp;amp;hl=zh-CN&amp;amp;q=20%C2%B016%2718.06%22S,148%C2%B051%2755.09%22E&amp;amp;ie=UTF8&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;z=11&amp;amp;ll=-20.250602,148.808441&amp;amp;spn=0.304063,0.818481&amp;amp;t=h&amp;amp;om=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;圣灵岛及周边地图&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/img/whitsunday-ap.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Whitsunday Airport&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果要坐飞机到圣灵岛, 可以选择飞到Whitsunday Coast Airport (&lt;a class=&#34;link&#34; href=&#34;http://maps.google.com/maps?f=q&amp;amp;hl=zh-CN&amp;amp;q=&amp;#43;20%C2%B029%2742.26%22S,&amp;#43;148%C2%B033%2719.37%22E&amp;amp;ie=UTF8&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;om=1&amp;amp;z=13&amp;amp;ll=-20.491989,148.555412&amp;amp;spn=0.075897,0.20462&amp;amp;t=h&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Whitsunday Coast Airport及周边地图&lt;/a&gt;), 再坐Taxi或Whitsunday Transit的公车, 经A1公路, 穿过Proserpine镇, 然后转到Shute Harbour Road, 一个小时之内就能到达Shute Harbour, 总共有50多公里的路程, 从Shute Harour就可以坐船出海了&lt;br&gt;
+或者直接飞到位于圣灵岛之一的Hamilton Island Airport(&lt;a class=&#34;link&#34; href=&#34;http://maps.google.com/maps?f=q&amp;amp;hl=zh-CN&amp;amp;q=&amp;#43;20%C2%B021%2729.28%22S,&amp;#43;148%C2%B057%276.52%22E&amp;amp;ie=UTF8&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;z=15&amp;amp;ll=-20.353318,148.960533&amp;amp;spn=0.018991,0.051155&amp;amp;t=h&amp;amp;om=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hamilton Island Airport及周边地图&lt;/a&gt;)&lt;br&gt;
+这两个机场都是小型机场，都只有一条跑道。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/img/great-barrier-reef-01.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;坐船来到X公司大堡礁海上基地, 在这里可以潜水、浮潜、坐透明底船或潜艇看海底世界, 晚上还可以住在这里。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/img/white-heaven-beach-01.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/white-heaven-beach-02.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+White Heaven Beach&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/img/airlie-beach.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+Airlie Beach&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/img/daydream-island-01.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/daydream-island-02.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/daydream-island-03.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+Daydream Island&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/img/hamilton-island-01.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/hamilton-island-02.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/hamilton-island-03.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://hugo.otcg.org/img/hamilton-island-04.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Great Barrier Reef&#34;
+	
+	
+&gt;&lt;br&gt;
+Hamilton Island&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;旅游TIPS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;季节:&lt;br&gt;
+12月到3月是这里的雨季, 这段时间的雨量较大, 另一方面游人会较少一些, 价格应该会优惠一些&lt;/li&gt;
+&lt;li&gt;交通&lt;br&gt;
+可以坐飞机到Whitsunday Coast Airport(即Proserpine airport, 在Proserpine的南部约十公里), 坐出租车或shutle约45公里到Airport, 价格A$15-16/人, 很方便(小地方的出租车, 人多了按人头收费)&lt;br&gt;
+可以坐飞机到Hamilton island airport, 在Hamilton island上, 如果住在岛上倒很方便, 不过一般会贵A$50/人左右, 而且要去Airlie beach时还需要坐船过去, 这里的船票可都不太便宜&lt;br&gt;
+具体机票价格可以查jetstar或virgin blue的网站, 或在webjet上可以查询到各航空公司的价格&lt;br&gt;
+一般来说, jetstar的价格要便宜一些&lt;/li&gt;
+&lt;li&gt;住宿:&lt;br&gt;
+在Airlie beach的YHA、在Cannonvale(离Airlie beach约2km)的Bush village网上的评价最好, 价格也不贵, 而且一般的daytrip在这里都能提供接送服务&lt;br&gt;
+YHA提供厨房, 很大很干净, Bush Village可能也有提供&lt;br&gt;
+另外, 还有宾馆或Aparment, 如果人多, 时间较长, Aparment可能也是一个很好的选择&lt;br&gt;
+注:&lt;br&gt;
+大公司的船一般在shute harbour出发(离Airlie beach约10km), 有的会接Daydream island和Hamilton island的游客&lt;br&gt;
+小公司的船有在Abel Point出发(离Airlie beach约2km)&lt;/li&gt;
+&lt;li&gt;YHA相关&lt;br&gt;
+如果有YHA卡, 参加某些活动会有折扣, 有时折扣会较多, 另外, 如果住YHA, 没有YHA卡时, 需要另付约A$3.5/天.人, 且这里对OverSea的游客办YHA卡需收A$37, 所以对中国游客来说, 在国内办个YHA卡不仅便宜, 而且应该能用得着&lt;/li&gt;
+&lt;li&gt;吃饭及购物&lt;br&gt;
+在Airlie beach, 吃饭的地方挺多的, 在Water front backpacker边上二楼还有个中餐馆, 另外, 在Airlie beach还有个小超市&lt;br&gt;
+在Cannonvale有个Coles(较大的超市)&lt;/li&gt;
+&lt;li&gt;活动&lt;br&gt;
+一般通过travel agent订各种活动, 一般在晚上8点前, 在Airlie beach还有Travel agent开门(当然, 也有很多关门了的, 选择余地就会少一些, 所以最好白天来订。我们订的那家, 一位女士服务态度极好, 我们在那谈了一个多小时, 但早晚上都不开门)&lt;br&gt;
+Airlie Beach的travel agent极多, 住宿的地方也可以订, 所以我感觉不需要预先订好。Hamilton island上的Travel Agent远不如Airlie beach的多, 价格折扣也极少, 且有些活动不提供接送, 所以主要的住宿还是不在Hamilton island为好, 我感觉最多住上一天为好&lt;/li&gt;
+&lt;li&gt;Buggy&lt;br&gt;
+Hamilton island上的buggy是一种小型车, 一车可坐4人, 速度很慢, 应该低于20km/h, 租用需要出示驾照, 租一天约A$65。因岛较大, 虽然有红、绿、橙三条免费的bus线路, 但并不能覆盖全岛, 且等车时间较长, 所以租辆buggy是个很好的选择&lt;/li&gt;
+&lt;li&gt;自驾船&lt;br&gt;
+自驾船是一种更自由的选择, 而且自驾船上还可以住宿, 不用再考虑住宿的问题&lt;br&gt;
+在shute harbour往里走, 有个自驾船租赁的公司, 看着不错, 没有租过, 可以在rentayacht上查询相关资料&lt;/li&gt;
+&lt;li&gt;其它&lt;br&gt;
+澳洲阳光巨强, 必须带SPF30+的防晒霜&lt;br&gt;
+药品:&lt;br&gt;
+去reef的航程较远, 外海浪大, 容易晕船, 最好带晕船药&lt;br&gt;
+另:&lt;br&gt;
+1)华人(当括当地的和游客)都很少, 基本上不用考虑能用中文跟人对话&lt;br&gt;
+2)似乎有个心型小岛, 情侣可以去看一下喔&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>链接</title>
+        <link>https://hugo.otcg.org/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/links/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://hugo.otcg.org/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.otcg.org/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

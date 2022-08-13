@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>CODEBLOCKS on 点滴随记</title>
+        <link>https://hugo.otcg.org/tags/codeblocks/</link>
+        <description>Recent content in CODEBLOCKS on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 28 Feb 2007 16:37:16 +1000</lastBuildDate><atom:link href="https://hugo.otcg.org/tags/codeblocks/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CodeBlocks的Windows NT/2K/XP/CE版本的安装及相关说明</title>
+        <link>https://hugo.otcg.org/p/codeblocks%E7%9A%84windows-nt/2k/xp/ce%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
+        <pubDate>Wed, 28 Feb 2007 16:37:16 +1000</pubDate>
+        
+        <guid>https://hugo.otcg.org/p/codeblocks%E7%9A%84windows-nt/2k/xp/ce%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
+        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-12.jpg" alt="Featured image of post CodeBlocks的Windows NT/2K/XP/CE版本的安装及相关说明" /&gt;&lt;p&gt;一、相关版本软件的下载&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Windows NT/2K/XP&lt;br&gt;
+　CodeBlocks 1.0rc2版: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/downloads.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.codeblocks.org/downloads.php&lt;/a&gt;)&lt;br&gt;
+　　&lt;a class=&#34;link&#34; href=&#34;http://prdownloads.sourceforge.net/codeblocks/codeblocks-1.0rc2_mingw.exe?download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Code::Blocks IDE 1.0rc2, with MinGW compiler&lt;/a&gt;&lt;br&gt;
+　注: CodeBlocks 1.0rc2所带MinGW的版本不确定, gcc/g++的版本为3.4.4 (mingw special)&lt;br&gt;
+　CodeBlocks Unicode Dll for Windows 2.6.3版: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/nightly/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.codeblocks.org/nightly/&lt;/a&gt;, 应该可以不用)&lt;br&gt;
+　　&lt;a class=&#34;link&#34; href=&#34;http://prdownload.berlios.de/codeblocks/wxmsw26u_gcc_cb_wx2.6.3p2.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CodeBlocks Unicode Dll for Windows 2.6.3版, ZIP格式文件&lt;/a&gt;&lt;br&gt;
+　CodeBlocks Nightly Builds: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/nightly/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.codeblocks.org/nightly/&lt;/a&gt;)&lt;br&gt;
+　　&lt;a class=&#34;link&#34; href=&#34;http://forums.codeblocks.org/index.php?board=20.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Forum about Nightly build&lt;/a&gt;, 找个最新的版本下载&lt;br&gt;
+　MinGW: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.mingw.org/download.shtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.mingw.org/download.shtml&lt;/a&gt;)&lt;br&gt;
+　　因CodeBlocks下载了带了MinGW编译器, 所以不用下载&lt;br&gt;
+　wxWidgets 2.8.0版: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/downloads/&lt;/a&gt;)&lt;br&gt;
+　　&lt;a class=&#34;link&#34; href=&#34;http://prdownloads.sourceforge.net/wxwindows/wxMSW-2.8.0-Setup.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxMSW 2.8.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;二、相应版本的安装&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Windows NT/2K/XP&lt;br&gt;
+　1)安装CodeBlocks带MinGW的版本&lt;br&gt;
+　　略&lt;br&gt;
+　2)安装CodeBlocks的Unicode版本Dll&lt;br&gt;
+　　把文件解压覆盖到CodeBlocks安装目录下(我的安装目录: C:\Program Files\CodeBlocks)&lt;br&gt;
+　3)安装CodeBlocks的新的Nightly Builds版本&lt;br&gt;
+　　把文件解压覆盖到CodeBlocks安装目录下(我的安装目录: C:\Program Files\CodeBlocks)&lt;br&gt;
+　4)安装wxWidgets&lt;br&gt;
+　　可安装到D:\wxWidgets-2.8.0&lt;br&gt;
+注意:&lt;br&gt;
+　　wxWidgets后续的编译需要约1.5G(静态debug库)/0.5G(动态debug库)&lt;em&gt;(注:release库相对较小)的硬盘空间来完成, 在编译完成后, 还需占用约1G(静态debug库)/0.5G(动态debug库)&lt;/em&gt;(注:release库相对较小)的空间, 即需要有1.5G(静态库)/0.5G(动态库)的空间完成后续的编译操作, 所以, 需要注意检查目标磁盘是否有足够空间&lt;br&gt;
+　　安装过程: 略&lt;br&gt;
+　5)编译wxWidgets(支持ODBC)&lt;br&gt;
+　　a. 建立用于设置环境的批处理文件&lt;br&gt;
+　　在目录D:\wxWidgets-2.8.0\build\msw下新建批处理文件envset.bat, 如下:&lt;br&gt;
+　　　　set PATH=%PATH%;C:\Program Files\CodeBlocks\bin;C:\Program Files\CodeBlocks\mingw32\bin;&lt;br&gt;
+　　　　set LIBRARY_PATH=C:\Program Files\CodeBlocks\lib&lt;br&gt;
+　　　　set C_INCLUDE_PATH=C:\Program Files\CodeBlocks\include&lt;br&gt;
+　　　　set CPLUS_INCLUDE_PATH=C:\Program Files\CodeBlocks\include;D:\wxWidgets-2.8.0\include;D:\wxWidgets-2.8.0\contrib\include;&lt;br&gt;
+　　b.编译&lt;br&gt;
+　　a)进入DOS命令行模式&lt;br&gt;
+　　b)切换工作目录至D:\wxWidgets-2.8.0\build\msw&lt;br&gt;
+　　c)执行清理命令(debug版本, 第一次运行应该可以不用)&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 clean&lt;br&gt;
+　　参数说明:&lt;br&gt;
+　　　UNICODE=1表示使用unicode编码&lt;br&gt;
+　　　USE_ODBC=1 表示生成支持ODBC的库&lt;br&gt;
+　　　MONOLITHIC=1 表示生成单一的库文件 (0表示生成多个按模块分割的库文件)&lt;br&gt;
+　　　SHARED=1 表示生成的动态链接库DLL (0表示生成静态链接库)&lt;br&gt;
+　　　BUILD=debug 表示生成带Debug信息的版本方便调试 (release是发布版, 缺省是debug版本)&lt;br&gt;
+　　缺省的参数设置可以参考配置文件config.gcc&lt;br&gt;
+　　d)执行编译命令(动态库debug版本)&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 VENDOR=jimway&lt;br&gt;
+　　然后, 开始漫长的等待, 时间视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
+　　e)执行编译命令(动态库release版本)&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 BUILD=release VENDOR=jimway&lt;br&gt;
+　　然后, 继续漫长的等待, 时间同样视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
+注意:&lt;br&gt;
+　　关于动态库编译的警告(Warning)&lt;br&gt;
+　　当使用“SHARED=1”编译选项时, 在编译中, 会出现大量的Warning, 大致如下:&lt;br&gt;
+　　　&amp;ldquo;type attributes are honored only at type definition&amp;rdquo;&lt;br&gt;
+　　似乎是编译器的问题, 现在仅可以通过降低Warning级别来关掉, 或等待新的版本来处理这个问题&lt;br&gt;
+　　可以参考文档&lt;a class=&#34;link&#34; href=&#34;http://forums.codeblocks.org/index.php/topic,270.0.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxWidgets 2.6 (MSW, GCC) installation instructions&lt;/a&gt;&lt;br&gt;
+　6)测试使用建立一个wxWidgets Project, 并使用动态库编译&lt;br&gt;
+　　成功&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考:&lt;br&gt;
+官方网站:&lt;br&gt;
+wxwidgets: &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/&lt;/a&gt;&lt;br&gt;
+MinGW: &lt;a class=&#34;link&#34; href=&#34;http://www.mingw.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.mingw.org/&lt;/a&gt;&lt;br&gt;
+codeblocks: &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.codeblocks.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说明文档:&lt;br&gt;
+wxWiki: &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/wiki/index.php/Main_Page&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/wiki/index.php/Main_Page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其它下载:&lt;br&gt;
+Codeblocks的Nightly Builds: &lt;a class=&#34;link&#34; href=&#34;http://forums.codeblocks.org/index.php/board,20.0.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://forums.codeblocks.org/index.php/board,20.0.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其它文档:&lt;br&gt;
+Rex的Codeblocks安装说明: &lt;a class=&#34;link&#34; href=&#34;http://flord.net/node/109&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://flord.net/node/109&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;WinCE相关文档:&lt;br&gt;
+Development: wxWinCE &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/wiki/index.php/Development:_wxWinCE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/wiki/index.php/Development:_wxWinCE&lt;/a&gt;&lt;br&gt;
+wxEmbedded: wxWidgets for embedded applications &lt;a class=&#34;link&#34; href=&#34;http://www.wxwidgets.org/docs/embedded.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wxwidgets.org/docs/embedded.htm&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
