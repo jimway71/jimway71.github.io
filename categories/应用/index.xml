@@ -6,7 +6,150 @@
         <description>Recent content in 应用 on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 14 May 2009 21:39:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/categories/%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 05 Mar 2020 01:53:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/categories/%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>安装翻墙服务器(V2ray&#43;ss&#43;brook)</title>
+        <link>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85%E7%BF%BB%E5%A2%99%E6%9C%8D%E5%8A%A1%E5%99%A8v2ray-ss-brook/</link>
+        <pubDate>Thu, 05 Mar 2020 01:53:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85%E7%BF%BB%E5%A2%99%E6%9C%8D%E5%8A%A1%E5%99%A8v2ray-ss-brook/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-14.jpg" alt="Featured image of post 安装翻墙服务器(V2ray&#43;ss&#43;brook)" /&gt;&lt;p&gt;简单说明:&lt;br&gt;
+系统: Ubuntu 18.04 LTS。&lt;br&gt;
+a.安装: V2RAY mKCP+dtls, AAAA; ss: BBBB; brook: CCCC。&lt;br&gt;
+b.(V2ray安装的)shadowsocks改用了新的加密方式(AHEAD: chacha20-ietf-poly1305), 以避免被GFW检测到&lt;br&gt;
+终端软件上, 不再使用单独的shadowsocks终端, 而改用v2ray终端(包含shadowsocks终端)&lt;br&gt;
+电脑上使用V2rayN, 安卓手机上使用BifrostV&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在Ubuntu Server 18.04版上进行安装&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0.确认unzip已安装(可以直接运行unzip)&lt;/strong&gt;&lt;br&gt;
+如果没有安装, 用下面命令装(如果unzip没有安装, 会自动提示这条命令)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# sudo apt install unzip&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1.V2RAY+ss(单端口)安装, 再+BBR&lt;/strong&gt;&lt;br&gt;
+V2RAY一键安装&lt;br&gt;
+选择:&lt;br&gt;
+V2RAY ~ 协议 mKCP_dtls, 端口 AAAA&lt;br&gt;
+ss 和原来一样&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://ssr.tools/1026&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ssr.tools/1026&lt;/a&gt;
+安装时, BBR自己就装上了&lt;/p&gt;
+&lt;p&gt;使用233版V2ray一键安装脚本(集成BBR/锐速/Shadowsocks):&lt;/p&gt;
+&lt;h1 id=&#34;bash-curl--s--l-httpsgitiov2raysh&#34;&gt;bash &amp;lt;(curl -s -L &lt;a class=&#34;link&#34; href=&#34;https://git.io/v2ray.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://git.io/v2ray.sh&lt;/a&gt;)&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;2.Brook安装&lt;/strong&gt;&lt;br&gt;
+参考&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://doub.io/brook-jc1/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doub.io/brook-jc1/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1)下载&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mkdir /root/brook/&lt;br&gt;
+# cd /root/brook/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最新版本地址: &lt;a class=&#34;link&#34; href=&#34;https://github.com/txthinking/brook#download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/txthinking/brook#download&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# wget -N &amp;ndash;no-check-certificate &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/txthinking/brook/releases/download/v20200201/brook%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/txthinking/brook/releases/download/v20200201/brook&#34;&lt;/a&gt;&lt;br&gt;
+# chmod +x brook&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2)启动&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# nohup   ./brook server -l :CCCC-p passwd &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3)防火墙&lt;br&gt;
+[ 现在没开云服务器ubuntu自身的防火墙iptable/ufw&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# sudo ufw  allow CCCC&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;]&lt;/p&gt;
+&lt;p&gt;云的防火墙也要打开&lt;/p&gt;
+&lt;p&gt;4)开机自启动&lt;br&gt;
+由于ubuntu 18.04的变化, 原rc.local初始不再有效, 需要处理, 参考:&lt;br&gt;
+Ubuntu 18.04 rc.local systemd设置&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zhengchaooo/article/details/80202599&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/zhengchaooo/article/details/80202599&lt;/a&gt;&lt;br&gt;
+命令如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ln -fs /lib/systemd/system/rc-local.service /etc/systemd/system/rc-local.service&lt;br&gt;
+# touch /etc/rc.local&lt;br&gt;
+# chmod 755 /etc/rc.local&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;并在/etc/rc.local第一行加上下面这行:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#!/bin/bash&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;后面一样&lt;br&gt;
+参考&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://blog.csdn.net/fireroll/article/details/15503463&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://blog.csdn.net/fireroll/article/details/15503463&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;放在/etc/rc.local里&lt;br&gt;
+加入:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nohup   /root/brook/brook server -l :CCCC-p passwd &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意brook所在目录&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.谷歌云防火墙开端口(需要打开相应端口的tcp/udp端口)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.本机ubuntu防火墙(ufw/iptables)不开&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.设置时区&lt;/strong&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://www.cnblogs.com/h2appy/archive/2008/11/27/1342029.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.cnblogs.com/h2appy/archive/2008/11/27/1342029.html&lt;/a&gt;&lt;br&gt;
+tzselect&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.定时关机&lt;/strong&gt;&lt;br&gt;
+cron里的时间是标准时间(GMT)&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://www.cnblogs.com/peida/archive/2013/01/08/2850483.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.cnblogs.com/peida/archive/2013/01/08/2850483.html&lt;/a&gt;&lt;br&gt;
+cron任务分两类, 系统任务_在/etc/crontab里; 用户任务_在/var/spool/cron/crontabs/里&lt;br&gt;
+crontab -e是编辑用户任务, crontab -l是显示用户任务.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# cat /etc/crontab  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# /etc/crontab: system-wide crontab  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Unlike any other crontab you don&amp;#39;t have to run the `crontab&amp;#39;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# command to install the new version when you edit this file  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# and files in /etc/cron.d. These files also have username fields,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# that none of the other crontabs do. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SHELL=/bin/sh  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# m h dom mon dow user  command  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;17 *    * * *   root    cd / &amp;amp;&amp;amp; run-parts --report /etc/cron.hourly  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / &amp;amp;&amp;amp; run-parts --report /etc/cron.daily )  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / &amp;amp;&amp;amp; run-parts --report /etc/cron.weekly )  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / &amp;amp;&amp;amp; run-parts --report /etc/cron.monthly )  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30 21 * * 2,4,6,0 root reboot  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;每周2,4,6,0 _ GMT时间21:30分(中国时间5:30)用户root重启&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://blog.csdn.net/xiyuan1999/article/details/8160998&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://blog.csdn.net/xiyuan1999/article/details/8160998&lt;/a&gt;&lt;br&gt;
+查看调度任务&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# crontab -l //列出当前的所有调度任务&lt;br&gt;
+# crontab -l -u jp   //列出用户jp的所有调度任务&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>花生壳动态域名 for Linux 在ubuntu 8.0.4 x86_64系统下的使用</title>
         <link>https://jimway71.github.io/p/%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D-for-linux-%E5%9C%A8ubuntu-8.0.4-x86_64%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
         <pubDate>Thu, 14 May 2009 21:39:16 +0800</pubDate>
