@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Armbian on 点滴随记</title>
-        <link>https://hugo.otcg.org/tags/armbian/</link>
+        <link>https://jimway71.github.io/tags/armbian/</link>
         <description>Recent content in Armbian on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.otcg.org/tags/armbian/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/armbian/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>在R3300L类&#43;Armbian上安装Hugo服务器</title>
-        <link>https://hugo.otcg.org/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <link>https://jimway71.github.io/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
         <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.otcg.org/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
-        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-01.jpg" alt="Featured image of post 在R3300L类&#43;Armbian上安装Hugo服务器" /&gt;&lt;p&gt;在R3300L(及类似架构设备)等使用S905系列的电视盒子上安装Armbian, 在Armbian系统下可以安装Hugo服务器。&lt;/p&gt;
+        <guid>https://jimway71.github.io/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-01.jpg" alt="Featured image of post 在R3300L类&#43;Armbian上安装Hugo服务器" /&gt;&lt;p&gt;在R3300L(及类似架构设备)等使用S905系列的电视盒子上安装Armbian, 在Armbian系统下可以安装Hugo服务器。&lt;/p&gt;
 &lt;h2 id=&#34;编译及安装hugo&#34;&gt;编译及安装Hugo&lt;/h2&gt;
 &lt;p&gt;选择: Hugo最新版本, +extended, 支持linux/arm64系统&lt;/p&gt;
 &lt;ul&gt;
@@ -486,7 +486,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
     &gt;Pure主题&lt;/a&gt;的代码框实在太难看了!(好了, 现在已经改用&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Stack主题&lt;/a&gt;了)&lt;br&gt;
-&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Pure-CFS.png&#34;
+&lt;img src=&#34;https://jimway71.github.io/screenshot/screenshot-Pure-CFS.png&#34;
 	
 	
 	
@@ -496,7 +496,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 	
 	
 &gt;
-&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Pure-CodeFrame.png&#34;
+&lt;img src=&#34;https://jimway71.github.io/screenshot/screenshot-Pure-CodeFrame.png&#34;
 	
 	
 	
@@ -514,7 +514,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/blackburn/&#34;  title=&#34;Blackburn主题-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Blackburn主题&lt;/a&gt;?&lt;br&gt;
-&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-BlackBurn.png&#34;
+&lt;img src=&#34;https://jimway71.github.io/screenshot/screenshot-BlackBurn.png&#34;
 	
 	
 	
@@ -528,7 +528,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-diary/&#34;  title=&#34;Diary主题-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Diary主题&lt;/a&gt;?&lt;br&gt;
-&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Diary.png&#34;
+&lt;img src=&#34;https://jimway71.github.io/screenshot/screenshot-Diary.png&#34;
 	
 	
 	
@@ -543,7 +543,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-clarity/&#34;  title=&#34;Clarity主题-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Clarity主题&lt;/a&gt;?
-&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Clarity.png&#34;
+&lt;img src=&#34;https://jimway71.github.io/screenshot/screenshot-Clarity.png&#34;
 	
 	
 	
@@ -566,7 +566,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
     &gt;gohugo官方主题网站&lt;/a&gt;上也没有, 但&lt;strong&gt;非常简洁, 感觉很好&lt;/strong&gt;, 有个&lt;a class=&#34;link&#34; href=&#34;https://zozo.varkai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;zozo主题Demo&lt;/a&gt;, 看着比较简单, 看&lt;a class=&#34;link&#34; href=&#34;https://gojun.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GoJun&lt;/a&gt;也差不多。&lt;br&gt;
-&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-zozo-tn.png&#34;
+&lt;img src=&#34;https://jimway71.github.io/screenshot/screenshot-zozo-tn.png&#34;
 	
 	
 	
@@ -580,7 +580,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Journal主题&lt;/a&gt;也是简洁风格, 与&lt;a class=&#34;link&#34; href=&#34;https://github.com/varkai/hugo-theme-zozo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hugo-theme-zozo主题&lt;/a&gt;有些类似。&lt;br&gt;
-&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Journal.png&#34;
+&lt;img src=&#34;https://jimway71.github.io/screenshot/screenshot-Journal.png&#34;
 	
 	
 	
@@ -595,7 +595,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  title=&#34;Stack主题-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Stack主题&lt;/a&gt;初看有些太过简单, 看了实际的效果后感觉还不错, 可以一用。
-&lt;img src=&#34;https://hugo.otcg.org/screenshot/screenshot-Stack.png&#34;
+&lt;img src=&#34;https://jimway71.github.io/screenshot/screenshot-Stack.png&#34;
 	
 	
 	

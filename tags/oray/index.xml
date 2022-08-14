@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>oray on 点滴随记</title>
-        <link>https://hugo.otcg.org/tags/oray/</link>
+        <link>https://jimway71.github.io/tags/oray/</link>
         <description>Recent content in oray on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 14 May 2009 21:39:16 +0800</lastBuildDate><atom:link href="https://hugo.otcg.org/tags/oray/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 14 May 2009 21:39:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/oray/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>花生壳动态域名 for Linux 在ubuntu 8.0.4 x86_64系统下的使用</title>
-        <link>https://hugo.otcg.org/p/%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D-for-linux-%E5%9C%A8ubuntu-8.0.4-x86_64%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+        <link>https://jimway71.github.io/p/%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D-for-linux-%E5%9C%A8ubuntu-8.0.4-x86_64%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
         <pubDate>Thu, 14 May 2009 21:39:16 +0800</pubDate>
         
-        <guid>https://hugo.otcg.org/p/%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D-for-linux-%E5%9C%A8ubuntu-8.0.4-x86_64%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
-        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-13.jpg" alt="Featured image of post 花生壳动态域名 for Linux 在ubuntu 8.0.4 x86_64系统下的使用" /&gt;&lt;p&gt;一、花生壳for linux安装包里有phlinux-1.1-install.ubuntu.8.04.tar.gz, 是为ubuntu 8.0.4 i386下使用&lt;br&gt;
+        <guid>https://jimway71.github.io/p/%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D-for-linux-%E5%9C%A8ubuntu-8.0.4-x86_64%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-13.jpg" alt="Featured image of post 花生壳动态域名 for Linux 在ubuntu 8.0.4 x86_64系统下的使用" /&gt;&lt;p&gt;一、花生壳for linux安装包里有phlinux-1.1-install.ubuntu.8.04.tar.gz, 是为ubuntu 8.0.4 i386下使用&lt;br&gt;
 二、在ubuntu 8.0.4 x86_64下使用, 会报错(无文件错误)&lt;br&gt;
 三、分析原因, 是因为在ubuntu x86_64下没有i386的库&lt;br&gt;
 解决方法是安装32位的库文件&lt;br&gt;

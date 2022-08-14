@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>链接 on 点滴随记</title>
-        <link>https://hugo.otcg.org/tags/%E9%93%BE%E6%8E%A5/</link>
+        <link>https://jimway71.github.io/tags/%E9%93%BE%E6%8E%A5/</link>
         <description>Recent content in 链接 on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.otcg.org/tags/%E9%93%BE%E6%8E%A5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E9%93%BE%E6%8E%A5/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>markdown On Hugo With theme Stack</title>
-        <link>https://hugo.otcg.org/p/markdown-on-hugo-with-theme-stack/</link>
+        <link>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</link>
         <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.otcg.org/p/markdown-on-hugo-with-theme-stack/</guid>
-        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-10.jpg" alt="Featured image of post markdown On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
+        <guid>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-10.jpg" alt="Featured image of post markdown On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; Markdown 中文文档&lt;/a&gt;&lt;/li&gt;
@@ -237,11 +237,11 @@ Code:&lt;/p&gt;
         </item>
         <item>
         <title>Markdown&#43;Hugo测试文件</title>
-        <link>https://hugo.otcg.org/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</link>
+        <link>https://jimway71.github.io/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</link>
         <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.otcg.org/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</guid>
-        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-02.jpg" alt="Featured image of post Markdown&#43;Hugo测试文件" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
+        <guid>https://jimway71.github.io/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-02.jpg" alt="Featured image of post Markdown&#43;Hugo测试文件" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; Markdown 中文文档&lt;/a&gt;&lt;/li&gt;
@@ -782,7 +782,7 @@ end tell
     &gt;This link&lt;/a&gt; has no title attribute.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;See my &lt;a class=&#34;link&#34; href=&#34;https://hugo.otcg.org/about/&#34; &gt;About&lt;/a&gt; page for details.&lt;/p&gt;
+&lt;p&gt;See my &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/about/&#34; &gt;About&lt;/a&gt; page for details.&lt;/p&gt;
 &lt;p&gt;This is &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Optional Title Here&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
@@ -831,7 +831,7 @@ than from &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  ti
 &lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Please don&amp;rsquo;t use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;amp;#8212;&lt;/code&gt; is the decimal-encoded equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/path/to/img.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/path/to/img.jpg&#34;
 	
 	
 	
@@ -841,7 +841,7 @@ than from &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  ti
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hugo.otcg.org/path/to/img.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/path/to/img.jpg&#34;
 	
 	
 	

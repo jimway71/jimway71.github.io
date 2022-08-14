@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>编程 on 点滴随记</title>
-        <link>https://hugo.otcg.org/categories/%E7%BC%96%E7%A8%8B/</link>
+        <link>https://jimway71.github.io/categories/%E7%BC%96%E7%A8%8B/</link>
         <description>Recent content in 编程 on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 28 Feb 2007 16:37:16 +1000</lastBuildDate><atom:link href="https://hugo.otcg.org/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 28 Feb 2007 16:37:16 +1000</lastBuildDate><atom:link href="https://jimway71.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CodeBlocks的Windows NT/2K/XP/CE版本的安装及相关说明</title>
-        <link>https://hugo.otcg.org/p/codeblocks%E7%9A%84windows-nt/2k/xp/ce%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
+        <link>https://jimway71.github.io/p/codeblocks%E7%9A%84windows-nt/2k/xp/ce%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
         <pubDate>Wed, 28 Feb 2007 16:37:16 +1000</pubDate>
         
-        <guid>https://hugo.otcg.org/p/codeblocks%E7%9A%84windows-nt/2k/xp/ce%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
-        <description>&lt;img src="https://hugo.otcg.org/wallpaper/wallpaper-12.jpg" alt="Featured image of post CodeBlocks的Windows NT/2K/XP/CE版本的安装及相关说明" /&gt;&lt;p&gt;一、相关版本软件的下载&lt;/p&gt;
+        <guid>https://jimway71.github.io/p/codeblocks%E7%9A%84windows-nt/2k/xp/ce%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-12.jpg" alt="Featured image of post CodeBlocks的Windows NT/2K/XP/CE版本的安装及相关说明" /&gt;&lt;p&gt;一、相关版本软件的下载&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Windows NT/2K/XP&lt;br&gt;
 　CodeBlocks 1.0rc2版: (引自 &lt;a class=&#34;link&#34; href=&#34;http://www.codeblocks.org/downloads.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
