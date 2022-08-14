@@ -12,7 +12,7 @@
         <pubDate>Thu, 05 Mar 2020 01:53:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85%E7%BF%BB%E5%A2%99%E6%9C%8D%E5%8A%A1%E5%99%A8v2ray-ss-brook/</guid>
-        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-14.jpg" alt="Featured image of post 安装翻墙服务器(V2ray&#43;ss&#43;brook)" /&gt;&lt;p&gt;简单说明:&lt;br&gt;
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-15.jpg" alt="Featured image of post 安装翻墙服务器(V2ray&#43;ss&#43;brook)" /&gt;&lt;p&gt;简单说明:&lt;br&gt;
 系统: Ubuntu 18.04 LTS。&lt;br&gt;
 a.安装: V2RAY mKCP+dtls, AAAA; ss: BBBB; brook: CCCC。&lt;br&gt;
 b.(V2ray安装的)shadowsocks改用了新的加密方式(AHEAD: chacha20-ietf-poly1305), 以避免被GFW检测到&lt;br&gt;
