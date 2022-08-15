@@ -888,7 +888,15 @@ than from &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  ti
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!   exclamation mark
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;p&gt;++文本++&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;text-decoration: underline
+&lt;!-- raw HTML omitted --&gt;所添加的需要加下划线的行内文字&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;用数学公式：
+下划线 $\underline{X}$
+上划线 $\overline{X}$&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>在R3300L类&#43;Armbian上安装Hugo服务器</title>
@@ -1193,7 +1201,9 @@ hugo v0.101.0+extended linux/amd64 BuildDate=unknown&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/vjeantet/hugo-theme-docport.git themes/hugo-theme-docport  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;themes分析:&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Git submodule命令参考文档: &lt;a class=&#34;link&#34; href=&#34;https://knightyun.github.io/2021/03/21/git-submodule&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git submodule 知识总结&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;themes分析:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-docport/&#34;  title=&#34;docPort主题-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;

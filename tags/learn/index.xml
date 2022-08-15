@@ -659,7 +659,15 @@ than from &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  ti
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!   exclamation mark
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;p&gt;++文本++&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;text-decoration: underline
+&lt;!-- raw HTML omitted --&gt;所添加的需要加下划线的行内文字&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;用数学公式：
+下划线 $\underline{X}$
+上划线 $\overline{X}$&lt;/p&gt;
+</description>
         </item>
         
     </channel>

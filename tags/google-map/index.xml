@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Google map on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/google-map/</link>
+        <description>Recent content in Google map on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 05 Mar 2020 02:33:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/google-map/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>谷歌地图App不显示地点照片、评价等信息的解决方法</title>
+        <link>https://jimway71.github.io/p/%E8%B0%B7%E6%AD%8C%E5%9C%B0%E5%9B%BEapp%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%9C%B0%E7%82%B9%E7%85%A7%E7%89%87%E8%AF%84%E4%BB%B7%E7%AD%89%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+        <pubDate>Thu, 05 Mar 2020 02:33:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E8%B0%B7%E6%AD%8C%E5%9C%B0%E5%9B%BEapp%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%9C%B0%E7%82%B9%E7%85%A7%E7%89%87%E8%AF%84%E4%BB%B7%E7%AD%89%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-17.jpg" alt="Featured image of post 谷歌地图App不显示地点照片、评价等信息的解决方法" /&gt;&lt;p&gt;说明: 在安卓手机上测试成功，苹果手机应该也可以。&lt;/p&gt;
+&lt;p&gt;用了两年的这部三星手机上, 谷歌地图一直不能显示地点的照片和评价信息，一直以为是港行手机刷国行ROM造成的(在谷歌Play里, &amp;ldquo;&lt;strong&gt;Play保护机制认证&lt;/strong&gt;&amp;ldquo;显示&amp;rdquo;&lt;strong&gt;设备未通过认证&lt;/strong&gt;&amp;quot;)，也曾经找了些法子试着处理，但一直都没成功。&lt;/p&gt;
+&lt;p&gt;今天突然发现备用的另一部国外版本Rom手机上, 谷歌地图居然也不显示地点照片和评价信息，而在谷歌Play里, &amp;ldquo;&lt;strong&gt;Play保护机制认证&lt;/strong&gt;&amp;ldquo;显示为&amp;rdquo;&lt;strong&gt;设备已通过认证&lt;/strong&gt;&amp;rdquo;, 那这个问题就跟设备认证没关系了。&lt;/p&gt;
+&lt;p&gt;那是什么原因造成的呢? 上网搜到知乎的一个问答: &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/40255438&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何在大陆使用 Google Maps 的地点评价功能?&lt;/a&gt;&amp;rdquo;, 里面有不只一个人提到 &amp;ldquo;要取出(中国运营商的)SIM卡&amp;rdquo;, 那就试试吧。&lt;/p&gt;
+&lt;p&gt;手上刚好有一张外国sim卡, 于是操作方式就成了:&lt;br&gt;
+1.清除谷歌地图数据, 删除谷歌地图(或删除谷歌地图升级)&lt;br&gt;
+2.关机, 取出&amp;quot;中国运营商的SIM卡&amp;rdquo;, 插入外国SIM卡&lt;br&gt;
+3.开机, 重装谷歌地图&lt;br&gt;
+4.测试&lt;/p&gt;
+&lt;p&gt;完成后, 两部手机都能看到地点照片和评价信息, 问题解决了, 菜单里&amp;quot;您的时间轴&amp;quot;也出现了, 以前这个也没有。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/googlemap-on-phone-in-china.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;googlemap-on-phone-in-china&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在上面这个知乎问答里，有人提到要&amp;quot;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/40255438/answer/963968378&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在没插sim卡的时候，把各种谷歌的功能都先打开&lt;/a&gt;&lt;/strong&gt;&amp;quot;, 看来谷歌的各种服务对&amp;quot;&lt;strong&gt;(中国运营商的)SIM卡&lt;/strong&gt;&amp;ldquo;很敏感, 以后给手机装系统需要记住这一点。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

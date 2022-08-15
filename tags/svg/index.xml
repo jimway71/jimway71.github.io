@@ -309,7 +309,9 @@ hugo v0.101.0+extended linux/amd64 BuildDate=unknown&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/vjeantet/hugo-theme-docport.git themes/hugo-theme-docport  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;themes分析:&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Git submodule命令参考文档: &lt;a class=&#34;link&#34; href=&#34;https://knightyun.github.io/2021/03/21/git-submodule&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git submodule 知识总结&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;themes分析:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-docport/&#34;  title=&#34;docPort主题-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;

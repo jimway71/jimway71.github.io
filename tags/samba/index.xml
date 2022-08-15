@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Samba on 点滴随记</title>
+        <title>samba on 点滴随记</title>
         <link>https://jimway71.github.io/tags/samba/</link>
-        <description>Recent content in Samba on 点滴随记</description>
+        <description>Recent content in samba on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/samba/index.xml" rel="self" type="application/rss+xml" /><item>
@@ -309,7 +309,9 @@ hugo v0.101.0+extended linux/amd64 BuildDate=unknown&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/vjeantet/hugo-theme-docport.git themes/hugo-theme-docport  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;themes分析:&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Git submodule命令参考文档: &lt;a class=&#34;link&#34; href=&#34;https://knightyun.github.io/2021/03/21/git-submodule&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git submodule 知识总结&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;themes分析:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-docport/&#34;  title=&#34;docPort主题-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -684,6 +686,58 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;结论:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Windows 10(版本1709)不能访问NAS的原因分析及处理</title>
+        <link>https://jimway71.github.io/p/windows-10%E7%89%88%E6%9C%AC1709%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AEnas%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90%E5%8F%8A%E5%A4%84%E7%90%86/</link>
+        <pubDate>Thu, 05 Mar 2020 01:53:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/windows-10%E7%89%88%E6%9C%AC1709%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AEnas%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90%E5%8F%8A%E5%A4%84%E7%90%86/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-16.jpg" alt="Featured image of post Windows 10(版本1709)不能访问NAS的原因分析及处理" /&gt;&lt;p&gt;问题:&lt;/p&gt;
+&lt;p&gt;在Macbook pro上装了windows 10后, 访问家里的NAS一直是正常的。&lt;/p&gt;
+&lt;p&gt;有一天, 突然访问不了, 报错是: windows无法访问xxx(NAS); 详细信息里的错误代码是0x80004005&lt;br&gt;
+但是, 在其他的电脑上(Macbook+Thinkpad x230)和手机上(三星S9+Nubia Z11minis)都能正常访问&lt;/p&gt;
+&lt;p&gt;处理:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在网上查报错的信息, 试了几种法子, 都没有解决&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;过了很久了, 也没什么法子, 只好重装机器&lt;br&gt;
+备份数据 &amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先想是把机器恢复到初始状态&lt;br&gt;
+恢复完成后, 还是不能访问NAS(奇怪? 但也没多想)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找出以前给这台机器装windows10时做的BootCamp的win10安装U盘和驱动U盘, Win10版本应该是1809&lt;/p&gt;
+&lt;p&gt;回到Mac系统里, 删除BootCamp分区, 再从BootCamp里重新分区装windows10系统&lt;br&gt;
+装完系统再装驱动, 再试, 依然不能访问NAS&lt;br&gt;
+奇怪? 上次装完系统后, 肯定是能访问NAS的!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再去网上搜索, 终于找到一篇&amp;quot;&lt;a class=&#34;link&#34; href=&#34;http://www.52help.net/htips/168.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;windows 10无法访问其它系统或Nas共享的samba共享目录的解决办法&lt;/a&gt;&amp;quot;, 其中说道:&lt;br&gt;
+问题的原因是: &amp;ldquo;造成新版Win10无法连接SAMBA网络共享的原因是，Win10强制屏蔽了不安全的samba v1和v2协议&amp;rdquo;&lt;br&gt;
+解决的方法是: &amp;ldquo;控制面板-程序-程序和功能-启用或关闭windows功能，开启（勾选）SMB 1.0/CIFS文件共享支持&amp;rdquo;&lt;br&gt;
+按这个方法操作, 问题解决.&lt;br&gt;
+So easy&lt;/p&gt;
+&lt;p&gt;原因再分析: 微软考虑到安全原因关闭了旧的SMB协议, 但是我家里的NAS只支持旧的SMB协议, 所以不能访问.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优化: 只打开SMB 1.0/CIFS客户端&lt;br&gt;
+MBP上装的这个win10版本(1709)的&amp;quot;启动或或关闭windows功能&amp;quot;中, &amp;ldquo;SMB 1.0/CIFS文件共享支持&amp;quot;项目下打开有三项, 分别是:&lt;br&gt;
+SMB 1.0/CIFS服务器&lt;br&gt;
+SMB 1.0/CIFS客户端&lt;br&gt;
+SMB 1.0/CIFS自动删除&lt;br&gt;
+只要打开&amp;quot;SMB 1.0/CIFS客户端&amp;quot;就可以了, 关掉其它两项.&lt;br&gt;
+经测试, 可以正常访问NAS&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         
