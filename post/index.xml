@@ -6,7 +6,584 @@
         <description>Recent content in Posts on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 19 Aug 2022 12:00:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>调查五款Python GUI框架</title>
+        <link>https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/</link>
+        <pubDate>Fri, 19 Aug 2022 12:00:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-20.jpg" alt="Featured image of post 调查五款Python GUI框架" /&gt;&lt;p&gt;五款Python GUI框架:&lt;br&gt;
+来源: &lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7114468038363054117&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎: 2022- 值得推荐的五款Python GUI框架&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyQt5/6&lt;/li&gt;
+&lt;li&gt;PySide6&lt;/li&gt;
+&lt;li&gt;wxPython&lt;/li&gt;
+&lt;li&gt;Tkinter&lt;/li&gt;
+&lt;li&gt;PySimpleGUI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;列表如下:  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;框架名&lt;/th&gt;
+&lt;th&gt;来源&lt;/th&gt;
+&lt;th&gt;许可&lt;/th&gt;
+&lt;th&gt;易用性&lt;/th&gt;
+&lt;th&gt;功能性&lt;/th&gt;
+&lt;th&gt;文档丰富性&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;th&gt;教程&lt;/th&gt;
+&lt;th&gt;界面开发工具&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PyQt5&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PyQt5/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;GPL v3&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PyQt6&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PyQt6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt6&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;GPL v3&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;需Python3.6.1以上版本; 网络授权支持的在LGPL下授权(来源: &lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7120086083378872357&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5和PyQt6之间的区别&lt;/a&gt;之&amp;quot;许可证变更&amp;quot;)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;PySide6&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;LGPL&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;最初由Nokia官方推出; 对标PyQt6; 以调用动态链接库的形式使用Qt时, 可以任何形式发布程序(含商业、非商业、开源、非开源)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6详细中文教程&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;wxPython&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wxpython.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxPython&lt;/a&gt;]&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wxpython.org/pages/license/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxWindows Library Licence&lt;/a&gt;]&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.wxpython.org/zh-CN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxPyWiki&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/wxFormBuilder/wxFormBuilder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxFormbuilder&lt;/a&gt;, &lt;del&gt;&lt;a class=&#34;link&#34; href=&#34;http://boa-constructor.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;boa-constructor 2007年停更&lt;/a&gt;&lt;/del&gt;, &lt;a class=&#34;link&#34; href=&#34;http://wxglade.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxGlade 2021停更&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tkinter&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/library/tkinter.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tkinter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://spdx.org/licenses/PSF-2.0.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PSF-2.0&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;简单无依赖&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/python/python-gui-tkinter.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python GUI编程(Tkinter)&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;http://www.python-course.eu/python_tkinter.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tkinter course&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://page.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PAGE&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://visualtk.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;visualtk-在线可用&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;&lt;strong&gt;PySimpleGUI&lt;/strong&gt;&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pysimplegui.org/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySimpleGUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;LGPL3&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;基于Tkinter、&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Remi&lt;/a&gt;、wxpython、PyQt模块; 可以输入相应的代码将其转变网页形式展示，而其余包则都是用来做图形界面的&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pysimplegui.org/en/latest/cookbook/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySimpleGUI Cookbook&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/PriestTheBeast/SimpleGUIBuilder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SimpleGUIBuilder 2021停更&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.quora.com/Can-I-make-a-program-in-Qt-Designer-under-the-open-source-license-and-then-buy-a-license-so-that-I-can-sell-my-program&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Can I make a program in Qt Designer under the open-source license, and then buy a license so that I can sell my program?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://discuss.wxpython.org/t/which-tool-is-the-best-for-gui-designer/26071/10&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Which tool is the best for gui designer(哪个工具最适合 gui 设计师)？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>临时记录</title>
+        <link>https://jimway71.github.io/p/%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-19.jpg" alt="Featured image of post 临时记录" /&gt;&lt;h2 id=&#34;openwrt&#34;&gt;OpenWrt:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_38892883/article/details/79551504&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt通用固件make menuconfig配置&lt;/a&gt;:&lt;br&gt;
+2018-03-14 12:10:35 发布&lt;br&gt;
+内容: OpenWrt的make menuconfig详细配置&lt;br&gt;
+包括:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Target System &amp;mdash;&amp;gt;&lt;br&gt;
+Target Profile &amp;mdash;&amp;gt;&lt;br&gt;
+LuCI &amp;mdash;&amp;gt; Collections&lt;br&gt;
+LuCI &amp;mdash;&amp;gt; Applications&lt;br&gt;
+Kernel modules  &amp;mdash;&amp;gt; Block Device&lt;br&gt;
+Kernelmodules &amp;mdash;&amp;gt; Filesystems&lt;br&gt;
+(Utilities  &amp;mdash;&amp;gt;Filesystem)&lt;br&gt;
+Kernel modules &amp;mdash;&amp;gt; Native Language Support&lt;br&gt;
+Kernel modules &amp;mdash;&amp;gt;  Other modules&lt;br&gt;
+Base system  &amp;mdash;&amp;gt;&lt;br&gt;
+Kernel modules  &amp;mdash;&amp;gt; USB Support&lt;br&gt;
+Network  &amp;mdash;&amp;gt;&lt;br&gt;
+Kernel modules  &amp;mdash;&amp;gt; Video Support&lt;br&gt;
+Multimedia    &amp;mdash;&amp;gt;&lt;br&gt;
+Libraries &amp;mdash;&amp;gt;&lt;br&gt;
+Utilities  &amp;mdash;&amp;gt;&lt;br&gt;
+Kernel modules &amp;mdash;&amp;gt;Wireless Drivers&lt;br&gt;
+Utilities  &amp;mdash;&amp;gt; Compression&lt;br&gt;
+Utilities  &amp;mdash;&amp;gt;  Filesystem&lt;br&gt;
+Utilities  &amp;mdash;&amp;gt;  disc&lt;br&gt;
+Utilities  &amp;ndash;&amp;gt;&lt;br&gt;
+Network&amp;ndash;&amp;gt; wireless&lt;br&gt;
+Network&amp;ndash;&amp;gt; VPN&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OpenWRT 软件包中文对照说明:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://www.wbini.com/id-12.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.wbini.com/id-12.html&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;视频播放相关&#34;&gt;视频播放相关&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://plyr.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;plyr&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/sampotts/plyr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;plyr Github&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://www.yixao.net/share/16426.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;plyr 一款简单易用，可定制化的Html5的音视频播放器&lt;/a&gt;&lt;br&gt;
+特性:&lt;br&gt;
+HTML视频和音频&lt;br&gt;
+无障碍-完全支持VTT字幕和屏幕阅读器&lt;br&gt;
+可自定义-使用所需的标记让播放器可定制化&lt;br&gt;
+干净的HTML-使用原生的元素。&lt;br&gt;
+表示音量，&lt;br&gt;
+自适应-适用于任何屏幕尺寸&lt;br&gt;
+流媒体-支持hls.js，Shaka和dash.js流媒体播放&lt;br&gt;
+API-通过标准化的API切换播放，音量，搜索等&lt;br&gt;
+灵活，所有活动都跨格式标准化&lt;br&gt;
+全屏-支持本机全屏并回退到“全屏”模式&lt;br&gt;
+⌨️ 快捷键-支持键盘快捷键&lt;br&gt;
+画中画-支持画中画模式&lt;br&gt;
+Playsinline-支持playsinline属性&lt;br&gt;
+速度控制-即时调整速度&lt;br&gt;
+多个字幕-支持多个字幕轨道&lt;br&gt;
+i18n支持-支持控件国际化&lt;br&gt;
+预览缩略图-支持显示预览缩略图&lt;br&gt;
+没有框架-用“原生” ES6 JavaScript编写，不需要jQuery&lt;br&gt;
+♀️ SASS-包含在您的构建过程中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Windows 10 - 播放到设备(play to Devices)&lt;br&gt;
+执行程序名: wmpdmc.exe&lt;br&gt;
+WMPDMC.exe是一个可执行文件，它是Microsoft Corporation开发的Windows Media Player 11程序的一部分。该软件的大小通常约为8.24 MB&lt;br&gt;
+这个&amp;quot;播放到设备&amp;quot;功能，是本地视频DLNA投屏功能, 通过此功能可以把视频播放到电视机上，在电视机的大屏幕上播放。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络&#34;&gt;网络&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SSLH：让 HTTPS、SSH 共享端口&lt;br&gt;
+考虑的缘由:&lt;br&gt;
+· 公网上服务器使用ssh通用端口22/tcp总会招来很多测试攻击;&lt;br&gt;
+· 而如果使用非22/tcp端口, 则(应该是)会被当做非正常访问, 而被GFW攻击而出现异常中断
+处理的方式:&lt;br&gt;
+· 使用VNC方式访问, 缺点是操作相对复杂。&lt;br&gt;
+· 让ssh共用已开放的http(或https)端口, 设置上可能麻烦点, 但使用方便。&lt;br&gt;
+解决方案参考:&lt;br&gt;
+· &lt;a class=&#34;link&#34; href=&#34;https://linux.cn/article-11247-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SSLH：让 HTTPS 和 SSH 共享同一个端口&lt;/a&gt;&lt;br&gt;
+可以在虚拟机上测试, 并可以同时测试&lt;a class=&#34;link&#34; href=&#34;https://github.com/vaxilu/x-ui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x-ui 支持多协议多用户的 xray 面板&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;临时链接s&#34;&gt;临时链接(s)&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/445661017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎: Pycharm安装配置Pyside6&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1724427&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyCharm中配置PySide2的图文教程&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6详细中文教程&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/plugin/15282-acode-time&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ACode Time&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>各种问题汇总记录</title>
+        <link>https://jimway71.github.io/p/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-18.jpg" alt="Featured image of post 各种问题汇总记录" /&gt;&lt;hr&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Windows系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题:&lt;br&gt;
+PyCharm启动报错。&lt;br&gt;
+现象:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Internal error. Please refer to https://jb.gg/ide/critical-startup-errors
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;com.intellij.ide.plugins.StartupAbortedException: Cannot start app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at com.intellij.idea.StartupUtil.lambda$start$15(StartupUtil.java:263)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at java.base/java.util.concurrent.CompletableFuture.uniExceptionally(CompletableFuture.java:986)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at java.base/java.util.concurrent.CompletableFuture.uniExceptionallyStage(CompletableFuture.java:1004)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at java.base/java.util.concurrent.CompletableFuture.exceptionally(CompletableFuture.java:2307)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at com.intellij.idea.StartupUtil.start(StartupUtil.java:262)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at com.intellij.idea.Main.bootstrap(Main.java:118)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at com.intellij.idea.Main.main(Main.java:79)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Caused by: java.net.BindException: Address already in use: bind
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at java.base/sun.nio.ch.Net.bind0(Native Method)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at java.base/sun.nio.ch.Net.bind(Net.java:459)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at java.base/sun.nio.ch.Net.bind(Net.java:448)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:503)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    at java.base/java.lang.Thread.run(Thread.java:829)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-----
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Your JRE: 11.0.15+10-b2043.56 amd64 (JetBrains s.r.o.)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;D:\Green Files\JetBrains\PyCharm Community Edition\jbr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/question&amp;amp;answer-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Internal error. Please refer to https://jb.gg/ide/critical-startup-errors&#34;
+	
+	
+&gt;&lt;br&gt;
+猜测: 可能与Hyper-v启动的op系统有关。&lt;br&gt;
+\jimway&amp;gt;netsh int ipv4 set dynamic tcp start=49152 num=16384&lt;br&gt;
+相关资料:&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/93340000&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎: intellij pycharm启动报错Address already in use: bind&lt;/a&gt;&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://intellij-support.jetbrains.com/hc/en-us/community/posts/360004973960-Critical-Internal-Error-on-Startup-of-IntelliJ-IDEA-Cannot-Lock-System-Folders-&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Critical Internal Error on Startup of IntelliJ IDEA: &amp;ldquo;Cannot Lock System Folders&amp;rdquo;&lt;/a&gt;&lt;br&gt;
+●&lt;a class=&#34;link&#34; href=&#34;https://github.com/docker/for-win/issues/3171&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unable to bind ports: Docker-for-Windows &amp;amp; Hyper-V excluding but not using important port ranges #3171&lt;/a&gt;&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/default-dynamic-port-range-tcpip-chang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The default dynamic port range for TCP/IP has changed since Windows Vista and in Windows Server 2008&lt;/a&gt;&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://intellij-support.jetbrains.com/hc/en-us/community/posts/360010020399-Pycharm-2020-3-Internal-Error-java-net-BindException-Address-already-in-use-bind-Windows-10&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm 2020.3 - Internal Error - java.net.BindException: Address already in use: bind - Windows 10&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原因:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;根据&amp;quot;&lt;a class=&#34;link&#34; href=&#34;https://intellij-support.jetbrains.com/hc/en-us/community/posts/360010020399-Pycharm-2020-3-Internal-Error-java-net-BindException-Address-already-in-use-bind-Windows-10&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm 2020.3 - Internal Error - java.net.BindException: Address already in use: bind - Windows 10&lt;/a&gt;&amp;ldquo;中的说法:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To lock folders IDE is starting a server on localhost, it tries to bind on the first available port between 6942 and 6991, this exception is thrown if IDE was not able to bind on any of the ports in this range.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PyCharm启动时, 需要从tcp端口6942到6991中找到一个可用的端口, 如果找不到, 就会报这个错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用cmd命令:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看ipv4 TCP的动态端口范围:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\&amp;gt; netsh int ipv4 show dynamicport tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;协议 tcp 动态端口范围
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;启动端口        : 49152
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;端口数          : 16384
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;查看ipv6 TCP的动态端口范围:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\&amp;gt; netsh int ipv6 show dynamicport tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;协议 tcp 动态端口范围
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;启动端口        : 49152
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;端口数          : 16384
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;查看ipv4 tcp保留端口:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\&amp;gt; netsh int ipv4 show excludedportrange protocol=tcp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;协议 tcp 端口排除范围
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;开始端口    结束端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;----------    --------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      2869        2869
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      5357        5357
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     10243       10243
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     50000       50059     *
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     53994       54093
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54094       54193
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54194       54293
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54396       54495
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54496       54595
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54596       54695
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* - 管理的端口排除。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;查看ipv6 tcp保留端口:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\&amp;gt; netsh int ipv6 show excludedportrange protocol=tcp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;协议 tcp 端口排除范围
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;开始端口    结束端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;----------    --------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      2869        2869
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      5357        5357
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     10243       10243
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     50000       50059     *
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     53994       54093
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54094       54193
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54194       54293
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54396       54495
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54496       54595
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54596       54695
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* - 管理的端口排除。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;解决方法:&lt;br&gt;
+&lt;strong&gt;只要确保tcp端口6942到6991不在上述tcp动态端口范围, 也不在上述tcp保留端口范围, 就应该没问题&lt;/strong&gt;&lt;br&gt;
+参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/docker/for-win/issues/3171#issuecomment-554587817&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unable to bind ports: Docker-for-Windows &amp;amp; Hyper-V excluding but not using important port ranges #3171&lt;/a&gt;&amp;ldquo;的操作：&lt;br&gt;
+以&lt;strong&gt;管理员身份运行&lt;/strong&gt;&amp;lsquo;命令提示符&amp;rsquo;(netsh的set命令需要管理员权限), 运行:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\&amp;gt; netsh int ipv4 set dynamic tcp start=49152 num=16384
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;确定。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\&amp;gt; netsh int ipv4 show dynamicport tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;协议 tcp 动态端口范围
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;启动端口        : 49152
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;端口数          : 16384
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\&amp;gt; netsh int ipv4 show excludedportrange protocol=tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;协议 tcp 端口排除范围
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;开始端口    结束端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;----------    --------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      2869        2869
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      5357        5357
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     10243       10243
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     50000       50059     *
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     53994       54093
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54094       54193
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54194       54293
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54396       54495
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54496       54595
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     54596       54695
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* - 管理的端口排除。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;操作完成后需要重启, 重启后PyCharm可以正常启动。&lt;br&gt;
+记录:&lt;br&gt;
+其实也不知道哪条命令起的作用:&lt;br&gt;
+● 先停了Hyper-V中的全部虚拟机&lt;br&gt;
+● 把tcp动态端口范围调整到25192-300, 重启后, PyCharm就可以正常启动了;&lt;br&gt;
+● 再把tcp动态端口范围调整到20000-20000, 重启, PyCharm启动也没问题;&lt;br&gt;
+● 最后, 把tcp动态端口范围调整回到49152-16384, 启动Hyper-V中全部虚拟机, PyCharm的启动依然正常。&lt;br&gt;
+反正一通操作后, 一切回归正常, 而tcp的端口配置也应该没有改变。 - 不清楚怎么好的!&lt;/p&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Windows系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Linux系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Linux系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>markdown On Hugo With theme Stack</title>
         <link>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</link>
         <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
@@ -1578,6 +2155,692 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;结论:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>关于电视盒子刷机的好贴收集</title>
+        <link>https://jimway71.github.io/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E7%9A%84%E5%A5%BD%E8%B4%B4%E6%94%B6%E9%9B%86/</link>
+        <pubDate>Sun, 07 Mar 2021 11:11:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E7%9A%84%E5%A5%BD%E8%B4%B4%E6%94%B6%E9%9B%86/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-26.jpg" alt="Featured image of post 关于电视盒子刷机的好贴收集" /&gt;&lt;h2 id=&#34;折腾电视盒子httpsbh3nvngithubio202006s905&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://bh3nvn.github.io/2020/06/s905/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;折腾电视盒子&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/26-tvbox-01.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;折腾电视盒子&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;在斐讯n1盒子上刷入linux系统代替树莓派做小型服务器&#34;&gt;在斐讯N1盒子上刷入Linux系统代替树莓派做小型服务器&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/38456769&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎: 在斐讯N1盒子上刷入Linux系统代替树莓派做小型服务器&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;r3300l运行coreelec-emuelec和armbianhttpswwwcnblogscommiltonp11883811html&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/milton/p/11883811.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;R3300L运行CoreELEC, EmuELEC和Armbian&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/26-tvbox-02.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;折腾电视盒子&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;百视通r3300l刷写固件及emuelec&#34;&gt;百视通R3300L刷写固件及EMUELEC&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.shmily.one/anything/r3300l-s905l-flash-emuelec.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shmily: 百视通R3300L刷写固件及EMUELEC&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>再刷移动魔百和CM201-2电视盒子</title>
+        <link>https://jimway71.github.io/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/</link>
+        <pubDate>Sat, 06 Mar 2021 16:14:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-25.jpg" alt="Featured image of post 再刷移动魔百和CM201-2电视盒子" /&gt;&lt;h2 id=&#34;参考&#34;&gt;参考:&lt;/h2&gt;
+&lt;h3 id=&#34;u盘刷机&#34;&gt;U盘刷机&lt;/h3&gt;
+&lt;p&gt;使用U盘刷机&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://www.znds.com/tv-1152186-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【潜龙定制】CM201-2(mv300H,310,300-emmc,nand)语音强刷固件201910&lt;/a&gt;&lt;br&gt;
+● 难度: 极低&lt;br&gt;
+● 所需工具及软件: U盘+刷机文件(一共4个文件)&lt;br&gt;
+● 是否需要拆机:  不需要 _ 如果知道盒子准确类型的话。&lt;br&gt;
+● 结果: 完全重刷盒子固件。&lt;br&gt;
+● 注意点: 需要区分盒子闪存是EMMC还是NAND。 4文件中个有3个文件不一样, 对应不同的闪存。&lt;br&gt;
+● 操作: 把4个文件拷到U盘根目录, U盘插到cm201-2盒子:&lt;br&gt;
+如果是开机状态, 电视上会显示找到新的系统需要升级; 如果是关机状态, 开机即自动刷机。&lt;/p&gt;
+&lt;h3 id=&#34;ttl连接刷机&#34;&gt;TTL连接刷机&lt;/h3&gt;
+&lt;p&gt;使用TTL连上盒子, 进入内部系统(linux), 把需要的apk应用装进系统。&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://www.znds.com/tv-1033164-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;江苏移动魔百和cm201-2拆机ttl安装软件教程&lt;/a&gt;&lt;br&gt;
+● 难度: 略高&lt;br&gt;
+● 所需要工具及软件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;U盘&lt;/li&gt;
+&lt;li&gt;需要安装的apk&lt;/li&gt;
+&lt;li&gt;排针、烙铁、焊锡等&lt;/li&gt;
+&lt;li&gt;万用表&lt;/li&gt;
+&lt;li&gt;USB转TTL模块，连接线&lt;/li&gt;
+&lt;li&gt;拆机工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;● 是否需要拆机:  需要&lt;br&gt;
+● 结果:  未对盒子底层系统做修改, 仅安装了几个apk。&lt;br&gt;
+选用的是TTL连接盒子的方式。&lt;/p&gt;
+&lt;h2 id=&#34;破解方法&#34;&gt;破解方法&lt;/h2&gt;
+&lt;p&gt;破解方法很多:&lt;br&gt;
+● 不拆机破解&lt;br&gt;
+这是利用系统漏洞破解, 通过漏洞是装上可以装App的市场或其他工具。&lt;br&gt;
+● 更新固件刷机&lt;br&gt;
+刷入自制的系统, 除了硬件没变, 原系统的固件都没有了。&lt;br&gt;
+因为移动魔百和CM201的型号极其杂乱, 各地移动公司都有出, 不同厂家代工, 另外不同年份出的盒子硬件都有不同, 同款盒子还有闪存不同, 所以这种方式需要区分型号后, 再找相应的刷机固件。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/25-cm201-2-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;同款板子使用不同类型闪存&#34;
+	
+	
+&gt;&lt;br&gt;
+↑ 同款板子使用不同类型闪存&lt;br&gt;
+● TTL连接进入底层系统刷机&lt;br&gt;
+板子上有TTL接口, 手上又有相应的工具材料的话, 这倒是最简单的一种破解方法, 因为通过TTL连进系统后, 就有了全部权限(root用户)。&lt;/p&gt;
+&lt;h1 id=&#34;关于移动魔百和cm201&#34;&gt;关于移动魔百和CM201&lt;/h1&gt;
+&lt;p&gt;移动魔百和CM201从型号上分大概有cm201s、cm201-1、 cm201-2等等, 代工方有朝歌、长虹、易视腾等等, 外观倒差不多, 都是一个小黑盒子。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/25-cm201-2-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外壳&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/25-cm201-2-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外壳&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/25-cm201-2-04.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;TTL接口&#34;
+	
+	
+&gt;&lt;br&gt;
+↑ 这块板子上有TTL接口，但没有插针, 也没有标注针脚定义&lt;/p&gt;
+&lt;h2 id=&#34;刷机过程&#34;&gt;刷机过程&lt;/h2&gt;
+&lt;h3 id=&#34;硬件准备&#34;&gt;硬件准备&lt;/h3&gt;
+&lt;p&gt;● 给板子的TTL接口焊上排针&lt;br&gt;
+● 用排线连接板子上TTL针脚和USB转TTL模块，连接如下:&lt;br&gt;
+(收发对倒连接)  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;板上脚标 - 模块脚标&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GND - GND&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RX    -  TX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TX    -  RX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;● TTL模块插入电脑USB口&lt;br&gt;
+在电脑&amp;quot;设备管理器&amp;quot;-&amp;ldquo;端口&amp;quot;里找到com端口(comx) —— 这个端口号在后面设置电脑上putty连接盒子时要用到， &amp;ldquo;属性&amp;rdquo;-&amp;ldquo;端口设置&amp;rdquo;-&amp;ldquo;位/秒(B)&amp;quot;(波特率), 改为115200。&lt;br&gt;
+抄个图过来↓&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/25-cm201-2-05.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;抄图&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;软件准备&#34;&gt;软件准备&lt;/h3&gt;
+&lt;p&gt;● 准备要安装的应用&lt;br&gt;
+一定要有一个桌面应用, 比如当贝桌面;&lt;br&gt;
+一定要有一个可以做安装的app, 比如市场应用(比如蚂蚁市场), 或者是一个文件管理器, 比如File Manager, 文件管理器也可以安装apk应用。&lt;br&gt;
+把想要安装的apk包拷到一个U盘的根目录里, 插到盒子的USB口上&lt;br&gt;
+● 设置电脑和盒子的连接。&lt;br&gt;
+设置使用putty连接。&lt;br&gt;
+putty官网下载地址在&lt;a class=&#34;link&#34; href=&#34;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这&lt;/a&gt;。&lt;br&gt;
+可以用来做串口连接的软件很多, 比如securecrt等等, 不过putty是免费软件, 也不需要注册什么的, 安装使用上比较方便。&lt;br&gt;
+打开putty, 按图中的提示设置。下面这个图也是抄的&amp;hellip;&amp;hellip;  ↓&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/25-cm201-2-06.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;抄图&#34;
+	
+	
+&gt;&lt;br&gt;
+先选择连接方式(Connection type)为串口连接(Serial), 再选择串口号(Serial line), 串口号是前面的&amp;quot;设备管理器&amp;quot;里找到的com端口，波特率(Speed)填115200(和前面的Com口波特率一致)。&lt;br&gt;
+接着点击Open开始连接，然后给盒子开机，连接正确的话, 盒子开机后, putty上会显示盒子的输出信息, 是个linux的终端界面(Console界面)。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/25-cm201-2-07.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;COM5-PuTTY&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装apk应用-修改界面&#34;&gt;安装apk应用, 修改界面&lt;/h3&gt;
+&lt;p&gt;在putty的连接界面上，输入命令执行操作。&lt;br&gt;
+首先要确认下U盘的目录名, 了解linux的应该知道, 外挂的盘一般会加载到/mnt目录下, 一般而言, U盘会加载到&amp;rdquo;/mnt/sda/sda1&amp;quot;目录下, 用ls命令可以确认是否正确&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ls /mnt/sda/sda1/ -la&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果正确, 则进入U盘根目录&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# cd /mnt/sda/sda1/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;把apk包拷贝到&amp;rdquo;/usr/app/&amp;ldquo;目录下, 即完成apk包的安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# cp *.apk /usr/app/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;启动当贝桌面&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# am start com.dangbei.tvlauncher&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装完成。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;## 实际和现实总有差距!&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;因为把U盘刷机的4个文件也拷到了U盘根目录下, 盒子开机后提示有更新, 因为连着网络, 还以为是在线更新, 没理。&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;后来重启盒子后, 盒子就直接开始更新, 这时也不敢停, 怕刷一半给刷成砖了。&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;等刷完了, 也退不回去了, 没有官方固件。&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;更新完成后重启, 看到的已经是另一幅模样了, 不过通过TTL拷进去的几个应用都在, 两种方法齐上, 搞成了混合刷机。&lt;/del&gt;&lt;br&gt;
+从系统管理菜单里恢复出厂后(密码:10086), 又重做了一遍, 这回没出问题。&lt;/p&gt;
+&lt;h2 id=&#34;测试&#34;&gt;测试&lt;/h2&gt;
+&lt;p&gt;也没怎么测, 系统用着没问题, 遥控没问题, 操作反应够快, 应用运行也够快。&lt;br&gt;
+用speedtest测了下网速, 使用wifi连接的情况下, 可以到80Mbps左右, 速度也还可以。&lt;/p&gt;
+&lt;h2 id=&#34;迁移补记-于-2022823&#34;&gt;迁移补记 于 2022.8.23&lt;/h2&gt;
+&lt;p&gt;● 最近一次查看这部CM201-2盒子时, 发现又回到了类似初始的状态, 已经不是能自定义的桌面, 应该是系统再次自动更新, 又&lt;strong&gt;回到未刷机的状态&lt;/strong&gt;。&lt;br&gt;
+● 近期在论坛上看到有大神将Armbian移植到基于海思Hi3798芯片的多种电视盒子, 包括CM201-2盒子, 有时间可以try.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.znds.com/tv-1207323-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;打造最强华为海思hi3798mv100/200/300机顶盒NAS服务器系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://bbs.histb.com/d/233-rk322x-armbian-hi3798-mv100&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rk322x armbian 移植hi3798 mv100&lt;/a&gt;, 其中:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1kGh4qKXxyn8IvGccODxLoQ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;百度云共享&lt;/a&gt;, 提取码：slkc&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/FORUM/thread-4084778-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;移动魔百和cm201-1-ys刷armbian&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;还有Armbian For S9xxx的Github链接:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ophub/amlogic-s9xxx-armbian/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;amlogic-s9xxx-armbian&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hixxxx support for Linux Kernel 代码现在看着都有了:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/teasiu/HiSTBLinuxKernel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HiSTBLinuxKernel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/torvalds/linux/tree/master/arch/arm64/boot/dts/hisilicon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;torvalds linux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;另:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://bbs.histb.com/d/83-hi3798&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hi3798可适配机型维护参考&lt;/a&gt;, From &lt;a class=&#34;link&#34; href=&#34;https://bbs.histb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;海思机顶盒NAS社区&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾</title>
+        <link>https://jimway71.github.io/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E6%88%90%E5%8A%9F-%E4%BD%86%E8%BF%99q7%E7%9B%92%E5%AD%90%E6%98%AF%E7%9C%9F%E7%9A%84%E5%9E%83%E5%9C%BE/</link>
+        <pubDate>Tue, 02 Mar 2021 17:17:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E6%88%90%E5%8A%9F-%E4%BD%86%E8%BF%99q7%E7%9B%92%E5%AD%90%E6%98%AF%E7%9C%9F%E7%9A%84%E5%9E%83%E5%9C%BE/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-24.jpg" alt="Featured image of post 联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾" /&gt;&lt;h2 id=&#34;关于联通q7电视盒子&#34;&gt;关于联通Q7电视盒子&lt;/h2&gt;
+&lt;p&gt;Q7配置如下:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;配置&#34;
+	
+	
+&gt; &lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;照片&#34;
+	
+	
+&gt; &lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;照片&#34;
+	
+	
+&gt;   &lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;照片&#34;
+	
+	
+&gt;   &lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;照片&#34;
+	
+	
+&gt;   &lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-07.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;照片&#34;
+	
+	
+&gt;   &lt;br&gt;
+USB BOOT孔(红圈内两个孔): 刷机时需要短接&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-08.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;照片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;破解方式&#34;&gt;破解方式&lt;/h2&gt;
+&lt;p&gt;联通(数码视讯)Q7(以下简称Q7)有很多种破解方式:&lt;/p&gt;
+&lt;p&gt;➀ 不拆机破解: 主要通过漏洞是装上可以装App的市场或其他工具&lt;/p&gt;
+&lt;p&gt;➁ TTL破解: 连接TTL线，通过进入底层系统打开adb调试, 再通过其它工具安装App,&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/ayxiaopan/p/11927675.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北京联通盒子-数码视讯Q7-破解&lt;/a&gt;&lt;br&gt;
+或者在底层的Linux系统里直接安装App.&lt;/p&gt;
+&lt;p&gt;➂ 使用USB Burn方式刷机: 直接刷成别的系统，&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4056563-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【2020年11月】北京联通数码视讯Q7破解教程&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;破解教程&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最后用的是方式➂进行刷机。&lt;/strong&gt;&lt;br&gt;
+相关的包下载地址:&lt;br&gt;
+o 刷机固件:&lt;br&gt;
+链接：&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/18ukQVyQiScAeQPCReoBr0Q&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/18ukQVyQiScAeQPCReoBr0Q&lt;/a&gt;
+提取码：yp6t&lt;br&gt;
+使用其中的压缩包: 20191218-Q7-4.4.2-root-twrp-Milton.rar&lt;br&gt;
+o 遥控器文件:&lt;br&gt;
+压缩包: 北京联通数码视讯Q7.rar&lt;br&gt;
+在上面链接的固件里找。&lt;br&gt;
+o 刷机软件&lt;a class=&#34;link&#34; href=&#34;https://androidmtk.com/download-amlogic-usb-burning-tool&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;USB Burn Tool&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;刷机过程&#34;&gt;刷机过程&lt;/h2&gt;
+&lt;p&gt;➀ 拆机&lt;br&gt;
+Q7盒子外壳是用卡扣固定, 而非螺丝，用改锥插入盒子外壳边缘撬开。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-09.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;拆机&#34;
+	
+	
+&gt;&lt;br&gt;
+板子上有螺丝固定, 需要拆掉。&lt;br&gt;
+➁ 刷机&lt;br&gt;
+用双公头USB线连接盒子(板子中间的USB口)和电脑的USB口。&lt;br&gt;
+USB连上后，电脑在开机状态时，会给盒子供电，盒子会开机运行 (即Q7这个盒子可以直接从USB口供电，即使没接电源，或者接了电源没按下开电源开关也能正常开机运行)。&lt;br&gt;
+刷机流程:&lt;br&gt;
+➀ 先打开开Ami USB Burn Tool软件, 导入镜像文件后，按开始按键:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-10.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;br&gt;
+➁ 短接板子USB BOOT那两个触点后, 用双头USB线连接盒子和电脑, 这时盒子上的灯会亮, 但HDMI没有输出(电视不会有显示), USB Burn Tools软件上会显示找到设备并开始刷入固件, 这时保持USB BOOT触点的短接。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-11.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;br&gt;
+➂ 等到刷过 &amp;ldquo;4% 加载UBOOT&amp;rdquo; 后, 断开短接的USB BOOT触点，再等待刷机到100%&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-12.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;br&gt;
+刷机完成。&lt;/p&gt;
+&lt;p&gt;刷机流程可参考: &lt;a class=&#34;link&#34; href=&#34;https://www.codenong.com/cs105475272/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北京联通数码视讯q7 刷 安卓6.0+遥控器文件教程&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;另: 刷机所用软件&amp;quot;Ami USB Burn Tool&amp;quot;不能在Win10上使用, Win7上使用没问题:&lt;br&gt;
+刷机时, 先用的是工作机操作, 发现USB Burn Tool软件找不到设备, 后来换了一台旧电脑就可以了 _ 旧电脑是Win7系统, 而工作机装的是Win10.&lt;/p&gt;
+&lt;h2 id=&#34;刷机完成后的测试&#34;&gt;刷机完成后的测试&lt;/h2&gt;
+&lt;p&gt;➀ 开机界面&lt;br&gt;
+这样:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;和这样:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;很差点意思!&lt;br&gt;
+➁ CpuZ测试&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;➂ 网络测速&lt;br&gt;
+测试方式: 在浏览器里打开&lt;a class=&#34;link&#34; href=&#34;https://www.speedtest.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;speedtest&lt;/a&gt;进行测试&lt;br&gt;
+使用wifi连接(Q7只支持2.4G频段的wifi)&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-17.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;而在同样网络下, 同样使用Wifi连接的一台电视, 同样也只支持2.4G的wifi, 是这样的&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/24-q7-18.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;刷机&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;Q7明显的慢, 打开App明显慢也就算了, 居然有的App里连视频都打不开, 不行, 非常差。&lt;br&gt;
+这盒子很垃圾, 用的居然还是2.4G无线网卡和百兆有线网卡, 用wifi连接, 网速根本跑不上去, 高清视频看着非常卡。&lt;br&gt;
+除了S905L这颗芯还凑合能用, 这个盒子其它没有什么可取之处！&lt;br&gt;
+(后话, 做电视盒子不行, 干别的活还不错)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>华为P40 pro安装谷歌GMS, 可以正常同步通讯录, 其它功能都能正常运行, 且不报错</title>
+        <link>https://jimway71.github.io/p/%E5%8D%8E%E4%B8%BAp40-pro%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8Cgms-%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E5%90%8C%E6%AD%A5%E9%80%9A%E8%AE%AF%E5%BD%95-%E5%85%B6%E5%AE%83%E5%8A%9F%E8%83%BD%E9%83%BD%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C-%E4%B8%94%E4%B8%8D%E6%8A%A5%E9%94%99/</link>
+        <pubDate>Fri, 26 Jun 2020 16:52:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%8D%8E%E4%B8%BAp40-pro%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8Cgms-%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E5%90%8C%E6%AD%A5%E9%80%9A%E8%AE%AF%E5%BD%95-%E5%85%B6%E5%AE%83%E5%8A%9F%E8%83%BD%E9%83%BD%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C-%E4%B8%94%E4%B8%8D%E6%8A%A5%E9%94%99/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-23.jpg" alt="Featured image of post 华为P40 pro安装谷歌GMS, 可以正常同步通讯录, 其它功能都能正常运行, 且不报错" /&gt;&lt;p&gt;2019年由于美国政府封杀华为，在政策要求下, 谷歌不再给华为提供GMS许可。&lt;/p&gt;
+&lt;p&gt;而在这之前，由于中国政府封杀谷歌, 国行版本手机都是没有安装谷歌Play Store的, 包括华为手机。&lt;br&gt;
+但是谷歌服务框架, 即GMS, 在华为手机上是安装好的。只需要从华为应用商店简单的下载安装谷歌Play Store, 就可以正常使用谷歌的服务及其应用。&lt;/p&gt;
+&lt;p&gt;在谷歌不再给华为提供GMS许可之后, 华为官方就不在其生产的手机上安装谷歌相应的服务和应用, 包括国行版本和非国行版本。&lt;br&gt;
+华为在国行手机上不提供谷歌服务影响不大，毕竟谷歌在国内被封杀多年, 还能使用谷歌服务的用户并不太多; 但是, 国外安卓用户对谷歌服务有着相当大的依赖性, 手机上不能提供谷歌服务对多数国外用户而言, 基本上是无法使用的。&lt;br&gt;
+为此, 华为也想过一些方法: 这之后不久, 有一个&lt;a class=&#34;link&#34; href=&#34;lzplay.net&#34;  title=&#34;lzplay -&amp;gt;&#34;
+    &gt;lzplay&lt;/a&gt;网站横空出世, 为华为手机安装GMS提供支持, 但之后不久, 这个网站又突然消失了。&lt;br&gt;
+这段故事我也是在寻找在P40pro上安装GMS的方法时才知道一点，由于当时并没有关注, 具体情况也不清楚。&lt;/p&gt;
+&lt;p&gt;这之后，在网上找到的安装GMS方法基本上都是个人提供的, 但跟&lt;a class=&#34;link&#34; href=&#34;lzplay.net&#34;  title=&#34;lzplay -&amp;gt;&#34;
+    &gt;lzplay&lt;/a&gt;都存在一定的关系。&lt;/p&gt;
+&lt;p&gt;为了给一部华为P40 pro安装GMS, 前后大概花了一个月时间, 找了好几个教程, 失败了很多次, 失败的原因也是多种多样, 有:&lt;br&gt;
+a. 不能同步通讯录(最后一次, 更换另一个人提供的Google Contact Sync后解决)&lt;br&gt;
+b. 设置谷歌帐户时, 似乎网络连不上, 但用浏览器看, 却又能正常访问谷歌(有时重新启动后能解决)&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;找了很多攻略, 国内的国外的, 试了各种方式, 花了不少时间, 并没有找到一个完美方案。&lt;br&gt;
+最后, 把华为手机处理了事, 完美的结局☻&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>WSL下编译LEDE的openwrt, 用于斐讯K2</title>
+        <link>https://jimway71.github.io/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/</link>
+        <pubDate>Mon, 01 Jun 2020 01:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-22.jpg" alt="Featured image of post WSL下编译LEDE的openwrt, 用于斐讯K2" /&gt;&lt;p&gt;2020.6.1&lt;/p&gt;
+&lt;h3 id=&#34;openwrt编译命令汇总&#34;&gt;Openwrt编译命令汇总:&lt;/h3&gt;
+&lt;p&gt;开始编译:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt-get update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/coolsnowwolf/lede  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ./lede  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim feeds.conf.default  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./scripts/feeds update -a  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./scripts/feeds install -a  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make menuconfig  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在make menuconfig中:&lt;br&gt;
+选择: MediaTek Ralink MIPS / MT7620 based boards /Phicomm PSG128 rev.Ax&amp;quot;&lt;br&gt;
+选择: Luci _ Application _ SSR PLUS&amp;hellip;&amp;quot;&lt;br&gt;
+说明: 斐讯K2路由器, CPU型号为MT7620, 芯片架构为MIPS, 路由器型号为PSG1218 rev.Ax; K1 是 PSG1208,K2 是 PSG1218 rev.Ax, K2C是PSG1218 rev.Bx&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target system -&amp;gt; MediaTek Ralink MIPS  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Subtarget -&amp;gt; MT7620 based boards  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target Profile -&amp;gt; Phicomm PSG128 rev.Ax  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;继续编译:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make -j8 download &lt;span class=&#34;nv&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;s  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make -j15 &lt;span class=&#34;nv&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;s  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;由于空间不够，luci-&amp;gt;application留下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;accesscontrol  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- adbyby-plus  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;arpbind  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;autoreboot  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ddns  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flowoffload  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- nlbwmon 流量监控  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ramfree  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssr_plus + trojan  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;upnp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(因为不能保存配置, 再去掉IPV6支持)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不知道为什么, 内网的网段(ip)不能成功修改, 每次改过后, 路由就不能保存(或者会丢失)修改的内容: 需要在编译的时候就改掉这个地址。&lt;br&gt;
+位于: ./package/base-files/files/bin/config_generate&lt;br&gt;
+在make menuconfig完成后修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于用WSL代替虚拟机运行Ubuntu:&lt;br&gt;
+当前WSL上Ubuntu最早版本是18.04LTS(16.04LTS已经没有了)，最新的是20.04LTS&lt;br&gt;
+用WSL比较简单, 不用费劲去安装, 但移动虚拟机会很麻烦。这个问题可以参考:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在系统重置或重新安装之前，如何备份（WSL）Windows 10的Linux子系统: &lt;br&gt;
+Windows 10 v1903 包含内置的WSL导出/导入命令。具体来说，wsl &amp;ndash;export会产生tar和wsl &amp;ndash;import，并会导入先前导出的tar。然后，您可以在计算机之间移动此文件。 您还可以使用指定stdin / stdout -，这应允许您直接转移到另一台计算机并使用远程shell（如）导入ssh。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;错误处理&#34;&gt;错误处理:&lt;/h3&gt;
+&lt;p&gt;1 sudo apt-get install gcc-multilib g++-multilib&lt;br&gt;
+原因：type_traits:38:10: fatal error: bits/c++config.h: No such file or directory&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/4643197/missing-include-bits-cconfig-h-when-cross-compiling-64-bit-program-on-32-bit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://stackoverflow.com/questions/4643197/missing-include-bits-cconfig-h-when-cross-compiling-64-bit-program-on-32-bit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2 sudo apt install qtchooser&lt;br&gt;
+原因: File &amp;ldquo;/usr/lib/python2.7/subprocess.py&amp;rdquo;, line 1047, in _execute_child&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://github.com/kovidgoyal/build-calibre/issues/9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/kovidgoyal/build-calibre/issues/9&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;编译时长记录&#34;&gt;编译时长记录:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在Google云主机(e2-standard-8（8 个 vCPU，32 GB 内存), 30GSSD硬盘, Ubuntu 16.04)上完成，最后编译用了7个线程，总共用时不到1小时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;参考&#34;&gt;参考:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;编译更新OpenWrt PassWall和SSR-plus插件&lt;/a&gt; From &lt;a class=&#34;link&#34; href=&#34;https://mianao.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mianao&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coolsnowwolf/lede&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lean 的 Openwrt 源码仓库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>电视直播源</title>
+        <link>https://jimway71.github.io/p/%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD%E6%BA%90/</link>
+        <pubDate>Fri, 06 Mar 2020 01:31:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD%E6%BA%90/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-21.jpg" alt="Featured image of post 电视直播源" /&gt;&lt;p&gt;抄自: &lt;a class=&#34;link&#34; href=&#34;https://kischang.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kischang&lt;/a&gt;  的 &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;http://kischang.top/articles/2020/03/01/1583054275763.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2020高清稳定快速的电视直播源,支持在线更新,支持电视指南&lt;/a&gt;&amp;quot;(已404)&lt;/p&gt;
+&lt;p&gt;首先感谢两个数据源：&lt;br&gt;
+第一个：提供直播地址的服务：&lt;br&gt;
+产品大师：&lt;a class=&#34;link&#34; href=&#34;http://www.chanpindashi.com/2020/01/18/2655.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.chanpindashi.com/2020/01/18/2655.html&lt;/a&gt;&lt;br&gt;
+本服务从此地址获取基础的直播地址。&lt;/p&gt;
+&lt;p&gt;第二个：电视指南&lt;br&gt;
+51zmt： &lt;a class=&#34;link&#34; href=&#34;http://epg.51zmt.top:8000&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://epg.51zmt.top:8000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;工作逻辑说明：&lt;br&gt;
+从直播地址源中获取基础的直播地址，解析处理后，发给电视指南，解析出对应的台标和指南对应关系，然后恢复到第一个源中的分组和台名信息。&lt;/p&gt;
+&lt;p&gt;可以直接在 &lt;a class=&#34;link&#34; href=&#34;https://jellyfin.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jellyfin&lt;/a&gt; 中配置使用。&lt;br&gt;
+最终的访问地址：&lt;a class=&#34;link&#34; href=&#34;http://kischang.top:8080/main/tv.m3u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://kischang.top:8080/main/tv.m3u&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本服务缓存了配置，每隔 3 天自动更新，如果发现数据出错，您也可以自行触发清空缓存的动作：&lt;a class=&#34;link&#34; href=&#34;http://kischang.top:8080/main/re_gen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://kischang.top:8080/main/re_gen&lt;/a&gt;&lt;br&gt;
+不要总触发清空，毕竟每次更新都要占用数据源的服务器资源。&lt;br&gt;
+源码地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/kisChang/tvm3u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/kisChang/tvm3u&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;侵删&lt;/p&gt;
 </description>
         </item>
         <item>
