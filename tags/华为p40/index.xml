@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>华为P40 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/%E5%8D%8E%E4%B8%BAp40/</link>
+        <description>Recent content in 华为P40 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 26 Jun 2020 16:52:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E5%8D%8E%E4%B8%BAp40/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>华为P40 pro安装谷歌GMS, 可以正常同步通讯录, 其它功能都能正常运行, 且不报错</title>
+        <link>https://jimway71.github.io/p/%E5%8D%8E%E4%B8%BAp40-pro%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8Cgms-%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E5%90%8C%E6%AD%A5%E9%80%9A%E8%AE%AF%E5%BD%95-%E5%85%B6%E5%AE%83%E5%8A%9F%E8%83%BD%E9%83%BD%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C-%E4%B8%94%E4%B8%8D%E6%8A%A5%E9%94%99/</link>
+        <pubDate>Fri, 26 Jun 2020 16:52:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%8D%8E%E4%B8%BAp40-pro%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8Cgms-%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E5%90%8C%E6%AD%A5%E9%80%9A%E8%AE%AF%E5%BD%95-%E5%85%B6%E5%AE%83%E5%8A%9F%E8%83%BD%E9%83%BD%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C-%E4%B8%94%E4%B8%8D%E6%8A%A5%E9%94%99/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-23.jpg" alt="Featured image of post 华为P40 pro安装谷歌GMS, 可以正常同步通讯录, 其它功能都能正常运行, 且不报错" /&gt;&lt;p&gt;2019年由于美国政府封杀华为，在政策要求下, 谷歌不再给华为提供GMS许可。&lt;/p&gt;
+&lt;p&gt;而在这之前，由于中国政府封杀谷歌, 国行版本手机都是没有安装谷歌Play Store的, 包括华为手机。&lt;br&gt;
+但是谷歌服务框架, 即GMS, 在华为手机上是安装好的。只需要从华为应用商店简单的下载安装谷歌Play Store, 就可以正常使用谷歌的服务及其应用。&lt;/p&gt;
+&lt;p&gt;在谷歌不再给华为提供GMS许可之后, 华为官方就不在其生产的手机上安装谷歌相应的服务和应用, 包括国行版本和非国行版本。&lt;br&gt;
+华为在国行手机上不提供谷歌服务影响不大，毕竟谷歌在国内被封杀多年, 还能使用谷歌服务的用户并不太多; 但是, 国外安卓用户对谷歌服务有着相当大的依赖性, 手机上不能提供谷歌服务对多数国外用户而言, 基本上是无法使用的。&lt;br&gt;
+为此, 华为也想过一些方法: 这之后不久, 有一个&lt;a class=&#34;link&#34; href=&#34;lzplay.net&#34;  title=&#34;lzplay -&amp;gt;&#34;
+    &gt;lzplay&lt;/a&gt;网站横空出世, 为华为手机安装GMS提供支持, 但之后不久, 这个网站又突然消失了。&lt;br&gt;
+这段故事我也是在寻找在P40pro上安装GMS的方法时才知道一点，由于当时并没有关注, 具体情况也不清楚。&lt;/p&gt;
+&lt;p&gt;这之后，在网上找到的安装GMS方法基本上都是个人提供的, 但跟&lt;a class=&#34;link&#34; href=&#34;lzplay.net&#34;  title=&#34;lzplay -&amp;gt;&#34;
+    &gt;lzplay&lt;/a&gt;都存在一定的关系。&lt;/p&gt;
+&lt;p&gt;为了给一部华为P40 pro安装GMS, 前后大概花了一个月时间, 找了好几个教程, 失败了很多次, 失败的原因也是多种多样, 有:&lt;br&gt;
+a. 不能同步通讯录(最后一次, 更换另一个人提供的Google Contact Sync后解决)&lt;br&gt;
+b. 设置谷歌帐户时, 似乎网络连不上, 但用浏览器看, 却又能正常访问谷歌(有时重新启动后能解决)&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;找了很多攻略, 国内的国外的, 试了各种方式, 花了不少时间, 并没有找到一个完美方案。&lt;br&gt;
+最后, 把华为手机处理了事, 完美的结局☻&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

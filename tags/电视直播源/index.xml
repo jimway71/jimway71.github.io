@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>电视直播源 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD%E6%BA%90/</link>
+        <description>Recent content in 电视直播源 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 06 Mar 2020 01:31:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD%E6%BA%90/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>电视直播源</title>
+        <link>https://jimway71.github.io/p/%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD%E6%BA%90/</link>
+        <pubDate>Fri, 06 Mar 2020 01:31:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD%E6%BA%90/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-21.jpg" alt="Featured image of post 电视直播源" /&gt;&lt;p&gt;抄自: &lt;a class=&#34;link&#34; href=&#34;https://kischang.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kischang&lt;/a&gt;  的 &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;http://kischang.top/articles/2020/03/01/1583054275763.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2020高清稳定快速的电视直播源,支持在线更新,支持电视指南&lt;/a&gt;&amp;quot;(已404)&lt;/p&gt;
+&lt;p&gt;首先感谢两个数据源：&lt;br&gt;
+第一个：提供直播地址的服务：&lt;br&gt;
+产品大师：&lt;a class=&#34;link&#34; href=&#34;http://www.chanpindashi.com/2020/01/18/2655.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.chanpindashi.com/2020/01/18/2655.html&lt;/a&gt;&lt;br&gt;
+本服务从此地址获取基础的直播地址。&lt;/p&gt;
+&lt;p&gt;第二个：电视指南&lt;br&gt;
+51zmt： &lt;a class=&#34;link&#34; href=&#34;http://epg.51zmt.top:8000&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://epg.51zmt.top:8000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;工作逻辑说明：&lt;br&gt;
+从直播地址源中获取基础的直播地址，解析处理后，发给电视指南，解析出对应的台标和指南对应关系，然后恢复到第一个源中的分组和台名信息。&lt;/p&gt;
+&lt;p&gt;可以直接在 &lt;a class=&#34;link&#34; href=&#34;https://jellyfin.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jellyfin&lt;/a&gt; 中配置使用。&lt;br&gt;
+最终的访问地址：&lt;a class=&#34;link&#34; href=&#34;http://kischang.top:8080/main/tv.m3u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://kischang.top:8080/main/tv.m3u&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本服务缓存了配置，每隔 3 天自动更新，如果发现数据出错，您也可以自行触发清空缓存的动作：&lt;a class=&#34;link&#34; href=&#34;http://kischang.top:8080/main/re_gen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://kischang.top:8080/main/re_gen&lt;/a&gt;&lt;br&gt;
+不要总触发清空，毕竟每次更新都要占用数据源的服务器资源。&lt;br&gt;
+源码地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/kisChang/tvm3u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/kisChang/tvm3u&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;侵删&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

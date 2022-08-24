@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>编译 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/%E7%BC%96%E8%AF%91/</link>
+        <description>Recent content in 编译 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 01 Jun 2020 01:06:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E7%BC%96%E8%AF%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>WSL下编译LEDE的openwrt, 用于斐讯K2</title>
+        <link>https://jimway71.github.io/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/</link>
+        <pubDate>Mon, 01 Jun 2020 01:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-22.jpg" alt="Featured image of post WSL下编译LEDE的openwrt, 用于斐讯K2" /&gt;&lt;p&gt;2020.6.1&lt;/p&gt;
+&lt;h3 id=&#34;openwrt编译命令汇总&#34;&gt;Openwrt编译命令汇总:&lt;/h3&gt;
+&lt;p&gt;开始编译:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt-get update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/coolsnowwolf/lede  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ./lede  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim feeds.conf.default  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./scripts/feeds update -a  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./scripts/feeds install -a  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make menuconfig  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在make menuconfig中:&lt;br&gt;
+选择: MediaTek Ralink MIPS / MT7620 based boards /Phicomm PSG128 rev.Ax&amp;quot;&lt;br&gt;
+选择: Luci _ Application _ SSR PLUS&amp;hellip;&amp;quot;&lt;br&gt;
+说明: 斐讯K2路由器, CPU型号为MT7620, 芯片架构为MIPS, 路由器型号为PSG1218 rev.Ax; K1 是 PSG1208,K2 是 PSG1218 rev.Ax, K2C是PSG1218 rev.Bx&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target system -&amp;gt; MediaTek Ralink MIPS  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Subtarget -&amp;gt; MT7620 based boards  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target Profile -&amp;gt; Phicomm PSG128 rev.Ax  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;继续编译:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make -j8 download &lt;span class=&#34;nv&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;s  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make -j15 &lt;span class=&#34;nv&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;s  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;由于空间不够，luci-&amp;gt;application留下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;accesscontrol  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- adbyby-plus  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;arpbind  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;autoreboot  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ddns  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flowoffload  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- nlbwmon 流量监控  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ramfree  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssr_plus + trojan  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;upnp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(因为不能保存配置, 再去掉IPV6支持)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不知道为什么, 内网的网段(ip)不能成功修改, 每次改过后, 路由就不能保存(或者会丢失)修改的内容: 需要在编译的时候就改掉这个地址。&lt;br&gt;
+位于: ./package/base-files/files/bin/config_generate&lt;br&gt;
+在make menuconfig完成后修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于用WSL代替虚拟机运行Ubuntu:&lt;br&gt;
+当前WSL上Ubuntu最早版本是18.04LTS(16.04LTS已经没有了)，最新的是20.04LTS&lt;br&gt;
+用WSL比较简单, 不用费劲去安装, 但移动虚拟机会很麻烦。这个问题可以参考:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在系统重置或重新安装之前，如何备份（WSL）Windows 10的Linux子系统: &lt;br&gt;
+Windows 10 v1903 包含内置的WSL导出/导入命令。具体来说，wsl &amp;ndash;export会产生tar和wsl &amp;ndash;import，并会导入先前导出的tar。然后，您可以在计算机之间移动此文件。 您还可以使用指定stdin / stdout -，这应允许您直接转移到另一台计算机并使用远程shell（如）导入ssh。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;错误处理&#34;&gt;错误处理:&lt;/h3&gt;
+&lt;p&gt;1 sudo apt-get install gcc-multilib g++-multilib&lt;br&gt;
+原因：type_traits:38:10: fatal error: bits/c++config.h: No such file or directory&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/4643197/missing-include-bits-cconfig-h-when-cross-compiling-64-bit-program-on-32-bit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://stackoverflow.com/questions/4643197/missing-include-bits-cconfig-h-when-cross-compiling-64-bit-program-on-32-bit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2 sudo apt install qtchooser&lt;br&gt;
+原因: File &amp;ldquo;/usr/lib/python2.7/subprocess.py&amp;rdquo;, line 1047, in _execute_child&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://github.com/kovidgoyal/build-calibre/issues/9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/kovidgoyal/build-calibre/issues/9&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;编译时长记录&#34;&gt;编译时长记录:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在Google云主机(e2-standard-8（8 个 vCPU，32 GB 内存), 30GSSD硬盘, Ubuntu 16.04)上完成，最后编译用了7个线程，总共用时不到1小时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;参考&#34;&gt;参考:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;编译更新OpenWrt PassWall和SSR-plus插件&lt;/a&gt; From &lt;a class=&#34;link&#34; href=&#34;https://mianao.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mianao&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coolsnowwolf/lede&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lean 的 Openwrt 源码仓库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

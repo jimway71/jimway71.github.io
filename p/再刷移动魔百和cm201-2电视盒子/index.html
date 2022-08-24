@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='海思Hi3798芯片方案'><title>再刷移动魔百和CM201-2电视盒子</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='再刷移动魔百和CM201-2电视盒子'>
+<meta property='og:description' content='海思Hi3798芯片方案'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='魔百和CM201-2' /><meta property='article:tag' content='电视盒子' /><meta property='article:tag' content='刷机' /><meta property='article:tag' content='Hi3798' /><meta property='article:published_time' content='2021-03-06T16:14:16&#43;08:00'/><meta property='article:modified_time' content='2021-03-06T16:14:16&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-25.jpg' />
+<meta name="twitter:title" content="再刷移动魔百和CM201-2电视盒子">
+<meta name="twitter:description" content="海思Hi3798芯片方案"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-25.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/avatar-icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/">
+                
+                    <img src="/wallpaper/wallpaper-25.jpg" loading="lazy" alt="Featured image of post 再刷移动魔百和CM201-2电视盒子" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                migration
+            </a>
+        
+            <a href="/categories/tv-box/" >
+                TV Box
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/">再刷移动魔百和CM201-2电视盒子</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            海思Hi3798芯片方案
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 06, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="参考">参考:</h2>
+<h3 id="u盘刷机">U盘刷机</h3>
+<p>使用U盘刷机<br>
+参考: <a class="link" href="https://www.znds.com/tv-1152186-1-1.html"  target="_blank" rel="noopener"
+    >【潜龙定制】CM201-2(mv300H,310,300-emmc,nand)语音强刷固件201910</a><br>
+● 难度: 极低<br>
+● 所需工具及软件: U盘+刷机文件(一共4个文件)<br>
+● 是否需要拆机:  不需要 _ 如果知道盒子准确类型的话。<br>
+● 结果: 完全重刷盒子固件。<br>
+● 注意点: 需要区分盒子闪存是EMMC还是NAND。 4文件中个有3个文件不一样, 对应不同的闪存。<br>
+● 操作: 把4个文件拷到U盘根目录, U盘插到cm201-2盒子:<br>
+如果是开机状态, 电视上会显示找到新的系统需要升级; 如果是关机状态, 开机即自动刷机。</p>
+<h3 id="ttl连接刷机">TTL连接刷机</h3>
+<p>使用TTL连上盒子, 进入内部系统(linux), 把需要的apk应用装进系统。<br>
+参考: <a class="link" href="https://www.znds.com/tv-1033164-1-1.html"  target="_blank" rel="noopener"
+    >江苏移动魔百和cm201-2拆机ttl安装软件教程</a><br>
+● 难度: 略高<br>
+● 所需要工具及软件:</p>
+<ul>
+<li>U盘</li>
+<li>需要安装的apk</li>
+<li>排针、烙铁、焊锡等</li>
+<li>万用表</li>
+<li>USB转TTL模块，连接线</li>
+<li>拆机工具</li>
+</ul>
+<p>● 是否需要拆机:  需要<br>
+● 结果:  未对盒子底层系统做修改, 仅安装了几个apk。<br>
+选用的是TTL连接盒子的方式。</p>
+<h2 id="破解方法">破解方法</h2>
+<p>破解方法很多:<br>
+● 不拆机破解<br>
+这是利用系统漏洞破解, 通过漏洞是装上可以装App的市场或其他工具。<br>
+● 更新固件刷机<br>
+刷入自制的系统, 除了硬件没变, 原系统的固件都没有了。<br>
+因为移动魔百和CM201的型号极其杂乱, 各地移动公司都有出, 不同厂家代工, 另外不同年份出的盒子硬件都有不同, 同款盒子还有闪存不同, 所以这种方式需要区分型号后, 再找相应的刷机固件。<br>
+<img src="/img/25-cm201-2-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="同款板子使用不同类型闪存"
+	
+	
+><br>
+↑ 同款板子使用不同类型闪存<br>
+● TTL连接进入底层系统刷机<br>
+板子上有TTL接口, 手上又有相应的工具材料的话, 这倒是最简单的一种破解方法, 因为通过TTL连进系统后, 就有了全部权限(root用户)。</p>
+<h1 id="关于移动魔百和cm201">关于移动魔百和CM201</h1>
+<p>移动魔百和CM201从型号上分大概有cm201s、cm201-1、 cm201-2等等, 代工方有朝歌、长虹、易视腾等等, 外观倒差不多, 都是一个小黑盒子。<br>
+<img src="/img/25-cm201-2-02.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="外壳"
+	
+	
+><br>
+<img src="/img/25-cm201-2-03.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="外壳"
+	
+	
+><br>
+<img src="/img/25-cm201-2-04.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="TTL接口"
+	
+	
+><br>
+↑ 这块板子上有TTL接口，但没有插针, 也没有标注针脚定义</p>
+<h2 id="刷机过程">刷机过程</h2>
+<h3 id="硬件准备">硬件准备</h3>
+<p>● 给板子的TTL接口焊上排针<br>
+● 用排线连接板子上TTL针脚和USB转TTL模块，连接如下:<br>
+(收发对倒连接)  </p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>板上脚标 - 模块脚标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GND - GND</td>
+</tr>
+<tr>
+<td>RX    -  TX</td>
+</tr>
+<tr>
+<td>TX    -  RX</td>
+</tr>
+</tbody>
+</table></div>
+<p>● TTL模块插入电脑USB口<br>
+在电脑&quot;设备管理器&quot;-&ldquo;端口&quot;里找到com端口(comx) —— 这个端口号在后面设置电脑上putty连接盒子时要用到， &ldquo;属性&rdquo;-&ldquo;端口设置&rdquo;-&ldquo;位/秒(B)&quot;(波特率), 改为115200。<br>
+抄个图过来↓<br>
+<img src="/img/25-cm201-2-05.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="抄图"
+	
+	
+></p>
+<h3 id="软件准备">软件准备</h3>
+<p>● 准备要安装的应用<br>
+一定要有一个桌面应用, 比如当贝桌面;<br>
+一定要有一个可以做安装的app, 比如市场应用(比如蚂蚁市场), 或者是一个文件管理器, 比如File Manager, 文件管理器也可以安装apk应用。<br>
+把想要安装的apk包拷到一个U盘的根目录里, 插到盒子的USB口上<br>
+● 设置电脑和盒子的连接。<br>
+设置使用putty连接。<br>
+putty官网下载地址在<a class="link" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html"  target="_blank" rel="noopener"
+    >这</a>。<br>
+可以用来做串口连接的软件很多, 比如securecrt等等, 不过putty是免费软件, 也不需要注册什么的, 安装使用上比较方便。<br>
+打开putty, 按图中的提示设置。下面这个图也是抄的&hellip;&hellip;  ↓<br>
+<img src="/img/25-cm201-2-06.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="抄图"
+	
+	
+><br>
+先选择连接方式(Connection type)为串口连接(Serial), 再选择串口号(Serial line), 串口号是前面的&quot;设备管理器&quot;里找到的com端口，波特率(Speed)填115200(和前面的Com口波特率一致)。<br>
+接着点击Open开始连接，然后给盒子开机，连接正确的话, 盒子开机后, putty上会显示盒子的输出信息, 是个linux的终端界面(Console界面)。<br>
+<img src="/img/25-cm201-2-07.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="COM5-PuTTY"
+	
+	
+></p>
+<h3 id="安装apk应用-修改界面">安装apk应用, 修改界面</h3>
+<p>在putty的连接界面上，输入命令执行操作。<br>
+首先要确认下U盘的目录名, 了解linux的应该知道, 外挂的盘一般会加载到/mnt目录下, 一般而言, U盘会加载到&rdquo;/mnt/sda/sda1&quot;目录下, 用ls命令可以确认是否正确</p>
+<blockquote>
+<p># ls /mnt/sda/sda1/ -la</p>
+</blockquote>
+<p>如果正确, 则进入U盘根目录</p>
+<blockquote>
+<p># cd /mnt/sda/sda1/</p>
+</blockquote>
+<p>把apk包拷贝到&rdquo;/usr/app/&ldquo;目录下, 即完成apk包的安装</p>
+<blockquote>
+<p># cp *.apk /usr/app/</p>
+</blockquote>
+<p>启动当贝桌面</p>
+<blockquote>
+<p># am start com.dangbei.tvlauncher</p>
+</blockquote>
+<p>安装完成。</p>
+<p><del>## 实际和现实总有差距!</del><br>
+<del>因为把U盘刷机的4个文件也拷到了U盘根目录下, 盒子开机后提示有更新, 因为连着网络, 还以为是在线更新, 没理。</del><br>
+<del>后来重启盒子后, 盒子就直接开始更新, 这时也不敢停, 怕刷一半给刷成砖了。</del><br>
+<del>等刷完了, 也退不回去了, 没有官方固件。</del><br>
+<del>更新完成后重启, 看到的已经是另一幅模样了, 不过通过TTL拷进去的几个应用都在, 两种方法齐上, 搞成了混合刷机。</del><br>
+从系统管理菜单里恢复出厂后(密码:10086), 又重做了一遍, 这回没出问题。</p>
+<h2 id="测试">测试</h2>
+<p>也没怎么测, 系统用着没问题, 遥控没问题, 操作反应够快, 应用运行也够快。<br>
+用speedtest测了下网速, 使用wifi连接的情况下, 可以到80Mbps左右, 速度也还可以。</p>
+<h2 id="迁移补记-于-2022823">迁移补记 于 2022.8.23</h2>
+<p>● 最近一次查看这部CM201-2盒子时, 发现又回到了类似初始的状态, 已经不是能自定义的桌面, 应该是系统再次自动更新, 又<strong>回到未刷机的状态</strong>。<br>
+● 近期在论坛上看到有大神将Armbian移植到基于海思Hi3798芯片的多种电视盒子, 包括CM201-2盒子, 有时间可以try.</p>
+<ul>
+<li><a class="link" href="https://www.znds.com/tv-1207323-1-1.html"  target="_blank" rel="noopener"
+    >打造最强华为海思hi3798mv100/200/300机顶盒NAS服务器系统</a></li>
+<li><a class="link" href="https://bbs.histb.com/d/233-rk322x-armbian-hi3798-mv100"  target="_blank" rel="noopener"
+    >rk322x armbian 移植hi3798 mv100</a>, 其中:<br>
+<a class="link" href="https://pan.baidu.com/s/1kGh4qKXxyn8IvGccODxLoQ"  target="_blank" rel="noopener"
+    >百度云共享</a>, 提取码：slkc</li>
+<li><a class="link" href="https://www.right.com.cn/FORUM/thread-4084778-1-1.html"  target="_blank" rel="noopener"
+    >移动魔百和cm201-1-ys刷armbian</a></li>
+</ul>
+<p>还有Armbian For S9xxx的Github链接:</p>
+<ul>
+<li><a class="link" href="https://github.com/ophub/amlogic-s9xxx-armbian/releases"  target="_blank" rel="noopener"
+    >amlogic-s9xxx-armbian</a></li>
+</ul>
+<p>Hixxxx support for Linux Kernel 代码现在看着都有了:</p>
+<ul>
+<li><a class="link" href="https://github.com/teasiu/HiSTBLinuxKernel"  target="_blank" rel="noopener"
+    >HiSTBLinuxKernel</a></li>
+<li><a class="link" href="https://github.com/torvalds/linux/tree/master/arch/arm64/boot/dts/hisilicon"  target="_blank" rel="noopener"
+    >torvalds linux</a></li>
+</ul>
+<p>另:</p>
+<ul>
+<li><a class="link" href="https://bbs.histb.com/d/83-hi3798"  target="_blank" rel="noopener"
+    >hi3798可适配机型维护参考</a>, From <a class="link" href="https://bbs.histb.com/"  target="_blank" rel="noopener"
+    >海思机顶盒NAS社区</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2/">魔百和CM201-2</a>
+        
+            <a href="/tags/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/">电视盒子</a>
+        
+            <a href="/tags/%E5%88%B7%E6%9C%BA/">刷机</a>
+        
+            <a href="/tags/hi3798/">Hi3798</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E7%9A%84%E5%A5%BD%E8%B4%B4%E6%94%B6%E9%9B%86/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-26.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-26.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于电视盒子刷机的好贴收集</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E6%88%90%E5%8A%9F-%E4%BD%86%E8%BF%99q7%E7%9B%92%E5%AD%90%E6%98%AF%E7%9C%9F%E7%9A%84%E5%9E%83%E5%9C%BE/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-24.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-24.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-01.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-01.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在R3300L类&#43;Armbian上安装Hugo服务器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8D%8E%E4%B8%BAp40-pro%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8Cgms-%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E5%90%8C%E6%AD%A5%E9%80%9A%E8%AE%AF%E5%BD%95-%E5%85%B6%E5%AE%83%E5%8A%9F%E8%83%BD%E9%83%BD%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C-%E4%B8%94%E4%B8%8D%E6%8A%A5%E9%94%99/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-23.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-23.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">华为P40 pro安装谷歌GMS, 可以正常同步通讯录, 其它功能都能正常运行, 且不报错</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-22.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-22.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">WSL下编译LEDE的openwrt, 用于斐讯K2</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#参考">参考:</a>
+      <ol>
+        <li><a href="#u盘刷机">U盘刷机</a></li>
+        <li><a href="#ttl连接刷机">TTL连接刷机</a></li>
+      </ol>
+    </li>
+    <li><a href="#破解方法">破解方法</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#刷机过程">刷机过程</a>
+      <ol>
+        <li><a href="#硬件准备">硬件准备</a></li>
+        <li><a href="#软件准备">软件准备</a></li>
+        <li><a href="#安装apk应用-修改界面">安装apk应用, 修改界面</a></li>
+      </ol>
+    </li>
+    <li><a href="#测试">测试</a></li>
+    <li><a href="#迁移补记-于-2022823">迁移补记 于 2022.8.23</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
