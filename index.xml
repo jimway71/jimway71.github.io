@@ -6,7 +6,534 @@
         <description>Recent content on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 19 Aug 2022 12:00:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 30 Aug 2022 11:53:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>安装Python运行环境</title>
+        <link>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-28.jpg" alt="Featured image of post 安装Python运行环境" /&gt;&lt;h1 id=&#34;在windows系统上安装python运行环境&#34;&gt;在Windows系统上安装Python运行环境&lt;/h1&gt;
+&lt;h2 id=&#34;python语言相关&#34;&gt;Python语言相关&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python官网: &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python官网当前最新版本(Python 3.10.6)安装包: &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-3106/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/downloads/release/python-3106/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python官网安装说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/zh-tw/3/using/windows.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在Windows上使用Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Microsoft Store中也提供了Python包, Python官网的说明如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Microsoft Store 包 is a simple installation of Python that is suitable for running scripts and packages, and using IDLE or other development environments. It requires Windows 10 and above, but can be safely installed without corrupting other programs. It also provides many convenient commands for launching Python and its tools.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但我使用Microsoft Store安装Python后(应该是Python 3.7), 再安装auto-py-to-exe, 发现auto-py-to-exe不能正常运行, 报错说&amp;quot;不能找到指定目录的Python&amp;quot;, 因此还是需要使用Python官网提供的安装包进行安装。&lt;/p&gt;
+&lt;h2 id=&#34;pycharm开发环境&#34;&gt;Pycharm开发环境&lt;/h2&gt;
+&lt;p&gt;PyCharm是一个用于计算机编程的集成开发环境(IDE)，主要用于Python语言开发，由捷克公司&lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JetBrains&lt;/a&gt;开发，提供代码分析、图形化调试器，集成测试器、集成版本控制系统，并支持使用&lt;a class=&#34;link&#34; href=&#34;https://www.djangoproject.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Django&lt;/a&gt;进行网页开发。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyCharm官网: &lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/pycharm/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.jetbrains.com/pycharm/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.py.cn/tools/pycharm/19641.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pycharm如何配置python环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/fmyhust/article/details/104548217&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm 外部工具设置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;qt图形框架模块pyside6&#34;&gt;Qt图形框架模块PySide6&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;是来自于Qt for Python项目的官方Python模块，它提供了对完整Qt 6.0+框架的访问。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PySide6官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/PySide6/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;关于Qt开发: &lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qtforpython/deployment.html#deployment-guides&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt for Python Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;关于选用PySide, 参考: &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/&#34; &gt;调查五款Python GUI框架&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于常用编译打包系统的支持情况:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The following table summarizes the platform support for those packaging tools:&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编译打包工具&#34;&gt;编译打包工具&lt;/h2&gt;
+&lt;h3 id=&#34;auto-py-to-exe&#34;&gt;auto-py-to-exe&lt;/h3&gt;
+&lt;p&gt;Auto PY to EXE是一个基于Eel 和PyInstaller构建的、通过简单的UI界面将python项目中的.py文件(可以是单个py文件或多个py文件)打包为.exe文件的简单工具，与PyInstaller相比，Auto PY to EXE更简单直观，可以自动生成执行转换代码，进而将python程序打包为exe文件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/auto-py-to-exe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/auto-py-to-exe/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;简单说明: 图形化的&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/pyinstaller/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyInstaller&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://pyinstaller.org/en/stable/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyInstaller手册&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;使用参考: &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/cfld/p/16258446.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;python打包教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;easycython&#34;&gt;easycython&lt;/h3&gt;
+&lt;p&gt;easycython.py是一个脚本，它将尝试自动将一个或多个.pyx 文件转换为相应的已编译.pyd|.so的二进制模块。&lt;br&gt;
+easycython.py is a script that will attempt to automatically convert one or more .pyx files into the corresponding compiled .pyd|.so binary modules。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/easycython/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/easycython/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;nuitka编译器&#34;&gt;nuitka编译器&lt;/h3&gt;
+&lt;p&gt;Nuitka是一个Python的替代编译器。 它可以无缝地替代和扩展Python的解释和编译工作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nuitka官网: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nuitka.net/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;参考文档:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.libhunt.com/compare-Nuitka-vs-pyinstaller&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Compare Nuitka VS Pyinstaller&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/137785388&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Nuitka之乾坤大挪移-让天下的Python都可以打包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://yinhe.co/archives/20211127_pyside6_001.html#nuitka&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6学习笔记&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在Windows系统中使用时:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要安装gcc编译器
+&lt;ul&gt;
+&lt;li&gt;安装参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MinGW-w64 - for 32 and 64 bit Windows Files&lt;/a&gt;中的&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x86_64-win32-sjlj&lt;/a&gt;(当前为GCC-8.1.0版本)&lt;br&gt;
+下载完成后, 解压到选定目录下, 并在系统环境变量PATH中增加gcc.exe(在某目录/bin下)目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;当然, 还需要安装Nuitka
+&lt;ul&gt;
+&lt;li&gt;安装参考: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/doc/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka Downloads&lt;/a&gt; 及 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+使用以下命令进行安装:
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install -U &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/archive/develop.zip%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Nuitka/Nuitka/archive/develop.zip&#34;&lt;/a&gt;&lt;br&gt;
+#  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)&lt;br&gt;
+c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/28-Python-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;pip install Nuitka:&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;center&gt;↑ Nuitka安装界面&lt;/center&gt;
+&lt;p&gt;在Windows下常用的编译命令:
+注: helloworld代码参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-hello-world.html&#34;  title=&#34;-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用PySide6创建Hello World程序&lt;/a&gt;&amp;quot;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; nuitka --mingw64 --standalone --show-progress --show-memory --enable-plugin=pyside6 --output-dir=r:\helloworld \helloworld.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用PySide6框架编写的Python图形界面程序, 使用Nuitka编译后, 独立运行需要的文件有:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;编译生成的运行exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyside6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6core.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6gui.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6network.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6svg.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6widgets.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shiboken6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的PySide6目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的shiboken6目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;在Windows下使用Nuitka编译时遇到的报错信息及处理:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;ordered sets&amp;quot;相关警告信息, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nuitka:WARNING: Using very slow fallback for ordered sets, please install &amp;lsquo;orderedset&amp;rsquo; PyPI package for best Python&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/issues/1673&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka can&amp;rsquo;t run on Android termux #1673&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于Python版本的错误信息:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Too old gcc exe ((8, 1, 0) &amp;lt; (11, 2)) ignored&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(当使用Python3.7时)报错后, 编译操作会停止。&lt;br&gt;
+当改用Python3.10后, 虽然也有报错, 但编译操作会继续: 即使用Python3.10时, 无需处理本错误。&lt;/p&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/xiaohouzi112233/article/details/122581734&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka打包python为.exe时遇到的坑&lt;/a&gt;&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/bigcarp/article/details/123152166&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka打包python为.exe时遇到的坑&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;br&gt;
+修改&amp;quot;C:\Users\myusr\venv\Lib\site-packages\nuitka\build\SconsCompilerSettings.py&amp;rdquo;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if isGccName(the_cc_name):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                gcc_version = myDetectVersion(env, compiler_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#                min_version = (11, 2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                min_version = (8, 1, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                if gcc_version is not None and (
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    gcc_version &amp;lt; min_version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    or &amp;#34;force-winlibs-gcc&amp;#34; in env.experimental_flags
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    scons_logger.info(
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;Too old gcc %r (%r &amp;lt; %r) ignored!&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        % (compiler_path, gcc_version, min_version)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    )
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    # This also will trigger using it to use our own gcc in branch below.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    compiler_path = None
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    env[&amp;#34;CC&amp;#34;] = None
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关于&amp;quot;libiconv-2.dll&amp;quot;的错误, 信息如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于找不到libiconv-2.dll，无法继续执行代码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_37363702/article/details/124177907&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;“由于找不到libiconv-2.dll，无法继续执行代码”问题处理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;br&gt;
+未处理, 未再现(原因未明)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;WinError&amp;quot;相关错误信息, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OSError: [WinError 1] 鍑芥暟涓嶆纭€? &amp;lsquo;R:\hw\helloworld.dist\PySide6&amp;rsquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;现象为当用Nuitka编译的程序位于ImDisk虚拟盘上时, 运行该程序会报上述错误。&lt;/p&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/72603982/oserror-winerror-1-incorrect-function&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OSError: [WinError 1] Incorrect function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mesonbuild/meson/issues/7295&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issue under MSYS2 on Windows when using ImDisk RAM disk #7295&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分析原因:&lt;br&gt;
+根据&lt;a class=&#34;link&#34; href=&#34;https://github.com/mesonbuild/meson/issues/7295&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issue under MSYS2 on Windows when using ImDisk RAM disk #7295&lt;/a&gt;分析, 估计是&lt;u&gt;Python有些版本有这个问题&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;处理操作:&lt;br&gt;
+改用最新版本Python(当前为3.10.6)后, 未再出现这个问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍&#34;&gt;在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)&lt;/h2&gt;
+&lt;h3 id=&#34;在windows系统上安装python&#34;&gt;在Windows系统上安装Python&lt;/h3&gt;
+&lt;p&gt;下载当前最新的&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-3106/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;3.10版本&lt;/a&gt;, 选择&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows installer (64-bit)&lt;/a&gt;进行安装, 安装目录选择缺省目录, 安装最后选择&amp;quot;disable path length limit&amp;rdquo;。&lt;br&gt;
+安装完成后, 需要在系统环境变量path中增加python和python下scripts目录:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在Windows搜索框中，键入&amp;quot;高级系统设置&amp;quot;，打开高级系统设置窗口; 
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-03.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;按下&amp;quot;环境变量&amp;quot;按钮，在打开的窗口中可以在&amp;quot;系统变量&amp;quot;框中选择Path，按&amp;quot;编辑&amp;quot;按钮; 
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;在(path环境变量)其中添加Python执行文件的目录, 在我的系统中, python.exe位于&amp;quot;C:\Users\WDAGUtilityAccount\AppData\Local\Programs\Python\Python310&amp;quot;目录下;&lt;/li&gt;
+&lt;li&gt;并在(path环境变量)其中添加该目录下的scripts目录, 即&amp;quot;C:\Users\WDAGUtilityAccount\AppData\Local\Programs\Python\Python310\Scripts&amp;quot;目录 - pip等工具安装在这个目录。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;设置完成后, 就可以在命令行中执行python/pip等命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在windows系统上安装pycharm&#34;&gt;在Windows系统上安装Pycharm&lt;/h3&gt;
+&lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/pycharm/download/#section=windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Download PyCharm&lt;/a&gt;下载Windows+Community版本。&lt;br&gt;
+当前版本为&lt;a class=&#34;link&#34; href=&#34;https://download-cdn.jetbrains.com/python/pycharm-community-2022.2.1.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm-Community-2022.2.1&lt;/a&gt;。&lt;br&gt;
+安装使用的是当前可下载的Pycharm-Community-2022.2.1版本。&lt;br&gt;
+安装后的目录可以当绿色版本直接使用。&lt;/p&gt;
+&lt;p&gt;安装完成后, 需要做以下配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置外观&lt;br&gt;
+在设置-&amp;gt;外观与行为-&amp;gt;外观里, 将主题改为&amp;quot;Windows 10 Light&amp;quot;方案。&lt;/li&gt;
+&lt;li&gt;配置中文环境, 参考&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/sinat_26811377/article/details/106182672&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm 简单一步设置成官方中文版&lt;/a&gt;&lt;br&gt;
+曾遇到的问题:&lt;br&gt;
+在使用&lt;strong&gt;Pycharm-Community-2019.2版本(旧版)&lt;/strong&gt;(原来下载的版本)的安装中, 在Plugins-&amp;gt;Marketplace库中找不到&amp;quot;Chinese ​(Simplified)​ Language Pack / 中文语言包&amp;quot;;&lt;br&gt;
+手动从&lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JetBrains官方插件网站&lt;/a&gt;下载的&lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----/versions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chinese ​(Simplified)​ Language Pack / 中文语言包&lt;/a&gt; For &amp;ldquo;Pycharm Community&amp;quot;插件, 在安装时报&amp;quot;不兼容&amp;quot;错误, 如下:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;中文插件安装时报&amp;#34;不兼容&amp;#34;错误&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;u&gt;改用当前最新版本2022.2.1后问题解决。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;配置Python环境, 参考&lt;a class=&#34;link&#34; href=&#34;https://www.py.cn/tools/pycharm/19641.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pycharm如何配置python环境&lt;/a&gt;&lt;br&gt;
+实际上, 在安装后, Pycharm的配置里已自动加入了Python解释器, 包括pip/setuptools/wheel。
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-07.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;中文插件安装时报&amp;#34;不兼容&amp;#34;错误&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在windows系统上安装pyside6httpspypiorgprojectpyside6&#34;&gt;在Windows系统上安装&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可以在&amp;quot;Window命令提示符&amp;quot;里安装PySide6, 也可以在PyCharm的&amp;quot;终端&amp;quot;里操作(建议), 命令很简单, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pip3 install PySide6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装后, 在Python目录下的&amp;quot;Lib\site-packages\PySide6&amp;quot;目录中可以看到PySide6相关文件, 其中designer.exe可以直接运行(如果运行时报缺dll库错误, 只需要将所指dll文件拷到Pyside6目录下即可)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Pycharm中设置外部工具: Pyside6-Designer和Pyside6-UIC&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/445661017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Pycharm安装配置Pyside6&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;问题:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本次安装后, 在Pycharm中试着运行Helloworld.py(需要PySide6支持)时, 报&amp;quot;ModuleNotFoundError: No module named &amp;lsquo;PySide6&amp;rsquo;&amp;ldquo;错误。&lt;br&gt;
+本问题未确认原因, 也未找到解决方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在windows系统上安装nuitkahttpsnuitkanetindexhtml&#34;&gt;在Windows系统上安装&lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;安装gcc编译器&lt;br&gt;
+安装参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MinGW-w64 - for 32 and 64 bit Windows Files&lt;/a&gt;中的&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x86_64-win32-sjlj&lt;/a&gt;(当前为GCC-8.1.0版本)&lt;br&gt;
+下载完成后, 解压到选定目录下, 并在系统环境变量PATH中增加gcc.exe(在某目录/bin下)目录。
+完成后, 可以在cmd中使用以下命令以检查安装是否正常
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; gcc --version&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;安装Nuitka&lt;br&gt;
+安装参考: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/doc/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka Downloads&lt;/a&gt; 及 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+使用以下命令进行安装:
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install -U &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/archive/develop.zip%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Nuitka/Nuitka/archive/develop.zip&#34;&lt;/a&gt;&lt;br&gt;
+#  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)&lt;br&gt;
+c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装完成后-可以使用nuitka进行编译&#34;&gt;安装完成后, 可以使用Nuitka进行编译&lt;/h3&gt;
+&lt;p&gt;Nuitka编译常用参数(From &lt;a class=&#34;link&#34; href=&#34;https://www.cxymm.net/article/djj199301111/120535999&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka 打包常用命令&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-disable-console   #不显示控制台窗口(CMD控制窗口)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-icon=ICON_PATH    #添加ico
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--nofollow-imports          # 所有的import不编译，交给python3x.dll执行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--follow-import-to=need     #need为你需要编译成C/C++的py文件夹命名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--mingw64                   #mingw(官方建议编译器)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--standalone                #独立环境，这是必须的(否则拷给别人无法使用)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--output-dir=out            #生成文件路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--show-progress             #显示编译的进度，很直观
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--show-memory               #显示内存的占用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--include-qt-plugins=sensible,styles #打包后PyQt的样式就不会变了
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=qt-plugins  #需要加载的PyQt插件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=tk-inter    #打包tkinter模块的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=numpy       #打包numpy,pandas,matplotlib模块的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=torch       #打包pytorch的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=tensorflow  #打包tensorflow的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-uac-admin=Windows #用户可以使用管理员权限来安装
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--onefile                   #打包成单个exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在Windows下常用的编译命令参考:&lt;br&gt;
+注: helloworld代码参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-hello-world.html&#34;  title=&#34;-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用PySide6创建Hello World程序&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress --show-memory --enable-plugin=pyside6 --output-dir=x:\helloworld\ helloworld.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在Windows下编译使用Designer创建的UI程序&lt;br&gt;
+参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-uses-the-ui-created-by-qt-designer.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6使用Qt Designer创建的UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/a359680405/article/details/45148717&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5学习笔记05&amp;mdash;-Qt Designer信号槽&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;创建程序及编译:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用Qt Designer生成了login.ui&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用pyside6-uic将login.ui转换生成ui_login.py&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; pyside6-uic.exe login.ui -o ui_login.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用nuitka编译生成可执行文件(.exe)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; dir&lt;br&gt;
+2022/09/05  23:26    &amp;lt;DIR&amp;gt;          .&lt;br&gt;
+2022/09/05  23:26    &amp;lt;DIR&amp;gt;          ..&lt;br&gt;
+2022/09/05  23:26               588 login.py&lt;br&gt;
+2022/09/05  23:23             2,378 login.ui&lt;br&gt;
+2022/09/05  23:24             2,581 ui_login.py&lt;br&gt;
+c:&amp;gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress --show-memory --enable-plugin=pyside6 --output-dir=x:\login\ login.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关于独立运行的依赖文件:&lt;/strong&gt;&lt;br&gt;
+使用Nuitka编译的基于PySide6的图形界面程序(helloworld.exe), 独立运行时至少需要以下文件:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;生成的运行exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyside6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6core.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6gui.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6network.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6svg.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6widgets.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shiboken6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的PySide6目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的shiboken6目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注: 以上文件列表, 在不同的机器上, 可能会不一样!&lt;/p&gt;
+&lt;p&gt;在编译过程中如果遇到异常, 可以参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/#nuitka%E7%BC%96%E8%AF%91%E5%99%A8&#34; &gt;nuitka编译器&lt;/a&gt;&amp;ldquo;后面所列的&lt;strong&gt;报错信息及处理&lt;/strong&gt;。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>调查五款Python GUI框架</title>
         <link>https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/</link>
         <pubDate>Fri, 19 Aug 2022 12:00:00 +0800</pubDate>
@@ -186,7 +713,18 @@ Network&amp;ndash;&amp;gt; VPN&lt;/p&gt;
 &lt;p&gt;OpenWRT 软件包中文对照说明:&lt;br&gt;
 &lt;a class=&#34;link&#34; href=&#34;http://www.wbini.com/id-12.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://www.wbini.com/id-12.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://onlyke.com/html/713.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;拒绝DNS污染和UDP干扰，在Openwrt路由器上部署DNSCrypt，加密查询DNS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;电视盒子&#34;&gt;电视盒子&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.znds.com/tv-1207323-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;打造最强华为海思hi3798mv100/200/300机顶盒NAS服务器系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://bbs.histb.com/d/83-hi3798&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hi3798可适配机型维护参考 - From 海思机顶盒NAS社区&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;视频播放相关&#34;&gt;视频播放相关&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -239,15 +777,31 @@ WMPDMC.exe是一个可执行文件，它是Microsoft Corporation开发的Windows
 可以在虚拟机上测试, 并可以同时测试&lt;a class=&#34;link&#34; href=&#34;https://github.com/vaxilu/x-ui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;x-ui 支持多协议多用户的 xray 面板&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;系统性能测试对比&#34;&gt;系统性能测试(对比)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://openbenchmarking.org/test/pts/sysbench&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;sysbench and (CPUs)result - OpenBenchMarking&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hugo相关&#34;&gt;HuGo相关&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;(&lt;a class=&#34;link&#34; href=&#34;https://forum.freecodecamp.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;freecodecamp&lt;/a&gt;)从WordPress到Hugo — 我如何迁移250多个页面的网站和我使用的脚本:  &lt;a class=&#34;link&#34; href=&#34;https://www.freecodecamp.org/news/wordpress-to-hugo-scripts/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;From WordPress to Hugo – How I Migrated a 250+ Page Site and the Scripts I Used&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;临时链接s&#34;&gt;临时链接(s)&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/445661017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;知乎: Pycharm安装配置Pyside6&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/445661017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎: Pycharm安装配置Pyside6&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6详细中文教程&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://www.codebaoku.com/it-python/it-python-227355.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;两种将python打包成exe的方式讲解 - 含auto-py-to-exe&lt;/a&gt;&lt;br&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1724427&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PyCharm中配置PySide2的图文教程&lt;/a&gt;&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;PySide6详细中文教程&lt;/a&gt;&lt;br&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/plugin/15282-acode-time&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;ACode Time&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;python--pyside&#34;&gt;Python &amp;amp; Pyside&lt;/h2&gt;
+&lt;p&gt;**&lt;a class=&#34;link&#34; href=&#34;https://www.daimajiaoliu.com/daima/479a101359003f8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide程序的国际化&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -256,7 +810,14 @@ WMPDMC.exe是一个可执行文件，它是Microsoft Corporation开发的Windows
         <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/p/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%AE%B0%E5%BD%95/</guid>
-        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-18.jpg" alt="Featured image of post 各种问题汇总记录" /&gt;&lt;hr&gt;
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-18.jpg" alt="Featured image of post 各种问题汇总记录" /&gt;&lt;p&gt;其他Q&amp;amp;A相关链接:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/qa/&#34; &gt;Q&amp;amp;A&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/docker%E7%9B%B8%E5%85%B3/&#34; &gt;Docker相关&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/&#34; &gt;Docker容器无法访问网络&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/wordpress-qa/&#34; &gt;Wordpress Q&amp;amp;A&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Windows系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;问题:&lt;br&gt;
@@ -581,15 +1142,78 @@ PyCharm启动报错。&lt;br&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Linux系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Linux系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
 &lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Hugo服务器相关问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题:&lt;br&gt;
+Hugo服务器并未支持html标签。&lt;br&gt;
+现象:&lt;br&gt;
+在Hugo+theme-stack上, 发现html标签并未生效。
+例如:
+下划线标记未生效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示为(如果正常显示, 说明已正确设置):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;u&gt;下划线&lt;/u&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看网页源代码显示为:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;blockquote&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;p&amp;gt;&amp;lt;!-- raw HTML omitted --&amp;gt;下划线&amp;lt;!-- raw HTML omitted --&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/blockquote&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;解决方式:&lt;br&gt;
+修改config.yaml, 修改相关部分内容如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;markup:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    goldmark:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        renderer:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            ## Set to true if you have HTML content inside Markdown
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            unsafe: true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;config.yaml这部分说明中, &amp;lsquo;## Set to true if you have HTML content inside Markdown&amp;rsquo;, 已经说明需要设置unsafe为true, 以使html标签生效&lt;br&gt;
+参考:&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/63198652/hugo-shortcode-ignored-saying-raw-html-omitted&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo shortcode ignored saying &amp;ldquo;raw HTML omitted&amp;rdquo;&lt;/a&gt; ☜ ✌&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://lizicai.com/p/Hugo%e7%9a%84shortcode%28%e6%94%af%e6%8c%81%e8%a7%86%e9%a2%91%e7%ad%89%29%e5%92%8c%e4%b8%bb%e9%a2%98%e4%bf%ae%e6%94%b9Li.027/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo的shortcode(支持视频等)和主题修改Li.027&lt;/a&gt;&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://yuanyi-au.github.io/posts/hugo/#%e6%a8%a1%e6%9d%bf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 详细笔记（建站教程、工作原理）-模板&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Hugo服务器相关问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+&lt;hr&gt;
 </description>
         </item>
         <item>
-        <title>markdown On Hugo With theme Stack</title>
-        <link>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</link>
+        <title>Markdown&amp;Html On Hugo With theme Stack</title>
+        <link>https://jimway71.github.io/p/markdownhtml-on-hugo-with-theme-stack/</link>
         <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</guid>
-        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-10.jpg" alt="Featured image of post markdown On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
+        <guid>https://jimway71.github.io/p/markdownhtml-on-hugo-with-theme-stack/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-10.jpg" alt="Featured image of post Markdown&amp;Html On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; Markdown 中文文档&lt;/a&gt;&lt;/li&gt;
@@ -603,11 +1227,13 @@ PyCharm启动报错。&lt;br&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;opensubtitles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;br /&gt;  
+&lt;br /&gt;  
 &lt;hr&gt;
 &lt;h2 id=&#34;markdown在hugostack主题上的使用&#34;&gt;Markdown在Hugo+Stack主题上的使用&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;多级3级下的引用-参考u在openwrt上建立docker环境pe59ca8openwrte4b88ae5bbbae7ab8bdockere78eafe5a283u&#34;&gt;多级(3级)下的引用, 参考&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/&#34; &gt;在Openwrt上建立Docker环境&lt;/a&gt;&lt;/u&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;二级下的引用&#34;&gt;二级下的引用&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;111
@@ -706,12 +1332,12 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;硬回车&#34;&gt;硬回车&lt;/h3&gt;
 &lt;p&gt;111&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;222&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;333&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
 444&lt;/p&gt;
 &lt;p&gt;555&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -832,11 +1458,13 @@ Code:&lt;/p&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;opensubtitles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;br /&gt;  
+&lt;br /&gt;  
 &lt;hr&gt;
 &lt;h2 id=&#34;练习确定区&#34;&gt;练习确定区&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;多级3级下的引用-参考u在openwrt上建立docker环境pe59ca8openwrte4b88ae5bbbae7ab8bdockere78eafe5a283u&#34;&gt;多级(3级)下的引用, 参考&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/&#34; &gt;在Openwrt上建立Docker环境&lt;/a&gt;&lt;/u&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;二级下的引用&#34;&gt;二级下的引用&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;111
@@ -935,12 +1563,12 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;硬回车&#34;&gt;硬回车&lt;/h3&gt;
 &lt;p&gt;111&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;222&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;333&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
 444&lt;/p&gt;
 &lt;p&gt;555&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -1013,7 +1641,7 @@ Code:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`There is a literal backtick (`) here.`
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;br&gt;
 Code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1027,11 +1655,15 @@ Code:&lt;/p&gt;
 &lt;h2 id=&#34;练习区&#34;&gt;练习区&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading-1&#34;&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;下划线文本&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;111&lt;br&gt;
 This is a regular paragraph.&lt;/p&gt;
 &lt;h2 id=&#34;你好&#34;&gt;你好&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;table&gt;  
+    &lt;tr&gt;  
+        &lt;td&gt;Foo&lt;/td&gt;  
+    &lt;/tr&gt;  
+&lt;/table&gt;  
 &lt;p&gt;This is another regular paragraph.&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://images.google.com/images?num=30&amp;amp;q=larry&amp;#43;bird&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://images.google.com/images?num=30&amp;q=larry+bird&lt;/a&gt;&lt;br&gt;
@@ -1043,14 +1675,14 @@ AT&amp;amp;T&lt;br&gt;
 AT&amp;amp;T&lt;br&gt;
 4 &amp;lt; 5&lt;br&gt;
 4 &amp;lt; 5&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;111&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;222&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
 333&lt;/p&gt;
 &lt;p&gt;444&lt;/p&gt;
 &lt;h1 id=&#34;this-is-an-h1&#34;&gt;This is an H1&lt;/h1&gt;
@@ -1216,7 +1848,11 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;heading-2&#34;&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;1&#34;&gt;1&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;  
 &lt;h1 id=&#34;heading-3&#34;&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;2&#34;&gt;2&lt;/h2&gt;
 &lt;ol&gt;
@@ -1265,7 +1901,10 @@ Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
 &lt;p&gt;Magic&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;Magic&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Bird&lt;/p&gt;
@@ -1274,7 +1913,10 @@ Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
 &lt;p&gt;Magic&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;This is a list item with two paragraphs. Lorem ipsum dolor
@@ -1330,23 +1972,27 @@ inside a list item.
 &lt;p&gt;This is a normal paragraph:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;This is a code block.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a code block.
+&lt;/code&gt;&lt;/pre&gt;    
 &lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;tell application &amp;quot;Foo&amp;quot;
     beep
 end tell
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tell application &#34;Foo&#34;
+    beep
+end tell
+&lt;/code&gt;&lt;/pre&gt;    
 &lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;
     &amp;amp;copy; 2004 Foo Corporation
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&#34;footer&#34;&amp;gt;
+    &amp;amp;copy; 2004 Foo Corporation
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;    
 &lt;hr&gt;
 &lt;hr&gt;
 &lt;hr&gt;
@@ -1357,8 +2003,10 @@ end tell
     &gt;an example&lt;/a&gt; inline link.&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;This link&lt;/a&gt; has no title attribute.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This is &lt;a href=&#34;http://example.com/&#34; title=&#34;Title&#34;&gt;
+an example&lt;/a&gt; inline link.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://example.net/&#34;&gt;This link&lt;/a&gt; has no
+title attribute.&lt;/p&gt;
 &lt;p&gt;See my &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/about/&#34; &gt;About&lt;/a&gt; page for details.&lt;/p&gt;
 &lt;p&gt;This is &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Optional Title Here&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1466,14 +2114,48 @@ than from &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  ti
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;++文本++&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;u&gt;下划线文本&lt;/u&gt;&lt;br&gt;
+&lt;span style=&#34;border-bottom:2px dashed yellow;&#34;&gt;下划线文本&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;text-decoration: underline
-&lt;!-- raw HTML omitted --&gt;所添加的需要加下划线的行内文字&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;span style=&#34;border-bottom:1px dashed green;&#34;&gt;所添加的需要加下划线的行内文字&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;用数学公式：
 下划线 $\underline{X}$
 上划线 $\overline{X}$&lt;/p&gt;
-</description>
+&lt;table border=&#34;1&#34;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, cell 1  
+&lt;pre&gt;&lt;code&gt;    Row 1.2, cel 1.2
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 2
+    row 2.2, cel 2.2
+    &amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 1  
+
+    Row 1.2, cel 1.2
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 2
+    row 2.2, cel 2.2
+    &amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/table&gt;
+&lt;table border=&#34;1&#34;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Heade
+        r 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;row 1, cell 1&lt;/td&gt;
+        &lt;td&gt;row 1, cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;row 2, cell 1&lt;/td&gt;
+        &lt;td&gt;row 2, cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</description>
         </item>
         <item>
         <title>在R3300L类&#43;Armbian上安装Hugo服务器</title>
@@ -2129,7 +2811,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 当域名不正确时, 推送到github后, 浏览时也会报404错误。&lt;br&gt;
 命令如下:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;$ hugo &amp;ndash;baseURL=&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://abcd.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;$ hugo --baseURL=&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://abcd.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://abcd.github.io&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -2138,7 +2820,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;p&gt;暂无&lt;/p&gt;
 &lt;h2 id=&#34;其他问题&#34;&gt;其他问题&lt;/h2&gt;
 &lt;h3 id=&#34;关于在windows10上-使用tortoisegitgit管理在samba服务器基于armbian系统上的仓库时出现的问题&#34;&gt;关于在Windows10上, 使用TortoiseGit(+Git)管理在Samba服务器(基于Armbian系统)上的仓库时出现的问题&lt;/h3&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;问题描述:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;p&gt;&lt;u&gt;问题描述:&lt;/u&gt;&lt;br&gt;
 在Armbian系统上使用git clone命令克隆Pure主题仓库(相关目录通过Samba服务器在网络上共享), 在Armbian系统中和Windows共享中修改后, 在Windows上使用TortoiseGit查看diff, 报&amp;quot;fatal: detected dubious ownership in repository&amp;quot;类的错误, 并提示:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;添加环境变量GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true&lt;/li&gt;
@@ -2150,11 +2832,1840 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;li&gt;&lt;code&gt;添加信任目录&lt;/code&gt;可以在cmd中使用已安装的&lt;code&gt;git.exe&lt;/code&gt;程序执行&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;但是, 按此操作后, 并没有效果: 使用TortoiseGit查看diff依然报错。&lt;br&gt;
-另外, 在&lt;!-- raw HTML omitted --&gt;内存虚拟磁盘(使用&amp;rsquo;Olof Lagerkvist&amp;rsquo;的&amp;rsquo;ImDisk Virtual Disk&amp;rsquo;建立)&lt;!-- raw HTML omitted --&gt;上, 也会出错同样的问题。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;处理:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+另外, 在&lt;u&gt;内存虚拟磁盘(使用&amp;rsquo;Olof Lagerkvist&amp;rsquo;的&amp;rsquo;ImDisk Virtual Disk&amp;rsquo;建立)&lt;/u&gt;上, 也会出错同样的问题。&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;处理:&lt;/u&gt;&lt;br&gt;
 在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;结论:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;p&gt;&lt;u&gt;结论:&lt;/u&gt;&lt;br&gt;
 在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Armbian on TV box</title>
+        <link>https://jimway71.github.io/p/armbian-on-tv-box/</link>
+        <pubDate>Fri, 09 Apr 2021 08:54:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/armbian-on-tv-box/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-35.png" alt="Featured image of post Armbian on TV box" /&gt;&lt;h2 id=&#34;参考&#34;&gt;参考:&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/profile/1215-balbes150/&#34;  title=&#34;balbes150-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;balbes150&lt;/a&gt;活跃于&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Armbian官方(?)论坛&lt;/a&gt;, 他提供了支持部分非原厂支持设备的Armbian包, 如支持包括大部分S905系列芯片的Armbian image:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/topic/12162-single-armbian-image-for-rk-aml-aw-aarch64-armv8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Single Armbian image for RK + AML + AW (aarch64 ARMv8) By balbes150&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一些安装说明:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/topic/17106-installation-instructions-for-tv-boxes-with-amlogic-cpus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installation Instructions for TV Boxes with Amlogic CPUs&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.ondroid.net/armbian-os-uenv-ini-and-extlinux-conf/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Armbian OS – uEnv.ini and extlinux.conf&lt;/a&gt; (2020更新后版本, 改用extlinux.conf+uboot.ext)&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/topic/10685-installation-guide-and-your-questions-answered-for-tv-boxes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installation Guide and your questions answered for TV Boxes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ethanblog.com/tips/install-latest-armbian-in-n1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;N1 盒子安装使用最新 Armbian 的记录&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/jonnyan/p/12660037.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;N1如何完美刷入armbian系统教程&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/milton/p/11883811.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;R3300L运行CoreELEC, EmuELEC和Armbian&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;armbian配置工具armbian-config&#34;&gt;Armbian配置工具armbian-config&lt;/h2&gt;
+&lt;p&gt;Armbian系统提供armbian-config工具, 功能很丰富, 多数设置可以在这里完成&lt;/p&gt;
+&lt;h2 id=&#34;操作&#34;&gt;操作&lt;/h2&gt;
+&lt;h3 id=&#34;调整tf卡上ext4分区空间&#34;&gt;调整TF卡上Ext4分区空间&lt;/h3&gt;
+&lt;p&gt;Armbian安装到TF卡上后, 有两个分区, 128M*1 + 1.2G*1.&lt;br&gt;
+第一次用这张TF卡启动时, 系统会自动扩展TF卡的第二个分区, 并会占满整张TF卡的剩余空间&lt;/p&gt;
+&lt;p&gt;实际使用中, 希望能留一块独立的空间(分区), 这块空间windows能读写(考虑exfat格式), 即使Armbian系统坏了, 数据还能很方便的读取出来.&lt;/p&gt;
+&lt;p&gt;测试方法① (在Armbian安装到TF卡上后)先占一块空间给exfat分区.&lt;br&gt;
+操作:&lt;br&gt;
+在TF卡的最后面分一块exfat分区, 希望第一次启动扩展分区时, 这个exfat分区不会受到影响.&lt;br&gt;
+实际测试中, 发现分了这块exfat分区后, 第一次用这张TF卡启动时, 系统无法完成自动扩展分区.&lt;br&gt;
+删除exfat分区后, 系统才自动完成扩展, 并且占满整个TF卡空间.&lt;br&gt;
+方法①经测试, 确认失败。&lt;/p&gt;
+&lt;p&gt;测试方法② &lt;strong&gt;无损调整EXT4分区大小&lt;/strong&gt;&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.pinkd.moe/linux/2018/01/31/resize-a-ext4-partiton-safely&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;无损调整EXT4分区大小&lt;/a&gt;&lt;br&gt;
+操作:&lt;br&gt;
+先等系统用这张TF卡第一次启动, 并自动完成分区扩展;&lt;br&gt;
+关机, 取出TF卡, 插到另一个linux(ubuntu类最好)机器上, 用该linux原系统启动, TF卡不做为启动盘(不需要始终是mount的状态);&lt;br&gt;
+按下列命令操作:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 看分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# lsblk  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 检查需要调整的分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# e2fsck -f /dev/sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 调整分区文件系统到5G.  注意: 需要配合下一步才能生效 _ 这里应该只是把用到的空间都挪到前面5G的空间去了, 但没有实际调整分区大小  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# resize2fs /dev/sda2 5G  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 进fdisk, 先删除sda2, 再重建5G大小的sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# fdisk /dev/sda  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 删除原sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): d  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command):  2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 新建5G大小的sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): n                        # 新建  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): 2                        # 第2分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): Sectors位置, sda1 End+1  # 起始sectors位置  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): +5G                      # 大小, 或结果secotrs位置: 这里写的是大小, 以+开始, +后面是要划分的空间大小(5G)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): n                        # 发现ext4签名, 是否删除: N 不删除  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 顺便把exfat分区也建上...  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): w                        # 写盘退出  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 再检查一下，没有错误就说明没问题了  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# e2fsck -f /dev/sda1  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;结果: &lt;u&gt;成功&lt;/u&gt;&lt;br&gt;
+先在windows上格式化了exfat分区, 确认读写都没有问题.&lt;br&gt;
+然后用这张卡启动linux正常, 用fdisk查看分区也正常.&lt;br&gt;
+&lt;strong&gt;确认使用无损调整EXT4分区大小的方法修改Armbian启动TF卡分区成功&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;armbian上安装docker&#34;&gt;Armbian上安装Docker&lt;/h3&gt;
+&lt;p&gt;参考官网安装说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/get-docker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Get Docker&lt;/a&gt;&lt;br&gt;
+一般用官方的shell安装.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Wordpress Q&amp;A</title>
+        <link>https://jimway71.github.io/p/wordpress-qa/</link>
+        <pubDate>Thu, 08 Apr 2021 21:42:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/wordpress-qa/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-34.jpg" alt="Featured image of post Wordpress Q&amp;A" /&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;WordPress英文半角符号自动变成中文全角的解决方法&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://www.hello2099.com/1545.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WordPress英文半角符号变成中文全角的解决方法&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;问题分析:&lt;br&gt;
+查找原因，原来是默认情况下，WordPress会调用函数wptexturize来执行转换。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决方法:&lt;br&gt;
+在主题目录下的functions.php文件中添加如下代码即可。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;//WordPress英文半角符号变成中文全角的解决方法&lt;br&gt;
+remove_filter(‘the_title’, ‘wptexturize’);&lt;br&gt;
+remove_filter(‘the_excerpt’, ‘wptexturize’);&lt;br&gt;
+remove_filter(‘the_content’, ‘wptexturize’);&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是最简单的方法，推荐。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然，还有一种方法是更改wp-includes目录里面的formatting.php代码，但是这样每次WordPress更新版本的时候都要去修改代码，不建议。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Docker容器无法访问网络</title>
+        <link>https://jimway71.github.io/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/</link>
+        <pubDate>Thu, 08 Apr 2021 01:17:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-33.jpg" alt="Featured image of post Docker容器无法访问网络" /&gt;&lt;h2 id=&#34;关于docker的网络模式&#34;&gt;关于Docker的网络模式&lt;/h2&gt;
+&lt;p&gt;参考 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/huanongying123/article/details/73556634&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker的四种网络模式&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;现象&#34;&gt;现象&lt;/h2&gt;
+&lt;p&gt;① 最初始现象是发现在docker容器中(的系统里)使用apt-get更新(update)时失败, 由于容器里没有ping等一系列工具软件, 无法确认问题具体情况。&lt;br&gt;
+② 接着就找image里有ping的包, 用docker search发现pentest-tools里有, 但pull下来后发现运行错误, 报错信息如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;standard_init_linux.go:211: exec user process caused &amp;ldquo;exec format error&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查了下, 有人说是因为不兼容引起的错误:&lt;br&gt;
+→ &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/HermitSun/article/details/109145856&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docker运行容器报错standard_init_linux.go:211: exec user process caused “exec format error“的可能解决办法&lt;/a&gt;&lt;br&gt;
+③ 在查找中突然发现有说centos的image里有ping, 想着操作系统可能都会有整套网络工具软件, 就找了个ubutu的包pull下来, 结果里面还是没有.&lt;br&gt;
+虽然centos不熟, 都是linux应该也差不太多, 回头就pull了centos.&lt;br&gt;
+用docker运行并进入到容器里&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#  docker run -it centos /bin/bash  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@a688b8f2101e /]# ping 192.168.1.1  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;^C  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--- 192.168.1.1 ping statistics ---  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2 packets transmitted, 0 received, 100% packet loss, time 26ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@a688b8f2101e /]# ping 192.168.1.7  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PING 192.168.1.7 (192.168.1.7) 56(84) bytes of data.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 192.168.1.7: icmp_seq=1 ttl=64 time=0.361 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@a688b8f2101e /]# ping www.sina.com  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PING spool.grid.sinaedge.com (123.126.55.41) 56(84) bytes of data.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;^C  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--- spool.grid.sinaedge.com ping statistics ---  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3 packets transmitted, 0 received, 100% packet loss, time 27ms  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;现象是除了本宿主机的IP(192.168.1.7), 其它地址都不能ping通&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@a688b8f2101e /]# tracepath www.sina.com  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1?: [LOCALHOST]                      pmtu 1500  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1:  119.167.237.233                                       2.100ms reached  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1:  119.167.237.233                                       0.436ms reached  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     Resume: pmtu 1500 hops 1 back 1   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用tracepath跟踪路由也看不出什么&lt;br&gt;
+测试的结果是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;除了本宿主机地址外, 其它地址都不能ping通&lt;/li&gt;
+&lt;li&gt;虽然ping不通, 但是dns解析还是可以的.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;④ 怀疑是宿主机的防火墙挡住了, 把防火墙关了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# /etc/init.d/firewall stop&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再进入容器测试, 发现依然ping不通其它设备网址, 而且dns解析也不行了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[root@88a5cfa727dc /]# ping &lt;a class=&#34;link&#34; href=&#34;https://www.sina.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.sina.com&lt;/a&gt;&lt;br&gt;
+ping: &lt;a class=&#34;link&#34; href=&#34;https://www.sina.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.sina.com&lt;/a&gt;: Name or service not known&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这只能说明, 宿主机的防火墙至少还帮着把DNS解析的包给双向转发了.&lt;br&gt;
+问题不是要不要开防火墙, 而是防火墙必须得开, 但是防火墙的规则写的少了点东西.&lt;/p&gt;
+&lt;h2 id=&#34;要不要处理&#34;&gt;要不要处理&lt;/h2&gt;
+&lt;p&gt;本来如果凑合对付着用也行, 但看了下素版的wordpress好象东西还是有点少, 据说很多插件都需要从网上下载, 没法忍, 必须得处理这个问题.&lt;/p&gt;
+&lt;h2 id=&#34;怎么处理&#34;&gt;怎么处理:&lt;/h2&gt;
+&lt;p&gt;iptables我也不熟, 要不先来个简单的思路?&lt;br&gt;
+① docker网络改用host模式&lt;br&gt;
+Host模式说明： &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/huanongying123/article/details/73556634&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker的四种网络模式&lt;/a&gt;&lt;br&gt;
+如果启动容器的时候使用host模式，那么这个容器将不会获得一个独立的Network Namespace，而是和宿主机共用一个Network Namespace。容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口.&lt;br&gt;
+这样就不会有包转发的问题了.&lt;br&gt;
+在docker启动时, Host模式需要使用&amp;quot;&amp;ndash;network=host&amp;quot;参数.&lt;br&gt;
+测试Host模式:&lt;br&gt;
+还是用centos的包来做测试&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker run --network=host -it centos /bin/bash  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@Q7Op /]# ping www.sina.com  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PING ww1.sinaimg.cn.w.alikunlun.com (119.167.237.230) 56(84) bytes of data.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=1 ttl=55 time=15.4 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=2 ttl=55 time=15.4 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=3 ttl=55 time=15.4 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=4 ttl=55 time=15.3 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;^C  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--- ww1.sinaimg.cn.w.alikunlun.com ping statistics ---  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4 packets transmitted, 4 received, 0% packet loss, time 8ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rtt min/avg/max/mdev = 15.308/15.348/15.363/0.023 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;网络就可以正常访问了.&lt;br&gt;
+把现有的容器改成host模式:&lt;br&gt;
+docker启动容器时, 如果不设置network模式, 容器就会以bridge模式运行.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在portainer.io(web管理)界面里, 试着把已经运行的bridge模式的容器改为host模式, 好像不行, 再试一下, 一样的报错:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;failure  container sharing cannot be connected to any other network&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即使暂停或停止容器, 也是报一样的错误.&lt;br&gt;
+看来不可能简单的用管理界面搞定这个事.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网上有篇文章可能跟这有关: &lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/jacksoner/2051041&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker网络管理-网络模式&lt;/a&gt;&lt;br&gt;
+文章有点复杂,没看懂&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在portainer.io(web管理)界面里, 想用复制容器的方式, 在复制时, 修改网络为host模式.&lt;br&gt;
+但是, 复制的容器就一直有问题, 试图连接时报错:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker exec -it WordPressHostNet /bin/bash&lt;br&gt;
+Error response from daemon: Container 0dd20f7ed6587ba9900acbef9f7da926974c49bebc0fa076d19cbae573c5116c is restarting, wait until the container is running&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;说是始终在重启状态&lt;br&gt;
+web端口也连不上, 原因不清楚.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/lei0213/p/12631681.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker第五篇（docker网络管理）&lt;/a&gt;&lt;br&gt;
+两个方法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;docker update &amp;ndash;network=host ……&lt;/li&gt;
+&lt;li&gt;设置网桥，连接不同网段&lt;br&gt;
+或者，docker有nat桥？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000019701533&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker 容器内无法通过 HTTP 访问外网&lt;/a&gt;&lt;br&gt;
+和当前现象相似&lt;br&gt;
+测试:&lt;br&gt;
+① 参考 &lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000019701533&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker 容器内无法通过 HTTP 访问外网&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service dockerd stop  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# killall dockerd  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 检查点: 检查网络  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ifconfig   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ifconfig docker0 down  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# brctl delbr docker0  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service dockerd start  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 检查点: 检查网络  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ifconfig   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 测试:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker run --rm -it centos /bin/bash  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;测试结果: &lt;u&gt;失败&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;② 参考 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/lei0213/p/12631681.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker第五篇（docker网络管理）&lt;/a&gt;, 用update改network&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker update --network=host -it e7d3c1eca2fb  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unknown flag: --network  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;See &amp;#39;docker update --help&amp;#39;.  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;结果: update不支持修改network&lt;br&gt;
+测试结果: &lt;u&gt;失败&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;③ 测试用已有的容器作镜像, 用host模式运行生成的镜像, 发现会自动退出&lt;br&gt;
+再测试用wordpress以host模式运行, 也同样会自动退出&lt;br&gt;
+原因可能是某个端口被宿主机占了, 谁知道&lt;br&gt;
+结论: wordpress在当前系统上, 只能以bridge方式运行.&lt;/p&gt;
+&lt;p&gt;看来应该是网桥的问题, 估计最终还是iptables的问题&lt;br&gt;
+参考:  &lt;a class=&#34;link&#34; href=&#34;https://medium.com/@noosphere00/%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86linux%E8%AE%BE%E5%A4%87%E4%B8%8A%E7%9A%84bridge-%E7%BD%91%E6%A1%A5-%E5%92%8Cdocker-bridge-e6304a748f41&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何管理linux设备上的bridge(网桥)和docker bridge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;估计一时半会也搞不定了, 先准备手动安装wp包和插件吧:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_26954773/article/details/62875366&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何手动安装WordPress主题和插件（Linux）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;后记&lt;/strong&gt;: 放弃了使用WordPress服务器搭博客的方式。&lt;br&gt;
+然而, 其实 . Docker下, 不管是host模式/bridge模式/container模式都不应该存在网络通讯的问题&amp;hellip;&amp;hellip;&lt;br&gt;
+☻&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>在Docker环境下安装WordPress</title>
+        <link>https://jimway71.github.io/p/%E5%9C%A8docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85wordpress/</link>
+        <pubDate>Wed, 07 Apr 2021 14:44:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%9C%A8docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85wordpress/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-32.png" alt="Featured image of post 在Docker环境下安装WordPress" /&gt;&lt;h2 id=&#34;安装环境&#34;&gt;安装环境&lt;/h2&gt;
+&lt;p&gt;在数码视讯Q7上装了openwrt, 并已建好了Docker环境&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zero_only/article/details/107567135&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;armbian装docker+wordpress实现https访问&lt;/a&gt;&lt;br&gt;
+wordpress英文官网: &lt;a class=&#34;link&#34; href=&#34;https://wordpress.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wordpress.org/&lt;/a&gt;  (可能是)&lt;br&gt;
+WordPress中文官网: &lt;a class=&#34;link&#34; href=&#34;https://cn.wordpress.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://cn.wordpress.org/&lt;/a&gt;&lt;br&gt;
+WordPress on GitHub: &lt;a class=&#34;link&#34; href=&#34;https://github.com/WordPress/WordPress&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/WordPress/WordPress&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;h3 id=&#34;安装数据库&#34;&gt;安装数据库&lt;/h3&gt;
+&lt;p&gt;使用mariaDB数据库.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 拉取mariadb镜像&lt;br&gt;
+# docker pull mariadb&lt;br&gt;
+# 运行数据库容器&lt;br&gt;
+# docker run -d &amp;ndash;name DB4WordPress -p 3306:3306 -v /data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mariadb&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参数说明:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;--name: 容器名称，这里设置为DB4WordPress&lt;br&gt;
+-p: 端口映射，宿主机的3306端口映射给容器的3306端口.第一个3306是宿主机(即物理机器)的端口，第二个是容器的端口&lt;br&gt;
+-e: 环境变量. MYSQL_ROOT_PASSWORD, 设置root密码为123456&lt;br&gt;
+-v: 指定数据卷，也就是将mariadb容器的/var/lib/mysql映射到宿主机的/data/mysql&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;检查是否运行:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker ps -a&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;新建wordpress的库&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mysql -h 192.168.1.207 -u root -p&lt;br&gt;
+Enter password:&lt;br&gt;
+Welcome to the MariaDB monitor.  Commands end with ; or \g.&lt;br&gt;
+Your MariaDB connection id is 12&lt;br&gt;
+Server version: 10.5.9-MariaDB-1:10.5.9+maria~focal mariadb.org binary distribution&lt;br&gt;
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.&lt;br&gt;
+Type &amp;lsquo;help;&amp;rsquo; or &amp;lsquo;\h&amp;rsquo; for help. Type &amp;lsquo;\c&amp;rsquo; to clear the current input statement.&lt;/p&gt;
+&lt;p&gt;MariaDB [(none)]&amp;gt; create database wordpress;&lt;br&gt;
+Query OK, 1 row affected (0.001 sec)&lt;/p&gt;
+&lt;p&gt;MariaDB [(none)]&amp;gt; quit&lt;br&gt;
+Bye&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;安装wordpress&#34;&gt;安装WordPress&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 拉取wordpress镜像&lt;br&gt;
+# docker pull wordpress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;运行wordpress容器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker run -d &amp;ndash;name WordPress -p 1080:80 -e WORDPRESS_DB_HOST=192.168.1.207:3306 -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=123456 -e WORDPRESS_DB_NAME=wordpress wordpress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参数说明:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WORDPRESS_DB_HOST : 链接的docker的MySQL的IP地址和端口，一般设置成mysql表示用默认的设置&lt;br&gt;
+WORDPRESS_DB_USER : 指定数据库用户&lt;br&gt;
+WORDPRESS_DB_PASSWORD : 指定数据库用户的密码，如果用户是root，那么要和之前启动数据库时的&amp;quot;MYSQL_ROOT_PASSWORD&amp;quot;相同。&lt;br&gt;
+WORDPRESS_DB_NAME: 数据库名&lt;/p&gt;
+&lt;p&gt;--link  链接到mariadb容器的名称(感觉这里用不着link)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;检查是否运行&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker ps -a&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用浏览器打开http://192.168.1.207:1080, 确认安装成功&lt;/p&gt;
+&lt;h3 id=&#34;更改wordpress语言设置为中文&#34;&gt;更改WordPress语言设置为中文&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://www.wpdaxue.com/wordpress-language-setting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;更改WordPress语言设置（例如中文版和英文版转换）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;: WordPress官方英文版不包含任何语言包, 包括Docker版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;下载中文版wordpress&lt;br&gt;
+在&lt;a class=&#34;link&#34; href=&#34;https://cn.wordpress.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WordPress中文官方网站&lt;/a&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://cn.wordpress.org/latest-zh_CN.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中文版本wordpress&lt;/a&gt;, 解压下载的压缩包.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把wp-content/下的languages目录整个拷到wordpress容器的/var/www/html/wp-content/目录下&lt;br&gt;
+中文版的languages/目录下是中文相关的文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker cp languages/ WordPress:/var/www/html/wp-content/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个拷贝命令还不错, 是拷整个目录所有文件.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改wordpress容器中/var/www/html/wp-config.php, 加入中文语言设置&lt;br&gt;
+由于容器里没有编译工具, 比如vi/vim/nano这类的, 所以要先拷到宿主机上, 编辑后再拷回去.&lt;br&gt;
+先把文件wp-config.php从容器拷到宿主机&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker cp WordPress:/var/www/html/wp-config.php /tmp&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在宿主机上用vim编辑wp-config.php文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /tmp/wp-config.php&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;加入: define(&amp;lsquo;WPLANG&amp;rsquo;, &amp;lsquo;zh_CN&amp;rsquo;);&lt;br&gt;
+由于原配置文件中没有WPLANG的设置, 不知道要放在哪里, 就直接放在第一大段注释说明后面了.&lt;br&gt;
+编辑完后, 把改好的wp-config.php拷回到容器里&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker cp /tmp/wp-config.php WordPress:/var/www/html/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用浏览器打开http://192.168.1.207:1080查看, 发现已经有&amp;quot;站点语言&amp;quot;选择(原来没有这项), 并且可以选择中文.&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/32-wpondocker-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;修改后可以选择语言&#34;
+	
+	
+&gt;&lt;br&gt;
+↑ 修改后, 可以选择语言&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/32-wpondocker-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;修改后可以选择语言&#34;
+	
+	
+&gt;
+↑ 修改前, 没有语言选择项&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;站点语言&amp;quot;选择&amp;quot;中文&amp;rdquo;, 并确认生效.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ⒺⓃⒹ&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Docker相关</title>
+        <link>https://jimway71.github.io/p/docker%E7%9B%B8%E5%85%B3/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/docker%E7%9B%B8%E5%85%B3/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-31.jpg" alt="Featured image of post Docker相关" /&gt;&lt;h2 id=&#34;参考&#34;&gt;参考:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/ea4a00c6c21c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker run 命令参数及使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/wanghao_0206/article/details/79583325&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docker设置容器固定ip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/47310fe571b5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用Docker搭建WordPress博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zero_only/article/details/107567135&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;armbian装docker+wordpress实现https访问&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://clownote.github.io/2020/03/16/blog/Docker-WordPress/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用Docker部署WordPress&lt;/a&gt;&lt;br&gt;
+WordPress连接数据库失败处理方法&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/f7c48fb5a563&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;基于docker搭建自己的个人网站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-qa&#34;&gt;Docker Q&amp;amp;A&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;查看Docker容器环境变量&lt;br&gt;
+标注说明:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CONTAINER-NAME: 容器名字&lt;/li&gt;
+&lt;li&gt;CONTAINER-ID: 容器ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用命令 Docker ps -a 可以查到上述信息&lt;br&gt;
+有下列3种方式查看Docker容器环境变量:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Docker inspect&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker inspect &amp;lt;CONTAINER-NAME&amp;gt; OR &amp;lt;CONTAINER-ID&amp;gt;&lt;br&gt;
+# 如:&lt;br&gt;
+# docker inspect WordPressTest1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用env查看&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker exec -it &amp;lt;CONTAINER-NAME&amp;gt; OR &amp;lt;CONTAINER-ID&amp;gt; env&lt;br&gt;
+# 如:&lt;br&gt;
+# docker exec -it b14df65ecd73 env&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入容器后用env查看&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker exec -it &amp;lt;CONTAINER-NAME&amp;gt; OR &amp;lt;CONTAINER-ID&amp;gt; /bin/bash&lt;br&gt;
+(容器提示符)# env&lt;br&gt;
+# 如:&lt;br&gt;
+# docker exec -it b14df65ecd73 /bin/bash&lt;br&gt;
+(容器提示符)# env&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;另: Docker使用&amp;ndash;link参数可以把另一个容器的环境变量连接过来(没有测试), 可以用env查看到&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WordPress的Docker参数&lt;br&gt;
+WordPress的Docker需要的参数是从环境变量里取得.&lt;br&gt;
+读取代码在wordpress容器里的/var/www/html/wp-config.php文件, 相关的主要代码如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;// ** MySQL settings - You can get this info from your web host ** //&lt;br&gt;
+/** The name of the database for WordPress */&lt;br&gt;
+define( &amp;lsquo;DB_NAME&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_NAME&amp;rsquo;, &amp;lsquo;wordpress&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/** MySQL database username */&lt;br&gt;
+define( &amp;lsquo;DB_USER&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_USER&amp;rsquo;, &amp;rsquo;example username&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/** MySQL database password */&lt;br&gt;
+define( &amp;lsquo;DB_PASSWORD&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_PASSWORD&amp;rsquo;, &amp;rsquo;example password&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/**&lt;br&gt;
+*/&lt;/p&gt;
+&lt;p&gt;/** MySQL hostname */&lt;br&gt;
+define( &amp;lsquo;DB_HOST&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_HOST&amp;rsquo;, &amp;lsquo;mysql&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/** Database Charset to use in creating database tables. */&lt;br&gt;
+define( &amp;lsquo;DB_CHARSET&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_CHARSET&amp;rsquo;, &amp;lsquo;utf8&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/** The Database Collate type. Don&amp;rsquo;t change this if in doubt. */&lt;br&gt;
+define( &amp;lsquo;DB_COLLATE&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_COLLATE&amp;rsquo;, &amp;lsquo;&amp;rsquo;) );&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以看到以下环境变量参数:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WORDPRESS_DB_NAME:              wordpress所用数据库名, 缺省为&amp;quot;wordpress&amp;quot;&lt;br&gt;
+WORDPRESS_DB_USER:               wordpress访问数据库的用户名, 缺省为&amp;quot;example username&amp;quot;&lt;br&gt;
+WORDPRESS_DB_PASSWORD:    wordpress访问数据库的用户密码, 缺省为&amp;quot;example password&amp;quot;&lt;br&gt;
+WORDPRESS_DB_HOST:              wordpress访问的数据库地址端口(ip:port)&lt;br&gt;
+WORDPRESS_DB_CHARSET:        数据库字符集&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;主要用到前4个参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker的重启&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 重启docker&lt;br&gt;
+# service dockerd restart&lt;/p&gt;
+&lt;p&gt;# 重启容器，可通过portainer&lt;br&gt;
+# 查看容器id和名称&lt;br&gt;
+# docker ps -a&lt;br&gt;
+# docker restart bc7c8d4514fe&lt;br&gt;
+# 或&lt;br&gt;
+# docker restart mydb&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;宿主机(即物理机)与docker文件互传&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 宿主机传文件至docker容器&lt;br&gt;
+# docker cp 本地文件的路径  container_id:&amp;lt;docker容器内的路径&amp;gt;&lt;/p&gt;
+&lt;p&gt;# 容器传文件至宿主机&lt;br&gt;
+# docker cp container_id:&amp;lt;docker容器内的路径&amp;gt;  &amp;lt;本地保存文件的路径&amp;gt;&lt;br&gt;
+# 这里的容器ID可以通过portainer或者命令“docker ps -a ”进行查看&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;容器里安装nano或vim&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# apt-get update&lt;br&gt;
+# apt-get install nano&lt;br&gt;
+# 或&lt;br&gt;
+# apt-get install vim&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;容器自动启动&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在使用docker run时，添加&amp;quot;&amp;ndash;restart=always&amp;quot;参数&lt;/li&gt;
+&lt;li&gt;运行中的docker使用update时添加&amp;quot;&amp;ndash;restart=always&amp;quot;参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker update &amp;ndash;restart=always wordpress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ldquo;wordpress&amp;quot;是容器名称, 也可以写容器ID.&lt;br&gt;
+例:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker update &amp;ndash;restart=always DB4WordPress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;DB4WordPress&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker update &amp;ndash;restart=always WordPress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;WordPress&lt;br&gt;
+关机重启后, 数据库和wordpress容器都已启动, 确认命令有效.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker镜像源&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/34d3b4568059&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker快速安装以及换镜像源&lt;/a&gt;&lt;br&gt;
+Docker的镜像配置文件是: /etc/docker/daemon.json, 当前内容是:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;bip&amp;#34;: &amp;#34;192.168.30.1/24&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;data-root&amp;#34;: &amp;#34;/opt/docker/&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-level&amp;#34;: &amp;#34;warn&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-driver&amp;#34;: &amp;#34;json-file&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-opts&amp;#34;: {  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;max-size&amp;#34;: &amp;#34;10m&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;max-file&amp;#34;: &amp;#34;5&amp;#34;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   },  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;registry-mirrors&amp;#34;: [  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;https://dockerhub.azk8s.cn&amp;#34;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;portainer在armbian上安装运行&lt;br&gt;
+运行参考:  &lt;a class=&#34;link&#34; href=&#34;https://documentation.portainer.io/v2.0/deploy/ceinstalldocker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Deploying Portainer CE in Docker&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# (安装应该是使用docker pull: docker pull portainer/portainer-ce)&lt;br&gt;
+# 安装使用apt-get&lt;br&gt;
+# apt-get install portainer/portainer-ce&lt;br&gt;
+# 启动&lt;br&gt;
+# docker volume create portainer_data&lt;br&gt;
+# docker run -d -p 8000:8000 -p 9000:9000 &amp;ndash;name=portainer &amp;ndash;restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看某个docker容器占用的ip&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker inspect openwrt | grep Address&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中“openwrt”是容器的名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;armbian上安装Docker&lt;br&gt;
+参考官网安装说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/get-docker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Get Docker&lt;/a&gt;&lt;br&gt;
+一般用官方的shell安装.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改地址(临时, openwrt)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ifconfig br-lan 172.17.0.3 netmask 255.255.255.0&lt;br&gt;
+# 设置网关&lt;br&gt;
+route add default gw 172.17.0.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker搜索镜像(img包)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker search 镜像包名, 如:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker search hugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME                                   DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;klakegg/hugo                           Minimal image and variants with batteries in…   99                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jojomi/hugo                            hugo, see https://gohugo.io                     64                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;monachus/hugo                          Docker image for building and running Hugo (…   42                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;publysher/hugo                         Docker base image for static sites generated…   38                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jguyomard/hugo-builder                 Lightweight Alpine-Based Docker Image for Hu…   19                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cibuilds/hugo                          Docker image for Hugo, the static-site gener…   15                     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fundor333/hugo                         Docker file for build your Hugo for my site …   4                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;peaceiris/hugo                         Hugo Alpine base Docker Image (Hugo extended…   4                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;solidnerd/hugo                         Hugo in a container                             2                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yanqd0/hugo                            The smallest hugo image built from Alpine.      2                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;muninn/hugo-caddy                      hugo + caddy + caddy hugo admin plugin + cad…   2                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tarampampam/hugo                       Hugo (gohugo, static stite generator) applic…   1                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;orus/hugo-builder                      Alpine with hugo, git and pygments installed…   1                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dettmering/hugo-build                  Build a website with Hugo (gohugo.io)           1                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;envimate/hugo                          Dockerized version of hugo cli https://gohug…   1                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chabad360/hugo                         Build a static site with Hugo (includes Hugo…   0                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vergissberlin/hugo-docker-watchtower   Hugo with continues delivery after commits i…   0                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;simonszu/hugo                          An image for the hugo blog system               0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;webhippie/hugo                         Docker images for Hugo                          0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;toschwarz/hugo-builder                 Hugo Builder Image                              0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;svlentink/hugo                         Official Hugo static web gen. from Github (l…   0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mazgi/hugo-static-website              Docker image for static website by Hugo.        0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sjugge/hugo                            Runs the latest stable Hugo static site gene…   0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;forestryio/hugo                                                                        0                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;endocode/hugo-website                                                                  0   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;*STARS越多越好(排在越靠前)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>在Openwrt上建立Docker环境</title>
+        <link>https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-30.jpg" alt="Featured image of post 在Openwrt上建立Docker环境" /&gt;&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;推出的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&amp;rdquo;&lt;/a&gt;内置了Docker CE容器(服务-Docker CE容器), 但Docker并不(缺省)可用.&lt;br&gt;
+在Docker CE容器主页面下, 提供了内置的&amp;quot;Docker 初始化无脑配置教程&amp;quot;链接(一个PDF文件), 按照教程说明, 可以简单的把Docker环境搭建完成.&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docker 初始化无脑配置教程&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;环境说明&#34;&gt;环境说明&lt;/h2&gt;
+&lt;p&gt;在TF卡里装了&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OP固件&lt;/a&gt;, 用这张TF卡插在联通(数码视讯)Q7盒子(以下简称Q7)里启动, op可以正常运行.&lt;br&gt;
+TF卡中只用不到1G空间被op系统占用, 剩下的分成了一个exfat的主分区.&lt;/p&gt;
+&lt;h2 id=&#34;操作步骤&#34;&gt;操作步骤&lt;/h2&gt;
+&lt;p&gt;操作步骤大致按照&amp;quot;Docker 初始化无脑配置教程&amp;quot;, 但略有些不同.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;给Docker分配存储空间&lt;br&gt;
+由于原来剩余空间都给了exfat主分区, 所以只能重新分配空间.&lt;br&gt;
+本想通过调整分区大小来分出部分空间给Docker, 但试了Win10的&amp;quot;硬盘管理&amp;quot;+&amp;ldquo;分区助专业版&amp;rdquo;, 发现都不能把exfat分区的空间调小, 所以只能重新分配空间.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先备份exfat分区文件&lt;/li&gt;
+&lt;li&gt;TF卡重新分区&lt;br&gt;
+把TF卡插回Q7的TF卡槽, tf卡启动Q7后, 用SecureCRT登录进去:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用fdisk命令删除原exfat分区&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用fdisk重分两个分区, 一个exfat分区, 一个ext4分区.&lt;br&gt;
+考虑到Docker可能不会占用多少空间, 给ext4分了10G的空间.&lt;br&gt;
+(exfat分区的类型代码是7)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;格式化(mkfs命令)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 格式化exfat分区&lt;br&gt;
+# mkfs.exfat /dev/sda3&lt;br&gt;
+# 格式化ext4分区&lt;br&gt;
+# mkfs.ext4 /dev/sda4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意: 如果分区已经mount上就不能格式化, 会显示格式化失败信息.&lt;br&gt;
+这种情况需要umount, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# umount /dev/sda3&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相应的教程内容, 执行的shell功能就是分区&amp;#43;格式化&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;↑ 相应的教程内容, 执行的shell功能就是分区+格式化&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;挂载(mount)新分区&lt;br&gt;
+把新的ext4分区挂载(mount)到/opt下, 做为Docker的空间.&lt;br&gt;
+与mount有关的配置文件有/etc/mtab + /etc/fstab, /etc/fstab是启动时的挂载配置文件.&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相应的教程内容, 实现新分区挂载到/opt&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相应的教程内容, 实现新分区挂载到/opt&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相应的教程内容, 实现新分区挂载到/opt&#34;
+	
+	
+&gt;&lt;br&gt;
+↑ 相应的教程内容, 实现新分区挂载到/opt&lt;br&gt;
+按教程操作完成挂载后, 查看/etc/fstab文件, 并没有看到/opt的挂载信息, 不清楚具体是在哪里配置的.&lt;br&gt;
+用mount命令查看, 可以看到已经挂载到/opt下了&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;分区挂载状态&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;把备份的exfat分区文件恢复回去.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;确认Docker的配置文件&lt;br&gt;
+修改/etc/docker/daemon.json, 把data-root改为/opt/docker/&lt;br&gt;
+说明见文后的问题①&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装Docker管理系统&lt;br&gt;
+/etc/docker-web是一个shell, 内容如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# cat /etc/docker-web&lt;br&gt;
+#!/bin/sh&lt;br&gt;
+docker run -d &amp;ndash;restart=always &amp;ndash;name=&amp;ldquo;portainer&amp;rdquo; -p 9999:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;docker-web是用来安装docker的web管理系统, 执行前需要先确认下docker是否已启动, 如果没有启动, docker-web的安装会失败, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ./docker-web&lt;br&gt;
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.&lt;br&gt;
+See &amp;lsquo;docker run &amp;ndash;help&amp;rsquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用service命令确认docker运行状态&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service dockerd status&lt;br&gt;
+inactive&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果发现docker未启动, 则先启动docker&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service dockerd start&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再次确认docker运行状态&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service dockerd status&lt;br&gt;
+running&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;确认docker运行后, 可以执行docker-web进行安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ./docker-web&lt;br&gt;
+Unable to find image &amp;lsquo;portainer/portainer-ce:latest&amp;rsquo; locally&lt;br&gt;
+latest: Pulling from portainer/portainer-ce&lt;br&gt;
+84cfa456b2b1: Pull complete&lt;br&gt;
+39d56ef0881a: Pull complete&lt;br&gt;
+16a45878c700: Pull complete&lt;br&gt;
+Digest:&lt;br&gt;
+Status: Downloaded newer image for portainer/portainer-ce:latest&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入Docker管理界面&lt;br&gt;
+在浏览器里输入Q7的ip地址:9999, 设置管理员密码, 选择local进入本地管理界面&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-07.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docker管理界面&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-08.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docker管理界面&#34;
+	
+	
+&gt;&lt;br&gt;
+点鲸鱼图标即可管理本地的docker&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;① Docker的配置文件有问题, 需要修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# cat /etc/docker/daemon.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;bip&amp;#34;: &amp;#34;172.31.0.1/24&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;data-root&amp;#34;: &amp;#34;/mnt/mmcblk2p4/docker/&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-level&amp;#34;: &amp;#34;warn&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-driver&amp;#34;: &amp;#34;json-file&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-opts&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;max-size&amp;#34;: &amp;#34;10m&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;max-file&amp;#34;: &amp;#34;5&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;registry-mirrors&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;https://dockerhub.azk8s.cn&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其中data-root所指/mnt/mmcblk2p4不存在, 由于给docker分配的空间是/opt, 因此考虑把data-root所指目录改到/opt/docker/下&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Q&amp;A</title>
+        <link>https://jimway71.github.io/p/qa/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/qa/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-29.jpg" alt="Featured image of post Q&amp;A" /&gt;&lt;h2 id=&#34;问题-旧版securecrt不能连接新版本的sshd服务器&#34;&gt;问题: 旧版SecureCrt不能连接新版本的sshd服务器&lt;/h2&gt;
+&lt;p&gt;报错如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Key exchange failed. No compatible key exchange method. The server supports these methods: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原因分析:&lt;br&gt;
+旧版SecureCrt(版本号6.7.0 (build 153))支持的密钥交换(Key exchange)为以下5种:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kerberos&lt;/li&gt;
+&lt;li&gt;Kerberos(Group Exchange)&lt;/li&gt;
+&lt;li&gt;Diffie-hellman-group14&lt;/li&gt;
+&lt;li&gt;Diffie-hellman-group&lt;/li&gt;
+&lt;li&gt;Diffie-hellman&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这5种均不被新的sshd支持, 当前sshd版本信息为:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OpenSSH_8.3p1, OpenSSL 1.1.1j  16 Feb 2021&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;处理方式:&lt;br&gt;
+修改/etc/ssh/sshd_config文件, 添加(我是在文件最后添加):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;KexAlgorithms diffie-hellman-group14-sha1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后重启sshd:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#service sshd restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即可。&lt;br&gt;
+(看参考的文档, 说的是添加:&lt;br&gt;
+KexAlgorithms &lt;a class=&#34;link&#34; href=&#34;mailto:curve25519-sha256@libssh.org&#34; &gt;curve25519-sha256@libssh.org&lt;/a&gt;,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1&lt;br&gt;
+其实添加一种SecureCrt支持的方式就可以了)&lt;br&gt;
+参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/duanbiren123/article/details/103034914&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;升级ssh后续问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.tomato.cm/179.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用SecureCRT连接Ubuntu20.04报错：Key exchange failed. No compatible key exchange method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/shenjianyu/p/6407042.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;升级openssh带来的问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;更新:&lt;/strong&gt;&lt;br&gt;
+可以改用基于&lt;a class=&#34;link&#34; href=&#34;file:///C:/Users/jimway/AppData/Local/Temp/Mxt220/tmp/licenses/EulaHOME.html&#34; &gt;MobaXterm license&lt;/a&gt;许可的&lt;a class=&#34;link&#34; href=&#34;https://mobaxterm.mobatek.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MobaXterm&lt;/a&gt;, 不再有这种问题。&lt;/p&gt;
+&lt;h2 id=&#34;问题-在openwrt上新建一个可用的samba用户&#34;&gt;问题: 在openwrt上新建一个可用的samba用户&lt;/h2&gt;
+&lt;p&gt;需要解决的问题:&lt;br&gt;
+需要新增一个samba用户, 而samba用户是与同名系统用户关联的, 所以需要先建立一个同名的系统用户.&lt;br&gt;
+但是, 当前Openwrt的底层系统里没有useradd或者adduser命令, 用opkg update更新后, 搜索可用的包里也没找到相关的包, 包括有人提到的shadow-useradd或者类似的命令, 所以, 不能用命令添加一个用户&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;那, 就先手动来新增一个用户&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;修改/etc/passwd文件, 增加新用户信息&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /etc/passwd&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;增加一行:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;newuser:x:66666:66666:newuser:/home/newuser:/bin/ash&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;说明:&lt;br&gt;
+newuser是用户名, /home/newuser就是newuser用户的根目录了.&lt;br&gt;
+66666是用户ID, 要注意在整个passwd文件是应该是唯一的.&lt;br&gt;
+/bin/ash是shell, 是从root用户那行抄来的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改/etc/group文件, 增加新用户的组信息: 组名和用户名一般都是相同的&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /etc/group&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;增加一行:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;newuser:x:66666:newuser&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;说明:&lt;br&gt;
+组名和用户名相同&lt;br&gt;
+组ID号和用户ID号也相同&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立新用户根目录, 并设置属主/组&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mkdir /home/newuser&lt;br&gt;
+# chown newuser /home/newuser&lt;br&gt;
+# chgrp newuser /home/newuser&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给新用户设置密码&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# passwd newuser&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该设置samba用户了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;给samba新用户设置密码&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;# smbpasswd newuser&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;&amp;hellip;&amp;hellip;&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;Failed to find entry for user newuser.&lt;/del&gt;&lt;br&gt;
+# smbpasswd -a newuser&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;br&gt;
+Added user newuser.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使samba新用户可用&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# smbpasswd -e newuser&lt;br&gt;
+Enabled user newuser.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;问题-在openwrt上设置samba服务器-windowswin10es文件浏览器都可以通过网络访问&#34;&gt;问题: 在openwrt上设置samba服务器, Windows/Win10/Es文件浏览器都可以通过网络访问.&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;环境说明:&lt;/strong&gt;&lt;br&gt;
+用S905L的盒子装了个openwrt, 装在TF卡上, 用TF卡启动.&lt;br&gt;
+TF卡上除了装op系统的大概1G空间外, 剩下的空间分区并格式化为exfat格式, op启动时会自动加载这个exfat分区, 使用samba(web上在网络存储-网络共享)共享出来可供局域网内设备访问.&lt;br&gt;
+Win10当前版本缺省不支持SMB 1.0/CIFS, 为了访问低版本的samba设备, 已通过&amp;quot;启用或关闭Windows功能&amp;quot;打开&amp;quot;SMB 1.0/CIFS文件共享支持&amp;quot;+&amp;ldquo;SMB Direct&amp;rdquo;, 需要能让这种设备访问盒子上的samba服务器 - 其实这并不是一个问题, 当前版本的samba(V4.11.6)早已支持新版本的samba协议.&lt;br&gt;
+安卓手机app&amp;quot;Es文件管理器&amp;quot;也需要在局域网内能访问同一个samba服务器.&lt;br&gt;
+&lt;strong&gt;问题详述:&lt;/strong&gt;&lt;br&gt;
+&lt;u&gt;问题1. linux上的samba服务器与Windows的Samba服务器是有区别的&lt;/u&gt;&lt;br&gt;
+Windows的samba服务器被访问时, 如果需要用户登录, 会在开始连接时就要求登录.&lt;br&gt;
+而Linux的samba服务器被访问时, 只有当访问到&amp;quot;共享目录&amp;quot;时, 才会问到登录信息.&lt;br&gt;
+&lt;u&gt;问题2. 当前版本的Win10在访问samba服务时, 已经不支匿名访问, 只能修改注册表信息来支持&lt;/u&gt;&lt;br&gt;
+这个操作比较麻烦, 不考虑&lt;br&gt;
+测试中发现, 当一个samba服务器里只要存在任何一个可以匿名访问的文件共享, Win10就无法访问整个Samba服务器, 因此要求samba服务器中的任何共享都是非匿名访问的.&lt;br&gt;
+&lt;u&gt;问题3 Es文件管理器App访问linux上的Samba服务器时, 缺省是以匿名方式访问&lt;/u&gt;&lt;br&gt;
+不会主动弹出登录信息窗口, 即使无法打开一个需要登录的共享时, 也不会主动弹出.&lt;br&gt;
+这就需要手动设置Es的登录信息.&lt;br&gt;
+这个问题和问题1有相关性.&lt;br&gt;
+&lt;strong&gt;其他&lt;/strong&gt;&lt;br&gt;
+由于exfat是微软的文件格式, 没有用户权限信息, 避开了linux复杂的权限问题, 因此选择使用这种文件格式&lt;br&gt;
+&lt;strong&gt;结论:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;op上的samba共享都需要设置成用户登录访问&lt;/li&gt;
+&lt;li&gt;Es访问时需要手动设置用户登录信息.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Samba服务器的设置如下&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;配置文件&lt;br&gt;
+op上luci的缺省配置文件如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[global]&lt;br&gt;
+netbios name = |NAME|&lt;br&gt;
+interfaces = |INTERFACES|&lt;br&gt;
+server string = |DESCRIPTION|&lt;br&gt;
+unix charset = |CHARSET|&lt;br&gt;
+workgroup = |WORKGROUP|&lt;/p&gt;
+&lt;p&gt;## This global parameter allows the Samba admin to limit what interfaces on a machine will serve SMB requests.&lt;br&gt;
+bind interfaces only = yes&lt;/p&gt;
+&lt;p&gt;## time for inactive connections to-be closed in minutes&lt;br&gt;
+deadtime = 15&lt;/p&gt;
+&lt;p&gt;## disable core dumps&lt;br&gt;
+enable core files = no&lt;/p&gt;
+&lt;p&gt;## set security (auto, user, domain, ads)&lt;br&gt;
+security = user&lt;/p&gt;
+&lt;p&gt;## This parameter controls whether a remote client is allowed or required to use SMB encryption.&lt;br&gt;
+## It has different effects depending on whether the connection uses SMB1 or SMB2 and newer:&lt;br&gt;
+## If the connection uses SMB1, then this option controls the use of a Samba-specific extension to the SMB protocol introduced in Samba 3.2 that makes   use of the Unix extensions.
+server min protocol = NT1&lt;br&gt;
+client min protocol = NT1&lt;br&gt;
+## If the connection uses SMB2 or newer, then this option controls the use of the SMB-level encryption that is supported in SMB version 3.0 and above and available in Windows 8 and newer.&lt;br&gt;
+## (default/auto,desired,required,off)&lt;br&gt;
+#smb encrypt = default&lt;/p&gt;
+&lt;p&gt;## set invalid users&lt;br&gt;
+invalid users = root&lt;/p&gt;
+&lt;p&gt;## map unknow users to guest&lt;br&gt;
+map to guest = Bad User&lt;/p&gt;
+&lt;p&gt;## allow client access to accounts that have null passwords.&lt;br&gt;
+null passwords = yes&lt;/p&gt;
+&lt;p&gt;## The old plaintext passdb backend. Some Samba features will not work if this passdb backend is used. (NOTE: enabled for size reasons)&lt;br&gt;
+## (tdbsam,smbpasswd,ldapsam)&lt;br&gt;
+passdb backend = smbpasswd&lt;/p&gt;
+&lt;p&gt;## Set location of smbpasswd (&amp;lsquo;smbd -b&amp;rsquo; will show default compiled location)&lt;br&gt;
+#smb passwd file = /etc/samba/smbpasswd&lt;/p&gt;
+&lt;p&gt;## LAN/WAN options (IPTOS_LOWDELAY TCP_NODELAY) WAN (IPTOS_THROUGHPUT)&lt;br&gt;
+socket options = IPTOS_LOWDELAY TCP_NODELAY&lt;/p&gt;
+&lt;p&gt;## If this integer parameter is set to a non-zero value, Samba will read from files asynchronously when the request size is bigger than this value.&lt;br&gt;
+## Note that it happens only for non-chained and non-chaining reads and when not using write cache.&lt;br&gt;
+## The only reasonable values for this parameter are 0 (no async I/O) and 1 (always do async I/O).&lt;br&gt;
+## (1/0)&lt;br&gt;
+#aio read size = 0&lt;br&gt;
+#aio write size = 0&lt;/p&gt;
+&lt;p&gt;## If Samba has been built with asynchronous I/O support, Samba will not wait until write requests are finished before returning the result to the client for files listed in this parameter.&lt;br&gt;
+## Instead, Samba will immediately return that the write request has been finished successfully, no matter if the operation will succeed or not.&lt;br&gt;
+## This might speed up clients without aio support, but is really dangerous, because data could be lost and files could be damaged.&lt;br&gt;
+#aio write behind = /*.tmp/&lt;/p&gt;
+&lt;p&gt;## lower CPU useage if supported and aio is disabled (aio read size = 0 ; aio write size = 0)&lt;br&gt;
+## currently broken (NOTE: see &lt;a class=&#34;link&#34; href=&#34;https://bugzilla.samba.org/show_bug.cgi?id=14095&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://bugzilla.samba.org/show_bug.cgi?id=14095&lt;/a&gt; )&lt;br&gt;
+## (no, yes)&lt;br&gt;
+#use sendfile = yes&lt;/p&gt;
+&lt;p&gt;## samba will behave as previous versions of Samba would and will fail the lock request immediately if the lock range cannot be obtained.&lt;br&gt;
+#blocking locks = No&lt;/p&gt;
+&lt;p&gt;## disable loading of all printcap printers by default (iprint, cups, lpstat)&lt;br&gt;
+load printers = No&lt;br&gt;
+printcap name = /dev/null&lt;/p&gt;
+&lt;p&gt;## Enabling this parameter will disable Samba&amp;rsquo;s support for the SPOOLSS set of MS-RPC&amp;rsquo;s.&lt;br&gt;
+disable spoolss = yes&lt;/p&gt;
+&lt;p&gt;## This parameters controls how printer status information is interpreted on your system.&lt;br&gt;
+## (BSD, AIX, LPRNG, PLP, SYSV, HPUX, QNX, SOFTQ)&lt;br&gt;
+printing = bsd&lt;/p&gt;
+&lt;p&gt;## Disable that nmbd is acting as a WINS server for unknow netbios names&lt;br&gt;
+#dns proxy = No&lt;/p&gt;
+&lt;p&gt;## win/unix user mapping backend&lt;br&gt;
+#idmap config * : backend = tdb&lt;/p&gt;
+&lt;p&gt;## Allows the server name that is advertised through MDNS to be set to the hostname rather than the Samba NETBIOS name.&lt;br&gt;
+## This allows an administrator to make Samba registered MDNS records match the case of the hostname rather than being in all capitals.&lt;br&gt;
+## (netbios, mdns)&lt;br&gt;
+mdns name = mdns&lt;/p&gt;
+&lt;p&gt;## Clients that only support netbios won&amp;rsquo;t be able to see your samba server when netbios support is disabled.&lt;br&gt;
+#disable netbios = Yes&lt;/p&gt;
+&lt;p&gt;## Setting this value to no will cause nmbd never to become a local master browser.&lt;br&gt;
+#local master = no&lt;/p&gt;
+&lt;p&gt;## (auto, yes) If this is set to yes, on startup, nmbd will force an election, and it will have a slight advantage in winning the election. It is recommended that this parameter is used in conjunction with domain master = yes, so that nmbd can guarantee becoming a domain master.&lt;br&gt;
+#preferred master = yes&lt;/p&gt;
+&lt;p&gt;## (445 139) Specifies which ports the server should listen on for SMB traffic.&lt;br&gt;
+## 139 is netbios/nmbd&lt;br&gt;
+#smb ports = 445 139&lt;/p&gt;
+&lt;p&gt;## This is a list of files and directories that are neither visible nor accessible.&lt;br&gt;
+## Each entry in the list must be separated by a &amp;lsquo;/&amp;rsquo;, which allows spaces to be included in the entry. &amp;lsquo;*&amp;rsquo; and &amp;lsquo;?&amp;rsquo; can be used to specify multiple files or directories as in DOS wildcards.&lt;br&gt;
+veto files = /Thumbs.db/.DS_Store/._.DS_Store/.apdisk/&lt;/p&gt;
+&lt;p&gt;## If a directory that is to be deleted contains nothing but veto files this deletion will fail unless you also set the delete veto files parameter to   yes.&lt;br&gt;
+delete veto files = yes&lt;/p&gt;
+&lt;p&gt;################ Filesystem and creation rules ################&lt;br&gt;
+## reported filesystem type (NTFS,Samba,FAT)&lt;br&gt;
+#fstype = FAT&lt;/p&gt;
+&lt;p&gt;## Allows a user who has write access to the file (by whatever means, including an ACL permission) to modify the permissions (including ACL) on it.&lt;br&gt;
+#dos filemode = Yes&lt;/p&gt;
+&lt;p&gt;## file/dir creating rules&lt;br&gt;
+#create mask = 0666&lt;br&gt;
+#directory mask = 0777&lt;br&gt;
+#force group = root&lt;br&gt;
+#force user = root&lt;br&gt;
+#inherit owner = windows and unix&lt;br&gt;
+################################################################&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个配置文件只需要屏蔽 invalid users = root 这一句, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#invalid users = root&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置samba用户&lt;br&gt;
+使用&amp;quot;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/qa/#%E9%97%AE%E9%A2%98-%E5%9C%A8openwrt%E4%B8%8A%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%94%A8%E7%9A%84samba%E7%94%A8%E6%88%B7&#34; &gt;在openwrt上新建一个可用的samba用户&lt;/a&gt;&amp;ldquo;的方法建立用户&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置共享目录(补记: 可能是在Luci的界面里)&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/29-qa-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;设置共享目录&#34;
+	
+	
+&gt;&lt;br&gt;
+按上图方式设置共享目录, 允许用户是刚才设置的smb用户.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问&lt;br&gt;
+Win10正常访问.&lt;br&gt;
+Es文件浏览器App在局域网里设置相应服务器的登录信息后就可以正常访问.&lt;br&gt;
+读写都没有问题.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;emuelec2020春节整合版s905-被百毒封了&#34;&gt;EmuELEC2020春节整合版(s905) 被百毒封了&lt;/h2&gt;
+&lt;p&gt;EmuELEC 3.3.1 2020春节整合版详细说明: &lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/read/cv4420521/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.bilibili.com/read/cv4420521/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;下载地址：&lt;/u&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.189.cn/t/F7JfYbF7VnU&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;EmuELEC2020春节整合版(s905) 被百毒封了&lt;/a&gt;  (访问码:nlp7) -&amp;gt; 已经转&lt;a class=&#34;link&#34; href=&#34;https://cloud.189.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天翼云&lt;/a&gt; 需要的请下载&lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/97745521&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@人中日月&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;基础包链接：&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1s03OQf60qQCmH8dejykplw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/1s03OQf60qQCmH8dejykplw&lt;/a&gt; 提取码：g13u&lt;br&gt;
+(三个增补包，分别是街机改版、ATOMISWAVE和NAOMI的整合包，需要自己另外根据EMUELEC使用指南里面的方法传到系统里。)&lt;/li&gt;
+&lt;li&gt;增量包链接：&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/17xkfIu-Wg1CzKAq9sGrXIw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/17xkfIu-Wg1CzKAq9sGrXIw&lt;/a&gt; 提取码：zkdr&lt;/li&gt;
+&lt;li&gt;斐讯N1补丁包链接：&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1RaNq2VaWiPvxX-4q2cjs1A&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/1RaNq2VaWiPvxX-4q2cjs1A&lt;/a&gt; 提取码：pty4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;另外, 还有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vol4增量包, 应该是FBN街机的&lt;/li&gt;
+&lt;li&gt;3.4版的更新包,更新emuelec到3.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;问题-openwrt的history只能看到当前连接的命令记录&#34;&gt;问题: openwrt的history只能看到当前连接的命令记录&lt;/h2&gt;
+&lt;p&gt;原因: op缺省使用的是ash, 这个轻量化的shell就是这样，除非改用别的shell, 比如bash&lt;br&gt;
+处理:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装bash&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# opkg update &amp;amp; opkg install bash&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置用户使用bash&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /etc/passwd&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;修改相应用户的shell为bash，并保存退出。&lt;br&gt;
+登出并重新登录后新的shell生效&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# echo $SHELL&lt;br&gt;
+/bin/bash&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看history&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# history&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;应该能看到记录，登出再进，可以看到文件～/.bash_history(bash的history 记录文件)&lt;/p&gt;
+&lt;h2 id=&#34;网络相关问题-内网互联&#34;&gt;网络相关问题: 内网互联&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000016556569&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;frp 和 nginx 搭建一个内网穿透服务器&lt;/a&gt;&lt;br&gt;
+网络结构: 外网nginx -&amp;gt; 外网frp server &amp;lt;-&amp;gt; 内网frp client -&amp;gt; 内网web&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.anquanke.com/post/id/231424&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;内网渗透代理之frp的应用与改造（一）&lt;/a&gt;&lt;br&gt;
+相关的&lt;a class=&#34;link&#34; href=&#34;https://github.com/mstxq17/FrpProPlugin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FrpProPlugin&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://hostloc.com/forum.php?mod=viewthread&amp;amp;tid=820833&amp;amp;extra=&amp;amp;page=2&amp;amp;mobile=2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;(rinetd YYDS)socat居然比iptab效率高&lt;/a&gt;&lt;br&gt;
+我映象比较深的就是 iptables frp nginx socat haproxy rinetd&lt;br&gt;
+因为我是转发到rdp然后看油管，稍微卡顿都可以很明显的感觉出来。rinetd很流畅，haproxy和frp可以勉强用用，其它的都是战五渣。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/t/567570&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;自认为比 frp 更好用的内网穿透工具 nps&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里列举了一些比较好用的开源的内网穿透工具，详细介绍一下各个软件工具的特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;frp&lt;br&gt;
+FRP 功能完整，主要采用 GO 语言实现，重量级的工具，服务端界面样式风格一般。&lt;br&gt;
+配置繁琐，不同的协议需要配置不同的参数，采用文件存放数据，不支持数据库管理数据。&lt;/li&gt;
+&lt;li&gt;holer&lt;br&gt;
+轻量级的内网穿透工具，holer 服务端采用 Java 语言实现，服务端界面漂亮简洁。&lt;br&gt;
+Holer 客户端采用了 Java 语言和 GO 语言实现了两种版本，支持几乎所有的 OS 平台。&lt;br&gt;
+用到流行的微服务框架 springboot 和 Java 网络框架 netty。&lt;br&gt;
+配置很简单，针对所有 TCP 协议只需在客户端设置一个 holer access key 即可。&lt;br&gt;
+采用 MySQL 数据库统一管理数据。&lt;/li&gt;
+&lt;li&gt;nps&lt;br&gt;
+轻量级的内网穿透工具，完全采用 GO 语言实现，服务端界面漂亮简洁。&lt;br&gt;
+支持的协议最广泛，配置稍简单，采用文件存放数据，不支持数据库管理数据。&lt;/li&gt;
+&lt;li&gt;lanproxy&lt;br&gt;
+轻量级的内网穿透工具，客户端采用 GO 语言和 Java 语言实现两种版本，采用了 Java 网络框架 netty，服务端界面体验较差。&lt;br&gt;
+配置稍繁琐，采用文件存放数据，不支持数据库管理数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其他:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.nasge.com/archives/48.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;内网穿透工具比较(ngrok,frp,lanproxy,goproxy,nps)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doubibackup.com/wkcjzpyd-2.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;关于目前 GFW(墙) 的封锁方式TCP封锁(阻断)猜想&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;问题-ubuntu采用docker官方shell安装时报错&#34;&gt;问题: ubuntu采用Docker官方shell安装时报错&lt;/h2&gt;
+&lt;p&gt;报错信息如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# curl -fsSL &lt;a class=&#34;link&#34; href=&#34;https://get.docker.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://get.docker.com&lt;/a&gt; -o get-docker.sh&lt;br&gt;
+# sh get-docker.sh&lt;br&gt;
+# Executing docker install script, commit: 7cae5f8b0decc17d6571f9f52eb840fbc13b2737&lt;br&gt;
++ sh -c apt-get update -qq &amp;gt;/dev/null&lt;br&gt;
+W: The repository &amp;lsquo;cdrom://Ubuntu-Server 16.04.6 LTS &lt;em&gt;Xenial Xerus&lt;/em&gt; - Release amd64 (20190226) xenial Release&amp;rsquo; does not have a Release file.&lt;br&gt;
+E: Failed to fetch cdrom://Ubuntu-Server 16.04.6 LTS &lt;em&gt;Xenial Xerus&lt;/em&gt; - Release amd64 (20190226)/dists/xenial/main/binary-amd64/Packages  Please use apt-cdrom to make this CD-ROM recognized by APT. apt-get update cannot be used to add new CD-ROMs&lt;br&gt;
+E: Some index files failed to download. They have been ignored, or old ones used instead.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误处理, 操作如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /etc/apt/sources.list&lt;br&gt;
+# 屏蔽掉有cdrom的那一行, 如下&lt;br&gt;
+#deb cdrom:[Ubuntu-Server 16.04.6 LTS &lt;em&gt;Xenial Xerus&lt;/em&gt; - Release amd64 (20190226)]/ xenial main restricted&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://linux.cn/article-5409-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何修复 apt-get update 无法添加新的 CD-ROM 的错误&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;问题-padavan路由作二级桥接无线路由时-系统时间混乱的问题处理&#34;&gt;问题: Padavan路由作二级桥接无线路由时, 系统时间混乱的问题处理&lt;/h2&gt;
+&lt;p&gt;状态: 配置了NTP同步, 但无效&lt;br&gt;
+原因: 可能是没有配置WAN造成的&lt;br&gt;
+处理:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;手动:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ntpd -t -p 192.168.1.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自动&lt;br&gt;
+在&amp;quot;系统管理&amp;rdquo;-&amp;ldquo;服务&amp;quot;中修改&amp;quot;调度任务 (Crontab)&amp;rdquo;, 增加&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0 * * * * ntpd -t -p 192.168.1.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;让系统每小时都做一次时间同步.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux下-以指定用户身份执行&#34;&gt;Linux下, 以指定用户身份执行&lt;/h2&gt;
+&lt;p&gt;例: # su - 用户名 -c &amp;ldquo;命令&amp;rdquo;&lt;br&gt;
+如:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# su - user -c &amp;ldquo;whoami&amp;rdquo;&lt;br&gt;
+user&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;说明: 以用户user身份执行whoami, 返回的用户身份是&amp;quot;user&amp;quot;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>联通(数码视讯)Q7盒子再刷Openwrt</title>
+        <link>https://jimway71.github.io/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/</link>
+        <pubDate>Mon, 15 Mar 2021 00:49:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-27.jpg" alt="Featured image of post 联通(数码视讯)Q7盒子再刷Openwrt" /&gt;&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;p&gt;联通(数码视讯)Q7盒子(以下简称Q7)做为一个电视盒子应该是没有什么可取之处, 但还可以做点别的, 比如, 做&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt&lt;/a&gt;盒子。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  title=&#34;恩山-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;推出了&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  title=&#34;多盒OP固件-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&amp;rdquo;&lt;/a&gt;, 是基于&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;amlogic(晶晨)&lt;/a&gt;的S9xx系列arm SOC的&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt&lt;/a&gt;固件, 现在支持包括基于amlogic(晶晨) S922x、S912、&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/196/index.html&#34;  title=&#34;S905X-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905x&lt;/a&gt;、s905x2、S905x3、S905d等多款SOC的盒子。&lt;br&gt;
+但是, &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;的固件说明中, 并未明确指出对&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;的支持, 而Q7用的SOC是&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;。&lt;br&gt;
+查到&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Amlogic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;维基Amlogic&lt;/a&gt;说明中是这么说的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Amlogic &lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;: 与&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/196/index.html&#34;  title=&#34;S905X-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905X&lt;/a&gt;相似，不同之处在于它支持HDMI 2.0b，但缺少VP9解码，摄像头接口和TS输入。&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按这种说法, &lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;可能是和&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/196/index.html&#34;  title=&#34;S905X-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905X&lt;/a&gt;差不多, 支持&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/196/index.html&#34;  title=&#34;S905X-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905X&lt;/a&gt;应该就能支持&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;, 那么Q7就应该能用。&lt;br&gt;
+推论如此, 然后在网上找到了一个实例, &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  title=&#34;恩山-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;大侠在&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-3570786-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;联通北京数码Q7,S905L电视盒刷成了openwrt系统路由器&amp;rdquo;&lt;/a&gt;贴子里, 明确说明他已经成功完成了将Q7刷上了&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt&lt;/a&gt;, 虽然没有详细说明, 但从帖子里可以看出来大概是怎么做的, 那么, 就跟随&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;大侠, 让Q7废物利用吧。&lt;br&gt;
+为了简单化(偷懒😁), 选用的是使用&lt;strong&gt;外接存储(U盘或TF卡)启动Q7&lt;/strong&gt;的方式。&lt;br&gt;
+&lt;u&gt;Q7自带TF卡槽&lt;/u&gt;, 这倒是为数不多的优点之一。&lt;/p&gt;
+&lt;h2 id=&#34;补充&#34;&gt;补充&lt;/h2&gt;
+&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github&lt;/a&gt;上找了下&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;的源码,  感觉应该是这个: &lt;a class=&#34;link&#34; href=&#34;https://github.com/lllrrr/mknop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lllrrr/mknop&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/tuanqing/mknop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tuanqing/mknop&lt;/a&gt;这个肯定是分支。&lt;br&gt;
+另外, &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;还做了&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-958173-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker Openwrt&lt;/a&gt;, 看看里面引用的内核源代码来源:&lt;br&gt;
+&lt;strong&gt;内核源码来源说明(两个平*的内核都来自各自最活跃的上游发布者)&lt;/strong&gt;&lt;br&gt;
+Amlogic内核：  &lt;a class=&#34;link&#34; href=&#34;https://github.com/150balbes/Amlogic_s905-kernel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/150balbes/Amlogic_s905-kernel&lt;/a&gt; （5.3.0）&lt;br&gt;
+Rockchip内核:   &lt;a class=&#34;link&#34; href=&#34;https://github.com/ayufan-rock64/linux-mainline-kernel/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/ayufan-rock64/linux-mainline-kernel/releases&lt;/a&gt;  （5.3.0）&lt;br&gt;
+公版内核补丁： &lt;a class=&#34;link&#34; href=&#34;https://kernel.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://kernel.org&lt;/a&gt;  （当前最新5.3.6补丁）&lt;br&gt;
+FullCone-Nat： &lt;a class=&#34;link&#34; href=&#34;https://github.com/Chion82/netfilter-full-cone-nat%20%20%20%20&amp;#43;%20%20952-net-conntrack-events-support-multiple-registrant.patch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;netfilter-full-cone-nat    +  952-net-conntrack-events-support-multiple-registrant.patch&lt;/a&gt;&lt;br&gt;
+(来自&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;openwrt&lt;/a&gt;源码)&lt;br&gt;
+exfat:              &lt;a class=&#34;link&#34; href=&#34;https://github.com/dorimanx/exfat-nofuse&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dorimanx/exfat-nofuse&lt;/a&gt;&lt;br&gt;
+Wireguard:      &lt;a class=&#34;link&#34; href=&#34;https://git.zx2c4.com/WireGuard&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://git.zx2c4.com/WireGuard&lt;/a&gt;&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  title=&#34;多盒OP固件-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&amp;rdquo;&lt;/a&gt; From &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-3570786-1-1.html&#34;  title=&#34;S905L电视盒刷op-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;联通北京数码Q7,S905L电视盒刷成了openwrt系统路由器&amp;rdquo;&lt;/a&gt; From &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;所需工具及软件&#34;&gt;所需工具及软件&lt;/h2&gt;
+&lt;p&gt;说明: 可以使用U盘或TF卡启动, SD卡没准也可以。 这里使用的是TF卡。&lt;br&gt;
+除了&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/&#34;  title=&#34;Q7盒子垃圾-&amp;gt;&#34;
+    &gt;&amp;ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&amp;rdquo;&lt;/a&gt;帖子中所用的工具及软件外, 还需要用到:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4G或以上大小的TF卡 + 读卡器&lt;br&gt;
+用于制做盒子启动盘(TF卡)。&lt;/li&gt;
+&lt;li&gt;镜像写入U盘工具&lt;br&gt;
+用于把固件镜像文件写到TF卡里。&lt;br&gt;
+Windows上这类工具很多, 选用的是&lt;a class=&#34;link&#34; href=&#34;https://www.alexpage.de/download/usbit/usbit.zip&#34;  title=&#34;USB Image Tool-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;USB Image Tool&lt;/a&gt;, 绿色软件, 不需要安装。&lt;/li&gt;
+&lt;li&gt;安卓调试工具&lt;a class=&#34;link&#34; href=&#34;https://dl.google.com/android/repository/platform-tools_r31.0.0-windows.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ADB&lt;/a&gt;&lt;br&gt;
+用于设置Q7从TF卡启动。&lt;/li&gt;
+&lt;li&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  title=&#34;多盒OP固件-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&amp;rdquo;&lt;/a&gt;文中所附的固件包。&lt;br&gt;
+用的是目录&amp;quot;N1-Openwrt_U盘直刷包&amp;quot;下的最新固件包, 当前是:&lt;br&gt;
+&amp;ldquo;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.7z&amp;rdquo;&lt;br&gt;
+解开压缩文件, 其中&amp;quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.img&amp;quot;就是要用的固件包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;刷机流程&#34;&gt;刷机流程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;破解Q7&lt;br&gt;
+按照&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/&#34;  title=&#34;Q7盒子垃圾-&amp;gt;&#34;
+    &gt;&amp;ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&amp;rdquo;&lt;/a&gt;帖子的做法, 破解Q7.&lt;br&gt;
+按&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  title=&#34;恩山-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;大侠的说法, &amp;ldquo;Q7需要刷过第三方固件才能确定能从卡和U盘启动&amp;rdquo;, 而Q7原厂固件无法确定能做到。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;del&gt;打开Q7的USB调试功能。(大概操作, 跟安卓手机也差不多)&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;正常打开Q7, 按正常方式使用遥控器操作, 进入&amp;quot;设置&amp;quot;(类似安卓的设置界面), 找到&amp;quot;关于设备&amp;quot;-&amp;ldquo;版本号&amp;rdquo;, 连续点击版本号很多次, 可能是十次, 也可能是七次, 试吧&amp;hellip;&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;然后退回&amp;quot;设置&amp;quot;界面, 就出现&amp;quot;开发者选项&amp;quot;, 进去就可以找到&amp;quot;USB调试&amp;quot;, 然后打开&amp;quot;USB调试&amp;quot;。&lt;/del&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;制作启动TF卡&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;选择镜像文件&lt;br&gt;
+按&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;大侠的说法, 在目录&amp;quot;N1-Openwrt_U盘直刷包&amp;quot;下的包都可以刷, 选了最新的55+o版本, 文件是&amp;quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.7z&amp;quot;, 解压出&amp;quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.img&amp;quot;文件。&lt;/li&gt;
+&lt;li&gt;用镜像写入U盘工具&lt;a class=&#34;link&#34; href=&#34;https://www.alexpage.de/download/usbit/usbit.zip&#34;  title=&#34;USB Image Tool-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;USB Image Tool&lt;/a&gt;把img文件写到TF卡里&lt;/li&gt;
+&lt;li&gt;修改TF卡根目录下的&amp;quot;uEnv.txt&amp;quot;文件, 如下图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;uEnv.txt&#34;
+	
+	
+&gt;
+即FDT要改为p212这个dtb文件(这个文件要确认在tf卡相应的目录下存在)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;del&gt;把TF卡插入到Q7的TF卡槽中, 使用ADB工具, 设置Q7从TF卡启动&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;连接Q7:&lt;/del&gt;~~&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;# adb connect Q7地址&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;del&gt;查看连接状态:&lt;/del&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;# adb devices&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;del&gt;重启Q7, 并设置成用cf卡或U盘等外围存储设备启动&lt;/del&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;# adb shell reboot update&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;(上面这个命令需要确认)&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;正常的话, 会重新从TF卡启动系统。&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从做好的TF卡启动盒子&lt;br&gt;
+正常启动盒子, 进入电视盒子界面.&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate&#34;  title=&#34;Reboot to LibreELEC-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Reboot to LibreELEC&amp;rdquo;&lt;/a&gt;, 这个apk设置系统首先从外部存储设备启动, 比如TF卡, 或者U盘.&lt;br&gt;
+在盒子的界面上, 安装&lt;a class=&#34;link&#34; href=&#34;https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate&#34;  title=&#34;Reboot to LibreELEC-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Reboot to LibreELEC&amp;rdquo;&lt;/a&gt;这个应用, 安装完成后运行这个APK, 并选择&amp;quot;ok&amp;quot;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-02.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;uEnv.txt&#34;
+	
+	
+&gt;&lt;br&gt;
+正常情况下, 如果有外置存储设备可以启动, 则从外置存储设备启动,否则从内部的存储设备启动.&lt;br&gt;
+比如, 插入了刷好固件的TF卡, 就会从TF卡启动, 运行openwrt; 如果没有, 就正常启动, 进入电视盒子界面.&lt;br&gt;
+&lt;u&gt;但是, Q7这个盒子比较奇葩, 如果设置好了能从TF卡启动, 那么就只能从TF卡启动, 不插TF卡时会死在第一屏界面.&lt;/u&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把系统安装到内部存储&lt;br&gt;
+系统里有提供安装工具(shell), 是/root/install-to-emmc.sh&lt;br&gt;
+如果有需要可以使用这个shell将系统装入内部存储&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;完成后启动openwrt&#34;&gt;完成后启动&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;使用tf卡启动, 成功地在Q7上运行了&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;openwrt&lt;/a&gt;.&lt;br&gt;
+openwrt缺省地址: 192.168.1.1, 缺省用户/密码: root/password&lt;br&gt;
+但是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不能设置wifi&lt;br&gt;
+可能是无线网卡不能正常驱动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用图片&#34;&gt;使用图片&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/27-q7-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;uEnv.txt&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;补充: 关于移动魔百盒R3300L(红)&lt;br&gt;
+可以使用给Q7做的启动盘(TF卡)启动.&lt;br&gt;
+用&lt;a class=&#34;link&#34; href=&#34;https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate&#34;  title=&#34;Reboot to LibreELEC-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Reboot to LibreELEC&amp;rdquo;&lt;/a&gt;可以正常工作, 插卡从卡启动, 不插卡正常启动.&lt;br&gt;
+用CoreMark测试分数比Q7略低, 差得并不多.&lt;br&gt;
+R3300L和Q7内部配置基本一致，甚至包括芯片组:
+&lt;ul&gt;
+&lt;li&gt;相同的CPU,&lt;/li&gt;
+&lt;li&gt;相同的wifi芯片,&lt;/li&gt;
+&lt;li&gt;相同的内存+存储配置,&lt;/li&gt;
+&lt;li&gt;壳子都是卡扣结构,&lt;/li&gt;
+&lt;li&gt;都能从usb口给盒子供电，不受电源开关控制,&lt;/li&gt;
+&lt;li&gt;都有tf卡槽。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关于TF卡的大小&lt;br&gt;
+前面说过, TF卡要&amp;gt;4G。&lt;br&gt;
+但是, 从使用情况看，TF卡仅有不到1G的空间分给了Openwrt要用的两个分区, 其中有一个是启动分区, 其它的空间都是空的。&lt;br&gt;
+所以, 估计1G的TF卡也都能用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于Q7的供电&lt;br&gt;
+帖子&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/&#34;  title=&#34;Q7盒子垃圾-&amp;gt;&#34;
+    &gt;&amp;ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&amp;rdquo;&lt;/a&gt;里面说过, Q7可以直接用USB端口的供电启动, 所以可以从别的设备的USB给Q7供电, 至少还可以少占一个电源插座。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CPUMark 测速&lt;br&gt;
+命令如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# /etc/coremark.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;测速完成后, 在Luci管理界面, &amp;ldquo;状态&amp;rdquo;-&amp;ldquo;概览&amp;quot;里可以看到CpuMark值&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;再补充---关于网络共享服务&#34;&gt;再补充 - 关于网络共享服务&lt;/h2&gt;
+&lt;p&gt;Openwrt中有提供多种网络存储服务, 包括Samba/NFS/miniDLNA/可道云/微力同步等多种相关功能。&lt;br&gt;
+在给Q7刷Openwrt后, 还通过配置Samba+miniDLNA, 设置了一个简单的网络共享服务+多媒体服务&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;设置Sabmba服务&lt;br&gt;
+操作如下:&lt;br&gt;
+Luci界面-网络存储-&amp;ldquo;Samba&amp;rdquo;-&amp;ldquo;编辑模板&amp;quot;里改配置文件(没搞懂原因), 关掉&amp;quot;invalid users = root&amp;quot;这行&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;## set invalid users&lt;br&gt;
+#invalid users = root&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设置共享目录&lt;br&gt;
+设置如图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Samba设置&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现象:&lt;br&gt;
+用手机上有EsExplorer连接上后(当前也就只有手机能连上), 看不到共享的文件目录&lt;br&gt;
+原因: 管理界面里共享目录的设置并没有生效, 还是需要手动修改配置文件&amp;rdquo;/etc/samba/smb.conf&amp;quot;进行设置(已确认重启后有效)&lt;br&gt;
+但是, &amp;ldquo;Samba&amp;rdquo;-&amp;ldquo;编辑模板&amp;quot;却是有效的, 而且进入linux界面操作, 直接修改/etc/samba/smb.conf的相应内容却无效!~~~ 必须使用管理界面的&amp;quot;编译模板&amp;quot;进行修改!&lt;br&gt;
+即: 改模板必须在&amp;quot;Samba&amp;rdquo;-&amp;ldquo;编辑模板&amp;quot;里, 改共享目录配置必须直接改&amp;rdquo;/etc/samba/smb.conf&amp;quot;文件&lt;br&gt;
+处理:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /etc/samba/smb.conf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在文件最后面增加如下配置:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[Udisk]&lt;br&gt;
+path = /mnt/mmcblk1p3&lt;br&gt;
+create mask = 0777&lt;br&gt;
+read only = no&lt;br&gt;
+guest ok = yes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如图所示:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Samba设置&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后重启samba服务:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service samba4 restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用smbclient查看共享的情况:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# smbclient -L 192.168.1.206&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;会看到已经成功共享, 如图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Samba设置&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注意:&lt;br&gt;
+还需要对共享出的根目录权限做设置, 才能有读写全部权限&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# chmod 0777 /mnt/mmcblk1p3&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置miniDLNA&lt;br&gt;
+在X信电视上发现X信的媒体中心支持DLNA, 而Q7上的Openwrt里, &amp;ldquo;网络存储&amp;quot;下是有miniDLNA服务, 设置比较简单, 基本上是设置下目录, 打开功能就可以了。&lt;br&gt;
+经过测试, 在X信电视上用自带的媒体中心可以播放视频、音频、图片等多种媒体, 还可以关屏幕播放mp3音乐。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But&amp;hellip;到最后, 重启Q7后, openwrt的Luci界面出错了, 进不了管理界面, 就此, 折腾Q7告一段落。
+总结: Openwrt的SAMBA功能大致能用, miniDLNA功能也没问题, 都可以用。&lt;/p&gt;
 </description>
         </item>
         <item>

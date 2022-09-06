@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='S905L可以跑op'><title>联通(数码视讯)Q7盒子再刷Openwrt</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='联通(数码视讯)Q7盒子再刷Openwrt'>
+<meta property='og:description' content='S905L可以跑op'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数码视讯Q7' /><meta property='article:tag' content='电视盒子' /><meta property='article:tag' content='刷机' /><meta property='article:tag' content='S905' /><meta property='article:tag' content='openwrt' /><meta property='article:tag' content='FLIPPY' /><meta property='article:tag' content='R3300L' /><meta property='article:tag' content='REBOOT TO LIBREELEC' /><meta property='article:tag' content='Samba' /><meta property='article:tag' content='miniDLNA' /><meta property='article:published_time' content='2021-03-15T00:49:16&#43;08:00'/><meta property='article:modified_time' content='2021-03-15T00:49:16&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-27.jpg' />
+<meta name="twitter:title" content="联通(数码视讯)Q7盒子再刷Openwrt">
+<meta name="twitter:description" content="S905L可以跑op"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-27.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/avatar-icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/">
+                
+                    <img src="/wallpaper/wallpaper-27.jpg" loading="lazy" alt="Featured image of post 联通(数码视讯)Q7盒子再刷Openwrt" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                migration
+            </a>
+        
+            <a href="/categories/tv-box/" >
+                TV Box
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/">联通(数码视讯)Q7盒子再刷Openwrt</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            S905L可以跑op
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 15, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 9 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="说明">说明</h2>
+<p>联通(数码视讯)Q7盒子(以下简称Q7)做为一个电视盒子应该是没有什么可取之处, 但还可以做点别的, 比如, 做<a class="link" href="https://openwrt.org/"  title="Openwrt-&gt;"
+     target="_blank" rel="noopener"
+    >Openwrt</a>盒子。<br>
+<a class="link" href="https://www.right.com.cn/"  title="恩山-&gt;"
+     target="_blank" rel="noopener"
+    >恩山论坛</a>的<a class="link" href="https://www.right.com.cn/forum/space-uid-285101.html"  title="flippy-&gt;"
+     target="_blank" rel="noopener"
+    >flippy大侠</a>推出了<a class="link" href="https://www.right.com.cn/forum/thread-4076037-1-1.html"  title="多盒OP固件-&gt;"
+     target="_blank" rel="noopener"
+    >&ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&rdquo;</a>, 是基于<a class="link" href="https://www.amlogic.com/"  target="_blank" rel="noopener"
+    >amlogic(晶晨)</a>的S9xx系列arm SOC的<a class="link" href="https://openwrt.org/"  title="Openwrt-&gt;"
+     target="_blank" rel="noopener"
+    >Openwrt</a>固件, 现在支持包括基于amlogic(晶晨) S922x、S912、<a class="link" href="https://www.amlogic.com/#Products/196/index.html"  title="S905X-&gt;"
+     target="_blank" rel="noopener"
+    >S905x</a>、s905x2、S905x3、S905d等多款SOC的盒子。<br>
+但是, <a class="link" href="https://www.right.com.cn/forum/space-uid-285101.html"  title="flippy-&gt;"
+     target="_blank" rel="noopener"
+    >flippy大侠</a>的固件说明中, 并未明确指出对<a class="link" href="https://www.amlogic.com/#Products/414/index.html"  title="S905L-&gt;"
+     target="_blank" rel="noopener"
+    >S905L</a>的支持, 而Q7用的SOC是<a class="link" href="https://www.amlogic.com/#Products/414/index.html"  title="S905L-&gt;"
+     target="_blank" rel="noopener"
+    >S905L</a>。<br>
+查到<a class="link" href="https://en.wikipedia.org/wiki/Amlogic"  target="_blank" rel="noopener"
+    >维基Amlogic</a>说明中是这么说的:</p>
+<ul>
+<li><u>Amlogic <a class="link" href="https://www.amlogic.com/#Products/414/index.html"  title="S905L-&gt;"
+     target="_blank" rel="noopener"
+    >S905L</a>: 与<a class="link" href="https://www.amlogic.com/#Products/196/index.html"  title="S905X-&gt;"
+     target="_blank" rel="noopener"
+    >S905X</a>相似，不同之处在于它支持HDMI 2.0b，但缺少VP9解码，摄像头接口和TS输入。</u></li>
+</ul>
+<p>按这种说法, <a class="link" href="https://www.amlogic.com/#Products/414/index.html"  title="S905L-&gt;"
+     target="_blank" rel="noopener"
+    >S905L</a>可能是和<a class="link" href="https://www.amlogic.com/#Products/196/index.html"  title="S905X-&gt;"
+     target="_blank" rel="noopener"
+    >S905X</a>差不多, 支持<a class="link" href="https://www.amlogic.com/#Products/196/index.html"  title="S905X-&gt;"
+     target="_blank" rel="noopener"
+    >S905X</a>应该就能支持<a class="link" href="https://www.amlogic.com/#Products/414/index.html"  title="S905L-&gt;"
+     target="_blank" rel="noopener"
+    >S905L</a>, 那么Q7就应该能用。<br>
+推论如此, 然后在网上找到了一个实例, <a class="link" href="https://www.right.com.cn/"  title="恩山-&gt;"
+     target="_blank" rel="noopener"
+    >恩山论坛</a>的<a class="link" href="https://www.right.com.cn/forum/space-uid-593965.html"  title="len_-&gt;"
+     target="_blank" rel="noopener"
+    >Len_</a>大侠在<a class="link" href="https://www.right.com.cn/forum/thread-3570786-1-1.html"  target="_blank" rel="noopener"
+    >&ldquo;联通北京数码Q7,S905L电视盒刷成了openwrt系统路由器&rdquo;</a>贴子里, 明确说明他已经成功完成了将Q7刷上了<a class="link" href="https://openwrt.org/"  title="Openwrt-&gt;"
+     target="_blank" rel="noopener"
+    >Openwrt</a>, 虽然没有详细说明, 但从帖子里可以看出来大概是怎么做的, 那么, 就跟随<a class="link" href="https://www.right.com.cn/forum/space-uid-593965.html"  title="len_-&gt;"
+     target="_blank" rel="noopener"
+    >Len_</a>大侠, 让Q7废物利用吧。<br>
+为了简单化(偷懒😁), 选用的是使用<strong>外接存储(U盘或TF卡)启动Q7</strong>的方式。<br>
+<u>Q7自带TF卡槽</u>, 这倒是为数不多的优点之一。</p>
+<h2 id="补充">补充</h2>
+<p>在<a class="link" href="https://github.com/"  target="_blank" rel="noopener"
+    >Github</a>上找了下<a class="link" href="https://www.right.com.cn/forum/space-uid-285101.html"  title="flippy-&gt;"
+     target="_blank" rel="noopener"
+    >flippy大侠</a>的源码,  感觉应该是这个: <a class="link" href="https://github.com/lllrrr/mknop"  target="_blank" rel="noopener"
+    >lllrrr/mknop</a><br>
+<a class="link" href="https://github.com/tuanqing/mknop"  target="_blank" rel="noopener"
+    >tuanqing/mknop</a>这个肯定是分支。<br>
+另外, <a class="link" href="https://www.right.com.cn/forum/space-uid-285101.html"  title="flippy-&gt;"
+     target="_blank" rel="noopener"
+    >flippy大侠</a>还做了<a class="link" href="https://www.right.com.cn/forum/thread-958173-1-1.html"  target="_blank" rel="noopener"
+    >Docker Openwrt</a>, 看看里面引用的内核源代码来源:<br>
+<strong>内核源码来源说明(两个平*的内核都来自各自最活跃的上游发布者)</strong><br>
+Amlogic内核：  <a class="link" href="https://github.com/150balbes/Amlogic_s905-kernel"  target="_blank" rel="noopener"
+    >https://github.com/150balbes/Amlogic_s905-kernel</a> （5.3.0）<br>
+Rockchip内核:   <a class="link" href="https://github.com/ayufan-rock64/linux-mainline-kernel/releases"  target="_blank" rel="noopener"
+    >https://github.com/ayufan-rock64/linux-mainline-kernel/releases</a>  （5.3.0）<br>
+公版内核补丁： <a class="link" href="https://kernel.org"  target="_blank" rel="noopener"
+    >https://kernel.org</a>  （当前最新5.3.6补丁）<br>
+FullCone-Nat： <a class="link" href="https://github.com/Chion82/netfilter-full-cone-nat%20%20%20%20&#43;%20%20952-net-conntrack-events-support-multiple-registrant.patch"  target="_blank" rel="noopener"
+    >netfilter-full-cone-nat    +  952-net-conntrack-events-support-multiple-registrant.patch</a><br>
+(来自<a class="link" href="https://openwrt.org/"  title="Openwrt-&gt;"
+     target="_blank" rel="noopener"
+    >openwrt</a>源码)<br>
+exfat:              <a class="link" href="https://github.com/dorimanx/exfat-nofuse"  target="_blank" rel="noopener"
+    >https://github.com/dorimanx/exfat-nofuse</a><br>
+Wireguard:      <a class="link" href="https://git.zx2c4.com/WireGuard"  target="_blank" rel="noopener"
+    >https://git.zx2c4.com/WireGuard</a><br>
+&hellip;&hellip;</p>
+<h2 id="参考">参考</h2>
+<p><a class="link" href="https://www.right.com.cn/forum/thread-4076037-1-1.html"  title="多盒OP固件-&gt;"
+     target="_blank" rel="noopener"
+    >&ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&rdquo;</a> From <a class="link" href="https://www.right.com.cn/forum/space-uid-285101.html"  title="flippy-&gt;"
+     target="_blank" rel="noopener"
+    >flippy大侠</a><br>
+<a class="link" href="https://www.right.com.cn/forum/thread-3570786-1-1.html"  title="S905L电视盒刷op-&gt;"
+     target="_blank" rel="noopener"
+    >&ldquo;联通北京数码Q7,S905L电视盒刷成了openwrt系统路由器&rdquo;</a> From <a class="link" href="https://www.right.com.cn/forum/space-uid-593965.html"  title="len_-&gt;"
+     target="_blank" rel="noopener"
+    >Len_</a></p>
+<h2 id="所需工具及软件">所需工具及软件</h2>
+<p>说明: 可以使用U盘或TF卡启动, SD卡没准也可以。 这里使用的是TF卡。<br>
+除了<a class="link" href="/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/"  title="Q7盒子垃圾-&gt;"
+    >&ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&rdquo;</a>帖子中所用的工具及软件外, 还需要用到:</p>
+<ul>
+<li>4G或以上大小的TF卡 + 读卡器<br>
+用于制做盒子启动盘(TF卡)。</li>
+<li>镜像写入U盘工具<br>
+用于把固件镜像文件写到TF卡里。<br>
+Windows上这类工具很多, 选用的是<a class="link" href="https://www.alexpage.de/download/usbit/usbit.zip"  title="USB Image Tool-&gt;"
+     target="_blank" rel="noopener"
+    >USB Image Tool</a>, 绿色软件, 不需要安装。</li>
+<li>安卓调试工具<a class="link" href="https://dl.google.com/android/repository/platform-tools_r31.0.0-windows.zip"  target="_blank" rel="noopener"
+    >ADB</a><br>
+用于设置Q7从TF卡启动。</li>
+<li>下载<a class="link" href="https://www.right.com.cn/forum/thread-4076037-1-1.html"  title="多盒OP固件-&gt;"
+     target="_blank" rel="noopener"
+    >&ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&rdquo;</a>文中所附的固件包。<br>
+用的是目录&quot;N1-Openwrt_U盘直刷包&quot;下的最新固件包, 当前是:<br>
+&ldquo;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.7z&rdquo;<br>
+解开压缩文件, 其中&quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.img&quot;就是要用的固件包。</li>
+</ul>
+<h2 id="刷机流程">刷机流程</h2>
+<ul>
+<li>
+<p>破解Q7<br>
+按照<a class="link" href="/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/"  title="Q7盒子垃圾-&gt;"
+    >&ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&rdquo;</a>帖子的做法, 破解Q7.<br>
+按<a class="link" href="https://www.right.com.cn/"  title="恩山-&gt;"
+     target="_blank" rel="noopener"
+    >恩山论坛</a>的<a class="link" href="https://www.right.com.cn/forum/space-uid-593965.html"  title="len_-&gt;"
+     target="_blank" rel="noopener"
+    >Len_</a>大侠的说法, &ldquo;Q7需要刷过第三方固件才能确定能从卡和U盘启动&rdquo;, 而Q7原厂固件无法确定能做到。</p>
+</li>
+<li>
+<p><del>打开Q7的USB调试功能。(大概操作, 跟安卓手机也差不多)</del><br>
+<del>正常打开Q7, 按正常方式使用遥控器操作, 进入&quot;设置&quot;(类似安卓的设置界面), 找到&quot;关于设备&quot;-&ldquo;版本号&rdquo;, 连续点击版本号很多次, 可能是十次, 也可能是七次, 试吧&hellip;</del><br>
+<del>然后退回&quot;设置&quot;界面, 就出现&quot;开发者选项&quot;, 进去就可以找到&quot;USB调试&quot;, 然后打开&quot;USB调试&quot;。</del></p>
+</li>
+<li>
+<p>制作启动TF卡</p>
+<ul>
+<li>选择镜像文件<br>
+按<a class="link" href="https://www.right.com.cn/forum/space-uid-593965.html"  title="len_-&gt;"
+     target="_blank" rel="noopener"
+    >Len_</a>大侠的说法, 在目录&quot;N1-Openwrt_U盘直刷包&quot;下的包都可以刷, 选了最新的55+o版本, 文件是&quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.7z&quot;, 解压出&quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.img&quot;文件。</li>
+<li>用镜像写入U盘工具<a class="link" href="https://www.alexpage.de/download/usbit/usbit.zip"  title="USB Image Tool-&gt;"
+     target="_blank" rel="noopener"
+    >USB Image Tool</a>把img文件写到TF卡里</li>
+<li>修改TF卡根目录下的&quot;uEnv.txt&quot;文件, 如下图:<br>
+<img src="/img/27-q7-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="uEnv.txt"
+	
+	
+>
+即FDT要改为p212这个dtb文件(这个文件要确认在tf卡相应的目录下存在)</li>
+</ul>
+</li>
+<li>
+<p><del>把TF卡插入到Q7的TF卡槽中, 使用ADB工具, 设置Q7从TF卡启动</del><br>
+<del>连接Q7:</del>~~</p>
+<blockquote>
+<p><del># adb connect Q7地址</del></p>
+</blockquote>
+<p><del>查看连接状态:</del></p>
+<blockquote>
+<p><del># adb devices</del></p>
+</blockquote>
+<p><del>重启Q7, 并设置成用cf卡或U盘等外围存储设备启动</del></p>
+<blockquote>
+<p><del># adb shell reboot update</del><br>
+<del>(上面这个命令需要确认)</del><br>
+<del>正常的话, 会重新从TF卡启动系统。</del></p>
+</blockquote>
+</li>
+<li>
+<p>从做好的TF卡启动盒子<br>
+正常启动盒子, 进入电视盒子界面.<br>
+下载<a class="link" href="https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate"  title="Reboot to LibreELEC-&gt;"
+     target="_blank" rel="noopener"
+    >&ldquo;Reboot to LibreELEC&rdquo;</a>, 这个apk设置系统首先从外部存储设备启动, 比如TF卡, 或者U盘.<br>
+在盒子的界面上, 安装<a class="link" href="https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate"  title="Reboot to LibreELEC-&gt;"
+     target="_blank" rel="noopener"
+    >&ldquo;Reboot to LibreELEC&rdquo;</a>这个应用, 安装完成后运行这个APK, 并选择&quot;ok&quot;<br>
+<img src="/img/27-q7-02.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="uEnv.txt"
+	
+	
+><br>
+正常情况下, 如果有外置存储设备可以启动, 则从外置存储设备启动,否则从内部的存储设备启动.<br>
+比如, 插入了刷好固件的TF卡, 就会从TF卡启动, 运行openwrt; 如果没有, 就正常启动, 进入电视盒子界面.<br>
+<u>但是, Q7这个盒子比较奇葩, 如果设置好了能从TF卡启动, 那么就只能从TF卡启动, 不插TF卡时会死在第一屏界面.</u></p>
+</li>
+<li>
+<p>把系统安装到内部存储<br>
+系统里有提供安装工具(shell), 是/root/install-to-emmc.sh<br>
+如果有需要可以使用这个shell将系统装入内部存储</p>
+</li>
+</ul>
+<h2 id="完成后启动openwrt">完成后启动<a class="link" href="https://openwrt.org/"  title="Openwrt-&gt;"
+     target="_blank" rel="noopener"
+    >Openwrt</a></h2>
+<p>使用tf卡启动, 成功地在Q7上运行了<a class="link" href="https://openwrt.org/"  title="Openwrt-&gt;"
+     target="_blank" rel="noopener"
+    >openwrt</a>.<br>
+openwrt缺省地址: 192.168.1.1, 缺省用户/密码: root/password<br>
+但是:</p>
+<ul>
+<li>不能设置wifi<br>
+可能是无线网卡不能正常驱动。</li>
+</ul>
+<h2 id="使用图片">使用图片</h2>
+<p><img src="/img/27-q7-03.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="uEnv.txt"
+	
+	
+></p>
+<ul>
+<li>补充: 关于移动魔百盒R3300L(红)<br>
+可以使用给Q7做的启动盘(TF卡)启动.<br>
+用<a class="link" href="https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate"  title="Reboot to LibreELEC-&gt;"
+     target="_blank" rel="noopener"
+    >&ldquo;Reboot to LibreELEC&rdquo;</a>可以正常工作, 插卡从卡启动, 不插卡正常启动.<br>
+用CoreMark测试分数比Q7略低, 差得并不多.<br>
+R3300L和Q7内部配置基本一致，甚至包括芯片组:
+<ul>
+<li>相同的CPU,</li>
+<li>相同的wifi芯片,</li>
+<li>相同的内存+存储配置,</li>
+<li>壳子都是卡扣结构,</li>
+<li>都能从usb口给盒子供电，不受电源开关控制,</li>
+<li>都有tf卡槽。</li>
+</ul>
+</li>
+</ul>
+<h2 id="其他">其他</h2>
+<ul>
+<li>
+<p>关于TF卡的大小<br>
+前面说过, TF卡要&gt;4G。<br>
+但是, 从使用情况看，TF卡仅有不到1G的空间分给了Openwrt要用的两个分区, 其中有一个是启动分区, 其它的空间都是空的。<br>
+所以, 估计1G的TF卡也都能用。</p>
+</li>
+<li>
+<p>关于Q7的供电<br>
+帖子<a class="link" href="/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/"  title="Q7盒子垃圾-&gt;"
+    >&ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&rdquo;</a>里面说过, Q7可以直接用USB端口的供电启动, 所以可以从别的设备的USB给Q7供电, 至少还可以少占一个电源插座。</p>
+</li>
+<li>
+<p>CPUMark 测速<br>
+命令如下:</p>
+<blockquote>
+<p># /etc/coremark.sh</p>
+</blockquote>
+<p>测速完成后, 在Luci管理界面, &ldquo;状态&rdquo;-&ldquo;概览&quot;里可以看到CpuMark值</p>
+</li>
+</ul>
+<h2 id="再补充---关于网络共享服务">再补充 - 关于网络共享服务</h2>
+<p>Openwrt中有提供多种网络存储服务, 包括Samba/NFS/miniDLNA/可道云/微力同步等多种相关功能。<br>
+在给Q7刷Openwrt后, 还通过配置Samba+miniDLNA, 设置了一个简单的网络共享服务+多媒体服务</p>
+<ul>
+<li>
+<p>设置Sabmba服务<br>
+操作如下:<br>
+Luci界面-网络存储-&ldquo;Samba&rdquo;-&ldquo;编辑模板&quot;里改配置文件(没搞懂原因), 关掉&quot;invalid users = root&quot;这行</p>
+<blockquote>
+<p>## set invalid users<br>
+#invalid users = root</p>
+</blockquote>
+<p>设置共享目录<br>
+设置如图:<br>
+<img src="/img/27-q7-04.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Samba设置"
+	
+	
+></p>
+<p>现象:<br>
+用手机上有EsExplorer连接上后(当前也就只有手机能连上), 看不到共享的文件目录<br>
+原因: 管理界面里共享目录的设置并没有生效, 还是需要手动修改配置文件&rdquo;/etc/samba/smb.conf&quot;进行设置(已确认重启后有效)<br>
+但是, &ldquo;Samba&rdquo;-&ldquo;编辑模板&quot;却是有效的, 而且进入linux界面操作, 直接修改/etc/samba/smb.conf的相应内容却无效!~~~ 必须使用管理界面的&quot;编译模板&quot;进行修改!<br>
+即: 改模板必须在&quot;Samba&rdquo;-&ldquo;编辑模板&quot;里, 改共享目录配置必须直接改&rdquo;/etc/samba/smb.conf&quot;文件<br>
+处理:</p>
+<blockquote>
+<p># vim /etc/samba/smb.conf</p>
+</blockquote>
+<p>在文件最后面增加如下配置:</p>
+<blockquote>
+<p>[Udisk]<br>
+path = /mnt/mmcblk1p3<br>
+create mask = 0777<br>
+read only = no<br>
+guest ok = yes</p>
+</blockquote>
+<p>如图所示:<br>
+<img src="/img/27-q7-05.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Samba设置"
+	
+	
+></p>
+<p>然后重启samba服务:</p>
+<blockquote>
+<p># service samba4 restart</p>
+</blockquote>
+<p>用smbclient查看共享的情况:</p>
+<blockquote>
+<p># smbclient -L 192.168.1.206</p>
+</blockquote>
+<p>会看到已经成功共享, 如图:<br>
+<img src="/img/27-q7-06.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Samba设置"
+	
+	
+></p>
+<p>注意:<br>
+还需要对共享出的根目录权限做设置, 才能有读写全部权限</p>
+<blockquote>
+<p># chmod 0777 /mnt/mmcblk1p3</p>
+</blockquote>
+</li>
+<li>
+<p>设置miniDLNA<br>
+在X信电视上发现X信的媒体中心支持DLNA, 而Q7上的Openwrt里, &ldquo;网络存储&quot;下是有miniDLNA服务, 设置比较简单, 基本上是设置下目录, 打开功能就可以了。<br>
+经过测试, 在X信电视上用自带的媒体中心可以播放视频、音频、图片等多种媒体, 还可以关屏幕播放mp3音乐。</p>
+</li>
+</ul>
+<p>But&hellip;到最后, 重启Q7后, openwrt的Luci界面出错了, 进不了管理界面, 就此, 折腾Q7告一段落。
+总结: Openwrt的SAMBA功能大致能用, miniDLNA功能也没问题, 都可以用。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7/">数码视讯Q7</a>
+        
+            <a href="/tags/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/">电视盒子</a>
+        
+            <a href="/tags/%E5%88%B7%E6%9C%BA/">刷机</a>
+        
+            <a href="/tags/s905/">S905</a>
+        
+            <a href="/tags/openwrt/">openwrt</a>
+        
+            <a href="/tags/flippy/">FLIPPY</a>
+        
+            <a href="/tags/r3300l/">R3300L</a>
+        
+            <a href="/tags/reboot-to-libreelec/">REBOOT TO LIBREELEC</a>
+        
+            <a href="/tags/samba/">samba</a>
+        
+            <a href="/tags/minidlna/">miniDLNA</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E7%9A%84%E5%A5%BD%E8%B4%B4%E6%94%B6%E9%9B%86/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-26.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-26.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于电视盒子刷机的好贴收集</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E6%88%90%E5%8A%9F-%E4%BD%86%E8%BF%99q7%E7%9B%92%E5%AD%90%E6%98%AF%E7%9C%9F%E7%9A%84%E5%9E%83%E5%9C%BE/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-24.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-24.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-30.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-30.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Openwrt上建立Docker环境</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-25.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-25.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">再刷移动魔百和CM201-2电视盒子</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-29.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#说明">说明</a></li>
+    <li><a href="#补充">补充</a></li>
+    <li><a href="#参考">参考</a></li>
+    <li><a href="#所需工具及软件">所需工具及软件</a></li>
+    <li><a href="#刷机流程">刷机流程</a></li>
+    <li><a href="#完成后启动openwrt">完成后启动<a href="https://openwrt.org/" title="Openwrt-&gt;">Openwrt</a></a></li>
+    <li><a href="#使用图片">使用图片</a></li>
+    <li><a href="#其他">其他</a></li>
+    <li><a href="#再补充---关于网络共享服务">再补充 - 关于网络共享服务</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

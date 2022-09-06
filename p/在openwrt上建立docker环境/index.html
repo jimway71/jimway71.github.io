@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Docker on Openwrt'><title>在Openwrt上建立Docker环境</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='在Openwrt上建立Docker环境'>
+<meta property='og:description' content='Docker on Openwrt'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='电视盒子' /><meta property='article:tag' content='Q7' /><meta property='article:tag' content='DOCKER' /><meta property='article:tag' content='FDISK' /><meta property='article:tag' content='MKFS' /><meta property='article:tag' content='MOUNT' /><meta property='article:tag' content='Openwrt' /><meta property='article:tag' content='S905' /><meta property='article:tag' content='portainer' /><meta property='article:tag' content='Docker on Openwrt' /><meta property='article:published_time' content='2021-04-06T18:06:16&#43;08:00'/><meta property='article:modified_time' content='2021-04-06T18:06:16&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-30.jpg' />
+<meta name="twitter:title" content="在Openwrt上建立Docker环境">
+<meta name="twitter:description" content="Docker on Openwrt"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-30.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/avatar-icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/">
+                
+                    <img src="/wallpaper/wallpaper-30.jpg" loading="lazy" alt="Featured image of post 在Openwrt上建立Docker环境" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                migration
+            </a>
+        
+            <a href="/categories/tv-box/" >
+                TV Box
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/">在Openwrt上建立Docker环境</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Docker on Openwrt
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 06, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="说明">说明</h2>
+<p><a class="link" href="https://www.right.com.cn/"  target="_blank" rel="noopener"
+    >恩山论坛</a>的<a class="link" href="https://www.right.com.cn/forum/space-uid-285101.html"  title="flippy-&gt;"
+     target="_blank" rel="noopener"
+    >flippy大侠</a>推出的<a class="link" href="https://www.right.com.cn/forum/thread-4076037-1-1.html"  target="_blank" rel="noopener"
+    >&ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&rdquo;</a>内置了Docker CE容器(服务-Docker CE容器), 但Docker并不(缺省)可用.<br>
+在Docker CE容器主页面下, 提供了内置的&quot;Docker 初始化无脑配置教程&quot;链接(一个PDF文件), 按照教程说明, 可以简单的把Docker环境搭建完成.<br>
+<img src="/img/30-q7-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Docker 初始化无脑配置教程"
+	
+	
+></p>
+<h2 id="环境说明">环境说明</h2>
+<p>在TF卡里装了<a class="link" href="https://www.right.com.cn/forum/space-uid-285101.html"  title="flippy-&gt;"
+     target="_blank" rel="noopener"
+    >flippy大侠</a>的<a class="link" href="https://www.right.com.cn/forum/thread-4076037-1-1.html"  target="_blank" rel="noopener"
+    >OP固件</a>, 用这张TF卡插在联通(数码视讯)Q7盒子(以下简称Q7)里启动, op可以正常运行.<br>
+TF卡中只用不到1G空间被op系统占用, 剩下的分成了一个exfat的主分区.</p>
+<h2 id="操作步骤">操作步骤</h2>
+<p>操作步骤大致按照&quot;Docker 初始化无脑配置教程&quot;, 但略有些不同.</p>
+<ul>
+<li>
+<p>给Docker分配存储空间<br>
+由于原来剩余空间都给了exfat主分区, 所以只能重新分配空间.<br>
+本想通过调整分区大小来分出部分空间给Docker, 但试了Win10的&quot;硬盘管理&quot;+&ldquo;分区助专业版&rdquo;, 发现都不能把exfat分区的空间调小, 所以只能重新分配空间.</p>
+<ul>
+<li>先备份exfat分区文件</li>
+<li>TF卡重新分区<br>
+把TF卡插回Q7的TF卡槽, tf卡启动Q7后, 用SecureCRT登录进去:
+<ul>
+<li>
+<p>使用fdisk命令删除原exfat分区</p>
+</li>
+<li>
+<p>使用fdisk重分两个分区, 一个exfat分区, 一个ext4分区.<br>
+考虑到Docker可能不会占用多少空间, 给ext4分了10G的空间.<br>
+(exfat分区的类型代码是7)</p>
+</li>
+<li>
+<p>格式化(mkfs命令)</p>
+<blockquote>
+<p># 格式化exfat分区<br>
+# mkfs.exfat /dev/sda3<br>
+# 格式化ext4分区<br>
+# mkfs.ext4 /dev/sda4</p>
+</blockquote>
+<p>注意: 如果分区已经mount上就不能格式化, 会显示格式化失败信息.<br>
+这种情况需要umount, 如下:</p>
+<blockquote>
+<p># umount /dev/sda3<br>
+<img src="/img/30-q7-02.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="相应的教程内容, 执行的shell功能就是分区&#43;格式化"
+	
+	
+></p>
+</blockquote>
+<p>↑ 相应的教程内容, 执行的shell功能就是分区+格式化</p>
+</li>
+</ul>
+</li>
+<li>挂载(mount)新分区<br>
+把新的ext4分区挂载(mount)到/opt下, 做为Docker的空间.<br>
+与mount有关的配置文件有/etc/mtab + /etc/fstab, /etc/fstab是启动时的挂载配置文件.<br>
+<img src="/img/30-q7-03.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="相应的教程内容, 实现新分区挂载到/opt"
+	
+	
+><br>
+<img src="/img/30-q7-04.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="相应的教程内容, 实现新分区挂载到/opt"
+	
+	
+><br>
+<img src="/img/30-q7-05.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="相应的教程内容, 实现新分区挂载到/opt"
+	
+	
+><br>
+↑ 相应的教程内容, 实现新分区挂载到/opt<br>
+按教程操作完成挂载后, 查看/etc/fstab文件, 并没有看到/opt的挂载信息, 不清楚具体是在哪里配置的.<br>
+用mount命令查看, 可以看到已经挂载到/opt下了<br>
+<img src="/img/30-q7-06.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="分区挂载状态"
+	
+	
+></li>
+<li>把备份的exfat分区文件恢复回去.</li>
+</ul>
+</li>
+<li>
+<p>确认Docker的配置文件<br>
+修改/etc/docker/daemon.json, 把data-root改为/opt/docker/<br>
+说明见文后的问题①</p>
+</li>
+<li>
+<p>安装Docker管理系统<br>
+/etc/docker-web是一个shell, 内容如下:</p>
+<blockquote>
+<p># cat /etc/docker-web<br>
+#!/bin/sh<br>
+docker run -d &ndash;restart=always &ndash;name=&ldquo;portainer&rdquo; -p 9999:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</p>
+</blockquote>
+<p>docker-web是用来安装docker的web管理系统, 执行前需要先确认下docker是否已启动, 如果没有启动, docker-web的安装会失败, 如下:</p>
+<blockquote>
+<p># ./docker-web<br>
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.<br>
+See &lsquo;docker run &ndash;help&rsquo;.</p>
+</blockquote>
+<p>使用service命令确认docker运行状态</p>
+<blockquote>
+<p># service dockerd status<br>
+inactive</p>
+</blockquote>
+<p>如果发现docker未启动, 则先启动docker</p>
+<blockquote>
+<p># service dockerd start</p>
+</blockquote>
+<p>再次确认docker运行状态</p>
+<blockquote>
+<p># service dockerd status<br>
+running</p>
+</blockquote>
+<p>确认docker运行后, 可以执行docker-web进行安装</p>
+<blockquote>
+<p># ./docker-web<br>
+Unable to find image &lsquo;portainer/portainer-ce:latest&rsquo; locally<br>
+latest: Pulling from portainer/portainer-ce<br>
+84cfa456b2b1: Pull complete<br>
+39d56ef0881a: Pull complete<br>
+16a45878c700: Pull complete<br>
+Digest:<br>
+Status: Downloaded newer image for portainer/portainer-ce:latest</p>
+</blockquote>
+</li>
+<li>
+<p>进入Docker管理界面<br>
+在浏览器里输入Q7的ip地址:9999, 设置管理员密码, 选择local进入本地管理界面<br>
+<img src="/img/30-q7-07.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Docker管理界面"
+	
+	
+><br>
+<img src="/img/30-q7-08.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Docker管理界面"
+	
+	
+><br>
+点鲸鱼图标即可管理本地的docker</p>
+</li>
+</ul>
+<h2 id="问题">问题</h2>
+<ul>
+<li>① Docker的配置文件有问题, 需要修改</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># cat /etc/docker/daemon.json
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;bip&#34;: &#34;172.31.0.1/24&#34;,
+</span></span><span class="line"><span class="cl">  &#34;data-root&#34;: &#34;/mnt/mmcblk2p4/docker/&#34;,
+</span></span><span class="line"><span class="cl">  &#34;log-level&#34;: &#34;warn&#34;,
+</span></span><span class="line"><span class="cl">  &#34;log-driver&#34;: &#34;json-file&#34;,
+</span></span><span class="line"><span class="cl">  &#34;log-opts&#34;: {
+</span></span><span class="line"><span class="cl">     &#34;max-size&#34;: &#34;10m&#34;,
+</span></span><span class="line"><span class="cl">     &#34;max-file&#34;: &#34;5&#34;
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;registry-mirrors&#34;: [
+</span></span><span class="line"><span class="cl">     &#34;https://dockerhub.azk8s.cn&#34;
+</span></span><span class="line"><span class="cl">   ]
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中data-root所指/mnt/mmcblk2p4不存在, 由于给docker分配的空间是/opt, 因此考虑把data-root所指目录改到/opt/docker/下</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/">电视盒子</a>
+        
+            <a href="/tags/q7/">Q7</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/fdisk/">FDISK</a>
+        
+            <a href="/tags/mkfs/">MKFS</a>
+        
+            <a href="/tags/mount/">MOUNT</a>
+        
+            <a href="/tags/openwrt/">openwrt</a>
+        
+            <a href="/tags/s905/">S905</a>
+        
+            <a href="/tags/portainer/">portainer</a>
+        
+            <a href="/tags/docker-on-openwrt/">Docker on Openwrt</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-27.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">联通(数码视讯)Q7盒子再刷Openwrt</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E7%9A%84%E5%A5%BD%E8%B4%B4%E6%94%B6%E9%9B%86/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-26.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-26.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于电视盒子刷机的好贴收集</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E6%88%90%E5%8A%9F-%E4%BD%86%E8%BF%99q7%E7%9B%92%E5%AD%90%E6%98%AF%E7%9C%9F%E7%9A%84%E5%9E%83%E5%9C%BE/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-24.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-24.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-25.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-25.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">再刷移动魔百和CM201-2电视盒子</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/armbian-on-tv-box/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-35.png" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-35.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Armbian on TV box</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#说明">说明</a></li>
+    <li><a href="#环境说明">环境说明</a></li>
+    <li><a href="#操作步骤">操作步骤</a></li>
+    <li><a href="#问题">问题</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

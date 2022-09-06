@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Docker Q&amp;A'><title>Docker相关</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/docker%E7%9B%B8%E5%85%B3/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='Docker相关'>
+<meta property='og:description' content='Docker Q&amp;A'>
+<meta property='og:url' content='https://jimway71.github.io/p/docker%E7%9B%B8%E5%85%B3/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Q&amp;A' /><meta property='article:tag' content='DOCKER' /><meta property='article:tag' content='DOCKER CP' /><meta property='article:tag' content='DOCKER INSPECT' /><meta property='article:tag' content='DOCKER PS' /><meta property='article:tag' content='DOCKER RUN' /><meta property='article:tag' content='DOCKER UPDATE' /><meta property='article:tag' content='ENV' /><meta property='article:tag' content='RESTART' /><meta property='article:tag' content='WORDPRESS_DB_HOST' /><meta property='article:published_time' content='2021-04-06T22:23:16&#43;08:00'/><meta property='article:modified_time' content='2021-04-06T22:23:16&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-31.jpg' />
+<meta name="twitter:title" content="Docker相关">
+<meta name="twitter:description" content="Docker Q&amp;A"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-31.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/avatar-icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/docker%E7%9B%B8%E5%85%B3/">
+                
+                    <img src="/wallpaper/wallpaper-31.jpg" loading="lazy" alt="Featured image of post Docker相关" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                migration
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/docker%E7%9B%B8%E5%85%B3/">Docker相关</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Docker Q&amp;A
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 06, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="参考">参考:</h2>
+<ul>
+<li><a class="link" href="https://www.jianshu.com/p/ea4a00c6c21c"  target="_blank" rel="noopener"
+    >Docker run 命令参数及使用</a></li>
+<li><a class="link" href="https://blog.csdn.net/wanghao_0206/article/details/79583325"  target="_blank" rel="noopener"
+    >docker设置容器固定ip</a></li>
+<li><a class="link" href="https://www.jianshu.com/p/47310fe571b5"  target="_blank" rel="noopener"
+    >用Docker搭建WordPress博客</a></li>
+<li><a class="link" href="https://blog.csdn.net/zero_only/article/details/107567135"  target="_blank" rel="noopener"
+    >armbian装docker+wordpress实现https访问</a></li>
+<li><a class="link" href="https://clownote.github.io/2020/03/16/blog/Docker-WordPress/"  target="_blank" rel="noopener"
+    >用Docker部署WordPress</a><br>
+WordPress连接数据库失败处理方法</li>
+<li><a class="link" href="https://www.jianshu.com/p/f7c48fb5a563"  target="_blank" rel="noopener"
+    >基于docker搭建自己的个人网站</a></li>
+</ul>
+<h2 id="docker-qa">Docker Q&amp;A</h2>
+<ul>
+<li>
+<p>查看Docker容器环境变量<br>
+标注说明:</p>
+<ul>
+<li>CONTAINER-NAME: 容器名字</li>
+<li>CONTAINER-ID: 容器ID</li>
+</ul>
+<p>用命令 Docker ps -a 可以查到上述信息<br>
+有下列3种方式查看Docker容器环境变量:</p>
+<ul>
+<li>
+<p>Docker inspect</p>
+<blockquote>
+<p># docker inspect &lt;CONTAINER-NAME&gt; OR &lt;CONTAINER-ID&gt;<br>
+# 如:<br>
+# docker inspect WordPressTest1</p>
+</blockquote>
+</li>
+<li>
+<p>用env查看</p>
+<blockquote>
+<p># docker exec -it &lt;CONTAINER-NAME&gt; OR &lt;CONTAINER-ID&gt; env<br>
+# 如:<br>
+# docker exec -it b14df65ecd73 env</p>
+</blockquote>
+</li>
+<li>
+<p>进入容器后用env查看</p>
+<blockquote>
+<p># docker exec -it &lt;CONTAINER-NAME&gt; OR &lt;CONTAINER-ID&gt; /bin/bash<br>
+(容器提示符)# env<br>
+# 如:<br>
+# docker exec -it b14df65ecd73 /bin/bash<br>
+(容器提示符)# env</p>
+</blockquote>
+</li>
+</ul>
+<p>另: Docker使用&ndash;link参数可以把另一个容器的环境变量连接过来(没有测试), 可以用env查看到</p>
+</li>
+<li>
+<p>WordPress的Docker参数<br>
+WordPress的Docker需要的参数是从环境变量里取得.<br>
+读取代码在wordpress容器里的/var/www/html/wp-config.php文件, 相关的主要代码如下:</p>
+<blockquote>
+<p>// ** MySQL settings - You can get this info from your web host ** //<br>
+/** The name of the database for WordPress */<br>
+define( &lsquo;DB_NAME&rsquo;, getenv_docker(&lsquo;WORDPRESS_DB_NAME&rsquo;, &lsquo;wordpress&rsquo;) );</p>
+<p>/** MySQL database username */<br>
+define( &lsquo;DB_USER&rsquo;, getenv_docker(&lsquo;WORDPRESS_DB_USER&rsquo;, &rsquo;example username&rsquo;) );</p>
+<p>/** MySQL database password */<br>
+define( &lsquo;DB_PASSWORD&rsquo;, getenv_docker(&lsquo;WORDPRESS_DB_PASSWORD&rsquo;, &rsquo;example password&rsquo;) );</p>
+<p>/**<br>
+*/</p>
+<p>/** MySQL hostname */<br>
+define( &lsquo;DB_HOST&rsquo;, getenv_docker(&lsquo;WORDPRESS_DB_HOST&rsquo;, &lsquo;mysql&rsquo;) );</p>
+<p>/** Database Charset to use in creating database tables. */<br>
+define( &lsquo;DB_CHARSET&rsquo;, getenv_docker(&lsquo;WORDPRESS_DB_CHARSET&rsquo;, &lsquo;utf8&rsquo;) );</p>
+<p>/** The Database Collate type. Don&rsquo;t change this if in doubt. */<br>
+define( &lsquo;DB_COLLATE&rsquo;, getenv_docker(&lsquo;WORDPRESS_DB_COLLATE&rsquo;, &lsquo;&rsquo;) );</p>
+</blockquote>
+<p>可以看到以下环境变量参数:</p>
+<blockquote>
+<p>WORDPRESS_DB_NAME:              wordpress所用数据库名, 缺省为&quot;wordpress&quot;<br>
+WORDPRESS_DB_USER:               wordpress访问数据库的用户名, 缺省为&quot;example username&quot;<br>
+WORDPRESS_DB_PASSWORD:    wordpress访问数据库的用户密码, 缺省为&quot;example password&quot;<br>
+WORDPRESS_DB_HOST:              wordpress访问的数据库地址端口(ip:port)<br>
+WORDPRESS_DB_CHARSET:        数据库字符集</p>
+</blockquote>
+<p>主要用到前4个参数</p>
+</li>
+<li>
+<p>Docker的重启</p>
+<blockquote>
+<p># 重启docker<br>
+# service dockerd restart</p>
+<p># 重启容器，可通过portainer<br>
+# 查看容器id和名称<br>
+# docker ps -a<br>
+# docker restart bc7c8d4514fe<br>
+# 或<br>
+# docker restart mydb</p>
+</blockquote>
+</li>
+<li>
+<p>宿主机(即物理机)与docker文件互传</p>
+<blockquote>
+<p># 宿主机传文件至docker容器<br>
+# docker cp 本地文件的路径  container_id:&lt;docker容器内的路径&gt;</p>
+<p># 容器传文件至宿主机<br>
+# docker cp container_id:&lt;docker容器内的路径&gt;  &lt;本地保存文件的路径&gt;<br>
+# 这里的容器ID可以通过portainer或者命令“docker ps -a ”进行查看</p>
+</blockquote>
+</li>
+<li>
+<p>容器里安装nano或vim</p>
+<blockquote>
+<p># apt-get update<br>
+# apt-get install nano<br>
+# 或<br>
+# apt-get install vim</p>
+</blockquote>
+</li>
+<li>
+<p>容器自动启动</p>
+<ul>
+<li>在使用docker run时，添加&quot;&ndash;restart=always&quot;参数</li>
+<li>运行中的docker使用update时添加&quot;&ndash;restart=always&quot;参数</li>
+</ul>
+<blockquote>
+<p># docker update &ndash;restart=always wordpress</p>
+</blockquote>
+<p>&ldquo;wordpress&quot;是容器名称, 也可以写容器ID.<br>
+例:</p>
+<blockquote>
+<p># docker update &ndash;restart=always DB4WordPress</p>
+</blockquote>
+<p>DB4WordPress</p>
+<blockquote>
+<p># docker update &ndash;restart=always WordPress</p>
+</blockquote>
+<p>WordPress<br>
+关机重启后, 数据库和wordpress容器都已启动, 确认命令有效.</p>
+</li>
+<li>
+<p>Docker镜像源<br>
+参考: <a class="link" href="https://www.jianshu.com/p/34d3b4568059"  target="_blank" rel="noopener"
+    >Docker快速安装以及换镜像源</a><br>
+Docker的镜像配置文件是: /etc/docker/daemon.json, 当前内容是:</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{  
+</span></span><span class="line"><span class="cl">  &#34;bip&#34;: &#34;192.168.30.1/24&#34;,  
+</span></span><span class="line"><span class="cl">  &#34;data-root&#34;: &#34;/opt/docker/&#34;,  
+</span></span><span class="line"><span class="cl">  &#34;log-level&#34;: &#34;warn&#34;,  
+</span></span><span class="line"><span class="cl">  &#34;log-driver&#34;: &#34;json-file&#34;,  
+</span></span><span class="line"><span class="cl">  &#34;log-opts&#34;: {  
+</span></span><span class="line"><span class="cl">     &#34;max-size&#34;: &#34;10m&#34;,  
+</span></span><span class="line"><span class="cl">     &#34;max-file&#34;: &#34;5&#34;  
+</span></span><span class="line"><span class="cl">   },  
+</span></span><span class="line"><span class="cl">   &#34;registry-mirrors&#34;: [  
+</span></span><span class="line"><span class="cl">     &#34;https://dockerhub.azk8s.cn&#34;  
+</span></span><span class="line"><span class="cl">   ]  
+</span></span><span class="line"><span class="cl">}  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>portainer在armbian上安装运行<br>
+运行参考:  <a class="link" href="https://documentation.portainer.io/v2.0/deploy/ceinstalldocker/"  target="_blank" rel="noopener"
+    >Deploying Portainer CE in Docker</a></p>
+<blockquote>
+<p># (安装应该是使用docker pull: docker pull portainer/portainer-ce)<br>
+# 安装使用apt-get<br>
+# apt-get install portainer/portainer-ce<br>
+# 启动<br>
+# docker volume create portainer_data<br>
+# docker run -d -p 8000:8000 -p 9000:9000 &ndash;name=portainer &ndash;restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</p>
+</blockquote>
+</li>
+<li>
+<p>查看某个docker容器占用的ip</p>
+<blockquote>
+<p># docker inspect openwrt | grep Address</p>
+</blockquote>
+<p>其中“openwrt”是容器的名称</p>
+</li>
+<li>
+<p>armbian上安装Docker<br>
+参考官网安装说明: <a class="link" href="https://docs.docker.com/get-docker/"  target="_blank" rel="noopener"
+    >Get Docker</a><br>
+一般用官方的shell安装.</p>
+</li>
+<li>
+<p>修改地址(临时, openwrt)</p>
+<blockquote>
+<p># ifconfig br-lan 172.17.0.3 netmask 255.255.255.0<br>
+# 设置网关<br>
+route add default gw 172.17.0.1</p>
+</blockquote>
+</li>
+<li>
+<p>Docker搜索镜像(img包)</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># docker search 镜像包名, 如:  
+</span></span><span class="line"><span class="cl"># docker search hugo  
+</span></span><span class="line"><span class="cl">NAME                                   DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED  
+</span></span><span class="line"><span class="cl">klakegg/hugo                           Minimal image and variants with batteries in…   99                   [OK]  
+</span></span><span class="line"><span class="cl">jojomi/hugo                            hugo, see https://gohugo.io                     64                   [OK]  
+</span></span><span class="line"><span class="cl">monachus/hugo                          Docker image for building and running Hugo (…   42                   [OK]  
+</span></span><span class="line"><span class="cl">publysher/hugo                         Docker base image for static sites generated…   38                   [OK]  
+</span></span><span class="line"><span class="cl">jguyomard/hugo-builder                 Lightweight Alpine-Based Docker Image for Hu…   19                   [OK]  
+</span></span><span class="line"><span class="cl">cibuilds/hugo                          Docker image for Hugo, the static-site gener…   15                     
+</span></span><span class="line"><span class="cl">fundor333/hugo                         Docker file for build your Hugo for my site …   4                    [OK]  
+</span></span><span class="line"><span class="cl">peaceiris/hugo                         Hugo Alpine base Docker Image (Hugo extended…   4                      
+</span></span><span class="line"><span class="cl">solidnerd/hugo                         Hugo in a container                             2                    [OK]  
+</span></span><span class="line"><span class="cl">yanqd0/hugo                            The smallest hugo image built from Alpine.      2                    [OK]  
+</span></span><span class="line"><span class="cl">muninn/hugo-caddy                      hugo + caddy + caddy hugo admin plugin + cad…   2                      
+</span></span><span class="line"><span class="cl">tarampampam/hugo                       Hugo (gohugo, static stite generator) applic…   1                    [OK]  
+</span></span><span class="line"><span class="cl">orus/hugo-builder                      Alpine with hugo, git and pygments installed…   1                      
+</span></span><span class="line"><span class="cl">dettmering/hugo-build                  Build a website with Hugo (gohugo.io)           1                    [OK]  
+</span></span><span class="line"><span class="cl">envimate/hugo                          Dockerized version of hugo cli https://gohug…   1                      
+</span></span><span class="line"><span class="cl">chabad360/hugo                         Build a static site with Hugo (includes Hugo…   0                      
+</span></span><span class="line"><span class="cl">vergissberlin/hugo-docker-watchtower   Hugo with continues delivery after commits i…   0                      
+</span></span><span class="line"><span class="cl">simonszu/hugo                          An image for the hugo blog system               0                    [OK]  
+</span></span><span class="line"><span class="cl">webhippie/hugo                         Docker images for Hugo                          0                    [OK]  
+</span></span><span class="line"><span class="cl">toschwarz/hugo-builder                 Hugo Builder Image                              0                    [OK]  
+</span></span><span class="line"><span class="cl">svlentink/hugo                         Official Hugo static web gen. from Github (l…   0                    [OK]  
+</span></span><span class="line"><span class="cl">mazgi/hugo-static-website              Docker image for static website by Hugo.        0                    [OK]  
+</span></span><span class="line"><span class="cl">sjugge/hugo                            Runs the latest stable Hugo static site gene…   0                    [OK]  
+</span></span><span class="line"><span class="cl">forestryio/hugo                                                                        0                      
+</span></span><span class="line"><span class="cl">endocode/hugo-website                                                                  0   
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>*STARS越多越好(排在越靠前)</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/qa/">Q&amp;A</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/docker-cp/">DOCKER CP</a>
+        
+            <a href="/tags/docker-inspect/">DOCKER INSPECT</a>
+        
+            <a href="/tags/docker-ps/">DOCKER PS</a>
+        
+            <a href="/tags/docker-run/">DOCKER RUN</a>
+        
+            <a href="/tags/docker-update/">DOCKER UPDATE</a>
+        
+            <a href="/tags/env/">ENV</a>
+        
+            <a href="/tags/restart/">RESTART</a>
+        
+            <a href="/tags/wordpress_db_host/">WORDPRESS_DB_HOST</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-33.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-33.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker容器无法访问网络</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/wordpress-qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-34.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-34.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Wordpress Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85wordpress/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-32.png" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-32.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Docker环境下安装WordPress</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-29.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8D%8E%E4%B8%BAp40-pro%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8Cgms-%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E5%90%8C%E6%AD%A5%E9%80%9A%E8%AE%AF%E5%BD%95-%E5%85%B6%E5%AE%83%E5%8A%9F%E8%83%BD%E9%83%BD%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C-%E4%B8%94%E4%B8%8D%E6%8A%A5%E9%94%99/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-23.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-23.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">华为P40 pro安装谷歌GMS, 可以正常同步通讯录, 其它功能都能正常运行, 且不报错</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#参考">参考:</a></li>
+    <li><a href="#docker-qa">Docker Q&amp;A</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

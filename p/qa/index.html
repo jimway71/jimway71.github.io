@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='记录遇到的各种Q&amp;A'><title>Q&amp;A</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/qa/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='Q&amp;A'>
+<meta property='og:description' content='记录遇到的各种Q&amp;A'>
+<meta property='og:url' content='https://jimway71.github.io/p/qa/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Q&amp;A' /><meta property='article:tag' content='SecureCrt' /><meta property='article:tag' content='增补包' /><meta property='article:tag' content='win10' /><meta property='article:tag' content='Key exchange failed' /><meta property='article:tag' content='增量包' /><meta property='article:tag' content='sshd' /><meta property='article:tag' content='smbpasswd' /><meta property='article:tag' content='useradd' /><meta property='article:tag' content='2020春节整合版' /><meta property='article:tag' content='S905' /><meta property='article:tag' content='EmuELEC' /><meta property='article:tag' content='adduser' /><meta property='article:tag' content='ash' /><meta property='article:tag' content='openwrt' /><meta property='article:tag' content='bash' /><meta property='article:tag' content='samba' /><meta property='article:tag' content='Es文件浏览器' /><meta property='article:tag' content='EmuELEC' /><meta property='article:tag' content='人中日月' /><meta property='article:tag' content='openwrt' /><meta property='article:tag' content='history' /><meta property='article:tag' content='frp' /><meta property='article:tag' content='nginx' /><meta property='article:tag' content='FrpProPlugin' /><meta property='article:tag' content='socat' /><meta property='article:tag' content='haproxy' /><meta property='article:tag' content='rinetd' /><meta property='article:tag' content='nps' /><meta property='article:tag' content='holer' /><meta property='article:tag' content='lanproxy' /><meta property='article:tag' content='Docker' /><meta property='article:tag' content='sources.list' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='Padavan' /><meta property='article:tag' content='NTP' /><meta property='article:tag' content='whoami' /><meta property='article:published_time' content='2021-04-03T22:57:16&#43;08:00'/><meta property='article:modified_time' content='2021-04-03T22:57:16&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-29.jpg' />
+<meta name="twitter:title" content="Q&amp;A">
+<meta name="twitter:description" content="记录遇到的各种Q&amp;A"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-29.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/avatar-icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/qa/">
+                
+                    <img src="/wallpaper/wallpaper-29.jpg" loading="lazy" alt="Featured image of post Q&amp;A" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                migration
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/qa/">Q&amp;A</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            记录遇到的各种Q&amp;A
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 03, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 10 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="问题-旧版securecrt不能连接新版本的sshd服务器">问题: 旧版SecureCrt不能连接新版本的sshd服务器</h2>
+<p>报错如下:</p>
+<blockquote>
+<p>Key exchange failed. No compatible key exchange method. The server supports these methods: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256</p>
+</blockquote>
+<p>原因分析:<br>
+旧版SecureCrt(版本号6.7.0 (build 153))支持的密钥交换(Key exchange)为以下5种:</p>
+<ul>
+<li>Kerberos</li>
+<li>Kerberos(Group Exchange)</li>
+<li>Diffie-hellman-group14</li>
+<li>Diffie-hellman-group</li>
+<li>Diffie-hellman</li>
+</ul>
+<p>这5种均不被新的sshd支持, 当前sshd版本信息为:</p>
+<blockquote>
+<p>OpenSSH_8.3p1, OpenSSL 1.1.1j  16 Feb 2021</p>
+</blockquote>
+<p>处理方式:<br>
+修改/etc/ssh/sshd_config文件, 添加(我是在文件最后添加):</p>
+<blockquote>
+<p>KexAlgorithms diffie-hellman-group14-sha1</p>
+</blockquote>
+<p>然后重启sshd:</p>
+<blockquote>
+<p>#service sshd restart</p>
+</blockquote>
+<p>即可。<br>
+(看参考的文档, 说的是添加:<br>
+KexAlgorithms <a class="link" href="mailto:curve25519-sha256@libssh.org" >curve25519-sha256@libssh.org</a>,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1<br>
+其实添加一种SecureCrt支持的方式就可以了)<br>
+参考:</p>
+<ul>
+<li><a class="link" href="https://blog.csdn.net/duanbiren123/article/details/103034914"  target="_blank" rel="noopener"
+    >升级ssh后续问题</a></li>
+<li><a class="link" href="http://www.tomato.cm/179.html"  target="_blank" rel="noopener"
+    >使用SecureCRT连接Ubuntu20.04报错：Key exchange failed. No compatible key exchange method</a></li>
+<li><a class="link" href="https://www.cnblogs.com/shenjianyu/p/6407042.html"  target="_blank" rel="noopener"
+    >升级openssh带来的问题</a></li>
+</ul>
+<p><strong>更新:</strong><br>
+可以改用基于<a class="link" href="file:///C:/Users/jimway/AppData/Local/Temp/Mxt220/tmp/licenses/EulaHOME.html" >MobaXterm license</a>许可的<a class="link" href="https://mobaxterm.mobatek.net/"  target="_blank" rel="noopener"
+    >MobaXterm</a>, 不再有这种问题。</p>
+<h2 id="问题-在openwrt上新建一个可用的samba用户">问题: 在openwrt上新建一个可用的samba用户</h2>
+<p>需要解决的问题:<br>
+需要新增一个samba用户, 而samba用户是与同名系统用户关联的, 所以需要先建立一个同名的系统用户.<br>
+但是, 当前Openwrt的底层系统里没有useradd或者adduser命令, 用opkg update更新后, 搜索可用的包里也没找到相关的包, 包括有人提到的shadow-useradd或者类似的命令, 所以, 不能用命令添加一个用户</p>
+<ul>
+<li>
+<p>那, 就先手动来新增一个用户</p>
+<ul>
+<li>
+<p>修改/etc/passwd文件, 增加新用户信息</p>
+<blockquote>
+<p># vim /etc/passwd</p>
+</blockquote>
+<p>增加一行:</p>
+<blockquote>
+<p>newuser:x:66666:66666:newuser:/home/newuser:/bin/ash</p>
+</blockquote>
+<p>说明:<br>
+newuser是用户名, /home/newuser就是newuser用户的根目录了.<br>
+66666是用户ID, 要注意在整个passwd文件是应该是唯一的.<br>
+/bin/ash是shell, 是从root用户那行抄来的</p>
+</li>
+<li>
+<p>修改/etc/group文件, 增加新用户的组信息: 组名和用户名一般都是相同的</p>
+<blockquote>
+<p># vim /etc/group</p>
+</blockquote>
+<p>增加一行:</p>
+<blockquote>
+<p>newuser:x:66666:newuser</p>
+</blockquote>
+<p>说明:<br>
+组名和用户名相同<br>
+组ID号和用户ID号也相同</p>
+</li>
+<li>
+<p>建立新用户根目录, 并设置属主/组</p>
+<blockquote>
+<p># mkdir /home/newuser<br>
+# chown newuser /home/newuser<br>
+# chgrp newuser /home/newuser</p>
+</blockquote>
+</li>
+<li>
+<p>给新用户设置密码</p>
+<blockquote>
+<p># passwd newuser</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>该设置samba用户了</p>
+<ul>
+<li>
+<p>给samba新用户设置密码</p>
+<blockquote>
+<p><del># smbpasswd newuser</del><br>
+<del>&hellip;&hellip;</del><br>
+<del>Failed to find entry for user newuser.</del><br>
+# smbpasswd -a newuser<br>
+&hellip;&hellip;<br>
+Added user newuser.</p>
+</blockquote>
+</li>
+<li>
+<p>使samba新用户可用</p>
+<blockquote>
+<p># smbpasswd -e newuser<br>
+Enabled user newuser.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="问题-在openwrt上设置samba服务器-windowswin10es文件浏览器都可以通过网络访问">问题: 在openwrt上设置samba服务器, Windows/Win10/Es文件浏览器都可以通过网络访问.</h2>
+<p><strong>环境说明:</strong><br>
+用S905L的盒子装了个openwrt, 装在TF卡上, 用TF卡启动.<br>
+TF卡上除了装op系统的大概1G空间外, 剩下的空间分区并格式化为exfat格式, op启动时会自动加载这个exfat分区, 使用samba(web上在网络存储-网络共享)共享出来可供局域网内设备访问.<br>
+Win10当前版本缺省不支持SMB 1.0/CIFS, 为了访问低版本的samba设备, 已通过&quot;启用或关闭Windows功能&quot;打开&quot;SMB 1.0/CIFS文件共享支持&quot;+&ldquo;SMB Direct&rdquo;, 需要能让这种设备访问盒子上的samba服务器 - 其实这并不是一个问题, 当前版本的samba(V4.11.6)早已支持新版本的samba协议.<br>
+安卓手机app&quot;Es文件管理器&quot;也需要在局域网内能访问同一个samba服务器.<br>
+<strong>问题详述:</strong><br>
+<u>问题1. linux上的samba服务器与Windows的Samba服务器是有区别的</u><br>
+Windows的samba服务器被访问时, 如果需要用户登录, 会在开始连接时就要求登录.<br>
+而Linux的samba服务器被访问时, 只有当访问到&quot;共享目录&quot;时, 才会问到登录信息.<br>
+<u>问题2. 当前版本的Win10在访问samba服务时, 已经不支匿名访问, 只能修改注册表信息来支持</u><br>
+这个操作比较麻烦, 不考虑<br>
+测试中发现, 当一个samba服务器里只要存在任何一个可以匿名访问的文件共享, Win10就无法访问整个Samba服务器, 因此要求samba服务器中的任何共享都是非匿名访问的.<br>
+<u>问题3 Es文件管理器App访问linux上的Samba服务器时, 缺省是以匿名方式访问</u><br>
+不会主动弹出登录信息窗口, 即使无法打开一个需要登录的共享时, 也不会主动弹出.<br>
+这就需要手动设置Es的登录信息.<br>
+这个问题和问题1有相关性.<br>
+<strong>其他</strong><br>
+由于exfat是微软的文件格式, 没有用户权限信息, 避开了linux复杂的权限问题, 因此选择使用这种文件格式<br>
+<strong>结论:</strong></p>
+<ul>
+<li>op上的samba共享都需要设置成用户登录访问</li>
+<li>Es访问时需要手动设置用户登录信息.</li>
+</ul>
+<p><strong>Samba服务器的设置如下</strong></p>
+<ul>
+<li>
+<p>配置文件<br>
+op上luci的缺省配置文件如下:</p>
+<blockquote>
+<p>[global]<br>
+netbios name = |NAME|<br>
+interfaces = |INTERFACES|<br>
+server string = |DESCRIPTION|<br>
+unix charset = |CHARSET|<br>
+workgroup = |WORKGROUP|</p>
+<p>## This global parameter allows the Samba admin to limit what interfaces on a machine will serve SMB requests.<br>
+bind interfaces only = yes</p>
+<p>## time for inactive connections to-be closed in minutes<br>
+deadtime = 15</p>
+<p>## disable core dumps<br>
+enable core files = no</p>
+<p>## set security (auto, user, domain, ads)<br>
+security = user</p>
+<p>## This parameter controls whether a remote client is allowed or required to use SMB encryption.<br>
+## It has different effects depending on whether the connection uses SMB1 or SMB2 and newer:<br>
+## If the connection uses SMB1, then this option controls the use of a Samba-specific extension to the SMB protocol introduced in Samba 3.2 that makes   use of the Unix extensions.
+server min protocol = NT1<br>
+client min protocol = NT1<br>
+## If the connection uses SMB2 or newer, then this option controls the use of the SMB-level encryption that is supported in SMB version 3.0 and above and available in Windows 8 and newer.<br>
+## (default/auto,desired,required,off)<br>
+#smb encrypt = default</p>
+<p>## set invalid users<br>
+invalid users = root</p>
+<p>## map unknow users to guest<br>
+map to guest = Bad User</p>
+<p>## allow client access to accounts that have null passwords.<br>
+null passwords = yes</p>
+<p>## The old plaintext passdb backend. Some Samba features will not work if this passdb backend is used. (NOTE: enabled for size reasons)<br>
+## (tdbsam,smbpasswd,ldapsam)<br>
+passdb backend = smbpasswd</p>
+<p>## Set location of smbpasswd (&lsquo;smbd -b&rsquo; will show default compiled location)<br>
+#smb passwd file = /etc/samba/smbpasswd</p>
+<p>## LAN/WAN options (IPTOS_LOWDELAY TCP_NODELAY) WAN (IPTOS_THROUGHPUT)<br>
+socket options = IPTOS_LOWDELAY TCP_NODELAY</p>
+<p>## If this integer parameter is set to a non-zero value, Samba will read from files asynchronously when the request size is bigger than this value.<br>
+## Note that it happens only for non-chained and non-chaining reads and when not using write cache.<br>
+## The only reasonable values for this parameter are 0 (no async I/O) and 1 (always do async I/O).<br>
+## (1/0)<br>
+#aio read size = 0<br>
+#aio write size = 0</p>
+<p>## If Samba has been built with asynchronous I/O support, Samba will not wait until write requests are finished before returning the result to the client for files listed in this parameter.<br>
+## Instead, Samba will immediately return that the write request has been finished successfully, no matter if the operation will succeed or not.<br>
+## This might speed up clients without aio support, but is really dangerous, because data could be lost and files could be damaged.<br>
+#aio write behind = /*.tmp/</p>
+<p>## lower CPU useage if supported and aio is disabled (aio read size = 0 ; aio write size = 0)<br>
+## currently broken (NOTE: see <a class="link" href="https://bugzilla.samba.org/show_bug.cgi?id=14095"  target="_blank" rel="noopener"
+    >https://bugzilla.samba.org/show_bug.cgi?id=14095</a> )<br>
+## (no, yes)<br>
+#use sendfile = yes</p>
+<p>## samba will behave as previous versions of Samba would and will fail the lock request immediately if the lock range cannot be obtained.<br>
+#blocking locks = No</p>
+<p>## disable loading of all printcap printers by default (iprint, cups, lpstat)<br>
+load printers = No<br>
+printcap name = /dev/null</p>
+<p>## Enabling this parameter will disable Samba&rsquo;s support for the SPOOLSS set of MS-RPC&rsquo;s.<br>
+disable spoolss = yes</p>
+<p>## This parameters controls how printer status information is interpreted on your system.<br>
+## (BSD, AIX, LPRNG, PLP, SYSV, HPUX, QNX, SOFTQ)<br>
+printing = bsd</p>
+<p>## Disable that nmbd is acting as a WINS server for unknow netbios names<br>
+#dns proxy = No</p>
+<p>## win/unix user mapping backend<br>
+#idmap config * : backend = tdb</p>
+<p>## Allows the server name that is advertised through MDNS to be set to the hostname rather than the Samba NETBIOS name.<br>
+## This allows an administrator to make Samba registered MDNS records match the case of the hostname rather than being in all capitals.<br>
+## (netbios, mdns)<br>
+mdns name = mdns</p>
+<p>## Clients that only support netbios won&rsquo;t be able to see your samba server when netbios support is disabled.<br>
+#disable netbios = Yes</p>
+<p>## Setting this value to no will cause nmbd never to become a local master browser.<br>
+#local master = no</p>
+<p>## (auto, yes) If this is set to yes, on startup, nmbd will force an election, and it will have a slight advantage in winning the election. It is recommended that this parameter is used in conjunction with domain master = yes, so that nmbd can guarantee becoming a domain master.<br>
+#preferred master = yes</p>
+<p>## (445 139) Specifies which ports the server should listen on for SMB traffic.<br>
+## 139 is netbios/nmbd<br>
+#smb ports = 445 139</p>
+<p>## This is a list of files and directories that are neither visible nor accessible.<br>
+## Each entry in the list must be separated by a &lsquo;/&rsquo;, which allows spaces to be included in the entry. &lsquo;*&rsquo; and &lsquo;?&rsquo; can be used to specify multiple files or directories as in DOS wildcards.<br>
+veto files = /Thumbs.db/.DS_Store/._.DS_Store/.apdisk/</p>
+<p>## If a directory that is to be deleted contains nothing but veto files this deletion will fail unless you also set the delete veto files parameter to   yes.<br>
+delete veto files = yes</p>
+<p>################ Filesystem and creation rules ################<br>
+## reported filesystem type (NTFS,Samba,FAT)<br>
+#fstype = FAT</p>
+<p>## Allows a user who has write access to the file (by whatever means, including an ACL permission) to modify the permissions (including ACL) on it.<br>
+#dos filemode = Yes</p>
+<p>## file/dir creating rules<br>
+#create mask = 0666<br>
+#directory mask = 0777<br>
+#force group = root<br>
+#force user = root<br>
+#inherit owner = windows and unix<br>
+################################################################</p>
+</blockquote>
+<p>这个配置文件只需要屏蔽 invalid users = root 这一句, 如下:</p>
+<blockquote>
+<p>#invalid users = root</p>
+</blockquote>
+</li>
+<li>
+<p>设置samba用户<br>
+使用&quot;<a class="link" href="/p/qa/#%E9%97%AE%E9%A2%98-%E5%9C%A8openwrt%E4%B8%8A%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%94%A8%E7%9A%84samba%E7%94%A8%E6%88%B7" >在openwrt上新建一个可用的samba用户</a>&ldquo;的方法建立用户</p>
+</li>
+<li>
+<p>设置共享目录(补记: 可能是在Luci的界面里)<br>
+<img src="/img/29-qa-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="设置共享目录"
+	
+	
+><br>
+按上图方式设置共享目录, 允许用户是刚才设置的smb用户.</p>
+</li>
+<li>
+<p>访问<br>
+Win10正常访问.<br>
+Es文件浏览器App在局域网里设置相应服务器的登录信息后就可以正常访问.<br>
+读写都没有问题.</p>
+</li>
+</ul>
+<h2 id="emuelec2020春节整合版s905-被百毒封了">EmuELEC2020春节整合版(s905) 被百毒封了</h2>
+<p>EmuELEC 3.3.1 2020春节整合版详细说明: <a class="link" href="https://www.bilibili.com/read/cv4420521/"  target="_blank" rel="noopener"
+    >https://www.bilibili.com/read/cv4420521/</a></p>
+<p><u>下载地址：</u></p>
+<ul>
+<li><a class="link" href="https://cloud.189.cn/t/F7JfYbF7VnU"  target="_blank" rel="noopener"
+    >EmuELEC2020春节整合版(s905) 被百毒封了</a>  (访问码:nlp7) -&gt; 已经转<a class="link" href="https://cloud.189.cn/"  target="_blank" rel="noopener"
+    >天翼云</a> 需要的请下载<a class="link" href="https://space.bilibili.com/97745521"  target="_blank" rel="noopener"
+    >@人中日月</a></li>
+<li>基础包链接：<a class="link" href="https://pan.baidu.com/s/1s03OQf60qQCmH8dejykplw"  target="_blank" rel="noopener"
+    >https://pan.baidu.com/s/1s03OQf60qQCmH8dejykplw</a> 提取码：g13u<br>
+(三个增补包，分别是街机改版、ATOMISWAVE和NAOMI的整合包，需要自己另外根据EMUELEC使用指南里面的方法传到系统里。)</li>
+<li>增量包链接：<a class="link" href="https://pan.baidu.com/s/17xkfIu-Wg1CzKAq9sGrXIw"  target="_blank" rel="noopener"
+    >https://pan.baidu.com/s/17xkfIu-Wg1CzKAq9sGrXIw</a> 提取码：zkdr</li>
+<li>斐讯N1补丁包链接：<a class="link" href="https://pan.baidu.com/s/1RaNq2VaWiPvxX-4q2cjs1A"  target="_blank" rel="noopener"
+    >https://pan.baidu.com/s/1RaNq2VaWiPvxX-4q2cjs1A</a> 提取码：pty4</li>
+</ul>
+<p>另外, 还有</p>
+<ul>
+<li>Vol4增量包, 应该是FBN街机的</li>
+<li>3.4版的更新包,更新emuelec到3.4</li>
+</ul>
+<h2 id="问题-openwrt的history只能看到当前连接的命令记录">问题: openwrt的history只能看到当前连接的命令记录</h2>
+<p>原因: op缺省使用的是ash, 这个轻量化的shell就是这样，除非改用别的shell, 比如bash<br>
+处理:</p>
+<ul>
+<li>
+<p>安装bash</p>
+<blockquote>
+<p># opkg update &amp; opkg install bash</p>
+</blockquote>
+</li>
+<li>
+<p>设置用户使用bash</p>
+<blockquote>
+<p># vim /etc/passwd</p>
+</blockquote>
+<p>修改相应用户的shell为bash，并保存退出。<br>
+登出并重新登录后新的shell生效</p>
+<blockquote>
+<p># echo $SHELL<br>
+/bin/bash</p>
+</blockquote>
+</li>
+<li>
+<p>查看history</p>
+<blockquote>
+<p># history</p>
+</blockquote>
+</li>
+</ul>
+<p>应该能看到记录，登出再进，可以看到文件～/.bash_history(bash的history 记录文件)</p>
+<h2 id="网络相关问题-内网互联">网络相关问题: 内网互联</h2>
+<ul>
+<li>
+<p><a class="link" href="https://segmentfault.com/a/1190000016556569"  target="_blank" rel="noopener"
+    >frp 和 nginx 搭建一个内网穿透服务器</a><br>
+网络结构: 外网nginx -&gt; 外网frp server &lt;-&gt; 内网frp client -&gt; 内网web</p>
+</li>
+<li>
+<p><a class="link" href="https://www.anquanke.com/post/id/231424"  target="_blank" rel="noopener"
+    >内网渗透代理之frp的应用与改造（一）</a><br>
+相关的<a class="link" href="https://github.com/mstxq17/FrpProPlugin"  target="_blank" rel="noopener"
+    >FrpProPlugin</a></p>
+</li>
+<li>
+<p><a class="link" href="https://hostloc.com/forum.php?mod=viewthread&amp;tid=820833&amp;extra=&amp;page=2&amp;mobile=2"  target="_blank" rel="noopener"
+    >(rinetd YYDS)socat居然比iptab效率高</a><br>
+我映象比较深的就是 iptables frp nginx socat haproxy rinetd<br>
+因为我是转发到rdp然后看油管，稍微卡顿都可以很明显的感觉出来。rinetd很流畅，haproxy和frp可以勉强用用，其它的都是战五渣。</p>
+</li>
+<li>
+<p><a class="link" href="https://www.v2ex.com/t/567570"  target="_blank" rel="noopener"
+    >自认为比 frp 更好用的内网穿透工具 nps</a></p>
+</li>
+</ul>
+<p>这里列举了一些比较好用的开源的内网穿透工具，详细介绍一下各个软件工具的特点：</p>
+<ul>
+<li>frp<br>
+FRP 功能完整，主要采用 GO 语言实现，重量级的工具，服务端界面样式风格一般。<br>
+配置繁琐，不同的协议需要配置不同的参数，采用文件存放数据，不支持数据库管理数据。</li>
+<li>holer<br>
+轻量级的内网穿透工具，holer 服务端采用 Java 语言实现，服务端界面漂亮简洁。<br>
+Holer 客户端采用了 Java 语言和 GO 语言实现了两种版本，支持几乎所有的 OS 平台。<br>
+用到流行的微服务框架 springboot 和 Java 网络框架 netty。<br>
+配置很简单，针对所有 TCP 协议只需在客户端设置一个 holer access key 即可。<br>
+采用 MySQL 数据库统一管理数据。</li>
+<li>nps<br>
+轻量级的内网穿透工具，完全采用 GO 语言实现，服务端界面漂亮简洁。<br>
+支持的协议最广泛，配置稍简单，采用文件存放数据，不支持数据库管理数据。</li>
+<li>lanproxy<br>
+轻量级的内网穿透工具，客户端采用 GO 语言和 Java 语言实现两种版本，采用了 Java 网络框架 netty，服务端界面体验较差。<br>
+配置稍繁琐，采用文件存放数据，不支持数据库管理数据。</li>
+</ul>
+<p>其他:</p>
+<ul>
+<li><a class="link" href="https://www.nasge.com/archives/48.html"  target="_blank" rel="noopener"
+    >内网穿透工具比较(ngrok,frp,lanproxy,goproxy,nps)</a></li>
+<li><a class="link" href="https://doubibackup.com/wkcjzpyd-2.html"  target="_blank" rel="noopener"
+    >关于目前 GFW(墙) 的封锁方式TCP封锁(阻断)猜想</a></li>
+</ul>
+<h2 id="问题-ubuntu采用docker官方shell安装时报错">问题: ubuntu采用Docker官方shell安装时报错</h2>
+<p>报错信息如下:</p>
+<blockquote>
+<p># curl -fsSL <a class="link" href="https://get.docker.com"  target="_blank" rel="noopener"
+    >https://get.docker.com</a> -o get-docker.sh<br>
+# sh get-docker.sh<br>
+# Executing docker install script, commit: 7cae5f8b0decc17d6571f9f52eb840fbc13b2737<br>
++ sh -c apt-get update -qq &gt;/dev/null<br>
+W: The repository &lsquo;cdrom://Ubuntu-Server 16.04.6 LTS <em>Xenial Xerus</em> - Release amd64 (20190226) xenial Release&rsquo; does not have a Release file.<br>
+E: Failed to fetch cdrom://Ubuntu-Server 16.04.6 LTS <em>Xenial Xerus</em> - Release amd64 (20190226)/dists/xenial/main/binary-amd64/Packages  Please use apt-cdrom to make this CD-ROM recognized by APT. apt-get update cannot be used to add new CD-ROMs<br>
+E: Some index files failed to download. They have been ignored, or old ones used instead.</p>
+</blockquote>
+<p>错误处理, 操作如下:</p>
+<blockquote>
+<p># vim /etc/apt/sources.list<br>
+# 屏蔽掉有cdrom的那一行, 如下<br>
+#deb cdrom:[Ubuntu-Server 16.04.6 LTS <em>Xenial Xerus</em> - Release amd64 (20190226)]/ xenial main restricted</p>
+</blockquote>
+<p>参考: <a class="link" href="https://linux.cn/article-5409-1.html"  target="_blank" rel="noopener"
+    >如何修复 apt-get update 无法添加新的 CD-ROM 的错误</a></p>
+<h2 id="问题-padavan路由作二级桥接无线路由时-系统时间混乱的问题处理">问题: Padavan路由作二级桥接无线路由时, 系统时间混乱的问题处理</h2>
+<p>状态: 配置了NTP同步, 但无效<br>
+原因: 可能是没有配置WAN造成的<br>
+处理:</p>
+<ul>
+<li>
+<p>手动:</p>
+<blockquote>
+<p># ntpd -t -p 192.168.1.1</p>
+</blockquote>
+</li>
+<li>
+<p>自动<br>
+在&quot;系统管理&rdquo;-&ldquo;服务&quot;中修改&quot;调度任务 (Crontab)&rdquo;, 增加</p>
+<blockquote>
+<p>0 * * * * ntpd -t -p 192.168.1.1</p>
+</blockquote>
+<p>让系统每小时都做一次时间同步.</p>
+</li>
+</ul>
+<h2 id="linux下-以指定用户身份执行">Linux下, 以指定用户身份执行</h2>
+<p>例: # su - 用户名 -c &ldquo;命令&rdquo;<br>
+如:</p>
+<blockquote>
+<p># su - user -c &ldquo;whoami&rdquo;<br>
+user</p>
+</blockquote>
+<p>说明: 以用户user身份执行whoami, 返回的用户身份是&quot;user&quot;</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/qa/">Q&amp;A</a>
+        
+            <a href="/tags/securecrt/">SecureCrt</a>
+        
+            <a href="/tags/%E5%A2%9E%E8%A1%A5%E5%8C%85/">增补包</a>
+        
+            <a href="/tags/win10/">win10</a>
+        
+            <a href="/tags/key-exchange-failed/">Key exchange failed</a>
+        
+            <a href="/tags/%E5%A2%9E%E9%87%8F%E5%8C%85/">增量包</a>
+        
+            <a href="/tags/sshd/">sshd</a>
+        
+            <a href="/tags/smbpasswd/">smbpasswd</a>
+        
+            <a href="/tags/useradd/">useradd</a>
+        
+            <a href="/tags/2020%E6%98%A5%E8%8A%82%E6%95%B4%E5%90%88%E7%89%88/">2020春节整合版</a>
+        
+            <a href="/tags/s905/">S905</a>
+        
+            <a href="/tags/adduser/">adduser</a>
+        
+            <a href="/tags/ash/">ash</a>
+        
+            <a href="/tags/bash/">bash</a>
+        
+            <a href="/tags/samba/">samba</a>
+        
+            <a href="/tags/es%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8/">Es文件浏览器</a>
+        
+            <a href="/tags/emuelec/">EmuELEC</a>
+        
+            <a href="/tags/%E4%BA%BA%E4%B8%AD%E6%97%A5%E6%9C%88/">人中日月</a>
+        
+            <a href="/tags/openwrt/">openwrt</a>
+        
+            <a href="/tags/history/">history</a>
+        
+            <a href="/tags/frp/">frp</a>
+        
+            <a href="/tags/nginx/">nginx</a>
+        
+            <a href="/tags/frpproplugin/">FrpProPlugin</a>
+        
+            <a href="/tags/socat/">socat</a>
+        
+            <a href="/tags/haproxy/">haproxy</a>
+        
+            <a href="/tags/rinetd/">rinetd</a>
+        
+            <a href="/tags/nps/">nps</a>
+        
+            <a href="/tags/holer/">holer</a>
+        
+            <a href="/tags/lanproxy/">lanproxy</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/sources.list/">sources.list</a>
+        
+            <a href="/tags/ubuntu/">Ubuntu</a>
+        
+            <a href="/tags/padavan/">Padavan</a>
+        
+            <a href="/tags/ntp/">NTP</a>
+        
+            <a href="/tags/whoami/">whoami</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/wordpress-qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-34.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-34.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Wordpress Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-33.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-33.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker容器无法访问网络</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/docker%E7%9B%B8%E5%85%B3/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-31.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-31.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker相关</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-27.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">联通(数码视讯)Q7盒子再刷Openwrt</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/windows-10%E7%89%88%E6%9C%AC1709%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AEnas%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90%E5%8F%8A%E5%A4%84%E7%90%86/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-16.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-16.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows 10(版本1709)不能访问NAS的原因分析及处理</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#问题-旧版securecrt不能连接新版本的sshd服务器">问题: 旧版SecureCrt不能连接新版本的sshd服务器</a></li>
+    <li><a href="#问题-在openwrt上新建一个可用的samba用户">问题: 在openwrt上新建一个可用的samba用户</a></li>
+    <li><a href="#问题-在openwrt上设置samba服务器-windowswin10es文件浏览器都可以通过网络访问">问题: 在openwrt上设置samba服务器, Windows/Win10/Es文件浏览器都可以通过网络访问.</a></li>
+    <li><a href="#emuelec2020春节整合版s905-被百毒封了">EmuELEC2020春节整合版(s905) 被百毒封了</a></li>
+    <li><a href="#问题-openwrt的history只能看到当前连接的命令记录">问题: openwrt的history只能看到当前连接的命令记录</a></li>
+    <li><a href="#网络相关问题-内网互联">网络相关问题: 内网互联</a></li>
+    <li><a href="#问题-ubuntu采用docker官方shell安装时报错">问题: ubuntu采用Docker官方shell安装时报错</a></li>
+    <li><a href="#问题-padavan路由作二级桥接无线路由时-系统时间混乱的问题处理">问题: Padavan路由作二级桥接无线路由时, 系统时间混乱的问题处理</a></li>
+    <li><a href="#linux下-以指定用户身份执行">Linux下, 以指定用户身份执行</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

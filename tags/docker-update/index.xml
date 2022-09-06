@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>DOCKER UPDATE on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/docker-update/</link>
+        <description>Recent content in DOCKER UPDATE on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 06 Apr 2021 22:23:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/docker-update/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Docker相关</title>
+        <link>https://jimway71.github.io/p/docker%E7%9B%B8%E5%85%B3/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/docker%E7%9B%B8%E5%85%B3/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-31.jpg" alt="Featured image of post Docker相关" /&gt;&lt;h2 id=&#34;参考&#34;&gt;参考:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/ea4a00c6c21c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker run 命令参数及使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/wanghao_0206/article/details/79583325&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docker设置容器固定ip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/47310fe571b5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用Docker搭建WordPress博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zero_only/article/details/107567135&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;armbian装docker+wordpress实现https访问&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://clownote.github.io/2020/03/16/blog/Docker-WordPress/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用Docker部署WordPress&lt;/a&gt;&lt;br&gt;
+WordPress连接数据库失败处理方法&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/f7c48fb5a563&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;基于docker搭建自己的个人网站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker-qa&#34;&gt;Docker Q&amp;amp;A&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;查看Docker容器环境变量&lt;br&gt;
+标注说明:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CONTAINER-NAME: 容器名字&lt;/li&gt;
+&lt;li&gt;CONTAINER-ID: 容器ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用命令 Docker ps -a 可以查到上述信息&lt;br&gt;
+有下列3种方式查看Docker容器环境变量:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Docker inspect&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker inspect &amp;lt;CONTAINER-NAME&amp;gt; OR &amp;lt;CONTAINER-ID&amp;gt;&lt;br&gt;
+# 如:&lt;br&gt;
+# docker inspect WordPressTest1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用env查看&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker exec -it &amp;lt;CONTAINER-NAME&amp;gt; OR &amp;lt;CONTAINER-ID&amp;gt; env&lt;br&gt;
+# 如:&lt;br&gt;
+# docker exec -it b14df65ecd73 env&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入容器后用env查看&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker exec -it &amp;lt;CONTAINER-NAME&amp;gt; OR &amp;lt;CONTAINER-ID&amp;gt; /bin/bash&lt;br&gt;
+(容器提示符)# env&lt;br&gt;
+# 如:&lt;br&gt;
+# docker exec -it b14df65ecd73 /bin/bash&lt;br&gt;
+(容器提示符)# env&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;另: Docker使用&amp;ndash;link参数可以把另一个容器的环境变量连接过来(没有测试), 可以用env查看到&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WordPress的Docker参数&lt;br&gt;
+WordPress的Docker需要的参数是从环境变量里取得.&lt;br&gt;
+读取代码在wordpress容器里的/var/www/html/wp-config.php文件, 相关的主要代码如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;// ** MySQL settings - You can get this info from your web host ** //&lt;br&gt;
+/** The name of the database for WordPress */&lt;br&gt;
+define( &amp;lsquo;DB_NAME&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_NAME&amp;rsquo;, &amp;lsquo;wordpress&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/** MySQL database username */&lt;br&gt;
+define( &amp;lsquo;DB_USER&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_USER&amp;rsquo;, &amp;rsquo;example username&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/** MySQL database password */&lt;br&gt;
+define( &amp;lsquo;DB_PASSWORD&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_PASSWORD&amp;rsquo;, &amp;rsquo;example password&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/**&lt;br&gt;
+*/&lt;/p&gt;
+&lt;p&gt;/** MySQL hostname */&lt;br&gt;
+define( &amp;lsquo;DB_HOST&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_HOST&amp;rsquo;, &amp;lsquo;mysql&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/** Database Charset to use in creating database tables. */&lt;br&gt;
+define( &amp;lsquo;DB_CHARSET&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_CHARSET&amp;rsquo;, &amp;lsquo;utf8&amp;rsquo;) );&lt;/p&gt;
+&lt;p&gt;/** The Database Collate type. Don&amp;rsquo;t change this if in doubt. */&lt;br&gt;
+define( &amp;lsquo;DB_COLLATE&amp;rsquo;, getenv_docker(&amp;lsquo;WORDPRESS_DB_COLLATE&amp;rsquo;, &amp;lsquo;&amp;rsquo;) );&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以看到以下环境变量参数:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WORDPRESS_DB_NAME:              wordpress所用数据库名, 缺省为&amp;quot;wordpress&amp;quot;&lt;br&gt;
+WORDPRESS_DB_USER:               wordpress访问数据库的用户名, 缺省为&amp;quot;example username&amp;quot;&lt;br&gt;
+WORDPRESS_DB_PASSWORD:    wordpress访问数据库的用户密码, 缺省为&amp;quot;example password&amp;quot;&lt;br&gt;
+WORDPRESS_DB_HOST:              wordpress访问的数据库地址端口(ip:port)&lt;br&gt;
+WORDPRESS_DB_CHARSET:        数据库字符集&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;主要用到前4个参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker的重启&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 重启docker&lt;br&gt;
+# service dockerd restart&lt;/p&gt;
+&lt;p&gt;# 重启容器，可通过portainer&lt;br&gt;
+# 查看容器id和名称&lt;br&gt;
+# docker ps -a&lt;br&gt;
+# docker restart bc7c8d4514fe&lt;br&gt;
+# 或&lt;br&gt;
+# docker restart mydb&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;宿主机(即物理机)与docker文件互传&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 宿主机传文件至docker容器&lt;br&gt;
+# docker cp 本地文件的路径  container_id:&amp;lt;docker容器内的路径&amp;gt;&lt;/p&gt;
+&lt;p&gt;# 容器传文件至宿主机&lt;br&gt;
+# docker cp container_id:&amp;lt;docker容器内的路径&amp;gt;  &amp;lt;本地保存文件的路径&amp;gt;&lt;br&gt;
+# 这里的容器ID可以通过portainer或者命令“docker ps -a ”进行查看&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;容器里安装nano或vim&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# apt-get update&lt;br&gt;
+# apt-get install nano&lt;br&gt;
+# 或&lt;br&gt;
+# apt-get install vim&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;容器自动启动&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在使用docker run时，添加&amp;quot;&amp;ndash;restart=always&amp;quot;参数&lt;/li&gt;
+&lt;li&gt;运行中的docker使用update时添加&amp;quot;&amp;ndash;restart=always&amp;quot;参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker update &amp;ndash;restart=always wordpress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ldquo;wordpress&amp;quot;是容器名称, 也可以写容器ID.&lt;br&gt;
+例:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker update &amp;ndash;restart=always DB4WordPress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;DB4WordPress&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker update &amp;ndash;restart=always WordPress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;WordPress&lt;br&gt;
+关机重启后, 数据库和wordpress容器都已启动, 确认命令有效.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker镜像源&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/34d3b4568059&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker快速安装以及换镜像源&lt;/a&gt;&lt;br&gt;
+Docker的镜像配置文件是: /etc/docker/daemon.json, 当前内容是:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;bip&amp;#34;: &amp;#34;192.168.30.1/24&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;data-root&amp;#34;: &amp;#34;/opt/docker/&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-level&amp;#34;: &amp;#34;warn&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-driver&amp;#34;: &amp;#34;json-file&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-opts&amp;#34;: {  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;max-size&amp;#34;: &amp;#34;10m&amp;#34;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;max-file&amp;#34;: &amp;#34;5&amp;#34;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   },  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;registry-mirrors&amp;#34;: [  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;https://dockerhub.azk8s.cn&amp;#34;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;portainer在armbian上安装运行&lt;br&gt;
+运行参考:  &lt;a class=&#34;link&#34; href=&#34;https://documentation.portainer.io/v2.0/deploy/ceinstalldocker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Deploying Portainer CE in Docker&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# (安装应该是使用docker pull: docker pull portainer/portainer-ce)&lt;br&gt;
+# 安装使用apt-get&lt;br&gt;
+# apt-get install portainer/portainer-ce&lt;br&gt;
+# 启动&lt;br&gt;
+# docker volume create portainer_data&lt;br&gt;
+# docker run -d -p 8000:8000 -p 9000:9000 &amp;ndash;name=portainer &amp;ndash;restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看某个docker容器占用的ip&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker inspect openwrt | grep Address&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中“openwrt”是容器的名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;armbian上安装Docker&lt;br&gt;
+参考官网安装说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/get-docker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Get Docker&lt;/a&gt;&lt;br&gt;
+一般用官方的shell安装.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改地址(临时, openwrt)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ifconfig br-lan 172.17.0.3 netmask 255.255.255.0&lt;br&gt;
+# 设置网关&lt;br&gt;
+route add default gw 172.17.0.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker搜索镜像(img包)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker search 镜像包名, 如:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker search hugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME                                   DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;klakegg/hugo                           Minimal image and variants with batteries in…   99                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jojomi/hugo                            hugo, see https://gohugo.io                     64                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;monachus/hugo                          Docker image for building and running Hugo (…   42                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;publysher/hugo                         Docker base image for static sites generated…   38                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jguyomard/hugo-builder                 Lightweight Alpine-Based Docker Image for Hu…   19                   [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cibuilds/hugo                          Docker image for Hugo, the static-site gener…   15                     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fundor333/hugo                         Docker file for build your Hugo for my site …   4                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;peaceiris/hugo                         Hugo Alpine base Docker Image (Hugo extended…   4                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;solidnerd/hugo                         Hugo in a container                             2                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yanqd0/hugo                            The smallest hugo image built from Alpine.      2                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;muninn/hugo-caddy                      hugo + caddy + caddy hugo admin plugin + cad…   2                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tarampampam/hugo                       Hugo (gohugo, static stite generator) applic…   1                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;orus/hugo-builder                      Alpine with hugo, git and pygments installed…   1                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dettmering/hugo-build                  Build a website with Hugo (gohugo.io)           1                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;envimate/hugo                          Dockerized version of hugo cli https://gohug…   1                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chabad360/hugo                         Build a static site with Hugo (includes Hugo…   0                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vergissberlin/hugo-docker-watchtower   Hugo with continues delivery after commits i…   0                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;simonszu/hugo                          An image for the hugo blog system               0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;webhippie/hugo                         Docker images for Hugo                          0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;toschwarz/hugo-builder                 Hugo Builder Image                              0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;svlentink/hugo                         Official Hugo static web gen. from Github (l…   0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mazgi/hugo-static-website              Docker image for static website by Hugo.        0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sjugge/hugo                            Runs the latest stable Hugo static site gene…   0                    [OK]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;forestryio/hugo                                                                        0                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;endocode/hugo-website                                                                  0   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;*STARS越多越好(排在越靠前)&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

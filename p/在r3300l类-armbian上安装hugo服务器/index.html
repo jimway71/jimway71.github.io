@@ -1032,7 +1032,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 当域名不正确时, 推送到github后, 浏览时也会报404错误。<br>
 命令如下:</p>
 <blockquote>
-<p>$ hugo &ndash;baseURL=&ldquo;<a class="link" href="https://abcd.github.io"  target="_blank" rel="noopener"
+<p>$ hugo --baseURL=&ldquo;<a class="link" href="https://abcd.github.io"  target="_blank" rel="noopener"
     >https://abcd.github.io</a>&rdquo;</p>
 </blockquote>
 </li>
@@ -1041,7 +1041,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 <p>暂无</p>
 <h2 id="其他问题">其他问题</h2>
 <h3 id="关于在windows10上-使用tortoisegitgit管理在samba服务器基于armbian系统上的仓库时出现的问题">关于在Windows10上, 使用TortoiseGit(+Git)管理在Samba服务器(基于Armbian系统)上的仓库时出现的问题</h3>
-<p><!-- raw HTML omitted -->问题描述:<!-- raw HTML omitted --><br>
+<p><u>问题描述:</u><br>
 在Armbian系统上使用git clone命令克隆Pure主题仓库(相关目录通过Samba服务器在网络上共享), 在Armbian系统中和Windows共享中修改后, 在Windows上使用TortoiseGit查看diff, 报&quot;fatal: detected dubious ownership in repository&quot;类的错误, 并提示:</p>
 <ul>
 <li>添加环境变量GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true</li>
@@ -1053,10 +1053,10 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 <li><code>添加信任目录</code>可以在cmd中使用已安装的<code>git.exe</code>程序执行</li>
 </ul>
 <p>但是, 按此操作后, 并没有效果: 使用TortoiseGit查看diff依然报错。<br>
-另外, 在<!-- raw HTML omitted -->内存虚拟磁盘(使用&rsquo;Olof Lagerkvist&rsquo;的&rsquo;ImDisk Virtual Disk&rsquo;建立)<!-- raw HTML omitted -->上, 也会出错同样的问题。</p>
-<p><!-- raw HTML omitted -->处理:<!-- raw HTML omitted --><br>
+另外, 在<u>内存虚拟磁盘(使用&rsquo;Olof Lagerkvist&rsquo;的&rsquo;ImDisk Virtual Disk&rsquo;建立)</u>上, 也会出错同样的问题。</p>
+<p><u>处理:</u><br>
 在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。</p>
-<p><!-- raw HTML omitted -->结论:<!-- raw HTML omitted --><br>
+<p><u>结论:</u><br>
 在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。</p>
 
 </section>
@@ -1136,6 +1136,25 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
             
                 
 <article class="has-image">
+    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-27.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">联通(数码视讯)Q7盒子再刷Openwrt</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E7%9A%84%E5%A5%BD%E8%B4%B4%E6%94%B6%E9%9B%86/">
         
         
@@ -1155,7 +1174,26 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
             
                 
 <article class="has-image">
-    <a href="/p/markdown-on-hugo-with-theme-stack/">
+    <a href="/p/armbian-on-tv-box/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-35.png" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-35.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Armbian on TV box</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/markdownhtml-on-hugo-with-theme-stack/">
         
         
             <div class="article-image">
@@ -1166,7 +1204,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
         
 
         <div class="article-details">
-            <h2 class="article-title">markdown On Hugo With theme Stack</h2>
+            <h2 class="article-title">Markdown&amp;Html On Hugo With theme Stack</h2>
         </div>
     </a>
 </article>
@@ -1174,37 +1212,18 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
             
                 
 <article class="has-image">
-    <a href="/p/%E5%86%8D%E5%88%B7%E7%A7%BB%E5%8A%A8%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/">
+    <a href="/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/">
         
         
             <div class="article-image">
                 
-                    <img src="/wallpaper/wallpaper-25.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-25.jpg"/>
+                    <img src="/wallpaper/wallpaper-30.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-30.jpg"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">再刷移动魔百和CM201-2电视盒子</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E6%88%90%E5%8A%9F-%E4%BD%86%E8%BF%99q7%E7%9B%92%E5%AD%90%E6%98%AF%E7%9C%9F%E7%9A%84%E5%9E%83%E5%9C%BE/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/wallpaper/wallpaper-24.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-24.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾</h2>
+            <h2 class="article-title">在Openwrt上建立Docker环境</h2>
         </div>
     </a>
 </article>

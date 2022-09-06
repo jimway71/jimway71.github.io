@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>英文半角符号自动变成中文全角 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/%E8%8B%B1%E6%96%87%E5%8D%8A%E8%A7%92%E7%AC%A6%E5%8F%B7%E8%87%AA%E5%8A%A8%E5%8F%98%E6%88%90%E4%B8%AD%E6%96%87%E5%85%A8%E8%A7%92/</link>
+        <description>Recent content in 英文半角符号自动变成中文全角 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 08 Apr 2021 21:42:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E8%8B%B1%E6%96%87%E5%8D%8A%E8%A7%92%E7%AC%A6%E5%8F%B7%E8%87%AA%E5%8A%A8%E5%8F%98%E6%88%90%E4%B8%AD%E6%96%87%E5%85%A8%E8%A7%92/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Wordpress Q&amp;A</title>
+        <link>https://jimway71.github.io/p/wordpress-qa/</link>
+        <pubDate>Thu, 08 Apr 2021 21:42:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/wordpress-qa/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-34.jpg" alt="Featured image of post Wordpress Q&amp;A" /&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;WordPress英文半角符号自动变成中文全角的解决方法&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://www.hello2099.com/1545.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WordPress英文半角符号变成中文全角的解决方法&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;问题分析:&lt;br&gt;
+查找原因，原来是默认情况下，WordPress会调用函数wptexturize来执行转换。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决方法:&lt;br&gt;
+在主题目录下的functions.php文件中添加如下代码即可。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;//WordPress英文半角符号变成中文全角的解决方法&lt;br&gt;
+remove_filter(‘the_title’, ‘wptexturize’);&lt;br&gt;
+remove_filter(‘the_excerpt’, ‘wptexturize’);&lt;br&gt;
+remove_filter(‘the_content’, ‘wptexturize’);&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是最简单的方法，推荐。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然，还有一种方法是更改wp-includes目录里面的formatting.php代码，但是这样每次WordPress更新版本的时候都要去修改代码，不建议。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

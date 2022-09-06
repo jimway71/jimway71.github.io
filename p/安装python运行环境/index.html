@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='包括Python、PyCharm、PySide6、Nuitka'><title>安装Python运行环境</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='安装Python运行环境'>
+<meta property='og:description' content='包括Python、PyCharm、PySide6、Nuitka'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='PyCharm' /><meta property='article:tag' content='PySide6' /><meta property='article:tag' content='auto-py-to-exe' /><meta property='article:tag' content='easycython' /><meta property='article:tag' content='Nuitka' /><meta property='article:published_time' content='2022-08-30T11:53:00&#43;08:00'/><meta property='article:modified_time' content='2022-08-30T11:53:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-28.jpg' />
+<meta name="twitter:title" content="安装Python运行环境">
+<meta name="twitter:description" content="包括Python、PyCharm、PySide6、Nuitka"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-28.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/avatar-icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/">
+                
+                    <img src="/wallpaper/wallpaper-28.jpg" loading="lazy" alt="Featured image of post 安装Python运行环境" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/">安装Python运行环境</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            包括Python、PyCharm、PySide6、Nuitka
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 30, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 11 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="在windows系统上安装python运行环境">在Windows系统上安装Python运行环境</h1>
+<h2 id="python语言相关">Python语言相关</h2>
+<ul>
+<li>Python官网: <a class="link" href="https://www.python.org/"  target="_blank" rel="noopener"
+    >https://www.python.org/</a></li>
+<li>Python官网当前最新版本(Python 3.10.6)安装包: <a class="link" href="https://www.python.org/downloads/release/python-3106/"  target="_blank" rel="noopener"
+    >https://www.python.org/downloads/release/python-3106/</a></li>
+<li>Python官网安装说明: <a class="link" href="https://docs.python.org/zh-tw/3/using/windows.html"  target="_blank" rel="noopener"
+    >在Windows上使用Python</a></li>
+</ul>
+<p>Microsoft Store中也提供了Python包, Python官网的说明如下:</p>
+<blockquote>
+<p>Microsoft Store 包 is a simple installation of Python that is suitable for running scripts and packages, and using IDLE or other development environments. It requires Windows 10 and above, but can be safely installed without corrupting other programs. It also provides many convenient commands for launching Python and its tools.</p>
+</blockquote>
+<p>但我使用Microsoft Store安装Python后(应该是Python 3.7), 再安装auto-py-to-exe, 发现auto-py-to-exe不能正常运行, 报错说&quot;不能找到指定目录的Python&quot;, 因此还是需要使用Python官网提供的安装包进行安装。</p>
+<h2 id="pycharm开发环境">Pycharm开发环境</h2>
+<p>PyCharm是一个用于计算机编程的集成开发环境(IDE)，主要用于Python语言开发，由捷克公司<a class="link" href="https://www.jetbrains.com/"  target="_blank" rel="noopener"
+    >JetBrains</a>开发，提供代码分析、图形化调试器，集成测试器、集成版本控制系统，并支持使用<a class="link" href="https://www.djangoproject.com/"  target="_blank" rel="noopener"
+    >Django</a>进行网页开发。</p>
+<ul>
+<li>PyCharm官网: <a class="link" href="https://www.jetbrains.com/pycharm/"  target="_blank" rel="noopener"
+    >https://www.jetbrains.com/pycharm/</a></li>
+<li><a class="link" href="https://www.py.cn/tools/pycharm/19641.html"  target="_blank" rel="noopener"
+    >pycharm如何配置python环境</a></li>
+<li><a class="link" href="https://blog.csdn.net/fmyhust/article/details/104548217"  target="_blank" rel="noopener"
+    >Pycharm 外部工具设置</a></li>
+</ul>
+<h2 id="qt图形框架模块pyside6">Qt图形框架模块PySide6</h2>
+<p><a class="link" href="https://pypi.org/project/PySide6/"  target="_blank" rel="noopener"
+    >PySide6</a>是来自于Qt for Python项目的官方Python模块，它提供了对完整Qt 6.0+框架的访问。</p>
+<ul>
+<li>PySide6官网: <a class="link" href="https://pypi.org/project/PySide6/"  target="_blank" rel="noopener"
+    >https://pypi.org/project/PySide6/</a></li>
+<li>关于Qt开发: <a class="link" href="https://doc.qt.io/qtforpython/deployment.html#deployment-guides"  target="_blank" rel="noopener"
+    >Qt for Python Deployment</a></li>
+<li>关于选用PySide, 参考: <a class="link" href="/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/" >调查五款Python GUI框架</a></li>
+</ul>
+<p>关于常用编译打包系统的支持情况:<br>
+<img src="/img/28-Python-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="The following table summarizes the platform support for those packaging tools:"
+	
+	
+></p>
+<h2 id="编译打包工具">编译打包工具</h2>
+<h3 id="auto-py-to-exe">auto-py-to-exe</h3>
+<p>Auto PY to EXE是一个基于Eel 和PyInstaller构建的、通过简单的UI界面将python项目中的.py文件(可以是单个py文件或多个py文件)打包为.exe文件的简单工具，与PyInstaller相比，Auto PY to EXE更简单直观，可以自动生成执行转换代码，进而将python程序打包为exe文件。</p>
+<ul>
+<li>官网: <a class="link" href="https://pypi.org/project/auto-py-to-exe/"  target="_blank" rel="noopener"
+    >https://pypi.org/project/auto-py-to-exe/</a></li>
+<li>简单说明: 图形化的<a class="link" href="https://pypi.org/project/pyinstaller/"  target="_blank" rel="noopener"
+    >PyInstaller</a> (<a class="link" href="https://pyinstaller.org/en/stable/"  target="_blank" rel="noopener"
+    >PyInstaller手册</a>)</li>
+<li>使用参考: <a class="link" href="https://www.cnblogs.com/cfld/p/16258446.html"  target="_blank" rel="noopener"
+    >python打包教程</a></li>
+</ul>
+<h3 id="easycython">easycython</h3>
+<p>easycython.py是一个脚本，它将尝试自动将一个或多个.pyx 文件转换为相应的已编译.pyd|.so的二进制模块。<br>
+easycython.py is a script that will attempt to automatically convert one or more .pyx files into the corresponding compiled .pyd|.so binary modules。</p>
+<ul>
+<li>官网: <a class="link" href="https://pypi.org/project/easycython/"  target="_blank" rel="noopener"
+    >https://pypi.org/project/easycython/</a></li>
+</ul>
+<h3 id="nuitka编译器">nuitka编译器</h3>
+<p>Nuitka是一个Python的替代编译器。 它可以无缝地替代和扩展Python的解释和编译工作。</p>
+<ul>
+<li>Nuitka官网: <a class="link" href="https://nuitka.net/index.html"  target="_blank" rel="noopener"
+    >https://nuitka.net/index.html</a></li>
+<li>参考文档:
+<ul>
+<li><a class="link" href="https://www.libhunt.com/compare-Nuitka-vs-pyinstaller"  target="_blank" rel="noopener"
+    >Compare Nuitka VS Pyinstaller</a></li>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/133303836"  title="About Nuitka-&gt;"
+     target="_blank" rel="noopener"
+    >知乎 - Python打包exe的王炸-Nuitka</a></li>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/137785388"  target="_blank" rel="noopener"
+    >知乎 - Nuitka之乾坤大挪移-让天下的Python都可以打包</a></li>
+<li><a class="link" href="https://yinhe.co/archives/20211127_pyside6_001.html#nuitka"  target="_blank" rel="noopener"
+    >PySide6学习笔记</a></li>
+</ul>
+</li>
+</ul>
+<p>在Windows系统中使用时:</p>
+<ul>
+<li>需要安装gcc编译器
+<ul>
+<li>安装参考: <a class="link" href="https://zhuanlan.zhihu.com/p/133303836"  title="About Nuitka-&gt;"
+     target="_blank" rel="noopener"
+    >知乎 - Python打包exe的王炸-Nuitka</a><br>
+下载<a class="link" href="https://sourceforge.net/projects/mingw-w64/files/"  target="_blank" rel="noopener"
+    >MinGW-w64 - for 32 and 64 bit Windows Files</a>中的<a class="link" href="https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z"  target="_blank" rel="noopener"
+    >x86_64-win32-sjlj</a>(当前为GCC-8.1.0版本)<br>
+下载完成后, 解压到选定目录下, 并在系统环境变量PATH中增加gcc.exe(在某目录/bin下)目录。</li>
+</ul>
+</li>
+<li>当然, 还需要安装Nuitka
+<ul>
+<li>安装参考: <a class="link" href="https://nuitka.net/doc/download.html"  target="_blank" rel="noopener"
+    >Nuitka Downloads</a> 及 <a class="link" href="https://zhuanlan.zhihu.com/p/133303836"  title="About Nuitka-&gt;"
+     target="_blank" rel="noopener"
+    >知乎 - Python打包exe的王炸-Nuitka</a><br>
+使用以下命令进行安装:
+<blockquote>
+<p>c:\&gt; pip install -U &ldquo;<a class="link" href="https://github.com/Nuitka/Nuitka/archive/develop.zip%22"  target="_blank" rel="noopener"
+    >https://github.com/Nuitka/Nuitka/archive/develop.zip"</a><br>
+#  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)<br>
+c:\&gt;pip install ordered-set Nuitka</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/28-Python-02.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pip install Nuitka:"
+	
+	
+></p>
+<center>↑ Nuitka安装界面</center>
+<p>在Windows下常用的编译命令:
+注: helloworld代码参考&rdquo;<a class="link" href="https://www.perfcode.com/p/pyside6-hello-world.html"  title="-&gt;"
+     target="_blank" rel="noopener"
+    >使用PySide6创建Hello World程序</a>&quot;</p>
+<blockquote>
+<p>c:\&gt; nuitka --mingw64 --standalone --show-progress --show-memory --enable-plugin=pyside6 --output-dir=r:\helloworld \helloworld.py</p>
+</blockquote>
+<p>使用PySide6框架编写的Python图形界面程序, 使用Nuitka编译后, 独立运行需要的文件有:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">编译生成的运行exe文件
+</span></span><span class="line"><span class="cl">pyside6.abi3.dll
+</span></span><span class="line"><span class="cl">qt6core.dll
+</span></span><span class="line"><span class="cl">qt6gui.dll
+</span></span><span class="line"><span class="cl">qt6network.dll
+</span></span><span class="line"><span class="cl">qt6svg.dll
+</span></span><span class="line"><span class="cl">qt6widgets.dll
+</span></span><span class="line"><span class="cl">shiboken6.abi3.dll
+</span></span><span class="line"><span class="cl">完整的PySide6目录
+</span></span><span class="line"><span class="cl">完整的shiboken6目录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>在Windows下使用Nuitka编译时遇到的报错信息及处理:</strong></p>
+<ul>
+<li>
+<p>&ldquo;ordered sets&quot;相关警告信息, 如下:</p>
+<blockquote>
+<p>Nuitka:WARNING: Using very slow fallback for ordered sets, please install &lsquo;orderedset&rsquo; PyPI package for best Python</p>
+</blockquote>
+<p>相关帖子:</p>
+<ul>
+<li><a class="link" href="https://github.com/Nuitka/Nuitka/issues/1673"  target="_blank" rel="noopener"
+    >Nuitka can&rsquo;t run on Android termux #1673</a></li>
+</ul>
+<p>处理操作(命令):</p>
+<blockquote>
+<p>c:\&gt; pip install ordered-set Nuitka</p>
+</blockquote>
+</li>
+<li>
+<p>关于Python版本的错误信息:</p>
+<blockquote>
+<p>Too old gcc exe ((8, 1, 0) &lt; (11, 2)) ignored</p>
+</blockquote>
+<p>(当使用Python3.7时)报错后, 编译操作会停止。<br>
+当改用Python3.10后, 虽然也有报错, 但编译操作会继续: 即使用Python3.10时, 无需处理本错误。</p>
+<p>相关帖子:</p>
+<ul>
+<li><u><a class="link" href="https://blog.csdn.net/xiaohouzi112233/article/details/122581734"  target="_blank" rel="noopener"
+    >Nuitka打包python为.exe时遇到的坑</a></u></li>
+<li><a class="link" href="https://blog.csdn.net/bigcarp/article/details/123152166"  target="_blank" rel="noopener"
+    >Nuitka打包python为.exe时遇到的坑</a></li>
+</ul>
+<p>处理操作(命令):<br>
+修改&quot;C:\Users\myusr\venv\Lib\site-packages\nuitka\build\SconsCompilerSettings.py&rdquo;,</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">            if isGccName(the_cc_name):
+</span></span><span class="line"><span class="cl">                gcc_version = myDetectVersion(env, compiler_path)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#                min_version = (11, 2)
+</span></span><span class="line"><span class="cl">                min_version = (8, 1, 0)
+</span></span><span class="line"><span class="cl">                if gcc_version is not None and (
+</span></span><span class="line"><span class="cl">                    gcc_version &lt; min_version
+</span></span><span class="line"><span class="cl">                    or &#34;force-winlibs-gcc&#34; in env.experimental_flags
+</span></span><span class="line"><span class="cl">                ):
+</span></span><span class="line"><span class="cl">                    scons_logger.info(
+</span></span><span class="line"><span class="cl">                        &#34;Too old gcc %r (%r &lt; %r) ignored!&#34;
+</span></span><span class="line"><span class="cl">                        % (compiler_path, gcc_version, min_version)
+</span></span><span class="line"><span class="cl">                    )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    # This also will trigger using it to use our own gcc in branch below.
+</span></span><span class="line"><span class="cl">                    compiler_path = None
+</span></span><span class="line"><span class="cl">                    env[&#34;CC&#34;] = None
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>关于&quot;libiconv-2.dll&quot;的错误, 信息如下:</p>
+<blockquote>
+<p>由于找不到libiconv-2.dll，无法继续执行代码</p>
+</blockquote>
+<p>相关帖子:</p>
+<ul>
+<li><a class="link" href="https://blog.csdn.net/qq_37363702/article/details/124177907"  target="_blank" rel="noopener"
+    >“由于找不到libiconv-2.dll，无法继续执行代码”问题处理</a></li>
+</ul>
+<p>处理操作(命令):<br>
+未处理, 未再现(原因未明)</p>
+</li>
+<li>
+<p>&ldquo;WinError&quot;相关错误信息, 如下:</p>
+<blockquote>
+<p>OSError: [WinError 1] 鍑芥暟涓嶆纭€? &lsquo;R:\hw\helloworld.dist\PySide6&rsquo;</p>
+</blockquote>
+<p>现象为当用Nuitka编译的程序位于ImDisk虚拟盘上时, 运行该程序会报上述错误。</p>
+<p>相关帖子:</p>
+<ul>
+<li><a class="link" href="https://stackoverflow.com/questions/72603982/oserror-winerror-1-incorrect-function"  target="_blank" rel="noopener"
+    >OSError: [WinError 1] Incorrect function</a></li>
+<li><a class="link" href="https://github.com/mesonbuild/meson/issues/7295"  target="_blank" rel="noopener"
+    >Issue under MSYS2 on Windows when using ImDisk RAM disk #7295</a></li>
+</ul>
+<p>分析原因:<br>
+根据<a class="link" href="https://github.com/mesonbuild/meson/issues/7295"  target="_blank" rel="noopener"
+    >Issue under MSYS2 on Windows when using ImDisk RAM disk #7295</a>分析, 估计是<u>Python有些版本有这个问题</u>。</p>
+<p>处理操作:<br>
+改用最新版本Python(当前为3.10.6)后, 未再出现这个问题。</p>
+</li>
+</ul>
+<h2 id="在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍">在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)</h2>
+<h3 id="在windows系统上安装python">在Windows系统上安装Python</h3>
+<p>下载当前最新的<a class="link" href="https://www.python.org/downloads/release/python-3106/"  target="_blank" rel="noopener"
+    >3.10版本</a>, 选择<a class="link" href="https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe"  target="_blank" rel="noopener"
+    >Windows installer (64-bit)</a>进行安装, 安装目录选择缺省目录, 安装最后选择&quot;disable path length limit&rdquo;。<br>
+安装完成后, 需要在系统环境变量path中增加python和python下scripts目录:</p>
+<ul>
+<li>在Windows搜索框中，键入&quot;高级系统设置&quot;，打开高级系统设置窗口; 
+<img src="/img/28-Python-03.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="系统属性"
+	
+	
+></li>
+<li>按下&quot;环境变量&quot;按钮，在打开的窗口中可以在&quot;系统变量&quot;框中选择Path，按&quot;编辑&quot;按钮; 
+<img src="/img/28-Python-04.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="系统属性"
+	
+	
+></li>
+<li>在(path环境变量)其中添加Python执行文件的目录, 在我的系统中, python.exe位于&quot;C:\Users\WDAGUtilityAccount\AppData\Local\Programs\Python\Python310&quot;目录下;</li>
+<li>并在(path环境变量)其中添加该目录下的scripts目录, 即&quot;C:\Users\WDAGUtilityAccount\AppData\Local\Programs\Python\Python310\Scripts&quot;目录 - pip等工具安装在这个目录。<br>
+<img src="/img/28-Python-05.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="系统属性"
+	
+	
+></li>
+<li>设置完成后, 就可以在命令行中执行python/pip等命令。</li>
+</ul>
+<h3 id="在windows系统上安装pycharm">在Windows系统上安装Pycharm</h3>
+<p>从<a class="link" href="https://www.jetbrains.com/pycharm/download/#section=windows"  target="_blank" rel="noopener"
+    >Download PyCharm</a>下载Windows+Community版本。<br>
+当前版本为<a class="link" href="https://download-cdn.jetbrains.com/python/pycharm-community-2022.2.1.exe"  target="_blank" rel="noopener"
+    >Pycharm-Community-2022.2.1</a>。<br>
+安装使用的是当前可下载的Pycharm-Community-2022.2.1版本。<br>
+安装后的目录可以当绿色版本直接使用。</p>
+<p>安装完成后, 需要做以下配置:</p>
+<ul>
+<li>配置外观<br>
+在设置-&gt;外观与行为-&gt;外观里, 将主题改为&quot;Windows 10 Light&quot;方案。</li>
+<li>配置中文环境, 参考<a class="link" href="https://blog.csdn.net/sinat_26811377/article/details/106182672"  target="_blank" rel="noopener"
+    >Pycharm 简单一步设置成官方中文版</a><br>
+曾遇到的问题:<br>
+在使用<strong>Pycharm-Community-2019.2版本(旧版)</strong>(原来下载的版本)的安装中, 在Plugins-&gt;Marketplace库中找不到&quot;Chinese ​(Simplified)​ Language Pack / 中文语言包&quot;;<br>
+手动从<a class="link" href="https://plugins.jetbrains.com/"  target="_blank" rel="noopener"
+    >JetBrains官方插件网站</a>下载的<a class="link" href="https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----/versions"  target="_blank" rel="noopener"
+    >Chinese ​(Simplified)​ Language Pack / 中文语言包</a> For &ldquo;Pycharm Community&quot;插件, 在安装时报&quot;不兼容&quot;错误, 如下:<br>
+<img src="/img/28-Python-06.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="中文插件安装时报&#34;不兼容&#34;错误"
+	
+	
+><br>
+<u>改用当前最新版本2022.2.1后问题解决。</u></li>
+<li>配置Python环境, 参考<a class="link" href="https://www.py.cn/tools/pycharm/19641.html"  target="_blank" rel="noopener"
+    >pycharm如何配置python环境</a><br>
+实际上, 在安装后, Pycharm的配置里已自动加入了Python解释器, 包括pip/setuptools/wheel。
+<img src="/img/28-Python-07.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="中文插件安装时报&#34;不兼容&#34;错误"
+	
+	
+></li>
+</ul>
+<h3 id="在windows系统上安装pyside6httpspypiorgprojectpyside6">在Windows系统上安装<a class="link" href="https://pypi.org/project/PySide6/"  target="_blank" rel="noopener"
+    >PySide6</a></h3>
+<ul>
+<li>
+<p>可以在&quot;Window命令提示符&quot;里安装PySide6, 也可以在PyCharm的&quot;终端&quot;里操作(建议), 命令很简单, 如下:</p>
+<blockquote>
+<p>pip3 install PySide6</p>
+</blockquote>
+<p>安装后, 在Python目录下的&quot;Lib\site-packages\PySide6&quot;目录中可以看到PySide6相关文件, 其中designer.exe可以直接运行(如果运行时报缺dll库错误, 只需要将所指dll文件拷到Pyside6目录下即可)</p>
+</li>
+<li>
+<p>在Pycharm中设置外部工具: Pyside6-Designer和Pyside6-UIC<br>
+参考: <a class="link" href="https://zhuanlan.zhihu.com/p/445661017"  target="_blank" rel="noopener"
+    >知乎 - Pycharm安装配置Pyside6</a></p>
+</li>
+</ul>
+<p>问题:</p>
+<ul>
+<li>本次安装后, 在Pycharm中试着运行Helloworld.py(需要PySide6支持)时, 报&quot;ModuleNotFoundError: No module named &lsquo;PySide6&rsquo;&ldquo;错误。<br>
+本问题未确认原因, 也未找到解决方法。</li>
+</ul>
+<h3 id="在windows系统上安装nuitkahttpsnuitkanetindexhtml">在Windows系统上安装<a class="link" href="https://nuitka.net/index.html"  target="_blank" rel="noopener"
+    >Nuitka</a></h3>
+<ul>
+<li>安装gcc编译器<br>
+安装参考: <a class="link" href="https://zhuanlan.zhihu.com/p/133303836"  title="About Nuitka-&gt;"
+     target="_blank" rel="noopener"
+    >知乎 - Python打包exe的王炸-Nuitka</a><br>
+下载<a class="link" href="https://sourceforge.net/projects/mingw-w64/files/"  target="_blank" rel="noopener"
+    >MinGW-w64 - for 32 and 64 bit Windows Files</a>中的<a class="link" href="https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z"  target="_blank" rel="noopener"
+    >x86_64-win32-sjlj</a>(当前为GCC-8.1.0版本)<br>
+下载完成后, 解压到选定目录下, 并在系统环境变量PATH中增加gcc.exe(在某目录/bin下)目录。
+完成后, 可以在cmd中使用以下命令以检查安装是否正常
+<blockquote>
+<p>c:\&gt; gcc --version</p>
+</blockquote>
+</li>
+<li>安装Nuitka<br>
+安装参考: <a class="link" href="https://nuitka.net/doc/download.html"  target="_blank" rel="noopener"
+    >Nuitka Downloads</a> 及 <a class="link" href="https://zhuanlan.zhihu.com/p/133303836"  title="About Nuitka-&gt;"
+     target="_blank" rel="noopener"
+    >知乎 - Python打包exe的王炸-Nuitka</a><br>
+使用以下命令进行安装:
+<blockquote>
+<p>c:\&gt; pip install -U &ldquo;<a class="link" href="https://github.com/Nuitka/Nuitka/archive/develop.zip%22"  target="_blank" rel="noopener"
+    >https://github.com/Nuitka/Nuitka/archive/develop.zip"</a><br>
+#  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)<br>
+c:\&gt;pip install ordered-set Nuitka</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="安装完成后-可以使用nuitka进行编译">安装完成后, 可以使用Nuitka进行编译</h3>
+<p>Nuitka编译常用参数(From <a class="link" href="https://www.cxymm.net/article/djj199301111/120535999"  target="_blank" rel="noopener"
+    >Nuitka 打包常用命令</a>):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--windows-disable-console   #不显示控制台窗口(CMD控制窗口)
+</span></span><span class="line"><span class="cl">--windows-icon=ICON_PATH    #添加ico
+</span></span><span class="line"><span class="cl">--nofollow-imports          # 所有的import不编译，交给python3x.dll执行
+</span></span><span class="line"><span class="cl">--follow-import-to=need     #need为你需要编译成C/C++的py文件夹命名
+</span></span><span class="line"><span class="cl">--mingw64                   #mingw(官方建议编译器)
+</span></span><span class="line"><span class="cl">--standalone                #独立环境，这是必须的(否则拷给别人无法使用)
+</span></span><span class="line"><span class="cl">--output-dir=out            #生成文件路径
+</span></span><span class="line"><span class="cl">--show-progress             #显示编译的进度，很直观
+</span></span><span class="line"><span class="cl">--show-memory               #显示内存的占用
+</span></span><span class="line"><span class="cl">--include-qt-plugins=sensible,styles #打包后PyQt的样式就不会变了
+</span></span><span class="line"><span class="cl">--plugin-enable=qt-plugins  #需要加载的PyQt插件
+</span></span><span class="line"><span class="cl">--plugin-enable=tk-inter    #打包tkinter模块的刚需
+</span></span><span class="line"><span class="cl">--plugin-enable=numpy       #打包numpy,pandas,matplotlib模块的刚需
+</span></span><span class="line"><span class="cl">--plugin-enable=torch       #打包pytorch的刚需
+</span></span><span class="line"><span class="cl">--plugin-enable=tensorflow  #打包tensorflow的刚需
+</span></span><span class="line"><span class="cl">--windows-uac-admin=Windows #用户可以使用管理员权限来安装
+</span></span><span class="line"><span class="cl">--onefile                   #打包成单个exe文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在Windows下常用的编译命令参考:<br>
+注: helloworld代码参考&rdquo;<a class="link" href="https://www.perfcode.com/p/pyside6-hello-world.html"  title="-&gt;"
+     target="_blank" rel="noopener"
+    >使用PySide6创建Hello World程序</a>&rdquo;</p>
+<blockquote>
+<p>c:&gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress --show-memory --enable-plugin=pyside6 --output-dir=x:\helloworld\ helloworld.py</p>
+</blockquote>
+<p>在Windows下编译使用Designer创建的UI程序<br>
+参考:</p>
+<ul>
+<li><a class="link" href="https://www.perfcode.com/p/pyside6-uses-the-ui-created-by-qt-designer.html"  target="_blank" rel="noopener"
+    >PySide6使用Qt Designer创建的UI</a></li>
+<li><a class="link" href="https://blog.csdn.net/a359680405/article/details/45148717"  target="_blank" rel="noopener"
+    >PyQt5学习笔记05&mdash;-Qt Designer信号槽</a></li>
+</ul>
+<p>创建程序及编译:</p>
+<ul>
+<li>
+<p>用Qt Designer生成了login.ui</p>
+</li>
+<li>
+<p>用pyside6-uic将login.ui转换生成ui_login.py</p>
+<blockquote>
+<p>c:&gt; pyside6-uic.exe login.ui -o ui_login.py</p>
+</blockquote>
+</li>
+<li>
+<p>用nuitka编译生成可执行文件(.exe)</p>
+<blockquote>
+<p>c:&gt; dir<br>
+2022/09/05  23:26    &lt;DIR&gt;          .<br>
+2022/09/05  23:26    &lt;DIR&gt;          ..<br>
+2022/09/05  23:26               588 login.py<br>
+2022/09/05  23:23             2,378 login.ui<br>
+2022/09/05  23:24             2,581 ui_login.py<br>
+c:&gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress --show-memory --enable-plugin=pyside6 --output-dir=x:\login\ login.py</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>关于独立运行的依赖文件:</strong><br>
+使用Nuitka编译的基于PySide6的图形界面程序(helloworld.exe), 独立运行时至少需要以下文件:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">生成的运行exe文件
+</span></span><span class="line"><span class="cl">pyside6.abi3.dll
+</span></span><span class="line"><span class="cl">qt6core.dll
+</span></span><span class="line"><span class="cl">qt6gui.dll
+</span></span><span class="line"><span class="cl">qt6network.dll
+</span></span><span class="line"><span class="cl">qt6svg.dll
+</span></span><span class="line"><span class="cl">qt6widgets.dll
+</span></span><span class="line"><span class="cl">shiboken6.abi3.dll
+</span></span><span class="line"><span class="cl">完整的PySide6目录
+</span></span><span class="line"><span class="cl">完整的shiboken6目录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注: 以上文件列表, 在不同的机器上, 可能会不一样!</p>
+<p>在编译过程中如果遇到异常, 可以参考&rdquo;<a class="link" href="/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/#nuitka%E7%BC%96%E8%AF%91%E5%99%A8" >nuitka编译器</a>&ldquo;后面所列的<strong>报错信息及处理</strong>。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/python/">python</a>
+        
+            <a href="/tags/pycharm/">PyCharm</a>
+        
+            <a href="/tags/pyside6/">PySide6</a>
+        
+            <a href="/tags/auto-py-to-exe/">auto-py-to-exe</a>
+        
+            <a href="/tags/easycython/">easycython</a>
+        
+            <a href="/tags/nuitka/">Nuitka</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-20.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-20.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">调查五款Python GUI框架</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BD%95/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-19.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-19.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">临时记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%AE%B0%E5%BD%95/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-18.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-18.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">各种问题汇总记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/markdownhtml-on-hugo-with-theme-stack/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-10.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-10.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown&amp;Html On Hugo With theme Stack</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-02.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-02.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown&#43;Hugo测试文件</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#python语言相关">Python语言相关</a></li>
+    <li><a href="#pycharm开发环境">Pycharm开发环境</a></li>
+    <li><a href="#qt图形框架模块pyside6">Qt图形框架模块PySide6</a></li>
+    <li><a href="#编译打包工具">编译打包工具</a>
+      <ol>
+        <li><a href="#auto-py-to-exe">auto-py-to-exe</a></li>
+        <li><a href="#easycython">easycython</a></li>
+        <li><a href="#nuitka编译器">nuitka编译器</a></li>
+      </ol>
+    </li>
+    <li><a href="#在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍">在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)</a>
+      <ol>
+        <li><a href="#在windows系统上安装python">在Windows系统上安装Python</a></li>
+        <li><a href="#在windows系统上安装pycharm">在Windows系统上安装Pycharm</a></li>
+        <li><a href="#在windows系统上安装pyside6httpspypiorgprojectpyside6">在Windows系统上安装<a href="https://pypi.org/project/PySide6/">PySide6</a></a></li>
+        <li><a href="#在windows系统上安装nuitkahttpsnuitkanetindexhtml">在Windows系统上安装<a href="https://nuitka.net/index.html">Nuitka</a></a></li>
+        <li><a href="#安装完成后-可以使用nuitka进行编译">安装完成后, 可以使用Nuitka进行编译</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

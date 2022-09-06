@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>portainer on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/portainer/</link>
+        <description>Recent content in portainer on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 06 Apr 2021 18:06:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/portainer/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在Openwrt上建立Docker环境</title>
+        <link>https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-30.jpg" alt="Featured image of post 在Openwrt上建立Docker环境" /&gt;&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;推出的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&amp;rdquo;&lt;/a&gt;内置了Docker CE容器(服务-Docker CE容器), 但Docker并不(缺省)可用.&lt;br&gt;
+在Docker CE容器主页面下, 提供了内置的&amp;quot;Docker 初始化无脑配置教程&amp;quot;链接(一个PDF文件), 按照教程说明, 可以简单的把Docker环境搭建完成.&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docker 初始化无脑配置教程&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;环境说明&#34;&gt;环境说明&lt;/h2&gt;
+&lt;p&gt;在TF卡里装了&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OP固件&lt;/a&gt;, 用这张TF卡插在联通(数码视讯)Q7盒子(以下简称Q7)里启动, op可以正常运行.&lt;br&gt;
+TF卡中只用不到1G空间被op系统占用, 剩下的分成了一个exfat的主分区.&lt;/p&gt;
+&lt;h2 id=&#34;操作步骤&#34;&gt;操作步骤&lt;/h2&gt;
+&lt;p&gt;操作步骤大致按照&amp;quot;Docker 初始化无脑配置教程&amp;quot;, 但略有些不同.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;给Docker分配存储空间&lt;br&gt;
+由于原来剩余空间都给了exfat主分区, 所以只能重新分配空间.&lt;br&gt;
+本想通过调整分区大小来分出部分空间给Docker, 但试了Win10的&amp;quot;硬盘管理&amp;quot;+&amp;ldquo;分区助专业版&amp;rdquo;, 发现都不能把exfat分区的空间调小, 所以只能重新分配空间.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先备份exfat分区文件&lt;/li&gt;
+&lt;li&gt;TF卡重新分区&lt;br&gt;
+把TF卡插回Q7的TF卡槽, tf卡启动Q7后, 用SecureCRT登录进去:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用fdisk命令删除原exfat分区&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用fdisk重分两个分区, 一个exfat分区, 一个ext4分区.&lt;br&gt;
+考虑到Docker可能不会占用多少空间, 给ext4分了10G的空间.&lt;br&gt;
+(exfat分区的类型代码是7)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;格式化(mkfs命令)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 格式化exfat分区&lt;br&gt;
+# mkfs.exfat /dev/sda3&lt;br&gt;
+# 格式化ext4分区&lt;br&gt;
+# mkfs.ext4 /dev/sda4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意: 如果分区已经mount上就不能格式化, 会显示格式化失败信息.&lt;br&gt;
+这种情况需要umount, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# umount /dev/sda3&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相应的教程内容, 执行的shell功能就是分区&amp;#43;格式化&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;↑ 相应的教程内容, 执行的shell功能就是分区+格式化&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;挂载(mount)新分区&lt;br&gt;
+把新的ext4分区挂载(mount)到/opt下, 做为Docker的空间.&lt;br&gt;
+与mount有关的配置文件有/etc/mtab + /etc/fstab, /etc/fstab是启动时的挂载配置文件.&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相应的教程内容, 实现新分区挂载到/opt&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相应的教程内容, 实现新分区挂载到/opt&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相应的教程内容, 实现新分区挂载到/opt&#34;
+	
+	
+&gt;&lt;br&gt;
+↑ 相应的教程内容, 实现新分区挂载到/opt&lt;br&gt;
+按教程操作完成挂载后, 查看/etc/fstab文件, 并没有看到/opt的挂载信息, 不清楚具体是在哪里配置的.&lt;br&gt;
+用mount命令查看, 可以看到已经挂载到/opt下了&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;分区挂载状态&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;把备份的exfat分区文件恢复回去.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;确认Docker的配置文件&lt;br&gt;
+修改/etc/docker/daemon.json, 把data-root改为/opt/docker/&lt;br&gt;
+说明见文后的问题①&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装Docker管理系统&lt;br&gt;
+/etc/docker-web是一个shell, 内容如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# cat /etc/docker-web&lt;br&gt;
+#!/bin/sh&lt;br&gt;
+docker run -d &amp;ndash;restart=always &amp;ndash;name=&amp;ldquo;portainer&amp;rdquo; -p 9999:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;docker-web是用来安装docker的web管理系统, 执行前需要先确认下docker是否已启动, 如果没有启动, docker-web的安装会失败, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ./docker-web&lt;br&gt;
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.&lt;br&gt;
+See &amp;lsquo;docker run &amp;ndash;help&amp;rsquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用service命令确认docker运行状态&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service dockerd status&lt;br&gt;
+inactive&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果发现docker未启动, 则先启动docker&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service dockerd start&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再次确认docker运行状态&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service dockerd status&lt;br&gt;
+running&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;确认docker运行后, 可以执行docker-web进行安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ./docker-web&lt;br&gt;
+Unable to find image &amp;lsquo;portainer/portainer-ce:latest&amp;rsquo; locally&lt;br&gt;
+latest: Pulling from portainer/portainer-ce&lt;br&gt;
+84cfa456b2b1: Pull complete&lt;br&gt;
+39d56ef0881a: Pull complete&lt;br&gt;
+16a45878c700: Pull complete&lt;br&gt;
+Digest:&lt;br&gt;
+Status: Downloaded newer image for portainer/portainer-ce:latest&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入Docker管理界面&lt;br&gt;
+在浏览器里输入Q7的ip地址:9999, 设置管理员密码, 选择local进入本地管理界面&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-07.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docker管理界面&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/30-q7-08.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docker管理界面&#34;
+	
+	
+&gt;&lt;br&gt;
+点鲸鱼图标即可管理本地的docker&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;① Docker的配置文件有问题, 需要修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# cat /etc/docker/daemon.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;bip&amp;#34;: &amp;#34;172.31.0.1/24&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;data-root&amp;#34;: &amp;#34;/mnt/mmcblk2p4/docker/&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-level&amp;#34;: &amp;#34;warn&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-driver&amp;#34;: &amp;#34;json-file&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;log-opts&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;max-size&amp;#34;: &amp;#34;10m&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;max-file&amp;#34;: &amp;#34;5&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;registry-mirrors&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;https://dockerhub.azk8s.cn&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其中data-root所指/mnt/mmcblk2p4不存在, 由于给docker分配的空间是/opt, 因此考虑把data-root所指目录改到/opt/docker/下&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

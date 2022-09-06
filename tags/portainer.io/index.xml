@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PORTAINER.IO on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/portainer.io/</link>
+        <description>Recent content in PORTAINER.IO on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 08 Apr 2021 01:17:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/portainer.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Docker容器无法访问网络</title>
+        <link>https://jimway71.github.io/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/</link>
+        <pubDate>Thu, 08 Apr 2021 01:17:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-33.jpg" alt="Featured image of post Docker容器无法访问网络" /&gt;&lt;h2 id=&#34;关于docker的网络模式&#34;&gt;关于Docker的网络模式&lt;/h2&gt;
+&lt;p&gt;参考 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/huanongying123/article/details/73556634&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker的四种网络模式&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;现象&#34;&gt;现象&lt;/h2&gt;
+&lt;p&gt;① 最初始现象是发现在docker容器中(的系统里)使用apt-get更新(update)时失败, 由于容器里没有ping等一系列工具软件, 无法确认问题具体情况。&lt;br&gt;
+② 接着就找image里有ping的包, 用docker search发现pentest-tools里有, 但pull下来后发现运行错误, 报错信息如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;standard_init_linux.go:211: exec user process caused &amp;ldquo;exec format error&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查了下, 有人说是因为不兼容引起的错误:&lt;br&gt;
+→ &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/HermitSun/article/details/109145856&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docker运行容器报错standard_init_linux.go:211: exec user process caused “exec format error“的可能解决办法&lt;/a&gt;&lt;br&gt;
+③ 在查找中突然发现有说centos的image里有ping, 想着操作系统可能都会有整套网络工具软件, 就找了个ubutu的包pull下来, 结果里面还是没有.&lt;br&gt;
+虽然centos不熟, 都是linux应该也差不太多, 回头就pull了centos.&lt;br&gt;
+用docker运行并进入到容器里&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#  docker run -it centos /bin/bash  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@a688b8f2101e /]# ping 192.168.1.1  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;^C  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--- 192.168.1.1 ping statistics ---  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2 packets transmitted, 0 received, 100% packet loss, time 26ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@a688b8f2101e /]# ping 192.168.1.7  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PING 192.168.1.7 (192.168.1.7) 56(84) bytes of data.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 192.168.1.7: icmp_seq=1 ttl=64 time=0.361 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@a688b8f2101e /]# ping www.sina.com  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PING spool.grid.sinaedge.com (123.126.55.41) 56(84) bytes of data.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;^C  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--- spool.grid.sinaedge.com ping statistics ---  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3 packets transmitted, 0 received, 100% packet loss, time 27ms  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;现象是除了本宿主机的IP(192.168.1.7), 其它地址都不能ping通&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@a688b8f2101e /]# tracepath www.sina.com  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1?: [LOCALHOST]                      pmtu 1500  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1:  119.167.237.233                                       2.100ms reached  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1:  119.167.237.233                                       0.436ms reached  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     Resume: pmtu 1500 hops 1 back 1   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用tracepath跟踪路由也看不出什么&lt;br&gt;
+测试的结果是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;除了本宿主机地址外, 其它地址都不能ping通&lt;/li&gt;
+&lt;li&gt;虽然ping不通, 但是dns解析还是可以的.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;④ 怀疑是宿主机的防火墙挡住了, 把防火墙关了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# /etc/init.d/firewall stop&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再进入容器测试, 发现依然ping不通其它设备网址, 而且dns解析也不行了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[root@88a5cfa727dc /]# ping &lt;a class=&#34;link&#34; href=&#34;https://www.sina.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.sina.com&lt;/a&gt;&lt;br&gt;
+ping: &lt;a class=&#34;link&#34; href=&#34;https://www.sina.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.sina.com&lt;/a&gt;: Name or service not known&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这只能说明, 宿主机的防火墙至少还帮着把DNS解析的包给双向转发了.&lt;br&gt;
+问题不是要不要开防火墙, 而是防火墙必须得开, 但是防火墙的规则写的少了点东西.&lt;/p&gt;
+&lt;h2 id=&#34;要不要处理&#34;&gt;要不要处理&lt;/h2&gt;
+&lt;p&gt;本来如果凑合对付着用也行, 但看了下素版的wordpress好象东西还是有点少, 据说很多插件都需要从网上下载, 没法忍, 必须得处理这个问题.&lt;/p&gt;
+&lt;h2 id=&#34;怎么处理&#34;&gt;怎么处理:&lt;/h2&gt;
+&lt;p&gt;iptables我也不熟, 要不先来个简单的思路?&lt;br&gt;
+① docker网络改用host模式&lt;br&gt;
+Host模式说明： &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/huanongying123/article/details/73556634&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker的四种网络模式&lt;/a&gt;&lt;br&gt;
+如果启动容器的时候使用host模式，那么这个容器将不会获得一个独立的Network Namespace，而是和宿主机共用一个Network Namespace。容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口.&lt;br&gt;
+这样就不会有包转发的问题了.&lt;br&gt;
+在docker启动时, Host模式需要使用&amp;quot;&amp;ndash;network=host&amp;quot;参数.&lt;br&gt;
+测试Host模式:&lt;br&gt;
+还是用centos的包来做测试&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker run --network=host -it centos /bin/bash  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@Q7Op /]# ping www.sina.com  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PING ww1.sinaimg.cn.w.alikunlun.com (119.167.237.230) 56(84) bytes of data.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=1 ttl=55 time=15.4 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=2 ttl=55 time=15.4 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=3 ttl=55 time=15.4 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=4 ttl=55 time=15.3 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;^C  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--- ww1.sinaimg.cn.w.alikunlun.com ping statistics ---  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4 packets transmitted, 4 received, 0% packet loss, time 8ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rtt min/avg/max/mdev = 15.308/15.348/15.363/0.023 ms  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;网络就可以正常访问了.&lt;br&gt;
+把现有的容器改成host模式:&lt;br&gt;
+docker启动容器时, 如果不设置network模式, 容器就会以bridge模式运行.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在portainer.io(web管理)界面里, 试着把已经运行的bridge模式的容器改为host模式, 好像不行, 再试一下, 一样的报错:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;failure  container sharing cannot be connected to any other network&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即使暂停或停止容器, 也是报一样的错误.&lt;br&gt;
+看来不可能简单的用管理界面搞定这个事.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网上有篇文章可能跟这有关: &lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/jacksoner/2051041&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker网络管理-网络模式&lt;/a&gt;&lt;br&gt;
+文章有点复杂,没看懂&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在portainer.io(web管理)界面里, 想用复制容器的方式, 在复制时, 修改网络为host模式.&lt;br&gt;
+但是, 复制的容器就一直有问题, 试图连接时报错:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker exec -it WordPressHostNet /bin/bash&lt;br&gt;
+Error response from daemon: Container 0dd20f7ed6587ba9900acbef9f7da926974c49bebc0fa076d19cbae573c5116c is restarting, wait until the container is running&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;说是始终在重启状态&lt;br&gt;
+web端口也连不上, 原因不清楚.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/lei0213/p/12631681.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker第五篇（docker网络管理）&lt;/a&gt;&lt;br&gt;
+两个方法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;docker update &amp;ndash;network=host ……&lt;/li&gt;
+&lt;li&gt;设置网桥，连接不同网段&lt;br&gt;
+或者，docker有nat桥？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000019701533&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker 容器内无法通过 HTTP 访问外网&lt;/a&gt;&lt;br&gt;
+和当前现象相似&lt;br&gt;
+测试:&lt;br&gt;
+① 参考 &lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000019701533&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker 容器内无法通过 HTTP 访问外网&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service dockerd stop  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# killall dockerd  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 检查点: 检查网络  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ifconfig   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ifconfig docker0 down  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# brctl delbr docker0  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service dockerd start  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 检查点: 检查网络  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ifconfig   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 测试:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker run --rm -it centos /bin/bash  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;测试结果: &lt;u&gt;失败&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;② 参考 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/lei0213/p/12631681.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker第五篇（docker网络管理）&lt;/a&gt;, 用update改network&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker update --network=host -it e7d3c1eca2fb  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unknown flag: --network  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;See &amp;#39;docker update --help&amp;#39;.  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;结果: update不支持修改network&lt;br&gt;
+测试结果: &lt;u&gt;失败&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;③ 测试用已有的容器作镜像, 用host模式运行生成的镜像, 发现会自动退出&lt;br&gt;
+再测试用wordpress以host模式运行, 也同样会自动退出&lt;br&gt;
+原因可能是某个端口被宿主机占了, 谁知道&lt;br&gt;
+结论: wordpress在当前系统上, 只能以bridge方式运行.&lt;/p&gt;
+&lt;p&gt;看来应该是网桥的问题, 估计最终还是iptables的问题&lt;br&gt;
+参考:  &lt;a class=&#34;link&#34; href=&#34;https://medium.com/@noosphere00/%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86linux%E8%AE%BE%E5%A4%87%E4%B8%8A%E7%9A%84bridge-%E7%BD%91%E6%A1%A5-%E5%92%8Cdocker-bridge-e6304a748f41&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何管理linux设备上的bridge(网桥)和docker bridge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;估计一时半会也搞不定了, 先准备手动安装wp包和插件吧:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_26954773/article/details/62875366&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何手动安装WordPress主题和插件（Linux）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;后记&lt;/strong&gt;: 放弃了使用WordPress服务器搭博客的方式。&lt;br&gt;
+然而, 其实 . Docker下, 不管是host模式/bridge模式/container模式都不应该存在网络通讯的问题&amp;hellip;&amp;hellip;&lt;br&gt;
+☻&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

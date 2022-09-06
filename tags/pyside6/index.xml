@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PySide6 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/pyside6/</link>
+        <description>Recent content in PySide6 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 30 Aug 2022 11:53:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/pyside6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>安装Python运行环境</title>
+        <link>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-28.jpg" alt="Featured image of post 安装Python运行环境" /&gt;&lt;h1 id=&#34;在windows系统上安装python运行环境&#34;&gt;在Windows系统上安装Python运行环境&lt;/h1&gt;
+&lt;h2 id=&#34;python语言相关&#34;&gt;Python语言相关&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python官网: &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python官网当前最新版本(Python 3.10.6)安装包: &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-3106/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/downloads/release/python-3106/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python官网安装说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/zh-tw/3/using/windows.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在Windows上使用Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Microsoft Store中也提供了Python包, Python官网的说明如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Microsoft Store 包 is a simple installation of Python that is suitable for running scripts and packages, and using IDLE or other development environments. It requires Windows 10 and above, but can be safely installed without corrupting other programs. It also provides many convenient commands for launching Python and its tools.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但我使用Microsoft Store安装Python后(应该是Python 3.7), 再安装auto-py-to-exe, 发现auto-py-to-exe不能正常运行, 报错说&amp;quot;不能找到指定目录的Python&amp;quot;, 因此还是需要使用Python官网提供的安装包进行安装。&lt;/p&gt;
+&lt;h2 id=&#34;pycharm开发环境&#34;&gt;Pycharm开发环境&lt;/h2&gt;
+&lt;p&gt;PyCharm是一个用于计算机编程的集成开发环境(IDE)，主要用于Python语言开发，由捷克公司&lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JetBrains&lt;/a&gt;开发，提供代码分析、图形化调试器，集成测试器、集成版本控制系统，并支持使用&lt;a class=&#34;link&#34; href=&#34;https://www.djangoproject.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Django&lt;/a&gt;进行网页开发。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyCharm官网: &lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/pycharm/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.jetbrains.com/pycharm/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.py.cn/tools/pycharm/19641.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pycharm如何配置python环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/fmyhust/article/details/104548217&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm 外部工具设置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;qt图形框架模块pyside6&#34;&gt;Qt图形框架模块PySide6&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;是来自于Qt for Python项目的官方Python模块，它提供了对完整Qt 6.0+框架的访问。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PySide6官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/PySide6/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;关于Qt开发: &lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qtforpython/deployment.html#deployment-guides&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt for Python Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;关于选用PySide, 参考: &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/&#34; &gt;调查五款Python GUI框架&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于常用编译打包系统的支持情况:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The following table summarizes the platform support for those packaging tools:&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编译打包工具&#34;&gt;编译打包工具&lt;/h2&gt;
+&lt;h3 id=&#34;auto-py-to-exe&#34;&gt;auto-py-to-exe&lt;/h3&gt;
+&lt;p&gt;Auto PY to EXE是一个基于Eel 和PyInstaller构建的、通过简单的UI界面将python项目中的.py文件(可以是单个py文件或多个py文件)打包为.exe文件的简单工具，与PyInstaller相比，Auto PY to EXE更简单直观，可以自动生成执行转换代码，进而将python程序打包为exe文件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/auto-py-to-exe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/auto-py-to-exe/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;简单说明: 图形化的&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/pyinstaller/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyInstaller&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://pyinstaller.org/en/stable/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyInstaller手册&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;使用参考: &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/cfld/p/16258446.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;python打包教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;easycython&#34;&gt;easycython&lt;/h3&gt;
+&lt;p&gt;easycython.py是一个脚本，它将尝试自动将一个或多个.pyx 文件转换为相应的已编译.pyd|.so的二进制模块。&lt;br&gt;
+easycython.py is a script that will attempt to automatically convert one or more .pyx files into the corresponding compiled .pyd|.so binary modules。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/easycython/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/easycython/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;nuitka编译器&#34;&gt;nuitka编译器&lt;/h3&gt;
+&lt;p&gt;Nuitka是一个Python的替代编译器。 它可以无缝地替代和扩展Python的解释和编译工作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nuitka官网: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nuitka.net/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;参考文档:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.libhunt.com/compare-Nuitka-vs-pyinstaller&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Compare Nuitka VS Pyinstaller&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/137785388&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Nuitka之乾坤大挪移-让天下的Python都可以打包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://yinhe.co/archives/20211127_pyside6_001.html#nuitka&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6学习笔记&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在Windows系统中使用时:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要安装gcc编译器
+&lt;ul&gt;
+&lt;li&gt;安装参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MinGW-w64 - for 32 and 64 bit Windows Files&lt;/a&gt;中的&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x86_64-win32-sjlj&lt;/a&gt;(当前为GCC-8.1.0版本)&lt;br&gt;
+下载完成后, 解压到选定目录下, 并在系统环境变量PATH中增加gcc.exe(在某目录/bin下)目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;当然, 还需要安装Nuitka
+&lt;ul&gt;
+&lt;li&gt;安装参考: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/doc/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka Downloads&lt;/a&gt; 及 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+使用以下命令进行安装:
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install -U &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/archive/develop.zip%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Nuitka/Nuitka/archive/develop.zip&#34;&lt;/a&gt;&lt;br&gt;
+#  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)&lt;br&gt;
+c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/28-Python-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;pip install Nuitka:&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;center&gt;↑ Nuitka安装界面&lt;/center&gt;
+&lt;p&gt;在Windows下常用的编译命令:
+注: helloworld代码参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-hello-world.html&#34;  title=&#34;-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用PySide6创建Hello World程序&lt;/a&gt;&amp;quot;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; nuitka --mingw64 --standalone --show-progress --show-memory --enable-plugin=pyside6 --output-dir=r:\helloworld \helloworld.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用PySide6框架编写的Python图形界面程序, 使用Nuitka编译后, 独立运行需要的文件有:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;编译生成的运行exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyside6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6core.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6gui.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6network.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6svg.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6widgets.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shiboken6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的PySide6目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的shiboken6目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;在Windows下使用Nuitka编译时遇到的报错信息及处理:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;ordered sets&amp;quot;相关警告信息, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nuitka:WARNING: Using very slow fallback for ordered sets, please install &amp;lsquo;orderedset&amp;rsquo; PyPI package for best Python&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/issues/1673&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka can&amp;rsquo;t run on Android termux #1673&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于Python版本的错误信息:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Too old gcc exe ((8, 1, 0) &amp;lt; (11, 2)) ignored&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(当使用Python3.7时)报错后, 编译操作会停止。&lt;br&gt;
+当改用Python3.10后, 虽然也有报错, 但编译操作会继续: 即使用Python3.10时, 无需处理本错误。&lt;/p&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/xiaohouzi112233/article/details/122581734&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka打包python为.exe时遇到的坑&lt;/a&gt;&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/bigcarp/article/details/123152166&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka打包python为.exe时遇到的坑&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;br&gt;
+修改&amp;quot;C:\Users\myusr\venv\Lib\site-packages\nuitka\build\SconsCompilerSettings.py&amp;rdquo;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if isGccName(the_cc_name):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                gcc_version = myDetectVersion(env, compiler_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#                min_version = (11, 2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                min_version = (8, 1, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                if gcc_version is not None and (
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    gcc_version &amp;lt; min_version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    or &amp;#34;force-winlibs-gcc&amp;#34; in env.experimental_flags
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    scons_logger.info(
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;Too old gcc %r (%r &amp;lt; %r) ignored!&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        % (compiler_path, gcc_version, min_version)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    )
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    # This also will trigger using it to use our own gcc in branch below.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    compiler_path = None
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    env[&amp;#34;CC&amp;#34;] = None
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关于&amp;quot;libiconv-2.dll&amp;quot;的错误, 信息如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于找不到libiconv-2.dll，无法继续执行代码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_37363702/article/details/124177907&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;“由于找不到libiconv-2.dll，无法继续执行代码”问题处理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;br&gt;
+未处理, 未再现(原因未明)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;WinError&amp;quot;相关错误信息, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OSError: [WinError 1] 鍑芥暟涓嶆纭€? &amp;lsquo;R:\hw\helloworld.dist\PySide6&amp;rsquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;现象为当用Nuitka编译的程序位于ImDisk虚拟盘上时, 运行该程序会报上述错误。&lt;/p&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/72603982/oserror-winerror-1-incorrect-function&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OSError: [WinError 1] Incorrect function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mesonbuild/meson/issues/7295&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issue under MSYS2 on Windows when using ImDisk RAM disk #7295&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分析原因:&lt;br&gt;
+根据&lt;a class=&#34;link&#34; href=&#34;https://github.com/mesonbuild/meson/issues/7295&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issue under MSYS2 on Windows when using ImDisk RAM disk #7295&lt;/a&gt;分析, 估计是&lt;u&gt;Python有些版本有这个问题&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;处理操作:&lt;br&gt;
+改用最新版本Python(当前为3.10.6)后, 未再出现这个问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍&#34;&gt;在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)&lt;/h2&gt;
+&lt;h3 id=&#34;在windows系统上安装python&#34;&gt;在Windows系统上安装Python&lt;/h3&gt;
+&lt;p&gt;下载当前最新的&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-3106/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;3.10版本&lt;/a&gt;, 选择&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows installer (64-bit)&lt;/a&gt;进行安装, 安装目录选择缺省目录, 安装最后选择&amp;quot;disable path length limit&amp;rdquo;。&lt;br&gt;
+安装完成后, 需要在系统环境变量path中增加python和python下scripts目录:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在Windows搜索框中，键入&amp;quot;高级系统设置&amp;quot;，打开高级系统设置窗口; 
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-03.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;按下&amp;quot;环境变量&amp;quot;按钮，在打开的窗口中可以在&amp;quot;系统变量&amp;quot;框中选择Path，按&amp;quot;编辑&amp;quot;按钮; 
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;在(path环境变量)其中添加Python执行文件的目录, 在我的系统中, python.exe位于&amp;quot;C:\Users\WDAGUtilityAccount\AppData\Local\Programs\Python\Python310&amp;quot;目录下;&lt;/li&gt;
+&lt;li&gt;并在(path环境变量)其中添加该目录下的scripts目录, 即&amp;quot;C:\Users\WDAGUtilityAccount\AppData\Local\Programs\Python\Python310\Scripts&amp;quot;目录 - pip等工具安装在这个目录。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;设置完成后, 就可以在命令行中执行python/pip等命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在windows系统上安装pycharm&#34;&gt;在Windows系统上安装Pycharm&lt;/h3&gt;
+&lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/pycharm/download/#section=windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Download PyCharm&lt;/a&gt;下载Windows+Community版本。&lt;br&gt;
+当前版本为&lt;a class=&#34;link&#34; href=&#34;https://download-cdn.jetbrains.com/python/pycharm-community-2022.2.1.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm-Community-2022.2.1&lt;/a&gt;。&lt;br&gt;
+安装使用的是当前可下载的Pycharm-Community-2022.2.1版本。&lt;br&gt;
+安装后的目录可以当绿色版本直接使用。&lt;/p&gt;
+&lt;p&gt;安装完成后, 需要做以下配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置外观&lt;br&gt;
+在设置-&amp;gt;外观与行为-&amp;gt;外观里, 将主题改为&amp;quot;Windows 10 Light&amp;quot;方案。&lt;/li&gt;
+&lt;li&gt;配置中文环境, 参考&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/sinat_26811377/article/details/106182672&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm 简单一步设置成官方中文版&lt;/a&gt;&lt;br&gt;
+曾遇到的问题:&lt;br&gt;
+在使用&lt;strong&gt;Pycharm-Community-2019.2版本(旧版)&lt;/strong&gt;(原来下载的版本)的安装中, 在Plugins-&amp;gt;Marketplace库中找不到&amp;quot;Chinese ​(Simplified)​ Language Pack / 中文语言包&amp;quot;;&lt;br&gt;
+手动从&lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JetBrains官方插件网站&lt;/a&gt;下载的&lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----/versions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chinese ​(Simplified)​ Language Pack / 中文语言包&lt;/a&gt; For &amp;ldquo;Pycharm Community&amp;quot;插件, 在安装时报&amp;quot;不兼容&amp;quot;错误, 如下:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;中文插件安装时报&amp;#34;不兼容&amp;#34;错误&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;u&gt;改用当前最新版本2022.2.1后问题解决。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;配置Python环境, 参考&lt;a class=&#34;link&#34; href=&#34;https://www.py.cn/tools/pycharm/19641.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pycharm如何配置python环境&lt;/a&gt;&lt;br&gt;
+实际上, 在安装后, Pycharm的配置里已自动加入了Python解释器, 包括pip/setuptools/wheel。
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-07.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;中文插件安装时报&amp;#34;不兼容&amp;#34;错误&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在windows系统上安装pyside6httpspypiorgprojectpyside6&#34;&gt;在Windows系统上安装&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可以在&amp;quot;Window命令提示符&amp;quot;里安装PySide6, 也可以在PyCharm的&amp;quot;终端&amp;quot;里操作(建议), 命令很简单, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pip3 install PySide6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装后, 在Python目录下的&amp;quot;Lib\site-packages\PySide6&amp;quot;目录中可以看到PySide6相关文件, 其中designer.exe可以直接运行(如果运行时报缺dll库错误, 只需要将所指dll文件拷到Pyside6目录下即可)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Pycharm中设置外部工具: Pyside6-Designer和Pyside6-UIC&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/445661017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Pycharm安装配置Pyside6&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;问题:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本次安装后, 在Pycharm中试着运行Helloworld.py(需要PySide6支持)时, 报&amp;quot;ModuleNotFoundError: No module named &amp;lsquo;PySide6&amp;rsquo;&amp;ldquo;错误。&lt;br&gt;
+本问题未确认原因, 也未找到解决方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在windows系统上安装nuitkahttpsnuitkanetindexhtml&#34;&gt;在Windows系统上安装&lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;安装gcc编译器&lt;br&gt;
+安装参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MinGW-w64 - for 32 and 64 bit Windows Files&lt;/a&gt;中的&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x86_64-win32-sjlj&lt;/a&gt;(当前为GCC-8.1.0版本)&lt;br&gt;
+下载完成后, 解压到选定目录下, 并在系统环境变量PATH中增加gcc.exe(在某目录/bin下)目录。
+完成后, 可以在cmd中使用以下命令以检查安装是否正常
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; gcc --version&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;安装Nuitka&lt;br&gt;
+安装参考: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/doc/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka Downloads&lt;/a&gt; 及 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+使用以下命令进行安装:
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install -U &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/archive/develop.zip%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Nuitka/Nuitka/archive/develop.zip&#34;&lt;/a&gt;&lt;br&gt;
+#  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)&lt;br&gt;
+c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装完成后-可以使用nuitka进行编译&#34;&gt;安装完成后, 可以使用Nuitka进行编译&lt;/h3&gt;
+&lt;p&gt;Nuitka编译常用参数(From &lt;a class=&#34;link&#34; href=&#34;https://www.cxymm.net/article/djj199301111/120535999&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka 打包常用命令&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-disable-console   #不显示控制台窗口(CMD控制窗口)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-icon=ICON_PATH    #添加ico
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--nofollow-imports          # 所有的import不编译，交给python3x.dll执行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--follow-import-to=need     #need为你需要编译成C/C++的py文件夹命名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--mingw64                   #mingw(官方建议编译器)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--standalone                #独立环境，这是必须的(否则拷给别人无法使用)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--output-dir=out            #生成文件路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--show-progress             #显示编译的进度，很直观
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--show-memory               #显示内存的占用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--include-qt-plugins=sensible,styles #打包后PyQt的样式就不会变了
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=qt-plugins  #需要加载的PyQt插件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=tk-inter    #打包tkinter模块的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=numpy       #打包numpy,pandas,matplotlib模块的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=torch       #打包pytorch的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=tensorflow  #打包tensorflow的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-uac-admin=Windows #用户可以使用管理员权限来安装
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--onefile                   #打包成单个exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在Windows下常用的编译命令参考:&lt;br&gt;
+注: helloworld代码参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-hello-world.html&#34;  title=&#34;-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用PySide6创建Hello World程序&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress --show-memory --enable-plugin=pyside6 --output-dir=x:\helloworld\ helloworld.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在Windows下编译使用Designer创建的UI程序&lt;br&gt;
+参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-uses-the-ui-created-by-qt-designer.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6使用Qt Designer创建的UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/a359680405/article/details/45148717&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5学习笔记05&amp;mdash;-Qt Designer信号槽&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;创建程序及编译:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用Qt Designer生成了login.ui&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用pyside6-uic将login.ui转换生成ui_login.py&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; pyside6-uic.exe login.ui -o ui_login.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用nuitka编译生成可执行文件(.exe)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; dir&lt;br&gt;
+2022/09/05  23:26    &amp;lt;DIR&amp;gt;          .&lt;br&gt;
+2022/09/05  23:26    &amp;lt;DIR&amp;gt;          ..&lt;br&gt;
+2022/09/05  23:26               588 login.py&lt;br&gt;
+2022/09/05  23:23             2,378 login.ui&lt;br&gt;
+2022/09/05  23:24             2,581 ui_login.py&lt;br&gt;
+c:&amp;gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress --show-memory --enable-plugin=pyside6 --output-dir=x:\login\ login.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关于独立运行的依赖文件:&lt;/strong&gt;&lt;br&gt;
+使用Nuitka编译的基于PySide6的图形界面程序(helloworld.exe), 独立运行时至少需要以下文件:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;生成的运行exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyside6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6core.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6gui.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6network.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6svg.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6widgets.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shiboken6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的PySide6目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的shiboken6目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注: 以上文件列表, 在不同的机器上, 可能会不一样!&lt;/p&gt;
+&lt;p&gt;在编译过程中如果遇到异常, 可以参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/#nuitka%E7%BC%96%E8%AF%91%E5%99%A8&#34; &gt;nuitka编译器&lt;/a&gt;&amp;ldquo;后面所列的&lt;strong&gt;报错信息及处理&lt;/strong&gt;。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

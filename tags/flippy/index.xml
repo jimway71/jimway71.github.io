@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>FLIPPY on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/flippy/</link>
+        <description>Recent content in FLIPPY on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 15 Mar 2021 00:49:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/flippy/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>联通(数码视讯)Q7盒子再刷Openwrt</title>
+        <link>https://jimway71.github.io/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/</link>
+        <pubDate>Mon, 15 Mar 2021 00:49:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-27.jpg" alt="Featured image of post 联通(数码视讯)Q7盒子再刷Openwrt" /&gt;&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;p&gt;联通(数码视讯)Q7盒子(以下简称Q7)做为一个电视盒子应该是没有什么可取之处, 但还可以做点别的, 比如, 做&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt&lt;/a&gt;盒子。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  title=&#34;恩山-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;推出了&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  title=&#34;多盒OP固件-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&amp;rdquo;&lt;/a&gt;, 是基于&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;amlogic(晶晨)&lt;/a&gt;的S9xx系列arm SOC的&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt&lt;/a&gt;固件, 现在支持包括基于amlogic(晶晨) S922x、S912、&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/196/index.html&#34;  title=&#34;S905X-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905x&lt;/a&gt;、s905x2、S905x3、S905d等多款SOC的盒子。&lt;br&gt;
+但是, &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;的固件说明中, 并未明确指出对&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;的支持, 而Q7用的SOC是&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;。&lt;br&gt;
+查到&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Amlogic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;维基Amlogic&lt;/a&gt;说明中是这么说的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Amlogic &lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;: 与&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/196/index.html&#34;  title=&#34;S905X-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905X&lt;/a&gt;相似，不同之处在于它支持HDMI 2.0b，但缺少VP9解码，摄像头接口和TS输入。&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按这种说法, &lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;可能是和&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/196/index.html&#34;  title=&#34;S905X-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905X&lt;/a&gt;差不多, 支持&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/196/index.html&#34;  title=&#34;S905X-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905X&lt;/a&gt;应该就能支持&lt;a class=&#34;link&#34; href=&#34;https://www.amlogic.com/#Products/414/index.html&#34;  title=&#34;S905L-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S905L&lt;/a&gt;, 那么Q7就应该能用。&lt;br&gt;
+推论如此, 然后在网上找到了一个实例, &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  title=&#34;恩山-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;大侠在&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-3570786-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;联通北京数码Q7,S905L电视盒刷成了openwrt系统路由器&amp;rdquo;&lt;/a&gt;贴子里, 明确说明他已经成功完成了将Q7刷上了&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt&lt;/a&gt;, 虽然没有详细说明, 但从帖子里可以看出来大概是怎么做的, 那么, 就跟随&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;大侠, 让Q7废物利用吧。&lt;br&gt;
+为了简单化(偷懒😁), 选用的是使用&lt;strong&gt;外接存储(U盘或TF卡)启动Q7&lt;/strong&gt;的方式。&lt;br&gt;
+&lt;u&gt;Q7自带TF卡槽&lt;/u&gt;, 这倒是为数不多的优点之一。&lt;/p&gt;
+&lt;h2 id=&#34;补充&#34;&gt;补充&lt;/h2&gt;
+&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github&lt;/a&gt;上找了下&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;的源码,  感觉应该是这个: &lt;a class=&#34;link&#34; href=&#34;https://github.com/lllrrr/mknop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lllrrr/mknop&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/tuanqing/mknop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tuanqing/mknop&lt;/a&gt;这个肯定是分支。&lt;br&gt;
+另外, &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;还做了&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-958173-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker Openwrt&lt;/a&gt;, 看看里面引用的内核源代码来源:&lt;br&gt;
+&lt;strong&gt;内核源码来源说明(两个平*的内核都来自各自最活跃的上游发布者)&lt;/strong&gt;&lt;br&gt;
+Amlogic内核：  &lt;a class=&#34;link&#34; href=&#34;https://github.com/150balbes/Amlogic_s905-kernel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/150balbes/Amlogic_s905-kernel&lt;/a&gt; （5.3.0）&lt;br&gt;
+Rockchip内核:   &lt;a class=&#34;link&#34; href=&#34;https://github.com/ayufan-rock64/linux-mainline-kernel/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/ayufan-rock64/linux-mainline-kernel/releases&lt;/a&gt;  （5.3.0）&lt;br&gt;
+公版内核补丁： &lt;a class=&#34;link&#34; href=&#34;https://kernel.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://kernel.org&lt;/a&gt;  （当前最新5.3.6补丁）&lt;br&gt;
+FullCone-Nat： &lt;a class=&#34;link&#34; href=&#34;https://github.com/Chion82/netfilter-full-cone-nat%20%20%20%20&amp;#43;%20%20952-net-conntrack-events-support-multiple-registrant.patch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;netfilter-full-cone-nat    +  952-net-conntrack-events-support-multiple-registrant.patch&lt;/a&gt;&lt;br&gt;
+(来自&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;openwrt&lt;/a&gt;源码)&lt;br&gt;
+exfat:              &lt;a class=&#34;link&#34; href=&#34;https://github.com/dorimanx/exfat-nofuse&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dorimanx/exfat-nofuse&lt;/a&gt;&lt;br&gt;
+Wireguard:      &lt;a class=&#34;link&#34; href=&#34;https://git.zx2c4.com/WireGuard&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://git.zx2c4.com/WireGuard&lt;/a&gt;&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  title=&#34;多盒OP固件-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&amp;rdquo;&lt;/a&gt; From &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-285101.html&#34;  title=&#34;flippy-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flippy大侠&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-3570786-1-1.html&#34;  title=&#34;S905L电视盒刷op-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;联通北京数码Q7,S905L电视盒刷成了openwrt系统路由器&amp;rdquo;&lt;/a&gt; From &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;所需工具及软件&#34;&gt;所需工具及软件&lt;/h2&gt;
+&lt;p&gt;说明: 可以使用U盘或TF卡启动, SD卡没准也可以。 这里使用的是TF卡。&lt;br&gt;
+除了&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/&#34;  title=&#34;Q7盒子垃圾-&amp;gt;&#34;
+    &gt;&amp;ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&amp;rdquo;&lt;/a&gt;帖子中所用的工具及软件外, 还需要用到:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4G或以上大小的TF卡 + 读卡器&lt;br&gt;
+用于制做盒子启动盘(TF卡)。&lt;/li&gt;
+&lt;li&gt;镜像写入U盘工具&lt;br&gt;
+用于把固件镜像文件写到TF卡里。&lt;br&gt;
+Windows上这类工具很多, 选用的是&lt;a class=&#34;link&#34; href=&#34;https://www.alexpage.de/download/usbit/usbit.zip&#34;  title=&#34;USB Image Tool-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;USB Image Tool&lt;/a&gt;, 绿色软件, 不需要安装。&lt;/li&gt;
+&lt;li&gt;安卓调试工具&lt;a class=&#34;link&#34; href=&#34;https://dl.google.com/android/repository/platform-tools_r31.0.0-windows.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ADB&lt;/a&gt;&lt;br&gt;
+用于设置Q7从TF卡启动。&lt;/li&gt;
+&lt;li&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4076037-1-1.html&#34;  title=&#34;多盒OP固件-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;55+、55+O S905x3、S922x、贝壳云、我家云、微加云等OP固件&amp;rdquo;&lt;/a&gt;文中所附的固件包。&lt;br&gt;
+用的是目录&amp;quot;N1-Openwrt_U盘直刷包&amp;quot;下的最新固件包, 当前是:&lt;br&gt;
+&amp;ldquo;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.7z&amp;rdquo;&lt;br&gt;
+解开压缩文件, 其中&amp;quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.img&amp;quot;就是要用的固件包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;刷机流程&#34;&gt;刷机流程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;破解Q7&lt;br&gt;
+按照&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/&#34;  title=&#34;Q7盒子垃圾-&amp;gt;&#34;
+    &gt;&amp;ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&amp;rdquo;&lt;/a&gt;帖子的做法, 破解Q7.&lt;br&gt;
+按&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  title=&#34;恩山-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;大侠的说法, &amp;ldquo;Q7需要刷过第三方固件才能确定能从卡和U盘启动&amp;rdquo;, 而Q7原厂固件无法确定能做到。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;del&gt;打开Q7的USB调试功能。(大概操作, 跟安卓手机也差不多)&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;正常打开Q7, 按正常方式使用遥控器操作, 进入&amp;quot;设置&amp;quot;(类似安卓的设置界面), 找到&amp;quot;关于设备&amp;quot;-&amp;ldquo;版本号&amp;rdquo;, 连续点击版本号很多次, 可能是十次, 也可能是七次, 试吧&amp;hellip;&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;然后退回&amp;quot;设置&amp;quot;界面, 就出现&amp;quot;开发者选项&amp;quot;, 进去就可以找到&amp;quot;USB调试&amp;quot;, 然后打开&amp;quot;USB调试&amp;quot;。&lt;/del&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;制作启动TF卡&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;选择镜像文件&lt;br&gt;
+按&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/space-uid-593965.html&#34;  title=&#34;len_-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Len_&lt;/a&gt;大侠的说法, 在目录&amp;quot;N1-Openwrt_U盘直刷包&amp;quot;下的包都可以刷, 选了最新的55+o版本, 文件是&amp;quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.7z&amp;quot;, 解压出&amp;quot;openwrt_s905d_n1_R21.2.1_k5.4.105-flippy-55+o.img&amp;quot;文件。&lt;/li&gt;
+&lt;li&gt;用镜像写入U盘工具&lt;a class=&#34;link&#34; href=&#34;https://www.alexpage.de/download/usbit/usbit.zip&#34;  title=&#34;USB Image Tool-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;USB Image Tool&lt;/a&gt;把img文件写到TF卡里&lt;/li&gt;
+&lt;li&gt;修改TF卡根目录下的&amp;quot;uEnv.txt&amp;quot;文件, 如下图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;uEnv.txt&#34;
+	
+	
+&gt;
+即FDT要改为p212这个dtb文件(这个文件要确认在tf卡相应的目录下存在)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;del&gt;把TF卡插入到Q7的TF卡槽中, 使用ADB工具, 设置Q7从TF卡启动&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;连接Q7:&lt;/del&gt;~~&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;# adb connect Q7地址&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;del&gt;查看连接状态:&lt;/del&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;# adb devices&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;del&gt;重启Q7, 并设置成用cf卡或U盘等外围存储设备启动&lt;/del&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;# adb shell reboot update&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;(上面这个命令需要确认)&lt;/del&gt;&lt;br&gt;
+&lt;del&gt;正常的话, 会重新从TF卡启动系统。&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从做好的TF卡启动盒子&lt;br&gt;
+正常启动盒子, 进入电视盒子界面.&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate&#34;  title=&#34;Reboot to LibreELEC-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Reboot to LibreELEC&amp;rdquo;&lt;/a&gt;, 这个apk设置系统首先从外部存储设备启动, 比如TF卡, 或者U盘.&lt;br&gt;
+在盒子的界面上, 安装&lt;a class=&#34;link&#34; href=&#34;https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate&#34;  title=&#34;Reboot to LibreELEC-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Reboot to LibreELEC&amp;rdquo;&lt;/a&gt;这个应用, 安装完成后运行这个APK, 并选择&amp;quot;ok&amp;quot;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-02.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;uEnv.txt&#34;
+	
+	
+&gt;&lt;br&gt;
+正常情况下, 如果有外置存储设备可以启动, 则从外置存储设备启动,否则从内部的存储设备启动.&lt;br&gt;
+比如, 插入了刷好固件的TF卡, 就会从TF卡启动, 运行openwrt; 如果没有, 就正常启动, 进入电视盒子界面.&lt;br&gt;
+&lt;u&gt;但是, Q7这个盒子比较奇葩, 如果设置好了能从TF卡启动, 那么就只能从TF卡启动, 不插TF卡时会死在第一屏界面.&lt;/u&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把系统安装到内部存储&lt;br&gt;
+系统里有提供安装工具(shell), 是/root/install-to-emmc.sh&lt;br&gt;
+如果有需要可以使用这个shell将系统装入内部存储&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;完成后启动openwrt&#34;&gt;完成后启动&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Openwrt&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;使用tf卡启动, 成功地在Q7上运行了&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;Openwrt-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;openwrt&lt;/a&gt;.&lt;br&gt;
+openwrt缺省地址: 192.168.1.1, 缺省用户/密码: root/password&lt;br&gt;
+但是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不能设置wifi&lt;br&gt;
+可能是无线网卡不能正常驱动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用图片&#34;&gt;使用图片&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/27-q7-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;uEnv.txt&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;补充: 关于移动魔百盒R3300L(红)&lt;br&gt;
+可以使用给Q7做的启动盘(TF卡)启动.&lt;br&gt;
+用&lt;a class=&#34;link&#34; href=&#34;https://apkpure.com/reboot-to-libreelec/me.thomastv.rebootupdate&#34;  title=&#34;Reboot to LibreELEC-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Reboot to LibreELEC&amp;rdquo;&lt;/a&gt;可以正常工作, 插卡从卡启动, 不插卡正常启动.&lt;br&gt;
+用CoreMark测试分数比Q7略低, 差得并不多.&lt;br&gt;
+R3300L和Q7内部配置基本一致，甚至包括芯片组:
+&lt;ul&gt;
+&lt;li&gt;相同的CPU,&lt;/li&gt;
+&lt;li&gt;相同的wifi芯片,&lt;/li&gt;
+&lt;li&gt;相同的内存+存储配置,&lt;/li&gt;
+&lt;li&gt;壳子都是卡扣结构,&lt;/li&gt;
+&lt;li&gt;都能从usb口给盒子供电，不受电源开关控制,&lt;/li&gt;
+&lt;li&gt;都有tf卡槽。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关于TF卡的大小&lt;br&gt;
+前面说过, TF卡要&amp;gt;4G。&lt;br&gt;
+但是, 从使用情况看，TF卡仅有不到1G的空间分给了Openwrt要用的两个分区, 其中有一个是启动分区, 其它的空间都是空的。&lt;br&gt;
+所以, 估计1G的TF卡也都能用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于Q7的供电&lt;br&gt;
+帖子&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e8%81%94%e9%80%9a%e6%95%b0%e7%a0%81%e8%a7%86%e8%ae%afq7%e7%94%b5%e8%a7%86%e7%9b%92%e5%ad%90%e5%88%b7%e6%9c%ba%e6%88%90%e5%8a%9f-%e4%bd%86%e8%bf%99q7%e7%9b%92%e5%ad%90%e6%98%af%e7%9c%9f%e7%9a%84%e5%9e%83%e5%9c%be/&#34;  title=&#34;Q7盒子垃圾-&amp;gt;&#34;
+    &gt;&amp;ldquo;联通(数码视讯)Q7电视盒子刷机成功, 但这Q7盒子是真的垃圾!&amp;rdquo;&lt;/a&gt;里面说过, Q7可以直接用USB端口的供电启动, 所以可以从别的设备的USB给Q7供电, 至少还可以少占一个电源插座。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CPUMark 测速&lt;br&gt;
+命令如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# /etc/coremark.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;测速完成后, 在Luci管理界面, &amp;ldquo;状态&amp;rdquo;-&amp;ldquo;概览&amp;quot;里可以看到CpuMark值&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;再补充---关于网络共享服务&#34;&gt;再补充 - 关于网络共享服务&lt;/h2&gt;
+&lt;p&gt;Openwrt中有提供多种网络存储服务, 包括Samba/NFS/miniDLNA/可道云/微力同步等多种相关功能。&lt;br&gt;
+在给Q7刷Openwrt后, 还通过配置Samba+miniDLNA, 设置了一个简单的网络共享服务+多媒体服务&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;设置Sabmba服务&lt;br&gt;
+操作如下:&lt;br&gt;
+Luci界面-网络存储-&amp;ldquo;Samba&amp;rdquo;-&amp;ldquo;编辑模板&amp;quot;里改配置文件(没搞懂原因), 关掉&amp;quot;invalid users = root&amp;quot;这行&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;## set invalid users&lt;br&gt;
+#invalid users = root&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设置共享目录&lt;br&gt;
+设置如图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Samba设置&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现象:&lt;br&gt;
+用手机上有EsExplorer连接上后(当前也就只有手机能连上), 看不到共享的文件目录&lt;br&gt;
+原因: 管理界面里共享目录的设置并没有生效, 还是需要手动修改配置文件&amp;rdquo;/etc/samba/smb.conf&amp;quot;进行设置(已确认重启后有效)&lt;br&gt;
+但是, &amp;ldquo;Samba&amp;rdquo;-&amp;ldquo;编辑模板&amp;quot;却是有效的, 而且进入linux界面操作, 直接修改/etc/samba/smb.conf的相应内容却无效!~~~ 必须使用管理界面的&amp;quot;编译模板&amp;quot;进行修改!&lt;br&gt;
+即: 改模板必须在&amp;quot;Samba&amp;rdquo;-&amp;ldquo;编辑模板&amp;quot;里, 改共享目录配置必须直接改&amp;rdquo;/etc/samba/smb.conf&amp;quot;文件&lt;br&gt;
+处理:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /etc/samba/smb.conf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在文件最后面增加如下配置:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[Udisk]&lt;br&gt;
+path = /mnt/mmcblk1p3&lt;br&gt;
+create mask = 0777&lt;br&gt;
+read only = no&lt;br&gt;
+guest ok = yes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如图所示:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Samba设置&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后重启samba服务:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service samba4 restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用smbclient查看共享的情况:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# smbclient -L 192.168.1.206&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;会看到已经成功共享, 如图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/27-q7-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Samba设置&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注意:&lt;br&gt;
+还需要对共享出的根目录权限做设置, 才能有读写全部权限&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# chmod 0777 /mnt/mmcblk1p3&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置miniDLNA&lt;br&gt;
+在X信电视上发现X信的媒体中心支持DLNA, 而Q7上的Openwrt里, &amp;ldquo;网络存储&amp;quot;下是有miniDLNA服务, 设置比较简单, 基本上是设置下目录, 打开功能就可以了。&lt;br&gt;
+经过测试, 在X信电视上用自带的媒体中心可以播放视频、音频、图片等多种媒体, 还可以关屏幕播放mp3音乐。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But&amp;hellip;到最后, 重启Q7后, openwrt的Luci界面出错了, 进不了管理界面, 就此, 折腾Q7告一段落。
+总结: Openwrt的SAMBA功能大致能用, miniDLNA功能也没问题, 都可以用。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

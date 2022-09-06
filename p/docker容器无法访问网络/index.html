@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Docker系统下的网络访问...但最终也没能搞定'><title>Docker容器无法访问网络</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='Docker容器无法访问网络'>
+<meta property='og:description' content='Docker系统下的网络访问...但最终也没能搞定'>
+<meta property='og:url' content='https://jimway71.github.io/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='BRIDGE' /><meta property='article:tag' content='DOCKER' /><meta property='article:tag' content='HOST CONTAINER' /><meta property='article:tag' content='PORTAINER.IO' /><meta property='article:tag' content='Q&amp;A' /><meta property='article:published_time' content='2021-04-08T01:17:16&#43;08:00'/><meta property='article:modified_time' content='2021-04-08T01:17:16&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-33.jpg' />
+<meta name="twitter:title" content="Docker容器无法访问网络">
+<meta name="twitter:description" content="Docker系统下的网络访问...但最终也没能搞定"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-33.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/avatar-icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/">
+                
+                    <img src="/wallpaper/wallpaper-33.jpg" loading="lazy" alt="Featured image of post Docker容器无法访问网络" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                migration
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/">Docker容器无法访问网络</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Docker系统下的网络访问...但最终也没能搞定
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 08, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="关于docker的网络模式">关于Docker的网络模式</h2>
+<p>参考 <a class="link" href="https://blog.csdn.net/huanongying123/article/details/73556634"  target="_blank" rel="noopener"
+    >Docker的四种网络模式</a></p>
+<h2 id="现象">现象</h2>
+<p>① 最初始现象是发现在docker容器中(的系统里)使用apt-get更新(update)时失败, 由于容器里没有ping等一系列工具软件, 无法确认问题具体情况。<br>
+② 接着就找image里有ping的包, 用docker search发现pentest-tools里有, 但pull下来后发现运行错误, 报错信息如下:</p>
+<blockquote>
+<p>standard_init_linux.go:211: exec user process caused &ldquo;exec format error&rdquo;</p>
+</blockquote>
+<p>查了下, 有人说是因为不兼容引起的错误:<br>
+→ <a class="link" href="https://blog.csdn.net/HermitSun/article/details/109145856"  target="_blank" rel="noopener"
+    >docker运行容器报错standard_init_linux.go:211: exec user process caused “exec format error“的可能解决办法</a><br>
+③ 在查找中突然发现有说centos的image里有ping, 想着操作系统可能都会有整套网络工具软件, 就找了个ubutu的包pull下来, 结果里面还是没有.<br>
+虽然centos不熟, 都是linux应该也差不太多, 回头就pull了centos.<br>
+用docker运行并进入到容器里</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#  docker run -it centos /bin/bash  
+</span></span><span class="line"><span class="cl">[root@a688b8f2101e /]# ping 192.168.1.1  
+</span></span><span class="line"><span class="cl">PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.  
+</span></span><span class="line"><span class="cl">^C  
+</span></span><span class="line"><span class="cl">--- 192.168.1.1 ping statistics ---  
+</span></span><span class="line"><span class="cl">2 packets transmitted, 0 received, 100% packet loss, time 26ms  
+</span></span><span class="line"><span class="cl">[root@a688b8f2101e /]# ping 192.168.1.7  
+</span></span><span class="line"><span class="cl">PING 192.168.1.7 (192.168.1.7) 56(84) bytes of data.  
+</span></span><span class="line"><span class="cl">64 bytes from 192.168.1.7: icmp_seq=1 ttl=64 time=0.361 ms  
+</span></span><span class="line"><span class="cl">[root@a688b8f2101e /]# ping www.sina.com  
+</span></span><span class="line"><span class="cl">PING spool.grid.sinaedge.com (123.126.55.41) 56(84) bytes of data.  
+</span></span><span class="line"><span class="cl">^C  
+</span></span><span class="line"><span class="cl">--- spool.grid.sinaedge.com ping statistics ---  
+</span></span><span class="line"><span class="cl">3 packets transmitted, 0 received, 100% packet loss, time 27ms  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>现象是除了本宿主机的IP(192.168.1.7), 其它地址都不能ping通</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[root@a688b8f2101e /]# tracepath www.sina.com  
+</span></span><span class="line"><span class="cl"> 1?: [LOCALHOST]                      pmtu 1500  
+</span></span><span class="line"><span class="cl"> 1:  119.167.237.233                                       2.100ms reached  
+</span></span><span class="line"><span class="cl"> 1:  119.167.237.233                                       0.436ms reached  
+</span></span><span class="line"><span class="cl">     Resume: pmtu 1500 hops 1 back 1   
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>用tracepath跟踪路由也看不出什么<br>
+测试的结果是:</p>
+<ul>
+<li>除了本宿主机地址外, 其它地址都不能ping通</li>
+<li>虽然ping不通, 但是dns解析还是可以的.</li>
+</ul>
+<p>④ 怀疑是宿主机的防火墙挡住了, 把防火墙关了</p>
+<blockquote>
+<p># /etc/init.d/firewall stop</p>
+</blockquote>
+<p>再进入容器测试, 发现依然ping不通其它设备网址, 而且dns解析也不行了</p>
+<blockquote>
+<p>[root@88a5cfa727dc /]# ping <a class="link" href="https://www.sina.com"  target="_blank" rel="noopener"
+    >www.sina.com</a><br>
+ping: <a class="link" href="https://www.sina.com"  target="_blank" rel="noopener"
+    >www.sina.com</a>: Name or service not known</p>
+</blockquote>
+<p>这只能说明, 宿主机的防火墙至少还帮着把DNS解析的包给双向转发了.<br>
+问题不是要不要开防火墙, 而是防火墙必须得开, 但是防火墙的规则写的少了点东西.</p>
+<h2 id="要不要处理">要不要处理</h2>
+<p>本来如果凑合对付着用也行, 但看了下素版的wordpress好象东西还是有点少, 据说很多插件都需要从网上下载, 没法忍, 必须得处理这个问题.</p>
+<h2 id="怎么处理">怎么处理:</h2>
+<p>iptables我也不熟, 要不先来个简单的思路?<br>
+① docker网络改用host模式<br>
+Host模式说明： <a class="link" href="https://blog.csdn.net/huanongying123/article/details/73556634"  target="_blank" rel="noopener"
+    >Docker的四种网络模式</a><br>
+如果启动容器的时候使用host模式，那么这个容器将不会获得一个独立的Network Namespace，而是和宿主机共用一个Network Namespace。容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口.<br>
+这样就不会有包转发的问题了.<br>
+在docker启动时, Host模式需要使用&quot;&ndash;network=host&quot;参数.<br>
+测试Host模式:<br>
+还是用centos的包来做测试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># docker run --network=host -it centos /bin/bash  
+</span></span><span class="line"><span class="cl">[root@Q7Op /]# ping www.sina.com  
+</span></span><span class="line"><span class="cl">PING ww1.sinaimg.cn.w.alikunlun.com (119.167.237.230) 56(84) bytes of data.  
+</span></span><span class="line"><span class="cl">64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=1 ttl=55 time=15.4 ms  
+</span></span><span class="line"><span class="cl">64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=2 ttl=55 time=15.4 ms  
+</span></span><span class="line"><span class="cl">64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=3 ttl=55 time=15.4 ms  
+</span></span><span class="line"><span class="cl">64 bytes from 119.167.237.230 (119.167.237.230): icmp_seq=4 ttl=55 time=15.3 ms  
+</span></span><span class="line"><span class="cl">^C  
+</span></span><span class="line"><span class="cl">--- ww1.sinaimg.cn.w.alikunlun.com ping statistics ---  
+</span></span><span class="line"><span class="cl">4 packets transmitted, 4 received, 0% packet loss, time 8ms  
+</span></span><span class="line"><span class="cl">rtt min/avg/max/mdev = 15.308/15.348/15.363/0.023 ms  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>网络就可以正常访问了.<br>
+把现有的容器改成host模式:<br>
+docker启动容器时, 如果不设置network模式, 容器就会以bridge模式运行.</p>
+<ul>
+<li>
+<p>在portainer.io(web管理)界面里, 试着把已经运行的bridge模式的容器改为host模式, 好像不行, 再试一下, 一样的报错:</p>
+<blockquote>
+<p>failure  container sharing cannot be connected to any other network</p>
+</blockquote>
+<p>即使暂停或停止容器, 也是报一样的错误.<br>
+看来不可能简单的用管理界面搞定这个事.</p>
+</li>
+<li>
+<p>网上有篇文章可能跟这有关: <a class="link" href="https://blog.51cto.com/jacksoner/2051041"  target="_blank" rel="noopener"
+    >Docker网络管理-网络模式</a><br>
+文章有点复杂,没看懂</p>
+</li>
+<li>
+<p>在portainer.io(web管理)界面里, 想用复制容器的方式, 在复制时, 修改网络为host模式.<br>
+但是, 复制的容器就一直有问题, 试图连接时报错:</p>
+<blockquote>
+<p># docker exec -it WordPressHostNet /bin/bash<br>
+Error response from daemon: Container 0dd20f7ed6587ba9900acbef9f7da926974c49bebc0fa076d19cbae573c5116c is restarting, wait until the container is running</p>
+</blockquote>
+<p>说是始终在重启状态<br>
+web端口也连不上, 原因不清楚.</p>
+</li>
+</ul>
+<p>参考: <a class="link" href="https://www.cnblogs.com/lei0213/p/12631681.html"  target="_blank" rel="noopener"
+    >Docker第五篇（docker网络管理）</a><br>
+两个方法:</p>
+<ul>
+<li>docker update &ndash;network=host ……</li>
+<li>设置网桥，连接不同网段<br>
+或者，docker有nat桥？</li>
+</ul>
+<p>参考: <a class="link" href="https://segmentfault.com/a/1190000019701533"  target="_blank" rel="noopener"
+    >Docker 容器内无法通过 HTTP 访问外网</a><br>
+和当前现象相似<br>
+测试:<br>
+① 参考 <a class="link" href="https://segmentfault.com/a/1190000019701533"  target="_blank" rel="noopener"
+    >Docker 容器内无法通过 HTTP 访问外网</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># service dockerd stop  
+</span></span><span class="line"><span class="cl"># killall dockerd  
+</span></span><span class="line"><span class="cl"># 检查点: 检查网络  
+</span></span><span class="line"><span class="cl"># ifconfig   
+</span></span><span class="line"><span class="cl"># ifconfig docker0 down  
+</span></span><span class="line"><span class="cl"># brctl delbr docker0  
+</span></span><span class="line"><span class="cl"># service dockerd start  
+</span></span><span class="line"><span class="cl"># 检查点: 检查网络  
+</span></span><span class="line"><span class="cl"># ifconfig   
+</span></span><span class="line"><span class="cl"># 测试:  
+</span></span><span class="line"><span class="cl"># docker run --rm -it centos /bin/bash  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>测试结果: <u>失败</u></p>
+<p>② 参考 <a class="link" href="https://www.cnblogs.com/lei0213/p/12631681.html"  target="_blank" rel="noopener"
+    >Docker第五篇（docker网络管理）</a>, 用update改network</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># docker update --network=host -it e7d3c1eca2fb  
+</span></span><span class="line"><span class="cl">unknown flag: --network  
+</span></span><span class="line"><span class="cl">See &#39;docker update --help&#39;.  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果: update不支持修改network<br>
+测试结果: <u>失败</u></p>
+<p>③ 测试用已有的容器作镜像, 用host模式运行生成的镜像, 发现会自动退出<br>
+再测试用wordpress以host模式运行, 也同样会自动退出<br>
+原因可能是某个端口被宿主机占了, 谁知道<br>
+结论: wordpress在当前系统上, 只能以bridge方式运行.</p>
+<p>看来应该是网桥的问题, 估计最终还是iptables的问题<br>
+参考:  <a class="link" href="https://medium.com/@noosphere00/%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86linux%E8%AE%BE%E5%A4%87%E4%B8%8A%E7%9A%84bridge-%E7%BD%91%E6%A1%A5-%E5%92%8Cdocker-bridge-e6304a748f41"  target="_blank" rel="noopener"
+    >如何管理linux设备上的bridge(网桥)和docker bridge</a></p>
+<p>估计一时半会也搞不定了, 先准备手动安装wp包和插件吧:<br>
+<a class="link" href="https://blog.csdn.net/qq_26954773/article/details/62875366"  target="_blank" rel="noopener"
+    >如何手动安装WordPress主题和插件（Linux）</a></p>
+<p><strong>后记</strong>: 放弃了使用WordPress服务器搭博客的方式。<br>
+然而, 其实 . Docker下, 不管是host模式/bridge模式/container模式都不应该存在网络通讯的问题&hellip;&hellip;<br>
+☻</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/bridge/">BRIDGE</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/host-container/">HOST CONTAINER</a>
+        
+            <a href="/tags/portainer.io/">PORTAINER.IO</a>
+        
+            <a href="/tags/qa/">Q&amp;A</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/docker%E7%9B%B8%E5%85%B3/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-31.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-31.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker相关</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/wordpress-qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-34.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-34.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Wordpress Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85wordpress/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-32.png" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-32.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Docker环境下安装WordPress</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-29.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8D%8E%E4%B8%BAp40-pro%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8Cgms-%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E5%90%8C%E6%AD%A5%E9%80%9A%E8%AE%AF%E5%BD%95-%E5%85%B6%E5%AE%83%E5%8A%9F%E8%83%BD%E9%83%BD%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C-%E4%B8%94%E4%B8%8D%E6%8A%A5%E9%94%99/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-23.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-23.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">华为P40 pro安装谷歌GMS, 可以正常同步通讯录, 其它功能都能正常运行, 且不报错</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#关于docker的网络模式">关于Docker的网络模式</a></li>
+    <li><a href="#现象">现象</a></li>
+    <li><a href="#要不要处理">要不要处理</a></li>
+    <li><a href="#怎么处理">怎么处理:</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

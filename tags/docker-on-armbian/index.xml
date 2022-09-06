@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Docker on Armbian on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/docker-on-armbian/</link>
+        <description>Recent content in Docker on Armbian on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 09 Apr 2021 08:54:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/docker-on-armbian/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Armbian on TV box</title>
+        <link>https://jimway71.github.io/p/armbian-on-tv-box/</link>
+        <pubDate>Fri, 09 Apr 2021 08:54:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/armbian-on-tv-box/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-35.png" alt="Featured image of post Armbian on TV box" /&gt;&lt;h2 id=&#34;参考&#34;&gt;参考:&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/profile/1215-balbes150/&#34;  title=&#34;balbes150-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;balbes150&lt;/a&gt;活跃于&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Armbian官方(?)论坛&lt;/a&gt;, 他提供了支持部分非原厂支持设备的Armbian包, 如支持包括大部分S905系列芯片的Armbian image:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/topic/12162-single-armbian-image-for-rk-aml-aw-aarch64-armv8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Single Armbian image for RK + AML + AW (aarch64 ARMv8) By balbes150&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一些安装说明:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/topic/17106-installation-instructions-for-tv-boxes-with-amlogic-cpus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installation Instructions for TV Boxes with Amlogic CPUs&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.ondroid.net/armbian-os-uenv-ini-and-extlinux-conf/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Armbian OS – uEnv.ini and extlinux.conf&lt;/a&gt; (2020更新后版本, 改用extlinux.conf+uboot.ext)&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/topic/10685-installation-guide-and-your-questions-answered-for-tv-boxes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installation Guide and your questions answered for TV Boxes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ethanblog.com/tips/install-latest-armbian-in-n1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;N1 盒子安装使用最新 Armbian 的记录&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/jonnyan/p/12660037.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;N1如何完美刷入armbian系统教程&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/milton/p/11883811.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;R3300L运行CoreELEC, EmuELEC和Armbian&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;armbian配置工具armbian-config&#34;&gt;Armbian配置工具armbian-config&lt;/h2&gt;
+&lt;p&gt;Armbian系统提供armbian-config工具, 功能很丰富, 多数设置可以在这里完成&lt;/p&gt;
+&lt;h2 id=&#34;操作&#34;&gt;操作&lt;/h2&gt;
+&lt;h3 id=&#34;调整tf卡上ext4分区空间&#34;&gt;调整TF卡上Ext4分区空间&lt;/h3&gt;
+&lt;p&gt;Armbian安装到TF卡上后, 有两个分区, 128M*1 + 1.2G*1.&lt;br&gt;
+第一次用这张TF卡启动时, 系统会自动扩展TF卡的第二个分区, 并会占满整张TF卡的剩余空间&lt;/p&gt;
+&lt;p&gt;实际使用中, 希望能留一块独立的空间(分区), 这块空间windows能读写(考虑exfat格式), 即使Armbian系统坏了, 数据还能很方便的读取出来.&lt;/p&gt;
+&lt;p&gt;测试方法① (在Armbian安装到TF卡上后)先占一块空间给exfat分区.&lt;br&gt;
+操作:&lt;br&gt;
+在TF卡的最后面分一块exfat分区, 希望第一次启动扩展分区时, 这个exfat分区不会受到影响.&lt;br&gt;
+实际测试中, 发现分了这块exfat分区后, 第一次用这张TF卡启动时, 系统无法完成自动扩展分区.&lt;br&gt;
+删除exfat分区后, 系统才自动完成扩展, 并且占满整个TF卡空间.&lt;br&gt;
+方法①经测试, 确认失败。&lt;/p&gt;
+&lt;p&gt;测试方法② &lt;strong&gt;无损调整EXT4分区大小&lt;/strong&gt;&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.pinkd.moe/linux/2018/01/31/resize-a-ext4-partiton-safely&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;无损调整EXT4分区大小&lt;/a&gt;&lt;br&gt;
+操作:&lt;br&gt;
+先等系统用这张TF卡第一次启动, 并自动完成分区扩展;&lt;br&gt;
+关机, 取出TF卡, 插到另一个linux(ubuntu类最好)机器上, 用该linux原系统启动, TF卡不做为启动盘(不需要始终是mount的状态);&lt;br&gt;
+按下列命令操作:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 看分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# lsblk  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 检查需要调整的分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# e2fsck -f /dev/sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 调整分区文件系统到5G.  注意: 需要配合下一步才能生效 _ 这里应该只是把用到的空间都挪到前面5G的空间去了, 但没有实际调整分区大小  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# resize2fs /dev/sda2 5G  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 进fdisk, 先删除sda2, 再重建5G大小的sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# fdisk /dev/sda  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 删除原sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): d  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command):  2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 新建5G大小的sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): n                        # 新建  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): 2                        # 第2分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): Sectors位置, sda1 End+1  # 起始sectors位置  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): +5G                      # 大小, 或结果secotrs位置: 这里写的是大小, 以+开始, +后面是要划分的空间大小(5G)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): n                        # 发现ext4签名, 是否删除: N 不删除  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 顺便把exfat分区也建上...  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): w                        # 写盘退出  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 再检查一下，没有错误就说明没问题了  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# e2fsck -f /dev/sda1  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;结果: &lt;u&gt;成功&lt;/u&gt;&lt;br&gt;
+先在windows上格式化了exfat分区, 确认读写都没有问题.&lt;br&gt;
+然后用这张卡启动linux正常, 用fdisk查看分区也正常.&lt;br&gt;
+&lt;strong&gt;确认使用无损调整EXT4分区大小的方法修改Armbian启动TF卡分区成功&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;armbian上安装docker&#34;&gt;Armbian上安装Docker&lt;/h3&gt;
+&lt;p&gt;参考官网安装说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/get-docker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Get Docker&lt;/a&gt;&lt;br&gt;
+一般用官方的shell安装.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

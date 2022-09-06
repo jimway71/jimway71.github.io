@@ -12,7 +12,14 @@
         <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/p/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%AE%B0%E5%BD%95/</guid>
-        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-18.jpg" alt="Featured image of post 各种问题汇总记录" /&gt;&lt;hr&gt;
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-18.jpg" alt="Featured image of post 各种问题汇总记录" /&gt;&lt;p&gt;其他Q&amp;amp;A相关链接:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/qa/&#34; &gt;Q&amp;amp;A&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/docker%E7%9B%B8%E5%85%B3/&#34; &gt;Docker相关&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/docker%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C/&#34; &gt;Docker容器无法访问网络&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/wordpress-qa/&#34; &gt;Wordpress Q&amp;amp;A&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Windows系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;问题:&lt;br&gt;
@@ -336,6 +343,69 @@ PyCharm启动报错。&lt;br&gt;
 &lt;hr&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Linux系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Linux系统下的问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Hugo服务器相关问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题:&lt;br&gt;
+Hugo服务器并未支持html标签。&lt;br&gt;
+现象:&lt;br&gt;
+在Hugo+theme-stack上, 发现html标签并未生效。
+例如:
+下划线标记未生效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示为(如果正常显示, 说明已正确设置):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;u&gt;下划线&lt;/u&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看网页源代码显示为:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;blockquote&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;p&amp;gt;&amp;lt;!-- raw HTML omitted --&amp;gt;下划线&amp;lt;!-- raw HTML omitted --&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/blockquote&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;解决方式:&lt;br&gt;
+修改config.yaml, 修改相关部分内容如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;markup:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    goldmark:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        renderer:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            ## Set to true if you have HTML content inside Markdown
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            unsafe: true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;config.yaml这部分说明中, &amp;lsquo;## Set to true if you have HTML content inside Markdown&amp;rsquo;, 已经说明需要设置unsafe为true, 以使html标签生效&lt;br&gt;
+参考:&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/63198652/hugo-shortcode-ignored-saying-raw-html-omitted&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo shortcode ignored saying &amp;ldquo;raw HTML omitted&amp;rdquo;&lt;/a&gt; ☜ ✌&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://lizicai.com/p/Hugo%e7%9a%84shortcode%28%e6%94%af%e6%8c%81%e8%a7%86%e9%a2%91%e7%ad%89%29%e5%92%8c%e4%b8%bb%e9%a2%98%e4%bf%ae%e6%94%b9Li.027/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo的shortcode(支持视频等)和主题修改Li.027&lt;/a&gt;&lt;br&gt;
+● &lt;a class=&#34;link&#34; href=&#34;https://yuanyi-au.github.io/posts/hugo/#%e6%a8%a1%e6%9d%bf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 详细笔记（建站教程、工作原理）-模板&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Hugo服务器相关问题 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
 &lt;hr&gt;
 </description>
         </item>

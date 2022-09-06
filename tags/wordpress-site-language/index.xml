@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>WORDPRESS SITE LANGUAGE on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/wordpress-site-language/</link>
+        <description>Recent content in WORDPRESS SITE LANGUAGE on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 07 Apr 2021 14:44:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/wordpress-site-language/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在Docker环境下安装WordPress</title>
+        <link>https://jimway71.github.io/p/%E5%9C%A8docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85wordpress/</link>
+        <pubDate>Wed, 07 Apr 2021 14:44:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%9C%A8docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85wordpress/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-32.png" alt="Featured image of post 在Docker环境下安装WordPress" /&gt;&lt;h2 id=&#34;安装环境&#34;&gt;安装环境&lt;/h2&gt;
+&lt;p&gt;在数码视讯Q7上装了openwrt, 并已建好了Docker环境&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zero_only/article/details/107567135&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;armbian装docker+wordpress实现https访问&lt;/a&gt;&lt;br&gt;
+wordpress英文官网: &lt;a class=&#34;link&#34; href=&#34;https://wordpress.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wordpress.org/&lt;/a&gt;  (可能是)&lt;br&gt;
+WordPress中文官网: &lt;a class=&#34;link&#34; href=&#34;https://cn.wordpress.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://cn.wordpress.org/&lt;/a&gt;&lt;br&gt;
+WordPress on GitHub: &lt;a class=&#34;link&#34; href=&#34;https://github.com/WordPress/WordPress&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/WordPress/WordPress&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;h3 id=&#34;安装数据库&#34;&gt;安装数据库&lt;/h3&gt;
+&lt;p&gt;使用mariaDB数据库.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 拉取mariadb镜像&lt;br&gt;
+# docker pull mariadb&lt;br&gt;
+# 运行数据库容器&lt;br&gt;
+# docker run -d &amp;ndash;name DB4WordPress -p 3306:3306 -v /data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mariadb&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参数说明:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;--name: 容器名称，这里设置为DB4WordPress&lt;br&gt;
+-p: 端口映射，宿主机的3306端口映射给容器的3306端口.第一个3306是宿主机(即物理机器)的端口，第二个是容器的端口&lt;br&gt;
+-e: 环境变量. MYSQL_ROOT_PASSWORD, 设置root密码为123456&lt;br&gt;
+-v: 指定数据卷，也就是将mariadb容器的/var/lib/mysql映射到宿主机的/data/mysql&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;检查是否运行:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker ps -a&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;新建wordpress的库&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mysql -h 192.168.1.207 -u root -p&lt;br&gt;
+Enter password:&lt;br&gt;
+Welcome to the MariaDB monitor.  Commands end with ; or \g.&lt;br&gt;
+Your MariaDB connection id is 12&lt;br&gt;
+Server version: 10.5.9-MariaDB-1:10.5.9+maria~focal mariadb.org binary distribution&lt;br&gt;
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.&lt;br&gt;
+Type &amp;lsquo;help;&amp;rsquo; or &amp;lsquo;\h&amp;rsquo; for help. Type &amp;lsquo;\c&amp;rsquo; to clear the current input statement.&lt;/p&gt;
+&lt;p&gt;MariaDB [(none)]&amp;gt; create database wordpress;&lt;br&gt;
+Query OK, 1 row affected (0.001 sec)&lt;/p&gt;
+&lt;p&gt;MariaDB [(none)]&amp;gt; quit&lt;br&gt;
+Bye&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;安装wordpress&#34;&gt;安装WordPress&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 拉取wordpress镜像&lt;br&gt;
+# docker pull wordpress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;运行wordpress容器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker run -d &amp;ndash;name WordPress -p 1080:80 -e WORDPRESS_DB_HOST=192.168.1.207:3306 -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=123456 -e WORDPRESS_DB_NAME=wordpress wordpress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参数说明:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WORDPRESS_DB_HOST : 链接的docker的MySQL的IP地址和端口，一般设置成mysql表示用默认的设置&lt;br&gt;
+WORDPRESS_DB_USER : 指定数据库用户&lt;br&gt;
+WORDPRESS_DB_PASSWORD : 指定数据库用户的密码，如果用户是root，那么要和之前启动数据库时的&amp;quot;MYSQL_ROOT_PASSWORD&amp;quot;相同。&lt;br&gt;
+WORDPRESS_DB_NAME: 数据库名&lt;/p&gt;
+&lt;p&gt;--link  链接到mariadb容器的名称(感觉这里用不着link)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;检查是否运行&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker ps -a&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用浏览器打开http://192.168.1.207:1080, 确认安装成功&lt;/p&gt;
+&lt;h3 id=&#34;更改wordpress语言设置为中文&#34;&gt;更改WordPress语言设置为中文&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://www.wpdaxue.com/wordpress-language-setting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;更改WordPress语言设置（例如中文版和英文版转换）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;: WordPress官方英文版不包含任何语言包, 包括Docker版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;下载中文版wordpress&lt;br&gt;
+在&lt;a class=&#34;link&#34; href=&#34;https://cn.wordpress.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WordPress中文官方网站&lt;/a&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://cn.wordpress.org/latest-zh_CN.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中文版本wordpress&lt;/a&gt;, 解压下载的压缩包.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把wp-content/下的languages目录整个拷到wordpress容器的/var/www/html/wp-content/目录下&lt;br&gt;
+中文版的languages/目录下是中文相关的文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker cp languages/ WordPress:/var/www/html/wp-content/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个拷贝命令还不错, 是拷整个目录所有文件.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改wordpress容器中/var/www/html/wp-config.php, 加入中文语言设置&lt;br&gt;
+由于容器里没有编译工具, 比如vi/vim/nano这类的, 所以要先拷到宿主机上, 编辑后再拷回去.&lt;br&gt;
+先把文件wp-config.php从容器拷到宿主机&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker cp WordPress:/var/www/html/wp-config.php /tmp&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在宿主机上用vim编辑wp-config.php文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /tmp/wp-config.php&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;加入: define(&amp;lsquo;WPLANG&amp;rsquo;, &amp;lsquo;zh_CN&amp;rsquo;);&lt;br&gt;
+由于原配置文件中没有WPLANG的设置, 不知道要放在哪里, 就直接放在第一大段注释说明后面了.&lt;br&gt;
+编辑完后, 把改好的wp-config.php拷回到容器里&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker cp /tmp/wp-config.php WordPress:/var/www/html/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用浏览器打开http://192.168.1.207:1080查看, 发现已经有&amp;quot;站点语言&amp;quot;选择(原来没有这项), 并且可以选择中文.&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/32-wpondocker-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;修改后可以选择语言&#34;
+	
+	
+&gt;&lt;br&gt;
+↑ 修改后, 可以选择语言&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/32-wpondocker-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;修改后可以选择语言&#34;
+	
+	
+&gt;
+↑ 修改前, 没有语言选择项&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;站点语言&amp;quot;选择&amp;quot;中文&amp;rdquo;, 并确认生效.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ⒺⓃⒹ&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

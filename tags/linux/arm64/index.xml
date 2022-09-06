@@ -659,7 +659,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 当域名不正确时, 推送到github后, 浏览时也会报404错误。&lt;br&gt;
 命令如下:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;$ hugo &amp;ndash;baseURL=&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://abcd.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;$ hugo --baseURL=&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://abcd.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://abcd.github.io&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -668,7 +668,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;p&gt;暂无&lt;/p&gt;
 &lt;h2 id=&#34;其他问题&#34;&gt;其他问题&lt;/h2&gt;
 &lt;h3 id=&#34;关于在windows10上-使用tortoisegitgit管理在samba服务器基于armbian系统上的仓库时出现的问题&#34;&gt;关于在Windows10上, 使用TortoiseGit(+Git)管理在Samba服务器(基于Armbian系统)上的仓库时出现的问题&lt;/h3&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;问题描述:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;p&gt;&lt;u&gt;问题描述:&lt;/u&gt;&lt;br&gt;
 在Armbian系统上使用git clone命令克隆Pure主题仓库(相关目录通过Samba服务器在网络上共享), 在Armbian系统中和Windows共享中修改后, 在Windows上使用TortoiseGit查看diff, 报&amp;quot;fatal: detected dubious ownership in repository&amp;quot;类的错误, 并提示:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;添加环境变量GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true&lt;/li&gt;
@@ -680,10 +680,10 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;li&gt;&lt;code&gt;添加信任目录&lt;/code&gt;可以在cmd中使用已安装的&lt;code&gt;git.exe&lt;/code&gt;程序执行&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;但是, 按此操作后, 并没有效果: 使用TortoiseGit查看diff依然报错。&lt;br&gt;
-另外, 在&lt;!-- raw HTML omitted --&gt;内存虚拟磁盘(使用&amp;rsquo;Olof Lagerkvist&amp;rsquo;的&amp;rsquo;ImDisk Virtual Disk&amp;rsquo;建立)&lt;!-- raw HTML omitted --&gt;上, 也会出错同样的问题。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;处理:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+另外, 在&lt;u&gt;内存虚拟磁盘(使用&amp;rsquo;Olof Lagerkvist&amp;rsquo;的&amp;rsquo;ImDisk Virtual Disk&amp;rsquo;建立)&lt;/u&gt;上, 也会出错同样的问题。&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;处理:&lt;/u&gt;&lt;br&gt;
 在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;结论:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;p&gt;&lt;u&gt;结论:&lt;/u&gt;&lt;br&gt;
 在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。&lt;/p&gt;
 </description>
         </item>

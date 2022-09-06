@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>markdown On Hugo With theme Stack</title>
-        <link>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</link>
+        <title>Markdown&amp;Html On Hugo With theme Stack</title>
+        <link>https://jimway71.github.io/p/markdownhtml-on-hugo-with-theme-stack/</link>
         <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</guid>
-        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-10.jpg" alt="Featured image of post markdown On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
+        <guid>https://jimway71.github.io/p/markdownhtml-on-hugo-with-theme-stack/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-10.jpg" alt="Featured image of post Markdown&amp;Html On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; Markdown 中文文档&lt;/a&gt;&lt;/li&gt;
@@ -26,11 +26,13 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;opensubtitles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;br /&gt;  
+&lt;br /&gt;  
 &lt;hr&gt;
 &lt;h2 id=&#34;markdown在hugostack主题上的使用&#34;&gt;Markdown在Hugo+Stack主题上的使用&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;多级3级下的引用-参考u在openwrt上建立docker环境pe59ca8openwrte4b88ae5bbbae7ab8bdockere78eafe5a283u&#34;&gt;多级(3级)下的引用, 参考&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/&#34; &gt;在Openwrt上建立Docker环境&lt;/a&gt;&lt;/u&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;二级下的引用&#34;&gt;二级下的引用&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;111
@@ -129,12 +131,12 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;硬回车&#34;&gt;硬回车&lt;/h3&gt;
 &lt;p&gt;111&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;222&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;333&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
 444&lt;/p&gt;
 &lt;p&gt;555&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -255,11 +257,13 @@ Code:&lt;/p&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;opensubtitles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;br /&gt;  
+&lt;br /&gt;  
 &lt;hr&gt;
 &lt;h2 id=&#34;练习确定区&#34;&gt;练习确定区&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;多级3级下的引用-参考u在openwrt上建立docker环境pe59ca8openwrte4b88ae5bbbae7ab8bdockere78eafe5a283u&#34;&gt;多级(3级)下的引用, 参考&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/&#34; &gt;在Openwrt上建立Docker环境&lt;/a&gt;&lt;/u&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;二级下的引用&#34;&gt;二级下的引用&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;111
@@ -358,12 +362,12 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;硬回车&#34;&gt;硬回车&lt;/h3&gt;
 &lt;p&gt;111&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;222&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;333&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
 444&lt;/p&gt;
 &lt;p&gt;555&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -436,7 +440,7 @@ Code:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`There is a literal backtick (`) here.`
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;br&gt;
 Code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -450,11 +454,15 @@ Code:&lt;/p&gt;
 &lt;h2 id=&#34;练习区&#34;&gt;练习区&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading-1&#34;&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;下划线文本&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;111&lt;br&gt;
 This is a regular paragraph.&lt;/p&gt;
 &lt;h2 id=&#34;你好&#34;&gt;你好&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;table&gt;  
+    &lt;tr&gt;  
+        &lt;td&gt;Foo&lt;/td&gt;  
+    &lt;/tr&gt;  
+&lt;/table&gt;  
 &lt;p&gt;This is another regular paragraph.&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://images.google.com/images?num=30&amp;amp;q=larry&amp;#43;bird&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://images.google.com/images?num=30&amp;q=larry+bird&lt;/a&gt;&lt;br&gt;
@@ -466,14 +474,14 @@ AT&amp;amp;T&lt;br&gt;
 AT&amp;amp;T&lt;br&gt;
 4 &amp;lt; 5&lt;br&gt;
 4 &amp;lt; 5&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;111&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;222&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
 333&lt;/p&gt;
 &lt;p&gt;444&lt;/p&gt;
 &lt;h1 id=&#34;this-is-an-h1&#34;&gt;This is an H1&lt;/h1&gt;
@@ -639,7 +647,11 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;heading-2&#34;&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;1&#34;&gt;1&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;  
 &lt;h1 id=&#34;heading-3&#34;&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;2&#34;&gt;2&lt;/h2&gt;
 &lt;ol&gt;
@@ -688,7 +700,10 @@ Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
 &lt;p&gt;Magic&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;Magic&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Bird&lt;/p&gt;
@@ -697,7 +712,10 @@ Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
 &lt;p&gt;Magic&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;This is a list item with two paragraphs. Lorem ipsum dolor
@@ -753,23 +771,27 @@ inside a list item.
 &lt;p&gt;This is a normal paragraph:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;This is a code block.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a code block.
+&lt;/code&gt;&lt;/pre&gt;    
 &lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;tell application &amp;quot;Foo&amp;quot;
     beep
 end tell
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tell application &#34;Foo&#34;
+    beep
+end tell
+&lt;/code&gt;&lt;/pre&gt;    
 &lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;
     &amp;amp;copy; 2004 Foo Corporation
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&#34;footer&#34;&amp;gt;
+    &amp;amp;copy; 2004 Foo Corporation
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;    
 &lt;hr&gt;
 &lt;hr&gt;
 &lt;hr&gt;
@@ -780,8 +802,10 @@ end tell
     &gt;an example&lt;/a&gt; inline link.&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;This link&lt;/a&gt; has no title attribute.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This is &lt;a href=&#34;http://example.com/&#34; title=&#34;Title&#34;&gt;
+an example&lt;/a&gt; inline link.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://example.net/&#34;&gt;This link&lt;/a&gt; has no
+title attribute.&lt;/p&gt;
 &lt;p&gt;See my &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/about/&#34; &gt;About&lt;/a&gt; page for details.&lt;/p&gt;
 &lt;p&gt;This is &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Optional Title Here&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -889,14 +913,48 @@ than from &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  ti
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;++文本++&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;下划线文本&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;u&gt;下划线文本&lt;/u&gt;&lt;br&gt;
+&lt;span style=&#34;border-bottom:2px dashed yellow;&#34;&gt;下划线文本&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;text-decoration: underline
-&lt;!-- raw HTML omitted --&gt;所添加的需要加下划线的行内文字&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;span style=&#34;border-bottom:1px dashed green;&#34;&gt;所添加的需要加下划线的行内文字&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;用数学公式：
 下划线 $\underline{X}$
 上划线 $\overline{X}$&lt;/p&gt;
-</description>
+&lt;table border=&#34;1&#34;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, cell 1  
+&lt;pre&gt;&lt;code&gt;    Row 1.2, cel 1.2
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 2
+    row 2.2, cel 2.2
+    &amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 1  
+
+    Row 1.2, cel 1.2
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 2
+    row 2.2, cel 2.2
+    &amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/table&gt;
+&lt;table border=&#34;1&#34;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Heade
+        r 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;row 1, cell 1&lt;/td&gt;
+        &lt;td&gt;row 1, cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;row 2, cell 1&lt;/td&gt;
+        &lt;td&gt;row 2, cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</description>
         </item>
         
     </channel>

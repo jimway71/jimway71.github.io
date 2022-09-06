@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/stack%E4%B8%BB%E9%A2%98/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>markdown On Hugo With theme Stack</title>
-        <link>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</link>
+        <title>Markdown&amp;Html On Hugo With theme Stack</title>
+        <link>https://jimway71.github.io/p/markdownhtml-on-hugo-with-theme-stack/</link>
         <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://jimway71.github.io/p/markdown-on-hugo-with-theme-stack/</guid>
-        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-10.jpg" alt="Featured image of post markdown On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
+        <guid>https://jimway71.github.io/p/markdownhtml-on-hugo-with-theme-stack/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-10.jpg" alt="Featured image of post Markdown&amp;Html On Hugo With theme Stack" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; Markdown 中文文档&lt;/a&gt;&lt;/li&gt;
@@ -26,11 +26,13 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;opensubtitles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;br /&gt;  
+&lt;br /&gt;  
 &lt;hr&gt;
 &lt;h2 id=&#34;markdown在hugostack主题上的使用&#34;&gt;Markdown在Hugo+Stack主题上的使用&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;多级3级下的引用-参考u在openwrt上建立docker环境pe59ca8openwrte4b88ae5bbbae7ab8bdockere78eafe5a283u&#34;&gt;多级(3级)下的引用, 参考&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/&#34; &gt;在Openwrt上建立Docker环境&lt;/a&gt;&lt;/u&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;二级下的引用&#34;&gt;二级下的引用&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;111
@@ -129,12 +131,12 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;硬回车&#34;&gt;硬回车&lt;/h3&gt;
 &lt;p&gt;111&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;222&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;333&lt;br&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
 444&lt;/p&gt;
 &lt;p&gt;555&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -889,7 +891,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 当域名不正确时, 推送到github后, 浏览时也会报404错误。&lt;br&gt;
 命令如下:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;$ hugo &amp;ndash;baseURL=&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://abcd.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;$ hugo --baseURL=&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://abcd.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://abcd.github.io&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -898,7 +900,7 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;p&gt;暂无&lt;/p&gt;
 &lt;h2 id=&#34;其他问题&#34;&gt;其他问题&lt;/h2&gt;
 &lt;h3 id=&#34;关于在windows10上-使用tortoisegitgit管理在samba服务器基于armbian系统上的仓库时出现的问题&#34;&gt;关于在Windows10上, 使用TortoiseGit(+Git)管理在Samba服务器(基于Armbian系统)上的仓库时出现的问题&lt;/h3&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;问题描述:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;p&gt;&lt;u&gt;问题描述:&lt;/u&gt;&lt;br&gt;
 在Armbian系统上使用git clone命令克隆Pure主题仓库(相关目录通过Samba服务器在网络上共享), 在Armbian系统中和Windows共享中修改后, 在Windows上使用TortoiseGit查看diff, 报&amp;quot;fatal: detected dubious ownership in repository&amp;quot;类的错误, 并提示:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;添加环境变量GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true&lt;/li&gt;
@@ -910,10 +912,10 @@ hugo主题配置中, themes下的配置信息会被网站根目录下相应的�
 &lt;li&gt;&lt;code&gt;添加信任目录&lt;/code&gt;可以在cmd中使用已安装的&lt;code&gt;git.exe&lt;/code&gt;程序执行&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;但是, 按此操作后, 并没有效果: 使用TortoiseGit查看diff依然报错。&lt;br&gt;
-另外, 在&lt;!-- raw HTML omitted --&gt;内存虚拟磁盘(使用&amp;rsquo;Olof Lagerkvist&amp;rsquo;的&amp;rsquo;ImDisk Virtual Disk&amp;rsquo;建立)&lt;!-- raw HTML omitted --&gt;上, 也会出错同样的问题。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;处理:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+另外, 在&lt;u&gt;内存虚拟磁盘(使用&amp;rsquo;Olof Lagerkvist&amp;rsquo;的&amp;rsquo;ImDisk Virtual Disk&amp;rsquo;建立)&lt;/u&gt;上, 也会出错同样的问题。&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;处理:&lt;/u&gt;&lt;br&gt;
 在windows本机磁盘上clone仓库, 并同样进行修改, 可以正常使用git进行操作。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;结论:&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;p&gt;&lt;u&gt;结论:&lt;/u&gt;&lt;br&gt;
 在windows上, 暂时无法使用git工具操作Samba共享目录上的仓库, 可能与权限相关, 因为用户大概率不同 - samba上的文件owner应该是Armbian系统中的用户。&lt;/p&gt;
 </description>
         </item>

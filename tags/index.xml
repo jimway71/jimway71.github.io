@@ -6,7 +6,55 @@
         <description>Recent content in Tags on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 19 Aug 2022 12:00:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 30 Aug 2022 11:53:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>auto-py-to-exe</title>
+        <link>https://jimway71.github.io/tags/auto-py-to-exe/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/auto-py-to-exe/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>easycython</title>
+        <link>https://jimway71.github.io/tags/easycython/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/easycython/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Nuitka</title>
+        <link>https://jimway71.github.io/tags/nuitka/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/nuitka/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PyCharm</title>
+        <link>https://jimway71.github.io/tags/pycharm/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/pycharm/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PySide6</title>
+        <link>https://jimway71.github.io/tags/pyside6/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/pyside6/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>python</title>
+        <link>https://jimway71.github.io/tags/python/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Python GUI框架</title>
         <link>https://jimway71.github.io/tags/python-gui%E6%A1%86%E6%9E%B6/</link>
         <pubDate>Fri, 19 Aug 2022 12:00:00 +0800</pubDate>
@@ -55,6 +103,14 @@
         <description></description>
         </item>
         <item>
+        <title>pyside</title>
+        <link>https://jimway71.github.io/tags/pyside/</link>
+        <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/pyside/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>SSLH</title>
         <link>https://jimway71.github.io/tags/sslh/</link>
         <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
@@ -71,6 +127,14 @@
         <description></description>
         </item>
         <item>
+        <title>国际化</title>
+        <link>https://jimway71.github.io/tags/%E5%9B%BD%E9%99%85%E5%8C%96/</link>
+        <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E5%9B%BD%E9%99%85%E5%8C%96/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>随手记</title>
         <link>https://jimway71.github.io/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/</link>
         <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
@@ -79,7 +143,7 @@
         <description></description>
         </item>
         <item>
-        <title>QA</title>
+        <title>Q&amp;A</title>
         <link>https://jimway71.github.io/tags/qa/</link>
         <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
         
@@ -92,6 +156,14 @@
         <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>html</title>
+        <link>https://jimway71.github.io/tags/html/</link>
+        <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/html/</guid>
         <description></description>
         </item>
         <item>
@@ -271,11 +343,507 @@
         <description></description>
         </item>
         <item>
-        <title>EMUELEC</title>
+        <title>Armbian on TV Box</title>
+        <link>https://jimway71.github.io/tags/armbian-on-tv-box/</link>
+        <pubDate>Fri, 09 Apr 2021 08:54:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/armbian-on-tv-box/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://jimway71.github.io/tags/docker/</link>
+        <pubDate>Fri, 09 Apr 2021 08:54:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker on Armbian</title>
+        <link>https://jimway71.github.io/tags/docker-on-armbian/</link>
+        <pubDate>Fri, 09 Apr 2021 08:54:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/docker-on-armbian/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>无损调整EXT4分区大小</title>
+        <link>https://jimway71.github.io/tags/%E6%97%A0%E6%8D%9F%E8%B0%83%E6%95%B4ext4%E5%88%86%E5%8C%BA%E5%A4%A7%E5%B0%8F/</link>
+        <pubDate>Fri, 09 Apr 2021 08:54:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E6%97%A0%E6%8D%9F%E8%B0%83%E6%95%B4ext4%E5%88%86%E5%8C%BA%E5%A4%A7%E5%B0%8F/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WORDPRESS</title>
+        <link>https://jimway71.github.io/tags/wordpress/</link>
+        <pubDate>Thu, 08 Apr 2021 21:42:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/wordpress/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>英文半角符号自动变成中文全角</title>
+        <link>https://jimway71.github.io/tags/%E8%8B%B1%E6%96%87%E5%8D%8A%E8%A7%92%E7%AC%A6%E5%8F%B7%E8%87%AA%E5%8A%A8%E5%8F%98%E6%88%90%E4%B8%AD%E6%96%87%E5%85%A8%E8%A7%92/</link>
+        <pubDate>Thu, 08 Apr 2021 21:42:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E8%8B%B1%E6%96%87%E5%8D%8A%E8%A7%92%E7%AC%A6%E5%8F%B7%E8%87%AA%E5%8A%A8%E5%8F%98%E6%88%90%E4%B8%AD%E6%96%87%E5%85%A8%E8%A7%92/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>BRIDGE</title>
+        <link>https://jimway71.github.io/tags/bridge/</link>
+        <pubDate>Thu, 08 Apr 2021 01:17:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/bridge/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>HOST CONTAINER</title>
+        <link>https://jimway71.github.io/tags/host-container/</link>
+        <pubDate>Thu, 08 Apr 2021 01:17:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/host-container/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PORTAINER.IO</title>
+        <link>https://jimway71.github.io/tags/portainer.io/</link>
+        <pubDate>Thu, 08 Apr 2021 01:17:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/portainer.io/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MARIADB</title>
+        <link>https://jimway71.github.io/tags/mariadb/</link>
+        <pubDate>Wed, 07 Apr 2021 14:44:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/mariadb/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WORDPRESS SITE LANGUAGE</title>
+        <link>https://jimway71.github.io/tags/wordpress-site-language/</link>
+        <pubDate>Wed, 07 Apr 2021 14:44:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/wordpress-site-language/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WP-CONFIG</title>
+        <link>https://jimway71.github.io/tags/wp-config/</link>
+        <pubDate>Wed, 07 Apr 2021 14:44:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/wp-config/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DOCKER CP</title>
+        <link>https://jimway71.github.io/tags/docker-cp/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/docker-cp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DOCKER INSPECT</title>
+        <link>https://jimway71.github.io/tags/docker-inspect/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/docker-inspect/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DOCKER PS</title>
+        <link>https://jimway71.github.io/tags/docker-ps/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/docker-ps/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DOCKER RUN</title>
+        <link>https://jimway71.github.io/tags/docker-run/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/docker-run/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DOCKER UPDATE</title>
+        <link>https://jimway71.github.io/tags/docker-update/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/docker-update/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ENV</title>
+        <link>https://jimway71.github.io/tags/env/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/env/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>RESTART</title>
+        <link>https://jimway71.github.io/tags/restart/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/restart/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WORDPRESS_DB_HOST</title>
+        <link>https://jimway71.github.io/tags/wordpress_db_host/</link>
+        <pubDate>Tue, 06 Apr 2021 22:23:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/wordpress_db_host/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker on Openwrt</title>
+        <link>https://jimway71.github.io/tags/docker-on-openwrt/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/docker-on-openwrt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>FDISK</title>
+        <link>https://jimway71.github.io/tags/fdisk/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/fdisk/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MKFS</title>
+        <link>https://jimway71.github.io/tags/mkfs/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/mkfs/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MOUNT</title>
+        <link>https://jimway71.github.io/tags/mount/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/mount/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>portainer</title>
+        <link>https://jimway71.github.io/tags/portainer/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/portainer/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Q7</title>
+        <link>https://jimway71.github.io/tags/q7/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/q7/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>S905</title>
+        <link>https://jimway71.github.io/tags/s905/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/s905/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>电视盒子</title>
+        <link>https://jimway71.github.io/tags/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/</link>
+        <pubDate>Tue, 06 Apr 2021 18:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>2020春节整合版</title>
+        <link>https://jimway71.github.io/tags/2020%E6%98%A5%E8%8A%82%E6%95%B4%E5%90%88%E7%89%88/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/2020%E6%98%A5%E8%8A%82%E6%95%B4%E5%90%88%E7%89%88/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>adduser</title>
+        <link>https://jimway71.github.io/tags/adduser/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/adduser/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ash</title>
+        <link>https://jimway71.github.io/tags/ash/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ash/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>bash</title>
+        <link>https://jimway71.github.io/tags/bash/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/bash/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>EmuELEC</title>
         <link>https://jimway71.github.io/tags/emuelec/</link>
-        <pubDate>Sun, 07 Mar 2021 11:11:16 +0800</pubDate>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/emuelec/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Es文件浏览器</title>
+        <link>https://jimway71.github.io/tags/es%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/es%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>frp</title>
+        <link>https://jimway71.github.io/tags/frp/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/frp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>FrpProPlugin</title>
+        <link>https://jimway71.github.io/tags/frpproplugin/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/frpproplugin/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>haproxy</title>
+        <link>https://jimway71.github.io/tags/haproxy/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/haproxy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>history</title>
+        <link>https://jimway71.github.io/tags/history/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/history/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>holer</title>
+        <link>https://jimway71.github.io/tags/holer/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/holer/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Key exchange failed</title>
+        <link>https://jimway71.github.io/tags/key-exchange-failed/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/key-exchange-failed/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>lanproxy</title>
+        <link>https://jimway71.github.io/tags/lanproxy/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/lanproxy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>nginx</title>
+        <link>https://jimway71.github.io/tags/nginx/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/nginx/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>nps</title>
+        <link>https://jimway71.github.io/tags/nps/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/nps/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>NTP</title>
+        <link>https://jimway71.github.io/tags/ntp/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ntp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Padavan</title>
+        <link>https://jimway71.github.io/tags/padavan/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/padavan/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>rinetd</title>
+        <link>https://jimway71.github.io/tags/rinetd/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/rinetd/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SecureCrt</title>
+        <link>https://jimway71.github.io/tags/securecrt/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/securecrt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>smbpasswd</title>
+        <link>https://jimway71.github.io/tags/smbpasswd/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/smbpasswd/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>socat</title>
+        <link>https://jimway71.github.io/tags/socat/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/socat/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>sources.list</title>
+        <link>https://jimway71.github.io/tags/sources.list/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/sources.list/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>sshd</title>
+        <link>https://jimway71.github.io/tags/sshd/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/sshd/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ubuntu</title>
+        <link>https://jimway71.github.io/tags/ubuntu/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ubuntu/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>useradd</title>
+        <link>https://jimway71.github.io/tags/useradd/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/useradd/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>whoami</title>
+        <link>https://jimway71.github.io/tags/whoami/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/whoami/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>win10</title>
+        <link>https://jimway71.github.io/tags/win10/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/win10/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>人中日月</title>
+        <link>https://jimway71.github.io/tags/%E4%BA%BA%E4%B8%AD%E6%97%A5%E6%9C%88/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E4%BA%BA%E4%B8%AD%E6%97%A5%E6%9C%88/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>增补包</title>
+        <link>https://jimway71.github.io/tags/%E5%A2%9E%E8%A1%A5%E5%8C%85/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E5%A2%9E%E8%A1%A5%E5%8C%85/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>增量包</title>
+        <link>https://jimway71.github.io/tags/%E5%A2%9E%E9%87%8F%E5%8C%85/</link>
+        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E5%A2%9E%E9%87%8F%E5%8C%85/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>FLIPPY</title>
+        <link>https://jimway71.github.io/tags/flippy/</link>
+        <pubDate>Mon, 15 Mar 2021 00:49:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/flippy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>miniDLNA</title>
+        <link>https://jimway71.github.io/tags/minidlna/</link>
+        <pubDate>Mon, 15 Mar 2021 00:49:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/minidlna/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>REBOOT TO LIBREELEC</title>
+        <link>https://jimway71.github.io/tags/reboot-to-libreelec/</link>
+        <pubDate>Mon, 15 Mar 2021 00:49:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/reboot-to-libreelec/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>数码视讯Q7</title>
+        <link>https://jimway71.github.io/tags/%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7/</link>
+        <pubDate>Mon, 15 Mar 2021 00:49:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>刷机</title>
+        <link>https://jimway71.github.io/tags/%E5%88%B7%E6%9C%BA/</link>
+        <pubDate>Mon, 15 Mar 2021 00:49:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E5%88%B7%E6%9C%BA/</guid>
         <description></description>
         </item>
         <item>
@@ -287,35 +855,11 @@
         <description></description>
         </item>
         <item>
-        <title>S905</title>
-        <link>https://jimway71.github.io/tags/s905/</link>
-        <pubDate>Sun, 07 Mar 2021 11:11:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/s905/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>电视盒子</title>
-        <link>https://jimway71.github.io/tags/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/</link>
-        <pubDate>Sun, 07 Mar 2021 11:11:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>斐讯N1</title>
         <link>https://jimway71.github.io/tags/%E6%96%90%E8%AE%AFn1/</link>
         <pubDate>Sun, 07 Mar 2021 11:11:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/%E6%96%90%E8%AE%AFn1/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>刷机</title>
-        <link>https://jimway71.github.io/tags/%E5%88%B7%E6%9C%BA/</link>
-        <pubDate>Sun, 07 Mar 2021 11:11:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/%E5%88%B7%E6%9C%BA/</guid>
         <description></description>
         </item>
         <item>
@@ -332,14 +876,6 @@
         <pubDate>Sat, 06 Mar 2021 16:14:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/%E9%AD%94%E7%99%BE%E5%92%8Ccm201-2/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>数码视讯Q7</title>
-        <link>https://jimway71.github.io/tags/%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7/</link>
-        <pubDate>Tue, 02 Mar 2021 17:17:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7/</guid>
         <description></description>
         </item>
         <item>
@@ -540,14 +1076,6 @@
         <pubDate>Thu, 14 May 2009 21:39:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/oray/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>ubuntu</title>
-        <link>https://jimway71.github.io/tags/ubuntu/</link>
-        <pubDate>Thu, 14 May 2009 21:39:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/ubuntu/</guid>
         <description></description>
         </item>
         <item>
