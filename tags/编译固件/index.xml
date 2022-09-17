@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>编译固件 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6/</link>
+        <description>Recent content in 编译固件 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 23 May 2021 18:27:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用Github为多种设备编译Openwrt固件</title>
+        <link>https://jimway71.github.io/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/</link>
+        <pubDate>Sun, 23 May 2021 18:27:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/NAFO-41.jpg" alt="Featured image of post 使用Github为多种设备编译Openwrt固件" /&gt;&lt;h2 id=&#34;openwrt编译参考&#34;&gt;Openwrt编译参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://p3terx.com/archives/build-openwrt-with-github-actions.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用 GitHub Actions 云编译 OpenWrt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coolsnowwolf/lede&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lean的Openwrt源码仓库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/IvanSolis1989/OpenWrt-DIY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWrt DIY — 多设备固件云编译&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;源起&#34;&gt;源起&lt;/h2&gt;
+&lt;p&gt;最开始是用vps的虚拟机做编译, 虽然编译成功过, 但还是有些问题.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;操作比较麻烦, 每次都需要做配置&lt;/li&gt;
+&lt;li&gt;不清楚怎么更新代码, 现在有好些库都没办法更新, 新功能也无法使用.&lt;/li&gt;
+&lt;li&gt;编译时间长, 最后还经常出错, 虽然vps虚拟机还是在米国.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;到最后编译总是不成功, 库倒是编译通过了, 只有用编译好的库往现有的设备上安装, 要找关联库什么的, 一堆的麻烦事.&lt;br&gt;
+搞vps上的openwrt编译搞烦了, 不想再继续下去, 但更新总得做.&lt;br&gt;
+后来看到相关教程, 可以用github Action功能来实现编译, 不用做vps虚拟机, 不需要复杂的配置, 于是开始研究.&lt;/p&gt;
+&lt;h2 id=&#34;选库开始瞎搞&#34;&gt;选库(开始瞎搞)&lt;/h2&gt;
+&lt;p&gt;看了很长时间的教程, 也没搞懂该怎么做, 算了, 跟着感觉走吧.&lt;br&gt;
+&lt;strong&gt;Github上openwrt相关的代码库很多, 需要先选一个库来fork.&lt;/strong&gt;&lt;br&gt;
+我在github上搜索&amp;quot;openwrt k2p&amp;quot;, 从Star和Fork最多的库里查找支持设备比较多的库, 由于排第二的&amp;quot;&lt;a class=&#34;link&#34; href=&#34;https://github.com/IvanSolis1989/OpenWrt-DIY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWrt DIY — 多设备固件云编译&lt;/a&gt;&amp;ldquo;支持的设备种类最多, 就选了这个库, 后面熟悉了还得看下代码.&lt;/p&gt;
+&lt;h2 id=&#34;操作正式开始瞎搞&#34;&gt;操作(正式开始瞎搞)&lt;/h2&gt;
+&lt;h3 id=&#34;登录&#34;&gt;登录&lt;/h3&gt;
+&lt;p&gt;打开github网站并登录.&lt;/p&gt;
+&lt;h3 id=&#34;fork&#34;&gt;Fork&lt;/h3&gt;
+&lt;p&gt;打开&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/IvanSolis1989/OpenWrt-DIY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWrt DIY — 多设备固件云编译&lt;/a&gt;&amp;quot;, 点击右上角&amp;quot;Fork&amp;quot;按钮, 就可以在已登录的用户目录下Fork出一个资源库.&lt;/p&gt;
+&lt;h3 id=&#34;branch&#34;&gt;Branch&lt;/h3&gt;
+&lt;p&gt;打开fork的资源库, 可以看到fork出的目录及文件, 目录及文件是主资源库是一样的.&lt;br&gt;
+如果想要修改, 需要在左上角的&amp;quot;main&amp;quot;处点击, 并建立一个分支(Find or Create a branch&amp;hellip;), 再选到新建的分支进行修改(Fork出来的main看样子是不能修改的)&lt;br&gt;
+(设置新分支为default: 点击右上角的setting菜单, 选择左侧的&amp;quot;branches&amp;quot;,  在右侧即可选择&amp;quot;Default branch&amp;quot;)&lt;/p&gt;
+&lt;h3 id=&#34;修改&#34;&gt;修改&lt;/h3&gt;
+&lt;p&gt;可以修改新分支的文件, 其中:&lt;br&gt;
+.github/workflows目录: 不同设备的Action配置文件&lt;br&gt;
+config目录: 不同设备的配置文件&lt;br&gt;
+scripts目录: 编译用的shell - 原库主在这里修改了设备缺省IP地址.&lt;/p&gt;
+&lt;h3 id=&#34;source-update-check&#34;&gt;Source Update Check&lt;/h3&gt;
+&lt;p&gt;点击Actions, 从左侧的Workflows里选择&amp;quot;Source Update Check&amp;quot;, 先要&amp;quot;Enable workflow&amp;quot;, 再点击右侧的&amp;quot;Run workflow&amp;quot; - 应该是检查并更新代码.&lt;br&gt;
+&lt;u&gt;(未成功, 错误信息: &amp;ldquo;Run peter-evans/repository-dispatch@v1&lt;/u&gt;&lt;br&gt;
+Error: Parameter token or opts.auth is required&amp;rdquo;)&lt;/p&gt;
+&lt;h3 id=&#34;actions&#34;&gt;Actions&lt;/h3&gt;
+&lt;p&gt;点击Actions, 从左侧的Workflows里选择设备相关的Build项目,  点击右侧的&amp;quot;Run workflow&amp;quot;, 过一会, 就能看到相应的项目正在正在执行, 点进去能看到执行的详细信息.&lt;br&gt;
+编译时间大概需要不到3个小时.&lt;/p&gt;
+&lt;h2 id=&#34;出现的问题及处理&#34;&gt;出现的问题及处理&lt;/h2&gt;
+&lt;h3 id=&#34;没有生成openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgradebin文件&#34;&gt;没有生成openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin文件&lt;/h3&gt;
+&lt;p&gt;原编译Newifi_D2所用diy-part2.sh无法生成正常的openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin, 而只能生成openwrt-ramips-mt7621-d-team_newifi-d2-initramfs-kernel.bin.&lt;br&gt;
+Google后发现, 应该是包太大了, 需要去掉一些插件&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://github.com/coolsnowwolf/lede/issues/6243&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;过渡包“initramfs-kernel.bin问题 #6243&lt;/a&gt;&lt;br&gt;
+以前手动编译时也会有类似情况, 选的插件较多情况下会出现类似的问题.&lt;br&gt;
+考虑到Newifi-D2的可用空间限制, 编辑了一个专用于D2的&amp;quot;diy-4-Newifi_D2.sh&amp;rdquo;, 在原版本(复制自&amp;quot;diy-part3.sh&amp;quot;)基础上, 去掉了&amp;quot;passwall&amp;quot;+&amp;ldquo;OpenClash&amp;rdquo;+&amp;ldquo;Docker&amp;rdquo;.
+同时, D2的配置文件&amp;quot;.github/workflows/Newifi_D2.yml&amp;quot;也需要做修改, 改用这个新的sh文件.&lt;br&gt;
+再次使用Action编译, 编译通过, 并生成&amp;quot;openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin&amp;quot;文件.&lt;/p&gt;
+&lt;h3 id=&#34;可能只需要删除一个大插件就行-因此再次修改diy-4-newifi_d2sh-在原版本复制自diy-part3sh基础上-仅去掉锐捷认证mentohustopenclash-并再次编译&#34;&gt;可能只需要删除一个大插件就行, &lt;del&gt;因此再次修改&amp;quot;diy-4-Newifi_D2.sh&amp;quot;, 在原版本(复制自&amp;quot;diy-part3.sh&amp;quot;)基础上, 仅去掉锐捷认证(mentohust)+openclash, 并再次编译&lt;/del&gt;.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;失败 - 无法生成&amp;quot;openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin&amp;quot;文件&lt;/strong&gt;&lt;br&gt;
+再次修改&amp;quot;diy-4-Newifi_D2.sh&amp;quot;, 在原版本(复制自&amp;quot;diy-part3.sh&amp;quot;)基础上, 去掉passwall+锐捷认证(mentohust)+openclash, 并再次编译, 编译成功.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

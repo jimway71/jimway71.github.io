@@ -6,7 +6,676 @@
         <description>Recent content in WORDPRESS on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 08 Apr 2021 21:42:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Apr 2021 16:25:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>用R3300L做家用服务器</title>
+        <link>https://jimway71.github.io/p/%E7%94%A8r3300l%E5%81%9A%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Sat, 10 Apr 2021 16:25:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E7%94%A8r3300l%E5%81%9A%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-39.jpg" alt="Featured image of post 用R3300L做家用服务器" /&gt;&lt;h2 id=&#34;期望实现功能列表&#34;&gt;期望实现功能列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker下跑openwrt, 测试用  ✔&lt;/li&gt;
+&lt;li&gt;文件共享服务器 ✅ (实现功能, 但性能极差)&lt;/li&gt;
+&lt;li&gt;DLNA服务器  ✔&lt;/li&gt;
+&lt;li&gt;Docker下跑wordpress服务器(补充: 最终改成直接Armbian上跑Hugo服务器  ✔)&lt;/li&gt;
+&lt;li&gt;小型linux服务器  ✔&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装与配置&#34;&gt;安装与配置&lt;/h2&gt;
+&lt;h3 id=&#34;在tv-boxr3300l-s905l上安装armbian&#34;&gt;在TV box(R3300L, S905L)上安装Armbian&lt;/h3&gt;
+&lt;h4 id=&#34;制作启动tf卡&#34;&gt;制作启动TF卡&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Armbian安装所用镜像来源: &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/milton/p/11883811.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;R3300L运行CoreELEC, EmuELEC和Armbian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Armbian On TV Box原作者发布贴:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://forum.armbian.com/topic/12162-single-armbian-image-for-rk-aml-aw-aarch64-armv8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;balbes150: Single Armbian image for RK + AML + AW (aarch64 ARMv8) By balbes150&lt;/a&gt;&lt;br&gt;
+原作者最新的(bonic)镜像经测试, 在R3300L上, 要么卡Start Kernel, 要么黑屏。&lt;br&gt;
+可用的镜像分享地址: &lt;a class=&#34;link&#34; href=&#34;https://share.weiyun.com/5eCvcvS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://share.weiyun.com/5eCvcvS&lt;/a&gt; 密码：mivmcn&lt;br&gt;
+上述地址中最新的可用稳定版本: Armbian_5.9.7_Aml-g12-ubuntu_bionic_5.3.0_20190923.img.xz&lt;br&gt;
+卡刷后, 修改env.txt, dtb文件选择文件名有212那个(有网卡, 无wifi)&lt;br&gt;
+注: Armbian初始用户/密码: root/1234&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;用tf卡启动后操作-重新调整启动tf卡分区&#34;&gt;用TF卡启动后操作: 重新调整启动TF卡分区&lt;/h4&gt;
+&lt;p&gt;TF卡第一次启动后，会自动扩展主要分区, 占用全部空间，因为想做文件服务器, 因此需要修改主要分区, 把部分空间分给exfat分区。&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;http://jimway.blogspot.com/2021/04/armbian-on-tv-box.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;armbian on TV box&lt;/a&gt;&lt;br&gt;
+Armbian装TF卡上, 有两个分区, 128M*1 + 1.2G*1.&lt;br&gt;
+第一次启动时, 系统会自动扩展第二个分区, 会占满整个TF卡&lt;br&gt;
+希望留一块空间是windows能读写的(考虑exfat格式), 即使系统坏了, 数据还能读.&lt;br&gt;
+因此, 需要无损调整EXT4分区大小&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.pinkd.moe/linux/2018/01/31/resize-a-ext4-partiton-safely&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;无损调整EXT4分区大小&lt;/a&gt;&lt;br&gt;
+操作:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先等系统启动自动完成扩展.&lt;/li&gt;
+&lt;li&gt;关机, 拿出卡, 插到另一个linux(ubuntu类最好)机器上, 不做为启动盘使用(不需要一直mount上), 启动linux.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 看分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# lsblk  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 检查需要调整的分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# e2fsck -f /dev/sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 调整分区文件系统到5G.  注意: 需要配合下一步才能生效 _ 这里应该只是把用到的空间都挪到前面5G的空间去了, 但没有实际调整分区大小  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# resize2fs /dev/sda2 5G  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 进fdisk, 先删除sda2, 再重建5G大小的sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# fdisk /dev/sda  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 删除原sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): d  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command):  2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 新建5G大小的sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): n        # 新建  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): 2        # 第2分区  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): Sectors位置, sda1 End+1    # 起始sectors位置  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): +5G                                    # 大小, 或结果secotrs位置: 这里写的是大小, 以+开始, +后面是要划分的空间大小(5G)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): 发现ext4签名, 是否删除: N 不删除  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 顺便把exfat分区也建上...  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(command): w    # 写盘退出  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 再检查一下，没有错误就说明没问题了  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# e2fsck -f /dev/sda2  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;无损调整分区操作结果: 成功&lt;br&gt;
+先在windows上格式化了exfat分区, 读写没问题.&lt;br&gt;
+然后用这张卡启动linux正常, 用fdisk看分区也正常.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注1: 处理不能使用上述方法调整分区的情况&lt;/strong&gt;&lt;br&gt;
+情况描述:&lt;br&gt;
+有一张128G的卡, 完成armbian第一次启动,系统自动扩展主分区到占满整张卡后,用另一张TF卡启动到Armbian, 把128G卡插到机器上, 试图用e2fsck+resize2fs命令调整分区, 但系统报错说该该已加载,不能完成上述命令.&lt;br&gt;
+考虑到这张卡只用了一次,后面要分出来的空间应该还没有用到, 因此就用fdsik强行重新分区, 并且&lt;u&gt;不格式化&lt;/u&gt;调整小的分区,希望能行.&lt;br&gt;
+但完成后用这张卡重启,启动失败,不能进入系统.&lt;br&gt;
+调整分区失败.&lt;br&gt;
+处理方式(试):&lt;br&gt;
+用一张小点的TF卡做armbian系统,完成后用这张卡启动,完成分区调整.&lt;br&gt;
+再把这张卡用USB Image Tool 写U盘镜像工具复制到128G的卡中(从小卡上备份到文件, 在大卡上从文件恢复),这样系统会占用8G的空间,剩余的空间用fdisk(armbian上)分区成extfat,再到Windows上格式化为exfat就ok.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注2: 让Armbian挂载exfat磁盘&lt;/strong&gt;&lt;br&gt;
+情况描述: Armbian缺省安装不包括exfat支持,需要如下操作安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 更新软件包信息  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt-get update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查找exfat相关包名  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt-cache search exfat  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装exfat支持  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt-get install exfat-fuse exfat-utils  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装完成后, 即可手动挂载  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 建立挂载点  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# mkdir /mnt/mmcblk0p3  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 挂载  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# mount -t exfat /dev/mmcblk0p3 /mnt/mmcblk0p3/  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注3: 让Armbian系统启动时自动挂载exfat磁盘&lt;/strong&gt;&lt;br&gt;
+情况描述: Armbian启动时不会自动挂载exfat磁盘, 需要修改/etc/fstab文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 取需要挂载的exfat设备uuid  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# blkid /dev/mmcblk0p3  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/mmcblk0p3: UUID=&amp;#34;FAAE-B3A5&amp;#34; TYPE=&amp;#34;exfat&amp;#34; PARTUUID=&amp;#34;de8d9e8d-09&amp;#34;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 修改自动挂载配置文件/etc/fstab  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# vim /etc/fstab  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 在最后增加  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UUID=&amp;#34;FAAE-B3A5&amp;#34; /mnt/mmcblk0p3 exfat defaults 0 0  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 其中  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 第1列：磁盘装置文件名或该装置的 Label  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 第2列：Mount point 设备的挂载点，就是你要挂载到哪个目录下  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 第3列：filesystem 磁盘文件系统的格式  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 第4列：文件系统参数 parameters  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 第5列：能否被 dump 备份命令作用  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 第6列：是否以 fsck 检验扇区  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置完成后重启确认可以正常挂载.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;注: 当前R3300L的Blk情况:&lt;/u&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# lsblk  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mmcblk0      179:0    0 119.3G  0 disk   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;|-mmcblk0p1  179:1    0   128M  0 part /boot  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;|-mmcblk0p2  179:2    0   7.3G  0 part /  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`-mmcblk0p3  179:3    0 111.8G  0 part /mnt/ext  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mmcblk1      179:32   0   7.3G  0 disk   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mmcblk1boot0 179:64   0     4M  1 disk   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mmcblk1boot1 179:96   0     4M  1 disk   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zram0        253:0    0    50M  0 disk /var/log  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zram1        253:1    0 400.5M  0 disk [SWAP]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* mmcblk1是内置的EMMC存储  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置armbian&#34;&gt;配置Armbian&lt;/h4&gt;
+&lt;p&gt;系统提供armbian-config工具, 功能很丰富, 多数设置可以在这里完成&lt;br&gt;
+主要是修改网络配置, 配置时区、时间，配置语言什么的。&lt;/p&gt;
+&lt;p&gt;网络似乎需要手动配置:&lt;br&gt;
+先装vim&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt-get update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt-get install vim  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 再装个ufw(防火墙工具)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt-get install ufw  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id=&#34;修改网卡配置文件-etcnetworkinterfaces&#34;&gt;修改网卡配置文件 /etc/network/interfaces&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iface eth0 inet static  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;address 192.168.1.2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netmask 255.255.255.0  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gateway 192.168.1.1  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dnsnameservers 192.168.1.1 8.8.8.8 8.8.4.4  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;在armbian上安装docker和portainer&#34;&gt;在Armbian上安装Docker和portainer&lt;/h3&gt;
+&lt;h4 id=&#34;在armbian上安装docker&#34;&gt;在Armbian上安装Docker&lt;/h4&gt;
+&lt;p&gt;参考官网安装说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/get-docker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Get Docker&lt;/a&gt; -&amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/install/ubuntu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Install Docker Engine on Ubuntu&lt;/a&gt;&lt;br&gt;
+使用官方的shell安装，如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# curl -fsSL &lt;a class=&#34;link&#34; href=&#34;https://get.docker.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://get.docker.com&lt;/a&gt; -o get-docker.sh&lt;br&gt;
+# sh get-docker.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装完成后, 用下面命令测试&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker run hello-world&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(另: 也可用armbian-config安装docker, 完成后用docker run hello-world测试,docker能正常工作, 但安装portainer-ce后不正常, 后换回用官方shell安装)&lt;/p&gt;
+&lt;h4 id=&#34;在docker上安装portainer-用于docker管理&#34;&gt;在Docker上安装Portainer, 用于Docker管理&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker pull portainer/portainer-ce  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 启动  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker volume create portainer_data  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后用浏览器打开http://armbian设备网址:9000, 就能看到portainer的管理界面&lt;br&gt;
+在管理界面里进行初始配置。&lt;/p&gt;
+&lt;h5 id=&#34;补充-忘记portainer密码后-如何修改portainer密码&#34;&gt;补充: 忘记Portainer密码后, 如何修改portainer密码&lt;/h5&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/A1999/p/15993682.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker管理工具Portainer忘记admin登录密码怎么办?&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;查看portainer的container-id&#34;&gt;查看Portainer的CONTAINER ID&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker ps -a  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CONTAINER ID   IMAGE                    COMMAND        CREATED      STATUS                  PORTS                                                                                            NAMES  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30f1a2690e55   portainer/portainer-ce   &amp;#34;/portainer&amp;#34;   7 days ago   Up 7 hours              0.0.0.0:8000-&amp;gt;8000/tcp, :::8000-&amp;gt;8000/tcp, 0.0.0.0:9000-&amp;gt;9000/tcp, :::9000-&amp;gt;9000/tcp, 9443/tcp   portainer  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;看到portainer的CONTAINER ID为30f1a2690e55&lt;/p&gt;
+&lt;h5 id=&#34;停止portainer容器参数为portainer的container-id&#34;&gt;停止Portainer容器(参数为portainer的CONTAINER ID)&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker stop 30f1a2690e55&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;重置密码-命令中-v后的参数portainer_datadata与启动时见前面docker-run用的一样&#34;&gt;重置密码: 命令中-v后的参数(portainer_data:/data)与启动时(见前面docker run)用的一样&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker run --rm -v portainer_data:/data portainer/helper-reset-password  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 第一次调用时, portainer/helper-reset-password会下载安装   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Unable to find image &amp;#39;portainer/helper-reset-password:latest&amp;#39; locally  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;latest: Pulling from portainer/helper-reset-password  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;79916c70cb9e: Pull complete  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;69e9153f20cb: Pull complete  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Digest: sha256:735a809b1bfe14b5fae340d4b350bae97c2016371c47fb6e34d71a45e4512f79  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Status: Downloaded newer image for portainer/helper-reset-password:latest  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WARNING: The requested image&amp;#39;s platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2022/07/24 05:17:47 Password succesfully updated for user: admin  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2022/07/24 05:17:47 Use the following password to login: 3&amp;lt;X$v+1PLx-Jj2pY4GBq79=5Us8R_n/\  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;需要记住这个密码.&lt;br&gt;
+另: 在Portainer的web管理界面中, settings-&amp;gt;Authentication-&amp;gt;Password Rules, 可以修改密码强度(长度)&lt;br&gt;
+注意: 在Docker中跑的Image需要和系统的Architectures一致, 比如R3300L需要选择ARM64 Architectures的image&lt;/p&gt;
+&lt;h3 id=&#34;在docker上跑openwrt&#34;&gt;在Docker上跑openwrt&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;http://jimway.blogspot.com/2021/04/openwrt-info.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;openwrt info&lt;/a&gt;&lt;br&gt;
+相关信息:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://githubmemory.com/repo/unifreq/openwrt_packit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy 的 Openwrt 打包源码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-958173-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy的openwrt 4 docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/unifreq/openwrt-aarch64&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy的openwrt4docker源: unifreq/openwrt-aarch64&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;openwrt-for-docker下载flippy版本&#34;&gt;openwrt for docker下载(flippy版本):&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker pull unifreq/openwrt-aarch64&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;运行openwrt-for-docker注意这里并不需要设置网络&#34;&gt;运行openwrt for docker(注意:这里并不需要设置网络):&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 这里要使用固定ip地址(用&amp;ndash;ip参数设置), ip段看ifconfig中docker的网段, 地址放在较后位置,避免被占&lt;br&gt;
+# 直接使用&amp;ndash;ip参数的方式, &lt;strong&gt;测试失败!&lt;/strong&gt;&lt;br&gt;
+&lt;del&gt;# docker run &amp;ndash;restart always &amp;ndash;name openwrt -p 80:80 &amp;ndash;ip 172.17.0.199 -d &amp;ndash;privileged unifreq/openwrt-aarch64&lt;/del&gt;&lt;br&gt;
+# 要先建立一个docker的静态network, 自定网段, 但不要与现有docker网段(172.17.0.0/16)冲突&lt;br&gt;
+# docker network create &amp;ndash;subnet=192.168.188.0/24 staticnet&lt;br&gt;
+# 建立docker network后, 可以使用docker network ls查看新建的network&lt;br&gt;
+# 启动openwrt, 设置使用静态地址&lt;br&gt;
+# docker run &amp;ndash;restart always &amp;ndash;name openwrt -p 80:80 &amp;ndash;net staticnet &amp;ndash;ip 192.168.188.188 -d &amp;ndash;privileged unifreq/openwrt-aarch64&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;另外还有使用macvlan的方法,如:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/lisaac/blog/issues/4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;docker 中运行 openwrt: 利用 macvlan 方式创建虚拟接口进行配置&amp;rdquo;&lt;/a&gt;&lt;br&gt;
+但macvlan方式要使用混杂模式, 搞得有点复杂的感觉, 所以放弃&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;配置openwrt-in-docker&#34;&gt;配置openwrt in Docker&lt;/h4&gt;
+&lt;p&gt;先进入portainer查看openwrt运行的容器地址,这里是&lt;del&gt;172.17.0.3&lt;/del&gt; 192.168.188.188&lt;br&gt;
+进入openwrt容器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker exec -it openwrt /bin/bash&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;临时手动修改openwrt内部地址:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;docker# ifconfig br-lan 172.17.0.3 netmask 255.255.255.0&lt;/del&gt;&lt;br&gt;
+docker# ifconfig br-lan 192.168.188.188 netmask 255.255.255.0&lt;br&gt;
+# 设置网关&lt;br&gt;
+&lt;del&gt;docker# route add default gw 172.17.0.1&lt;/del&gt;&lt;br&gt;
+docker# route add default gw 192.168.188.1&lt;br&gt;
+#修改完成后,查看状态&lt;br&gt;
+&lt;del&gt;docker# wget http://172.17.0.3&lt;/del&gt;&lt;br&gt;
+docker# wget http://192.168.188.188&lt;br&gt;
+# 如果能看到回应表明容器内部运行正常&lt;br&gt;
+docker# wget http://192.168.1.8&lt;br&gt;
+# 上面地址是armbian网卡地址, 如果能看到回应, 表明容器端口映射出来也正常&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再在另一台windows机器上,用浏览器打开http://192.168.1.8,如果能看到openwrt界面,则手动设置成功.&lt;br&gt;
+&lt;u&gt;再使用浏览器进入openwrt,设置网卡地址信息(设置为容器分配的地址)(手动设置完成后,下次重启又会回到最初状态, 需要用luci设置并保存配置)&lt;/u&gt;&lt;br&gt;
+Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文件也可以.&lt;/p&gt;
+&lt;h5 id=&#34;另-在docker版本的openwrt里同样可以用etccoremarksh获取设备性能数据&#34;&gt;另: 在Docker版本的openwrt里,同样可以用/etc/coremark.sh获取设备性能数据&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Docker# /etc/coremark.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;关于地址设定:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由于docker的启动顺序不同，容器可能会在多次启动时获得不同的地址，所以需要使用static方式指定容器ip。&lt;/li&gt;
+&lt;li&gt;还有一种方式，建立macvlan来做通讯，这样方式还需要主设备网卡打开混杂模式，比较麻烦。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;经测试, openwrt可以在armbian系统重启后自动启动; 在openwrt容器里(docker exec -it openwrt bash进入)halt关机后, 也会自动重启.&lt;/p&gt;
+&lt;h3 id=&#34;在armbian上安装其它服务&#34;&gt;在Armbian上安装其它服务&lt;/h3&gt;
+&lt;h4 id=&#34;安装samba服务&#34;&gt;安装Samba服务&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 注: 不要用armbian-config安装, 安装后找不到/etc/init.d/smbd,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 却多一个/etc/init.d/samba-ad-dc  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt-get udpate  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# samba是samba服务器, cifs-utils是Windows共享(可不装), sambaclient是samba客户端(也可不装)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt-get install samba cifs-utils sambaclient  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id=&#34;配置samba&#34;&gt;配置samba:&lt;/h5&gt;
+&lt;p&gt;修改配置文件/etc/samba/smb.conf(最后的文件如下, 并确认可用_包括Win10/Es文件浏览器 on 安卓手机_&lt;u&gt;安卓手机上也会提示输入用户名密码&lt;/u&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[global]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        workgroup = WORKGROUP  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        server string = %h server  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        hosts allow = 192.168.1.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        log file = /var/log/samba/log.%m  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        max log size = 1000  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        syslog = 0  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        panic action = /usr/share/samba/panic-action %d  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        load printers = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printing = cups  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printcap name = cups  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        min receivefile size = 16384  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        write cache size = 524288  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        getwd cache = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        socket options = TCP_NODELAY IPTOS_LOWDELAY  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[printers]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        comment = All Printers  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        path = /var/spool/samba  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        browseable = no  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = no  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printable = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printer admin = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[print$]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        comment = Printer Drivers  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        path = /etc/samba/drivers  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        browseable = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = no  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        read only = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        write list = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Share]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        comment = Share_AmlR3300l  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        path = /mnt/ext/share  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = no  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        force create mode = 0644  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用smbpasswd设置用户密码(用adduser增加smb用户)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;u&gt;注: 找不到smbpasswd文件, 但samba用户是可用的&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;重启samba后生效&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service smbd restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;u&gt;注: 在测试中, (老MacBook笔记本连无线桥接路由wifi)用samba方式往R3300L(网线连接到主路由)上拷大文件(8G不到)出现了死机现象,表现为SecureCrt上操作无反应,直接在R3300L上操作也差不多.&lt;/u&gt;&lt;br&gt;
+&lt;u&gt;后来用SecureCrt上sftp方式向R3300L拷贝同样的大文件, 显示传输速率只有450KB/s(上传)/1700KB/s(下载)&lt;/u&gt;&lt;br&gt;
+不能确定瓶颈在哪:&lt;br&gt;
+网络测试过(xWin下用Arora浏览器访问speedtest), 差不多能到百兆;&lt;br&gt;
+tf卡读写速度也测过(hdparm -T), 读能到750MB/sec以上, 写也能到20MB/sec以上&lt;br&gt;
+&lt;strong&gt;大文件可能只能用U盘拷了!&lt;/strong&gt;&lt;br&gt;
+&lt;u&gt;R3300L这盒子硬件和Q7差不多, 同样也是有缺陷的.&lt;/u&gt;&lt;br&gt;
+&lt;u&gt;另: 用Redmi K30手机连samba服务器, (使用同样的无线桥接路由器的wifi)上传能到1.5MB/s以上, 下载能到接近5MB/s&lt;/u&gt;&lt;/p&gt;
+&lt;h4 id=&#34;为scanner增加一个共享-添加独立的用户-并分配相应的权限&#34;&gt;为scanner增加一个共享, 添加独立的用户, 并分配相应的权限&lt;/h4&gt;
+&lt;p&gt;操作:&lt;/p&gt;
+&lt;h5 id=&#34;增加共享scannershare&#34;&gt;增加共享ScannerShare&lt;/h5&gt;
+&lt;p&gt;在原/etc/samba/smb.conf最后增加:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ScannerShare]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        comment = ScannerShare_AmlR3300l  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        path = /mnt/ext/scannershare  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = yes  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = jimway, scanner  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        force create mode = 0644  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id=&#34;相应的增加共享目录mntextscannershare&#34;&gt;相应的增加共享目录/mnt/ext/scannershare&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# mkdir /mnt/ext/scannershare&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;增加samba用户scanner&#34;&gt;增加(samba)用户scanner&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# useradd scanner  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd -a scanner  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# (设置密码)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# vim /etc/passwd  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# (把scanner设置为nologin)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id=&#34;为scannershare设置有效用户&#34;&gt;为ScannerShare设置有效用户&lt;/h5&gt;
+&lt;p&gt;已设置valid users&lt;/p&gt;
+&lt;h5 id=&#34;设置完成-重启samba服务&#34;&gt;设置完成, 重启samba服务&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service smbd restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;安装minidlna服务&#34;&gt;安装miniDLNA服务&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# apt-get udpate&lt;br&gt;
+# apt-get install minidlna&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;配置minidlna&#34;&gt;配置miniDLNA:&lt;/h5&gt;
+&lt;p&gt;修改配置文件/etc/minidlna.conf中的媒体目录, 如下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;media_dir=/mnt/ext/share/media&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;重启miniDLNA后生效&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service minidlna restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注: 当前miniDLNA版本为1.2.1, 缺省不支持rmvb格式文件, 需要修改源代码并重新编译, 参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/JOYIST/article/details/79191765&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MiniDLNA 1.2.1编译 添加对rmvb格式的支持&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在armbian上安装配置hugo服务器&#34;&gt;在Armbian上安装配置Hugo(?)服务器&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/126298572&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何用hugo 搭建博客&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;完整安装说明: &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/&#34; &gt;在R3300L类+Armbian上安装Hugo服务器&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+Armbian(ubuntu on Arm)所用apt下载的hugo版本较低(ubuntu的惯例?), &lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo博客的主题&lt;/a&gt;中的&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//themes.gohugo.io/hugo-theme-bootstrap4-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;bootstrap4-blog 主题&lt;/a&gt;就不支持, 所以需要下载&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//github.com/gohugoio/hugo/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo 的github 仓库&lt;/a&gt;中的最新deb包, 使用dpkg命令进行安装.&lt;br&gt;
+R3300l所用Amlogic S905L支持arm64, 所装的Armbian应该是64位的&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# uname -a&lt;br&gt;
+Linux AmlR3300l 5.3.0-aml-g12 #5.97 SMP PREEMPT Mon Sep 23 14:33:30 MSK 2019 aarch64 aarch64 aarch64 GNU/Linux&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以应该选用64位版本的Hugo, 当前最新版本为&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/download/v0.82.1/hugo_0.82.1_Linux-ARM64.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo_0.82.1_Linux-ARM64.deb&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 下载hugo官方包  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# wget https://github.com/gohugoio/hugo/releases/download/v0.82.1/hugo_0.82.1_Linux-ARM64.deb  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 使用dpkg安装已下载的hugo的deb包  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# dpkg -i hugo_0.82.1_Linux-ARM64.deb  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看hugo版本, 以检测安装hugo是否成功  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# hugo version  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo v0.82.1-60618210 linux/arm64 BuildDate=2021-04-20T11:02:50Z VendorInfo=gohugoio  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 建立hugo博客的根目录(应该可以放多个博客)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# mkdir /mnt/ext/hugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 进入这个目录  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# cd /mnt/ext/hugo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 新建一个博客(目录)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# hugo new site blog  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 进入博客目录  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# cd blog  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 下载[bootstrap4-blog 主题](https://link.zhihu.com/?target=https%3A//themes.gohugo.io/hugo-theme-bootstrap4-blog/)到这个博客目录  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# git clone https://github.com/alanorth/hugo-theme-bootstrap4-blog.git themes/hugo-theme-bootstrap4-blog  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 将exampleSite 目录中的内容，复制到博客根目录blog中，在blog目录中执行命令：  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# cp themes/hugo-theme-bootstrap4-blog/exampleSite/* ./ -r  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 启动hugo服务: 绑定到eth0地址, 根url是eth0地址:1313端口  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# hugo server --bind 192.168.1.8 --baseURL=http://192.168.1.8:1313  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;可以从另一机器上的浏览器访问http://192.168.1.8:1313, 应该可以看到初始的网页.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;初步的安装完成, 后面看下怎么使用.&lt;/u&gt;&lt;/p&gt;
+&lt;h2 id=&#34;其它&#34;&gt;其它&lt;/h2&gt;
+&lt;h3 id=&#34;取eth0网卡地址&#34;&gt;取eth0网卡地址&lt;/h3&gt;
+&lt;p&gt;From &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/xuezhangjun0121/article/details/83150019&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SHELL - shell 脚本获取本机ip并将ip复制给变量待用&lt;/a&gt; + &lt;a class=&#34;link&#34; href=&#34;https://bbs.huaweicloud.com/blogs/227483&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shell脚本之通过脚本获取本机IP地址&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ifconfig eth0|grep inet|grep -v 127.0.0.1|grep -v inet6|awk &amp;lsquo;{print $2}&amp;rsquo;|tr -d &amp;ldquo;addr:&amp;rdquo;&lt;br&gt;
+192.168.1.8&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以简化为:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ifconfig eth0|grep inet|grep -v inet6|awk &amp;lsquo;{print $2}&amp;rsquo;|tr -d &amp;ldquo;addr:&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Wordpress Q&amp;A</title>
         <link>https://jimway71.github.io/p/wordpress-qa/</link>
         <pubDate>Thu, 08 Apr 2021 21:42:16 +0800</pubDate>

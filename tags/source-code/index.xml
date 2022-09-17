@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>source code on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/source-code/</link>
+        <description>Recent content in source code on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 09 Apr 2021 08:56:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/source-code/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Openwrt Info</title>
+        <link>https://jimway71.github.io/p/openwrt-info/</link>
+        <pubDate>Fri, 09 Apr 2021 08:56:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/openwrt-info/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-36.jpg" alt="Featured image of post Openwrt Info" /&gt;&lt;h2 id=&#34;参考信息&#34;&gt;参考信息&lt;/h2&gt;
+&lt;h3 id=&#34;openwrt-for-docker&#34;&gt;Openwrt for Docker&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://githubmemory.com/repo/unifreq/openwrt_packit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy 的 Openwrt 打包源码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-958173-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy的openwrt 4 docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/unifreq/openwrt-aarch64&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy的openwrt4docker源: unifreq/openwrt-aarch64&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;运行&#34;&gt;运行&lt;/h2&gt;
+&lt;h3 id=&#34;openwrt在docker下运行&#34;&gt;Openwrt在Docker下运行&lt;/h3&gt;
+&lt;p&gt;执行命令:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker run --restart always --name openwrt -p 80:80 -d --privileged unifreq/openwrt-aarch64&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

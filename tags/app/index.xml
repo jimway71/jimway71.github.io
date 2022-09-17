@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>App on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/app/</link>
+        <description>Recent content in App on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/app/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>App List</title>
+        <link>https://jimway71.github.io/p/app-list/</link>
+        <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/app-list/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/NAFO-42.jpg" alt="Featured image of post App List" /&gt;&lt;ul&gt;
+&lt;li&gt;(Migrated)&lt;a class=&#34;link&#34; href=&#34;https://github.com/xdtianyu/CallerInfo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来电信息&lt;/a&gt;:       一个获取号码归属地和其他信息（诈骗、骚扰等）的开源 Android 应用&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

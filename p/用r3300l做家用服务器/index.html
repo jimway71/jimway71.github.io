@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Armbian Server on R3300L'><title>用R3300L做家用服务器</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E7%94%A8r3300l%E5%81%9A%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='用R3300L做家用服务器'>
+<meta property='og:description' content='Armbian Server on R3300L'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E7%94%A8r3300l%E5%81%9A%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Armbian' /><meta property='article:tag' content='DLNA' /><meta property='article:tag' content='Docker' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='openwrt' /><meta property='article:tag' content='R3300L' /><meta property='article:tag' content='samba' /><meta property='article:tag' content='wordpress' /><meta property='article:published_time' content='2021-04-10T16:25:16&#43;08:00'/><meta property='article:modified_time' content='2021-04-10T16:25:16&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-39.jpg' />
+<meta name="twitter:title" content="用R3300L做家用服务器">
+<meta name="twitter:description" content="Armbian Server on R3300L"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-39.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://www.artstation.com/'
+                        target="_blank"
+                        title="A站 - Artstation"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/search?q=%23nafo'
+                        target="_blank"
+                        title="NAFO"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%94%A8r3300l%E5%81%9A%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                
+                    <img src="/wallpaper/wallpaper-39.jpg" loading="lazy" alt="Featured image of post 用R3300L做家用服务器" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                Migration
+            </a>
+        
+            <a href="/categories/tv-box/" >
+                TV Box
+            </a>
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%94%A8r3300l%E5%81%9A%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/">用R3300L做家用服务器</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Armbian Server on R3300L
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 10, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 13 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="期望实现功能列表">期望实现功能列表</h2>
+<ul>
+<li>Docker下跑openwrt, 测试用  ✔</li>
+<li>文件共享服务器 ✅ (实现功能, 但性能极差)</li>
+<li>DLNA服务器  ✔</li>
+<li>Docker下跑wordpress服务器(补充: 最终改成直接Armbian上跑Hugo服务器  ✔)</li>
+<li>小型linux服务器  ✔<br>
+&hellip;&hellip;</li>
+</ul>
+<h2 id="安装与配置">安装与配置</h2>
+<h3 id="在tv-boxr3300l-s905l上安装armbian">在TV box(R3300L, S905L)上安装Armbian</h3>
+<h4 id="制作启动tf卡">制作启动TF卡</h4>
+<ul>
+<li>Armbian安装所用镜像来源: <a class="link" href="https://www.cnblogs.com/milton/p/11883811.html"  target="_blank" rel="noopener"
+    >R3300L运行CoreELEC, EmuELEC和Armbian</a></li>
+<li>Armbian On TV Box原作者发布贴:<br>
+<a class="link" href="https://forum.armbian.com/topic/12162-single-armbian-image-for-rk-aml-aw-aarch64-armv8/"  target="_blank" rel="noopener"
+    >balbes150: Single Armbian image for RK + AML + AW (aarch64 ARMv8) By balbes150</a><br>
+原作者最新的(bonic)镜像经测试, 在R3300L上, 要么卡Start Kernel, 要么黑屏。<br>
+可用的镜像分享地址: <a class="link" href="https://share.weiyun.com/5eCvcvS"  target="_blank" rel="noopener"
+    >https://share.weiyun.com/5eCvcvS</a> 密码：mivmcn<br>
+上述地址中最新的可用稳定版本: Armbian_5.9.7_Aml-g12-ubuntu_bionic_5.3.0_20190923.img.xz<br>
+卡刷后, 修改env.txt, dtb文件选择文件名有212那个(有网卡, 无wifi)<br>
+注: Armbian初始用户/密码: root/1234</li>
+</ul>
+<h4 id="用tf卡启动后操作-重新调整启动tf卡分区">用TF卡启动后操作: 重新调整启动TF卡分区</h4>
+<p>TF卡第一次启动后，会自动扩展主要分区, 占用全部空间，因为想做文件服务器, 因此需要修改主要分区, 把部分空间分给exfat分区。<br>
+参考: <a class="link" href="http://jimway.blogspot.com/2021/04/armbian-on-tv-box.html"  target="_blank" rel="noopener"
+    >armbian on TV box</a><br>
+Armbian装TF卡上, 有两个分区, 128M*1 + 1.2G*1.<br>
+第一次启动时, 系统会自动扩展第二个分区, 会占满整个TF卡<br>
+希望留一块空间是windows能读写的(考虑exfat格式), 即使系统坏了, 数据还能读.<br>
+因此, 需要无损调整EXT4分区大小<br>
+参考: <a class="link" href="https://blog.pinkd.moe/linux/2018/01/31/resize-a-ext4-partiton-safely"  target="_blank" rel="noopener"
+    >无损调整EXT4分区大小</a><br>
+操作:</p>
+<ul>
+<li>先等系统启动自动完成扩展.</li>
+<li>关机, 拿出卡, 插到另一个linux(ubuntu类最好)机器上, 不做为启动盘使用(不需要一直mount上), 启动linux.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 看分区  
+</span></span><span class="line"><span class="cl"># lsblk  
+</span></span><span class="line"><span class="cl"># 检查需要调整的分区  
+</span></span><span class="line"><span class="cl"># e2fsck -f /dev/sda2  
+</span></span><span class="line"><span class="cl"># 调整分区文件系统到5G.  注意: 需要配合下一步才能生效 _ 这里应该只是把用到的空间都挪到前面5G的空间去了, 但没有实际调整分区大小  
+</span></span><span class="line"><span class="cl"># resize2fs /dev/sda2 5G  
+</span></span><span class="line"><span class="cl"># 进fdisk, 先删除sda2, 再重建5G大小的sda2  
+</span></span><span class="line"><span class="cl"># fdisk /dev/sda  
+</span></span><span class="line"><span class="cl"># 删除原sda2  
+</span></span><span class="line"><span class="cl">(command): d  
+</span></span><span class="line"><span class="cl">(command):  2  
+</span></span><span class="line"><span class="cl"># 新建5G大小的sda2  
+</span></span><span class="line"><span class="cl">(command): n        # 新建  
+</span></span><span class="line"><span class="cl">(command): 2        # 第2分区  
+</span></span><span class="line"><span class="cl">(command): Sectors位置, sda1 End+1    # 起始sectors位置  
+</span></span><span class="line"><span class="cl">(command): +5G                                    # 大小, 或结果secotrs位置: 这里写的是大小, 以+开始, +后面是要划分的空间大小(5G)  
+</span></span><span class="line"><span class="cl">(command): 发现ext4签名, 是否删除: N 不删除  
+</span></span><span class="line"><span class="cl"># 顺便把exfat分区也建上...  
+</span></span><span class="line"><span class="cl">...  
+</span></span><span class="line"><span class="cl">(command): w    # 写盘退出  
+</span></span><span class="line"><span class="cl"># 再检查一下，没有错误就说明没问题了  
+</span></span><span class="line"><span class="cl"># e2fsck -f /dev/sda2  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>无损调整分区操作结果: 成功<br>
+先在windows上格式化了exfat分区, 读写没问题.<br>
+然后用这张卡启动linux正常, 用fdisk看分区也正常.</p>
+<p><strong>注1: 处理不能使用上述方法调整分区的情况</strong><br>
+情况描述:<br>
+有一张128G的卡, 完成armbian第一次启动,系统自动扩展主分区到占满整张卡后,用另一张TF卡启动到Armbian, 把128G卡插到机器上, 试图用e2fsck+resize2fs命令调整分区, 但系统报错说该该已加载,不能完成上述命令.<br>
+考虑到这张卡只用了一次,后面要分出来的空间应该还没有用到, 因此就用fdsik强行重新分区, 并且<u>不格式化</u>调整小的分区,希望能行.<br>
+但完成后用这张卡重启,启动失败,不能进入系统.<br>
+调整分区失败.<br>
+处理方式(试):<br>
+用一张小点的TF卡做armbian系统,完成后用这张卡启动,完成分区调整.<br>
+再把这张卡用USB Image Tool 写U盘镜像工具复制到128G的卡中(从小卡上备份到文件, 在大卡上从文件恢复),这样系统会占用8G的空间,剩余的空间用fdisk(armbian上)分区成extfat,再到Windows上格式化为exfat就ok.</p>
+<p><strong>注2: 让Armbian挂载exfat磁盘</strong><br>
+情况描述: Armbian缺省安装不包括exfat支持,需要如下操作安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 更新软件包信息  
+</span></span><span class="line"><span class="cl"># apt-get update  
+</span></span><span class="line"><span class="cl"># 查找exfat相关包名  
+</span></span><span class="line"><span class="cl"># apt-cache search exfat  
+</span></span><span class="line"><span class="cl"># 安装exfat支持  
+</span></span><span class="line"><span class="cl"># apt-get install exfat-fuse exfat-utils  
+</span></span><span class="line"><span class="cl"># 安装完成后, 即可手动挂载  
+</span></span><span class="line"><span class="cl"># 建立挂载点  
+</span></span><span class="line"><span class="cl"># mkdir /mnt/mmcblk0p3  
+</span></span><span class="line"><span class="cl"># 挂载  
+</span></span><span class="line"><span class="cl"># mount -t exfat /dev/mmcblk0p3 /mnt/mmcblk0p3/  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注3: 让Armbian系统启动时自动挂载exfat磁盘</strong><br>
+情况描述: Armbian启动时不会自动挂载exfat磁盘, 需要修改/etc/fstab文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 取需要挂载的exfat设备uuid  
+</span></span><span class="line"><span class="cl"># blkid /dev/mmcblk0p3  
+</span></span><span class="line"><span class="cl">/dev/mmcblk0p3: UUID=&#34;FAAE-B3A5&#34; TYPE=&#34;exfat&#34; PARTUUID=&#34;de8d9e8d-09&#34;  
+</span></span><span class="line"><span class="cl"># 修改自动挂载配置文件/etc/fstab  
+</span></span><span class="line"><span class="cl"># vim /etc/fstab  
+</span></span><span class="line"><span class="cl"># 在最后增加  
+</span></span><span class="line"><span class="cl">UUID=&#34;FAAE-B3A5&#34; /mnt/mmcblk0p3 exfat defaults 0 0  
+</span></span><span class="line"><span class="cl"># 其中  
+</span></span><span class="line"><span class="cl"># 第1列：磁盘装置文件名或该装置的 Label  
+</span></span><span class="line"><span class="cl"># 第2列：Mount point 设备的挂载点，就是你要挂载到哪个目录下  
+</span></span><span class="line"><span class="cl"># 第3列：filesystem 磁盘文件系统的格式  
+</span></span><span class="line"><span class="cl"># 第4列：文件系统参数 parameters  
+</span></span><span class="line"><span class="cl"># 第5列：能否被 dump 备份命令作用  
+</span></span><span class="line"><span class="cl"># 第6列：是否以 fsck 检验扇区  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置完成后重启确认可以正常挂载.</p>
+<p><u>注: 当前R3300L的Blk情况:</u></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># lsblk  
+</span></span><span class="line"><span class="cl">NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT  
+</span></span><span class="line"><span class="cl">mmcblk0      179:0    0 119.3G  0 disk   
+</span></span><span class="line"><span class="cl">|-mmcblk0p1  179:1    0   128M  0 part /boot  
+</span></span><span class="line"><span class="cl">|-mmcblk0p2  179:2    0   7.3G  0 part /  
+</span></span><span class="line"><span class="cl">`-mmcblk0p3  179:3    0 111.8G  0 part /mnt/ext  
+</span></span><span class="line"><span class="cl">mmcblk1      179:32   0   7.3G  0 disk   
+</span></span><span class="line"><span class="cl">mmcblk1boot0 179:64   0     4M  1 disk   
+</span></span><span class="line"><span class="cl">mmcblk1boot1 179:96   0     4M  1 disk   
+</span></span><span class="line"><span class="cl">zram0        253:0    0    50M  0 disk /var/log  
+</span></span><span class="line"><span class="cl">zram1        253:1    0 400.5M  0 disk [SWAP]  
+</span></span><span class="line"><span class="cl">* mmcblk1是内置的EMMC存储  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="配置armbian">配置Armbian</h4>
+<p>系统提供armbian-config工具, 功能很丰富, 多数设置可以在这里完成<br>
+主要是修改网络配置, 配置时区、时间，配置语言什么的。</p>
+<p>网络似乎需要手动配置:<br>
+先装vim</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># apt-get update  
+</span></span><span class="line"><span class="cl"># apt-get install vim  
+</span></span><span class="line"><span class="cl"># 再装个ufw(防火墙工具)  
+</span></span><span class="line"><span class="cl"># apt-get install ufw  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="修改网卡配置文件-etcnetworkinterfaces">修改网卡配置文件 /etc/network/interfaces</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">iface eth0 inet static  
+</span></span><span class="line"><span class="cl">address 192.168.1.2  
+</span></span><span class="line"><span class="cl">netmask 255.255.255.0  
+</span></span><span class="line"><span class="cl">gateway 192.168.1.1  
+</span></span><span class="line"><span class="cl">dnsnameservers 192.168.1.1 8.8.8.8 8.8.4.4  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="在armbian上安装docker和portainer">在Armbian上安装Docker和portainer</h3>
+<h4 id="在armbian上安装docker">在Armbian上安装Docker</h4>
+<p>参考官网安装说明: <a class="link" href="https://docs.docker.com/get-docker/"  target="_blank" rel="noopener"
+    >Get Docker</a> -&gt; <a class="link" href="https://docs.docker.com/engine/install/ubuntu/"  target="_blank" rel="noopener"
+    >Install Docker Engine on Ubuntu</a><br>
+使用官方的shell安装，如下:</p>
+<blockquote>
+<p># curl -fsSL <a class="link" href="https://get.docker.com"  target="_blank" rel="noopener"
+    >https://get.docker.com</a> -o get-docker.sh<br>
+# sh get-docker.sh</p>
+</blockquote>
+<p>安装完成后, 用下面命令测试</p>
+<blockquote>
+<p># docker run hello-world</p>
+</blockquote>
+<p>(另: 也可用armbian-config安装docker, 完成后用docker run hello-world测试,docker能正常工作, 但安装portainer-ce后不正常, 后换回用官方shell安装)</p>
+<h4 id="在docker上安装portainer-用于docker管理">在Docker上安装Portainer, 用于Docker管理</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 安装  
+</span></span><span class="line"><span class="cl"># docker pull portainer/portainer-ce  
+</span></span><span class="line"><span class="cl"># 启动  
+</span></span><span class="line"><span class="cl"># docker volume create portainer_data  
+</span></span><span class="line"><span class="cl"># docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后用浏览器打开http://armbian设备网址:9000, 就能看到portainer的管理界面<br>
+在管理界面里进行初始配置。</p>
+<h5 id="补充-忘记portainer密码后-如何修改portainer密码">补充: 忘记Portainer密码后, 如何修改portainer密码</h5>
+<p>参考: <a class="link" href="https://www.cnblogs.com/A1999/p/15993682.html"  target="_blank" rel="noopener"
+    >Docker管理工具Portainer忘记admin登录密码怎么办?</a></p>
+<h6 id="查看portainer的container-id">查看Portainer的CONTAINER ID</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># docker ps -a  
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE                    COMMAND        CREATED      STATUS                  PORTS                                                                                            NAMES  
+</span></span><span class="line"><span class="cl">30f1a2690e55   portainer/portainer-ce   &#34;/portainer&#34;   7 days ago   Up 7 hours              0.0.0.0:8000-&gt;8000/tcp, :::8000-&gt;8000/tcp, 0.0.0.0:9000-&gt;9000/tcp, :::9000-&gt;9000/tcp, 9443/tcp   portainer  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>看到portainer的CONTAINER ID为30f1a2690e55</p>
+<h5 id="停止portainer容器参数为portainer的container-id">停止Portainer容器(参数为portainer的CONTAINER ID)</h5>
+<blockquote>
+<p># docker stop 30f1a2690e55</p>
+</blockquote>
+<h5 id="重置密码-命令中-v后的参数portainer_datadata与启动时见前面docker-run用的一样">重置密码: 命令中-v后的参数(portainer_data:/data)与启动时(见前面docker run)用的一样</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># docker run --rm -v portainer_data:/data portainer/helper-reset-password  
+</span></span><span class="line"><span class="cl"># 第一次调用时, portainer/helper-reset-password会下载安装   
+</span></span><span class="line"><span class="cl">Unable to find image &#39;portainer/helper-reset-password:latest&#39; locally  
+</span></span><span class="line"><span class="cl">latest: Pulling from portainer/helper-reset-password  
+</span></span><span class="line"><span class="cl">79916c70cb9e: Pull complete  
+</span></span><span class="line"><span class="cl">69e9153f20cb: Pull complete  
+</span></span><span class="line"><span class="cl">Digest: sha256:735a809b1bfe14b5fae340d4b350bae97c2016371c47fb6e34d71a45e4512f79  
+</span></span><span class="line"><span class="cl">Status: Downloaded newer image for portainer/helper-reset-password:latest  
+</span></span><span class="line"><span class="cl">WARNING: The requested image&#39;s platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested  
+</span></span><span class="line"><span class="cl">2022/07/24 05:17:47 Password succesfully updated for user: admin  
+</span></span><span class="line"><span class="cl">2022/07/24 05:17:47 Use the following password to login: 3&lt;X$v+1PLx-Jj2pY4GBq79=5Us8R_n/\  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>需要记住这个密码.<br>
+另: 在Portainer的web管理界面中, settings-&gt;Authentication-&gt;Password Rules, 可以修改密码强度(长度)<br>
+注意: 在Docker中跑的Image需要和系统的Architectures一致, 比如R3300L需要选择ARM64 Architectures的image</p>
+<h3 id="在docker上跑openwrt">在Docker上跑openwrt</h3>
+<p>参考: <a class="link" href="http://jimway.blogspot.com/2021/04/openwrt-info.html"  target="_blank" rel="noopener"
+    >openwrt info</a><br>
+相关信息:</p>
+<ul>
+<li><a class="link" href="https://githubmemory.com/repo/unifreq/openwrt_packit"  target="_blank" rel="noopener"
+    >Flippy 的 Openwrt 打包源码</a></li>
+<li><a class="link" href="https://www.right.com.cn/forum/thread-958173-1-1.html"  target="_blank" rel="noopener"
+    >Flippy的openwrt 4 docker</a></li>
+<li><a class="link" href="https://hub.docker.com/r/unifreq/openwrt-aarch64"  target="_blank" rel="noopener"
+    >Flippy的openwrt4docker源: unifreq/openwrt-aarch64</a></li>
+</ul>
+<h4 id="openwrt-for-docker下载flippy版本">openwrt for docker下载(flippy版本):</h4>
+<blockquote>
+<p># docker pull unifreq/openwrt-aarch64</p>
+</blockquote>
+<h4 id="运行openwrt-for-docker注意这里并不需要设置网络">运行openwrt for docker(注意:这里并不需要设置网络):</h4>
+<blockquote>
+<p># 这里要使用固定ip地址(用&ndash;ip参数设置), ip段看ifconfig中docker的网段, 地址放在较后位置,避免被占<br>
+# 直接使用&ndash;ip参数的方式, <strong>测试失败!</strong><br>
+<del># docker run &ndash;restart always &ndash;name openwrt -p 80:80 &ndash;ip 172.17.0.199 -d &ndash;privileged unifreq/openwrt-aarch64</del><br>
+# 要先建立一个docker的静态network, 自定网段, 但不要与现有docker网段(172.17.0.0/16)冲突<br>
+# docker network create &ndash;subnet=192.168.188.0/24 staticnet<br>
+# 建立docker network后, 可以使用docker network ls查看新建的network<br>
+# 启动openwrt, 设置使用静态地址<br>
+# docker run &ndash;restart always &ndash;name openwrt -p 80:80 &ndash;net staticnet &ndash;ip 192.168.188.188 -d &ndash;privileged unifreq/openwrt-aarch64</p>
+</blockquote>
+<ul>
+<li>另外还有使用macvlan的方法,如:<br>
+<a class="link" href="https://github.com/lisaac/blog/issues/4"  target="_blank" rel="noopener"
+    >&ldquo;docker 中运行 openwrt: 利用 macvlan 方式创建虚拟接口进行配置&rdquo;</a><br>
+但macvlan方式要使用混杂模式, 搞得有点复杂的感觉, 所以放弃</li>
+</ul>
+<h4 id="配置openwrt-in-docker">配置openwrt in Docker</h4>
+<p>先进入portainer查看openwrt运行的容器地址,这里是<del>172.17.0.3</del> 192.168.188.188<br>
+进入openwrt容器</p>
+<blockquote>
+<p># docker exec -it openwrt /bin/bash</p>
+</blockquote>
+<p>临时手动修改openwrt内部地址:</p>
+<blockquote>
+<p><del>docker# ifconfig br-lan 172.17.0.3 netmask 255.255.255.0</del><br>
+docker# ifconfig br-lan 192.168.188.188 netmask 255.255.255.0<br>
+# 设置网关<br>
+<del>docker# route add default gw 172.17.0.1</del><br>
+docker# route add default gw 192.168.188.1<br>
+#修改完成后,查看状态<br>
+<del>docker# wget http://172.17.0.3</del><br>
+docker# wget http://192.168.188.188<br>
+# 如果能看到回应表明容器内部运行正常<br>
+docker# wget http://192.168.1.8<br>
+# 上面地址是armbian网卡地址, 如果能看到回应, 表明容器端口映射出来也正常</p>
+</blockquote>
+<p>再在另一台windows机器上,用浏览器打开http://192.168.1.8,如果能看到openwrt界面,则手动设置成功.<br>
+<u>再使用浏览器进入openwrt,设置网卡地址信息(设置为容器分配的地址)(手动设置完成后,下次重启又会回到最初状态, 需要用luci设置并保存配置)</u><br>
+Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文件也可以.</p>
+<h5 id="另-在docker版本的openwrt里同样可以用etccoremarksh获取设备性能数据">另: 在Docker版本的openwrt里,同样可以用/etc/coremark.sh获取设备性能数据</h5>
+<blockquote>
+<p>Docker# /etc/coremark.sh</p>
+</blockquote>
+<p>关于地址设定:</p>
+<ul>
+<li>由于docker的启动顺序不同，容器可能会在多次启动时获得不同的地址，所以需要使用static方式指定容器ip。</li>
+<li>还有一种方式，建立macvlan来做通讯，这样方式还需要主设备网卡打开混杂模式，比较麻烦。</li>
+</ul>
+<p>经测试, openwrt可以在armbian系统重启后自动启动; 在openwrt容器里(docker exec -it openwrt bash进入)halt关机后, 也会自动重启.</p>
+<h3 id="在armbian上安装其它服务">在Armbian上安装其它服务</h3>
+<h4 id="安装samba服务">安装Samba服务</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 注: 不要用armbian-config安装, 安装后找不到/etc/init.d/smbd,  
+</span></span><span class="line"><span class="cl"># 却多一个/etc/init.d/samba-ad-dc  
+</span></span><span class="line"><span class="cl">#   
+</span></span><span class="line"><span class="cl"># apt-get udpate  
+</span></span><span class="line"><span class="cl"># samba是samba服务器, cifs-utils是Windows共享(可不装), sambaclient是samba客户端(也可不装)  
+</span></span><span class="line"><span class="cl"># apt-get install samba cifs-utils sambaclient  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="配置samba">配置samba:</h5>
+<p>修改配置文件/etc/samba/smb.conf(最后的文件如下, 并确认可用_包括Win10/Es文件浏览器 on 安卓手机_<u>安卓手机上也会提示输入用户名密码</u>):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[global]  
+</span></span><span class="line"><span class="cl">        workgroup = WORKGROUP  
+</span></span><span class="line"><span class="cl">        server string = %h server  
+</span></span><span class="line"><span class="cl">        hosts allow = 192.168.1.  
+</span></span><span class="line"><span class="cl">        log file = /var/log/samba/log.%m  
+</span></span><span class="line"><span class="cl">        max log size = 1000  
+</span></span><span class="line"><span class="cl">        syslog = 0  
+</span></span><span class="line"><span class="cl">        panic action = /usr/share/samba/panic-action %d  
+</span></span><span class="line"><span class="cl">        load printers = yes  
+</span></span><span class="line"><span class="cl">        printing = cups  
+</span></span><span class="line"><span class="cl">        printcap name = cups  
+</span></span><span class="line"><span class="cl">        min receivefile size = 16384  
+</span></span><span class="line"><span class="cl">        write cache size = 524288  
+</span></span><span class="line"><span class="cl">        getwd cache = yes  
+</span></span><span class="line"><span class="cl">        socket options = TCP_NODELAY IPTOS_LOWDELAY  
+</span></span><span class="line"><span class="cl">[printers]  
+</span></span><span class="line"><span class="cl">        comment = All Printers  
+</span></span><span class="line"><span class="cl">        path = /var/spool/samba  
+</span></span><span class="line"><span class="cl">        browseable = no  
+</span></span><span class="line"><span class="cl">        public = yes  
+</span></span><span class="line"><span class="cl">        guest ok = yes  
+</span></span><span class="line"><span class="cl">        writable = no  
+</span></span><span class="line"><span class="cl">        printable = yes  
+</span></span><span class="line"><span class="cl">        printer admin = jimway  
+</span></span><span class="line"><span class="cl">[print$]  
+</span></span><span class="line"><span class="cl">        comment = Printer Drivers  
+</span></span><span class="line"><span class="cl">        path = /etc/samba/drivers  
+</span></span><span class="line"><span class="cl">        browseable = yes  
+</span></span><span class="line"><span class="cl">        guest ok = no  
+</span></span><span class="line"><span class="cl">        read only = yes  
+</span></span><span class="line"><span class="cl">        write list = jimway  
+</span></span><span class="line"><span class="cl">[Share]  
+</span></span><span class="line"><span class="cl">        comment = Share_AmlR3300l  
+</span></span><span class="line"><span class="cl">        path = /mnt/ext/share  
+</span></span><span class="line"><span class="cl">        writable = yes  
+</span></span><span class="line"><span class="cl">        public = no  
+</span></span><span class="line"><span class="cl">        valid users = jimway  
+</span></span><span class="line"><span class="cl">        force create mode = 0644  
+</span></span><span class="line"><span class="cl"># 用smbpasswd设置用户密码(用adduser增加smb用户)  
+</span></span><span class="line"><span class="cl"># smbpasswd jimway  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><u>注: 找不到smbpasswd文件, 但samba用户是可用的</u></p>
+<p>重启samba后生效</p>
+<blockquote>
+<p># service smbd restart</p>
+</blockquote>
+<p><u>注: 在测试中, (老MacBook笔记本连无线桥接路由wifi)用samba方式往R3300L(网线连接到主路由)上拷大文件(8G不到)出现了死机现象,表现为SecureCrt上操作无反应,直接在R3300L上操作也差不多.</u><br>
+<u>后来用SecureCrt上sftp方式向R3300L拷贝同样的大文件, 显示传输速率只有450KB/s(上传)/1700KB/s(下载)</u><br>
+不能确定瓶颈在哪:<br>
+网络测试过(xWin下用Arora浏览器访问speedtest), 差不多能到百兆;<br>
+tf卡读写速度也测过(hdparm -T), 读能到750MB/sec以上, 写也能到20MB/sec以上<br>
+<strong>大文件可能只能用U盘拷了!</strong><br>
+<u>R3300L这盒子硬件和Q7差不多, 同样也是有缺陷的.</u><br>
+<u>另: 用Redmi K30手机连samba服务器, (使用同样的无线桥接路由器的wifi)上传能到1.5MB/s以上, 下载能到接近5MB/s</u></p>
+<h4 id="为scanner增加一个共享-添加独立的用户-并分配相应的权限">为scanner增加一个共享, 添加独立的用户, 并分配相应的权限</h4>
+<p>操作:</p>
+<h5 id="增加共享scannershare">增加共享ScannerShare</h5>
+<p>在原/etc/samba/smb.conf最后增加:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[ScannerShare]  
+</span></span><span class="line"><span class="cl">        comment = ScannerShare_AmlR3300l  
+</span></span><span class="line"><span class="cl">        path = /mnt/ext/scannershare  
+</span></span><span class="line"><span class="cl">        guest ok = yes  
+</span></span><span class="line"><span class="cl">        writable = yes  
+</span></span><span class="line"><span class="cl">        public = yes  
+</span></span><span class="line"><span class="cl">        valid users = jimway, scanner  
+</span></span><span class="line"><span class="cl">        force create mode = 0644  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="相应的增加共享目录mntextscannershare">相应的增加共享目录/mnt/ext/scannershare</h5>
+<blockquote>
+<p># mkdir /mnt/ext/scannershare</p>
+</blockquote>
+<h5 id="增加samba用户scanner">增加(samba)用户scanner</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># useradd scanner  
+</span></span><span class="line"><span class="cl"># smbpasswd -a scanner  
+</span></span><span class="line"><span class="cl"># (设置密码)  
+</span></span><span class="line"><span class="cl"># vim /etc/passwd  
+</span></span><span class="line"><span class="cl"># (把scanner设置为nologin)  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="为scannershare设置有效用户">为ScannerShare设置有效用户</h5>
+<p>已设置valid users</p>
+<h5 id="设置完成-重启samba服务">设置完成, 重启samba服务</h5>
+<blockquote>
+<p># service smbd restart</p>
+</blockquote>
+<h4 id="安装minidlna服务">安装miniDLNA服务</h4>
+<blockquote>
+<p># apt-get udpate<br>
+# apt-get install minidlna</p>
+</blockquote>
+<h5 id="配置minidlna">配置miniDLNA:</h5>
+<p>修改配置文件/etc/minidlna.conf中的媒体目录, 如下</p>
+<blockquote>
+<p>media_dir=/mnt/ext/share/media</p>
+</blockquote>
+<p>重启miniDLNA后生效</p>
+<blockquote>
+<p># service minidlna restart</p>
+</blockquote>
+<p>注: 当前miniDLNA版本为1.2.1, 缺省不支持rmvb格式文件, 需要修改源代码并重新编译, 参考:</p>
+<ul>
+<li><a class="link" href="https://blog.csdn.net/JOYIST/article/details/79191765"  target="_blank" rel="noopener"
+    >MiniDLNA 1.2.1编译 添加对rmvb格式的支持</a></li>
+</ul>
+<h3 id="在armbian上安装配置hugo服务器">在Armbian上安装配置Hugo(?)服务器</h3>
+<p>参考: <a class="link" href="https://zhuanlan.zhihu.com/p/126298572"  target="_blank" rel="noopener"
+    >如何用hugo 搭建博客</a><br>
+<strong>完整安装说明: <a class="link" href="/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/" >在R3300L类+Armbian上安装Hugo服务器</a></strong><br>
+Armbian(ubuntu on Arm)所用apt下载的hugo版本较低(ubuntu的惯例?), <a class="link" href="https://link.zhihu.com/?target=https%3A//themes.gohugo.io/"  target="_blank" rel="noopener"
+    >hugo博客的主题</a>中的<a class="link" href="https://link.zhihu.com/?target=https%3A//themes.gohugo.io/hugo-theme-bootstrap4-blog/"  target="_blank" rel="noopener"
+    >bootstrap4-blog 主题</a>就不支持, 所以需要下载<a class="link" href="https://link.zhihu.com/?target=https%3A//github.com/gohugoio/hugo/releases"  target="_blank" rel="noopener"
+    >hugo 的github 仓库</a>中的最新deb包, 使用dpkg命令进行安装.<br>
+R3300l所用Amlogic S905L支持arm64, 所装的Armbian应该是64位的</p>
+<blockquote>
+<p># uname -a<br>
+Linux AmlR3300l 5.3.0-aml-g12 #5.97 SMP PREEMPT Mon Sep 23 14:33:30 MSK 2019 aarch64 aarch64 aarch64 GNU/Linux</p>
+</blockquote>
+<p>所以应该选用64位版本的Hugo, 当前最新版本为<a class="link" href="https://github.com/gohugoio/hugo/releases/download/v0.82.1/hugo_0.82.1_Linux-ARM64.deb"  target="_blank" rel="noopener"
+    >hugo_0.82.1_Linux-ARM64.deb</a>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 下载hugo官方包  
+</span></span><span class="line"><span class="cl"># wget https://github.com/gohugoio/hugo/releases/download/v0.82.1/hugo_0.82.1_Linux-ARM64.deb  
+</span></span><span class="line"><span class="cl"># 使用dpkg安装已下载的hugo的deb包  
+</span></span><span class="line"><span class="cl"># dpkg -i hugo_0.82.1_Linux-ARM64.deb  
+</span></span><span class="line"><span class="cl"># 查看hugo版本, 以检测安装hugo是否成功  
+</span></span><span class="line"><span class="cl"># hugo version  
+</span></span><span class="line"><span class="cl">hugo v0.82.1-60618210 linux/arm64 BuildDate=2021-04-20T11:02:50Z VendorInfo=gohugoio  
+</span></span><span class="line"><span class="cl"># 建立hugo博客的根目录(应该可以放多个博客)  
+</span></span><span class="line"><span class="cl"># mkdir /mnt/ext/hugo  
+</span></span><span class="line"><span class="cl"># 进入这个目录  
+</span></span><span class="line"><span class="cl"># cd /mnt/ext/hugo  
+</span></span><span class="line"><span class="cl"># 新建一个博客(目录)  
+</span></span><span class="line"><span class="cl"># hugo new site blog  
+</span></span><span class="line"><span class="cl"># 进入博客目录  
+</span></span><span class="line"><span class="cl"># cd blog  
+</span></span><span class="line"><span class="cl"># 下载[bootstrap4-blog 主题](https://link.zhihu.com/?target=https%3A//themes.gohugo.io/hugo-theme-bootstrap4-blog/)到这个博客目录  
+</span></span><span class="line"><span class="cl"># git clone https://github.com/alanorth/hugo-theme-bootstrap4-blog.git themes/hugo-theme-bootstrap4-blog  
+</span></span><span class="line"><span class="cl"># 将exampleSite 目录中的内容，复制到博客根目录blog中，在blog目录中执行命令：  
+</span></span><span class="line"><span class="cl"># cp themes/hugo-theme-bootstrap4-blog/exampleSite/* ./ -r  
+</span></span><span class="line"><span class="cl"># 启动hugo服务: 绑定到eth0地址, 根url是eth0地址:1313端口  
+</span></span><span class="line"><span class="cl"># hugo server --bind 192.168.1.8 --baseURL=http://192.168.1.8:1313  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以从另一机器上的浏览器访问http://192.168.1.8:1313, 应该可以看到初始的网页.</p>
+<p><u>初步的安装完成, 后面看下怎么使用.</u></p>
+<h2 id="其它">其它</h2>
+<h3 id="取eth0网卡地址">取eth0网卡地址</h3>
+<p>From <a class="link" href="https://blog.csdn.net/xuezhangjun0121/article/details/83150019"  target="_blank" rel="noopener"
+    >SHELL - shell 脚本获取本机ip并将ip复制给变量待用</a> + <a class="link" href="https://bbs.huaweicloud.com/blogs/227483"  target="_blank" rel="noopener"
+    >shell脚本之通过脚本获取本机IP地址</a></p>
+<blockquote>
+<p># ifconfig eth0|grep inet|grep -v 127.0.0.1|grep -v inet6|awk &lsquo;{print $2}&rsquo;|tr -d &ldquo;addr:&rdquo;<br>
+192.168.1.8</p>
+</blockquote>
+<p>可以简化为:</p>
+<blockquote>
+<p># ifconfig eth0|grep inet|grep -v inet6|awk &lsquo;{print $2}&rsquo;|tr -d &ldquo;addr:&rdquo;</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/armbian/">Armbian</a>
+        
+            <a href="/tags/dlna/">DLNA</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/hugo/">hugo</a>
+        
+            <a href="/tags/openwrt/">Openwrt</a>
+        
+            <a href="/tags/r3300l/">R3300L</a>
+        
+            <a href="/tags/samba/">samba</a>
+        
+            <a href="/tags/wordpress/">WORDPRESS</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/armbian-on-tv-box/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-35.png" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-35.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Armbian on TV box</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-29.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-27.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">联通(数码视讯)Q7盒子再刷Openwrt</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90%E5%88%B7%E6%9C%BA%E7%9A%84%E5%A5%BD%E8%B4%B4%E6%94%B6%E9%9B%86/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-26.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-26.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于电视盒子刷机的好贴收集</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-01.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-01.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在R3300L类&#43;Armbian上安装Hugo服务器</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#期望实现功能列表">期望实现功能列表</a></li>
+    <li><a href="#安装与配置">安装与配置</a>
+      <ol>
+        <li><a href="#在tv-boxr3300l-s905l上安装armbian">在TV box(R3300L, S905L)上安装Armbian</a>
+          <ol>
+            <li><a href="#制作启动tf卡">制作启动TF卡</a></li>
+            <li><a href="#用tf卡启动后操作-重新调整启动tf卡分区">用TF卡启动后操作: 重新调整启动TF卡分区</a></li>
+            <li><a href="#配置armbian">配置Armbian</a></li>
+          </ol>
+        </li>
+        <li><a href="#在armbian上安装docker和portainer">在Armbian上安装Docker和portainer</a>
+          <ol>
+            <li><a href="#在armbian上安装docker">在Armbian上安装Docker</a></li>
+            <li><a href="#在docker上安装portainer-用于docker管理">在Docker上安装Portainer, 用于Docker管理</a></li>
+          </ol>
+        </li>
+        <li><a href="#在docker上跑openwrt">在Docker上跑openwrt</a>
+          <ol>
+            <li><a href="#openwrt-for-docker下载flippy版本">openwrt for docker下载(flippy版本):</a></li>
+            <li><a href="#运行openwrt-for-docker注意这里并不需要设置网络">运行openwrt for docker(注意:这里并不需要设置网络):</a></li>
+            <li><a href="#配置openwrt-in-docker">配置openwrt in Docker</a></li>
+          </ol>
+        </li>
+        <li><a href="#在armbian上安装其它服务">在Armbian上安装其它服务</a>
+          <ol>
+            <li><a href="#安装samba服务">安装Samba服务</a></li>
+            <li><a href="#为scanner增加一个共享-添加独立的用户-并分配相应的权限">为scanner增加一个共享, 添加独立的用户, 并分配相应的权限</a></li>
+            <li><a href="#安装minidlna服务">安装miniDLNA服务</a></li>
+          </ol>
+        </li>
+        <li><a href="#在armbian上安装配置hugo服务器">在Armbian上安装配置Hugo(?)服务器</a></li>
+      </ol>
+    </li>
+    <li><a href="#其它">其它</a>
+      <ol>
+        <li><a href="#取eth0网卡地址">取eth0网卡地址</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

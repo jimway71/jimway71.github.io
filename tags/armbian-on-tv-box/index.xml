@@ -37,7 +37,7 @@
 &lt;h2 id=&#34;armbian配置工具armbian-config&#34;&gt;Armbian配置工具armbian-config&lt;/h2&gt;
 &lt;p&gt;Armbian系统提供armbian-config工具, 功能很丰富, 多数设置可以在这里完成&lt;/p&gt;
 &lt;h2 id=&#34;操作&#34;&gt;操作&lt;/h2&gt;
-&lt;h3 id=&#34;调整tf卡上ext4分区空间&#34;&gt;调整TF卡上Ext4分区空间&lt;/h3&gt;
+&lt;h3 id=&#34;调整armbian启动盘tf卡上的ext4分区空间&#34;&gt;调整Armbian启动盘(TF卡)上的Ext4分区空间&lt;/h3&gt;
 &lt;p&gt;Armbian安装到TF卡上后, 有两个分区, 128M*1 + 1.2G*1.&lt;br&gt;
 第一次用这张TF卡启动时, 系统会自动扩展TF卡的第二个分区, 并会占满整张TF卡的剩余空间&lt;/p&gt;
 &lt;p&gt;实际使用中, 希望能留一块独立的空间(分区), 这块空间windows能读写(考虑exfat格式), 即使Armbian系统坏了, 数据还能很方便的读取出来.&lt;/p&gt;

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='简单的测试'><title>使用Github为多种设备编译Openwrt固件</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='使用Github为多种设备编译Openwrt固件'>
+<meta property='og:description' content='简单的测试'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Github' /><meta property='article:tag' content='Openwrt' /><meta property='article:tag' content='编译固件' /><meta property='article:published_time' content='2021-05-23T18:27:16&#43;08:00'/><meta property='article:modified_time' content='2021-05-23T18:27:16&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/NAFO-41.jpg' />
+<meta name="twitter:title" content="使用Github为多种设备编译Openwrt固件">
+<meta name="twitter:description" content="简单的测试"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/NAFO-41.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://www.artstation.com/'
+                        target="_blank"
+                        title="A站 - Artstation"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/search?q=%23nafo'
+                        target="_blank"
+                        title="NAFO"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://nav.echosec.top/'
+                        target="_blank"
+                        title="QIN2DIM&#39;s导航站"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/">
+                
+                    <img src="/wallpaper/NAFO-41.jpg" loading="lazy" alt="Featured image of post 使用Github为多种设备编译Openwrt固件" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                Migration
+            </a>
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/%E7%A1%AC%E4%BB%B6/" >
+                硬件
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/">使用Github为多种设备编译Openwrt固件</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            简单的测试
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 23, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="openwrt编译参考">Openwrt编译参考</h2>
+<ul>
+<li><a class="link" href="https://p3terx.com/archives/build-openwrt-with-github-actions.html"  target="_blank" rel="noopener"
+    >使用 GitHub Actions 云编译 OpenWrt</a></li>
+<li><a class="link" href="https://github.com/coolsnowwolf/lede"  target="_blank" rel="noopener"
+    >Lean的Openwrt源码仓库</a></li>
+<li><a class="link" href="https://github.com/IvanSolis1989/OpenWrt-DIY"  target="_blank" rel="noopener"
+    >OpenWrt DIY — 多设备固件云编译</a></li>
+</ul>
+<h2 id="源起">源起</h2>
+<p>最开始是用vps的虚拟机做编译, 虽然编译成功过, 但还是有些问题.</p>
+<ul>
+<li>操作比较麻烦, 每次都需要做配置</li>
+<li>不清楚怎么更新代码, 现在有好些库都没办法更新, 新功能也无法使用.</li>
+<li>编译时间长, 最后还经常出错, 虽然vps虚拟机还是在米国.</li>
+</ul>
+<p>到最后编译总是不成功, 库倒是编译通过了, 只有用编译好的库往现有的设备上安装, 要找关联库什么的, 一堆的麻烦事.<br>
+搞vps上的openwrt编译搞烦了, 不想再继续下去, 但更新总得做.<br>
+后来看到相关教程, 可以用github Action功能来实现编译, 不用做vps虚拟机, 不需要复杂的配置, 于是开始研究.</p>
+<h2 id="选库开始瞎搞">选库(开始瞎搞)</h2>
+<p>看了很长时间的教程, 也没搞懂该怎么做, 算了, 跟着感觉走吧.<br>
+<strong>Github上openwrt相关的代码库很多, 需要先选一个库来fork.</strong><br>
+我在github上搜索&quot;openwrt k2p&quot;, 从Star和Fork最多的库里查找支持设备比较多的库, 由于排第二的&quot;<a class="link" href="https://github.com/IvanSolis1989/OpenWrt-DIY"  target="_blank" rel="noopener"
+    >OpenWrt DIY — 多设备固件云编译</a>&ldquo;支持的设备种类最多, 就选了这个库, 后面熟悉了还得看下代码.</p>
+<h2 id="操作正式开始瞎搞">操作(正式开始瞎搞)</h2>
+<h3 id="登录">登录</h3>
+<p>打开github网站并登录.</p>
+<h3 id="fork">Fork</h3>
+<p>打开&rdquo;<a class="link" href="https://github.com/IvanSolis1989/OpenWrt-DIY"  target="_blank" rel="noopener"
+    >OpenWrt DIY — 多设备固件云编译</a>&quot;, 点击右上角&quot;Fork&quot;按钮, 就可以在已登录的用户目录下Fork出一个资源库.</p>
+<h3 id="branch">Branch</h3>
+<p>打开fork的资源库, 可以看到fork出的目录及文件, 目录及文件是主资源库是一样的.<br>
+如果想要修改, 需要在左上角的&quot;main&quot;处点击, 并建立一个分支(Find or Create a branch&hellip;), 再选到新建的分支进行修改(Fork出来的main看样子是不能修改的)<br>
+(设置新分支为default: 点击右上角的setting菜单, 选择左侧的&quot;branches&quot;,  在右侧即可选择&quot;Default branch&quot;)</p>
+<h3 id="修改">修改</h3>
+<p>可以修改新分支的文件, 其中:<br>
+.github/workflows目录: 不同设备的Action配置文件<br>
+config目录: 不同设备的配置文件<br>
+scripts目录: 编译用的shell - 原库主在这里修改了设备缺省IP地址.</p>
+<h3 id="source-update-check">Source Update Check</h3>
+<p>点击Actions, 从左侧的Workflows里选择&quot;Source Update Check&quot;, 先要&quot;Enable workflow&quot;, 再点击右侧的&quot;Run workflow&quot; - 应该是检查并更新代码.<br>
+<u>(未成功, 错误信息: &ldquo;Run peter-evans/repository-dispatch@v1</u><br>
+Error: Parameter token or opts.auth is required&rdquo;)</p>
+<h3 id="actions">Actions</h3>
+<p>点击Actions, 从左侧的Workflows里选择设备相关的Build项目,  点击右侧的&quot;Run workflow&quot;, 过一会, 就能看到相应的项目正在正在执行, 点进去能看到执行的详细信息.<br>
+编译时间大概需要不到3个小时.</p>
+<h2 id="出现的问题及处理">出现的问题及处理</h2>
+<h3 id="没有生成openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgradebin文件">没有生成openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin文件</h3>
+<p>原编译Newifi_D2所用diy-part2.sh无法生成正常的openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin, 而只能生成openwrt-ramips-mt7621-d-team_newifi-d2-initramfs-kernel.bin.<br>
+Google后发现, 应该是包太大了, 需要去掉一些插件<br>
+参考: <a class="link" href="https://github.com/coolsnowwolf/lede/issues/6243"  target="_blank" rel="noopener"
+    >&ldquo;过渡包“initramfs-kernel.bin问题 #6243</a><br>
+以前手动编译时也会有类似情况, 选的插件较多情况下会出现类似的问题.<br>
+考虑到Newifi-D2的可用空间限制, 编辑了一个专用于D2的&quot;diy-4-Newifi_D2.sh&rdquo;, 在原版本(复制自&quot;diy-part3.sh&quot;)基础上, 去掉了&quot;passwall&quot;+&ldquo;OpenClash&rdquo;+&ldquo;Docker&rdquo;.
+同时, D2的配置文件&quot;.github/workflows/Newifi_D2.yml&quot;也需要做修改, 改用这个新的sh文件.<br>
+再次使用Action编译, 编译通过, 并生成&quot;openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin&quot;文件.</p>
+<h3 id="可能只需要删除一个大插件就行-因此再次修改diy-4-newifi_d2sh-在原版本复制自diy-part3sh基础上-仅去掉锐捷认证mentohustopenclash-并再次编译">可能只需要删除一个大插件就行, <del>因此再次修改&quot;diy-4-Newifi_D2.sh&quot;, 在原版本(复制自&quot;diy-part3.sh&quot;)基础上, 仅去掉锐捷认证(mentohust)+openclash, 并再次编译</del>.</h3>
+<p><strong>失败 - 无法生成&quot;openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin&quot;文件</strong><br>
+再次修改&quot;diy-4-Newifi_D2.sh&quot;, 在原版本(复制自&quot;diy-part3.sh&quot;)基础上, 去掉passwall+锐捷认证(mentohust)+openclash, 并再次编译, 编译成功.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/github/">Github</a>
+        
+            <a href="/tags/openwrt/">Openwrt</a>
+        
+            <a href="/tags/%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6/">编译固件</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-22.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-22.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">WSL下编译LEDE的openwrt, 用于斐讯K2</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/openwrt-info/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-36.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-36.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Openwrt Info</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-30.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-30.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Openwrt上建立Docker环境</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8kubesail%E4%B8%8A%E6%90%AD%E5%BB%BAv2ray/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/NAFO-40-c.jpg" loading="lazy" data-key="" data-hash="/wallpaper/NAFO-40-c.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在kubesail上搭建V2Ray</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8heroku%E4%B8%8A%E9%83%A8%E7%BD%B2v2ray-trojan-go/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-37.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-37.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Heroku上部署V2Ray&#43;Trojan-go</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#openwrt编译参考">Openwrt编译参考</a></li>
+    <li><a href="#源起">源起</a></li>
+    <li><a href="#选库开始瞎搞">选库(开始瞎搞)</a></li>
+    <li><a href="#操作正式开始瞎搞">操作(正式开始瞎搞)</a>
+      <ol>
+        <li><a href="#登录">登录</a></li>
+        <li><a href="#fork">Fork</a></li>
+        <li><a href="#branch">Branch</a></li>
+        <li><a href="#修改">修改</a></li>
+        <li><a href="#source-update-check">Source Update Check</a></li>
+        <li><a href="#actions">Actions</a></li>
+      </ol>
+    </li>
+    <li><a href="#出现的问题及处理">出现的问题及处理</a>
+      <ol>
+        <li><a href="#没有生成openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgradebin文件">没有生成openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin文件</a></li>
+        <li><a href="#可能只需要删除一个大插件就行-因此再次修改diy-4-newifi_d2sh-在原版本复制自diy-part3sh基础上-仅去掉锐捷认证mentohustopenclash-并再次编译">可能只需要删除一个大插件就行, 因此再次修改&quot;diy-4-Newifi_D2.sh&quot;, 在原版本(复制自&quot;diy-part3.sh&quot;)基础上, 仅去掉锐捷认证(mentohust)+openclash, 并再次编译.</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

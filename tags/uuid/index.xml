@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>UUID on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/uuid/</link>
+        <description>Recent content in UUID on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 28 Apr 2021 14:17:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/uuid/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在Heroku上部署V2Ray&#43;Trojan-go</title>
+        <link>https://jimway71.github.io/p/%E5%9C%A8heroku%E4%B8%8A%E9%83%A8%E7%BD%B2v2ray-trojan-go/</link>
+        <pubDate>Wed, 28 Apr 2021 14:17:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%9C%A8heroku%E4%B8%8A%E9%83%A8%E7%BD%B2v2ray-trojan-go/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-37.jpg" alt="Featured image of post 在Heroku上部署V2Ray&#43;Trojan-go" /&gt;&lt;h2 id=&#34;heroku介绍&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;介绍&lt;/h2&gt;
+&lt;p&gt;(拷自&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/zh-tw/Heroku&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;维基百科Heroku&lt;/a&gt;)&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;是一个支持多种编程语言的云平台即服务。在2010年被&amp;lt;Salesforce.com&amp;gt;收购。&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;作为最元祖的云平台之一[1]，从2007年6月起开发，当时它仅支持Ruby，但后来增加了对Java、Node.js、Scala、Clojure、Python以及（未记录在正式文件上）PHP和Perl的支持。基础操作系统是Debian，在最新的技术堆栈则是基于Debian的Ubuntu[2].&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;免费提供美国、欧洲两个节点的容器服务，容器支持多种编程语言。&lt;br&gt;
+当前, &lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt; Dyno免费套餐是一个月550个动态小时，2TB的流量限制; 用信用卡验证能再免费获得450个小时免费动态小时时长.&lt;br&gt;
+对于Heroku的免费动态小时, 在网上查到的是, 原来免费的&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;测试机每天至少需要睡眠6个小时, 后来, Heroku更改了Free Dynos的政策。现在不再是每个应用程序的限制(例如每天6小时的睡眠时间), 而是每个帐户的限制。&lt;br&gt;
+&lt;strong&gt;对于动态小时, 我的理解是指有访问的时长, 不包括机器空闲的时间&lt;/strong&gt;.&lt;br&gt;
+基于&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;的容器服务, 可以用于部署v2ray/trojan-go服务. 由于可能有&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;所指&amp;quot;滥用&amp;quot;风险, 因此, 不要将&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;用于做主力服务器.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;迁移时补充:&lt;br&gt;
+2022年8月25日, BOB WISE, HEROKU GENERAL MANAGER AND SALESFORCE EVP, 在&lt;a class=&#34;link&#34; href=&#34;https://blog.heroku.com/next-chapter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku’s Next Chapter&lt;/a&gt;中写到, 计划于&lt;strong&gt;2022年11月28日起停止免费产品计划&lt;/strong&gt;, 原因是对 Heroku 免费产品计划的欺诈和滥用耗费了团队大量精力。&lt;/u&gt;&lt;/p&gt;
+&lt;h2 id=&#34;在heroku上安装v2raytrojan&#34;&gt;在Heroku上安装V2Ray/Trojan&lt;/h2&gt;
+&lt;h3 id=&#34;申请heroku帐号&#34;&gt;申请Heroku帐号&lt;/h3&gt;
+&lt;p&gt;申请&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;帐号非常简单, 只需要一个电子邮箱就可以了, 比Oracle云申请简单得多.&lt;/p&gt;
+&lt;h3 id=&#34;uuid生成器&#34;&gt;UUID生成器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://1024tools.com/uuid&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UUID在线生成&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用下面所述方式部署V2Ray+Trojan需要一个UUID, 可以使用上述在线UUID生成器即时生成一个唯一的UUID.&lt;br&gt;
+另外, V2Ray的Win10客户端也可以生成UUID.&lt;/p&gt;
+&lt;h3 id=&#34;部署v2raytrojan&#34;&gt;部署V2Ray/Trojan&lt;/h3&gt;
+&lt;p&gt;查了下Github上有两个高STAR+高Fork的&amp;quot;在Heroku上部署V2Ray/Trojan&amp;quot;的项目, 分别是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bclswl0827/v2ray-heroku&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;V2Ray Heroku&lt;/a&gt;: 用这个配置后不能用, 就用下一个.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mixool/xrayku&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xrayku&lt;/a&gt;              (链接已失效)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在相应网页上, 点击紫色的&amp;quot;Deploy to Heroku&amp;quot;按钮, 即可开始部署工作.&lt;br&gt;
+执行部署时, region选择&amp;quot;Europe&amp;quot;(欧洲), 因为据说选择美国会造成访问Youtube时出现异常, 尽管并不严重(只是无法评论?).&lt;br&gt;
+填入新生成的UUID, 点击&amp;quot;Deploy app&amp;quot;按钮执行部署, 然后下面就出现执行部署时的输出, 看着就有点像执行&amp;quot;Docker pull image名&amp;quot;的输出, 过一会儿就会出现&amp;quot;Your app was successfully deployed.&amp;quot;, 表明部署已经成功.&lt;/p&gt;
+&lt;h3 id=&#34;按照xraykuhttpsgithubcommixoolxrayku上的说明修改客户端配置文件-测试&#34;&gt;按照&lt;a class=&#34;link&#34; href=&#34;https://github.com/mixool/xrayku&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xrayku&lt;/a&gt;上的说明修改客户端配置文件, 测试&lt;/h3&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

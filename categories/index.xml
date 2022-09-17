@@ -6,12 +6,20 @@
         <description>Recent content in Categories on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 30 Aug 2022 11:53:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Blog</title>
         <link>https://jimway71.github.io/categories/blog/</link>
-        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
         
         <guid>https://jimway71.github.io/categories/blog/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>应用</title>
+        <link>https://jimway71.github.io/categories/%E5%BA%94%E7%94%A8/</link>
+        <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/categories/%E5%BA%94%E7%94%A8/</guid>
         <description></description>
         </item>
         <item>
@@ -23,25 +31,17 @@
         <description></description>
         </item>
         <item>
-        <title>migration</title>
+        <title>Migration</title>
         <link>https://jimway71.github.io/categories/migration/</link>
-        <pubDate>Fri, 09 Apr 2021 08:54:16 +0800</pubDate>
+        <pubDate>Sun, 23 May 2021 18:27:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/categories/migration/</guid>
         <description></description>
         </item>
         <item>
-        <title>应用</title>
-        <link>https://jimway71.github.io/categories/%E5%BA%94%E7%94%A8/</link>
-        <pubDate>Thu, 08 Apr 2021 21:42:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/categories/%E5%BA%94%E7%94%A8/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>硬件</title>
         <link>https://jimway71.github.io/categories/%E7%A1%AC%E4%BB%B6/</link>
-        <pubDate>Mon, 01 Jun 2020 01:06:16 +0800</pubDate>
+        <pubDate>Sun, 23 May 2021 18:27:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/categories/%E7%A1%AC%E4%BB%B6/</guid>
         <description></description>

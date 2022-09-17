@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>kubesail on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/kubesail/</link>
+        <description>Recent content in kubesail on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 28 Apr 2021 19:46:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/kubesail/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在kubesail上搭建V2Ray</title>
+        <link>https://jimway71.github.io/p/%E5%9C%A8kubesail%E4%B8%8A%E6%90%AD%E5%BB%BAv2ray/</link>
+        <pubDate>Wed, 28 Apr 2021 19:46:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%9C%A8kubesail%E4%B8%8A%E6%90%AD%E5%BB%BAv2ray/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/NAFO-40-c.jpg" alt="Featured image of post 在kubesail上搭建V2Ray" /&gt;&lt;p&gt;Pic From &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/MBlech/status/1569878935512416260&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@MBlech #NAFO&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://bawodu.com/kubesail/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;KubeSail免费无限制容器1核512MB內存使用教程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kubesail.com/homepage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;KubeSail&lt;/a&gt;官方不允许在共享cluster上使用v2ray, 而在用户自己的cluster上则允许使用v2ray。&lt;br&gt;
+官方社区里, 下面这段表明了其官方态度:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://gitter.im/KubeSail/community?at=5e819bf72725b83acd53badb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;why was my container removed ? I use a public container&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
