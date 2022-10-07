@@ -6,7 +6,813 @@
         <description>Recent content in 链接 on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 13 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E9%93%BE%E6%8E%A5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E9%93%BE%E6%8E%A5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>More Links</title>
+        <link>https://jimway71.github.io/p/more-links/</link>
+        <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/more-links/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-44-c.jpg" alt="Featured image of post More Links" /&gt;&lt;h2 id=&#34;资源导航&#34;&gt;资源导航&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;QINDIM&amp;rsquo;s 导航站&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://nav.echosec.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nav.echosec.top/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;各种资源链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HelloGithub&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://hellogithub.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://hellogithub.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;分享 GitHub上有趣、入门级的开源项目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;工具ai文章等&#34;&gt;工具(AI文章等)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;AI文章&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=AI%E6%96%87%E7%AB%A0&amp;amp;oq=AI%E6%96%87%E7%AB%A0&amp;amp;aqs=chrome..69i57j69i60.3388j0j7&amp;amp;sourceid=chrome&amp;amp;ie=UTF-8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Google搜索&amp;quot;AI文章&amp;quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Html转Markdown&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.atoolbox.net/Tool.php?Id=715&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Html转Markdown&lt;/a&gt; &lt;br&gt; 推荐by &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7066651546817134629&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;复制链接，将正文的html转markdown&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://www.atoolbox.net/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;一个工具箱 - 好用的在线工具都在这里！&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;hugo服务及其它相关&#34;&gt;Hugo服务及其它相关&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Hugo主题Stack及说明文档&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/CaiJimmy/hugo-theme-stack&lt;/a&gt; &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.stack.jimmycai.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://d33wubrfki0l68.cloudfront.net/cce20227aa2099d675a3f34ef07d87efd2c3424b/2181d/themes/hugo-theme-stack/tn-featured_huc0bc2695434e99bc240ff43d33c25940_24703_384x256_fill_catmullrom_top_3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;现仅英文(中文文档404了)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Markdown 中文文档&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://markdown-zh.readthedocs.io/en/latest/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://markdown-zh.readthedocs.io/en/latest/img/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Markdown 教程&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/markdown/md-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.runoob.com/markdown/md-tutorial.html&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://static.runoob.com/images/icon/mobile-icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;菜鸟教程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Markdown进阶&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/heimu24/article/details/81189700&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/heimu24/article/details/81189700&lt;/a&gt; &lt;br&gt; 更改字体、颜色、大小，设置文字背景色，调整图片大小设置居中&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;字体/图片进阶&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;转换工具&#34;&gt;转换工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Aconvert&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aconvert.com/cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.aconvert.com/cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;在线转换PDF，在线转换文档，在线转换电子书，在线转换图像，在线转换视频，在线转换音频&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aconvert之在线转换图像文件&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aconvert.com/cn/image/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.aconvert.com/cn/image/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;将图像文件从一种格式转换为另一种格式，比如PNG到JPG，JPG到PNG，HEIC到JPG，WEBP到JPG，DDS到PNG，PNG到SVG等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;翻译工具&#34;&gt;翻译工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;谷歌翻译&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://translate.google.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://translate.google.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://ssl.gstatic.com/translate/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有道翻译&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://fanyi.youdao.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://fanyi.youdao.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://shared.ydstatic.com/images/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;images-也含ai制图工具&#34;&gt;Images (也含AI制图工具)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Wallpaper Abyss 高清壁纸&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wall.alphacoders.com/?lang=Chinese&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wall.alphacoders.com/?lang=Chinese&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://static.alphacoders.com/icons/wallpaper/favicon-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Artstation&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.artstation.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://cdn.artstation.com/assets/logo-icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;flickr 網路相片管理和分享工具&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.flickr.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.flickr.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.flickr.com/images/opensearch-flickr-logo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Midjourney&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.midjourney.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.midjourney.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.midjourney.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;AI 制图工具, 用文字透过AI运算产出相对应的图片; 网站非常的极客风格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dafydd Phillips on Flickr&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.flickr.com/photos/137929058@N06/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.flickr.com/photos/137929058@N06/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.flickr.com/images/opensearch-flickr-logo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Fighter Photoes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;下载相关&#34;&gt;下载相关&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;RARBg&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://rarbg.to/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://rarbg.to/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://dyncdn.me/static/20/img/logo_dark_nodomain2_optimized.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;RARBg&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TorrentBay&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://yts.torrentbay.to/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://yts.torrentbay.to/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://yts.torrentbay.to/assets/images/website/apple-touch-icon-57x57.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;ytsbay搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;字幕工具&#34;&gt;字幕工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;OpenSubtitles&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.opensubtitles.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://static.opensubtitles.org/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;OpenSubtitles字幕搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;yifysubtitles&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://yifysubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://yifysubtitles.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://yifysubtitles.org/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Yifysubtitles字幕搜索(問題があるようです)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;社区社交平台&#34;&gt;社区(社交平台)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Reddit&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.reddit.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.reddit.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.redditstatic.com/desktop2x/img/favicon/ms-icon-144x144.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Reddit红迪&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;小型中文社区&#34;&gt;小型中文社区&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;V2EX&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.v2ex.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.v2ex.com/static/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;V2EX = way to explore &lt;br&gt; V2EX 是一个关于分享和探索的地方&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;给用外版带 esim 功能的各位推荐个软件&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/t/881122&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.v2ex.com/t/881122&lt;/a&gt; &lt;br&gt; 软件 &lt;a class=&#34;link&#34; href=&#34;https://dent.app.link/JZz9ms2Aqtb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://dent.app.link/JZz9ms2Aqtb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;From &lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;V2EX&lt;/a&gt;  ›  &lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/go/iphone&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;iPhone&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;各种盒子相关&#34;&gt;各种盒子相关&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;海思机顶盒NAS社区&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://bbs.histb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://bbs.histb.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;海思机顶盒NAS系统，一个极低功耗的服务器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;开源平台&#34;&gt;开源平台&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GitHub&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;GitHub is the world&amp;rsquo;s largest software development platform.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;主机信息&#34;&gt;主机信息&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;国外主机测评&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.zhujiceping.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;国外VPS，国外服务器，国外云服务器，测评及优惠码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LowEndTalk&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://lowendtalk.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://lowendtalk.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://lowendtalk.com/uploads/LowEndTalk.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;© LowEndBox &amp;amp; LowEndTalk&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;猪机博客&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pigji.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.pigji.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.pigji.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;美国vps、国外主机评测！&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;VPS收割者&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.idcoffer.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.idcoffer.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.idcoffer.com/wp-content/uploads/2019/11/logo-150x150.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;香港VPS、日韩VPS、美国VPS、欧洲VPS和云服务器评测与推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主机资讯&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujizixun.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.zhujizixun.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.zhujizixun.com/wp-content/uploads/2019/03/cropped-logo-1-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;国外VPS，国外服务器，国外主机，测评及优惠码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;一些免费的云资源&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://gist.github.com/imba-tjd/d73258f0817255dbe77d64d40d985e76&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gist.github.com/imba-tjd/d73258f0817255dbe77d64d40d985e76&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/24759802?s=64&amp;amp;v=4&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;(Migrated)云资源集合列表 From imba-tjd 谭九鼎&amp;rsquo;s GitHub&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;2022-russian-invasion-of-ukraine&#34;&gt;2022 Russian invasion of Ukraine&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Russo-Ukrainian Warspotting&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://ukr.warspotting.net/russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ukr.warspotting.net/russia/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://ukr.warspotting.net/static/images/icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;oryx&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Russian losses&lt;/a&gt; &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-ukrainian.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ukraine losses&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.oryxspioenkop.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NAFO&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/search?q=%23nafo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://twitter.com/search?q=%23nafo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://hugo.otcg.org/FixFrmRes/NAFO_Freud_Fella.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;NAFO&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;照片笑话&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://durdom.in.ua/icns/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;弗图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;特殊字符&#34;&gt;特殊字符&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;特殊字符&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sioe.cn/zifu.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.sioe.cn/zifu.htm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;↑↓↖↗↙↘☺☻™©℡Ψ◦o● Ⓒⓒ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;特殊市场&#34;&gt;特殊市场&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Verified Leaks Market&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://breached.to/Forum-Verified-Leaks-Market&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://breached.to/Forum-Verified-Leaks-Market&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://cdn.breached.to/logo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;All sales Threads in this section are verified by Staff Mark this forum read&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;特殊工具&#34;&gt;特殊工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;启动BFL-LS-WVL&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://nas.otcg.org/cgi-bin/resume.cgi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://nas.otcg.org/cgi-bin/resume.cgi&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.buffalotech.com/images/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;启动BFL-LS-WVL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
         <title>Markdown&amp;Html On Hugo With theme Stack</title>
         <link>https://jimway71.github.io/p/markdownhtml-on-hugo-with-theme-stack/</link>
         <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
@@ -454,6 +1260,22 @@ Code:&lt;/p&gt;
 &lt;h2 id=&#34;练习区&#34;&gt;练习区&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;heading-1&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;本地视频&#34;&gt;本地视频&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;video id=&amp;#34;video&amp;#34; controls=&amp;#34;&amp;#34; preload=&amp;#34;none&amp;#34; poster=&amp;#34;封面&amp;#34;&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &amp;lt;source id=&amp;#34;mp4&amp;#34; src=&amp;#34;/img/2022-Russian-invasion-of-Ukraine/test-01.mp4&amp;#34; type=&amp;#34;video/mp4&amp;#34;&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/videos&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;不行&lt;br&gt;
+可能使用 &lt;a class=&#34;link&#34; href=&#34;https://www.zaqizaba.xyz/posts/%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E8%A7%86%E9%A2%91%E5%88%B0hugo%E5%8D%9A%E5%AE%A2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;添加本地视频到hugo博客&lt;/a&gt; 的方法&lt;/p&gt;
 &lt;p&gt;&lt;u&gt;下划线文本&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;111&lt;br&gt;
 This is a regular paragraph.&lt;/p&gt;

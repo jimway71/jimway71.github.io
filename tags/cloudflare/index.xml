@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cloudflare on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/cloudflare/</link>
+        <description>Recent content in Cloudflare on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 20 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>将IONOS域名转入Cloudflare</title>
+        <link>https://jimway71.github.io/p/%E5%B0%86ionos%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%85%A5cloudflare/</link>
+        <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%B0%86ionos%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%85%A5cloudflare/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-43.jpg" alt="Featured image of post 将IONOS域名转入Cloudflare" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
