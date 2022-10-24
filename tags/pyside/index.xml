@@ -6,7 +6,140 @@
         <description>Recent content in pyside on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 15 Aug 2022 23:33:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/pyside/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 19 Aug 2022 12:00:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/pyside/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>调查五款Python GUI框架</title>
+        <link>https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/</link>
+        <pubDate>Fri, 19 Aug 2022 12:00:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-20.jpg" alt="Featured image of post 调查五款Python GUI框架" /&gt;&lt;p&gt;五款Python GUI框架:&lt;br&gt;
+来源: &lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7114468038363054117&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎: 2022- 值得推荐的五款Python GUI框架&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyQt5/6&lt;/li&gt;
+&lt;li&gt;PySide6&lt;/li&gt;
+&lt;li&gt;wxPython&lt;/li&gt;
+&lt;li&gt;Tkinter&lt;/li&gt;
+&lt;li&gt;PySimpleGUI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;列表如下:  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;框架名&lt;/th&gt;
+&lt;th&gt;来源&lt;/th&gt;
+&lt;th&gt;许可&lt;/th&gt;
+&lt;th&gt;易用性&lt;/th&gt;
+&lt;th&gt;功能性&lt;/th&gt;
+&lt;th&gt;文档丰富性&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;th&gt;教程&lt;/th&gt;
+&lt;th&gt;界面开发工具&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PyQt5&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PyQt5/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;GPL v3&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PyQt6&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PyQt6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt6&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;GPL v3&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;需Python3.6.1以上版本; 网络授权支持的在LGPL下授权(来源: &lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7120086083378872357&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5和PyQt6之间的区别&lt;/a&gt;之&amp;quot;许可证变更&amp;quot;)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;PySide6&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;LGPL&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;最初由Nokia官方推出; 对标PyQt6; 以调用动态链接库的形式使用Qt时, 可以任何形式发布程序(含商业、非商业、开源、非开源)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6详细中文教程&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;wxPython&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wxpython.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxPython&lt;/a&gt;]&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wxpython.org/pages/license/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxWindows Library Licence&lt;/a&gt;]&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.wxpython.org/zh-CN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxPyWiki&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/wxFormBuilder/wxFormBuilder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxFormbuilder&lt;/a&gt;, &lt;del&gt;&lt;a class=&#34;link&#34; href=&#34;http://boa-constructor.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;boa-constructor 2007年停更&lt;/a&gt;&lt;/del&gt;, &lt;a class=&#34;link&#34; href=&#34;http://wxglade.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxGlade 2021停更&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tkinter&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/library/tkinter.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tkinter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://spdx.org/licenses/PSF-2.0.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PSF-2.0&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;简单无依赖&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/python/python-gui-tkinter.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python GUI编程(Tkinter)&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;http://www.python-course.eu/python_tkinter.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tkinter course&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://page.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PAGE&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://visualtk.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;visualtk-在线可用&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;&lt;strong&gt;PySimpleGUI&lt;/strong&gt;&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pysimplegui.org/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySimpleGUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;LGPL3&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;基于Tkinter、&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Remi&lt;/a&gt;、wxpython、PyQt模块; 可以输入相应的代码将其转变网页形式展示，而其余包则都是用来做图形界面的&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pysimplegui.org/en/latest/cookbook/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySimpleGUI Cookbook&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/PriestTheBeast/SimpleGUIBuilder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SimpleGUIBuilder 2021停更&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.quora.com/Can-I-make-a-program-in-Qt-Designer-under-the-open-source-license-and-then-buy-a-license-so-that-I-can-sell-my-program&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Can I make a program in Qt Designer under the open-source license, and then buy a license so that I can sell my program?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://discuss.wxpython.org/t/which-tool-is-the-best-for-gui-designer/26071/10&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Which tool is the best for gui designer(哪个工具最适合 gui 设计师)？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>临时记录</title>
         <link>https://jimway71.github.io/p/%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>

@@ -6,7 +6,79 @@
         <description>Recent content in Tags on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 22 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Fun</title>
+        <link>https://jimway71.github.io/tags/fun/</link>
+        <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/fun/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python front end frameworks</title>
+        <link>https://jimway71.github.io/tags/python-front-end-frameworks/</link>
+        <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/python-front-end-frameworks/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PYTHON前端框架</title>
+        <link>https://jimway71.github.io/tags/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/</link>
+        <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Streamlit</title>
+        <link>https://jimway71.github.io/tags/streamlit/</link>
+        <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/streamlit/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Favorites</title>
+        <link>https://jimway71.github.io/tags/favorites/</link>
+        <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/favorites/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>links</title>
+        <link>https://jimway71.github.io/tags/links/</link>
+        <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/links/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>zhihu</title>
+        <link>https://jimway71.github.io/tags/zhihu/</link>
+        <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/zhihu/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>链接</title>
+        <link>https://jimway71.github.io/tags/%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E9%93%BE%E6%8E%A5/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>知乎</title>
+        <link>https://jimway71.github.io/tags/%E7%9F%A5%E4%B9%8E/</link>
+        <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E7%9F%A5%E4%B9%8E/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Russia</title>
         <link>https://jimway71.github.io/tags/russia/</link>
         <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
@@ -39,19 +111,11 @@
         <description></description>
         </item>
         <item>
-        <title>linkS</title>
-        <link>https://jimway71.github.io/tags/links/</link>
+        <title>俄罗斯房产</title>
+        <link>https://jimway71.github.io/tags/%E4%BF%84%E7%BD%97%E6%96%AF%E6%88%BF%E4%BA%A7/</link>
         <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://jimway71.github.io/tags/links/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>链接</title>
-        <link>https://jimway71.github.io/tags/%E9%93%BE%E6%8E%A5/</link>
-        <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://jimway71.github.io/tags/%E4%BF%84%E7%BD%97%E6%96%AF%E6%88%BF%E4%BA%A7/</guid>
         <description></description>
         </item>
         <item>
@@ -119,6 +183,14 @@
         <description></description>
         </item>
         <item>
+        <title>pip</title>
+        <link>https://jimway71.github.io/tags/pip/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/pip/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>PyCharm</title>
         <link>https://jimway71.github.io/tags/pycharm/</link>
         <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
@@ -140,6 +212,14 @@
         <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>pyside</title>
+        <link>https://jimway71.github.io/tags/pyside/</link>
+        <pubDate>Fri, 19 Aug 2022 12:00:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/pyside/</guid>
         <description></description>
         </item>
         <item>
@@ -191,14 +271,6 @@
         <description></description>
         </item>
         <item>
-        <title>pyside</title>
-        <link>https://jimway71.github.io/tags/pyside/</link>
-        <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/pyside/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>SSLH</title>
         <link>https://jimway71.github.io/tags/sslh/</link>
         <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
@@ -231,11 +303,27 @@
         <description></description>
         </item>
         <item>
+        <title>crontab</title>
+        <link>https://jimway71.github.io/tags/crontab/</link>
+        <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/crontab/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Q&amp;A</title>
         <link>https://jimway71.github.io/tags/qa/</link>
         <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/qa/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ubuntu Mirrors</title>
+        <link>https://jimway71.github.io/tags/ubuntu-mirrors/</link>
+        <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ubuntu-mirrors/</guid>
         <description></description>
         </item>
         <item>
@@ -252,6 +340,14 @@
         <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>时区</title>
+        <link>https://jimway71.github.io/tags/%E6%97%B6%E5%8C%BA/</link>
+        <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E6%97%B6%E5%8C%BA/</guid>
         <description></description>
         </item>
         <item>
@@ -508,6 +604,14 @@
         <pubDate>Tue, 01 Feb 2022 19:46:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/%E5%9C%8B%E5%88%86%E7%8E%B2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>来自2058年的未来人</title>
+        <link>https://jimway71.github.io/tags/%E6%9D%A5%E8%87%AA2058%E5%B9%B4%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA/</link>
+        <pubDate>Tue, 01 Feb 2022 19:46:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E6%9D%A5%E8%87%AA2058%E5%B9%B4%E7%9A%84%E6%9C%AA%E6%9D%A5%E4%BA%BA/</guid>
         <description></description>
         </item>
         <item>

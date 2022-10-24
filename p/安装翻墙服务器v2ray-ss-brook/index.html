@@ -324,6 +324,10 @@
                 Migration
             </a>
         
+            <a href="/categories/modification/" >
+                Modification
+            </a>
+        
             <a href="/categories/blog/" >
                 Blog
             </a>
@@ -375,7 +379,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 9 分钟
                 </time>
             </div>
         
@@ -389,7 +393,8 @@
     <section class="article-content">
     
     
-    <p>简单说明:<br>
+    <h2 id="在ubuntu18上安装翻墙服务器迁移">在Ubuntu18上安装翻墙服务器(迁移)</h2>
+<p>简单说明:<br>
 系统: Ubuntu 18.04 LTS。<br>
 a.安装: V2RAY mKCP+dtls, AAAA; ss: BBBB; brook: CCCC。<br>
 b.(V2ray安装的)shadowsocks改用了新的加密方式(AHEAD: chacha20-ietf-poly1305), 以避免被GFW检测到<br>
@@ -410,8 +415,10 @@ ss 和原来一样<br>
     >https://ssr.tools/1026</a>
 安装时, BBR自己就装上了</p>
 <p>使用233版V2ray一键安装脚本(集成BBR/锐速/Shadowsocks):</p>
-<h1 id="bash-curl--s--l-httpsgitiov2raysh">bash &lt;(curl -s -L <a class="link" href="https://git.io/v2ray.sh"  target="_blank" rel="noopener"
-    >https://git.io/v2ray.sh</a>)</h1>
+<blockquote>
+<p># bash &lt;(curl -s -L <a class="link" href="https://git.io/v2ray.sh"  target="_blank" rel="noopener"
+    >https://git.io/v2ray.sh</a>)</p>
+</blockquote>
 <p><strong>2.Brook安装</strong><br>
 参考<br>
 <a class="link" href="https://doub.io/brook-jc1/"  target="_blank" rel="noopener"
@@ -524,7 +531,553 @@ crontab -e是编辑用户任务, crontab -l是显示用户任务.</p>
 <p># crontab -l //列出当前的所有调度任务<br>
 # crontab -l -u jp   //列出用户jp的所有调度任务</p>
 </blockquote>
-
+<h2 id="在ubuntu22上安装trojan服务">在Ubuntu22上安装Trojan服务</h2>
+<p>22/10/20</p>
+<h3 id="操作系统选用ubuntu-2204lts">操作系统选用Ubuntu 22.04LTS</h3>
+<p>由于PacificRack只支持Ubuntu22, 所以只能选Ubuntu22</p>
+<h3 id="重置服务器并配置-如果需要">重置服务器并配置 (如果需要)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  1.登录
+</span></span><span class="line"><span class="cl">    :22
+</span></span><span class="line"><span class="cl">    root/复制密码
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  2. 初始化
+</span></span><span class="line"><span class="cl">    用SecureCRT(或其它类似软件)用ssh连接服务器
+</span></span><span class="line"><span class="cl">    1) apt更新
+</span></span><span class="line"><span class="cl">        # apt update
+</span></span><span class="line"><span class="cl">        # 先安装vim
+</span></span><span class="line"><span class="cl">        # apt install vim
+</span></span><span class="line"><span class="cl">    2) 安装ufw防火墙, 并设置规则及自动启动
+</span></span><span class="line"><span class="cl">         # 安装ufw防火墙: 已缺省安装
+</span></span><span class="line"><span class="cl">         # 设置规则
+</span></span><span class="line"><span class="cl">         # ufw allow 22/tcp; ufw allow 22222/tcp; ufw allow 443/tcp
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">       注: 22222做为新的ssh端口, 免的被人反复试密码
+</span></span><span class="line"><span class="cl">        # 启动ufw防火墙, 并查看确认ufw状态
+</span></span><span class="line"><span class="cl">        # ufw enable; ufw status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Status: active
+</span></span><span class="line"><span class="cl">	To                         Action      From
+</span></span><span class="line"><span class="cl">	--                         ------      ----
+</span></span><span class="line"><span class="cl">	22/tcp                     ALLOW       Anywhere                  
+</span></span><span class="line"><span class="cl">	22222/tcp                  ALLOW       Anywhere                  
+</span></span><span class="line"><span class="cl">	443/tcp                    ALLOW       Anywhere                  
+</span></span><span class="line"><span class="cl">	22/tcp (v6)                ALLOW       Anywhere (v6)             
+</span></span><span class="line"><span class="cl">	22222/tcp (v6)             ALLOW       Anywhere (v6)             
+</span></span><span class="line"><span class="cl">	443/tcp (v6)               ALLOW       Anywhere (v6) 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 设置跟随系统启动
+</span></span><span class="line"><span class="cl">        # systemctl enable ufw
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    3) 修改ssh端口为22222
+</span></span><span class="line"><span class="cl">        # vim  /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl">        修改如下:
+</span></span><span class="line"><span class="cl">        # Port 22
+</span></span><span class="line"><span class="cl">        Port 22222
+</span></span><span class="line"><span class="cl">        # 保存后, 重启sshd
+</span></span><span class="line"><span class="cl">        # service sshd restart
+</span></span><span class="line"><span class="cl">        用secruecrt连接22222端口, 测试确认新的端口生效
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    4) 重新设置用户
+</span></span><span class="line"><span class="cl">        3个用户: root / userA /none
+</span></span><span class="line"><span class="cl">           root不直接登录
+</span></span><span class="line"><span class="cl">           userA登录转su做操作
+</span></span><span class="line"><span class="cl">           none 不能转su, 现在用于做sshesame(伪装ssh服务器的启动用户身份)
+</span></span><span class="line"><span class="cl">       # 增加用户userA
+</span></span><span class="line"><span class="cl">       # adduser userA
+</span></span><span class="line"><span class="cl">       # 注 - 密码: (先设为XXXXXXXX)
+</span></span><span class="line"><span class="cl">       # 设置为可转su用户
+</span></span><span class="line"><span class="cl">       # usermod -aG sudo userA
+</span></span><span class="line"><span class="cl">       -  测试 , 用userA用户登录, 执行: $ sudo whoami
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       # 修改root密码
+</span></span><span class="line"><span class="cl">       # passwd
+</span></span><span class="line"><span class="cl">       # 写一复杂密码, 同样不用记录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装trojan-go-简单安装">安装trojan-go 简单安装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">注意: 以root用户身份执行
+</span></span><span class="line"><span class="cl">#sudo su -
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">安装方法: 通过 curl 命令安装
+</span></span><span class="line"><span class="cl"># curl -O https://raw.githubusercontent.com/jinwyp/one_click_script/master/trojan_v2ray_install.sh &amp;&amp; chmod +x ./trojan_v2ray_install.sh &amp;&amp; ./trojan_v2ray_install.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. 安装过程:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">选择 &#34;2. 安装 trojan-go 和 nginx 支持CDN 开启websocket (兼容trojan客户端但不兼容websocket), trojan-go 运行在443端口&#34;
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl"> 请输入绑定到本VPS的域名 例如www.xxx.com: (此步骤请关闭CDN后安装)
+</span></span><span class="line"><span class="cl">	lax.XXXX.org
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">是否申请证书? 默认为自动申请证书,如果二次安装或已有证书可以选否 请输入[Y/n]:y
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl"> 是否检测域名指向的IP正确 (默认检测，如果域名指向的IP不是本机器IP则无法继续. 如果已开启CDN不方便关闭可以选择否)
+</span></span><span class="line"><span class="cl">是否检测域名指向的IP正确? 请输入[Y/n]:y
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">默认通过Letsencrypt.org来申请证书, 如果证书申请失败, 例如一天内通过Letsencrypt.org申请次数过多, 可以选否通过BuyPass.com来申请.
+</span></span><span class="line"><span class="cl">是否通过Letsencrypt.org来申请证书? 默认直接回车为是, 选否则通过BuyPass.com来申请, 请输入[Y/n]:y
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">versionTrojanGo: 0.10.4
+</span></span><span class="line"><span class="cl"> ==================================================
+</span></span><span class="line"><span class="cl"> 开始安装 Trojan-go Version: 0.10.4 !
+</span></span><span class="line"><span class="cl"> 请输入trojan密码的前缀? (会生成若干随机密码和带有该前缀的密码)
+</span></span><span class="line"><span class="cl"> ==================================================
+</span></span><span class="line"><span class="cl">             [直接回车]
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">    Trojan-go Version: 0.10.4 安装成功 !
+</span></span><span class="line"><span class="cl">    伪装站点为 https://lax.XXXX.org
+</span></span><span class="line"><span class="cl">    伪装站点的静态html内容放置在目录 /root/website/html, 可自行更换网站内容!
+</span></span><span class="line"><span class="cl">    Trojan-go 服务器端配置路径 /root/trojan-go/server.json 
+</span></span><span class="line"><span class="cl">    Trojan-go 运行日志文件路径: /root/trojan-access.log 
+</span></span><span class="line"><span class="cl">    Trojan-go 查看日志命令: journalctl -n 50 -u trojan-go.service 
+</span></span><span class="line"><span class="cl">    Trojan-go 停止命令: systemctl stop trojan-go.service  启动命令: systemctl start trojan-go.service  重启命令: systemctl restart trojan-go.service
+</span></span><span class="line"><span class="cl">    Trojan-go 查看运行状态命令:  systemctl status trojan-go.service 
+</span></span><span class="line"><span class="cl">    Trojan-go 服务器 每天会自动重启, 防止内存泄漏. 运行 crontab -l 命令 查看定时重启命令 !
+</span></span><span class="line"><span class="cl">======================================================================
+</span></span><span class="line"><span class="cl">----------------------------------------
+</span></span><span class="line"><span class="cl">Trojan-go 配置信息如下, 请自行复制保存, 密码任选其一 !
+</span></span><span class="line"><span class="cl">服务器地址: vtxjpgc.XXXX.tk  端口: 443
+</span></span><span class="line"><span class="cl">密码1: c940591bd0
+</span></span><span class="line"><span class="cl">密码2: d17ec1f37a
+</span></span><span class="line"><span class="cl">密码3: 33ceb9d971
+</span></span><span class="line"><span class="cl">密码4: e7a8cb888c
+</span></span><span class="line"><span class="cl">密码5: b2e7833722
+</span></span><span class="line"><span class="cl">密码6: 2be53f6ea3
+</span></span><span class="line"><span class="cl">密码7: 2e1295df58
+</span></span><span class="line"><span class="cl">密码8: 8274bb245f
+</span></span><span class="line"><span class="cl">密码9: 3bedfe1b7f
+</span></span><span class="line"><span class="cl">密码10: 64aac32386
+</span></span><span class="line"><span class="cl">您指定前缀的密码共20个: 从 XXX2.02001 到 XXX2.02020 都可以使用
+</span></span><span class="line"><span class="cl">例如: 密码:XXX2.02002 或 密码:XXX2.02019 都可以使用
+</span></span><span class="line"><span class="cl">Websocket path 路径为: /3bb272ad
+</span></span><span class="line"><span class="cl">Websocket 双重TLS为: true 开启
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">======================================================================
+</span></span><span class="line"><span class="cl">请下载相应的 xray 客户端:
+</span></span><span class="line"><span class="cl">1 Windows 客户端V2rayN下载：http://tjxjpn.XXXX.tk/download/393606ffb277b6d16b8f/v2ray-windows.zip
+</span></span><span class="line"><span class="cl">2 MacOS 客户端下载：http://tjxjpn.XXXX.tk/download/393606ffb277b6d16b8f/v2ray-mac.zip
+</span></span><span class="line"><span class="cl">3 Android 客户端下载 https://github.com/2dust/v2rayNG/releases
+</span></span><span class="line"><span class="cl">4 iOS 客户端 请安装小火箭 https://shadowsockshelp.github.io/ios/ 
+</span></span><span class="line"><span class="cl">  iOS 请安装小火箭另一个地址 https://lueyingpro.github.io/shadowrocket/index.html 
+</span></span><span class="line"><span class="cl">  iOS 安装小火箭遇到问题 教程 https://github.com/shadowrocketHelp/help/ 
+</span></span><span class="line"><span class="cl">其他客户端程序请看 https://www.v2fly.org/awesome/tools.html 
+</span></span><span class="line"><span class="cl">======================================================================
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2. 检查状态:
+</span></span><span class="line"><span class="cl">1) ----------
+</span></span><span class="line"><span class="cl">root@otcg-tjm-0c-xjp:/home/trojan_v2ray# ps -ax | grep trojan
+</span></span><span class="line"><span class="cl">28912 ?        Ssl    0:00 /root/trojan-go/trojan-go -config /root/trojan-go/server.json
+</span></span><span class="line"><span class="cl">29155 pts/1    S+     0:00 grep --color=auto trojan
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3. 查看输出信息
+</span></span><span class="line"><span class="cl"># curl -O https://raw.githubusercontent.com/jinwyp/one_click_script/master/trojan_v2ray_install.sh &amp;&amp; chmod +x ./trojan_v2ray_install.sh &amp;&amp; ./trojan_v2ray_install.sh
+</span></span><span class="line"><span class="cl">   28. 查看已安装的配置和用户密码等信息
+</span></span><span class="line"><span class="cl">请输入数字:28
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Web服务器 nginx 安装成功! 伪装站点为 lax.XXXX.org   
+</span></span><span class="line"><span class="cl">伪装站点的静态html内容放置在目录 /root/website/html, 可自行更换网站内容.
+</span></span><span class="line"><span class="cl">nginx 配置路径 /etc/nginx/nginx.conf
+</span></span><span class="line"><span class="cl">nginx 访问日志 /root/nginx-access.log
+</span></span><span class="line"><span class="cl">nginx 错误日志 /root/nginx-error.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nginx 查看日志命令: journalctl -n 50 -u nginx.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nginx 启动命令: systemctl start nginx.service  
+</span></span><span class="line"><span class="cl">nginx 停止命令: systemctl stop nginx.service  
+</span></span><span class="line"><span class="cl">nginx 重启命令: systemctl restart nginx.service
+</span></span><span class="line"><span class="cl">nginx 查看运行状态命令: systemctl status nginx.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Trojan-go Version: 0.10.6 安装成功 !
+</span></span><span class="line"><span class="cl">Trojan-go 服务器端配置路径 /root/trojan-go/server.json
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Trojan-go 运行日志文件路径: /root/trojan-access.log 
+</span></span><span class="line"><span class="cl">Trojan-go 查看日志命令: journalctl -n 50 -u trojan-go.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Trojan-go 启动命令: systemctl start trojan-go.service
+</span></span><span class="line"><span class="cl">Trojan-go 停止命令: systemctl stop trojan-go.service  
+</span></span><span class="line"><span class="cl">Trojan-go 重启命令: systemctl restart trojan-go.service
+</span></span><span class="line"><span class="cl">Trojan-go 查看运行状态命令: systemctl status trojan-go.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Trojan-go服务器地址: lax.XXXX.org  端口: 443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">密码1: 314a9f8dbb
+</span></span><span class="line"><span class="cl">密码2: 4799834f27
+</span></span><span class="line"><span class="cl">密码3: 429f38cec6
+</span></span><span class="line"><span class="cl">密码4: 6134cf23a7
+</span></span><span class="line"><span class="cl">密码5: 275e6b02e2
+</span></span><span class="line"><span class="cl">密码6: 8a14cae29c
+</span></span><span class="line"><span class="cl">密码7: ae62618bf1
+</span></span><span class="line"><span class="cl">密码8: 683db18d7a
+</span></span><span class="line"><span class="cl">密码9: c364209f39
+</span></span><span class="line"><span class="cl">密码10: 4cc0eeed9a
+</span></span><span class="line"><span class="cl">您指定前缀的密码共20个: 从 XXX2.02001 到 XXX2.02020 都可以使用
+</span></span><span class="line"><span class="cl">例如: 密码:XXX2.02002 或 密码:XXX2.02019 都可以使用
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果是trojan-go开启了Websocket，那么Websocket path 路径为: /5d09934d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">小火箭链接:
+</span></span><span class="line"><span class="cl">trojan://314a9f8dbb@lax.XXXX.org:443?peer=lax.XXXX.org&amp;sni=lax.XXXX.org#lax.XXXX.org_trojan&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">二维码 Trojan-go
+</span></span><span class="line"><span class="cl">https://api.qrserver.com/v1/create-qr-code/?size=400x400&amp;data=trojan%3a%2f%2f314a9f8dbb%40lax.XXXX.org%3a443%3fpeer%3dlax.XXXX.org%26sni%3dlax.XXXX.org%23lax.XXXX.org_trojan
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4.打开ufw
+</span></span><span class="line"><span class="cl">  由于trojan-go安装时会关ufw, 安装完成需要立即打开ufw, 并让ufw在机器启动时自启动
+</span></span><span class="line"><span class="cl"># ufw enable; systemctl enable ufw
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">5.修改
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">1) 改密码
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">   Trojan-go密码在/root/trojan-go/server.json, 找 &#34;password&#34;: [
+</span></span><span class="line"><span class="cl"># vim /root/trojan-go/server.json
+</span></span><span class="line"><span class="cl">   修改密码&#34;XXXXXXXX&#34;后, 重启trojan-go
+</span></span><span class="line"><span class="cl"># systemctl restart trojan-go.service
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">2) 改伪装网站
+</span></span><span class="line"><span class="cl">   见 &#34;..\更换伪装网站页面.txt&#34; 文件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">6. 测试 ------ 以前的测试
+</span></span><span class="line"><span class="cl">1) Trojan-go
+</span></span><span class="line"><span class="cl">    在主路由上测试:
+</span></span><span class="line"><span class="cl">    ShadowSocksR Plus+上:  可以跑通
+</span></span><span class="line"><span class="cl">    PassWall上:                       不通
+</span></span><span class="line"><span class="cl">2) XRay
+</span></span><span class="line"><span class="cl">    在Q7路由上测试(主路由不支持):
+</span></span><span class="line"><span class="cl">    PassWall上:                      可以跑通, 但延时很大
+</span></span><span class="line"><span class="cl">    ShadowSocksR Plus+上: 不通
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="更换伪装网站页面">更换伪装网站页面</h3>
+<p>在github.com上找github.io网站, clone下来, 简单处理下就可以使用</p>
+<h3 id="设置时钟--设置定时重启">设置时钟 + 设置定时重启</h3>
+<p>其中的crontab时间, 可以参考 <a class="link" href="/p/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%AE%B0%E5%BD%95/#crontab%E6%89%80%E7%94%A8%E6%97%B6%E5%8C%BA" >各种问题汇总记录 #crontab所用时区</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">实际仅修改的/etc/crontab
+</span></span><span class="line"><span class="cl">    注: 以下为修改后的版本
+</span></span><span class="line"><span class="cl">    # cat /etc/crontab 
+</span></span><span class="line"><span class="cl">        # /etc/crontab: system-wide crontab
+</span></span><span class="line"><span class="cl">        # Unlike any other crontab you don&#39;t have to run the `crontab&#39;
+</span></span><span class="line"><span class="cl">        # command to install the new version when you edit this file
+</span></span><span class="line"><span class="cl">        # and files in /etc/cron.d. These files also have username fields,
+</span></span><span class="line"><span class="cl">        # that none of the other crontabs do.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        SHELL=/bin/sh
+</span></span><span class="line"><span class="cl">        PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 增加这行, 设置cron所用的时区为中国(已确认可用)
+</span></span><span class="line"><span class="cl">        CRON_TZ=Asia/Shanghai
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # m h dom mon dow user  command
+</span></span><span class="line"><span class="cl">        17 *    * * *   root    cd / &amp;&amp; run-parts --report /etc/cron.hourly
+</span></span><span class="line"><span class="cl">        25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.daily )
+</span></span><span class="line"><span class="cl">        47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.weekly )
+</span></span><span class="line"><span class="cl">        52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.monthly )
+</span></span><span class="line"><span class="cl">        # 由于设置了CRON_TZ为中国, 这里的时间是写中国时间.
+</span></span><span class="line"><span class="cl">        # 经测试可用
+</span></span><span class="line"><span class="cl">        # 每周二/四/六/日(中国时间)早上5点自动重启
+</span></span><span class="line"><span class="cl">         10 04 * * 2,4,6,0 root reboot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     设置为: 每周2,4,6,0 _ GMT时间20:10分(中国时间4:10)用户root重启
+</span></span><span class="line"><span class="cl">     For: 
+</span></span><span class="line"><span class="cl">     为了和用户restart-cron一致
+</span></span><span class="line"><span class="cl">	# crontab -l
+</span></span><span class="line"><span class="cl">	10 4 * * 0,1,2,3,4,5,6 systemctl restart trojan-go.service
+</span></span><span class="line"><span class="cl">* 经查找, 这个配置是在/var/spool/cron/crontabs/root中进行配置, 如下:
+</span></span><span class="line"><span class="cl"># cat /var/spool/cron/crontabs/root
+</span></span><span class="line"><span class="cl"># DO NOT EDIT THIS FILE - edit the master and reinstall.
+</span></span><span class="line"><span class="cl"># (- installed on Thu Oct 20 14:23:24 2022)
+</span></span><span class="line"><span class="cl"># (Cron version -- $Id: crontab.c,v 2.13 1994/01/17 03:20:37 vixie Exp $)
+</span></span><span class="line"><span class="cl">10 4 * * 0,1,2,3,4,5,6 systemctl restart trojan-go.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -771,7 +1324,47 @@ crontab -e是编辑用户任务, crontab -l是显示用户任务.</p>
             >
 
             </main>
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#在ubuntu18上安装翻墙服务器迁移">在Ubuntu18上安装翻墙服务器(迁移)</a></li>
+    <li><a href="#在ubuntu22上安装trojan服务">在Ubuntu22上安装Trojan服务</a>
+      <ol>
+        <li><a href="#操作系统选用ubuntu-2204lts">操作系统选用Ubuntu 22.04LTS</a></li>
+        <li><a href="#重置服务器并配置-如果需要">重置服务器并配置 (如果需要)</a></li>
+        <li><a href="#安装trojan-go-简单安装">安装trojan-go 简单安装</a></li>
+        <li><a href="#更换伪装网站页面">更换伪装网站页面</a></li>
+        <li><a href="#设置时钟--设置定时重启">设置时钟 + 设置定时重启</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 

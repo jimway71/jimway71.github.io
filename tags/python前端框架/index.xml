@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PYTHON前端框架 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/</link>
+        <description>Recent content in PYTHON前端框架 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 18 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PYTHON前端框架比较及选择</title>
+        <link>https://jimway71.github.io/p/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BE%83%E5%8F%8A%E9%80%89%E6%8B%A9/</link>
+        <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BE%83%E5%8F%8A%E9%80%89%E6%8B%A9/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-48.jpg" alt="Featured image of post PYTHON前端框架比较及选择" /&gt;&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythonmana.com/2022/142/202205222141098572.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Comparison of several Python front end frameworks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.361shipin.com/blog/1527514235624488960&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PYTHON前端几个框架的比较&lt;/a&gt; - 上面文档的中文版本+总结&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jishuin.proginn.com/p/763bfbd70ff8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一个傻瓜式构建可视化web的Python神器&lt;/a&gt; - streamlit&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://icode.best/i/13198744042979&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python+Steamlit快速开发可视化web页面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/topic/21740196/hot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zhihu-streamlit&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streamlit documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pywebio.readthedocs.io/zh_CN/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyWebIO Docs中文版&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/NNNJ9355/article/details/107319582&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python 竟然也可以写网页前端了&lt;/a&gt; - 使用的是brython&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/NNNJ9355/article/details/107319582&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用纯Python就能写一个漂亮的网页&lt;/a&gt; - 使用的是remi&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/limaning/article/details/104988743&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streamlit安装设置运行三连&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;比较streamlitpywebiobrythonremi这四种前段框架&#34;&gt;比较Streamlit、pywebio、Brython、remi这四种前段框架&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;框架名&lt;/th&gt;
+&lt;th&gt;官网&lt;/th&gt;
+&lt;th&gt;许可&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;th&gt;教程&lt;/th&gt;
+&lt;th&gt;资源&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;streamlit&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;streamlit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://streamlit.io/terms-of-use&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apache 2.0&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;绘图功能挺强的，demo中就有一些画图的酷炫示例&lt;br&gt;很多的官方demo&lt;br&gt;每当你对Excel文件进行更改保存，Web页面还能够实时进行更新，确实挺不错的&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/MarcSkovMadsen/awesome-streamlit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;各类资源&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pywebio&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pyweb.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pywebio&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pywebio/PyWebIO/blob/dev/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MIT&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;有丰富的官方示例&lt;br&gt;有很多demo&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pywebio.readthedocs.io/zh_CN/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyWebIO官方使用手册中文版&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Brython&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://brython.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Brython&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/brython-dev/brython/blob/master/LICENCE.txt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BSD 3&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;有一些示例，但是并不酷炫&lt;br&gt;似乎是一个在JS中使用python语法的框架&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://brython.info/static_doc/en/intro.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;brython官方教程&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;remi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;remi&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apache License 2.0&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;有一些网友写的教程&lt;br&gt;似乎与streamlit比较类似&lt;br&gt;有一个GUI的设计工具&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;说明书在Github首页&lt;/a&gt;, 很简单&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;streamlit&lt;/strong&gt;&lt;/a&gt;的文档很丰富(缺官方中文版, 有非官方中文版本-&lt;a class=&#34;link&#34; href=&#34;https://codeantenna.com/a/WRf02U2lN6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streamlit API文档中文版&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://cw.hubwiz.com/card/c/streamlit-manual/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streamlit开发手册&lt;/a&gt;), 资源多, 功能强, 除上面所述功能外, 还能用于机器学习等功能, 在&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/topic/21740196/hot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zhihu-streamlit&lt;/a&gt;中有不少介绍, 应当&lt;strong&gt;首先考虑选用&lt;/strong&gt;。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -9,7 +9,7 @@
 <meta property='og:description' content='包括Python、PyCharm、PySide6、Nuitka'>
 <meta property='og:url' content='https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/'>
 <meta property='og:site_name' content='点滴随记'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='PyCharm' /><meta property='article:tag' content='PySide6' /><meta property='article:tag' content='auto-py-to-exe' /><meta property='article:tag' content='easycython' /><meta property='article:tag' content='Nuitka' /><meta property='article:published_time' content='2022-08-30T11:53:00&#43;08:00'/><meta property='article:modified_time' content='2022-08-30T11:53:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-28.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='PyCharm' /><meta property='article:tag' content='PySide6' /><meta property='article:tag' content='auto-py-to-exe' /><meta property='article:tag' content='easycython' /><meta property='article:tag' content='Nuitka' /><meta property='article:tag' content='streamlit' /><meta property='article:tag' content='pip' /><meta property='article:published_time' content='2022-08-30T11:53:00&#43;08:00'/><meta property='article:modified_time' content='2022-08-30T11:53:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-28.jpg' />
 <meta name="twitter:title" content="安装Python运行环境">
 <meta name="twitter:description" content="包括Python、PyCharm、PySide6、Nuitka"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-28.jpg' />
@@ -324,6 +324,10 @@
                 Blog
             </a>
         
+            <a href="/categories/%E5%BC%80%E5%8F%91/" >
+                开发
+            </a>
+        
     </header>
     
 
@@ -367,7 +371,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 11 分钟
+                    阅读时长: 16 分钟
                 </time>
             </div>
         
@@ -381,8 +385,9 @@
     <section class="article-content">
     
     
-    <h1 id="在windows系统上安装python运行环境">在Windows系统上安装Python运行环境</h1>
-<h2 id="python语言相关">Python语言相关</h2>
+    <p>一些Python相关链接: <a class="link" href="/p/%e7%9f%a5%e4%b9%8e%e9%93%be%e6%8e%a5/#python" >Links</a></p>
+<h2 id="在windows系统上安装python运行环境">在Windows系统上安装Python运行环境</h2>
+<h3 id="python语言相关">Python语言相关</h3>
 <ul>
 <li>Python官网: <a class="link" href="https://www.python.org/"  target="_blank" rel="noopener"
     >https://www.python.org/</a></li>
@@ -396,7 +401,7 @@
 <p>Microsoft Store 包 is a simple installation of Python that is suitable for running scripts and packages, and using IDLE or other development environments. It requires Windows 10 and above, but can be safely installed without corrupting other programs. It also provides many convenient commands for launching Python and its tools.</p>
 </blockquote>
 <p>但我使用Microsoft Store安装Python后(应该是Python 3.7), 再安装auto-py-to-exe, 发现auto-py-to-exe不能正常运行, 报错说&quot;不能找到指定目录的Python&quot;, 因此还是需要使用Python官网提供的安装包进行安装。</p>
-<h2 id="pycharm开发环境">Pycharm开发环境</h2>
+<h3 id="pycharm开发环境">Pycharm开发环境</h3>
 <p>PyCharm是一个用于计算机编程的集成开发环境(IDE)，主要用于Python语言开发，由捷克公司<a class="link" href="https://www.jetbrains.com/"  target="_blank" rel="noopener"
     >JetBrains</a>开发，提供代码分析、图形化调试器，集成测试器、集成版本控制系统，并支持使用<a class="link" href="https://www.djangoproject.com/"  target="_blank" rel="noopener"
     >Django</a>进行网页开发。</p>
@@ -408,7 +413,7 @@
 <li><a class="link" href="https://blog.csdn.net/fmyhust/article/details/104548217"  target="_blank" rel="noopener"
     >Pycharm 外部工具设置</a></li>
 </ul>
-<h2 id="qt图形框架模块pyside6">Qt图形框架模块PySide6</h2>
+<h3 id="qt图形框架模块pyside6">Qt图形框架模块PySide6</h3>
 <p><a class="link" href="https://pypi.org/project/PySide6/"  target="_blank" rel="noopener"
     >PySide6</a>是来自于Qt for Python项目的官方Python模块，它提供了对完整Qt 6.0+框架的访问。</p>
 <ul>
@@ -429,8 +434,8 @@
 	
 	
 ></p>
-<h2 id="编译打包工具">编译打包工具</h2>
-<h3 id="auto-py-to-exe">auto-py-to-exe</h3>
+<h3 id="编译打包工具">编译打包工具</h3>
+<h4 id="auto-py-to-exe">auto-py-to-exe</h4>
 <p>Auto PY to EXE是一个基于Eel 和PyInstaller构建的、通过简单的UI界面将python项目中的.py文件(可以是单个py文件或多个py文件)打包为.exe文件的简单工具，与PyInstaller相比，Auto PY to EXE更简单直观，可以自动生成执行转换代码，进而将python程序打包为exe文件。</p>
 <ul>
 <li>官网: <a class="link" href="https://pypi.org/project/auto-py-to-exe/"  target="_blank" rel="noopener"
@@ -441,14 +446,14 @@
 <li>使用参考: <a class="link" href="https://www.cnblogs.com/cfld/p/16258446.html"  target="_blank" rel="noopener"
     >python打包教程</a></li>
 </ul>
-<h3 id="easycython">easycython</h3>
+<h4 id="easycython">easycython</h4>
 <p>easycython.py是一个脚本，它将尝试自动将一个或多个.pyx 文件转换为相应的已编译.pyd|.so的二进制模块。<br>
 easycython.py is a script that will attempt to automatically convert one or more .pyx files into the corresponding compiled .pyd|.so binary modules。</p>
 <ul>
 <li>官网: <a class="link" href="https://pypi.org/project/easycython/"  target="_blank" rel="noopener"
     >https://pypi.org/project/easycython/</a></li>
 </ul>
-<h3 id="nuitka编译器">nuitka编译器</h3>
+<h4 id="nuitka编译器">nuitka编译器</h4>
 <p>Nuitka是一个Python的替代编译器。 它可以无缝地替代和扩展Python的解释和编译工作。</p>
 <ul>
 <li>Nuitka官网: <a class="link" href="https://nuitka.net/index.html"  target="_blank" rel="noopener"
@@ -651,8 +656,8 @@ c:\&gt;pip install ordered-set Nuitka</p>
 改用最新版本Python(当前为3.10.6)后, 未再出现这个问题。</p>
 </li>
 </ul>
-<h2 id="在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍">在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)</h2>
-<h3 id="在windows系统上安装python">在Windows系统上安装Python</h3>
+<h3 id="在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍">在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)</h3>
+<h4 id="在windows系统上安装python">在Windows系统上安装Python</h4>
 <p>下载当前最新的<a class="link" href="https://www.python.org/downloads/release/python-3106/"  target="_blank" rel="noopener"
     >3.10版本</a>, 选择<a class="link" href="https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe"  target="_blank" rel="noopener"
     >Windows installer (64-bit)</a>进行安装, 安装目录选择缺省目录, 安装最后选择&quot;disable path length limit&rdquo;。<br>
@@ -694,7 +699,7 @@ c:\&gt;pip install ordered-set Nuitka</p>
 ></li>
 <li>设置完成后, 就可以在命令行中执行python/pip等命令。</li>
 </ul>
-<h3 id="在windows系统上安装pycharm">在Windows系统上安装Pycharm</h3>
+<h4 id="在windows系统上安装pycharm">在Windows系统上安装Pycharm</h4>
 <p>从<a class="link" href="https://www.jetbrains.com/pycharm/download/#section=windows"  target="_blank" rel="noopener"
     >Download PyCharm</a>下载Windows+Community版本。<br>
 当前版本为<a class="link" href="https://download-cdn.jetbrains.com/python/pycharm-community-2022.2.1.exe"  target="_blank" rel="noopener"
@@ -737,8 +742,8 @@ c:\&gt;pip install ordered-set Nuitka</p>
 	
 ></li>
 </ul>
-<h3 id="在windows系统上安装pyside6httpspypiorgprojectpyside6">在Windows系统上安装<a class="link" href="https://pypi.org/project/PySide6/"  target="_blank" rel="noopener"
-    >PySide6</a></h3>
+<h4 id="在windows系统上安装pyside6httpspypiorgprojectpyside6">在Windows系统上安装<a class="link" href="https://pypi.org/project/PySide6/"  target="_blank" rel="noopener"
+    >PySide6</a></h4>
 <ul>
 <li>
 <p>可以在&quot;Window命令提示符&quot;里安装PySide6, 也可以在PyCharm的&quot;终端&quot;里操作(建议), 命令很简单, 如下:</p>
@@ -758,8 +763,8 @@ c:\&gt;pip install ordered-set Nuitka</p>
 <li>本次安装后, 在Pycharm中试着运行Helloworld.py(需要PySide6支持)时, 报&quot;ModuleNotFoundError: No module named &lsquo;PySide6&rsquo;&ldquo;错误。<br>
 本问题未确认原因, 也未找到解决方法。</li>
 </ul>
-<h3 id="在windows系统上安装nuitkahttpsnuitkanetindexhtml">在Windows系统上安装<a class="link" href="https://nuitka.net/index.html"  target="_blank" rel="noopener"
-    >Nuitka</a></h3>
+<h4 id="在windows系统上安装nuitkahttpsnuitkanetindexhtml">在Windows系统上安装<a class="link" href="https://nuitka.net/index.html"  target="_blank" rel="noopener"
+    >Nuitka</a></h4>
 <ul>
 <li>安装gcc编译器<br>
 安装参考: <a class="link" href="https://zhuanlan.zhihu.com/p/133303836"  title="About Nuitka-&gt;"
@@ -788,7 +793,7 @@ c:\&gt;pip install ordered-set Nuitka</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="安装完成后-可以使用nuitka进行编译">安装完成后, 可以使用Nuitka进行编译</h3>
+<h4 id="安装完成后-可以使用nuitka进行编译">安装完成后, 可以使用Nuitka进行编译</h4>
 <p>Nuitka编译常用参数(From <a class="link" href="https://www.cxymm.net/article/djj199301111/120535999"  target="_blank" rel="noopener"
     >Nuitka 打包常用命令</a>):</p>
 <div class="highlight"><div class="chroma">
@@ -900,6 +905,355 @@ c:&gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress -
 </div>
 </div><p>注: 以上文件列表, 在不同的机器上, 可能会不一样!</p>
 <p>在编译过程中如果遇到异常, 可以参考&rdquo;<a class="link" href="/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/#nuitka%E7%BC%96%E8%AF%91%E5%99%A8" >nuitka编译器</a>&ldquo;后面所列的<strong>报错信息及处理</strong>。</p>
+<h2 id="在armbian系统上安装python运行环境">在Armbian系统上安装Python运行环境</h2>
+<p>参考: <a class="link" href="https://blog.csdn.net/qq_33289175/article/details/117389760"  target="_blank" rel="noopener"
+    >armbian下安装不同版本python3</a><br>
+结果: <strong><font color=red>安装(部分)失败, 无法使用</font></strong> _ 无法使用streamlit, 改到Ubuntu22.04上使用。</p>
+<h3 id="armbian系统环境">Armbian系统环境</h3>
+<p>使用的Armbian系统参考</p>
+<ul>
+<li><a class="link" href="p/armbian-on-tv-box/" >Armbian on TV box</a></li>
+<li><a class="link" href="p/%e7%94%a8r3300l%e5%81%9a%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8/" >用R3300L做家用服务器</a></li>
+</ul>
+<p>已安装的Python版本信息如下:<br>
+<img src="/img/28-Python-10.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+><br>
+考虑到<a class="link" href="https://streamlit.io/"  target="_blank" rel="noopener"
+    >streamlit</a>的要求, Python版本应该为3.7、3.8、3.9 或 3.10, 因此需要安装3.7以上版本的Python<br>
+strealit对Python版本要求参考官网说明: <a class="link" href="https://docs.streamlit.io/knowledge-base/using-streamlit/sanity-checks"  target="_blank" rel="noopener"
+    >Are you using a Streamlit-supported version of Python</a></p>
+<h3 id="在armbian上编译安装python">在Armbian上编译安装Python</h3>
+<ul>
+<li>由于Armbian系统特别保守, 对软件求稳定而不求新, 因此使用apt命令查询得到, 当前可更新版本的Python版本号为3.6.9-1, 并不符合streamlit和大多数主流Python代码的要求(&gt;3.7), 因此无法使用apt进行安装</li>
+</ul>
+<p><a class="link" href="https://www.python.org/"  target="_blank" rel="noopener"
+    >Python官网</a>上的<a class="link" href="https://www.python.org/downloads/"  target="_blank" rel="noopener"
+    >下载列表</a>中仅给Linux/Unix类提供了源代码包, 因此需要编译安装。</p>
+<ul>
+<li>首先下载Python源代码包: <a class="link" href="https://www.python.org/downloads/release/python-3108/"  target="_blank" rel="noopener"
+    >Latest Python 3 Release - Python 3.10.8</a></li>
+<li>由于硬件系统的限制, 可能需要增加交换分区<br>
+参考<a class="link" href="/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/#%E7%BC%96%E8%AF%91%E6%93%8D%E4%BD%9C" >在R3300L类+Armbian上安装Hugo服务器#编译操作</a>中&quot;在R3300L上准备编译Hugo的环境&rdquo;</li>
+</ul>
+<p>操作命令如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 以普通用户(jim)身份运行  
+</span></span><span class="line"><span class="cl"># Python源代码包文件Python-3.10.8.tgz位于/tmp/目录下  
+</span></span><span class="line"><span class="cl"># 进行用户package目录  
+</span></span><span class="line"><span class="cl">$ cd /usr/lib/  
+</span></span><span class="line"><span class="cl"># 解压源代码包, 以超级用户身份运行(sudo)  
+</span></span><span class="line"><span class="cl">$ sudo tar zxvf /tmp/Python-3.10.8.tgz  
+</span></span><span class="line"><span class="cl"># 进行解压后的源代码目录  
+</span></span><span class="line"><span class="cl">$ cd Python-3.10.8/
+</span></span><span class="line"><span class="cl"># 将源代码目录文件属主改为普通用户(jim)  
+</span></span><span class="line"><span class="cl">$ sudo chown jim:jim * -R  
+</span></span><span class="line"><span class="cl"># 开始编译python: 执行./configure
+</span></span><span class="line"><span class="cl">$ ./configure --prefix=/usr/local/lib/Python-3.10.8  
+</span></span><span class="line"><span class="cl"># 编译  
+</span></span><span class="line"><span class="cl">$ make  
+</span></span><span class="line"><span class="cl"># 安装, 以超级用户身份执行(sudo)  
+</span></span><span class="line"><span class="cl">$ sudo make install  
+</span></span><span class="line"><span class="cl"># 查看编译生成的python运行文件版本信息  
+</span></span><span class="line"><span class="cl">$ ./python -V  
+</span></span><span class="line"><span class="cl"># 将编译生成的python建立软链接到/usr/bin/python3, 以超级用户身份执行(sudo)  
+</span></span><span class="line"><span class="cl">$ sudo ln -snf /usr/lib/Python-3.10.8/python /usr/bin/python3  
+</span></span><span class="line"><span class="cl"># 查看做软链接后的python3版本信息  
+</span></span><span class="line"><span class="cl">$ python3 -V  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>更新pip:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ python3 -m ensurepip
+</span></span><span class="line"><span class="cl">$ python3 -m pip install --upgrade pip
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>跟着参考文档一通操作, ./configure成功, make成功, make install失败, Python3可以运行, 确认版本也正确, 但有时会报一堆错误。&hellip; 不找原因了。<br>
+改<strong>在WSL(Ubuntu 18.0.4LTS)上操作, <del>一切正常</del> 还是有问题</strong>。<br>
+(Ubuntu18.0.4LTS上原缺省安装的python版本是3.6.9)</p>
+<p>另一可供参考文档:<br>
+<a class="link" href="https://bynss.com/linux/474572.html"  target="_blank" rel="noopener"
+    >怎样在 Debian 10 上安装 Streamlit</a></p>
+<p>改用apt安装, 参考:<br>
+<a class="link" href="https://blog.csdn.net/bz0446/article/details/105500585"  target="_blank" rel="noopener"
+    >ubuntu18.04通过apt安装python3.7.7与pip3.7最新版本</a></p>
+<h3 id="在ubuntu上安装-更新-的python版本及pip工具">在Ubuntu上安装 &ldquo;<strong>更新</strong>&rdquo; 的Python版本及pip工具</h3>
+<p>同样适用于Armbian系统(在Ubuntu Bionic with Armbian Linux 5.3.0-aml-g12上测试过, 并成功安装Python3.7/Python3.8, 但无法用apt安装pip, 可能需要按下述参考中的说明操作)</p>
+<p>由于Ubuntu发行版经常提供较旧但稳定的软件版本, 因此经常会发现在Ubuntu软件仓库里能下载的软件总比相应软件可找到的版本旧, 而且可能旧到无法满足要求。<br>
+除了从源代码安装外, 由于部分软件维护了ppa源, 所以这部分软件还可以通过ppa源安装较新的版本。</p>
+<p>用法参考: <a class="link" href="https://blog.csdn.net/bz0446/article/details/105500585"  target="_blank" rel="noopener"
+    >ubuntu18.04通过apt安装python3.7.7与pip3.7最新版本（python3.8同理）</a></p>
+<p><strong>本方法也同样适用于在Ubuntu(Armbian)上安装&quot;更新&quot;的其它Ubuntu未提供版本的应用</strong></p>
+<p>● 更新软件包列表并安装必备组件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># update更新  
+</span></span><span class="line"><span class="cl">$ sudo apt update  
+</span></span><span class="line"><span class="cl"># 用于添加ppa源的小工具, ubuntu server缺省没有安装  
+</span></span><span class="line"><span class="cl">$ sudo apt install software-properties-common  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>● 将Deadsnakes PPA添加到来源列表中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 有确认提示按回车继续  
+</span></span><span class="line"><span class="cl">$ sudo add-apt-repository ppa:deadsnakes/ppa  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>● 使用以下命令安装<strong>更新版本</strong>Python</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 搜索指定版本  
+</span></span><span class="line"><span class="cl">$ sudo apt search python3.8  
+</span></span><span class="line"><span class="cl"># 安装指定版本
+</span></span><span class="line"><span class="cl">$ sudo apt install python3.8  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>● 确认安装的版本信息</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ python3.8 -V  
+</span></span><span class="line"><span class="cl">Python 3.8.0  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>● 安装pip<br>
+如果未安装curl, 需要使用命令&quot;sudo apt install curl&quot;进行安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 下载最新的官方pip  
+</span></span><span class="line"><span class="cl">$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py  
+</span></span><span class="line"><span class="cl"># 安装 python-distutils  
+</span></span><span class="line"><span class="cl">$ sudo apt install python3-distutils  
+</span></span><span class="line"><span class="cl">~~# 或 高版本的python3(测试中未调用)~~  
+</span></span><span class="line"><span class="cl">~~$ sudo apt install python3.9-distutils~~  
+</span></span><span class="line"><span class="cl"># 直接获取 pip3.8  
+</span></span><span class="line"><span class="cl">$ sudo python3.8 get-pip.py  
+</span></span><span class="line"><span class="cl"># 测试安装(launchpadlib)  
+</span></span><span class="line"><span class="cl">$ pip3.8 install launchpadlib  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>● 测试是否安装成功</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pip3.8 --version  
+</span></span><span class="line"><span class="cl">pip 22.3 from /usr/local/lib/python3.8/dist-packages/pip (python 3.8)  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>上述命令在在Armbian(Ubuntu Bionic with Armbian Linux 5.3.0-aml-g12)上测试并通过</strong></p>
+<p>● 使用pip3.8安装<a class="link" href="/p/python%e5%89%8d%e7%ab%af%e6%a1%86%e6%9e%b6%e6%af%94%e8%be%83%e5%8f%8a%e9%80%89%e6%8b%a9/#%e6%af%94%e8%be%83streamlitpywebiobrythonremi%e8%bf%99%e5%9b%9b%e7%a7%8d%e5%89%8d%e6%ae%b5%e6%a1%86%e6%9e%b6" >streamlit</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pip3.8 install streamlit
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">      aarch64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -fPIC -I/usr/include/python3.8 -c lib/zoneinfo_module.c -o build/temp.linux-aarch64-cpython-38/lib/zoneinfo_module.o -std=c99
+</span></span><span class="line"><span class="cl">      lib/zoneinfo_module.c:1:10: fatal error: Python.h: No such file or directory
+</span></span><span class="line"><span class="cl">       #include &#34;Python.h&#34;
+</span></span><span class="line"><span class="cl">                ^~~~~~~~~~
+</span></span><span class="line"><span class="cl">      compilation terminated.
+</span></span><span class="line"><span class="cl">      error: command &#39;/usr/bin/aarch64-linux-gnu-gcc&#39; failed with exit code 1
+</span></span><span class="line"><span class="cl">      [end of output]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  note: This error originates from a subprocess, and is likely not a problem with pip.
+</span></span><span class="line"><span class="cl">  ERROR: Failed building wheel for backports.zoneinfo
+</span></span><span class="line"><span class="cl">  Building wheel for pyrsistent (pyproject.toml) ... done
+</span></span><span class="line"><span class="cl">  Created wheel for pyrsistent: filename=pyrsistent-0.18.1-cp38-cp38-linux_aarch64.whl size=56386 sha256=70e6458eae430b5065d6e229f19e7f0f96b55456d32162c31ff47846aa6d6d6b
+</span></span><span class="line"><span class="cl">  Stored in directory: /home/jimway/.cache/pip/wheels/a5/15/17/a3a9eec63321dd22dc53130d06b7d25f00d129693bec6fc36e
+</span></span><span class="line"><span class="cl">Successfully built validators pyrsistent
+</span></span><span class="line"><span class="cl">Failed to build backports.zoneinfo
+</span></span><span class="line"><span class="cl">ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用pip3.8安装streamlit失败, 可能与gcc版本有关(放弃)。</p>
+<h2 id="基于windowswsl-安装ubuntu2204">基于Windows+WSL, 安装Ubuntu22.04</h2>
+<ul>
+<li>当前Ubuntu18.04LTS已经比较旧了, 很多仓库里的软件版本旧到无法使用。</li>
+<li>试用了最新的Ubuntu22.04, 发现缺省有crontab, /etc/rc.local的问题解决起来似乎也不太麻烦 (参考: <a class="link" href="https://sevenrts.com/40.html"  target="_blank" rel="noopener"
+    >Ubuntu22.04 解决开机无法自动启动服务</a>)。</li>
+</ul>
+<p>所以是时候用Ubuntu22.04代替Ubuntu18.04了。<br>
+注: <strong>WSL中不存放重要数据</strong>。</p>
+<h3 id="在windows卸载原有wsl-ubuntu1804">在Windows卸载(原有)WSL Ubuntu18.04</h3>
+<p>在Windows菜单里找到Ubuntu18.04LTS, 右键点击并选择应用设置-&gt;卸载</p>
+<h3 id="在windows中安装wsl-ubuntu2204">在Windows中安装WSL Ubuntu22.04</h3>
+<p>● 打开&quot;Microsoft Store&quot;, 搜索Ubuntu, 点击选择Ubuntu22.04, 下载并安装后, 点击使用。<br>
+● 进入WSL界面后, 更新软件仓库信息。<br>
+修改镜像软件源参考: <a class="link" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/"  target="_blank" rel="noopener"
+    >清华大学开源软件镜像站</a><br>
+<a class="link" href="/p/%e5%90%84%e7%a7%8d%e9%97%ae%e9%a2%98%e6%b1%87%e6%80%bb%e8%ae%b0%e5%bd%95/#ubuntu%e5%ae%98%e6%96%b9%e9%95%9c%e5%83%8f%e7%ab%99%e5%88%97%e8%a1%a8" >Ubuntu官方镜像站列表</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 修改为国内镜像软件源  
+</span></span><span class="line"><span class="cl">$ sudo sed -i &#34;s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&#34; /etc/apt/sources.list
+</span></span><span class="line"><span class="cl">$ sudo sed -i &#34;s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&#34; /etc/apt/sources.list  
+</span></span><span class="line"><span class="cl">$ sudo apt update  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="在windows-wsl-ubuntu220中安装python3pipstreamlit">在Windows WSL Ubuntu22.0中安装Python3+pip+streamlit</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ sudo apt install python-is-python3  
+</span></span><span class="line"><span class="cl">$ python -V  
+</span></span><span class="line"><span class="cl">Python 3.10.6  
+</span></span><span class="line"><span class="cl">$ sudo apt install python3-pip  
+</span></span><span class="line"><span class="cl">$ pip -V  
+</span></span><span class="line"><span class="cl">pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>● 用pip安装<a class="link" href="/p/python%e5%89%8d%e7%ab%af%e6%a1%86%e6%9e%b6%e6%af%94%e8%be%83%e5%8f%8a%e9%80%89%e6%8b%a9/#%e6%af%94%e8%be%83streamlitpywebiobrythonremi%e8%bf%99%e5%9b%9b%e7%a7%8d%e5%89%8d%e6%ae%b5%e6%a1%86%e6%9e%b6" >streamlit</a></p>
+<blockquote>
+<p>$ pip install streamlit<br>
+&hellip;&hellip;<br>
+Successfully installed altair-4.2.0 cachetools-5.2.0 commonmark-0.9.1 decorator-5.1.1 entrypoints-0.4 gitdb-4.0.9 gitpython-3.1.29 numpy-1.23.4 packaging-21.3 pandas-1.5.1 pillow-9.2.0 protobuf-3.20.3 pyarrow-9.0.0 pydeck-0.8.0b4 pygments-2.13.0 pympler-1.0.1 python-dateutil-2.8.2 pytz-deprecation-shim-0.1.0.post0 rich-12.6.0 semver-2.13.0 smmap-5.0.0 streamlit-1.13.0 toml-0.10.2 toolz-0.12.0 tornado-6.2 typing-extensions-4.4.0 tzdata-2022.5 tzlocal-4.2 validators-0.20.0 watchdog-2.1.9</p>
+</blockquote>
+<p>● streamlit安装在~/.local/bin/目录下。<br>
+查看streamlit版本信息:</p>
+<blockquote>
+<p>$ ~/.local/bin/streamlit  &ndash;version<br>
+Streamlit, version 1.13.0</p>
+</blockquote>
+<p>测试streamlit内置hello程序:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/.local/bin/streamlit hello
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  Welcome to Streamlit. Check out our demo in your browser.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  Network URL: http://192.168.1.230:8501
+</span></span><span class="line"><span class="cl">  External URL: http://84.133.63.150:8501
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  Ready to create your own Python apps super quickly?
+</span></span><span class="line"><span class="cl">  Head over to https://docs.streamlit.io
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  May you create awesome apps!  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用正常。</p>
 
 </section>
 
@@ -919,6 +1273,10 @@ c:&gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress -
             <a href="/tags/easycython/">easycython</a>
         
             <a href="/tags/nuitka/">Nuitka</a>
+        
+            <a href="/tags/streamlit/">Streamlit</a>
+        
+            <a href="/tags/pip/">pip</a>
         
     </section>
 
@@ -952,75 +1310,18 @@ c:&gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress -
             
                 
 <article class="has-image">
-    <a href="/p/2022-ukraine-war/">
+    <a href="/p/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BE%83%E5%8F%8A%E9%80%89%E6%8B%A9/">
         
         
             <div class="article-image">
                 
-                    <img src="/wallpaper/Stamp_of_Ukraine_s1985.jpg" loading="lazy" data-key="" data-hash="/wallpaper/Stamp_of_Ukraine_s1985.jpg"/>
+                    <img src="/wallpaper/wallpaper-48.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-48.jpg"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">2022 Ukraine War</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/more-links/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/wallpaper/wallpaper-44-c.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-44-c.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">More Links</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E5%B0%86ionos%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%85%A5cloudflare/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/wallpaper/wallpaper-43.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-43.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">将IONOS域名转入Cloudflare</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/app-list/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/wallpaper/NAFO-42.jpg" loading="lazy" data-key="" data-hash="/wallpaper/NAFO-42.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">App List</h2>
+            <h2 class="article-title">PYTHON前端框架比较及选择</h2>
         </div>
     </a>
 </article>
@@ -1040,6 +1341,63 @@ c:&gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress -
 
         <div class="article-details">
             <h2 class="article-title">调查五款Python GUI框架</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/oh-my/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-49.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-49.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Oh My</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%9F%A5%E4%B9%8E%E9%93%BE%E6%8E%A5/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-47.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-47.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">知乎链接</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/2022-ukraine-war/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/Stamp_of_Ukraine_s1985.jpg" loading="lazy" data-key="" data-hash="/wallpaper/Stamp_of_Ukraine_s1985.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2022 Ukraine War</h2>
         </div>
     </a>
 </article>
@@ -1171,23 +1529,41 @@ c:&gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress -
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#python语言相关">Python语言相关</a></li>
-    <li><a href="#pycharm开发环境">Pycharm开发环境</a></li>
-    <li><a href="#qt图形框架模块pyside6">Qt图形框架模块PySide6</a></li>
-    <li><a href="#编译打包工具">编译打包工具</a>
+    <li><a href="#在windows系统上安装python运行环境">在Windows系统上安装Python运行环境</a>
       <ol>
-        <li><a href="#auto-py-to-exe">auto-py-to-exe</a></li>
-        <li><a href="#easycython">easycython</a></li>
-        <li><a href="#nuitka编译器">nuitka编译器</a></li>
+        <li><a href="#python语言相关">Python语言相关</a></li>
+        <li><a href="#pycharm开发环境">Pycharm开发环境</a></li>
+        <li><a href="#qt图形框架模块pyside6">Qt图形框架模块PySide6</a></li>
+        <li><a href="#编译打包工具">编译打包工具</a>
+          <ol>
+            <li><a href="#auto-py-to-exe">auto-py-to-exe</a></li>
+            <li><a href="#easycython">easycython</a></li>
+            <li><a href="#nuitka编译器">nuitka编译器</a></li>
+          </ol>
+        </li>
+        <li><a href="#在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍">在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)</a>
+          <ol>
+            <li><a href="#在windows系统上安装python">在Windows系统上安装Python</a></li>
+            <li><a href="#在windows系统上安装pycharm">在Windows系统上安装Pycharm</a></li>
+            <li><a href="#在windows系统上安装pyside6httpspypiorgprojectpyside6">在Windows系统上安装<a href="https://pypi.org/project/PySide6/">PySide6</a></a></li>
+            <li><a href="#在windows系统上安装nuitkahttpsnuitkanetindexhtml">在Windows系统上安装<a href="https://nuitka.net/index.html">Nuitka</a></a></li>
+            <li><a href="#安装完成后-可以使用nuitka进行编译">安装完成后, 可以使用Nuitka进行编译</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
-    <li><a href="#在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍">在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)</a>
+    <li><a href="#在armbian系统上安装python运行环境">在Armbian系统上安装Python运行环境</a>
       <ol>
-        <li><a href="#在windows系统上安装python">在Windows系统上安装Python</a></li>
-        <li><a href="#在windows系统上安装pycharm">在Windows系统上安装Pycharm</a></li>
-        <li><a href="#在windows系统上安装pyside6httpspypiorgprojectpyside6">在Windows系统上安装<a href="https://pypi.org/project/PySide6/">PySide6</a></a></li>
-        <li><a href="#在windows系统上安装nuitkahttpsnuitkanetindexhtml">在Windows系统上安装<a href="https://nuitka.net/index.html">Nuitka</a></a></li>
-        <li><a href="#安装完成后-可以使用nuitka进行编译">安装完成后, 可以使用Nuitka进行编译</a></li>
+        <li><a href="#armbian系统环境">Armbian系统环境</a></li>
+        <li><a href="#在armbian上编译安装python">在Armbian上编译安装Python</a></li>
+        <li><a href="#在ubuntu上安装-更新-的python版本及pip工具">在Ubuntu上安装 &ldquo;<strong>更新</strong>&rdquo; 的Python版本及pip工具</a></li>
+      </ol>
+    </li>
+    <li><a href="#基于windowswsl-安装ubuntu2204">基于Windows+WSL, 安装Ubuntu22.04</a>
+      <ol>
+        <li><a href="#在windows卸载原有wsl-ubuntu1804">在Windows卸载(原有)WSL Ubuntu18.04</a></li>
+        <li><a href="#在windows中安装wsl-ubuntu2204">在Windows中安装WSL Ubuntu22.04</a></li>
+        <li><a href="#在windows-wsl-ubuntu220中安装python3pipstreamlit">在Windows WSL Ubuntu22.0中安装Python3+pip+streamlit</a></li>
       </ol>
     </li>
   </ol>

@@ -337,6 +337,54 @@
 反正一通操作后, 一切回归正常, 而tcp的端口配置也应该没有改变。 - 不清楚怎么好的!&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;linux系统下的问题&#34;&gt;Linux系统下的问题&lt;/h2&gt;
+&lt;h3 id=&#34;crontab所用时区&#34;&gt;crontab所用时区&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://serverfault.com/questions/791713/what-time-zone-is-a-cron-job-using&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;What time zone is a cron job using?&lt;/a&gt;&lt;br&gt;
+下面的命令返回crontab看到的时区信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在Armbian(Ubuntu Bionic with Armbian Linux 5.3.0-aml-g12)中成功&lt;/li&gt;
+&lt;li&gt;在Ubuntu 16.04.7 LTS中成功(raksmart)&lt;/li&gt;
+&lt;li&gt;在Ubuntu 22.04 LTS中成功(pacificrack)&lt;/li&gt;
+&lt;li&gt;在Ubuntu-22.04中失败(WSL), 报错如下(env报的错):&lt;br&gt;
+Usage: eval `lesspipe`&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# env -i $(cat /proc/$(&amp;lt;/var/run/crond.pid)/environ|xargs -0 echo) date +%Z&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;分解:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/var/run/crond.pid: 取cron的pid号&lt;/li&gt;
+&lt;li&gt;/proc/$(&amp;lt;/var/run/crond.pid)/environ: 取cron的环境变量设置&lt;/li&gt;
+&lt;li&gt;env -i $(cat /proc/$(&amp;lt;/var/run/crond.pid)/environ|xargs -0 echo): 环境变量设置为cron环境变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ubuntu22下cron服务的调用&#34;&gt;Ubuntu22下cron服务的调用&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/zhangxueliang/5456900&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;linux ubuntu22.04 使用cron设置定时启动任务及cron语法详解&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 启动cron服务  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service cron start
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 停用cron服务
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service cron stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看cron服务状态
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service cron status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 重新启动cron服务
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service cron restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;ubuntu官方镜像站列表&#34;&gt;Ubuntu官方镜像站列表&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://launchpad.net/ubuntu/&amp;#43;cdmirrors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Official CD Mirrors for Ubuntu&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;hugo服务器相关问题&#34;&gt;Hugo服务器相关问题&lt;/h2&gt;
 &lt;h3 id=&#34;hugo服务器不支持html标签的问题&#34;&gt;Hugo服务器不支持html标签的问题&lt;/h3&gt;
