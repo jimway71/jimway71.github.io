@@ -532,11 +532,22 @@
 &lt;h2 id=&#34;python&#34;&gt;Python&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/topic/21740196&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;streamlit&lt;/a&gt;&lt;/li&gt;
+    &gt;话题 - streamlit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/569534863&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;我学习Python的三个神级网站 - 萝卜大杂烩的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/55493026/answer/683070334&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;你们都是怎么学 Python 的？ - 量子位的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
+    &gt;你们都是怎么学 Python 的？ - 量子位的回答 - 知乎&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackfrued/Python-100-Days&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Python - 100天从新手到大师&lt;/a&gt; - 上述链接中推荐&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackfrued/Python-Core-50-Courses&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Python语言基础50课&lt;/a&gt; - 上述链接更基础版&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1FT4y1R7sz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;B站-Python零基础快速上手&lt;/a&gt; - 上述的视频教程&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Candysad/Streamlit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 参照官方文档翻译总结&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/469582149&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;算法不会前端，也可以做出好看的界面-Streamlit - 刘聪NLP的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -693,7 +704,7 @@
         <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
         
         <guid>https://jimway71.github.io/p/more-links/</guid>
-        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-44-c.jpg" alt="Featured image of post More Links" /&gt;&lt;h2 id=&#34;资源导航&#34;&gt;资源导航&lt;/h2&gt;
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-44.jpg" alt="Featured image of post More Links" /&gt;&lt;h2 id=&#34;资源导航&#34;&gt;资源导航&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1519,6 +1530,82 @@ More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;2022-russian-invasion-of-ukraine&#34;&gt;2022 Russian invasion of Ukraine&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Russo-Ukrainian Warspotting&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://ukr.warspotting.net/russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ukr.warspotting.net/russia/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://ukr.warspotting.net/static/images/icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;oryx&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Russian losses&lt;/a&gt; &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-ukrainian.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ukraine losses&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.oryxspioenkop.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NAFO&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/search?q=%23nafo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://twitter.com/search?q=%23nafo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://hugo.otcg.org/FixFrmRes/NAFO_Freud_Fella.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;NAFO&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;照片笑话&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://durdom.in.ua/icns/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;弗图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;主机信息&#34;&gt;主机信息&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1602,6 +1689,23 @@ More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/
 &lt;td&gt;国外VPS，国外服务器，国外主机，测评及优惠码&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;2022年便宜高性价比VPS(含最新优惠)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://renzhn.github.io/posts/cheap-vps/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://renzhn.github.io/posts/cheap-vps/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://renzhn.github.io/favicon-16x16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;来自&lt;a class=&#34;link&#34; href=&#34;https://renzhn.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VPS百科&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;&amp;mdash;-&lt;/td&gt;
 &lt;td&gt;&amp;mdash;-&lt;/td&gt;
 &lt;td&gt;&amp;mdash;-&lt;/td&gt;
@@ -1622,82 +1726,6 @@ More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/
 	
 &gt;&lt;/td&gt;
 &lt;td&gt;(Migrated)云资源集合列表 From imba-tjd 谭九鼎&amp;rsquo;s GitHub&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;2022-russian-invasion-of-ukraine&#34;&gt;2022 Russian invasion of Ukraine&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Link&lt;/th&gt;
-&lt;th&gt;Icon&lt;/th&gt;
-&lt;th&gt;Remark&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Russo-Ukrainian Warspotting&lt;/td&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://ukr.warspotting.net/russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://ukr.warspotting.net/russia/&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;https://ukr.warspotting.net/static/images/icon.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;icon&#34;
-	
-	
-&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;oryx&lt;/td&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Russian losses&lt;/a&gt; &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-ukrainian.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Ukraine losses&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;https://www.oryxspioenkop.com/favicon.ico&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;icon&#34;
-	
-	
-&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;NAFO&lt;/td&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/search?q=%23nafo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://twitter.com/search?q=%23nafo&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;http://hugo.otcg.org/FixFrmRes/NAFO_Freud_Fella.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;NAFO&#34;
-	
-	
-&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;照片笑话&lt;/td&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;https://durdom.in.ua/icns/favicon.ico&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/td&gt;
-&lt;td&gt;弗图&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1910,7 +1938,7 @@ More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/
 &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.statista.com/statistics/1155338/residential-real-estate-average-prices-by-market-in-russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;$&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&amp;mdash;-&lt;/td&gt;
-&lt;td&gt;战前战后, &lt;strong&gt;需要跟踪&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;战前战后, &lt;strong&gt;需要跟踪&lt;/strong&gt;&lt;br&gt;2022年暴涨是否与卢布实际汇率相关?&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

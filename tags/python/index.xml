@@ -6,7 +6,2194 @@
         <description>Recent content in python on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 30 Aug 2022 11:53:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python各种接口</title>
+        <link>https://jimway71.github.io/p/python%E5%90%84%E7%A7%8D%E6%8E%A5%E5%8F%A3/</link>
+        <pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/python%E5%90%84%E7%A7%8D%E6%8E%A5%E5%8F%A3/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-50.jpg" alt="Featured image of post Python各种接口" /&gt;&lt;h2 id=&#34;金融数据接口&#34;&gt;金融数据接口&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;国内外金融数据接口大全 From &lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1866258&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用Python轻松获取股票&amp;amp;基金数据&lt;/a&gt;&lt;br&gt;
+findatapy - 获取彭博终端，Quandl和雅虎财经的数据&lt;br&gt;
+googlefinance - 从谷歌财经获取实时股票价格&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/ranaroussi/yfinance&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;yahoo-finance&lt;/a&gt; - 从雅虎财经下载股票报价，历史价格，产品信息和财务报表&lt;br&gt;
+pandas-datareader - 从多个数据源获取经济/金融时间序列，包括谷歌财经，雅虎财经，圣路易斯联储(FRED)，OECD, Fama/French，世界银行，欧元区统计局等，是Pandas生态系统的重要组成&lt;br&gt;
+pandas-finance - 提供高级接口下载和分析金融时间序列&lt;br&gt;
+pyhoofinance - 从雅虎财经批量获取股票数据&lt;br&gt;
+yfinanceapi - 从雅虎财经获取数据&lt;br&gt;
+yql-finance - 从雅虎财经获取数据&lt;br&gt;
+ystockquote - 从雅虎财经获取实时报价&lt;br&gt;
+wallstreet - 实时股票和期权报价&lt;br&gt;
+stock_extractor - 从网络上爬取股票信息&lt;br&gt;
+Stockex - 从雅虎财经获取数据&lt;br&gt;
+finsymbols - 获取全美证券交易所，纽约证券交易所和纳斯达克上市公司的详细数据&lt;br&gt;
+inquisitor - 从Econdb获取经济数据，Econdb是全球经济指标聚合器&lt;br&gt;
+chinesestockapi - 获取A股数据&lt;br&gt;
+exchange - 获取最新的汇率报价&lt;br&gt;
+ticks - 命令行程序，获取股票报价&lt;br&gt;
+pybbg - 彭博终端COM的Python接口&lt;br&gt;
+ccy - 获取外汇数据&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://tushare.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tushare&lt;/a&gt; - 获取中国股票，基金，债券和期货市场的历史数据&lt;br&gt;
+jsm - 获取日本股票市场的历史数据&lt;br&gt;
+cn_stock_src - 从不同数据源获取中国的股票数据&lt;br&gt;
+coinmarketcap - 从coinmarketcap获取数字货币数据&lt;br&gt;
+after-hours - 获取美股盘前和盘后的市场价格&lt;br&gt;
+bronto-python - 整合Bronto API接口&lt;br&gt;
+pytdx - 获取中国国内股票的实时报价&lt;br&gt;
+pdblp - 整合Pandas和彭博终端的公共接口&lt;br&gt;
+tiingo - 从Tiingo平台获取股票日K线和实时报价/新闻流&lt;br&gt;
+IEX - 从IEX交易所获取股票的实时报价和历史数据&lt;br&gt;
+alpaca-trade-api - 从Alpaca平台获取股票实时报价和历史数据，并提供交易接口交易美股&lt;br&gt;
+metatrader5 - 集成Python和MQL5交易平台，适合外汇交易&lt;br&gt;
+akshare - 获取中国股票，基金，债券和宏观经济数据&lt;br&gt;
+yahooquery - 从雅虎财经获取数据&lt;br&gt;
+investpy - 从英为财经(Investing.com)获取数据&lt;br&gt;
+yliveticker - 从雅虎财经通过Websocket获取实时报价&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/uname-yang/pysnowball&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pysnowball&lt;/a&gt; 雪球py接口(github)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>PYTHON前端框架比较及选择</title>
+        <link>https://jimway71.github.io/p/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BE%83%E5%8F%8A%E9%80%89%E6%8B%A9/</link>
+        <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/python%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BE%83%E5%8F%8A%E9%80%89%E6%8B%A9/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-48.jpg" alt="Featured image of post PYTHON前端框架比较及选择" /&gt;&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythonmana.com/2022/142/202205222141098572.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Comparison of several Python front end frameworks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.361shipin.com/blog/1527514235624488960&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PYTHON前端几个框架的比较&lt;/a&gt; - 上面文档的中文版本+总结&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jishuin.proginn.com/p/763bfbd70ff8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一个傻瓜式构建可视化web的Python神器&lt;/a&gt; - streamlit&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://icode.best/i/13198744042979&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python+Steamlit快速开发可视化web页面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/topic/21740196/hot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zhihu-streamlit&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streamlit documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pywebio.readthedocs.io/zh_CN/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyWebIO Docs中文版&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/NNNJ9355/article/details/107319582&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python 竟然也可以写网页前端了&lt;/a&gt; - 使用的是brython&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/NNNJ9355/article/details/107319582&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用纯Python就能写一个漂亮的网页&lt;/a&gt; - 使用的是remi&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/limaning/article/details/104988743&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streamlit安装设置运行三连&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;比较streamlitpywebiobrythonremi这四种前段框架&#34;&gt;比较Streamlit、pywebio、Brython、remi这四种前段框架&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;框架名&lt;/th&gt;
+&lt;th&gt;官网&lt;/th&gt;
+&lt;th&gt;许可&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;th&gt;教程&lt;/th&gt;
+&lt;th&gt;资源&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;streamlit&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;streamlit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://streamlit.io/terms-of-use&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apache 2.0&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;绘图功能挺强的，demo中就有一些画图的酷炫示例&lt;br&gt;很多的官方demo&lt;br&gt;每当你对Excel文件进行更改保存，Web页面还能够实时进行更新，确实挺不错的&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/MarcSkovMadsen/awesome-streamlit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;各类资源&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pywebio&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pyweb.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pywebio&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pywebio/PyWebIO/blob/dev/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MIT&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;有丰富的官方示例&lt;br&gt;有很多demo&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pywebio.readthedocs.io/zh_CN/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyWebIO官方使用手册中文版&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Brython&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://brython.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Brython&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/brython-dev/brython/blob/master/LICENCE.txt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BSD 3&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;有一些示例，但是并不酷炫&lt;br&gt;似乎是一个在JS中使用python语法的框架&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://brython.info/static_doc/en/intro.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;brython官方教程&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;remi&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;remi&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apache License 2.0&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;有一些网友写的教程&lt;br&gt;似乎与streamlit比较类似&lt;br&gt;有一个GUI的设计工具&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;说明书在Github首页&lt;/a&gt;, 很简单&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;streamlit&lt;/strong&gt;&lt;/a&gt;的文档很丰富(缺官方中文版, 有非官方中文版本-&lt;a class=&#34;link&#34; href=&#34;https://codeantenna.com/a/WRf02U2lN6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streamlit API文档中文版&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://cw.hubwiz.com/card/c/streamlit-manual/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streamlit开发手册&lt;/a&gt;), 资源多, 功能强, 除上面所述功能外, 还能用于机器学习等功能, 在&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/topic/21740196/hot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zhihu-streamlit&lt;/a&gt;中有不少介绍, 应当&lt;strong&gt;首先考虑选用&lt;/strong&gt;。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>知乎链接</title>
+        <link>https://jimway71.github.io/p/%E7%9F%A5%E4%B9%8E%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E7%9F%A5%E4%B9%8E%E9%93%BE%E6%8E%A5/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-47.jpg" alt="Featured image of post 知乎链接" /&gt;&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/2022-Russian-invasion-of-Ukraine/imgs/v2-083eacca27cdaaedc7959f8e5638658d_xl.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2022-俄乌战争&#34;&gt;2022 俄乌战争&lt;/h2&gt;
+&lt;p&gt;创建于 2022-09-14&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/572084203&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;莫斯科的宣传战：产生、理念和结果 - 寻道人的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/559174218/answer/2714106470&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄代表评联大投票「约 40 国没受住西方压力，有国家提前向俄道歉」，透露了哪些信息？ - 王东来的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/44344650/answer/2713726802&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何评价知乎用户 @不想上吊王承恩？ - 寒四公子的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/38414825/answer/2711768455&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;歼-20 在国际上到底是什么地位？ - 划水的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1563957701947961344&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;整个乌克兰最燃的MV—《我们生在伟大的年代》 - 华小桶的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1563959779541839872&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558215765/answer/2710226316&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么网上有很多挺俄派和挺乌派，却很少有中立派？ - 宝宝我的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/573173182&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;身负重伤的乌克兰士兵决定离开恋人，但她来了，求婚了…… - 江南才进的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/555492751/answer/2696042261&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么俄乌战争中我们只能看到欧美和乌克兰发布的对他们自己有利的伪宣传？ - 全境封锁的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1555230451866054656&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄乌专家有真相！ - 喵布丁的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/551991446/answer/2663950744&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么乌克兰在打仗后不到两个小时就几乎全军覆没，半年过去了却还在打仗? - 头脑清晰卡特龙的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1562598094746656768&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;乌克兰的马里乌波尔市政中心开战前最后一个视频，无愧英雄城市 - 华小桶的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1562599234091880448&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;反攻后的乌军，在赫尔松前线组乐队，不愧是演员国家。 - 华小桶的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/527547852/answer/2495861818&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;马斯克的星链作用，是不是言被夸大太多？ - 符箓的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/284203566/answer/2391865032&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;二战时日本政府为什么决定偷袭珍珠港？ - 懒蚂蚁的思考的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558222391/answer/2707369771&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;泽连斯基会后悔把乌克兰带到现在的境地吗？ - 及第状元郎的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558277344/answer/2707635716&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;克里米亚大桥的损坏程度中国工业能力多久能修好？对我国桥梁建设有哪些启示？ - 睡前消息的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1562186689522655232&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天佑吾皇弗朗茨的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1562179717150830594&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;战斗民族真不行的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1562132910404288512&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HW_CL的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1562096670850154496&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【沙漠骆驼】乌克兰泽连斯基版 - 华小桶的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558198164/answer/2706668260&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;你对未来感到乐观吗？ - 老亚当的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558188816/answer/2706391220&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;克里米亚大桥发生火灾，目前情况如何？哪些信息值得关注？这将对俄乌局势产生哪些影响？ - 佳旭的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1561775118787067904&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558053552/answer/2705051389&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;9月30日，基辛格说俄乌战争俄罗斯已经输了，他是太老了还是判断准确？ - webashrat的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1561768172226752512&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;三幺哥的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/570657934&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;长文翻译：衣衫褴褛的军队赢得基辅战役并拯救乌克兰 - lzthelord的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/553665698/answer/2675897313&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何看待短短半年时间，国内外因为俄乌战争而“身败名裂”的军事观察员和智库多如繁星？ - 飞天神熊的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/557309567/answer/2701144629&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄罗斯现在已经沦为国际笑柄了吗？ - 古烈的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1561263751202099200&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;10 月 5 日乌军小分队突破赫尔松前线，路遇俄军发生遭遇战 - 彬彧渊然的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1561148951360647168&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;鸿雁复北翔的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1561001885343145984&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;顿涅茨克前线乌军士兵的生活：在等待下一次血战之际享受热茶、黄油和饼干 - 彬彧渊然的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1561010437860270080&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/570672723&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;当今社会极端情绪大行其道的深刻原因 - 高天流云的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/552801434/answer/2669744487&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何理智正确辩证的看待乌克兰反攻？ - 雌鹿的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/510338958&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;合订本：俄乌战争专家说 - 西绪福斯的废纸篓的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/557589122/answer/2700715068&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;乌克兰议长称乌计划年底前开始欧盟成员资格谈判，透露出什么信号？ - 王东来的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/570474276&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一个美国志愿军眼中的乌克兰“利曼之战” - 江淳的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/570361857&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;回顾俄乌战争中的一些知友 - CodeRyan的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/565497813&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄乌战争合订本笑话 - 克孜勒奥尔达红军的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1559969615765348352&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/524327427/answer/2456780072&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么乌克兰军队能在俄罗斯联邦军队的攻击下坚持这么久？ - 一念救苍生的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/557283768/answer/2697777756&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄乌冲突如何疏散平民群众? - 老亚当的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1559659218826903552&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天佑吾皇弗朗茨的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/557275814/answer/2697649674&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;请问如何去俄罗斯参加外籍军团？ - 老亚当的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1559642204125233154&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;战斗民族真不行的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1559617851652304896&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天佑吾皇弗朗茨的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1559357013494358016&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1559150610397782016&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;战斗民族真不行的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/569529337&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;9月30日的乌克兰小剧场（英国表示北溪是罗刹炸的 (?ω?)） - orochi2k的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1558868160710672384&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/532370181/answer/2688218206&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何看待NGA国际新闻区? - Slee的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/555979263/answer/2693260427&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;佩斯科夫称普京表示仍愿与乌克兰进行会谈，这释放了那些信号？目前俄乌局势如何？ - 石安安的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/534453591/answer/2500571667&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;泽连斯基究竟做了什么，让西方国家的议员们对着他的视频，鼓掌欢呼？ - 华东区域板块移动专员的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/474661822/answer/2610382258&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么苏联的综合科研实力一直未能大幅领先美国，有哪些深层次原因？ - 精中之弩的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/555864991/answer/2691641977&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;西工大遭受美国 NSA 网络攻击调查报告（之二）发布，13 名攻击者身份查明，还有哪些信息值得关注？ - Weasley Frank的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/553803605/answer/2691847434&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何看待说“不支持俄罗斯，就是汉奸、就是美国走狗“的人？ - 笨笨的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/553095353/answer/2672660048&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄军为什么会打得这么艰难？ - mintu22的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/541721347&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;智能画面分析系统助乌克兰无人机将俄罗斯军人变成Z英雄 - 三幺哥的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/547525246&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;乌克兰志愿部队介绍 - 北空孤雁的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/552842259&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;韩式炸鸡的起源及背后有趣的故事 - 木子田心的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/522882627/answer/2468835118&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如果给学生开班会讲俄乌问题，应该说哪些方面? - 月塔的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/530597970/answer/2690954381&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;现在你有什么预言留下来？ - 好好吃啊的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1557751968029880320&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/567966524&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;美军数周内将敲定黑鹰接任者，西科斯基高速共轴胜算大 - 丁尹的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/555188912/answer/2687688017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;王毅会见乌克兰外长库列巴，有哪些信息值得关注？ - 装甲尼禄的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1556974147812761601&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;战斗民族真不行的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/555174194/answer/2686897140&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;香港 9 月 26 日起机场入境检疫改为「 0+3 」，登机前无需取得核酸检测阴性证明，带来哪些影响？ - 超光速二狗子的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/567405779&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄乌电报频道 - 地方的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/553665698/answer/2676684772&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何看待短短半年时间，国内外因为俄乌战争而“身败名裂”的军事观察员和智库多如繁星？ - III号突击炮G型的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1556268713522716672&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;战斗民族真不行的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/554736512/answer/2684572428&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何看待外交部称「中方在乌克兰问题上的立场是一贯明确的，一切有利于和平解决危机的努力都应得到支持」？ - 北风的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1556233788866318336&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1556228022079799296&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天佑吾皇弗朗茨的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/566959438&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在土耳其总统埃尔苏丹强力干预下：俄乌进行最大一次交换俘虏行动 （滚动贴，有视频） - 江南才进的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/458226472/answer/1881670645&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;女生不懂数码产品，预算 2500 有哪些送男朋友的数码产品推荐？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/458226472/answer/1905580006&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;女生不懂数码产品，预算 2500 有哪些送男朋友的数码产品推荐？ - 杨东东的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/566913176&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄乌战争20220921随笔 Liberation，beginning of the end - MaxH的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1555604265334456321&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;霍达廖诺克：俄罗斯联邦若崩溃将比苏联解体更具灾难性 - 古斯塔夫的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1552620283835703298&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄乌冲突200天合订本混剪，半年前所有人都笑他不自量力…站着要饭拯救国家的演员 - 石安安的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/553927737/answer/2677692556&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;克里米亚一旦被乌克兰收复，俄黑海舰队将面临怎样的命运？ - 月塔的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/327605861/answer/2375769522&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如果俄罗斯崩溃了，世界格局将如何演变？ - 痛苦的种子的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558525921/answer/2718781469&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么现在没有人提亚速营了？ - bs命的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/523285439&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【搬】我们决不能向乌克兰提供M270，HIMARS是更好的选择 - wattt的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/487045103/answer/2715836975&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;苏联二战为什么牺牲那么大? - 铁锅炖大鹅的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558943586/answer/2717838033&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么支持俄乌双方的人都很少提及乌克兰的民兵和游击队？ - ducling的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1565032373556895744&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;战斗民族真不行的想法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1565468657576206338&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法 无人机对无人机&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1565549990998376450&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊的想法 虽然对线没有结束，但是重建已经开始&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1566854321634979840&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;装甲尼禄的想法 - 知乎&lt;/a&gt; - 视频: 猪食阅兵&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/pin/1565946267334905856&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;orochi2k的想法 - 知乎&lt;/a&gt; - 乌克兰战争故事正式版上线了: &lt;a class=&#34;link&#34; href=&#34;https://store.steampowered.com/app/1985510/Ukraine_War_Stories/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;哈哈&#34;&gt;哈哈&lt;/h2&gt;
+&lt;p&gt;创建于 2022-10-14&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/545239081&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;闻所未闻，前美国总统里根如是说 - 快乐快乐的文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;合订本&#34;&gt;合订本&lt;/h2&gt;
+&lt;p&gt;创建于 2022-10-03&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558215765/answer/2710226316&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么网上有很多挺俄派和挺乌派，却很少有中立派？ - 宝宝我的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/555492751/answer/2696042261&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么俄乌战争中我们只能看到欧美和乌克兰发布的对他们自己有利的伪宣传？ - 全境封锁的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1555230451866054656&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄乌专家有真相！ - 喵布丁的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/551991446/answer/2663950744&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么乌克兰在打仗后不到两个小时就几乎全军覆没，半年过去了却还在打仗? - 头脑清晰卡特龙的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1562598094746656768&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;乌克兰的马里乌波尔市政中心开战前最后一个视频，无愧英雄城市 - 华小桶的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1562599234091880448&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;反攻后的乌军，在赫尔松前线组乐队，不愧是演员国家。 - 华小桶的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/284203566/answer/2391865032&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;二战时日本政府为什么决定偷袭珍珠港？ - 懒蚂蚁的思考的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558222391/answer/2707369771&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;泽连斯基会后悔把乌克兰带到现在的境地吗？ - 及第状元郎的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558277344/answer/2707635716&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;克里米亚大桥的损坏程度中国工业能力多久能修好？对我国桥梁建设有哪些启示？ - 睡前消息的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1562096670850154496&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【沙漠骆驼】乌克兰泽连斯基版 - 华小桶的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/558053552/answer/2705051389&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;9月30日，基辛格说俄乌战争俄罗斯已经输了，他是太老了还是判断准确？ - webashrat的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/570657934&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;长文翻译：衣衫褴褛的军队赢得基辅战役并拯救乌克兰 - lzthelord的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/571104797&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;泽连斯基在欧洲政治共同体会议上的讲话 - 江南才进的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/553665698/answer/2675897313&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何看待短短半年时间，国内外因为俄乌战争而“身败名裂”的军事观察员和智库多如繁星？ - 飞天神熊的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/510338958&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;合订本：俄乌战争专家说 - 西绪福斯的废纸篓的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1559854768050401281&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这将是我们自由的胜利，是光明对黑暗的胜利，是自由对奴役的胜利。 ——泽连斯基 - 战斗民族真不行的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/570361857&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;回顾俄乌战争中的一些知友 - CodeRyan的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/565497813&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;俄乌战争合订本笑话 - 克孜勒奥尔达红军的文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;讲电影&#34;&gt;讲电影&lt;/h2&gt;
+&lt;p&gt;创建于 2022-10-08&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1563220169144545280&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一个铐谱老哥，含泪帮弟弟扛下了所有，犯罪喜剧片《地狱》 - 谁语Whospeak的视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/29738292/answer/1977278066&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《闻香识女人》中阿尔帕西诺开法拉利飙车被警察拦下，帕西诺说了一番话让警察态度大转变，这段话有什么深意？ - 黄金大亨的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kfk&#34;&gt;kfk&lt;/h2&gt;
+&lt;p&gt;创建于 2022-10-08&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/528545594/answer/2452216324&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;对于2020年的穿越者Kfk的预言准确度，你们怎么看？ - 好好吃啊的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/434059155&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;KFK2060未来人预言 - 奇点存在定理的文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;房地产&#34;&gt;房地产&lt;/h2&gt;
+&lt;p&gt;创建于 2022-10-08&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/300817458/answer/2496957036&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;房地产泡沫会直接破解还是慢慢压缩，最有可能以什么方式结束泡沫，开启下一个周期？ - 光照耀不到的地方的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;手机&#34;&gt;手机&lt;/h2&gt;
+&lt;p&gt;创建于 2022-10-06&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/269876298&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;K30 Pro 首个非官方 Pixel Experience 使用体验与链接 - 刘沐iSZER的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/50231539/answer/530627637&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;怎么刷MIUI国际版Rom？ - Gil Chen的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;新冠2019&#34;&gt;新冠2019&lt;/h2&gt;
+&lt;p&gt;创建于 2020-03-16&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/531886687&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;香港新冠Omicron真实数据：接种科兴疫苗和复必泰疫苗不同年龄群体的实际感染率和死亡率(2022-9-28数据更新) - 好奇宝宝打脸怪的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/377935555/answer/1077205687&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;美国疫情会严重到何种程度？ - Charlene的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;投资&#34;&gt;投资&lt;/h2&gt;
+&lt;p&gt;创建于 2022-10-05&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/570672723&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;当今社会极端情绪大行其道的深刻原因 - 高天流云的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/532746783/answer/2699728126&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;你对未来三年有哪些忠告？ - 岁月斩我的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;笔记系统&#34;&gt;笔记系统&lt;/h2&gt;
+&lt;p&gt;创建于 2022-10-04&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/23427617/answer/1445129874&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何构建自己的笔记系统？ - 常青的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;美食-空&#34;&gt;美食 (空)&lt;/h2&gt;
+&lt;p&gt;创建于 2022-09-27&lt;/p&gt;
+&lt;h2 id=&#34;kfh-空&#34;&gt;kfh (空)&lt;/h2&gt;
+&lt;p&gt;创建于 2022-09-27&lt;/p&gt;
+&lt;h2 id=&#34;不粘锅&#34;&gt;不粘锅&lt;/h2&gt;
+&lt;p&gt;创建于 2021-07-13&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/169332590&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2022炒锅（铁锅、不锈钢锅、不粘锅）推荐攻略，看完小白变成炒锅老司机 - 小蚂蚁的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/144759756&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一个小白的不沾锅选购经验「2020年08月版本」 - 米非的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/284704074/answer/876981601&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;有什么锅不粘锅吗？ - 村上行走的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;电压力锅&#34;&gt;电压力锅&lt;/h2&gt;
+&lt;p&gt;创建于 2020-05-27&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/41402492&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;电压力锅怎么选？ - 喵喵折App的文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;保鲜膜&#34;&gt;保鲜膜&lt;/h2&gt;
+&lt;p&gt;创建于 2020-02-16&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/69592200&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;测评 | 做得这么薄，它到底安全吗？ - V教授的文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;电子烟&#34;&gt;电子烟&lt;/h2&gt;
+&lt;p&gt;创建于 2020-01-29&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/90665236&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;电子烟排行榜前8强品牌，国内外电子烟什么牌子好 - Mikez的文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dy-空&#34;&gt;dy (空)&lt;/h2&gt;
+&lt;p&gt;创建于 2020-01-16&lt;/p&gt;
+&lt;h2 id=&#34;默认收藏&#34;&gt;默认收藏&lt;/h2&gt;
+&lt;p&gt;创建于 2018-07-03&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/373080282/answer/1027004196&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2020 年有哪些高性价比的手机值得推荐？ - 长亭Time的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/59618111&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;11款不粘锅对比测评：健康安全、耐磨不粘，哪款不粘锅值得买？ - 消费者报道的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/307641013/answer/799645914&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2019 年有哪些性价比高的手机推荐？ - 盐选推荐的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/68511276&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2019年，1000-1499价位手机推荐指南 - 长亭Time的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/318449871/answer/711052245&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;预算1500左右，能不能推荐不错的手机？ - 长亭Time的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/68293308&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2019年，1500-1999价位手机选购指南 - 长亭Time的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/32703639/answer/165326590&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为什么很多Python开发者写GUI不用Tkinter，而要选择PyQt和wxPython或其他？ - Naples的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/30666881&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Aria2基础上手指南 - 悠然的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/53068823/answer/155466789&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt 如此强大为什么就是火不起来呢？ - OS Mac的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/53068823/answer/133395886&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt 如此强大为什么就是火不起来呢？ - JasonWong的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/46309564&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;厨房老鸟总结，3分钟让你弄懂厨房照明！满满的都是干货！ - 发现厨房的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/20018036/answer/55334356&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;去新西兰旅游什么线路值得推荐？几月出游合适？ - Edgardo的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/23519715&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;上帝的眼泪，新西兰的春天（16天自驾南岛深度体验） - 彭珂的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/21462585/answer/32459492&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;坐aa的飞机 攒国泰的里程的问题？ - 琦小麦的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/38789631&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来捡钱啦！只要在2000~2016年间买过跨太平洋机票，就可能获得集体诉讼和解金！ - physixfan的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/523675030/answer/2714693588&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;请问「unacceptable」这个单词是什么意思？ - NGC13009的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;家伙们&#34;&gt;家伙们&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/saturn-v&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Saturn V&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/bao-bao-wo-98-25&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;宝宝我 - 批判的武器 武器的批判&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/hw-cl-26&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HW_CL? - 自由无价，但不代表没有代价。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/awvonsh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;上杉桜吹雪 - 老兵不死，只是化身猫粮&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/hua-xiao-tong-38&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;华小桶 - 中国历史，美术&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/coderyan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CodeRyan - 什么都看 （地奴星-催命判官-）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/ai-xiao-de-cao-da-mi-2015&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;彬彧渊然 - 反极权主义，反威权主义，略微悲观的自由主义者和人本主义者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/lft-85&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;雌鹿 - “愿你活的长久，活到能为沙皇所犯的恶行复仇的那一天。”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/di-fang-33-69&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;地方&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/jiangchunxu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;江淳 - 自由作家：15岁从军，解放军汽车管理学院毕业。军转，自媒体。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/rootkitchao&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rootkitchao? - 21世纪的军国主义者只有挂上路灯一个结果&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/55-67-13-63&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;陈酱爱吃薯条炸鱼&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/wei-xin-yong-hu-91-39-21&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;零和X&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/su-jun-zheng-wei-shi-xiang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;花雪又名雪花花 - 红脖人民 业余参谋 人间之屑 沙雕网友 辣手摧花&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/hua-dong-qu-yu-ban-kuai-yi-dong-zhuan-yuan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;华东区域板块移动专员 - 123456789&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/wx32934567d68c5755&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;达摩君子 - 极致匠心、传播正能量、感谢关注&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/msdmm-29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;神奇小兔子? - 荣誉乌克兰人 荣誉乌克兰总参谋长&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/94-56-73-24&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;上帝掷骰子吗? - 一个屑人&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/roroin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;丁尹? - 南京航空航天大学 飞行器设计专业博士在读&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/long-ya-38&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;九乡河龙牙?? - 航天话题下的优秀答主&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/ji-weng-jian-chang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;吉翁舰长? - 匪 帮 高 参&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/suyikong-90&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Suyi控 - 游击队员们，祖国和人民在召唤！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/psibu-tan-suo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教宗几个师 - 拉黑我不过是心虚的表现。中左/日子人。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/yong-yuan-re-ai-dang-he-zhong-guo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;永远忠于党和政府 - 没有党和政府，你什么也不是！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/wang-yifu-87&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;草民王平 - 华夏之民&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/fuqiang-liu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;记忆张量 - 从来没有什么救世主， 不是神仙也不是皇帝。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/bei-feng-2017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北风? - 微信号 salesmanmark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/lao-ya-dang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;老亚当 - 往炙热的锈铁上扔块儿臭鸡油，这就是T-72坦克被毁后的味道&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/yang-yun-fei-30-89&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;扬云飞?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/a-mao-a-gou-79-93&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;鸿雁复北翔? - 公众号、微博，同名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/fc-xiao-long&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Moskit - 微信公众号：科尔松试车场&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/ling-yun-40-83&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;凌云? - 心事浩茫连广宇 于无声处听惊雷&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/aya-hazuki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Aya Hazuki? - 这里是我所奋力抵达的地方。 已完全只有孤零零的自己一个人。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/di-liu-dao-shi-ma-qian-zu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;第六导师马前卒 - 相互关注 - J. Posadas研究&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/gu-si-ta-fu-54&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;古斯塔夫 - 微信公众号“火与马的时代”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/huanhunji&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;还魂记?? - 乌克兰哈尔科夫国立大学 教育学博士&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/shi-dong-24-59&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天下帝师 - 正统马克思主义者，剥削阶级永远的心腹大患&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/ducling-59&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ducling - 人生不是每时每刻都精彩&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/1388868888&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;江南才进 - 工程师&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/he-yi-41&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MaxH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/tian-you-wu-huang-fu-lang-ci-75&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;天佑吾皇弗朗茨? - 一位不知名的军事观察家&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/bei-kong-gu-yan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北空孤雁 - 军事爱好者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/orochi2k&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;orochi2k - NEOLITHIA作者/在不摸鱼地支持乌克兰。(?ω?)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/roustar31&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;三幺哥 - 公众号同名，人民代表。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/16620441945&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;装甲尼禄 - B站 装甲尼禄。正义是杀不完的，因为真理永远存在！人民万岁！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/ma-jia-bao-65&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;副球级领导干部 - 黄俄罗斯第一巴图鲁，享受正球级待遇，主持地月球日常工作。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/zhe-ji-chen-sha-44&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;森娜幼稚园长 - 台湾交换/日本留学/中英日语/理工建筑构造环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/hu-hao-70-21&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;痛苦的种子 - 心向现代文明，以理性和洞察力解构社会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/duo-lun-duo-fang-lian&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;已黑化? - 推上搜索同名知乎，多伦多方脸，以防被ban 已黑化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/shi-an-qian&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;石安安 - 喜欢旅行，喜欢交流&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/zhang-chen-xu-38&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;月塔?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/TIMEOFALLEN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;托伦 - 公众号：托伦的羊皮卷&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/gan-huo-ban-yun-gong&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;战斗民族真不行? - 反听、内视、自胜。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/jing-jia-xu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;佳旭 - 且将薪火试新茶，诗酒趁年華。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/guang-ming-shan-dian&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;光明山巅 - 人类学家,关注我带你了解世界真相，关注同名微博备用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/lei-ri-ke-fu-78&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;玉米小贩米基塔 - 俄军博主，阿尔巴特大街上卖玉米的&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/ben-pao-zhong-de-xiao-gao-yang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;奔跑中的小羔羊? - 不专业军迷 专业鹅黑&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/wang-tao-tao-91-97&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;当代军神的素描像? - 我的第一份工作是小区保安&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/pao-jiao-feng-zhua-69&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;杨酱酱 - 玻璃艺术专业／玻璃工学徒／欧洲自由行&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/ha-sa-ke-si-tan-shi-guan-ying-er-50&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎用户gqUwAJ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/jero-liu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;飞来鱼 - 人生就一次，活出个人样来~&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/silkwaykz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;播种人&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/da-cheng-hai-86&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DC底比斯 - 普信男 爱分享 商科硕士&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/yue-xia-seng-89&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;月下僧&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/fa-kui-44&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;黑默丁格&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/physixfan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;physixfan - 不敢高声语，恐惊天上人。退乎了，没意思。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/guujiandonglai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;王东来 - 做得少，说得多。个人公众号：东来的杂货铺&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nas&#34;&gt;NAS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/447759167/answer/2342684630&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;个人用nas，没太多时间折腾，先购入个简单点的，有没有类似联想个人云、极空间这种类型的轻nas推荐？ - 加勒比考斯的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件管理&#34;&gt;文件管理&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/334217095/answer/2327981935&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;怎么将超大的文件传输给别人？ - 不喝水就犯困的回答&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;京东&#34;&gt;京东&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/538526318&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;京东PLUS会员的高级特权，很多人都不知道！白浪费了会员费！ - 棉棉花糖的文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;python&#34;&gt;Python&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/topic/21740196&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;话题 - streamlit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/569534863&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;我学习Python的三个神级网站 - 萝卜大杂烩的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/55493026/answer/683070334&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;你们都是怎么学 Python 的？ - 量子位的回答 - 知乎&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackfrued/Python-100-Days&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Python - 100天从新手到大师&lt;/a&gt; - 上述链接中推荐&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackfrued/Python-Core-50-Courses&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Python语言基础50课&lt;/a&gt; - 上述链接更基础版&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1FT4y1R7sz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;B站-Python零基础快速上手&lt;/a&gt; - 上述的视频教程&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Candysad/Streamlit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 参照官方文档翻译总结&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/469582149&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;算法不会前端，也可以做出好看的界面-Streamlit - 刘聪NLP的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;电子书&#34;&gt;电子书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/376789628/answer/2317114960&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;哪里有免费的电子书下载？ - 陈芸的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/444880913?utm_id=0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - 9个免费电子书下载网站，实现电子书自由&lt;/a&gt; By &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/cai-lang-ri&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在游牧呐​&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;外语&#34;&gt;外语&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/460268568&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教你怎样光速背单词 - 注入爱的文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/24706380/answer/2717536600&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;怎么在一个月内让英语听力有明显的提高？ - 海上霸王刘十三的回答&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/20871034/answer/2721339661&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何学好英语？ - 火龙的回答 - 知乎&lt;/a&gt; - 近2w字，精心打磨2个星期才完成。这篇文章应该能满足大家绝大部分英语学习的需求了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;家装&#34;&gt;家装&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1450049398952218624&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;多亏了这块板，我才有底气厨房不贴瓷砖！小户型厨房改造思路 - 许二诺的视频&lt;/a&gt; - 珐琅板&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;github&#34;&gt;Github&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/558487364&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;重磅推荐：GitHub Top100  优质开源项目！ - 开源指南的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/20584141/answer/2286906609&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 上有哪些优秀的项目？ - 马哥python说的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;国民校花&#34;&gt;国民校花&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/566993198&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;费曼：任何伟大的科学成就，都源于思想自由 - 德先生的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;旅游&#34;&gt;旅游&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/482216213&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国内超豪华的3条火车旅游专列，每一趟沿途风景美若天堂！ - 组合2的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;批量删除&#34;&gt;批量删除&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nowtime.cc/chat/1323.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;批量删除 知乎“赞同回答动态”&lt;/a&gt;&lt;br&gt;
+脚本:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;document.querySelectorAll(&amp;#34;.Button.VoteButton.VoteButton--up.is-active&amp;#34;).forEach((ele)=&amp;gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ele.click()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/426677473&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何删除自己在知乎发表的所有评论&lt;/a&gt;  By &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/8f51cc232158f1db72c87f26cc189459&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;张三丰&lt;/a&gt;&lt;br&gt;
+环境python3，登录之后，需要按下F12，获取找到你自己的cookie(_zap=xxxxx),然后复制下来，填到代码里面&lt;br&gt;
+&lt;u&gt;取知乎cookie, 参考&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/342922463&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【爬虫】一个简单方便的获取cookie的python库&lt;/a&gt;  By &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/wsdx1234&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;雁陎&lt;/a&gt;&lt;/u&gt;&lt;br&gt;
+(Python代码&lt;strong&gt;经测试, 未能生效&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;作者：知乎用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;链接：https://www.zhihu.com/question/426677473/answer/2069795325
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;来源：知乎
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#知乎删评论.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import requests
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;headers = {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39;user-agent&amp;#39;: &amp;#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36 Edg/91.0.864.71&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39;cookie&amp;#39;: &amp;#39;cookie放到这里&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;headers1 = {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39;user-agent&amp;#39;: &amp;#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36 Edg/91.0.864.71&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39;cookie&amp;#39;: &amp;#39;cookie放到这里&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;params = (
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    (&amp;#39;start&amp;#39;, &amp;#39;0&amp;#39;),
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    (&amp;#39;end&amp;#39;, &amp;#39;0&amp;#39;),
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    (&amp;#39;limit&amp;#39;, &amp;#39;100&amp;#39;), #这个设置成100，是为了给你一个后悔的机会吗？
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    (&amp;#39;offset&amp;#39;, &amp;#39;0&amp;#39;),
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;res = requests.get(&amp;#39;https://www.zhihu.com/api/v4/creators/creations/all&amp;#39;, headers=headers, params=params).json() #查询接口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# print(res)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ids = []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;for i in range(len(res[&amp;#39;data&amp;#39;])):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    id = res[&amp;#39;data&amp;#39;][i][&amp;#39;data&amp;#39;][&amp;#39;id&amp;#39;] #获取ID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    title = res[&amp;#39;data&amp;#39;][i][&amp;#39;data&amp;#39;][&amp;#39;title&amp;#39;] #获取标题
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    print(str(id),&amp;#34;--&amp;gt;&amp;#34;,&amp;#34;title:&amp;#34;,title) #打印出来
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    resjs = requests.delete(&amp;#39;https://www.zhihu.com/api/v4/answers/&amp;#39;+id, headers=headers1).json() #删除接口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    print(&amp;#34;删除结果：&amp;#34;,resjs)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>More Links</title>
+        <link>https://jimway71.github.io/p/more-links/</link>
+        <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/more-links/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-44.jpg" alt="Featured image of post More Links" /&gt;&lt;h2 id=&#34;资源导航&#34;&gt;资源导航&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;QINDIM&amp;rsquo;s 导航站&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://nav.echosec.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nav.echosec.top/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;各种资源链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HelloGithub&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://hellogithub.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://hellogithub.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;分享 GitHub上有趣、入门级的开源项目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;免费电子书&#34;&gt;免费电子书&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;熊猫搜书&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://xmsoushu.com/#/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xmsoushu.com/#/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://xmsoushu.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;电子书网站导航&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Z-library&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.b-ok.xyz/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zh.b-ok.xyz/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://zh.b-ok.xyz/favicon-16x16.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;号称全球最大的电子图书馆&lt;br&gt;需要强制翻墙&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;苦瓜书盘&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://kgbook.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://kgbook.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;电子书共享平台&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;鸠摩搜书&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jiumodiary.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.jiumodiary.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.jiumodiary.com/images/favicon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;多格式电子书搜索引擎&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;书格&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://new.shuge.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://new.shuge.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://new.shuge.org/wp-content/uploads/2018/06/shugeorg-icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;电子古书善本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SoBooks&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://sobooks.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://sobooks.net/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://sobooks.net/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;偏重人文社科电子书&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;田间小站&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tjxz.cc/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.tjxz.cc/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.tjxz.cc/wp-content/uploads/2020/07/cropped-tractor-icon-full-1-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;原版英文杂志/书籍PDF&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;好读&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.haodoo.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.haodoo.net/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.haodoo.net/image/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;小说类电子书，繁体中文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;云海电子图书馆&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.pdfbook.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.pdfbook.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;只提供PDF电子书&lt;br&gt; &lt;strong&gt;网站暂时无法访问&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/444880913?utm_id=0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - 9个免费电子书下载网站，实现电子书自由&lt;/a&gt; By &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/cai-lang-ri&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在游牧呐​&lt;/a&gt;&lt;br&gt;
+More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e7%9f%a5%e4%b9%8e%e9%93%be%e6%8e%a5/#%E7%94%B5%E5%AD%90%E4%B9%A6&#34; &gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;工具ai文章等&#34;&gt;工具(AI文章等)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;AI文章&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=AI%E6%96%87%E7%AB%A0&amp;amp;oq=AI%E6%96%87%E7%AB%A0&amp;amp;aqs=chrome..69i57j69i60.3388j0j7&amp;amp;sourceid=chrome&amp;amp;ie=UTF-8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Google搜索&amp;quot;AI文章&amp;quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Html转Markdown&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.atoolbox.net/Tool.php?Id=715&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Html转Markdown&lt;/a&gt; &lt;br&gt; 推荐by &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7066651546817134629&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;复制链接，将正文的html转markdown&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://www.atoolbox.net/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;一个工具箱 - 好用的在线工具都在这里！&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;hugo服务及其它相关&#34;&gt;Hugo服务及其它相关&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Hugo主题Stack及说明文档&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/CaiJimmy/hugo-theme-stack&lt;/a&gt; &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.stack.jimmycai.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://d33wubrfki0l68.cloudfront.net/cce20227aa2099d675a3f34ef07d87efd2c3424b/2181d/themes/hugo-theme-stack/tn-featured_huc0bc2695434e99bc240ff43d33c25940_24703_384x256_fill_catmullrom_top_3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;现仅英文(中文文档404了)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Markdown 中文文档&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://markdown-zh.readthedocs.io/en/latest/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://markdown-zh.readthedocs.io/en/latest/img/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Markdown 教程&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/markdown/md-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.runoob.com/markdown/md-tutorial.html&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://static.runoob.com/images/icon/mobile-icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;菜鸟教程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Markdown进阶&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/heimu24/article/details/81189700&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/heimu24/article/details/81189700&lt;/a&gt; &lt;br&gt; 更改字体、颜色、大小，设置文字背景色，调整图片大小设置居中&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;字体/图片进阶&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;转换工具&#34;&gt;转换工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Aconvert&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aconvert.com/cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.aconvert.com/cn/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;在线转换PDF，在线转换文档，在线转换电子书，在线转换图像，在线转换视频，在线转换音频&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;YouTube to MP3&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.yt2conv.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.yt2conv.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.yt2conv.com/favicon-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Convert and download MP3 from youtube videos with YT2conv&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;YouTube to MP4&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.yt2conv.com/youtube-to-mp4/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.yt2conv.com/youtube-to-mp4/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.yt2conv.com/favicon-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Convert and download MP4 from youtube videos with our Youtube MP4 Downloader&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Y2Mate&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.y2mate.is/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://en.y2mate.is/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://y2mate.is/assets/icons/favicon-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Youtube Downloader&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aconvert之在线转换图像文件&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aconvert.com/cn/image/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.aconvert.com/cn/image/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;将图像文件从一种格式转换为另一种格式，比如PNG到JPG，JPG到PNG，HEIC到JPG，WEBP到JPG，DDS到PNG，PNG到SVG等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;翻译工具&#34;&gt;翻译工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;谷歌翻译&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://translate.google.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://translate.google.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://ssl.gstatic.com/translate/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有道翻译&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://fanyi.youdao.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://fanyi.youdao.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://shared.ydstatic.com/images/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DeepL翻译器&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.deepl.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.deepl.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://static.deepl.com/img/favicon/favicon_32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/DeepL&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;普遍認為它的翻譯比起Google翻译更為準確自然&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有道翻译API接口&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://codeantenna.com/a/yvx02KkiqN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://codeantenna.com/a/yvx02KkiqN&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Python使用有道翻译API翻译&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;谷歌翻译APII接口&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/python-calls-google-translate-api.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.perfcode.com/p/python-calls-google-translate-api.html&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Python调用谷歌翻译API实现文本翻译(谷歌.cn改.com)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;用纯Python就能写一个漂亮的网页&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/NNNJ9355/article/details/107319582&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/NNNJ9355/article/details/107319582&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;remi&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;网页嵌入谷歌翻译js插件&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/NNNJ9355/article/details/107319582&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/NNNJ9355/article/details/107319582&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;(谷歌.cn改.com)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;使用DeepL API进行翻译(接口说明)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.deepl.com/zh/pro-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.deepl.com/zh/pro-api&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;一个说明, 没到用法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DeepL API的Python客户端库&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.deepl.com/zh/blog/announcing-python-client-library-for-deepl-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.deepl.com/zh/blog/announcing-python-client-library-for-deepl-api&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;文本翻译示例&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;images-也含ai制图工具&#34;&gt;Images (也含AI制图工具)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;thiswallpaperdoesnotexist&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://thiswallpaperdoesnotexist.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://thiswallpaperdoesnotexist.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://thiswallpaperdoesnotexist.org/i/favicon-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;AI壁纸&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Wallpaper Abyss 高清壁纸&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wall.alphacoders.com/?lang=Chinese&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wall.alphacoders.com/?lang=Chinese&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://static.alphacoders.com/icons/wallpaper/favicon-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Artstation&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.artstation.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://cdn.artstation.com/assets/logo-icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;flickr 網路相片管理和分享工具&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.flickr.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.flickr.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.flickr.com/images/opensearch-flickr-logo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Midjourney&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.midjourney.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.midjourney.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.midjourney.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;AI 制图工具, 用文字透过AI运算产出相对应的图片; 网站非常的极客风格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;数字绘画链接(s)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hua1995116/awesome-ai-painting&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/hua1995116/awesome-ai-painting&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;数字绘画汇总&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dafydd Phillips on Flickr&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.flickr.com/photos/137929058@N06/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.flickr.com/photos/137929058@N06/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.flickr.com/images/opensearch-flickr-logo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Fighter Photoes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thiswallpaperdoesnotexist.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://thiswallpaperdoesnotexist.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载相关&#34;&gt;下载相关&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;RARBg&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://rarbg.to/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://rarbg.to/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://dyncdn.me/static/20/img/logo_dark_nodomain2_optimized.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;RARBg&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TorrentBay&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://yts.torrentbay.to/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://yts.torrentbay.to/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://yts.torrentbay.to/assets/images/website/apple-touch-icon-57x57.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;ytsbay搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;字幕工具&#34;&gt;字幕工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;OpenSubtitles&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.opensubtitles.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://static.opensubtitles.org/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;OpenSubtitles字幕搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;yifysubtitles&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://yifysubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://yifysubtitles.org/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://yifysubtitles.org/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Yifysubtitles字幕搜索(問題があるようです)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;社区社交平台&#34;&gt;社区(社交平台)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Reddit&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.reddit.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.reddit.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.redditstatic.com/desktop2x/img/favicon/ms-icon-144x144.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Reddit红迪&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;小型中文社区&#34;&gt;小型中文社区&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;V2EX&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.v2ex.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.v2ex.com/static/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;V2EX = way to explore &lt;br&gt; V2EX 是一个关于分享和探索的地方&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;给用外版带 esim 功能的各位推荐个软件&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/t/881122&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.v2ex.com/t/881122&lt;/a&gt; &lt;br&gt; 软件 &lt;a class=&#34;link&#34; href=&#34;https://dent.app.link/JZz9ms2Aqtb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://dent.app.link/JZz9ms2Aqtb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;From &lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;V2EX&lt;/a&gt;  ›  &lt;a class=&#34;link&#34; href=&#34;https://www.v2ex.com/go/iphone&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;iPhone&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;各种盒子相关&#34;&gt;各种盒子相关&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;海思机顶盒NAS社区&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://bbs.histb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://bbs.histb.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;海思机顶盒NAS系统，一个极低功耗的服务器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;开源平台&#34;&gt;开源平台&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GitHub&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;GitHub is the world&amp;rsquo;s largest software development platform.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;2022-russian-invasion-of-ukraine&#34;&gt;2022 Russian invasion of Ukraine&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Russo-Ukrainian Warspotting&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://ukr.warspotting.net/russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ukr.warspotting.net/russia/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://ukr.warspotting.net/static/images/icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;oryx&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Russian losses&lt;/a&gt; &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-ukrainian.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ukraine losses&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.oryxspioenkop.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NAFO&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/search?q=%23nafo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://twitter.com/search?q=%23nafo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://hugo.otcg.org/FixFrmRes/NAFO_Freud_Fella.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;NAFO&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;照片笑话&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://durdom.in.ua/icns/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;弗图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;主机信息&#34;&gt;主机信息&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;国外主机测评&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.zhujiceping.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;国外VPS，国外服务器，国外云服务器，测评及优惠码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LowEndTalk&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://lowendtalk.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://lowendtalk.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://lowendtalk.com/uploads/LowEndTalk.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;© LowEndBox &amp;amp; LowEndTalk&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;猪机博客&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pigji.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.pigji.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.pigji.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;美国vps、国外主机评测！&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;VPS收割者&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.idcoffer.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.idcoffer.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.idcoffer.com/wp-content/uploads/2019/11/logo-150x150.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;香港VPS、日韩VPS、美国VPS、欧洲VPS和云服务器评测与推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主机资讯&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujizixun.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.zhujizixun.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.zhujizixun.com/wp-content/uploads/2019/03/cropped-logo-1-32x32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;国外VPS，国外服务器，国外主机，测评及优惠码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2022年便宜高性价比VPS(含最新优惠)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://renzhn.github.io/posts/cheap-vps/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://renzhn.github.io/posts/cheap-vps/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://renzhn.github.io/favicon-16x16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;来自&lt;a class=&#34;link&#34; href=&#34;https://renzhn.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VPS百科&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;一些免费的云资源&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://gist.github.com/imba-tjd/d73258f0817255dbe77d64d40d985e76&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gist.github.com/imba-tjd/d73258f0817255dbe77d64d40d985e76&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/24759802?s=64&amp;amp;v=4&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;(Migrated)云资源集合列表 From imba-tjd 谭九鼎&amp;rsquo;s GitHub&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;域名工具&#34;&gt;域名工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;顶级域名价格列表&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh-hans.tld-list.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zh-hans.tld-list.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://zh-hans.tld-list.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;比较所有顶级域名的价格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NameSilo&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.namesilo.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.namesilo.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.namesilo.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;域名价格查询, 做为对比&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Whois&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.whois.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.whois.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://shop.whois.com/ui/resellerdata/120000_149999/129394/supersite2/supersite/themes/EliteGreen-ResponsiveTheme/images/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;WHOIS信息查询工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;特殊字符&#34;&gt;特殊字符&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;特殊字符&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sioe.cn/zifu.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.sioe.cn/zifu.htm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;↑↓↖↗↙↘☺☻©™℡Ψ◦o● Ⓒⓒ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;emoji国旗符号&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://m.fhdq.net/emoji/14.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://m.fhdq.net/emoji/14.html&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;在手机中显示为彩色国旗，在电脑端显示为两个字母&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;emojiall&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.emojiall.com/zh-hans&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.emojiall.com/zh-hans&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.emojiall.com/logo-dark.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;EMOJI表情符号词典&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emoji翻译器 (将简体中文翻译成Emoji)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.emojiall.com/zh-hans/emoji-translator-page&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.emojiall.com/zh-hans/emoji-translator-page&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.emojiall.com/logo-dark.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;简体中文翻译成Emoji&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emoji翻译器 (将Emoji翻译成简体中文)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.emojiall.com/zh-hans/text-translator-page&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.emojiall.com/zh-hans/text-translator-page&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.emojiall.com/logo-dark.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;Emoji翻译成简体中文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;特殊市场&#34;&gt;特殊市场&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Verified Leaks Market&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://breached.to/Forum-Verified-Leaks-Market&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://breached.to/Forum-Verified-Leaks-Market&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://cdn.breached.to/logo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;All sales Threads in this section are verified by Staff Mark this forum read&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;统计数据&#34;&gt;统计数据&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;statista&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.statista.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.statista.com/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.statista.com/favicon-48x48.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;统计数据&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2000年第一季度至&lt;strong&gt;2022年第一季度俄罗斯住宅房产&lt;/strong&gt;的平均平方米价格&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.statista.com/statistics/1155338/residential-real-estate-average-prices-by-market-in-russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;$&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;战前战后, &lt;strong&gt;需要跟踪&lt;/strong&gt;&lt;br&gt;2022年暴涨是否与卢布实际汇率相关?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;上网安全&#34;&gt;上网安全&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;browserleaks-ip&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://browserleaks.com/ip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://browserleaks.com/ip&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://browserleaks.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;检查我的上网信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;whoer&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://whoer.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://whoer.net/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://whoer.net/favicon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;检查我的上网信息&lt;br&gt;&lt;u&gt;需要强制翻墙&lt;/u&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;为什么很多人会翻墙却不会用Tor Browser&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pincong.rocks/article/3664&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pincong.rocks/article/3664&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;讨论&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;G &amp;ldquo;tor 墙 2022&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=tor&amp;#43;%E5%A2%99&amp;#43;2022&amp;amp;newwindow=1&amp;amp;ei=M2dVY4inNs2ioATlqKWQDQ&amp;amp;ved=0ahUKEwjIjP6v3vb6AhVNEYgKHWVUCdIQ4dUDCA8&amp;amp;uact=5&amp;amp;oq=tor&amp;#43;%E5%A2%99&amp;#43;2022&amp;amp;gs_lcp=Cgdnd3Mtd2l6EAM6CggAEEcQ1gQQsAM6BQghEKABOgcIABAeEKIESgQIQRgASgQIRhgAUNwGWMsbYPYdaAFwAXgAgAHNAYgBjAeSAQUwLjQuMZgBAKABAcgBCsABAQ&amp;amp;sclient=gws-wiz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;搜索&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;TOR工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;特殊工具&#34;&gt;特殊工具&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;启动BFL-LS-WVL&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://nas.otcg.org/cgi-bin/resume.cgi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://nas.otcg.org/cgi-bin/resume.cgi&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.buffalotech.com/images/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;启动BFL-LS-WVL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;知乎&#34;&gt;知乎&lt;/h2&gt;
+&lt;p&gt;From &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎&lt;/a&gt;: &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e7%9f%a5%e4%b9%8e%e9%93%be%e6%8e%a5/&#34; &gt;知乎链接&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>安装Python运行环境</title>
         <link>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
         <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
@@ -777,7 +2964,7 @@ strealit对Python版本要求参考官网说明: &lt;a class=&#34;link&#34; href
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ERROR: Failed building wheel for backports.zoneinfo
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Building wheel for pyrsistent (pyproject.toml) ... done
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Created wheel for pyrsistent: filename=pyrsistent-0.18.1-cp38-cp38-linux_aarch64.whl size=56386 sha256=70e6458eae430b5065d6e229f19e7f0f96b55456d32162c31ff47846aa6d6d6b
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Stored in directory: /home/jimway/.cache/pip/wheels/a5/15/17/a3a9eec63321dd22dc53130d06b7d25f00d129693bec6fc36e
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Stored in directory: /home/XXXXXXX/.cache/pip/wheels/a5/15/17/a3a9eec63321dd22dc53130d06b7d25f00d129693bec6fc36e
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Successfully built validators pyrsistent
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Failed to build backports.zoneinfo
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
@@ -881,6 +3068,139 @@ Streamlit, version 1.13.0&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;使用正常。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>调查五款Python GUI框架</title>
+        <link>https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/</link>
+        <pubDate>Fri, 19 Aug 2022 12:00:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-20.jpg" alt="Featured image of post 调查五款Python GUI框架" /&gt;&lt;p&gt;五款Python GUI框架:&lt;br&gt;
+来源: &lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7114468038363054117&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎: 2022- 值得推荐的五款Python GUI框架&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyQt5/6&lt;/li&gt;
+&lt;li&gt;PySide6&lt;/li&gt;
+&lt;li&gt;wxPython&lt;/li&gt;
+&lt;li&gt;Tkinter&lt;/li&gt;
+&lt;li&gt;PySimpleGUI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;列表如下:  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;框架名&lt;/th&gt;
+&lt;th&gt;来源&lt;/th&gt;
+&lt;th&gt;许可&lt;/th&gt;
+&lt;th&gt;易用性&lt;/th&gt;
+&lt;th&gt;功能性&lt;/th&gt;
+&lt;th&gt;文档丰富性&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;th&gt;教程&lt;/th&gt;
+&lt;th&gt;界面开发工具&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PyQt5&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PyQt5/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;GPL v3&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PyQt6&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PyQt6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt6&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;GPL v3&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;需Python3.6.1以上版本; 网络授权支持的在LGPL下授权(来源: &lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7120086083378872357&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5和PyQt6之间的区别&lt;/a&gt;之&amp;quot;许可证变更&amp;quot;)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;PySide6&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;LGPL&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;最初由Nokia官方推出; 对标PyQt6; 以调用动态链接库的形式使用Qt时, 可以任何形式发布程序(含商业、非商业、开源、非开源)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6详细中文教程&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://build-system.fman.io/qt-designer-download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt Designer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;wxPython&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wxpython.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxPython&lt;/a&gt;]&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wxpython.org/pages/license/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxWindows Library Licence&lt;/a&gt;]&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.wxpython.org/zh-CN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxPyWiki&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/wxFormBuilder/wxFormBuilder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxFormbuilder&lt;/a&gt;, &lt;del&gt;&lt;a class=&#34;link&#34; href=&#34;http://boa-constructor.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;boa-constructor 2007年停更&lt;/a&gt;&lt;/del&gt;, &lt;a class=&#34;link&#34; href=&#34;http://wxglade.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wxGlade 2021停更&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tkinter&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/library/tkinter.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tkinter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://spdx.org/licenses/PSF-2.0.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PSF-2.0&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;**&lt;/td&gt;
+&lt;td&gt;*****&lt;/td&gt;
+&lt;td&gt;简单无依赖&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/python/python-gui-tkinter.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python GUI编程(Tkinter)&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;http://www.python-course.eu/python_tkinter.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tkinter course&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://page.sourceforge.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PAGE&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://visualtk.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;visualtk-在线可用&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;&lt;strong&gt;PySimpleGUI&lt;/strong&gt;&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pysimplegui.org/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySimpleGUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;LGPL3&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;****&lt;/td&gt;
+&lt;td&gt;***&lt;/td&gt;
+&lt;td&gt;基于Tkinter、&lt;a class=&#34;link&#34; href=&#34;https://github.com/rawpython/remi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Remi&lt;/a&gt;、wxpython、PyQt模块; 可以输入相应的代码将其转变网页形式展示，而其余包则都是用来做图形界面的&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pysimplegui.org/en/latest/cookbook/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySimpleGUI Cookbook&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/PriestTheBeast/SimpleGUIBuilder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SimpleGUIBuilder 2021停更&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.quora.com/Can-I-make-a-program-in-Qt-Designer-under-the-open-source-license-and-then-buy-a-license-so-that-I-can-sell-my-program&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Can I make a program in Qt Designer under the open-source license, and then buy a license so that I can sell my program?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://discuss.wxpython.org/t/which-tool-is-the-best-for-gui-designer/26071/10&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Which tool is the best for gui designer(哪个工具最适合 gui 设计师)？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
@@ -1019,6 +3339,199 @@ WMPDMC.exe是一个可执行文件，它是Microsoft Corporation开发的Windows
 &lt;h2 id=&#34;python--pyside&#34;&gt;Python &amp;amp; Pyside&lt;/h2&gt;
 &lt;p&gt;**&lt;a class=&#34;link&#34; href=&#34;https://www.daimajiaoliu.com/daima/479a101359003f8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PySide程序的国际化&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>在Heroku上部署V2Ray&#43;Trojan-go</title>
+        <link>https://jimway71.github.io/p/%E5%9C%A8heroku%E4%B8%8A%E9%83%A8%E7%BD%B2v2ray-trojan-go/</link>
+        <pubDate>Wed, 28 Apr 2021 14:17:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%9C%A8heroku%E4%B8%8A%E9%83%A8%E7%BD%B2v2ray-trojan-go/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-37.jpg" alt="Featured image of post 在Heroku上部署V2Ray&#43;Trojan-go" /&gt;&lt;h2 id=&#34;heroku介绍&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;介绍&lt;/h2&gt;
+&lt;p&gt;(拷自&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/zh-tw/Heroku&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;维基百科Heroku&lt;/a&gt;)&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;是一个支持多种编程语言的云平台即服务。在2010年被&amp;lt;Salesforce.com&amp;gt;收购。&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;作为最元祖的云平台之一[1]，从2007年6月起开发，当时它仅支持Ruby，但后来增加了对Java、Node.js、Scala、Clojure、Python以及（未记录在正式文件上）PHP和Perl的支持。基础操作系统是Debian，在最新的技术堆栈则是基于Debian的Ubuntu[2].&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;免费提供美国、欧洲两个节点的容器服务，容器支持多种编程语言。&lt;br&gt;
+当前, &lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt; Dyno免费套餐是一个月550个动态小时，2TB的流量限制; 用信用卡验证能再免费获得450个小时免费动态小时时长.&lt;br&gt;
+对于Heroku的免费动态小时, 在网上查到的是, 原来免费的&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;测试机每天至少需要睡眠6个小时, 后来, Heroku更改了Free Dynos的政策。现在不再是每个应用程序的限制(例如每天6小时的睡眠时间), 而是每个帐户的限制。&lt;br&gt;
+&lt;strong&gt;对于动态小时, 我的理解是指有访问的时长, 不包括机器空闲的时间&lt;/strong&gt;.&lt;br&gt;
+基于&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;的容器服务, 可以用于部署v2ray/trojan-go服务. 由于可能有&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;所指&amp;quot;滥用&amp;quot;风险, 因此, 不要将&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;用于做主力服务器.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;迁移时补充:&lt;br&gt;
+2022年8月25日, BOB WISE, HEROKU GENERAL MANAGER AND SALESFORCE EVP, 在&lt;a class=&#34;link&#34; href=&#34;https://blog.heroku.com/next-chapter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku’s Next Chapter&lt;/a&gt;中写到, 计划于&lt;strong&gt;2022年11月28日起停止免费产品计划&lt;/strong&gt;, 原因是对 Heroku 免费产品计划的欺诈和滥用耗费了团队大量精力。&lt;/u&gt;&lt;/p&gt;
+&lt;h2 id=&#34;在heroku上安装v2raytrojan&#34;&gt;在Heroku上安装V2Ray/Trojan&lt;/h2&gt;
+&lt;h3 id=&#34;申请heroku帐号&#34;&gt;申请Heroku帐号&lt;/h3&gt;
+&lt;p&gt;申请&lt;a class=&#34;link&#34; href=&#34;https://www.heroku.com/&#34;  title=&#34;Heroku&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Heroku&lt;/a&gt;帐号非常简单, 只需要一个电子邮箱就可以了, 比Oracle云申请简单得多.&lt;/p&gt;
+&lt;h3 id=&#34;uuid生成器&#34;&gt;UUID生成器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://1024tools.com/uuid&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UUID在线生成&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用下面所述方式部署V2Ray+Trojan需要一个UUID, 可以使用上述在线UUID生成器即时生成一个唯一的UUID.&lt;br&gt;
+另外, V2Ray的Win10客户端也可以生成UUID.&lt;/p&gt;
+&lt;h3 id=&#34;部署v2raytrojan&#34;&gt;部署V2Ray/Trojan&lt;/h3&gt;
+&lt;p&gt;查了下Github上有两个高STAR+高Fork的&amp;quot;在Heroku上部署V2Ray/Trojan&amp;quot;的项目, 分别是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bclswl0827/v2ray-heroku&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;V2Ray Heroku&lt;/a&gt;: 用这个配置后不能用, 就用下一个.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mixool/xrayku&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xrayku&lt;/a&gt;              (链接已失效)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在相应网页上, 点击紫色的&amp;quot;Deploy to Heroku&amp;quot;按钮, 即可开始部署工作.&lt;br&gt;
+执行部署时, region选择&amp;quot;Europe&amp;quot;(欧洲), 因为据说选择美国会造成访问Youtube时出现异常, 尽管并不严重(只是无法评论?).&lt;br&gt;
+填入新生成的UUID, 点击&amp;quot;Deploy app&amp;quot;按钮执行部署, 然后下面就出现执行部署时的输出, 看着就有点像执行&amp;quot;Docker pull image名&amp;quot;的输出, 过一会儿就会出现&amp;quot;Your app was successfully deployed.&amp;quot;, 表明部署已经成功.&lt;/p&gt;
+&lt;h3 id=&#34;按照xraykuhttpsgithubcommixoolxrayku上的说明修改客户端配置文件-测试&#34;&gt;按照&lt;a class=&#34;link&#34; href=&#34;https://github.com/mixool/xrayku&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xrayku&lt;/a&gt;上的说明修改客户端配置文件, 测试&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>WSL下编译LEDE的openwrt, 用于斐讯K2</title>
+        <link>https://jimway71.github.io/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/</link>
+        <pubDate>Mon, 01 Jun 2020 01:06:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-22.jpg" alt="Featured image of post WSL下编译LEDE的openwrt, 用于斐讯K2" /&gt;&lt;p&gt;2020.6.1&lt;/p&gt;
+&lt;h3 id=&#34;openwrt编译命令汇总&#34;&gt;Openwrt编译命令汇总:&lt;/h3&gt;
+&lt;p&gt;开始编译:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt-get update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/coolsnowwolf/lede  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ./lede  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim feeds.conf.default  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./scripts/feeds update -a  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./scripts/feeds install -a  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make menuconfig  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在make menuconfig中:&lt;br&gt;
+选择: MediaTek Ralink MIPS / MT7620 based boards /Phicomm PSG128 rev.Ax&amp;quot;&lt;br&gt;
+选择: Luci _ Application _ SSR PLUS&amp;hellip;&amp;quot;&lt;br&gt;
+说明: 斐讯K2路由器, CPU型号为MT7620, 芯片架构为MIPS, 路由器型号为PSG1218 rev.Ax; K1 是 PSG1208,K2 是 PSG1218 rev.Ax, K2C是PSG1218 rev.Bx&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target system -&amp;gt; MediaTek Ralink MIPS  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Subtarget -&amp;gt; MT7620 based boards  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target Profile -&amp;gt; Phicomm PSG128 rev.Ax  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;继续编译:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make -j8 download &lt;span class=&#34;nv&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;s  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make -j15 &lt;span class=&#34;nv&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;s  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;由于空间不够，luci-&amp;gt;application留下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;accesscontrol  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- adbyby-plus  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;arpbind  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;autoreboot  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ddns  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flowoffload  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- nlbwmon 流量监控  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ramfree  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssr_plus + trojan  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;upnp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(因为不能保存配置, 再去掉IPV6支持)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不知道为什么, 内网的网段(ip)不能成功修改, 每次改过后, 路由就不能保存(或者会丢失)修改的内容: 需要在编译的时候就改掉这个地址。&lt;br&gt;
+位于: ./package/base-files/files/bin/config_generate&lt;br&gt;
+在make menuconfig完成后修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于用WSL代替虚拟机运行Ubuntu:&lt;br&gt;
+当前WSL上Ubuntu最早版本是18.04LTS(16.04LTS已经没有了)，最新的是20.04LTS&lt;br&gt;
+用WSL比较简单, 不用费劲去安装, 但移动虚拟机会很麻烦。这个问题可以参考:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在系统重置或重新安装之前，如何备份（WSL）Windows 10的Linux子系统: &lt;br&gt;
+Windows 10 v1903 包含内置的WSL导出/导入命令。具体来说，wsl &amp;ndash;export会产生tar和wsl &amp;ndash;import，并会导入先前导出的tar。然后，您可以在计算机之间移动此文件。 您还可以使用指定stdin / stdout -，这应允许您直接转移到另一台计算机并使用远程shell（如）导入ssh。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;错误处理&#34;&gt;错误处理:&lt;/h3&gt;
+&lt;p&gt;1 sudo apt-get install gcc-multilib g++-multilib&lt;br&gt;
+原因：type_traits:38:10: fatal error: bits/c++config.h: No such file or directory&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/4643197/missing-include-bits-cconfig-h-when-cross-compiling-64-bit-program-on-32-bit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://stackoverflow.com/questions/4643197/missing-include-bits-cconfig-h-when-cross-compiling-64-bit-program-on-32-bit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2 sudo apt install qtchooser&lt;br&gt;
+原因: File &amp;ldquo;/usr/lib/python2.7/subprocess.py&amp;rdquo;, line 1047, in _execute_child&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://github.com/kovidgoyal/build-calibre/issues/9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/kovidgoyal/build-calibre/issues/9&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;编译时长记录&#34;&gt;编译时长记录:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在Google云主机(e2-standard-8（8 个 vCPU，32 GB 内存), 30GSSD硬盘, Ubuntu 16.04)上完成，最后编译用了7个线程，总共用时不到1小时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;参考&#34;&gt;参考:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;编译更新OpenWrt PassWall和SSR-plus插件&lt;/a&gt; From &lt;a class=&#34;link&#34; href=&#34;https://mianao.info/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mianao&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coolsnowwolf/lede&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lean 的 Openwrt 源码仓库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         

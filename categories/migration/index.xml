@@ -2635,23 +2635,23 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = no  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printable = yes  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printer admin = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printer admin = XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[print$]  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        comment = Printer Drivers  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        path = /etc/samba/drivers  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        browseable = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = no  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        read only = yes  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        write list = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        write list = XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Share]  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        comment = Share_AmlR3300l  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        path = /mnt/ext/share  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = no  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        force create mode = 0644  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用smbpasswd设置用户密码(用adduser增加smb用户)  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;u&gt;注: 找不到smbpasswd文件, 但samba用户是可用的&lt;/u&gt;&lt;/p&gt;
@@ -2689,7 +2689,7 @@ tf卡读写速度也测过(hdparm -T), 读能到750MB/sec以上, 写也能到20M
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = yes  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = jimway, scanner  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = XXXXXXX, scanner  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        force create mode = 0644  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -6441,10 +6441,10 @@ Lycamobile用的是tmobile的网络，价格不错，在美国东部的覆盖也
 　　　BUILD=debug 表示生成带Debug信息的版本方便调试 (release是发布版, 缺省是debug版本)&lt;br&gt;
 　　缺省的参数设置可以参考配置文件config.gcc&lt;br&gt;
 　　d)执行编译命令(动态库debug版本)&lt;br&gt;
-　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 VENDOR=jimway&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 VENDOR=XXXXXXX&lt;br&gt;
 　　然后, 开始漫长的等待, 时间视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
 　　e)执行编译命令(动态库release版本)&lt;br&gt;
-　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 BUILD=release VENDOR=jimway&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 BUILD=release VENDOR=XXXXXXX&lt;br&gt;
 　　然后, 继续漫长的等待, 时间同样视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
 注意:&lt;br&gt;
 　　关于动态库编译的警告(Warning)&lt;br&gt;

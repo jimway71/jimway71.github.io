@@ -3,24 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jimway71.github.io/categories/blog/</loc>
-    <lastmod>2022-10-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/categories/</loc>
-    <lastmod>2022-10-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/interface/</loc>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/post/</loc>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/python/</loc>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/python%E5%90%84%E7%A7%8D%E6%8E%A5%E5%8F%A3/</loc>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/</loc>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/</loc>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/categories/%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/fun/</loc>
     <lastmod>2022-10-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/p/oh-my/</loc>
-    <lastmod>2022-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/post/</loc>
-    <lastmod>2022-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/tags/</loc>
-    <lastmod>2022-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/</loc>
     <lastmod>2022-10-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/python-front-end-frameworks/</loc>
@@ -33,9 +45,6 @@
     <lastmod>2022-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/streamlit/</loc>
-    <lastmod>2022-10-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/categories/%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2022-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/favorites/</loc>
@@ -123,9 +132,6 @@
     <lastmod>2022-08-30T11:53:00+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/pyside6/</loc>
-    <lastmod>2022-08-30T11:53:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/tags/python/</loc>
     <lastmod>2022-08-30T11:53:00+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>

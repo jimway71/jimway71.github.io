@@ -70,10 +70,10 @@
 　　　BUILD=debug 表示生成带Debug信息的版本方便调试 (release是发布版, 缺省是debug版本)&lt;br&gt;
 　　缺省的参数设置可以参考配置文件config.gcc&lt;br&gt;
 　　d)执行编译命令(动态库debug版本)&lt;br&gt;
-　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 VENDOR=jimway&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 VENDOR=XXXXXXX&lt;br&gt;
 　　然后, 开始漫长的等待, 时间视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
 　　e)执行编译命令(动态库release版本)&lt;br&gt;
-　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 BUILD=release VENDOR=jimway&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 BUILD=release VENDOR=XXXXXXX&lt;br&gt;
 　　然后, 继续漫长的等待, 时间同样视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
 注意:&lt;br&gt;
 　　关于动态库编译的警告(Warning)&lt;br&gt;

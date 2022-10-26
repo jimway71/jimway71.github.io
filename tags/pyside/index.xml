@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>pyside on 点滴随记</title>
+        <title>PySide on 点滴随记</title>
         <link>https://jimway71.github.io/tags/pyside/</link>
-        <description>Recent content in pyside on 点滴随记</description>
+        <description>Recent content in PySide on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Fri, 19 Aug 2022 12:00:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/pyside/index.xml" rel="self" type="application/rss+xml" /><item>

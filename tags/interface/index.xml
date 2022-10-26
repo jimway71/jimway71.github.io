@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>interface on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/interface/</link>
+        <description>Recent content in interface on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 25 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/interface/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python各种接口</title>
+        <link>https://jimway71.github.io/p/python%E5%90%84%E7%A7%8D%E6%8E%A5%E5%8F%A3/</link>
+        <pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/python%E5%90%84%E7%A7%8D%E6%8E%A5%E5%8F%A3/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-50.jpg" alt="Featured image of post Python各种接口" /&gt;&lt;h2 id=&#34;金融数据接口&#34;&gt;金融数据接口&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;国内外金融数据接口大全 From &lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1866258&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用Python轻松获取股票&amp;amp;基金数据&lt;/a&gt;&lt;br&gt;
+findatapy - 获取彭博终端，Quandl和雅虎财经的数据&lt;br&gt;
+googlefinance - 从谷歌财经获取实时股票价格&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/ranaroussi/yfinance&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;yahoo-finance&lt;/a&gt; - 从雅虎财经下载股票报价，历史价格，产品信息和财务报表&lt;br&gt;
+pandas-datareader - 从多个数据源获取经济/金融时间序列，包括谷歌财经，雅虎财经，圣路易斯联储(FRED)，OECD, Fama/French，世界银行，欧元区统计局等，是Pandas生态系统的重要组成&lt;br&gt;
+pandas-finance - 提供高级接口下载和分析金融时间序列&lt;br&gt;
+pyhoofinance - 从雅虎财经批量获取股票数据&lt;br&gt;
+yfinanceapi - 从雅虎财经获取数据&lt;br&gt;
+yql-finance - 从雅虎财经获取数据&lt;br&gt;
+ystockquote - 从雅虎财经获取实时报价&lt;br&gt;
+wallstreet - 实时股票和期权报价&lt;br&gt;
+stock_extractor - 从网络上爬取股票信息&lt;br&gt;
+Stockex - 从雅虎财经获取数据&lt;br&gt;
+finsymbols - 获取全美证券交易所，纽约证券交易所和纳斯达克上市公司的详细数据&lt;br&gt;
+inquisitor - 从Econdb获取经济数据，Econdb是全球经济指标聚合器&lt;br&gt;
+chinesestockapi - 获取A股数据&lt;br&gt;
+exchange - 获取最新的汇率报价&lt;br&gt;
+ticks - 命令行程序，获取股票报价&lt;br&gt;
+pybbg - 彭博终端COM的Python接口&lt;br&gt;
+ccy - 获取外汇数据&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://tushare.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tushare&lt;/a&gt; - 获取中国股票，基金，债券和期货市场的历史数据&lt;br&gt;
+jsm - 获取日本股票市场的历史数据&lt;br&gt;
+cn_stock_src - 从不同数据源获取中国的股票数据&lt;br&gt;
+coinmarketcap - 从coinmarketcap获取数字货币数据&lt;br&gt;
+after-hours - 获取美股盘前和盘后的市场价格&lt;br&gt;
+bronto-python - 整合Bronto API接口&lt;br&gt;
+pytdx - 获取中国国内股票的实时报价&lt;br&gt;
+pdblp - 整合Pandas和彭博终端的公共接口&lt;br&gt;
+tiingo - 从Tiingo平台获取股票日K线和实时报价/新闻流&lt;br&gt;
+IEX - 从IEX交易所获取股票的实时报价和历史数据&lt;br&gt;
+alpaca-trade-api - 从Alpaca平台获取股票实时报价和历史数据，并提供交易接口交易美股&lt;br&gt;
+metatrader5 - 集成Python和MQL5交易平台，适合外汇交易&lt;br&gt;
+akshare - 获取中国股票，基金，债券和宏观经济数据&lt;br&gt;
+yahooquery - 从雅虎财经获取数据&lt;br&gt;
+investpy - 从英为财经(Investing.com)获取数据&lt;br&gt;
+yliveticker - 从雅虎财经通过Websocket获取实时报价&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/uname-yang/pysnowball&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pysnowball&lt;/a&gt; 雪球py接口(github)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

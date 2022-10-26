@@ -6,7 +6,59 @@
         <description>Recent content on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 22 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python各种接口</title>
+        <link>https://jimway71.github.io/p/python%E5%90%84%E7%A7%8D%E6%8E%A5%E5%8F%A3/</link>
+        <pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/python%E5%90%84%E7%A7%8D%E6%8E%A5%E5%8F%A3/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-50.jpg" alt="Featured image of post Python各种接口" /&gt;&lt;h2 id=&#34;金融数据接口&#34;&gt;金融数据接口&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;国内外金融数据接口大全 From &lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1866258&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用Python轻松获取股票&amp;amp;基金数据&lt;/a&gt;&lt;br&gt;
+findatapy - 获取彭博终端，Quandl和雅虎财经的数据&lt;br&gt;
+googlefinance - 从谷歌财经获取实时股票价格&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/ranaroussi/yfinance&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;yahoo-finance&lt;/a&gt; - 从雅虎财经下载股票报价，历史价格，产品信息和财务报表&lt;br&gt;
+pandas-datareader - 从多个数据源获取经济/金融时间序列，包括谷歌财经，雅虎财经，圣路易斯联储(FRED)，OECD, Fama/French，世界银行，欧元区统计局等，是Pandas生态系统的重要组成&lt;br&gt;
+pandas-finance - 提供高级接口下载和分析金融时间序列&lt;br&gt;
+pyhoofinance - 从雅虎财经批量获取股票数据&lt;br&gt;
+yfinanceapi - 从雅虎财经获取数据&lt;br&gt;
+yql-finance - 从雅虎财经获取数据&lt;br&gt;
+ystockquote - 从雅虎财经获取实时报价&lt;br&gt;
+wallstreet - 实时股票和期权报价&lt;br&gt;
+stock_extractor - 从网络上爬取股票信息&lt;br&gt;
+Stockex - 从雅虎财经获取数据&lt;br&gt;
+finsymbols - 获取全美证券交易所，纽约证券交易所和纳斯达克上市公司的详细数据&lt;br&gt;
+inquisitor - 从Econdb获取经济数据，Econdb是全球经济指标聚合器&lt;br&gt;
+chinesestockapi - 获取A股数据&lt;br&gt;
+exchange - 获取最新的汇率报价&lt;br&gt;
+ticks - 命令行程序，获取股票报价&lt;br&gt;
+pybbg - 彭博终端COM的Python接口&lt;br&gt;
+ccy - 获取外汇数据&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://tushare.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tushare&lt;/a&gt; - 获取中国股票，基金，债券和期货市场的历史数据&lt;br&gt;
+jsm - 获取日本股票市场的历史数据&lt;br&gt;
+cn_stock_src - 从不同数据源获取中国的股票数据&lt;br&gt;
+coinmarketcap - 从coinmarketcap获取数字货币数据&lt;br&gt;
+after-hours - 获取美股盘前和盘后的市场价格&lt;br&gt;
+bronto-python - 整合Bronto API接口&lt;br&gt;
+pytdx - 获取中国国内股票的实时报价&lt;br&gt;
+pdblp - 整合Pandas和彭博终端的公共接口&lt;br&gt;
+tiingo - 从Tiingo平台获取股票日K线和实时报价/新闻流&lt;br&gt;
+IEX - 从IEX交易所获取股票的实时报价和历史数据&lt;br&gt;
+alpaca-trade-api - 从Alpaca平台获取股票实时报价和历史数据，并提供交易接口交易美股&lt;br&gt;
+metatrader5 - 集成Python和MQL5交易平台，适合外汇交易&lt;br&gt;
+akshare - 获取中国股票，基金，债券和宏观经济数据&lt;br&gt;
+yahooquery - 从雅虎财经获取数据&lt;br&gt;
+investpy - 从英为财经(Investing.com)获取数据&lt;br&gt;
+yliveticker - 从雅虎财经通过Websocket获取实时报价&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/uname-yang/pysnowball&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pysnowball&lt;/a&gt; 雪球py接口(github)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Oh My</title>
         <link>https://jimway71.github.io/p/oh-my/</link>
         <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
@@ -850,11 +902,22 @@
 &lt;h2 id=&#34;python&#34;&gt;Python&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/topic/21740196&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;streamlit&lt;/a&gt;&lt;/li&gt;
+    &gt;话题 - streamlit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/569534863&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;我学习Python的三个神级网站 - 萝卜大杂烩的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/55493026/answer/683070334&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;你们都是怎么学 Python 的？ - 量子位的回答 - 知乎&lt;/a&gt;&lt;/li&gt;
+    &gt;你们都是怎么学 Python 的？ - 量子位的回答 - 知乎&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackfrued/Python-100-Days&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Python - 100天从新手到大师&lt;/a&gt; - 上述链接中推荐&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackfrued/Python-Core-50-Courses&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Python语言基础50课&lt;/a&gt; - 上述链接更基础版&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1FT4y1R7sz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;B站-Python零基础快速上手&lt;/a&gt; - 上述的视频教程&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Candysad/Streamlit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 参照官方文档翻译总结&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/469582149&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;算法不会前端，也可以做出好看的界面-Streamlit - 刘聪NLP的文章 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1023,6 +1086,16 @@
 	
 &gt;&lt;br&gt;
 &lt;img src=&#34;https://jimway71.github.io/img/2022-Russian-invasion-of-Ukraine/imgs/20220509201140-6595.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/2022-Russian-invasion-of-Ukraine/imgs/h-scaled.jpg&#34;
 	
 	
 	
@@ -2084,7 +2157,7 @@ Video: &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/zvideo/1562096
         <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
         
         <guid>https://jimway71.github.io/p/more-links/</guid>
-        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-44-c.jpg" alt="Featured image of post More Links" /&gt;&lt;h2 id=&#34;资源导航&#34;&gt;资源导航&lt;/h2&gt;
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-44.jpg" alt="Featured image of post More Links" /&gt;&lt;h2 id=&#34;资源导航&#34;&gt;资源导航&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2910,6 +2983,82 @@ More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;2022-russian-invasion-of-ukraine&#34;&gt;2022 Russian invasion of Ukraine&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;th&gt;Icon&lt;/th&gt;
+&lt;th&gt;Remark&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Russo-Ukrainian Warspotting&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://ukr.warspotting.net/russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ukr.warspotting.net/russia/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://ukr.warspotting.net/static/images/icon.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;oryx&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Russian losses&lt;/a&gt; &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-ukrainian.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ukraine losses&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://www.oryxspioenkop.com/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NAFO&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/search?q=%23nafo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://twitter.com/search?q=%23nafo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;http://hugo.otcg.org/FixFrmRes/NAFO_Freud_Fella.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;NAFO&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;照片笑话&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://durdom.in.ua/icns/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;弗图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;主机信息&#34;&gt;主机信息&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -2993,6 +3142,23 @@ More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/
 &lt;td&gt;国外VPS，国外服务器，国外主机，测评及优惠码&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;2022年便宜高性价比VPS(含最新优惠)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://renzhn.github.io/posts/cheap-vps/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://renzhn.github.io/posts/cheap-vps/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://renzhn.github.io/favicon-16x16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;icon&#34;
+	
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;来自&lt;a class=&#34;link&#34; href=&#34;https://renzhn.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VPS百科&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;&amp;mdash;-&lt;/td&gt;
 &lt;td&gt;&amp;mdash;-&lt;/td&gt;
 &lt;td&gt;&amp;mdash;-&lt;/td&gt;
@@ -3013,82 +3179,6 @@ More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/
 	
 &gt;&lt;/td&gt;
 &lt;td&gt;(Migrated)云资源集合列表 From imba-tjd 谭九鼎&amp;rsquo;s GitHub&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;2022-russian-invasion-of-ukraine&#34;&gt;2022 Russian invasion of Ukraine&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Link&lt;/th&gt;
-&lt;th&gt;Icon&lt;/th&gt;
-&lt;th&gt;Remark&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Russo-Ukrainian Warspotting&lt;/td&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://ukr.warspotting.net/russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://ukr.warspotting.net/russia/&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;https://ukr.warspotting.net/static/images/icon.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;icon&#34;
-	
-	
-&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;oryx&lt;/td&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Russian losses&lt;/a&gt; &lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-ukrainian.html?m=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Ukraine losses&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;https://www.oryxspioenkop.com/favicon.ico&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;icon&#34;
-	
-	
-&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;NAFO&lt;/td&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/search?q=%23nafo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://twitter.com/search?q=%23nafo&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;http://hugo.otcg.org/FixFrmRes/NAFO_Freud_Fella.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;NAFO&#34;
-	
-	
-&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;照片笑话&lt;/td&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://durdom.in.ua/uk/main/photos/filter/best/order/date.phtml&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;https://durdom.in.ua/icns/favicon.ico&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/td&gt;
-&lt;td&gt;弗图&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3301,7 +3391,7 @@ More infor on &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/
 &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.statista.com/statistics/1155338/residential-real-estate-average-prices-by-market-in-russia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;$&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&amp;mdash;-&lt;/td&gt;
-&lt;td&gt;战前战后, &lt;strong&gt;需要跟踪&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;战前战后, &lt;strong&gt;需要跟踪&lt;/strong&gt;&lt;br&gt;2022年暴涨是否与卢布实际汇率相关?&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -4256,7 +4346,7 @@ strealit对Python版本要求参考官网说明: &lt;a class=&#34;link&#34; href
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ERROR: Failed building wheel for backports.zoneinfo
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Building wheel for pyrsistent (pyproject.toml) ... done
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Created wheel for pyrsistent: filename=pyrsistent-0.18.1-cp38-cp38-linux_aarch64.whl size=56386 sha256=70e6458eae430b5065d6e229f19e7f0f96b55456d32162c31ff47846aa6d6d6b
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Stored in directory: /home/jimway/.cache/pip/wheels/a5/15/17/a3a9eec63321dd22dc53130d06b7d25f00d129693bec6fc36e
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Stored in directory: /home/XXXXXXX/.cache/pip/wheels/a5/15/17/a3a9eec63321dd22dc53130d06b7d25f00d129693bec6fc36e
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Successfully built validators pyrsistent
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Failed to build backports.zoneinfo
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
@@ -6322,7 +6412,7 @@ hugo v0.101.0+extended linux/amd64 BuildDate=unknown&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo mkdir /mnt/hugo  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo chown jimway:jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo chown XXXXXXX:XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd /mnt/hugo  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo new site blog  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Congratulations! Your new Hugo site is created in /mnt/hugo/blog.
@@ -6382,7 +6472,7 @@ hugo v0.101.0+extended linux/amd64 BuildDate=unknown&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###     Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/dsrkafuu/hugo-theme-fuji.git themes/fuji
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 注: 这个是使用git submodule add命令  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/jimway71/hugo-theme-pure.git themes/pure  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/xiaoheiAh/hugo-theme-pure themes/pure
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule add https://github.com/vjeantet/hugo-theme-docport.git themes/hugo-theme-docport  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -9394,23 +9484,23 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = no  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printable = yes  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printer admin = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        printer admin = XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[print$]  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        comment = Printer Drivers  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        path = /etc/samba/drivers  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        browseable = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = no  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        read only = yes  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        write list = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        write list = XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Share]  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        comment = Share_AmlR3300l  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        path = /mnt/ext/share  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = no  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        force create mode = 0644  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用smbpasswd设置用户密码(用adduser增加smb用户)  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd jimway  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;u&gt;注: 找不到smbpasswd文件, 但samba用户是可用的&lt;/u&gt;&lt;/p&gt;
@@ -9448,7 +9538,7 @@ tf卡读写速度也测过(hdparm -T), 读能到750MB/sec以上, 写也能到20M
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        guest ok = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        writable = yes  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = yes  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = jimway, scanner  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = XXXXXXX, scanner  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        force create mode = 0644  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -13288,10 +13378,10 @@ Lycamobile用的是tmobile的网络，价格不错，在美国东部的覆盖也
 　　　BUILD=debug 表示生成带Debug信息的版本方便调试 (release是发布版, 缺省是debug版本)&lt;br&gt;
 　　缺省的参数设置可以参考配置文件config.gcc&lt;br&gt;
 　　d)执行编译命令(动态库debug版本)&lt;br&gt;
-　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 VENDOR=jimway&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 VENDOR=XXXXXXX&lt;br&gt;
 　　然后, 开始漫长的等待, 时间视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
 　　e)执行编译命令(动态库release版本)&lt;br&gt;
-　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 BUILD=release VENDOR=jimway&lt;br&gt;
+　　mingw32-make -f makefile.gcc UNICODE=1 USE_ODBC=1 MONOLITHIC=1 SHARED=1 BUILD=release VENDOR=XXXXXXX&lt;br&gt;
 　　然后, 继续漫长的等待, 时间同样视机器的性能而定, 最终在目录....\lib\下生成库文件&lt;br&gt;
 注意:&lt;br&gt;
 　　关于动态库编译的警告(Warning)&lt;br&gt;

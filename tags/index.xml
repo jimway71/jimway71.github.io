@@ -6,7 +6,23 @@
         <description>Recent content in Tags on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 22 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>interface</title>
+        <link>https://jimway71.github.io/tags/interface/</link>
+        <pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/interface/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>python</title>
+        <link>https://jimway71.github.io/tags/python/</link>
+        <pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Fun</title>
         <link>https://jimway71.github.io/tags/fun/</link>
         <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
@@ -207,15 +223,7 @@
         <description></description>
         </item>
         <item>
-        <title>python</title>
-        <link>https://jimway71.github.io/tags/python/</link>
-        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/python/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>pyside</title>
+        <title>PySide</title>
         <link>https://jimway71.github.io/tags/pyside/</link>
         <pubDate>Fri, 19 Aug 2022 12:00:00 +0800</pubDate>
         

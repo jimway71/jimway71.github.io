@@ -868,23 +868,23 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 </span></span><span class="line"><span class="cl">        guest ok = yes  
 </span></span><span class="line"><span class="cl">        writable = no  
 </span></span><span class="line"><span class="cl">        printable = yes  
-</span></span><span class="line"><span class="cl">        printer admin = jimway  
+</span></span><span class="line"><span class="cl">        printer admin = XXXXXXX  
 </span></span><span class="line"><span class="cl">[print$]  
 </span></span><span class="line"><span class="cl">        comment = Printer Drivers  
 </span></span><span class="line"><span class="cl">        path = /etc/samba/drivers  
 </span></span><span class="line"><span class="cl">        browseable = yes  
 </span></span><span class="line"><span class="cl">        guest ok = no  
 </span></span><span class="line"><span class="cl">        read only = yes  
-</span></span><span class="line"><span class="cl">        write list = jimway  
+</span></span><span class="line"><span class="cl">        write list = XXXXXXX  
 </span></span><span class="line"><span class="cl">[Share]  
 </span></span><span class="line"><span class="cl">        comment = Share_AmlR3300l  
 </span></span><span class="line"><span class="cl">        path = /mnt/ext/share  
 </span></span><span class="line"><span class="cl">        writable = yes  
 </span></span><span class="line"><span class="cl">        public = no  
-</span></span><span class="line"><span class="cl">        valid users = jimway  
+</span></span><span class="line"><span class="cl">        valid users = XXXXXXX  
 </span></span><span class="line"><span class="cl">        force create mode = 0644  
 </span></span><span class="line"><span class="cl"># 用smbpasswd设置用户密码(用adduser增加smb用户)  
-</span></span><span class="line"><span class="cl"># smbpasswd jimway  
+</span></span><span class="line"><span class="cl"># smbpasswd XXXXXXX  
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><u>注: 找不到smbpasswd文件, 但samba用户是可用的</u></p>
@@ -922,7 +922,7 @@ tf卡读写速度也测过(hdparm -T), 读能到750MB/sec以上, 写也能到20M
 </span></span><span class="line"><span class="cl">        guest ok = yes  
 </span></span><span class="line"><span class="cl">        writable = yes  
 </span></span><span class="line"><span class="cl">        public = yes  
-</span></span><span class="line"><span class="cl">        valid users = jimway, scanner  
+</span></span><span class="line"><span class="cl">        valid users = XXXXXXX, scanner  
 </span></span><span class="line"><span class="cl">        force create mode = 0644  
 </span></span></code></pre></td></tr></table>
 </div>

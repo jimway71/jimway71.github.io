@@ -777,7 +777,7 @@ strealit对Python版本要求参考官网说明: &lt;a class=&#34;link&#34; href
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ERROR: Failed building wheel for backports.zoneinfo
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Building wheel for pyrsistent (pyproject.toml) ... done
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Created wheel for pyrsistent: filename=pyrsistent-0.18.1-cp38-cp38-linux_aarch64.whl size=56386 sha256=70e6458eae430b5065d6e229f19e7f0f96b55456d32162c31ff47846aa6d6d6b
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Stored in directory: /home/jimway/.cache/pip/wheels/a5/15/17/a3a9eec63321dd22dc53130d06b7d25f00d129693bec6fc36e
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Stored in directory: /home/XXXXXXX/.cache/pip/wheels/a5/15/17/a3a9eec63321dd22dc53130d06b7d25f00d129693bec6fc36e
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Successfully built validators pyrsistent
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Failed to build backports.zoneinfo
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
