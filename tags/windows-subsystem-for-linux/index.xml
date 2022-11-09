@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Windows Subsystem for Linux on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/windows-subsystem-for-linux/</link>
+        <description>Recent content in Windows Subsystem for Linux on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 28 May 2022 12:41:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/windows-subsystem-for-linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ｗindows10: WSL &#43; Ubuntu</title>
+        <link>https://jimway71.github.io/p/%EF%BD%97indows10-wsl--ubuntu/</link>
+        <pubDate>Sat, 28 May 2022 12:41:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%EF%BD%97indows10-wsl--ubuntu/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-55.jpg" alt="Featured image of post Ｗindows10: WSL &#43; Ubuntu" /&gt;&lt;p&gt;Vmware用烦了，太麻烦，太占用资源，换个轻量点的：WSL + Ubuntu&lt;/p&gt;
+&lt;h2 id=&#34;关于wsl&#34;&gt;关于WSL&lt;/h2&gt;
+&lt;p&gt;Windows Subsystem for Linux（WSL）是一个用于在本地运行linux二进制可执行文件（ELF格式）的兼容层。与虚拟机相比，wsl没有虚拟硬件的过程，而是直接在windows上虚拟一个linux内核，模拟linux系统调用，以运行linux执行文件。因此效率要比虚拟机高，但是它使用的是自己实现的init进程而不是发行版的init进程，并且几乎没有实现任何系统服务，因此只适用于软件的开发，而不是作为桌面环境或生产性的服务器。&lt;/p&gt;
+&lt;h2 id=&#34;安装wsl&#34;&gt;安装WSL&lt;/h2&gt;
+&lt;h3 id=&#34;安装适用于linux的windows子系统&#34;&gt;安装“适用于Linux的Windows子系统”&lt;/h3&gt;
+&lt;p&gt;(在Windows10系统中搜索)打开“启用或关闭Windows功能”, 选中“适用于Linux的Windows子系统”，点击确认按钮，并根据提示重启电脑。&lt;/p&gt;
+&lt;h3 id=&#34;使用windows应用商店安装ubuntu&#34;&gt;使用Windows应用商店安装Ubuntu&lt;/h3&gt;
+&lt;p&gt;(搜索)打开“Microsoft Store”，在里面的搜索栏输入“Ubuntu”，选择需要的版本进行安装。&lt;br&gt;
+当前最旧的版本为Ubuntu 18.04.5 LTS，最新的Ubuntu 22.04 LTS。&lt;br&gt;
+有未标注版本号的Ubuntu，这是可以滚动升级的版本，使用do_release-upgrade命令可以直接滚动升级到最新版Ubuntu&lt;br&gt;
+说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关于硬盘分区&lt;br&gt;
+windows的硬盘分区到加载到Ubuntu的/mnt目录下, 如Ｃ盘在/mnt/c，E盘在/mnt/e。&lt;/li&gt;
+&lt;li&gt;关于网络&lt;br&gt;
+WSL的Ubuntu采用桥接模式连接网络, 用ifconfig查看，可以看到另一个内网网段的地址，内外网均可访问。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;初始使用wsl的ubuntu&#34;&gt;初始使用WSL的Ubuntu&lt;/h2&gt;
+&lt;p&gt;(在Windows10系统中搜索)打开“Ubuntu”，即可进入Ubuntu界面。&lt;br&gt;
+第一次进入时，系统会要求增加一个用户，设置用户名和密码。&lt;/p&gt;
+&lt;h2 id=&#34;windows与ubuntu的互操作&#34;&gt;Windows与Ubuntu的互操作&lt;/h2&gt;
+&lt;p&gt;互操作性是指，既可以在windows中运行linux进程，也可以在linux中运行windows进程，并且支持两个不同进程间的输入输出重定向。&lt;/p&gt;
+&lt;h3 id=&#34;在windows中运行linux进程&#34;&gt;在windows中运行linux进程&lt;/h3&gt;
+&lt;p&gt;在windows中使用wsl [command]运行linux命令，需要注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;linux命令使用当前目录作为工作目录;&lt;/li&gt;
+&lt;li&gt;对于windows文件，拥有运行WSL的windows用户权限；对于linux文件拥有登录用户权限;&lt;/li&gt;
+&lt;li&gt;文件路径使用linux格式;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例子(抄的，没太看明白，估计用不着)：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\temp&amp;gt; wsl ls -la  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;- contents of C:\temp -&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\temp&amp;gt; wsl sudo apt-get update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[sudo] password for username:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Hit:1 https://archive.ubuntu.com/ubuntu xenial InRelease   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Get:2 https://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\temp&amp;gt; wsl ls -la | findstr &amp;#34;foo&amp;#34;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rwxrwxrwx 1 root root 14 Sep 27 14:26 foo.bat  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\temp&amp;gt; dir | wsl grep foo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;09/27/2016 02:26 PM  14 foo.bat  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\temp&amp;gt; wsl ls -la &amp;gt; out.txt  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\temp&amp;gt; wsl ls -la /proc/cpuinfo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 root root 0 Sep 28 11:28 /proc/cpuinfo  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\temp&amp;gt; wsl ls -la &amp;#34;/mnt/c/Program Files&amp;#34;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;- contents of C:\Program Files -&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;在linux中运行windows命令&#34;&gt;在linux中运行windows命令&lt;/h3&gt;
+&lt;p&gt;在linux中运行windows命令，使用[binary name].exe（后缀不要省略），linux可以直接访问windows命令的原因在于linux共享了windows的PATH环境变量（我猜是linux中唯一的守护进程init做的）。&lt;br&gt;
+需要注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一般windows命令的工作目录为当前linux的工作目录。如果linux工作目录位于linux文件系统内，则windows的工作目录会改为Base.exe的工作目录（原因见2.4小节）。&lt;/li&gt;
+&lt;li&gt;拥有与运行WSL拥有者一致的权限&lt;/li&gt;
+&lt;li&gt;需要注意路径，看下面的例子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例子(也是抄的)：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ notepad.exe  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ipconfig.exe | grep IPv4 | cut -d：-f2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;172.21.240.1  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.159.21.24  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ls -la | findstr.exe foo.txt  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cmd.exe /c dir  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;- contents of C:\ -&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$#cmd 原生命名需要通过cmd.exe运行  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cmd.exe /C dir  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;- contents of C:\ -&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ PING.EXE www.microsoft.com  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pinging e1863.dspb.akamaiedge.net [2600:1409:a:5a2::747] with 32 bytes of data:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Reply from 2600:1409:a:5a2::747：time=2ms  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ notepad.exe &amp;#34;C:\temp\foo.txt&amp;#34;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ notepad.exe C:\\temp\\foo.txt  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;ubuntu更换国内镜像源并更新软件包&#34;&gt;Ubuntu更换国内镜像源并更新软件包&lt;/h2&gt;
+&lt;p&gt;Ubuntu的官方镜像列表在&lt;a class=&#34;link&#34; href=&#34;https://launchpad.net/ubuntu/&amp;#43;archivemirrors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Official Archive Mirrors for Ubuntu&lt;/a&gt;，里面有大学、组织、公司，由于往往只有大公司可能在全国布置多节点以提高访问速度，所以对比了下几家大公司(的ping值)，最后&lt;a class=&#34;link&#34; href=&#34;https://mirrors.cloud.tencent.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;腾讯云镜像&lt;/a&gt;最快，&lt;a class=&#34;link&#34; href=&#34;http://mirrors.aliyun.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;阿里云镜像&lt;/a&gt;略慢，&lt;a class=&#34;link&#34; href=&#34;https://repo.huaweicloud.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;华为云镜像&lt;/a&gt;不太稳定。&lt;br&gt;
+操作：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo sed -i &amp;#39;s#http://archive.ubuntu.com#https://mirrors.cloud.tencent.com#&amp;#39; /etc/apt/sources.list  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo sed -i &amp;#39;s#http://security.ubuntu.com#https://mirrors.cloud.tencent.com#&amp;#39; /etc/apt/sources.list  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt upgrade  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/jdbdh/article/details/88653434&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;windows上的linux子系统(WSL)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/zh-cn/windows/wsl/about&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;微软官方文档&lt;/a&gt;：介绍了安装、使用&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://devblogs.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Learn About Windows Console &amp;amp; Windows Subsystem For Linux (WSL)&lt;/a&gt;：介绍了wsl原理&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wsl wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Do not change Linux files using Windows apps and tools&lt;/a&gt;: 来自Rich的警告&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/zh-cn/archive/blogs/wsl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wsl官方博客集合&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://research.wmz.ninja/articles/2017/11/setting-up-wsl-with-graphics-and-audio.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Setting Up WSL with Graphics and Audio&lt;/a&gt;：对WSL理解的很好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/henryhu712/article/details/108910727&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在Windows10上安装Ubuntu&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

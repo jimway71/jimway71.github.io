@@ -6,7 +6,1045 @@
         <description>Recent content in 硬件 on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 23 May 2021 18:27:16 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/categories/%E7%A1%AC%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 28 May 2022 20:46:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/categories/%E7%A1%AC%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>为Newifi3编译Padavan</title>
+        <link>https://jimway71.github.io/p/%E4%B8%BAnewifi3%E7%BC%96%E8%AF%91padavan/</link>
+        <pubDate>Sat, 28 May 2022 20:46:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E4%B8%BAnewifi3%E7%BC%96%E8%AF%91padavan/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-56.png" alt="Featured image of post 为Newifi3编译Padavan" /&gt;&lt;p&gt;注：第一次尝试，采用最简单的方法处理&lt;br&gt;
+操作系统: &lt;a class=&#34;link&#34; href=&#34;https://releases.ubuntu.com/18.04/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ubuntu 18.04 LTS&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第一次尝试编译&#34;&gt;第一次尝试编译&lt;/h2&gt;
+&lt;h3 id=&#34;系统准备&#34;&gt;系统准备&lt;/h3&gt;
+&lt;h4 id=&#34;操作系统更新&#34;&gt;操作系统更新&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ sudo apt update&lt;br&gt;
+$ sudo apt upgrade&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;安装依赖包&#34;&gt;安装依赖包&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \&lt;br&gt;
+fakeroot kmod cpio git python3-docutils gettext automake autopoint \&lt;br&gt;
+texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev \&lt;br&gt;
+libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;编译过程结果-无扩展功能&#34;&gt;编译过程(结果: 无扩展功能)&lt;/h3&gt;
+&lt;h4 id=&#34;准备目录&#34;&gt;准备目录&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ sudo mkdir /opt/rt-n56u&lt;br&gt;
+$ sudo chmod 0777 /opt/rt-n56u&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;拉取源码&#34;&gt;拉取源码:&lt;/h4&gt;
+&lt;p&gt;选择github上的代码&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ git clone --depth=1 &lt;a class=&#34;link&#34; href=&#34;https://github.com/hanwckf/rt-n56u.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/hanwckf/rt-n56u.git&lt;/a&gt; /opt/rt-n56u&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;准备toolchain&#34;&gt;准备toolchain&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ cd /opt/rt-n56u/toolchain-mipsel&lt;br&gt;
+# 使用脚本下载预编译的工具链：&lt;br&gt;
+$ sh dl_toolchain.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;如何有必要编辑配置文件模板&#34;&gt;(如何有必要)编辑配置文件(模板)&lt;/h4&gt;
+&lt;p&gt;在/opt/rt-n56u/trunk/configs/templates/目录下&lt;br&gt;
+Newifi3的配置文件名为NEWIFI3.config&lt;/p&gt;
+&lt;h3 id=&#34;进行编译&#34;&gt;进行编译&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ cd /opt/rt-n56u/trunk&lt;br&gt;
+# 对于WSL环境，需要使用sudo进行编译，或者使用fakeroot-tcp代替fakeroot&lt;br&gt;
+$ sudo ./build_firmware_modify NEWIFI3&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;坐等编译完成，时间会比较长，应该跟机器速度强相关。&lt;/p&gt;
+&lt;h3 id=&#34;编译完成拷出固件&#34;&gt;编译完成，拷出固件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;编译好的固件在:&lt;br&gt;
+/opt/rt-n56u/trunk/images&lt;/li&gt;
+&lt;li&gt;生成的固件为:&lt;br&gt;
+NEWIFI3_3.4.3.9-099.trx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注:&lt;br&gt;
+有人提醒: 刷机后为避免各类怪异现象，请到&amp;quot;系统管理&amp;quot;-&amp;gt;&amp;ldquo;配置管理&amp;rdquo;, 重置路由器设置 (NVRAM)和 路由器内部存储 (/etc/storage)进行双清&lt;/p&gt;
+&lt;p&gt;Pavadan的第一次编译过程比较顺利，相比而言，Openwrt的编译过程总是状况不断。&lt;br&gt;
+好感度+1！&lt;/p&gt;
+&lt;p&gt;后记:&lt;br&gt;
+用编译后固件刷了NEWIFI3后, 进入后看到的图面如下:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/2022-05-28_hanwckf_pdv_%e6%97%a0%e7%a7%91%e5%ad%a6%e7%95%8c%e9%9d%a2_%e8%87%aa%e7%bc%96%e8%af%91%e7%89%88%e6%9c%ac.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;完全没有扩展功能，功能不全，无法使用&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;尝试下载已编译好的固件&#34;&gt;尝试下载已编译好的固件&lt;/h2&gt;
+&lt;p&gt;好吧，那先找个大概能用的、编译好的固件看下再说&lt;br&gt;
+在&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;恩山论坛&lt;/a&gt;上到个帖子，给指到&lt;a class=&#34;link&#34; href=&#34;https://github.com/hiboyhiboy/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hiboyhiboy&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://github.com/hiboyhiboy/opt-script/issues/61&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ss订阅列表问题#61&lt;/a&gt;，里面有指到&lt;a class=&#34;link&#34; href=&#34;https://t.me/s/pdcn1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hiboyhiboy的固件发布地址&lt;/a&gt;，在这里找到了&lt;a class=&#34;link&#34; href=&#34;https://opt.cn2qq.com/padavan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;他的固件下载地址&lt;/a&gt;。&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://opt.cn2qq.com/padavan/RT-N56UB1-newifi3D2-512M_3.4.3.9-099.trx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RT-N56UB1-newifi3D2-512M_3.4.3.9-099.trx&lt;/a&gt;，并刷入NEWIFI3，进入后的界面是这样的：&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/2022-05-28_hiboy_pdv_%e5%bc%b1%e7%a7%91%e5%ad%a6%e7%95%8c%e9%9d%a2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;“V2RAY”配置菜单在“扩展功能”-“搭建Web环境”里的第二项，里面界面、配置方式与原来在OP里的完全不同，比较难于入手。&lt;br&gt;
+放弃！&lt;/p&gt;
+&lt;h2 id=&#34;尝试用可选科学上网插件的代码做编译&#34;&gt;尝试用可选科学上网插件的代码做编译&lt;/h2&gt;
+&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/c31b58728778&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;老毛子Padavan固件编译笔记&lt;/a&gt;中发现&lt;a class=&#34;link&#34; href=&#34;https://github.com/chongshengB/rt-n56u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;chongshengB&lt;/a&gt;的版本可以选择&lt;u&gt;科学上网&lt;/u&gt;插件，看样子有可能可用。&lt;br&gt;
+跟着&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/c31b58728778&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;老毛子Padavan固件编译笔记&lt;/a&gt;的说明做编译。&lt;br&gt;
+注：&lt;br&gt;
+在编译过程中报了四次错&lt;/p&gt;
+&lt;h3 id=&#34;报错为没有找到7z&#34;&gt;报错为没有找到7z&lt;/h3&gt;
+&lt;p&gt;处理：安装7z&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$sudo apt install p7zip-full&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是，装完7z后还有报错，如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make[2]: Entering directory &amp;#39;/opt/rt-n56u/trunk/libs/boost&amp;#39;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;( if [ ! -d boost_1_72_0 ]; then \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        7z x -bsp0 boost_1_72_0.7z ; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        patch -d boost_1_72_0 -p1 -i ../build.patch; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fi )  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect command line  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;patch: **** Can&amp;#39;t change to directory boost_1_72_0 : No such file or directory  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Makefile:14: recipe for target &amp;#39;extract_test&amp;#39; failed  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make[2]: *** [extract_test] Error 2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make[2]: Leaving directory &amp;#39;/opt/rt-n56u/trunk/libs/boost&amp;#39;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;查找问题原因&#34;&gt;查找问题原因&lt;/h4&gt;
+&lt;p&gt;查找原因，直接执行 7z x -bsp0 boost_1_72_0.7z，报错如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ 7z x -bsp0 /opt/rt-n56u/trunk/libs/boost/boost_1_72_0.7z  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect command line  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示的错误一致。&lt;br&gt;
+如果修改一下，执行 7z x boost_1_72_0.7z&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/tmp$ 7z x  /opt/rt-n56u/trunk/libs/boost/boost_1_72_0.7z&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;则能正确执行。&lt;br&gt;
+通过Google搜索＂7z bsp0 error＂，可以查到一篇＂&lt;a class=&#34;link&#34; href=&#34;https://superuser.com/questions/194659/how-to-disable-the-output-of-7-zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How to disable the output of 7-Zip?&lt;/a&gt;＂，里面有提到&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can use the -bs command to control where output goes. To stop anything but error output, I would add -bso0 -bsp0.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即参数-bsp0可以停止除错误输出之外的任何操作，&lt;br&gt;
+下一个回复则说到&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is correct, but introduced in 7Zip version 15.01 or after 9.38beta Source: sourceforge.net/p/sevenzip/discussion/45797/thread/8a45fa74 The actual Synology DSM 6.1.x includes 7zip with the version 9.20 and has no such option.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;应该是后来的版本里没有这个选项。&lt;br&gt;
+由此可以确定是由于7z版本更新后，不再支持-bsp0选项，而造成的这个错误。&lt;/p&gt;
+&lt;h4 id=&#34;解决问题&#34;&gt;解决问题&lt;/h4&gt;
+&lt;p&gt;解决方法应该是去掉命令中的-bsp0。&lt;br&gt;
+搜索这个命令的位置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ /opt/rt-n56u/trunk$ grep -r &amp;#39;bsp0 &amp;#39; *  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libs/boost/Makefile:            7z x -bsp0 $(SRC_NAME).7z ; \  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;那就是在文件/opt/rt-n56u/trunk/libs/boost/Makefile里，打开该文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim /opt/rt-n56u/trunk/libs/boost/Makefile  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SRC_NAME = boost_1_72_0  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;THISDIR = $(shell pwd)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CFLAGS := -O3 -ffunction-sections -fdata-sections  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CXXFLAGS := -O3 -ffunction-sections -fdata-sections  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LDFLAGS := -Wl,--gc-sections  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Boost_libs := date_time,program_options,system  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;all: extract_test config_test  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ( cd $(SRC_NAME); \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ./b2 -d 0 -j $(HOST_NCPU) toolset=gcc-cross link=static variant=release runtime-link=shared install ; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        )  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;extract_test:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ( if [ ! -d $(SRC_NAME) ]; then \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                7z x -bsp0 $(SRC_NAME).7z ; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                patch -d $(SRC_NAME) -p1 -i ../build.patch; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        fi )  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;config_test:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ( if [ -f ./config_done ]; then \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                echo &amp;#34;config done&amp;#34;; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cd $(SRC_NAME); \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ./bootstrap.sh --with-libraries=$(Boost_libs) --prefix=$(STAGEDIR) ; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        echo &amp;#34;using gcc : cross : $(CXX) : &amp;lt;compileflags&amp;gt;\&amp;#34;$(CPUFLAGS)\&amp;#34; &amp;lt;cxxflags&amp;gt;\&amp;#34;$(CXXFLAGS)\&amp;#34; &amp;lt;cflags&amp;gt;\&amp;#34;$(CFLAGS)\&amp;#34; &amp;lt;linkflags&amp;gt;\&amp;#34;$(LDFLAGS)\&amp;#34; ;&amp;#34; &amp;gt;&amp;gt; project-config.jam ; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        touch ../config_done; \  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        fi )  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clean:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        rm -f config_done  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;romfs:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cp -fP $(STAGEDIR)/lib/libboost_*.so* $(ROMFSDIR)/lib  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;修改第15行 &amp;quot;                7z x -bsp0 $(SRC_NAME).7z ; &amp;quot;，去掉-bsp0，改为：&lt;br&gt;
+&amp;quot;                7z x $(SRC_NAME).7z ; &amp;quot;&lt;br&gt;
+&lt;strong&gt;已确认修改完成后该问题解决&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;没有htop-302targz且在试图下载htop-302targz时报错&#34;&gt;没有htop-3.0.2.tar.gz，且在试图下载htop-3.0.2.tar.gz时报错&lt;/h3&gt;
+&lt;p&gt;报错内容为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HTTP request sent, awaiting response&amp;hellip; 403 Forbidden&lt;br&gt;
+2022-05-29 11:09:25 ERROR 403: Forbidden.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;帖子&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4064867-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;C大源码编译到htop时出错&lt;/a&gt;里描述了相同的错误，并说明了解决方案，如下：&lt;br&gt;
+把&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/forum.php?mod=attachment&amp;amp;aid=NDQxMTk5fDY4MDg5ZDU3fDE2NTM4Mzc5MDZ8MHw0MDY0ODY3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;htop-3.0.2.tar.gz&lt;/a&gt;文件放/opt/rt-n56u/trunk/user/htop下就行了。&lt;br&gt;
+&lt;strong&gt;已确认该解决方案可行&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;在编译到trojan时报错&#34;&gt;在编译到trojan时报错&lt;/h3&gt;
+&lt;p&gt;报错如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CMake Error at CMakeLists.txt:1 (cmake_minimum_required):&lt;br&gt;
+CMake 3.7.2 or higher is required.  You are running version 3.5.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/u010420283/article/details/117632307&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ubuntu18/16 升级默认apt安装的cmake版本&lt;/a&gt;，从&lt;a class=&#34;link&#34; href=&#34;https://cmake.org/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CMakedownload&lt;/a&gt;下载cmake。&lt;br&gt;
+当前cmake版本为3.22.4&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/tmp$ wget &lt;a class=&#34;link&#34; href=&#34;https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意：上面下载的是linux的&lt;strong&gt;可执行版本&lt;/strong&gt;，而不是源代码包。&lt;br&gt;
+解压后，移动到/opt目录下，并做链接(ln)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ tar zxvf cmake-3.22.4-linux-x86_64.tar.gz   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看版本号  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ ./cmake-3.22.4-linux-x86_64/bin/cmake --version  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 新建目录  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ sudo mkdir /opt/cmake-3.22.4  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ sudo chmod 0777 /opt/cmake-3.22.4  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 移动  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ mv cmake-3.22.4-linux-x86_64/* /opt/cmake-3.22.4/ -f  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 建立软链接  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo ln -sf /opt/cmake-3.22.4/bin/* /usr/bin/  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 再次查看版本  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cmake --version  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;最后编译完成后报错说包太大&#34;&gt;最后编译完成后报错，说包太大&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Padded Kernel Image Size  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1273856 /opt/rt-n56u/trunk/images/zImage.lzma  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Original RootFs Size  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;110628938       /opt/rt-n56u/trunk/romfs  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Compressed RootFs Size  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;43246464 /opt/rt-n56u/trunk/images/ramdisk  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Padded Kernel Image + Compressed Rootfs Size  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;44520320 /opt/rt-n56u/trunk/images/zImage.lzma  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# !!! Please make sure that Padded Kernel Image + Compressed Rootfs size  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# can&amp;#39;t bigger than 32964544 !!!  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#===========================================  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Pack final image and write headers  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# For No padded, need write kernel size in image header   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# to correct mount partition in mtd drivers address  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;img file: /opt/rt-n56u/trunk/images/NEWIFI3_3.4.3.9-099.trx  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看images目录，包还是生成了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/rt-n56u/trunk$ ll images/  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 132812  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root   root       4096 May 30 05:35 ./  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxrwxr-x 14 jimway jimway     4096 May 30 04:59 ../  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root   root   44520384 May 30 05:35 NEWIFI3_3.4.3.9-099.trx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root   root   43246464 May 30 05:35 ramdisk  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rwxr-xr-x  1 root   root    3692352 May 30 05:35 zImage*  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root   root   44520320 May 30 05:35 zImage.lzma  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;多用了12-13M空间，看下怎么能减下来。&lt;/p&gt;
+&lt;h3 id=&#34;修改原老毛子padavan固件编译笔记中的编译操作总结&#34;&gt;修改原老毛子Padavan固件编译笔记中的编译操作总结&lt;/h3&gt;
+&lt;p&gt;综上所述，修改原&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/c31b58728778&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;老毛子Padavan固件编译笔记&lt;/a&gt;中的编译操作如下：&lt;/p&gt;
+&lt;h3 id=&#34;系统准备-1&#34;&gt;系统准备&lt;/h3&gt;
+&lt;h4 id=&#34;操作系统更新-1&#34;&gt;操作系统更新&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ sudo apt update&lt;br&gt;
+$ sudo apt upgrade&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;安装依赖包-1&#34;&gt;安装依赖包&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$  sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano fakeroot cpio git python-docutils gettext automake autopoint texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget p7zip-full&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;编译过程&#34;&gt;编译过程&lt;/h3&gt;
+&lt;h4 id=&#34;准备目录-1&#34;&gt;准备目录&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ sudo mkdir /opt/rt-n56u&lt;br&gt;
+$ sudo chmod 0777 /opt/rt-n56u&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;拉取源码-1&#34;&gt;拉取源码:&lt;/h4&gt;
+&lt;p&gt;选择github上的代码&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ git clone --depth=1 &lt;a class=&#34;link&#34; href=&#34;https://github.com/chongshengB/rt-n56u.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/chongshengB/rt-n56u.git&lt;/a&gt; /opt/rt-n56u&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;准备toolchain-1&#34;&gt;准备toolchain&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ cd /opt/rt-n56u/toolchain-mipsel&lt;br&gt;
+# 使用脚本下载预编译的工具链：&lt;br&gt;
+$ sh dl_toolchain.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;将前述htop-302targz文件拷贝到optrt-n56utrunkuserhtop目录下&#34;&gt;将前述htop-3.0.2.tar.gz文件拷贝到/opt/rt-n56u/trunk/user/htop目录下&lt;/h4&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/forum.php?mod=attachment&amp;amp;aid=NDQxMTk5fDY4MDg5ZDU3fDE2NTM4Mzc5MDZ8MHw0MDY0ODY3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;htop-3.0.2.tar.gz文件链接&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ cp htop-3.0.2.tar.gz /opt/rt-n56u/trunk/user/htop&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;修改libsboostmakefile&#34;&gt;修改libs/boost/Makefile&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ vim /opt/rt-n56u/trunk/libs/boost/Makefile&lt;br&gt;
+修改第15行”7z x -bsp0 $(SRC_NAME).7z ; \”，改为：&lt;br&gt;
+&amp;ldquo;7z x $(SRC_NAME).7z ; &amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;升级cmake版本&#34;&gt;升级cmake版本&lt;/h4&gt;
+&lt;p&gt;下载新版本cmake(可执行版本)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/tmp$ wget &lt;a class=&#34;link&#34; href=&#34;https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解压后，移动到/opt目录下，并做链接(ln)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 解压  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ tar zxvf cmake-3.22.4-linux-x86_64.tar.gz   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 新建目录  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ sudo mkdir /opt/cmake-3.22.4  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ sudo chmod 0777 /opt/cmake-3.22.4  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 移动  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/tmp$ mv cmake-3.22.4-linux-x86_64/* /opt/cmake-3.22.4/ -f  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 建立软链接  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo ln -sf /opt/cmake-3.22.4/bin/* /usr/bin/  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;查看并修改自定义插件配置文件是optrt-n56utrunkbuild_firmware_modify&#34;&gt;查看并修改自定义插件，配置文件是/opt/rt-n56u/trunk/build_firmware_modify&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ vim /opt/rt-n56u/trunk/build_firmware_modify&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将文件中的插件自定义修改y/n，y是编译，n是不编译。&lt;br&gt;
+注意：至少要保留科学上网相关的插件。&lt;/p&gt;
+&lt;h4 id=&#34;可选编辑配置文件模板&#34;&gt;(可选)编辑配置文件(模板)&lt;/h4&gt;
+&lt;p&gt;在/opt/rt-n56u/trunk/configs/templates/目录下&lt;br&gt;
+Newifi3的配置文件名为NEWIFI3.config&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ vim /opt/rt-n56u/trunk/configs/templates/NEWIFI3.config&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;进行编译-1&#34;&gt;进行编译&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd /opt/rt-n56u/trunk  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 对于WSL环境，需要使用sudo进行编译，或者使用fakeroot-tcp代替fakeroot  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo ./build_firmware_modify NEWIFI3  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;坐等编译完成，时间会比较长，大概与机器速度强相关。&lt;/p&gt;
+&lt;h3 id=&#34;编译完成拷出固件-1&#34;&gt;编译完成，拷出固件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;编译好的固件在:&lt;br&gt;
+/opt/rt-n56u/trunk/images&lt;/li&gt;
+&lt;li&gt;生成的固件为:&lt;br&gt;
+NEWIFI3_3.4.3.9-099.trx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编译成功，功能较多，尚未测试。(5.30)&lt;/p&gt;
+&lt;p&gt;(第一次成功编译后_5.30之前)用编译后固件刷了NEWIFI3后, 进入后看到的图面如下:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/2022-05-28_chongshengB_pdv_%e7%a7%91%e5%ad%a6%e7%95%8c%e9%9d%a2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;符合预期!&lt;/p&gt;
+&lt;p&gt;又:&lt;br&gt;
+经测试，&lt;strong&gt;科学功能不稳定&lt;/strong&gt;！且功能简单，远不如op上的科学功能强大，而且功能远少于op。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;注:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;关于清理代码树并重新开始编译:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd /opt/rt-n56u/trunk  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo ./clear_tree  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo ./build_firmware_modify NEWIFI3  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;再次尝试用可选科学上网插件的代码做编译&#34;&gt;再次尝试用可选科学上网插件的代码做编译&lt;/h2&gt;
+&lt;p&gt;又又在网上找了一个版本：&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4055964-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【2021-01-10】NEWIFI3 基于chongshengB源码编译彩虹版主题padavan,更新手机版页面&lt;/a&gt;&lt;br&gt;
+下载了其中的&lt;a class=&#34;link&#34; href=&#34;https://wwa.lanzoui.com/iqAick8u2kf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;完整版&lt;/a&gt;(似乎并不是这个)&lt;br&gt;
+刷机后如下:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/2022-05-30_122926_%e7%bd%91%e7%bb%9c%e4%b8%8b%e8%bd%bd%e6%9f%90%e7%89%88%e6%9c%ac_%e8%83%bd%e7%a7%91%e5%ad%a6%e4%b8%8d%e7%a8%b3%e5%ae%9a.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;功能是有了，但是&lt;strong&gt;科学功能依然不稳定&lt;/strong&gt;：开机后长时间不能科学，但睡一觉后．．．．．又能科学了！(还有，出现在本来能科学，改下科学的配置并保存后，居然也不能科学了！这很不科学！)(之后还又不能科学了/_ )&lt;/p&gt;
+&lt;h2 id=&#34;再再次尝试&#34;&gt;再再次尝试&lt;/h2&gt;
+&lt;p&gt;成功不完全，就是完全不成功！&lt;br&gt;
+换：CM520+自制全套OP办科学，NWF3+自制全套PDV做交换+wifi。&lt;br&gt;
+2020.5.30记录&lt;/p&gt;
+&lt;p&gt;&amp;hellip;当前NWF3+PDV还能凑合用，先用着&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自制&amp;hellip;完成&lt;/li&gt;
+&lt;li&gt;CM520+自制测试，NWF3(不刷+不做拨号和DHCP)做WIFI(如失败，NWF3恢复后继续凑合)&lt;br&gt;
+如成功&lt;/li&gt;
+&lt;li&gt;再刷NWF3&lt;br&gt;
+希望最终CM520、NWF3都能独立使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2022.6.1记录:&lt;br&gt;
+最后还是成功了的(还未上线测), 看图&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/56-pdv-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/56-pdv-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考列表&#34;&gt;参考列表&lt;/h2&gt;
+&lt;h3 id=&#34;编译参考&#34;&gt;编译参考&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/6b8403cdea46&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Padavan固件编译办法&lt;/a&gt;: 
+第一次编译时参考&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;源代码列表&#34;&gt;源代码列表&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hanwckf/rt-n56u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hanwckf的Padavan库_Github&lt;/a&gt;:&lt;br&gt;
+最先支持了7915无线芯片，也就是支持了wifi6的机型比如CR660x和JCG Q20/Q10 Pro&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/chongshengB/rt-n56u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;chongshengB的Padavan库_Github&lt;/a&gt;:&lt;br&gt;
+在hanwckf的基础上增加修改出了7615/7915对kvr的支持&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/padavanonly/rt-n56u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;padavanonly的Padavan库 Github&lt;/a&gt;:&lt;br&gt;
+具有一些别人没有的插件，使用比较方便&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/immortalwrt/padavan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;immortalwrt的Padavan库 Github&lt;/a&gt;:&lt;br&gt;
+在一些细节上有优化&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Yuclee/Padavan-Minimal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yuclee的Padavan-mini库 Github&lt;/a&gt;:&lt;br&gt;
+看样子是个精简版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他参考&#34;&gt;其他参考&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cxymm.net/article/m0_60027682/120075617&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Padavan各源码融合教程_m0_60027682的博客-程序员秘密&lt;/a&gt;:&lt;br&gt;
+整合多个源代码的功能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/cb51fb0fb2ac&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;老毛子固件使用说明&lt;/a&gt;:&lt;br&gt;
+有初始化说明&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/c31b58728778&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;老毛子Padavan固件编译笔记&lt;/a&gt; &lt;strong&gt;(最终参考)&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4740979-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NEWIFI3 D2自编译PADAVAN老毛子固件，基于hanwckf最新源码编译整合常用插件&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4064867-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;C大源码编译到htop时出错&lt;/a&gt;:&lt;br&gt;
+编译错误处理&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tbd&#34;&gt;TBD&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;机编op for cm520(全套, 主用v2, 不用无线, 做拨号)&lt;/li&gt;
+&lt;li&gt;机编pdv for newifi3, chongshengB版, 全套, 仅用来做无线(5G放149)&lt;/li&gt;
+&lt;li&gt;git编pdv for newifi3&lt;br&gt;
+看来是完成了的(2022.11.1)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>VPS测速</title>
+        <link>https://jimway71.github.io/p/vps%E6%B5%8B%E9%80%9F/</link>
+        <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/vps%E6%B5%8B%E9%80%9F/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-52.jpg" alt="Featured image of post VPS测速" /&gt;&lt;h2 id=&#34;vps测速&#34;&gt;VPS测速&lt;/h2&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://www.bandwagonhost.net/10772.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Speedtest-CLI：搬瓦工 Linux VPS 带宽速度测试教程/可选测速节点列表&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注:&lt;br&gt;
+发现&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vpstest.sh (&lt;a class=&#34;link&#34; href=&#34;https://raw.githubusercontent.com/V2RaySSR/vps/master/vpstest.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://raw.githubusercontent.com/V2RaySSR/vps/master/vpstest.sh&lt;/a&gt;) 一键测速无任何结果&lt;br&gt;
+使用的命令:
+&lt;blockquote&gt;
+&lt;p&gt;# wget -N &amp;ndash;no-check-certificate &lt;a class=&#34;link&#34; href=&#34;https://raw.githubusercontent.com/V2RaySSR/vps/master/vpstest.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://raw.githubusercontent.com/V2RaySSR/vps/master/vpstest.sh&lt;/a&gt; &amp;amp;&amp;amp; bash vpstest.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/BigMangos/speedtest-go-script&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/BigMangos/speedtest-go-script&lt;/a&gt;一键测速无任何结果&lt;/li&gt;
+&lt;li&gt;参考文档中的superspeed也是不出结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以只能用speedtest官方工具手动测试&lt;/p&gt;
+&lt;h3 id=&#34;在ubuntu上安装speedtest官方版本&#34;&gt;在ubuntu上安装speedtest官方版本&lt;/h3&gt;
+&lt;p&gt;speedtest在Linux下的安装说明(来自speedtest.net官网): &lt;a class=&#34;link&#34; href=&#34;https://www.speedtest.net/zh-Hans/apps/cli&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.speedtest.net/zh-Hans/apps/cli&lt;/a&gt;&lt;br&gt;
+在Ubuntu下安装命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## If migrating from prior bintray install instructions please first...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sudo rm /etc/apt/sources.list.d/speedtest.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sudo apt-get remove speedtest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Other non-official binaries will conflict with Speedtest CLI
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Example how to remove using apt-get
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sudo apt-get remove speedtest-cli
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install curl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install speedtest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装完成后, 确认安装成功:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# speedtest -h&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;查看附近的测试点&#34;&gt;查看附近的测试点&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# speedtest -L&lt;br&gt;
+注: 当前,&lt;br&gt;
+♦ http方式speedtest访问www.speedtest.net确认附近节点&lt;br&gt;
+♦ cli方式speedtest访问www.ookla.com确认附近节点&lt;br&gt;
+常用节点列表(节点是变化的):&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;36646  China Unicom HeNan 5G          Zhengzhou            China  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;37235  Unicom                         Shenyang             China  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7311  M1 Limited                     Singapore            Singapore  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4235  StarHub Mobile Pte Ltd         Singapore            Singapore  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;测试命令-speedtest--s-对端近点节点id&#34;&gt;测试命令: speedtest -s 对端(近点)节点ID&lt;/h3&gt;
+&lt;p&gt;如:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# speedtest -s 7311&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;检查系统信息的shell&#34;&gt;检查系统信息的shell&lt;/h2&gt;
+&lt;p&gt;命令如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# wget -q &lt;a class=&#34;link&#34; href=&#34;https://github.com/Aniverse/A/raw/i/a&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Aniverse/A/raw/i/a&lt;/a&gt; &amp;amp;&amp;amp; bash a&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;用besttrace跟踪路由信息&#34;&gt;用besttrace跟踪路由信息&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# wget https://github.com/zhucaidan/BestTrace-Linux/raw/master/besttrace  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# chmod +x besttrace  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>弱机启示录</title>
+        <link>https://jimway71.github.io/p/%E5%BC%B1%E6%9C%BA%E5%90%AF%E7%A4%BA%E5%BD%95/</link>
+        <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%BC%B1%E6%9C%BA%E5%90%AF%E7%A4%BA%E5%BD%95/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-51.jpg" alt="Featured image of post 弱机启示录" /&gt;&lt;p&gt;&lt;strong&gt;注意: 经统计计算, 2022.4当月的预估VPS流量总使用量应该 &lt;u&gt;&amp;lt; 100GB&lt;/u&gt;, 即一般VPS给的流量都够用, 即使所给流量低至500GB.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相关交流论坛:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://91ai.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;全球主机交流论坛&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关于注册亚马逊免费套餐事项:&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://91ai.net/thread-1012671-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;（白**）注册AWS 新用户可得超多礼品&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/cn/free/?trk=ba_a134p000006vnRgAAI&amp;amp;trkCampaign=freetier&amp;amp;sc_channel=ba&amp;amp;sc_campaign=ray2b&amp;amp;sc_outcome=Acquisition&amp;amp;sc_geo=CHNA&amp;amp;sc_country=CN&amp;amp;sc_publisher=Others&amp;amp;all-free-tier.sort-by=item.additionalFields.SortRank&amp;amp;all-free-tier.sort-order=asc&amp;amp;awsf.Free%20Tier%20Types=*all&amp;amp;awsf.Free%20Tier%20Categories=*all&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AFF地址&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;重点：注册的时候不要爬墙，注册地区要选中国，要国内手机号，信用卡！AWS后台会审核，非国内卡，不要尝试了&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;主机信息来源参考: &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/more-links/#%E4%B8%BB%E6%9C%BA%E4%BF%A1%E6%81%AF&#34; &gt;主机信息源&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;● &lt;big&gt;超低价格(&amp;lt;=$10/年)优化链路:&lt;/big&gt;  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;品牌&lt;/th&gt;
+&lt;th&gt;价格&lt;br&gt;($/y)&lt;/th&gt;
+&lt;th&gt;配置&lt;/th&gt;
+&lt;th&gt;订购链接&lt;/th&gt;
+&lt;th&gt;往返链路及优化级别&lt;/th&gt;
+&lt;th&gt;其它特点&lt;/th&gt;
+&lt;th&gt;信息来源及发布日期&lt;/th&gt;
+&lt;th&gt;购买信息&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=red&gt;~√&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://pacificrack.com/&#34;  title=&#34;-&amp;gt;P&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pacificrack&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;font color=red&gt;①②&lt;/font&gt;&lt;font color=blue&gt;①②&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;1CPU,1GRAM,20G SSD, 500G/M&lt;br&gt;Quadranet洛杉矶机房&lt;br&gt;&lt;br&gt;&lt;u&gt;2022.618优惠:&lt;br&gt;2CPU,2GB RAM,30G SSD, 500G/M $10/Y&lt;/u&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pacificrack.com/portal/aff.php?aff=1%20&amp;amp;pid=161&amp;amp;billingcycle=annually&amp;amp;promocode=UF3ZV1BYF6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt; - 优惠码:&lt;br&gt;UF3ZV1BYF6&lt;/td&gt;
+&lt;td&gt;优化: 一般&lt;br&gt;联通去程直连, 回程AS4837&lt;br&gt;移动去回均直连;&lt;br&gt;电信去程GTT, 回程走CN2&lt;br&gt;测试: &lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/49018.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;存在售后慢或者无售后等问题&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50339.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/04/25&lt;br&gt;&lt;br&gt;&lt;br&gt;618优惠:&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/51026.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/05/11 $10/Year&lt;/td&gt;
+&lt;td&gt;&lt;font color=red&gt;$30/3年&lt;br&gt;(22/04/27-25/04/27)&lt;br&gt;常规优惠,非618&lt;/font&gt;&lt;br&gt;当前备用&lt;/td&gt;
+&lt;td&gt;备用&lt;br&gt;&lt;font color=red&gt;①&lt;/font&gt;$10/Y为优惠价(3折), &lt;font color=blue&gt;②&lt;/font&gt;&lt;strong&gt;到期后续费按原价&lt;/strong&gt;计算(即涨价)&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.idccoupon.com/2577.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;改IP:$8/次&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;font color=red&gt;②&lt;/font&gt;&lt;a class=&#34;link&#34; href=&#34;https://pacificrack.com/tos.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TOS&lt;/a&gt;未限制Proxy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=blue&gt;╳&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloudcone.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cloudcone&lt;/a&gt;&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;9.99&lt;/td&gt;
+&lt;td&gt;1CPU,512M RAM,20G HDD, &lt;strong&gt;2T/M&lt;/strong&gt;&lt;br&gt;美国洛杉矶&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://app.cloudcone.com.cn/vps/79/create?token=hashtag%202022%20vps%20-%201&amp;amp;ref=14&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;优化: 一般&lt;br&gt;去程中国直连(除移动绕欧洲)&lt;br&gt;回程常规直连(除联通走AS4837)&lt;br&gt;测试: &lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/47399.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;相对靠谱的商家&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50338.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/04/24&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.idcoffer.com/&#34;  title=&#34;-&amp;gt;v&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VPS收割者&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.idcoffer.com/archives/7447&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/02/08&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;到期后续费还是按$9.99/Y计算&lt;br&gt;&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloudcone.com/policies/terms/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TOS&lt;/a&gt; 03.5限制Proxies&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=red&gt;∽√&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.racknerd.com/&#34;  title=&#34;-&amp;gt;R&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RackNerd&lt;/a&gt;&lt;br&gt;&lt;font color=red&gt;①②③④&lt;/font&gt;&lt;br&gt;①&lt;font color=blue&gt;①②③&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;&lt;font color=red&gt;③&lt;/font&gt;9.89&lt;br&gt;&lt;br&gt;&lt;u&gt;&lt;font color=red&gt;①&lt;/font&gt;&lt;font color=red&gt;6.28&lt;br&gt;最低&lt;/font&gt;&lt;/u&gt;&lt;/td&gt;
+&lt;td&gt;&lt;font color=blue&gt;③&lt;/font&gt;1CPU,512M RAM, 10G SSD, 1T/M&lt;br&gt;美国多地, 含Lax/San Jose&lt;br&gt;&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;1CPU,384M RAM, 10G SSD, 500G/M&lt;br&gt;美国多地, 含San Jose&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://my.racknerd.com/aff.php?aff=20&amp;amp;pid=620&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://my.racknerd.com/aff.php?aff=20&amp;amp;pid=657&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;$6.28链接&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;优化: ①一般&lt;br&gt;联通去程回程都是直连, 回程走AS4837&lt;br&gt;&lt;strong&gt;San Jose可能离接入点更近&lt;/strong&gt;&lt;br&gt;测试: &lt;a class=&#34;link&#34; href=&#34;https://www.vpsno.com/pingce/1217.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;用着还行&lt;br&gt;内存较小&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50572.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/04/29&lt;br&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50211.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;$6.28来源&lt;/a&gt;) 2022/04/19&lt;br&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50572.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;优惠221021&lt;/a&gt;&lt;br&gt;&lt;u&gt;1g RAM $14/y&lt;/u&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;font color=blue&gt;②&lt;/font&gt;&lt;strong&gt;但内存小&lt;br&gt;备用备选&lt;/strong&gt;&lt;br&gt;下次考虑放San Jose&lt;br&gt;&lt;br&gt;&lt;font color=red&gt;②&lt;/font&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.vpsjxw.com/vps_tutorials/racknerd_cip/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;改IP:$3/次&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;font color=red&gt;④&lt;/font&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.racknerd.com/terms-of-service&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TOS&lt;/a&gt;未明确限制Proxy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=blue&gt;╳&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://virmach.com/&#34;  title=&#34;-&amp;gt;V&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Virmach&lt;/a&gt;&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;&lt;font color=gray&gt;$17/2Y&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;&lt;font color=gray&gt;1 CPU,384m RAM, 10G, 1TB/M&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://billing.virmach.com/index.php?rp=/store/special-offers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;font color=gray&gt;优化: 一般&lt;br&gt;去程三网直连，回程电信移动直连，联通绕美。&lt;br&gt;闲时延迟低，晚高峰丢包多&lt;br&gt;测试: &lt;a class=&#34;link&#34; href=&#34;https://www.pigji.com/1516.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;&lt;font color=gray&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;strong&gt;不管啥母鸡到了Virmach这里都会超售到很低的分数&lt;/strong&gt;&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.pigji.com/&#34;  title=&#34;-&amp;gt;zZ&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;猪机博客&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50572.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/05/25&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;差,不考虑&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;font color=gray&gt;买2年自动 6.8折优惠&lt;/font&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;● &lt;big&gt;低价格(&amp;gt;$10/年 &amp;amp; &amp;lt;=$30左右/年)优化链路:&lt;/big&gt;  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;品牌&lt;/th&gt;
+&lt;th&gt;价格&lt;br&gt;($/y)&lt;/th&gt;
+&lt;th&gt;配置&lt;/th&gt;
+&lt;th&gt;订购链接&lt;/th&gt;
+&lt;th&gt;往返链路及优化级别&lt;/th&gt;
+&lt;th&gt;其它特点&lt;/th&gt;
+&lt;th&gt;信息来源及发布日期&lt;/th&gt;
+&lt;th&gt;购买信息&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=blue&gt;~╳&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloudsilk.io/&#34;  title=&#34;-&amp;gt;cC&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CloudSilk&lt;/a&gt;&lt;br&gt;&lt;font color=red&gt;①②&lt;/font&gt;①&lt;font color=blue&gt;①②&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;￥215.99①&lt;br&gt;当时合$32.58&lt;/td&gt;
+&lt;td&gt;1CPU,512M RAM, 10G SSD, 500G/M 德国法兰克福&lt;br&gt;另有:美国圣何塞(无优惠), 香港(贵些), 日本东京(同香港)&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloudsilk.io/aff.php?aff=9&amp;amp;gid=13&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt; 德国法兰克福(优惠码:WK08GMH3OC)&lt;br&gt;另: &lt;a class=&#34;link&#34; href=&#34;https://cloudsilk.io/store/mei-guo-sheng-he-sai-jing-pin-da-lu-you-hua-bgp9929&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt; 美国圣何塞(无优惠码, ￥239.99/年)&lt;/td&gt;
+&lt;td&gt;优化: &lt;font color=red&gt;①&lt;/font&gt;&lt;strong&gt;非常好&lt;/strong&gt;&lt;br&gt;回程走联通AS9929高端网络，三网直连，速度相当给力&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50535.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;)2022/04/28&lt;br&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.idcoffer.com/&#34;  title=&#34;-&amp;gt;v&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VPS收割者&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.idcoffer.com/archives/8121&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/04/27&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;主用备选?&lt;/strong&gt;&lt;br&gt;&lt;font color=red&gt;②&lt;/font&gt;9折优惠活动，&lt;strong&gt;循环有效&lt;/strong&gt;(不涨价)&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloudsilk.io/index.php?rp=/announcements/1/%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%AE%AE-Terms-Of-Service.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;换IP: 25 CNY/次&lt;/a&gt;(TOS 7.1)&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.offersloc.com/archives/160&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国人商家，2021年成立,非国内公司&lt;/a&gt;&lt;br&gt;&lt;font color=blue&gt;②&lt;/font&gt;(&lt;a class=&#34;link&#34; href=&#34;https://cloudsilk.io/announcements/1/%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%AE%AE-Terms-Of-Service.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TOS&lt;/a&gt; 5.2)说不能做代理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=blue&gt;╳&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ftlcloud.com/&#34;  title=&#34;-&amp;gt;F&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FTL超云&lt;/a&gt;&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;￥240&lt;br&gt;当时合$36.2&lt;/td&gt;
+&lt;td&gt;2CPU, 2G RAM, 20G HD, 未说明流量&lt;br&gt;韩国.首尔, 另有:&lt;br&gt;香港(同韩国),美国(略便宜), &lt;strong&gt;国内&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ftlcloud.com/tlact.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;优化: 很好&lt;br&gt;CN2+BGP极速网络&lt;/td&gt;
+&lt;td&gt;金盾+天机防护免费提供CC防御&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50331.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/04/23&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;font color=blue&gt;①&lt;/font&gt;大陆公司&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=blue&gt;╳&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://raksmart.com/&#34;  title=&#34;-&amp;gt;rR&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RakSmart&lt;/a&gt;&lt;br&gt;&lt;font color=blue&gt;①②③&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;29.89&lt;/td&gt;
+&lt;td&gt;1CPU, 1G RAM, 40G SAN, 限速5M(bps), 100T/M(合约中未说明, 实际控制面板中有)&lt;br&gt;&lt;strong&gt;日本&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://billing.raksmart.com/whmcs/aff.php?aff=1296&amp;amp;pid=668&amp;amp;promocode=JPHKVPS1024-2.99dis&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt; 3折优惠码：JPHKVPS1024-2.99dis&lt;br&gt;依然有效(20221027)&lt;/td&gt;
+&lt;td&gt;优化: 还行吧&lt;br&gt;电信走CN2、移动直连: 联通直连AS4837&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/49436.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;测评&lt;/a&gt; 国外主机测评之1-促销款-“玩具”&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/45026.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;测评&lt;/a&gt; 国外主机测评之2&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.idcspy.org/8515.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;测评&lt;/a&gt; idcspy之1&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.idcspy.com/47468.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;测评&lt;/a&gt; idcspy之2&lt;/td&gt;
+&lt;td&gt;限速低&lt;br&gt;&lt;u&gt;但可看油管1080P&lt;/u&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/50537.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/05/05&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnraksmart.com/&#34;  title=&#34;-&amp;gt;r&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RAKsmart中文网&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.cnraksmart.com/4076.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;)&lt;br&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/55519.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;优惠221027&lt;/a&gt;:&lt;br&gt; 美$9.9/y,&lt;br&gt;日$29.9/y&lt;/td&gt;
+&lt;td&gt;&lt;font color=red&gt;$19.89,头一年(充值$10送$10).以后续费循环优惠($29.89)，不涨价&lt;br&gt;(05/05/2022-05/05/2023)&lt;/font&gt;&lt;br&gt;当前主用&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnraksmart.com/4072.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RAKsmart 五月新注册账户充值最多赠送100美元余额&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;font color=blue&gt;②&lt;/font&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.vpsjxw.com/vps_tutorials/racknerd_cip/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;不能换IP?&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;a class=&#34;link&#34; href=&#34;http://raksmart.com/home/all/sla.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VPN services are also prohibited on Services from RAKsmart&lt;/a&gt;&lt;br&gt;&lt;font color=blue&gt;③&lt;/font&gt;221025前后两次不可用, 不能连控制面板, 不能写Tickets, 发邮件也无回应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=blue&gt;╳&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://unvm.host/&#34;  title=&#34;-&amp;gt;U&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UNVM&lt;/a&gt;&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;￥17.1/M,当时约合$30.62/Y&lt;/td&gt;
+&lt;td&gt;1CPU,1G RAM, 15G SSD,带宽150M(bps), 300GB/M&lt;br&gt;&lt;strong&gt;日本&lt;/strong&gt;软银大带宽一期&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://unvm.host/cart?fid=1&amp;amp;gid=3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;br&gt;9折循环优惠码：&lt;br&gt;UNVMJP10OFF&lt;/td&gt;
+&lt;td&gt;日本软银为三网直连&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;香港: 黄赌毒梯等非法&lt;br&gt;日本: 黄赌毒等非法&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;国内公司(确认)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;● &lt;big&gt;历史低价格(&amp;gt;$10/年 &amp;amp; &amp;lt;=$30左右/年)优化链路&lt;/big&gt;    &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;品牌&lt;/th&gt;
+&lt;th&gt;价格&lt;br&gt;($/y)&lt;/th&gt;
+&lt;th&gt;配置&lt;/th&gt;
+&lt;th&gt;订购链接&lt;/th&gt;
+&lt;th&gt;往返链路及优化级别&lt;/th&gt;
+&lt;th&gt;其它特点&lt;/th&gt;
+&lt;th&gt;信息来源及发布日期&lt;/th&gt;
+&lt;th&gt;购买信息&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=red&gt;√&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://greencloudvps.com/&#34;  title=&#34;-&amp;gt;G&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GreenCloud&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;⑴24&lt;br&gt;&lt;br&gt;&lt;br&gt;⑵$70.00/3Y&lt;br&gt;&lt;br&gt;⑶$28.8/Y&lt;/td&gt;
+&lt;td&gt;⑴1CPU,1G RAM, 15G NVMe, 750G/M&lt;br&gt;&lt;strong&gt;日本(绿云应该仅日本可用)&lt;/strong&gt;&lt;br&gt;&lt;br&gt;⑵2核E5v4/4G内存赠送2G SWAP/35G SSD硬盘（RAID10）/750G/10Gbps &lt;strong&gt;日本东京&lt;/strong&gt;&lt;br&gt;&lt;br&gt;⑶1CPU,1G RAM, 200G HDD, 1T/M&lt;/td&gt;
+&lt;td&gt;⑴&lt;a class=&#34;link&#34; href=&#34;https://greencloudvps.com/billing/store/ryzen-kvm-vps&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt; 选日本&lt;br&gt;&lt;br&gt;⑵&lt;a class=&#34;link&#34; href=&#34;https://greencloudvps.com/billing/store/budget-kvm-sale/budgetkvmjp-2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;br&gt;&lt;br&gt;⑶&lt;a class=&#34;link&#34; href=&#34;https://greencloudvps.com/billing/aff.php?aff=2615&amp;amp;pid=313&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;东京存储小钢炮&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;优化: &lt;strong&gt;应该还行&lt;/strong&gt;&lt;br&gt;联通: &lt;br&gt;去程: 骨干网对接NTT&lt;br&gt;回程: 北京方向走的是软银，上海和广州方向走的是NTT对接AS4837&lt;br&gt;测试: &lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/49255.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;⑴&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/&#34;  title=&#34;-&amp;gt;z&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;国外主机测评&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/48321.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 5折优惠 2022/01/09&lt;br&gt;&lt;br&gt;⑵&lt;a class=&#34;link&#34; href=&#34;https://www.zhujizixun.com/&#34;  title=&#34;-&amp;gt;zz&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;主机资讯&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujizixun.com/6591.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022/7/7&lt;br&gt;&lt;br&gt;⑶&lt;a class=&#34;link&#34; href=&#34;https://www.zhujizixun.com/&#34;  title=&#34;-&amp;gt;zz&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;主机资讯&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujizixun.com/6871.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;东京存储小钢炮来源链接&lt;/a&gt;) 2022/10/12&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;主用考虑(仅日本可用)&lt;/strong&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://hostloc.com/thread-865179-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;改IP: $3/次&lt;/a&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://greencloudvps.com/terms-of-service.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TOS&lt;/a&gt;不限制Proxy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;big&gt;&lt;font color=blue&gt;?~√&lt;/font&gt;&lt;/big&gt;&lt;br&gt;&lt;strong&gt;?&lt;/strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.rcp.net/&#34;  title=&#34;-&amp;gt;R&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RCP&lt;/a&gt;&lt;br&gt;&lt;font color=red&gt;①&lt;/font&gt;&lt;br&gt;&lt;font color=blue&gt;①②③④&lt;/font&gt;&lt;/td&gt;
+&lt;td&gt;19.99&lt;br&gt;&lt;strong&gt;备用?&lt;/strong&gt; 做主用流量少了&lt;/td&gt;
+&lt;td&gt;1C1G/20G SSD/1*IPv4 &lt;font color=blue&gt;④&lt;/font&gt;&lt;strong&gt;&lt;u&gt;100G/M&lt;/u&gt;&lt;/strong&gt; 100Mbps 日本AS9929&lt;br&gt;活动时间：2022年11月24日UTC到2022年11月29日UTC&lt;br&gt;即&lt;strong&gt;北京时间：2022年11月24日早上八点开始&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://clients.rcp.net/aff.php?aff=2362&amp;amp;pid=41&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;idcoffer链接&lt;/a&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://clients.rcp.net/aff.php?aff=2297&amp;amp;pid=41&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;主机资讯链接&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;优化: &lt;font color=red&gt;①&lt;/font&gt;国内方向线路为联通CUG(AS9929/10099)&lt;br&gt;&lt;strong&gt;&lt;font color=red&gt;极好, 晚上差不多跑满百兆&lt;/font&gt;&lt;/strong&gt;(包括LAX/Tokyo/HK)&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.idcoffer.com/&#34;  title=&#34;-&amp;gt;I&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;idcoffer&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.idcoffer.com/archives/9979#aioseo-rcr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022-11-08&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujizixun.com/&#34;  title=&#34;-&amp;gt;zz&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;主机资讯&lt;/a&gt;(&lt;a class=&#34;link&#34; href=&#34;https://www.zhujizixun.com/6996.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;来源链接&lt;/a&gt;) 2022-11-08&lt;/td&gt;
+&lt;td&gt;&amp;mdash;-&lt;/td&gt;
+&lt;td&gt;&lt;font color=blue&gt;②&lt;/font&gt;据用户称:改IP$8/次&lt;br&gt;&lt;font color=blue&gt;①&lt;/font&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.rcp.net/tos/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TOS&lt;/a&gt;极其严苛&lt;/strong&gt;, 但未明确限制VPN&lt;br&gt;&lt;font color=blue&gt;③&lt;/font&gt;流量超额$0.5/GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
         <title>使用Github为多种设备编译Openwrt固件</title>
         <link>https://jimway71.github.io/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/</link>
         <pubDate>Sun, 23 May 2021 18:27:16 +0800</pubDate>

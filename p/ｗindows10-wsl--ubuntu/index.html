@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Windows Subsystem for Linux, 是一个在Windows 10\11上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层'><title>Ｗindows10: WSL &#43; Ubuntu</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%EF%BD%97indows10-wsl--ubuntu/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='Ｗindows10: WSL &#43; Ubuntu'>
+<meta property='og:description' content='Windows Subsystem for Linux, 是一个在Windows 10\11上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层'>
+<meta property='og:url' content='https://jimway71.github.io/p/%EF%BD%97indows10-wsl--ubuntu/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='WSL' /><meta property='article:tag' content='Windows Subsystem for Linux' /><meta property='article:tag' content='Ubuntu官方镜像' /><meta property='article:published_time' content='2022-05-28T12:41:00&#43;08:00'/><meta property='article:modified_time' content='2022-05-28T12:41:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-55.jpg' />
+<meta name="twitter:title" content="Ｗindows10: WSL &#43; Ubuntu">
+<meta name="twitter:description" content="Windows Subsystem for Linux, 是一个在Windows 10\11上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-55.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%EF%BD%97indows10-wsl--ubuntu/">
+                
+                    <img src="/wallpaper/wallpaper-55.jpg" loading="lazy" alt="Featured image of post Ｗindows10: WSL &#43; Ubuntu" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                Migration
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%EF%BD%97indows10-wsl--ubuntu/">Ｗindows10: WSL &#43; Ubuntu</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Windows Subsystem for Linux, 是一个在Windows 10\11上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 28, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Vmware用烦了，太麻烦，太占用资源，换个轻量点的：WSL + Ubuntu</p>
+<h2 id="关于wsl">关于WSL</h2>
+<p>Windows Subsystem for Linux（WSL）是一个用于在本地运行linux二进制可执行文件（ELF格式）的兼容层。与虚拟机相比，wsl没有虚拟硬件的过程，而是直接在windows上虚拟一个linux内核，模拟linux系统调用，以运行linux执行文件。因此效率要比虚拟机高，但是它使用的是自己实现的init进程而不是发行版的init进程，并且几乎没有实现任何系统服务，因此只适用于软件的开发，而不是作为桌面环境或生产性的服务器。</p>
+<h2 id="安装wsl">安装WSL</h2>
+<h3 id="安装适用于linux的windows子系统">安装“适用于Linux的Windows子系统”</h3>
+<p>(在Windows10系统中搜索)打开“启用或关闭Windows功能”, 选中“适用于Linux的Windows子系统”，点击确认按钮，并根据提示重启电脑。</p>
+<h3 id="使用windows应用商店安装ubuntu">使用Windows应用商店安装Ubuntu</h3>
+<p>(搜索)打开“Microsoft Store”，在里面的搜索栏输入“Ubuntu”，选择需要的版本进行安装。<br>
+当前最旧的版本为Ubuntu 18.04.5 LTS，最新的Ubuntu 22.04 LTS。<br>
+有未标注版本号的Ubuntu，这是可以滚动升级的版本，使用do_release-upgrade命令可以直接滚动升级到最新版Ubuntu<br>
+说明：</p>
+<ul>
+<li>关于硬盘分区<br>
+windows的硬盘分区到加载到Ubuntu的/mnt目录下, 如Ｃ盘在/mnt/c，E盘在/mnt/e。</li>
+<li>关于网络<br>
+WSL的Ubuntu采用桥接模式连接网络, 用ifconfig查看，可以看到另一个内网网段的地址，内外网均可访问。</li>
+</ul>
+<h2 id="初始使用wsl的ubuntu">初始使用WSL的Ubuntu</h2>
+<p>(在Windows10系统中搜索)打开“Ubuntu”，即可进入Ubuntu界面。<br>
+第一次进入时，系统会要求增加一个用户，设置用户名和密码。</p>
+<h2 id="windows与ubuntu的互操作">Windows与Ubuntu的互操作</h2>
+<p>互操作性是指，既可以在windows中运行linux进程，也可以在linux中运行windows进程，并且支持两个不同进程间的输入输出重定向。</p>
+<h3 id="在windows中运行linux进程">在windows中运行linux进程</h3>
+<p>在windows中使用wsl [command]运行linux命令，需要注意：</p>
+<ul>
+<li>linux命令使用当前目录作为工作目录;</li>
+<li>对于windows文件，拥有运行WSL的windows用户权限；对于linux文件拥有登录用户权限;</li>
+<li>文件路径使用linux格式;</li>
+</ul>
+<p>例子(抄的，没太看明白，估计用不着)：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">C:\temp&gt; wsl ls -la  
+</span></span><span class="line"><span class="cl">&lt;- contents of C:\temp -&gt;  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\temp&gt; wsl sudo apt-get update  
+</span></span><span class="line"><span class="cl">[sudo] password for username:  
+</span></span><span class="line"><span class="cl">Hit:1 https://archive.ubuntu.com/ubuntu xenial InRelease   
+</span></span><span class="line"><span class="cl">Get:2 https://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\temp&gt; wsl ls -la | findstr &#34;foo&#34;  
+</span></span><span class="line"><span class="cl">-rwxrwxrwx 1 root root 14 Sep 27 14:26 foo.bat  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\temp&gt; dir | wsl grep foo  
+</span></span><span class="line"><span class="cl">09/27/2016 02:26 PM  14 foo.bat  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\temp&gt; wsl ls -la &gt; out.txt  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\temp&gt; wsl ls -la /proc/cpuinfo  
+</span></span><span class="line"><span class="cl">1 root root 0 Sep 28 11:28 /proc/cpuinfo  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\temp&gt; wsl ls -la &#34;/mnt/c/Program Files&#34;  
+</span></span><span class="line"><span class="cl">&lt;- contents of C:\Program Files -&gt;  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="在linux中运行windows命令">在linux中运行windows命令</h3>
+<p>在linux中运行windows命令，使用[binary name].exe（后缀不要省略），linux可以直接访问windows命令的原因在于linux共享了windows的PATH环境变量（我猜是linux中唯一的守护进程init做的）。<br>
+需要注意：</p>
+<ul>
+<li>一般windows命令的工作目录为当前linux的工作目录。如果linux工作目录位于linux文件系统内，则windows的工作目录会改为Base.exe的工作目录（原因见2.4小节）。</li>
+<li>拥有与运行WSL拥有者一致的权限</li>
+<li>需要注意路径，看下面的例子</li>
+</ul>
+<p>例子(也是抄的)：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ notepad.exe  
+</span></span><span class="line"><span class="cl">$ ipconfig.exe | grep IPv4 | cut -d：-f2  
+</span></span><span class="line"><span class="cl">172.21.240.1  
+</span></span><span class="line"><span class="cl">10.159.21.24  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ ls -la | findstr.exe foo.txt  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ cmd.exe /c dir  
+</span></span><span class="line"><span class="cl">&lt;- contents of C:\ -&gt;  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$#cmd 原生命名需要通过cmd.exe运行  
+</span></span><span class="line"><span class="cl">$ cmd.exe /C dir  
+</span></span><span class="line"><span class="cl">&lt;- contents of C:\ -&gt;  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ PING.EXE www.microsoft.com  
+</span></span><span class="line"><span class="cl">Pinging e1863.dspb.akamaiedge.net [2600:1409:a:5a2::747] with 32 bytes of data:  
+</span></span><span class="line"><span class="cl">Reply from 2600:1409:a:5a2::747：time=2ms  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ notepad.exe &#34;C:\temp\foo.txt&#34;  
+</span></span><span class="line"><span class="cl">$ notepad.exe C:\\temp\\foo.txt  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ubuntu更换国内镜像源并更新软件包">Ubuntu更换国内镜像源并更新软件包</h2>
+<p>Ubuntu的官方镜像列表在<a class="link" href="https://launchpad.net/ubuntu/&#43;archivemirrors"  target="_blank" rel="noopener"
+    >Official Archive Mirrors for Ubuntu</a>，里面有大学、组织、公司，由于往往只有大公司可能在全国布置多节点以提高访问速度，所以对比了下几家大公司(的ping值)，最后<a class="link" href="https://mirrors.cloud.tencent.com/"  target="_blank" rel="noopener"
+    >腾讯云镜像</a>最快，<a class="link" href="http://mirrors.aliyun.com/"  target="_blank" rel="noopener"
+    >阿里云镜像</a>略慢，<a class="link" href="https://repo.huaweicloud.com/"  target="_blank" rel="noopener"
+    >华为云镜像</a>不太稳定。<br>
+操作：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ sudo sed -i &#39;s#http://archive.ubuntu.com#https://mirrors.cloud.tencent.com#&#39; /etc/apt/sources.list  
+</span></span><span class="line"><span class="cl">$ sudo sed -i &#39;s#http://security.ubuntu.com#https://mirrors.cloud.tencent.com#&#39; /etc/apt/sources.list  
+</span></span><span class="line"><span class="cl">$ sudo apt update  
+</span></span><span class="line"><span class="cl">$ sudo apt upgrade  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考">参考</h2>
+<p><a class="link" href="https://blog.csdn.net/jdbdh/article/details/88653434"  target="_blank" rel="noopener"
+    >windows上的linux子系统(WSL)</a></p>
+<ul>
+<li><a class="link" href="https://docs.microsoft.com/zh-cn/windows/wsl/about"  target="_blank" rel="noopener"
+    >微软官方文档</a>：介绍了安装、使用</li>
+<li><a class="link" href="https://devblogs.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/"  target="_blank" rel="noopener"
+    >Learn About Windows Console &amp; Windows Subsystem For Linux (WSL)</a>：介绍了wsl原理</li>
+<li><a class="link" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux"  target="_blank" rel="noopener"
+    >wsl wiki</a></li>
+<li><a class="link" href="https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/"  target="_blank" rel="noopener"
+    >Do not change Linux files using Windows apps and tools</a>: 来自Rich的警告</li>
+<li><a class="link" href="https://docs.microsoft.com/zh-cn/archive/blogs/wsl/"  target="_blank" rel="noopener"
+    >wsl官方博客集合</a></li>
+<li><a class="link" href="https://research.wmz.ninja/articles/2017/11/setting-up-wsl-with-graphics-and-audio.html"  target="_blank" rel="noopener"
+    >Setting Up WSL with Graphics and Audio</a>：对WSL理解的很好</li>
+</ul>
+<p><a class="link" href="https://blog.csdn.net/henryhu712/article/details/108910727"  target="_blank" rel="noopener"
+    >在Windows10上安装Ubuntu</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ubuntu/">Ubuntu</a>
+        
+            <a href="/tags/wsl/">WSL</a>
+        
+            <a href="/tags/windows-subsystem-for-linux/">Windows Subsystem for Linux</a>
+        
+            <a href="/tags/ubuntu%E5%AE%98%E6%96%B9%E9%95%9C%E5%83%8F/">Ubuntu官方镜像</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-29.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BE%AE%E8%BD%AF%E6%97%A0%E7%95%8C%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%B7%9F%E9%9A%8F/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-57.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-57.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">微软无界鼠标(键盘跟随)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/windows10%E7%9A%84windows%E6%B2%99%E7%9B%92%E5%8A%9F%E8%83%BD/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-53.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-53.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows10的”Windows沙盒”功能</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8kubesail%E4%B8%8A%E6%90%AD%E5%BB%BAv2ray/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/NAFO-40-c.jpg" loading="lazy" data-key="" data-hash="/wallpaper/NAFO-40-c.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在kubesail上搭建V2Ray</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8heroku%E4%B8%8A%E9%83%A8%E7%BD%B2v2ray-trojan-go/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-37.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-37.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Heroku上部署V2Ray&#43;Trojan-go</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#关于wsl">关于WSL</a></li>
+    <li><a href="#安装wsl">安装WSL</a>
+      <ol>
+        <li><a href="#安装适用于linux的windows子系统">安装“适用于Linux的Windows子系统”</a></li>
+        <li><a href="#使用windows应用商店安装ubuntu">使用Windows应用商店安装Ubuntu</a></li>
+      </ol>
+    </li>
+    <li><a href="#初始使用wsl的ubuntu">初始使用WSL的Ubuntu</a></li>
+    <li><a href="#windows与ubuntu的互操作">Windows与Ubuntu的互操作</a>
+      <ol>
+        <li><a href="#在windows中运行linux进程">在windows中运行linux进程</a></li>
+        <li><a href="#在linux中运行windows命令">在linux中运行windows命令</a></li>
+      </ol>
+    </li>
+    <li><a href="#ubuntu更换国内镜像源并更新软件包">Ubuntu更换国内镜像源并更新软件包</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

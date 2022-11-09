@@ -113,6 +113,28 @@
         
         <guid>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
         <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-28.jpg" alt="Featured image of post 安装Python运行环境" /&gt;&lt;p&gt;一些Python相关链接: &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e7%9f%a5%e4%b9%8e%e9%93%be%e6%8e%a5/#python&#34; &gt;Links&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;zen-of-pythonpython之禅&#34;&gt;Zen of Python（Python之禅）&lt;/h2&gt;
+&lt;p&gt;From &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/111843067&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Zen of Python（Python之禅）的最佳翻译 - Python-Jack的文章 - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Beautiful is better than ugly. （优美比丑陋好）&lt;br&gt;
+Explicit is better than implicit.（清晰比晦涩好）&lt;br&gt;
+Simple is better than complex.（简单比复杂好）&lt;br&gt;
+Complex is better than complicated.（复杂比错综复杂好）&lt;br&gt;
+Flat is better than nested.（扁平比嵌套好）&lt;br&gt;
+Sparse is better than dense.（稀疏比密集好）&lt;br&gt;
+Readability counts.（可读性很重要）&lt;br&gt;
+Special cases aren&amp;rsquo;t special enough to break the rules.（特殊情况也不应该违反这些规则）&lt;br&gt;
+Although practicality beats purity.（但现实往往并不那么完美）&lt;br&gt;
+Errors should never pass silently.（异常不应该被静默处理）&lt;br&gt;
+Unless explicitly silenced.（除非你希望如此）&lt;br&gt;
+In the face of ambiguity, refuse the temptation to guess.（遇到模棱两可的地方，不要胡乱猜测）&lt;br&gt;
+There should be one&amp;ndash; and preferably only one &amp;ndash;obvious way to do it.（肯定有一种通常也是唯一一种最佳的解决方案）&lt;br&gt;
+Although that way may not be obvious at first unless you&amp;rsquo;re Dutch.（虽然这种方案并不是显而易见的，因为你不是那个荷兰人[这里指的是Python之父Guido]）&lt;br&gt;
+Now is better than never.（现在开始做比不做好）&lt;br&gt;
+Although never is often better than &lt;em&gt;right&lt;/em&gt; now.（不做比盲目去做好[极限编程中的YAGNI原则]）&lt;br&gt;
+If the implementation is hard to explain, it&amp;rsquo;s a bad idea.（如果一个实现方案难于理解，它就不是一个好的方案）&lt;br&gt;
+If the implementation is easy to explain, it may be a good idea.（如果一个实现方案易于理解，它很有可能是一个好的方案）&lt;br&gt;
+Namespaces are one honking great idea &amp;ndash; let&amp;rsquo;s do more of those!（命名空间非常有用，我们应当多加利用）&lt;/p&gt;
 &lt;h2 id=&#34;在windows系统上安装python运行环境&#34;&gt;在Windows系统上安装Python运行环境&lt;/h2&gt;
 &lt;h3 id=&#34;python语言相关&#34;&gt;Python语言相关&lt;/h3&gt;
 &lt;ul&gt;

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Microsoft on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/microsoft/</link>
+        <description>Recent content in Microsoft on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 02 Jun 2022 16:45:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/microsoft/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>微软无界鼠标(键盘跟随)</title>
+        <link>https://jimway71.github.io/p/%E5%BE%AE%E8%BD%AF%E6%97%A0%E7%95%8C%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%B7%9F%E9%9A%8F/</link>
+        <pubDate>Thu, 02 Jun 2022 16:45:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%BE%AE%E8%BD%AF%E6%97%A0%E7%95%8C%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%B7%9F%E9%9A%8F/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-57.jpg" alt="Featured image of post 微软无界鼠标(键盘跟随)" /&gt;&lt;h2 id=&#34;软件来源&#34;&gt;软件来源&lt;/h2&gt;
+&lt;p&gt;微软无界鼠标 (Microsoft Garage Mouse without Borders), 微软原生支持&lt;br&gt;
+软件下载地址：&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/download/details.aspx?id=35460&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Download Center: Microsoft Garage Mouse without Borders&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载软件&#34;&gt;下载软件&lt;/h2&gt;
+&lt;p&gt;点击软件下载地址，访问到微软件库下载页面。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/57-msgmwb-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+点击红色下载（Download）按钮，下载微软无界鼠标&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;点击下载的安装包运行，然后next-&amp;gt;勾选I accept-&amp;gt;Install-&amp;gt;finish。&lt;/p&gt;
+&lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
+&lt;p&gt;安装完成后，软件自动运行会出现下面这个界面。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;center&gt;选择 控制端 or 被控制端&lt;/center&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;center&gt;&lt;img src=&#34;https://jimway71.github.io/img/57-msgmwb-02.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/center&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;center&gt;YES：控制端&lt;/center&gt;&lt;/th&gt;
+&lt;th&gt;&lt;center&gt;NO：被控制端&lt;/center&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;center&gt;&lt;img src=&#34;https://jimway71.github.io/img/57-msgmwb-04.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/center&gt;&lt;/td&gt;
+&lt;td&gt;&lt;center&gt;&lt;img src=&#34;https://jimway71.github.io/img/57-msgmwb-03.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/center&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;center&gt;填入被控制端显示的信息, 点击link按钮&lt;/center&gt;&lt;/td&gt;
+&lt;td&gt;&lt;center&gt;显示信息&lt;/center&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;center&gt;&lt;img src=&#34;https://jimway71.github.io/img/57-msgmwb-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/center&gt;&lt;/td&gt;
+&lt;td&gt;&lt;center&gt;&lt;img src=&#34;https://jimway71.github.io/img/57-msgmwb-05.png&#34; width=320 height=233&gt;&lt;/center&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;center&gt;按实际屏幕位置关系调整位置, 调整完成点击Apply按钮&lt;/center&gt;&lt;/td&gt;
+&lt;td&gt;&lt;center&gt;按实际屏幕位置关系调整位置, 调整完成点击Apply按钮&lt;/center&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;center&gt;如果屏幕为上下布置, 勾选Tow Row, 并相应调整位置&lt;/center&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;center&gt;&lt;img src=&#34;https://jimway71.github.io/img/57-msgmwb-07.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/center&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;鼠标使用和单机多屏一样跨屏使用-键盘跟随鼠标&#34;&gt;鼠标使用和单机多屏一样跨屏使用, 键盘跟随鼠标&lt;/h2&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

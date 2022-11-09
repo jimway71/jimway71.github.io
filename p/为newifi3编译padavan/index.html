@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='据说，Padavan比openwrt稳定... (?)'><title>为Newifi3编译Padavan</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E4%B8%BAnewifi3%E7%BC%96%E8%AF%91padavan/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='为Newifi3编译Padavan'>
+<meta property='og:description' content='据说，Padavan比openwrt稳定... (?)'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E4%B8%BAnewifi3%E7%BC%96%E8%AF%91padavan/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='Padavan' /><meta property='article:tag' content='编译' /><meta property='article:tag' content='老毛子固件' /><meta property='article:tag' content='toolchains' /><meta property='article:tag' content='openwrt' /><meta property='article:tag' content='newifi-D2' /><meta property='article:tag' content='CM520' /><meta property='article:published_time' content='2022-05-28T20:46:00&#43;08:00'/><meta property='article:modified_time' content='2022-05-28T20:46:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-56.png' />
+<meta name="twitter:title" content="为Newifi3编译Padavan">
+<meta name="twitter:description" content="据说，Padavan比openwrt稳定... (?)"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-56.png' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E4%B8%BAnewifi3%E7%BC%96%E8%AF%91padavan/">
+                
+                    <img src="/wallpaper/wallpaper-56.png" loading="lazy" alt="Featured image of post 为Newifi3编译Padavan" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                Migration
+            </a>
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/%E7%A1%AC%E4%BB%B6/" >
+                硬件
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%B8%BAnewifi3%E7%BC%96%E8%AF%91padavan/">为Newifi3编译Padavan</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            据说，Padavan比openwrt稳定... (?)
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 28, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 9 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>注：第一次尝试，采用最简单的方法处理<br>
+操作系统: <a class="link" href="https://releases.ubuntu.com/18.04/"  target="_blank" rel="noopener"
+    >Ubuntu 18.04 LTS</a></p>
+<h2 id="第一次尝试编译">第一次尝试编译</h2>
+<h3 id="系统准备">系统准备</h3>
+<h4 id="操作系统更新">操作系统更新</h4>
+<blockquote>
+<p>$ sudo apt update<br>
+$ sudo apt upgrade</p>
+</blockquote>
+<h3 id="安装依赖包">安装依赖包</h3>
+<blockquote>
+<p>$ sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \<br>
+fakeroot kmod cpio git python3-docutils gettext automake autopoint \<br>
+texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev \<br>
+libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin</p>
+</blockquote>
+<h3 id="编译过程结果-无扩展功能">编译过程(结果: 无扩展功能)</h3>
+<h4 id="准备目录">准备目录</h4>
+<blockquote>
+<p>$ sudo mkdir /opt/rt-n56u<br>
+$ sudo chmod 0777 /opt/rt-n56u</p>
+</blockquote>
+<h4 id="拉取源码">拉取源码:</h4>
+<p>选择github上的代码</p>
+<blockquote>
+<p>$ git clone --depth=1 <a class="link" href="https://github.com/hanwckf/rt-n56u.git"  target="_blank" rel="noopener"
+    >https://github.com/hanwckf/rt-n56u.git</a> /opt/rt-n56u</p>
+</blockquote>
+<h4 id="准备toolchain">准备toolchain</h4>
+<blockquote>
+<p>$ cd /opt/rt-n56u/toolchain-mipsel<br>
+# 使用脚本下载预编译的工具链：<br>
+$ sh dl_toolchain.sh</p>
+</blockquote>
+<h4 id="如何有必要编辑配置文件模板">(如何有必要)编辑配置文件(模板)</h4>
+<p>在/opt/rt-n56u/trunk/configs/templates/目录下<br>
+Newifi3的配置文件名为NEWIFI3.config</p>
+<h3 id="进行编译">进行编译</h3>
+<blockquote>
+<p>$ cd /opt/rt-n56u/trunk<br>
+# 对于WSL环境，需要使用sudo进行编译，或者使用fakeroot-tcp代替fakeroot<br>
+$ sudo ./build_firmware_modify NEWIFI3</p>
+</blockquote>
+<p>坐等编译完成，时间会比较长，应该跟机器速度强相关。</p>
+<h3 id="编译完成拷出固件">编译完成，拷出固件</h3>
+<ul>
+<li>编译好的固件在:<br>
+/opt/rt-n56u/trunk/images</li>
+<li>生成的固件为:<br>
+NEWIFI3_3.4.3.9-099.trx</li>
+</ul>
+<p>注:<br>
+有人提醒: 刷机后为避免各类怪异现象，请到&quot;系统管理&quot;-&gt;&ldquo;配置管理&rdquo;, 重置路由器设置 (NVRAM)和 路由器内部存储 (/etc/storage)进行双清</p>
+<p>Pavadan的第一次编译过程比较顺利，相比而言，Openwrt的编译过程总是状况不断。<br>
+好感度+1！</p>
+<p>后记:<br>
+用编译后固件刷了NEWIFI3后, 进入后看到的图面如下:<br>
+<img src="/img/2022-05-28_hanwckf_pdv_%e6%97%a0%e7%a7%91%e5%ad%a6%e7%95%8c%e9%9d%a2_%e8%87%aa%e7%bc%96%e8%af%91%e7%89%88%e6%9c%ac.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p><strong>完全没有扩展功能，功能不全，无法使用</strong>。</p>
+<h2 id="尝试下载已编译好的固件">尝试下载已编译好的固件</h2>
+<p>好吧，那先找个大概能用的、编译好的固件看下再说<br>
+在<a class="link" href="https://www.right.com.cn/"  target="_blank" rel="noopener"
+    >恩山论坛</a>上到个帖子，给指到<a class="link" href="https://github.com/hiboyhiboy/"  target="_blank" rel="noopener"
+    >hiboyhiboy</a>的<a class="link" href="https://github.com/hiboyhiboy/opt-script/issues/61"  target="_blank" rel="noopener"
+    >ss订阅列表问题#61</a>，里面有指到<a class="link" href="https://t.me/s/pdcn1"  target="_blank" rel="noopener"
+    >hiboyhiboy的固件发布地址</a>，在这里找到了<a class="link" href="https://opt.cn2qq.com/padavan"  target="_blank" rel="noopener"
+    >他的固件下载地址</a>。<br>
+下载<a class="link" href="https://opt.cn2qq.com/padavan/RT-N56UB1-newifi3D2-512M_3.4.3.9-099.trx"  target="_blank" rel="noopener"
+    >RT-N56UB1-newifi3D2-512M_3.4.3.9-099.trx</a>，并刷入NEWIFI3，进入后的界面是这样的：<br>
+<img src="/img/2022-05-28_hiboy_pdv_%e5%bc%b1%e7%a7%91%e5%ad%a6%e7%95%8c%e9%9d%a2.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>“V2RAY”配置菜单在“扩展功能”-“搭建Web环境”里的第二项，里面界面、配置方式与原来在OP里的完全不同，比较难于入手。<br>
+放弃！</p>
+<h2 id="尝试用可选科学上网插件的代码做编译">尝试用可选科学上网插件的代码做编译</h2>
+<p>在<a class="link" href="https://www.jianshu.com/p/c31b58728778"  target="_blank" rel="noopener"
+    >老毛子Padavan固件编译笔记</a>中发现<a class="link" href="https://github.com/chongshengB/rt-n56u"  target="_blank" rel="noopener"
+    >chongshengB</a>的版本可以选择<u>科学上网</u>插件，看样子有可能可用。<br>
+跟着<a class="link" href="https://www.jianshu.com/p/c31b58728778"  target="_blank" rel="noopener"
+    >老毛子Padavan固件编译笔记</a>的说明做编译。<br>
+注：<br>
+在编译过程中报了四次错</p>
+<h3 id="报错为没有找到7z">报错为没有找到7z</h3>
+<p>处理：安装7z</p>
+<blockquote>
+<p>$sudo apt install p7zip-full</p>
+</blockquote>
+<p>但是，装完7z后还有报错，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">make[2]: Entering directory &#39;/opt/rt-n56u/trunk/libs/boost&#39;  
+</span></span><span class="line"><span class="cl">( if [ ! -d boost_1_72_0 ]; then \  
+</span></span><span class="line"><span class="cl">        7z x -bsp0 boost_1_72_0.7z ; \  
+</span></span><span class="line"><span class="cl">        patch -d boost_1_72_0 -p1 -i ../build.patch; \  
+</span></span><span class="line"><span class="cl">fi )  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Error:  
+</span></span><span class="line"><span class="cl">Incorrect command line  
+</span></span><span class="line"><span class="cl">patch: **** Can&#39;t change to directory boost_1_72_0 : No such file or directory  
+</span></span><span class="line"><span class="cl">Makefile:14: recipe for target &#39;extract_test&#39; failed  
+</span></span><span class="line"><span class="cl">make[2]: *** [extract_test] Error 2  
+</span></span><span class="line"><span class="cl">make[2]: Leaving directory &#39;/opt/rt-n56u/trunk/libs/boost&#39;  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="查找问题原因">查找问题原因</h4>
+<p>查找原因，直接执行 7z x -bsp0 boost_1_72_0.7z，报错如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/tmp$ 7z x -bsp0 /opt/rt-n56u/trunk/libs/boost/boost_1_72_0.7z  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Error:  
+</span></span><span class="line"><span class="cl">Incorrect command line  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>显示的错误一致。<br>
+如果修改一下，执行 7z x boost_1_72_0.7z</p>
+<blockquote>
+<p>/tmp$ 7z x  /opt/rt-n56u/trunk/libs/boost/boost_1_72_0.7z</p>
+</blockquote>
+<p>则能正确执行。<br>
+通过Google搜索＂7z bsp0 error＂，可以查到一篇＂<a class="link" href="https://superuser.com/questions/194659/how-to-disable-the-output-of-7-zip"  target="_blank" rel="noopener"
+    >How to disable the output of 7-Zip?</a>＂，里面有提到</p>
+<blockquote>
+<p>You can use the -bs command to control where output goes. To stop anything but error output, I would add -bso0 -bsp0.</p>
+</blockquote>
+<p>即参数-bsp0可以停止除错误输出之外的任何操作，<br>
+下一个回复则说到</p>
+<blockquote>
+<p>This is correct, but introduced in 7Zip version 15.01 or after 9.38beta Source: sourceforge.net/p/sevenzip/discussion/45797/thread/8a45fa74 The actual Synology DSM 6.1.x includes 7zip with the version 9.20 and has no such option.</p>
+</blockquote>
+<p>应该是后来的版本里没有这个选项。<br>
+由此可以确定是由于7z版本更新后，不再支持-bsp0选项，而造成的这个错误。</p>
+<h4 id="解决问题">解决问题</h4>
+<p>解决方法应该是去掉命令中的-bsp0。<br>
+搜索这个命令的位置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ /opt/rt-n56u/trunk$ grep -r &#39;bsp0 &#39; *  
+</span></span><span class="line"><span class="cl">libs/boost/Makefile:            7z x -bsp0 $(SRC_NAME).7z ; \  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>那就是在文件/opt/rt-n56u/trunk/libs/boost/Makefile里，打开该文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ vim /opt/rt-n56u/trunk/libs/boost/Makefile  
+</span></span><span class="line"><span class="cl">SRC_NAME = boost_1_72_0  
+</span></span><span class="line"><span class="cl">THISDIR = $(shell pwd)  
+</span></span><span class="line"><span class="cl">CFLAGS := -O3 -ffunction-sections -fdata-sections  
+</span></span><span class="line"><span class="cl">CXXFLAGS := -O3 -ffunction-sections -fdata-sections  
+</span></span><span class="line"><span class="cl">LDFLAGS := -Wl,--gc-sections  
+</span></span><span class="line"><span class="cl">Boost_libs := date_time,program_options,system  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">all: extract_test config_test  
+</span></span><span class="line"><span class="cl">        ( cd $(SRC_NAME); \  
+</span></span><span class="line"><span class="cl">        ./b2 -d 0 -j $(HOST_NCPU) toolset=gcc-cross link=static variant=release runtime-link=shared install ; \  
+</span></span><span class="line"><span class="cl">        )  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">extract_test:  
+</span></span><span class="line"><span class="cl">        ( if [ ! -d $(SRC_NAME) ]; then \  
+</span></span><span class="line"><span class="cl">                7z x -bsp0 $(SRC_NAME).7z ; \  
+</span></span><span class="line"><span class="cl">                patch -d $(SRC_NAME) -p1 -i ../build.patch; \  
+</span></span><span class="line"><span class="cl">        fi )  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">config_test:  
+</span></span><span class="line"><span class="cl">        ( if [ -f ./config_done ]; then \  
+</span></span><span class="line"><span class="cl">                echo &#34;config done&#34;; \  
+</span></span><span class="line"><span class="cl">        else \  
+</span></span><span class="line"><span class="cl">        cd $(SRC_NAME); \  
+</span></span><span class="line"><span class="cl">        ./bootstrap.sh --with-libraries=$(Boost_libs) --prefix=$(STAGEDIR) ; \  
+</span></span><span class="line"><span class="cl">        echo &#34;using gcc : cross : $(CXX) : &lt;compileflags&gt;\&#34;$(CPUFLAGS)\&#34; &lt;cxxflags&gt;\&#34;$(CXXFLAGS)\&#34; &lt;cflags&gt;\&#34;$(CFLAGS)\&#34; &lt;linkflags&gt;\&#34;$(LDFLAGS)\&#34; ;&#34; &gt;&gt; project-config.jam ; \  
+</span></span><span class="line"><span class="cl">        touch ../config_done; \  
+</span></span><span class="line"><span class="cl">        fi )  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">clean:  
+</span></span><span class="line"><span class="cl">        rm -f config_done  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">romfs:  
+</span></span><span class="line"><span class="cl">        cp -fP $(STAGEDIR)/lib/libboost_*.so* $(ROMFSDIR)/lib  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改第15行 &quot;                7z x -bsp0 $(SRC_NAME).7z ; &quot;，去掉-bsp0，改为：<br>
+&quot;                7z x $(SRC_NAME).7z ; &quot;<br>
+<strong>已确认修改完成后该问题解决</strong>。</p>
+<h3 id="没有htop-302targz且在试图下载htop-302targz时报错">没有htop-3.0.2.tar.gz，且在试图下载htop-3.0.2.tar.gz时报错</h3>
+<p>报错内容为：</p>
+<blockquote>
+<p>HTTP request sent, awaiting response&hellip; 403 Forbidden<br>
+2022-05-29 11:09:25 ERROR 403: Forbidden.</p>
+</blockquote>
+<p>帖子<a class="link" href="https://www.right.com.cn/forum/thread-4064867-1-1.html"  target="_blank" rel="noopener"
+    >C大源码编译到htop时出错</a>里描述了相同的错误，并说明了解决方案，如下：<br>
+把<a class="link" href="https://www.right.com.cn/forum/forum.php?mod=attachment&amp;aid=NDQxMTk5fDY4MDg5ZDU3fDE2NTM4Mzc5MDZ8MHw0MDY0ODY3"  target="_blank" rel="noopener"
+    >htop-3.0.2.tar.gz</a>文件放/opt/rt-n56u/trunk/user/htop下就行了。<br>
+<strong>已确认该解决方案可行</strong>。</p>
+<h3 id="在编译到trojan时报错">在编译到trojan时报错</h3>
+<p>报错如下：</p>
+<blockquote>
+<p>CMake Error at CMakeLists.txt:1 (cmake_minimum_required):<br>
+CMake 3.7.2 or higher is required.  You are running version 3.5.1</p>
+</blockquote>
+<p>参考<a class="link" href="https://blog.csdn.net/u010420283/article/details/117632307"  target="_blank" rel="noopener"
+    >Ubuntu18/16 升级默认apt安装的cmake版本</a>，从<a class="link" href="https://cmake.org/download/"  target="_blank" rel="noopener"
+    >CMakedownload</a>下载cmake。<br>
+当前cmake版本为3.22.4</p>
+<blockquote>
+<p>/tmp$ wget <a class="link" href="https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz"  target="_blank" rel="noopener"
+    >https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz</a></p>
+</blockquote>
+<p>注意：上面下载的是linux的<strong>可执行版本</strong>，而不是源代码包。<br>
+解压后，移动到/opt目录下，并做链接(ln)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/tmp$ tar zxvf cmake-3.22.4-linux-x86_64.tar.gz   
+</span></span><span class="line"><span class="cl"># 查看版本号  
+</span></span><span class="line"><span class="cl">/tmp$ ./cmake-3.22.4-linux-x86_64/bin/cmake --version  
+</span></span><span class="line"><span class="cl"># 新建目录  
+</span></span><span class="line"><span class="cl">/tmp$ sudo mkdir /opt/cmake-3.22.4  
+</span></span><span class="line"><span class="cl">/tmp$ sudo chmod 0777 /opt/cmake-3.22.4  
+</span></span><span class="line"><span class="cl"># 移动  
+</span></span><span class="line"><span class="cl">/tmp$ mv cmake-3.22.4-linux-x86_64/* /opt/cmake-3.22.4/ -f  
+</span></span><span class="line"><span class="cl"># 建立软链接  
+</span></span><span class="line"><span class="cl">$ sudo ln -sf /opt/cmake-3.22.4/bin/* /usr/bin/  
+</span></span><span class="line"><span class="cl"># 再次查看版本  
+</span></span><span class="line"><span class="cl">$ cmake --version  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="最后编译完成后报错说包太大">最后编译完成后报错，说包太大</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Padded Kernel Image Size  
+</span></span><span class="line"><span class="cl">1273856 /opt/rt-n56u/trunk/images/zImage.lzma  
+</span></span><span class="line"><span class="cl"># Original RootFs Size  
+</span></span><span class="line"><span class="cl">110628938       /opt/rt-n56u/trunk/romfs  
+</span></span><span class="line"><span class="cl"># Compressed RootFs Size  
+</span></span><span class="line"><span class="cl">43246464 /opt/rt-n56u/trunk/images/ramdisk  
+</span></span><span class="line"><span class="cl"># Padded Kernel Image + Compressed Rootfs Size  
+</span></span><span class="line"><span class="cl">44520320 /opt/rt-n56u/trunk/images/zImage.lzma  
+</span></span><span class="line"><span class="cl"># !!! Please make sure that Padded Kernel Image + Compressed Rootfs size  
+</span></span><span class="line"><span class="cl"># can&#39;t bigger than 32964544 !!!  
+</span></span><span class="line"><span class="cl">#===========================================  
+</span></span><span class="line"><span class="cl"># Pack final image and write headers  
+</span></span><span class="line"><span class="cl"># For No padded, need write kernel size in image header   
+</span></span><span class="line"><span class="cl"># to correct mount partition in mtd drivers address  
+</span></span><span class="line"><span class="cl">img file: /opt/rt-n56u/trunk/images/NEWIFI3_3.4.3.9-099.trx  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>查看images目录，包还是生成了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/opt/rt-n56u/trunk$ ll images/  
+</span></span><span class="line"><span class="cl">total 132812  
+</span></span><span class="line"><span class="cl">drwxr-xr-x  2 root   root       4096 May 30 05:35 ./  
+</span></span><span class="line"><span class="cl">drwxrwxr-x 14 jimway jimway     4096 May 30 04:59 ../  
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root   root   44520384 May 30 05:35 NEWIFI3_3.4.3.9-099.trx  
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root   root   43246464 May 30 05:35 ramdisk  
+</span></span><span class="line"><span class="cl">-rwxr-xr-x  1 root   root    3692352 May 30 05:35 zImage*  
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root   root   44520320 May 30 05:35 zImage.lzma  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>多用了12-13M空间，看下怎么能减下来。</p>
+<h3 id="修改原老毛子padavan固件编译笔记中的编译操作总结">修改原老毛子Padavan固件编译笔记中的编译操作总结</h3>
+<p>综上所述，修改原<a class="link" href="https://www.jianshu.com/p/c31b58728778"  target="_blank" rel="noopener"
+    >老毛子Padavan固件编译笔记</a>中的编译操作如下：</p>
+<h3 id="系统准备-1">系统准备</h3>
+<h4 id="操作系统更新-1">操作系统更新</h4>
+<blockquote>
+<p>$ sudo apt update<br>
+$ sudo apt upgrade</p>
+</blockquote>
+<h4 id="安装依赖包-1">安装依赖包</h4>
+<blockquote>
+<p>$  sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano fakeroot cpio git python-docutils gettext automake autopoint texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget p7zip-full</p>
+</blockquote>
+<h3 id="编译过程">编译过程</h3>
+<h4 id="准备目录-1">准备目录</h4>
+<blockquote>
+<p>$ sudo mkdir /opt/rt-n56u<br>
+$ sudo chmod 0777 /opt/rt-n56u</p>
+</blockquote>
+<h4 id="拉取源码-1">拉取源码:</h4>
+<p>选择github上的代码</p>
+<blockquote>
+<p>$ git clone --depth=1 <a class="link" href="https://github.com/chongshengB/rt-n56u.git"  target="_blank" rel="noopener"
+    >https://github.com/chongshengB/rt-n56u.git</a> /opt/rt-n56u</p>
+</blockquote>
+<h4 id="准备toolchain-1">准备toolchain</h4>
+<blockquote>
+<p>$ cd /opt/rt-n56u/toolchain-mipsel<br>
+# 使用脚本下载预编译的工具链：<br>
+$ sh dl_toolchain.sh</p>
+</blockquote>
+<h4 id="将前述htop-302targz文件拷贝到optrt-n56utrunkuserhtop目录下">将前述htop-3.0.2.tar.gz文件拷贝到/opt/rt-n56u/trunk/user/htop目录下</h4>
+<p><a class="link" href="https://www.right.com.cn/forum/forum.php?mod=attachment&amp;aid=NDQxMTk5fDY4MDg5ZDU3fDE2NTM4Mzc5MDZ8MHw0MDY0ODY3"  target="_blank" rel="noopener"
+    >htop-3.0.2.tar.gz文件链接</a></p>
+<blockquote>
+<p>$ cp htop-3.0.2.tar.gz /opt/rt-n56u/trunk/user/htop</p>
+</blockquote>
+<h4 id="修改libsboostmakefile">修改libs/boost/Makefile</h4>
+<blockquote>
+<p>$ vim /opt/rt-n56u/trunk/libs/boost/Makefile<br>
+修改第15行”7z x -bsp0 $(SRC_NAME).7z ; \”，改为：<br>
+&ldquo;7z x $(SRC_NAME).7z ; &quot;</p>
+</blockquote>
+<h4 id="升级cmake版本">升级cmake版本</h4>
+<p>下载新版本cmake(可执行版本)</p>
+<blockquote>
+<p>/tmp$ wget <a class="link" href="https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz"  target="_blank" rel="noopener"
+    >https://github.com/Kitware/CMake/releases/download/v3.22.4/cmake-3.22.4-linux-x86_64.tar.gz</a></p>
+</blockquote>
+<p>解压后，移动到/opt目录下，并做链接(ln)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 解压  
+</span></span><span class="line"><span class="cl">/tmp$ tar zxvf cmake-3.22.4-linux-x86_64.tar.gz   
+</span></span><span class="line"><span class="cl"># 新建目录  
+</span></span><span class="line"><span class="cl">/tmp$ sudo mkdir /opt/cmake-3.22.4  
+</span></span><span class="line"><span class="cl">/tmp$ sudo chmod 0777 /opt/cmake-3.22.4  
+</span></span><span class="line"><span class="cl"># 移动  
+</span></span><span class="line"><span class="cl">/tmp$ mv cmake-3.22.4-linux-x86_64/* /opt/cmake-3.22.4/ -f  
+</span></span><span class="line"><span class="cl"># 建立软链接  
+</span></span><span class="line"><span class="cl">$ sudo ln -sf /opt/cmake-3.22.4/bin/* /usr/bin/  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="查看并修改自定义插件配置文件是optrt-n56utrunkbuild_firmware_modify">查看并修改自定义插件，配置文件是/opt/rt-n56u/trunk/build_firmware_modify</h4>
+<blockquote>
+<p>$ vim /opt/rt-n56u/trunk/build_firmware_modify</p>
+</blockquote>
+<p>将文件中的插件自定义修改y/n，y是编译，n是不编译。<br>
+注意：至少要保留科学上网相关的插件。</p>
+<h4 id="可选编辑配置文件模板">(可选)编辑配置文件(模板)</h4>
+<p>在/opt/rt-n56u/trunk/configs/templates/目录下<br>
+Newifi3的配置文件名为NEWIFI3.config</p>
+<blockquote>
+<p>$ vim /opt/rt-n56u/trunk/configs/templates/NEWIFI3.config</p>
+</blockquote>
+<h4 id="进行编译-1">进行编译</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd /opt/rt-n56u/trunk  
+</span></span><span class="line"><span class="cl"># 对于WSL环境，需要使用sudo进行编译，或者使用fakeroot-tcp代替fakeroot  
+</span></span><span class="line"><span class="cl">$ sudo ./build_firmware_modify NEWIFI3  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>坐等编译完成，时间会比较长，大概与机器速度强相关。</p>
+<h3 id="编译完成拷出固件-1">编译完成，拷出固件</h3>
+<ul>
+<li>编译好的固件在:<br>
+/opt/rt-n56u/trunk/images</li>
+<li>生成的固件为:<br>
+NEWIFI3_3.4.3.9-099.trx</li>
+</ul>
+<p>编译成功，功能较多，尚未测试。(5.30)</p>
+<p>(第一次成功编译后_5.30之前)用编译后固件刷了NEWIFI3后, 进入后看到的图面如下:<br>
+<img src="/img/2022-05-28_chongshengB_pdv_%e7%a7%91%e5%ad%a6%e7%95%8c%e9%9d%a2.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>符合预期!</p>
+<p>又:<br>
+经测试，<strong>科学功能不稳定</strong>！且功能简单，远不如op上的科学功能强大，而且功能远少于op。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">注:  
+</span></span><span class="line"><span class="cl">关于清理代码树并重新开始编译:  
+</span></span><span class="line"><span class="cl">$ cd /opt/rt-n56u/trunk  
+</span></span><span class="line"><span class="cl">$ sudo ./clear_tree  
+</span></span><span class="line"><span class="cl">$ sudo ./build_firmware_modify NEWIFI3  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="再次尝试用可选科学上网插件的代码做编译">再次尝试用可选科学上网插件的代码做编译</h2>
+<p>又又在网上找了一个版本：<br>
+<a class="link" href="https://www.right.com.cn/forum/thread-4055964-1-1.html"  target="_blank" rel="noopener"
+    >【2021-01-10】NEWIFI3 基于chongshengB源码编译彩虹版主题padavan,更新手机版页面</a><br>
+下载了其中的<a class="link" href="https://wwa.lanzoui.com/iqAick8u2kf"  target="_blank" rel="noopener"
+    >完整版</a>(似乎并不是这个)<br>
+刷机后如下:<br>
+<img src="/img/2022-05-30_122926_%e7%bd%91%e7%bb%9c%e4%b8%8b%e8%bd%bd%e6%9f%90%e7%89%88%e6%9c%ac_%e8%83%bd%e7%a7%91%e5%ad%a6%e4%b8%8d%e7%a8%b3%e5%ae%9a.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>功能是有了，但是<strong>科学功能依然不稳定</strong>：开机后长时间不能科学，但睡一觉后．．．．．又能科学了！(还有，出现在本来能科学，改下科学的配置并保存后，居然也不能科学了！这很不科学！)(之后还又不能科学了/_ )</p>
+<h2 id="再再次尝试">再再次尝试</h2>
+<p>成功不完全，就是完全不成功！<br>
+换：CM520+自制全套OP办科学，NWF3+自制全套PDV做交换+wifi。<br>
+2020.5.30记录</p>
+<p>&hellip;当前NWF3+PDV还能凑合用，先用着</p>
+<ul>
+<li>自制&hellip;完成</li>
+<li>CM520+自制测试，NWF3(不刷+不做拨号和DHCP)做WIFI(如失败，NWF3恢复后继续凑合)<br>
+如成功</li>
+<li>再刷NWF3<br>
+希望最终CM520、NWF3都能独立使用。</li>
+</ul>
+<p>2022.6.1记录:<br>
+最后还是成功了的(还未上线测), 看图<br>
+<img src="/img/56-pdv-10.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+><br>
+<img src="/img/56-pdv-11.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="参考列表">参考列表</h2>
+<h3 id="编译参考">编译参考</h3>
+<ul>
+<li><a class="link" href="https://www.jianshu.com/p/6b8403cdea46"  target="_blank" rel="noopener"
+    >Padavan固件编译办法</a>: 
+第一次编译时参考</li>
+</ul>
+<h3 id="源代码列表">源代码列表</h3>
+<ul>
+<li><a class="link" href="https://github.com/hanwckf/rt-n56u"  target="_blank" rel="noopener"
+    >hanwckf的Padavan库_Github</a>:<br>
+最先支持了7915无线芯片，也就是支持了wifi6的机型比如CR660x和JCG Q20/Q10 Pro</li>
+<li><a class="link" href="https://github.com/chongshengB/rt-n56u"  target="_blank" rel="noopener"
+    >chongshengB的Padavan库_Github</a>:<br>
+在hanwckf的基础上增加修改出了7615/7915对kvr的支持</li>
+<li><a class="link" href="https://github.com/padavanonly/rt-n56u"  target="_blank" rel="noopener"
+    >padavanonly的Padavan库 Github</a>:<br>
+具有一些别人没有的插件，使用比较方便</li>
+<li><a class="link" href="https://github.com/immortalwrt/padavan"  target="_blank" rel="noopener"
+    >immortalwrt的Padavan库 Github</a>:<br>
+在一些细节上有优化</li>
+<li><a class="link" href="https://github.com/Yuclee/Padavan-Minimal"  target="_blank" rel="noopener"
+    >Yuclee的Padavan-mini库 Github</a>:<br>
+看样子是个精简版本</li>
+</ul>
+<h3 id="其他参考">其他参考</h3>
+<ul>
+<li>
+<p><a class="link" href="https://www.cxymm.net/article/m0_60027682/120075617"  target="_blank" rel="noopener"
+    >Padavan各源码融合教程_m0_60027682的博客-程序员秘密</a>:<br>
+整合多个源代码的功能</p>
+</li>
+<li>
+<p><a class="link" href="https://www.jianshu.com/p/cb51fb0fb2ac"  target="_blank" rel="noopener"
+    >老毛子固件使用说明</a>:<br>
+有初始化说明</p>
+</li>
+<li>
+<p><a class="link" href="https://www.jianshu.com/p/c31b58728778"  target="_blank" rel="noopener"
+    >老毛子Padavan固件编译笔记</a> <strong>(最终参考)</strong></p>
+</li>
+<li>
+<p><a class="link" href="https://www.right.com.cn/forum/thread-4740979-1-1.html"  target="_blank" rel="noopener"
+    >NEWIFI3 D2自编译PADAVAN老毛子固件，基于hanwckf最新源码编译整合常用插件</a></p>
+</li>
+<li>
+<p><a class="link" href="https://www.right.com.cn/forum/thread-4064867-1-1.html"  target="_blank" rel="noopener"
+    >C大源码编译到htop时出错</a>:<br>
+编译错误处理</p>
+</li>
+</ul>
+<h2 id="tbd">TBD</h2>
+<ul>
+<li>机编op for cm520(全套, 主用v2, 不用无线, 做拨号)</li>
+<li>机编pdv for newifi3, chongshengB版, 全套, 仅用来做无线(5G放149)</li>
+<li>git编pdv for newifi3<br>
+看来是完成了的(2022.11.1)</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ubuntu/">Ubuntu</a>
+        
+            <a href="/tags/padavan/">Padavan</a>
+        
+            <a href="/tags/%E7%BC%96%E8%AF%91/">编译</a>
+        
+            <a href="/tags/%E8%80%81%E6%AF%9B%E5%AD%90%E5%9B%BA%E4%BB%B6/">老毛子固件</a>
+        
+            <a href="/tags/toolchains/">toolchains</a>
+        
+            <a href="/tags/openwrt/">Openwrt</a>
+        
+            <a href="/tags/newifi-d2/">newifi-D2</a>
+        
+            <a href="/tags/cm520/">CM520</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-29.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-22.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-22.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">WSL下编译LEDE的openwrt, 用于斐讯K2</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/NAFO-41.jpg" loading="lazy" data-key="" data-hash="/wallpaper/NAFO-41.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用Github为多种设备编译Openwrt固件</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%94%A8r3300l%E5%81%9A%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-39.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-39.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">用R3300L做家用服务器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%81%94%E9%80%9A%E6%95%B0%E7%A0%81%E8%A7%86%E8%AE%AFq7%E7%9B%92%E5%AD%90%E5%86%8D%E5%88%B7openwrt/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-27.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">联通(数码视讯)Q7盒子再刷Openwrt</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#第一次尝试编译">第一次尝试编译</a>
+      <ol>
+        <li><a href="#系统准备">系统准备</a>
+          <ol>
+            <li><a href="#操作系统更新">操作系统更新</a></li>
+          </ol>
+        </li>
+        <li><a href="#安装依赖包">安装依赖包</a></li>
+        <li><a href="#编译过程结果-无扩展功能">编译过程(结果: 无扩展功能)</a>
+          <ol>
+            <li><a href="#准备目录">准备目录</a></li>
+            <li><a href="#拉取源码">拉取源码:</a></li>
+            <li><a href="#准备toolchain">准备toolchain</a></li>
+            <li><a href="#如何有必要编辑配置文件模板">(如何有必要)编辑配置文件(模板)</a></li>
+          </ol>
+        </li>
+        <li><a href="#进行编译">进行编译</a></li>
+        <li><a href="#编译完成拷出固件">编译完成，拷出固件</a></li>
+      </ol>
+    </li>
+    <li><a href="#尝试下载已编译好的固件">尝试下载已编译好的固件</a></li>
+    <li><a href="#尝试用可选科学上网插件的代码做编译">尝试用可选科学上网插件的代码做编译</a>
+      <ol>
+        <li><a href="#报错为没有找到7z">报错为没有找到7z</a>
+          <ol>
+            <li><a href="#查找问题原因">查找问题原因</a></li>
+            <li><a href="#解决问题">解决问题</a></li>
+          </ol>
+        </li>
+        <li><a href="#没有htop-302targz且在试图下载htop-302targz时报错">没有htop-3.0.2.tar.gz，且在试图下载htop-3.0.2.tar.gz时报错</a></li>
+        <li><a href="#在编译到trojan时报错">在编译到trojan时报错</a></li>
+        <li><a href="#最后编译完成后报错说包太大">最后编译完成后报错，说包太大</a></li>
+        <li><a href="#修改原老毛子padavan固件编译笔记中的编译操作总结">修改原老毛子Padavan固件编译笔记中的编译操作总结</a></li>
+        <li><a href="#系统准备-1">系统准备</a>
+          <ol>
+            <li><a href="#操作系统更新-1">操作系统更新</a></li>
+            <li><a href="#安装依赖包-1">安装依赖包</a></li>
+          </ol>
+        </li>
+        <li><a href="#编译过程">编译过程</a>
+          <ol>
+            <li><a href="#准备目录-1">准备目录</a></li>
+            <li><a href="#拉取源码-1">拉取源码:</a></li>
+            <li><a href="#准备toolchain-1">准备toolchain</a></li>
+            <li><a href="#将前述htop-302targz文件拷贝到optrt-n56utrunkuserhtop目录下">将前述htop-3.0.2.tar.gz文件拷贝到/opt/rt-n56u/trunk/user/htop目录下</a></li>
+            <li><a href="#修改libsboostmakefile">修改libs/boost/Makefile</a></li>
+            <li><a href="#升级cmake版本">升级cmake版本</a></li>
+            <li><a href="#查看并修改自定义插件配置文件是optrt-n56utrunkbuild_firmware_modify">查看并修改自定义插件，配置文件是/opt/rt-n56u/trunk/build_firmware_modify</a></li>
+            <li><a href="#可选编辑配置文件模板">(可选)编辑配置文件(模板)</a></li>
+            <li><a href="#进行编译-1">进行编译</a></li>
+          </ol>
+        </li>
+        <li><a href="#编译完成拷出固件-1">编译完成，拷出固件</a></li>
+      </ol>
+    </li>
+    <li><a href="#再次尝试用可选科学上网插件的代码做编译">再次尝试用可选科学上网插件的代码做编译</a></li>
+    <li><a href="#再再次尝试">再再次尝试</a></li>
+    <li><a href="#参考列表">参考列表</a>
+      <ol>
+        <li><a href="#编译参考">编译参考</a></li>
+        <li><a href="#源代码列表">源代码列表</a></li>
+        <li><a href="#其他参考">其他参考</a></li>
+      </ol>
+    </li>
+    <li><a href="#tbd">TBD</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

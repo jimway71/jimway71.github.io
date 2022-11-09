@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>五笔输入法 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+        <description>Recent content in 五笔输入法 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 27 May 2022 22:59:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows10自带五笔输入法</title>
+        <link>https://jimway71.github.io/p/windows10%E8%87%AA%E5%B8%A6%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+        <pubDate>Fri, 27 May 2022 22:59:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/windows10%E8%87%AA%E5%B8%A6%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-54.jpg" alt="Featured image of post Windows10自带五笔输入法" /&gt;&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/54-input-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;macbook上使用原生五笔输入法的问题&#34;&gt;MacBook上使用原生五笔输入法的问题&lt;/h2&gt;
+&lt;p&gt;在通过BootCamp安装了Windows10的MacBook Pro上, 系统原生五笔输入法出现了以下问题:&lt;br&gt;
+✲ 无法输出全角标点&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/54-input-08.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;
+在普通PC上未发现类似问题。&lt;/p&gt;
+&lt;h2 id=&#34;windows10五笔输入法的安装和设置&#34;&gt;Windows10五笔输入法的安装和设置&lt;/h2&gt;
+&lt;h3 id=&#34;开始安装&#34;&gt;开始安装&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/54-input-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;添加输入法&#34;&gt;添加输入法&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/54-input-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+点击＂添加键盘＂可以选择＂微软拼音＂和＂微软五笔＂两种输入法。&lt;/p&gt;
+&lt;h3 id=&#34;设置输入法&#34;&gt;设置输入法&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/54-input-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;做了一些微调&#34;&gt;做了一些微调&lt;/h3&gt;
+&lt;p&gt;主要是五笔拼音混输＋使用以前版本的微软五笔输入法。&lt;br&gt;
+其实可以不用改(看使用习惯)&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/54-input-07.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;总结：微软五笔配置里面缺不少功能，比微软拼音的配置菜单少了很多选项，感觉有点像是个半成品。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

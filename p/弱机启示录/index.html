@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='&#43; Domain'><title>弱机启示录</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E5%BC%B1%E6%9C%BA%E5%90%AF%E7%A4%BA%E5%BD%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='弱机启示录'>
+<meta property='og:description' content='&#43; Domain'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E5%BC%B1%E6%9C%BA%E5%90%AF%E7%A4%BA%E5%BD%95/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VPS' /><meta property='article:tag' content='AS4837' /><meta property='article:tag' content='AS9929' /><meta property='article:tag' content='NTT' /><meta property='article:tag' content='BGP' /><meta property='article:tag' content='CN2' /><meta property='article:tag' content='测速' /><meta property='article:published_time' content='2022-03-18T01:47:00&#43;08:00'/><meta property='article:modified_time' content='2022-03-18T01:47:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-51.jpg' />
+<meta name="twitter:title" content="弱机启示录">
+<meta name="twitter:description" content="&#43; Domain"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-51.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%BC%B1%E6%9C%BA%E5%90%AF%E7%A4%BA%E5%BD%95/">
+                
+                    <img src="/wallpaper/wallpaper-51.jpg" loading="lazy" alt="Featured image of post 弱机启示录" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                Migration
+            </a>
+        
+            <a href="/categories/%E7%A1%AC%E4%BB%B6/" >
+                硬件
+            </a>
+        
+            <a href="/categories/modification/" >
+                Modification
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%BC%B1%E6%9C%BA%E5%90%AF%E7%A4%BA%E5%BD%95/">弱机启示录</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            &#43; Domain
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 18, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><strong>注意: 经统计计算, 2022.4当月的预估VPS流量总使用量应该 <u>&lt; 100GB</u>, 即一般VPS给的流量都够用, 即使所给流量低至500GB.</strong></p>
+<ul>
+<li>相关交流论坛:
+<ul>
+<li><a class="link" href="https://91ai.net/"  target="_blank" rel="noopener"
+    >全球主机交流论坛</a></li>
+</ul>
+</li>
+<li>关于注册亚马逊免费套餐事项:<br>
+参考: <a class="link" href="https://91ai.net/thread-1012671-1-1.html"  target="_blank" rel="noopener"
+    >（白**）注册AWS 新用户可得超多礼品</a><br>
+<a class="link" href="https://aws.amazon.com/cn/free/?trk=ba_a134p000006vnRgAAI&amp;trkCampaign=freetier&amp;sc_channel=ba&amp;sc_campaign=ray2b&amp;sc_outcome=Acquisition&amp;sc_geo=CHNA&amp;sc_country=CN&amp;sc_publisher=Others&amp;all-free-tier.sort-by=item.additionalFields.SortRank&amp;all-free-tier.sort-order=asc&amp;awsf.Free%20Tier%20Types=*all&amp;awsf.Free%20Tier%20Categories=*all"  target="_blank" rel="noopener"
+    >AFF地址</a><br>
+<strong>重点：注册的时候不要爬墙，注册地区要选中国，要国内手机号，信用卡！AWS后台会审核，非国内卡，不要尝试了</strong></li>
+</ul>
+<p>主机信息来源参考: <a class="link" href="/p/more-links/#%E4%B8%BB%E6%9C%BA%E4%BF%A1%E6%81%AF" >主机信息源</a></p>
+<p>● <big>超低价格(&lt;=$10/年)优化链路:</big>  </p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>品牌</th>
+<th>价格<br>($/y)</th>
+<th>配置</th>
+<th>订购链接</th>
+<th>往返链路及优化级别</th>
+<th>其它特点</th>
+<th>信息来源及发布日期</th>
+<th>购买信息</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><big><font color=red>~√</font></big><br><strong><a class="link" href="https://pacificrack.com/"  title="-&gt;P"
+     target="_blank" rel="noopener"
+    >Pacificrack</a></strong><br><font color=red>①②</font><font color=blue>①②</font></td>
+<td>10</td>
+<td>1CPU,1GRAM,20G SSD, 500G/M<br>Quadranet洛杉矶机房<br><br><u>2022.618优惠:<br>2CPU,2GB RAM,30G SSD, 500G/M $10/Y</u></td>
+<td><a class="link" href="https://pacificrack.com/portal/aff.php?aff=1%20&amp;pid=161&amp;billingcycle=annually&amp;promocode=UF3ZV1BYF6"  target="_blank" rel="noopener"
+    >链接</a> - 优惠码:<br>UF3ZV1BYF6</td>
+<td>优化: 一般<br>联通去程直连, 回程AS4837<br>移动去回均直连;<br>电信去程GTT, 回程走CN2<br>测试: <a class="link" href="https://www.zhujiceping.com/49018.html"  target="_blank" rel="noopener"
+    >这里</a></td>
+<td>存在售后慢或者无售后等问题</td>
+<td><a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/50339.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/04/25<br><br><br>618优惠:<br><a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/51026.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/05/11 $10/Year</td>
+<td><font color=red>$30/3年<br>(22/04/27-25/04/27)<br>常规优惠,非618</font><br>当前备用</td>
+<td>备用<br><font color=red>①</font>$10/Y为优惠价(3折), <font color=blue>②</font><strong>到期后续费按原价</strong>计算(即涨价)<br><font color=blue>①</font><a class="link" href="http://www.idccoupon.com/2577.html"  target="_blank" rel="noopener"
+    ><strong>改IP:$8/次</strong></a><br><br><font color=red>②</font><a class="link" href="https://pacificrack.com/tos.html"  target="_blank" rel="noopener"
+    >TOS</a>未限制Proxy</td>
+</tr>
+<tr>
+<td><big><font color=blue>╳</font></big><br><a class="link" href="https://cloudcone.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >cloudcone</a><br><font color=blue>①</font></td>
+<td>9.99</td>
+<td>1CPU,512M RAM,20G HDD, <strong>2T/M</strong><br>美国洛杉矶</td>
+<td><a class="link" href="https://app.cloudcone.com.cn/vps/79/create?token=hashtag%202022%20vps%20-%201&amp;ref=14"  target="_blank" rel="noopener"
+    >链接</a></td>
+<td>优化: 一般<br>去程中国直连(除移动绕欧洲)<br>回程常规直连(除联通走AS4837)<br>测试: <a class="link" href="https://www.zhujiceping.com/47399.html"  target="_blank" rel="noopener"
+    >这里</a></td>
+<td><strong>相对靠谱的商家</strong></td>
+<td><a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/50338.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/04/24<br><a class="link" href="https://www.idcoffer.com/"  title="-&gt;v"
+     target="_blank" rel="noopener"
+    >VPS收割者</a>(<a class="link" href="https://www.idcoffer.com/archives/7447"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/02/08</td>
+<td>-</td>
+<td>到期后续费还是按$9.99/Y计算<br><br><font color=blue>①</font><a class="link" href="https://cloudcone.com/policies/terms/"  target="_blank" rel="noopener"
+    >TOS</a> 03.5限制Proxies</td>
+</tr>
+<tr>
+<td><big><font color=red>∽√</font></big><br><a class="link" href="https://www.racknerd.com/"  title="-&gt;R"
+     target="_blank" rel="noopener"
+    >RackNerd</a><br><font color=red>①②③④</font><br>①<font color=blue>①②③</font></td>
+<td><font color=red>③</font>9.89<br><br><u><font color=red>①</font><font color=red>6.28<br>最低</font></u></td>
+<td><font color=blue>③</font>1CPU,512M RAM, 10G SSD, 1T/M<br>美国多地, 含Lax/San Jose<br><br><font color=blue>①</font>1CPU,384M RAM, 10G SSD, 500G/M<br>美国多地, 含San Jose</td>
+<td><a class="link" href="https://my.racknerd.com/aff.php?aff=20&amp;pid=620"  target="_blank" rel="noopener"
+    >链接</a><br><br><a class="link" href="https://my.racknerd.com/aff.php?aff=20&amp;pid=657"  target="_blank" rel="noopener"
+    >$6.28链接</a></td>
+<td>优化: ①一般<br>联通去程回程都是直连, 回程走AS4837<br><strong>San Jose可能离接入点更近</strong><br>测试: <a class="link" href="https://www.vpsno.com/pingce/1217.html"  target="_blank" rel="noopener"
+    >这里</a></td>
+<td>用着还行<br>内存较小</td>
+<td><a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/50572.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/04/29<br><br><a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/50211.html"  target="_blank" rel="noopener"
+    >$6.28来源</a>) 2022/04/19<br><br><a class="link" href="https://www.zhujiceping.com/50572.html"  target="_blank" rel="noopener"
+    >优惠221021</a><br><u>1g RAM $14/y</u></td>
+<td>-</td>
+<td><font color=blue>②</font><strong>但内存小<br>备用备选</strong><br>下次考虑放San Jose<br><br><font color=red>②</font><a class="link" href="https://www.vpsjxw.com/vps_tutorials/racknerd_cip/"  target="_blank" rel="noopener"
+    ><strong>改IP:$3/次</strong></a><br><br><font color=red>④</font><a class="link" href="https://www.racknerd.com/terms-of-service"  target="_blank" rel="noopener"
+    >TOS</a>未明确限制Proxy</td>
+</tr>
+<tr>
+<td><big><font color=blue>╳</font></big><br><a class="link" href="https://virmach.com/"  title="-&gt;V"
+     target="_blank" rel="noopener"
+    >Virmach</a><br><font color=blue>①</font></td>
+<td><font color=gray>$17/2Y</font></td>
+<td><font color=gray>1 CPU,384m RAM, 10G, 1TB/M</font></td>
+<td><a class="link" href="https://billing.virmach.com/index.php?rp=/store/special-offers"  target="_blank" rel="noopener"
+    >链接</a></td>
+<td><font color=gray>优化: 一般<br>去程三网直连，回程电信移动直连，联通绕美。<br>闲时延迟低，晚高峰丢包多<br>测试: <a class="link" href="https://www.pigji.com/1516.html"  target="_blank" rel="noopener"
+    >这里</a></font></td>
+<td><font color=gray><font color=blue>①</font><strong>不管啥母鸡到了Virmach这里都会超售到很低的分数</strong></font></td>
+<td><a class="link" href="https://www.pigji.com/"  title="-&gt;zZ"
+     target="_blank" rel="noopener"
+    >猪机博客</a>(<a class="link" href="https://www.zhujiceping.com/50572.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/05/25</td>
+<td><strong>差,不考虑</strong></td>
+<td><font color=gray>买2年自动 6.8折优惠</font></td>
+</tr>
+</tbody>
+</table></div>
+<p>● <big>低价格(&gt;$10/年 &amp; &lt;=$30左右/年)优化链路:</big>  </p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>品牌</th>
+<th>价格<br>($/y)</th>
+<th>配置</th>
+<th>订购链接</th>
+<th>往返链路及优化级别</th>
+<th>其它特点</th>
+<th>信息来源及发布日期</th>
+<th>购买信息</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><big><font color=blue>~╳</font></big><br><a class="link" href="https://cloudsilk.io/"  title="-&gt;cC"
+     target="_blank" rel="noopener"
+    >CloudSilk</a><br><font color=red>①②</font>①<font color=blue>①②</font></td>
+<td>￥215.99①<br>当时合$32.58</td>
+<td>1CPU,512M RAM, 10G SSD, 500G/M 德国法兰克福<br>另有:美国圣何塞(无优惠), 香港(贵些), 日本东京(同香港)</td>
+<td><a class="link" href="https://cloudsilk.io/aff.php?aff=9&amp;gid=13"  target="_blank" rel="noopener"
+    >链接</a> 德国法兰克福(优惠码:WK08GMH3OC)<br>另: <a class="link" href="https://cloudsilk.io/store/mei-guo-sheng-he-sai-jing-pin-da-lu-you-hua-bgp9929"  target="_blank" rel="noopener"
+    >链接</a> 美国圣何塞(无优惠码, ￥239.99/年)</td>
+<td>优化: <font color=red>①</font><strong>非常好</strong><br>回程走联通AS9929高端网络，三网直连，速度相当给力</td>
+<td>-</td>
+<td><a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/50535.html"  target="_blank" rel="noopener"
+    >来源链接</a>)2022/04/28<br><br><a class="link" href="https://www.idcoffer.com/"  title="-&gt;v"
+     target="_blank" rel="noopener"
+    >VPS收割者</a>(<a class="link" href="https://www.idcoffer.com/archives/8121"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/04/27</td>
+<td>-</td>
+<td><strong>主用备选?</strong><br><font color=red>②</font>9折优惠活动，<strong>循环有效</strong>(不涨价)<br><a class="link" href="https://cloudsilk.io/index.php?rp=/announcements/1/%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%AE%AE-Terms-Of-Service.html"  target="_blank" rel="noopener"
+    >换IP: 25 CNY/次</a>(TOS 7.1)<br><font color=blue>①</font><a class="link" href="https://www.offersloc.com/archives/160"  target="_blank" rel="noopener"
+    >国人商家，2021年成立,非国内公司</a><br><font color=blue>②</font>(<a class="link" href="https://cloudsilk.io/announcements/1/%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%AE%AE-Terms-Of-Service.html"  target="_blank" rel="noopener"
+    >TOS</a> 5.2)说不能做代理</td>
+</tr>
+<tr>
+<td><big><font color=blue>╳</font></big><br><a class="link" href="https://www.ftlcloud.com/"  title="-&gt;F"
+     target="_blank" rel="noopener"
+    >FTL超云</a><br><font color=blue>①</font></td>
+<td>￥240<br>当时合$36.2</td>
+<td>2CPU, 2G RAM, 20G HD, 未说明流量<br>韩国.首尔, 另有:<br>香港(同韩国),美国(略便宜), <strong>国内</strong></td>
+<td><a class="link" href="https://www.ftlcloud.com/tlact.html"  target="_blank" rel="noopener"
+    >链接</a></td>
+<td>优化: 很好<br>CN2+BGP极速网络</td>
+<td>金盾+天机防护免费提供CC防御</td>
+<td><a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/50331.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/04/23</td>
+<td>-</td>
+<td><font color=blue>①</font>大陆公司</td>
+</tr>
+<tr>
+<td><big><font color=blue>╳</font></big><br><a class="link" href="https://raksmart.com/"  title="-&gt;rR"
+     target="_blank" rel="noopener"
+    >RakSmart</a><br><font color=blue>①②③</font></td>
+<td>29.89</td>
+<td>1CPU, 1G RAM, 40G SAN, 限速5M(bps), 100T/M(合约中未说明, 实际控制面板中有)<br><strong>日本</strong></td>
+<td><a class="link" href="https://billing.raksmart.com/whmcs/aff.php?aff=1296&amp;pid=668&amp;promocode=JPHKVPS1024-2.99dis"  target="_blank" rel="noopener"
+    >链接</a> 3折优惠码：JPHKVPS1024-2.99dis<br>依然有效(20221027)</td>
+<td>优化: 还行吧<br>电信走CN2、移动直连: 联通直连AS4837<br><a class="link" href="https://www.zhujiceping.com/49436.html"  target="_blank" rel="noopener"
+    >测评</a> 国外主机测评之1-促销款-“玩具”<br><a class="link" href="https://www.zhujiceping.com/45026.html"  target="_blank" rel="noopener"
+    >测评</a> 国外主机测评之2<br><a class="link" href="https://www.idcspy.org/8515.html"  target="_blank" rel="noopener"
+    >测评</a> idcspy之1<br><a class="link" href="https://www.idcspy.com/47468.html"  target="_blank" rel="noopener"
+    >测评</a> idcspy之2</td>
+<td>限速低<br><u>但可看油管1080P</u></td>
+<td><a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/50537.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/05/05<br><a class="link" href="https://www.cnraksmart.com/"  title="-&gt;r"
+     target="_blank" rel="noopener"
+    >RAKsmart中文网</a>(<a class="link" href="https://www.cnraksmart.com/4076.html"  target="_blank" rel="noopener"
+    >来源链接</a>)<br><br><a class="link" href="https://www.zhujiceping.com/55519.html"  target="_blank" rel="noopener"
+    >优惠221027</a>:<br> 美$9.9/y,<br>日$29.9/y</td>
+<td><font color=red>$19.89,头一年(充值$10送$10).以后续费循环优惠($29.89)，不涨价<br>(05/05/2022-05/05/2023)</font><br>当前主用</td>
+<td><a class="link" href="https://www.cnraksmart.com/4072.html"  target="_blank" rel="noopener"
+    >RAKsmart 五月新注册账户充值最多赠送100美元余额</a><br><br><font color=blue>②</font><a class="link" href="https://www.vpsjxw.com/vps_tutorials/racknerd_cip/"  target="_blank" rel="noopener"
+    >不能换IP?</a><br><br><font color=blue>①</font><a class="link" href="http://raksmart.com/home/all/sla.html"  target="_blank" rel="noopener"
+    >VPN services are also prohibited on Services from RAKsmart</a><br><font color=blue>③</font>221025前后两次不可用, 不能连控制面板, 不能写Tickets, 发邮件也无回应</td>
+</tr>
+<tr>
+<td><big><font color=blue>╳</font></big><br><a class="link" href="https://unvm.host/"  title="-&gt;U"
+     target="_blank" rel="noopener"
+    >UNVM</a><br><font color=blue>①</font></td>
+<td>￥17.1/M,当时约合$30.62/Y</td>
+<td>1CPU,1G RAM, 15G SSD,带宽150M(bps), 300GB/M<br><strong>日本</strong>软银大带宽一期</td>
+<td><a class="link" href="https://unvm.host/cart?fid=1&amp;gid=3"  target="_blank" rel="noopener"
+    >链接</a><br>9折循环优惠码：<br>UNVMJP10OFF</td>
+<td>日本软银为三网直连</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>香港: 黄赌毒梯等非法<br>日本: 黄赌毒等非法<br><font color=blue>①</font>国内公司(确认)</td>
+</tr>
+</tbody>
+</table></div>
+<p>● <big>历史低价格(&gt;$10/年 &amp; &lt;=$30左右/年)优化链路</big>    </p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>品牌</th>
+<th>价格<br>($/y)</th>
+<th>配置</th>
+<th>订购链接</th>
+<th>往返链路及优化级别</th>
+<th>其它特点</th>
+<th>信息来源及发布日期</th>
+<th>购买信息</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><big><font color=red>√</font></big><br><a class="link" href="https://greencloudvps.com/"  title="-&gt;G"
+     target="_blank" rel="noopener"
+    >GreenCloud</a></td>
+<td>⑴24<br><br><br>⑵$70.00/3Y<br><br>⑶$28.8/Y</td>
+<td>⑴1CPU,1G RAM, 15G NVMe, 750G/M<br><strong>日本(绿云应该仅日本可用)</strong><br><br>⑵2核E5v4/4G内存赠送2G SWAP/35G SSD硬盘（RAID10）/750G/10Gbps <strong>日本东京</strong><br><br>⑶1CPU,1G RAM, 200G HDD, 1T/M</td>
+<td>⑴<a class="link" href="https://greencloudvps.com/billing/store/ryzen-kvm-vps"  target="_blank" rel="noopener"
+    >链接</a> 选日本<br><br>⑵<a class="link" href="https://greencloudvps.com/billing/store/budget-kvm-sale/budgetkvmjp-2"  target="_blank" rel="noopener"
+    >链接</a><br><br>⑶<a class="link" href="https://greencloudvps.com/billing/aff.php?aff=2615&amp;pid=313"  target="_blank" rel="noopener"
+    >东京存储小钢炮</a></td>
+<td>优化: <strong>应该还行</strong><br>联通: <br>去程: 骨干网对接NTT<br>回程: 北京方向走的是软银，上海和广州方向走的是NTT对接AS4837<br>测试: <a class="link" href="https://www.zhujiceping.com/49255.html"  target="_blank" rel="noopener"
+    >国外主机测评</a></td>
+<td>-</td>
+<td>⑴<a class="link" href="https://www.zhujiceping.com/"  title="-&gt;z"
+     target="_blank" rel="noopener"
+    >国外主机测评</a>(<a class="link" href="https://www.zhujiceping.com/48321.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 5折优惠 2022/01/09<br><br>⑵<a class="link" href="https://www.zhujizixun.com/"  title="-&gt;zz"
+     target="_blank" rel="noopener"
+    >主机资讯</a>(<a class="link" href="https://www.zhujizixun.com/6591.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022/7/7<br><br>⑶<a class="link" href="https://www.zhujizixun.com/"  title="-&gt;zz"
+     target="_blank" rel="noopener"
+    >主机资讯</a>(<a class="link" href="https://www.zhujizixun.com/6871.html"  target="_blank" rel="noopener"
+    >东京存储小钢炮来源链接</a>) 2022/10/12</td>
+<td>-</td>
+<td><strong>主用考虑(仅日本可用)</strong><br><a class="link" href="https://hostloc.com/thread-865179-1-1.html"  target="_blank" rel="noopener"
+    >改IP: $3/次</a><br><a class="link" href="https://greencloudvps.com/terms-of-service.php"  target="_blank" rel="noopener"
+    >TOS</a>不限制Proxy</td>
+</tr>
+<tr>
+<td><big><font color=blue>?~√</font></big><br><strong>?</strong><a class="link" href="https://www.rcp.net/"  title="-&gt;R"
+     target="_blank" rel="noopener"
+    >RCP</a><br><font color=red>①</font><br><font color=blue>①②③④</font></td>
+<td>19.99<br><strong>备用?</strong> 做主用流量少了</td>
+<td>1C1G/20G SSD/1*IPv4 <font color=blue>④</font><strong><u>100G/M</u></strong> 100Mbps 日本AS9929<br>活动时间：2022年11月24日UTC到2022年11月29日UTC<br>即<strong>北京时间：2022年11月24日早上八点开始</strong></td>
+<td><a class="link" href="https://clients.rcp.net/aff.php?aff=2362&amp;pid=41"  target="_blank" rel="noopener"
+    >idcoffer链接</a><br><a class="link" href="https://clients.rcp.net/aff.php?aff=2297&amp;pid=41"  target="_blank" rel="noopener"
+    >主机资讯链接</a></td>
+<td>优化: <font color=red>①</font>国内方向线路为联通CUG(AS9929/10099)<br><strong><font color=red>极好, 晚上差不多跑满百兆</font></strong>(包括LAX/Tokyo/HK)</td>
+<td>&mdash;-</td>
+<td><a class="link" href="https://www.idcoffer.com/"  title="-&gt;I"
+     target="_blank" rel="noopener"
+    >idcoffer</a>(<a class="link" href="https://www.idcoffer.com/archives/9979#aioseo-rcr"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022-11-08<br><a class="link" href="https://www.zhujizixun.com/"  title="-&gt;zz"
+     target="_blank" rel="noopener"
+    >主机资讯</a>(<a class="link" href="https://www.zhujizixun.com/6996.html"  target="_blank" rel="noopener"
+    >来源链接</a>) 2022-11-08</td>
+<td>&mdash;-</td>
+<td><font color=blue>②</font>据用户称:改IP$8/次<br><font color=blue>①</font><strong><a class="link" href="https://www.rcp.net/tos/"  target="_blank" rel="noopener"
+    >TOS</a>极其严苛</strong>, 但未明确限制VPN<br><font color=blue>③</font>流量超额$0.5/GB</td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vps/">VPS</a>
+        
+            <a href="/tags/as4837/">AS4837</a>
+        
+            <a href="/tags/as9929/">AS9929</a>
+        
+            <a href="/tags/ntt/">NTT</a>
+        
+            <a href="/tags/bgp/">BGP</a>
+        
+            <a href="/tags/cn2/">CN2</a>
+        
+            <a href="/tags/%E6%B5%8B%E9%80%9F/">测速</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/vps%E6%B5%8B%E9%80%9F/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-52.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-52.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">VPS测速</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%AE%89%E8%A3%85%E7%BF%BB%E5%A2%99%E6%9C%8D%E5%8A%A1%E5%99%A8v2ray-ss-brook/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-15.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-15.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">安装翻墙服务器(V2ray&#43;ss&#43;brook)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%B8%BAnewifi3%E7%BC%96%E8%AF%91padavan/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-56.png" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-56.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">为Newifi3编译Padavan</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/windows10%E8%87%AA%E5%B8%A6%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-54.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-54.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows10自带五笔输入法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/mariupol-heroes/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/2022-Russian-invasion-of-Ukraine/imgs/f5540fe1-3d85-493f-97e8-60411cc20777.avif" loading="lazy" data-key="" data-hash="/img/2022-Russian-invasion-of-Ukraine/imgs/f5540fe1-3d85-493f-97e8-60411cc20777.avif"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mariupol Heroes</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -2,28 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jimway71.github.io/categories/</loc>
+    <lastmod>2022-11-04T23:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/categories/copy/</loc>
+    <lastmod>2022-11-04T23:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/post/</loc>
+    <lastmod>2022-11-04T23:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/</loc>
+    <lastmod>2022-11-04T23:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/%E8%A2%AB%E9%81%97%E5%BF%98%E7%9A%84%E8%8B%B1%E9%9B%84-%E6%B3%95%E5%9B%BD%E7%94%B5%E5%BD%B1%E5%85%89%E8%8D%A3%E5%B2%81%E6%9C%88/</loc>
+    <lastmod>2022-11-04T23:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/</loc>
+    <lastmod>2022-11-04T23:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E7%94%B5%E5%BD%B1/</loc>
+    <lastmod>2022-11-04T23:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/categories/%E5%BD%B1%E8%AF%84/</loc>
+    <lastmod>2022-11-04T23:46:00+08:00</lastmod>
+  </url><url>
     <loc>https://jimway71.github.io/categories/blog/</loc>
     <lastmod>2022-10-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jimway71.github.io/categories/</loc>
-    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://jimway71.github.io/tags/interface/</loc>
-    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/post/</loc>
     <lastmod>2022-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/python/</loc>
     <lastmod>2022-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/p/python%E5%90%84%E7%A7%8D%E6%8E%A5%E5%8F%A3/</loc>
-    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/tags/</loc>
-    <lastmod>2022-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/</loc>
     <lastmod>2022-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/categories/%E5%BC%80%E5%8F%91/</loc>
@@ -68,10 +80,10 @@
     <loc>https://jimway71.github.io/p/%E7%9F%A5%E4%B9%8E%E9%93%BE%E6%8E%A5/</loc>
     <lastmod>2022-10-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jimway71.github.io/categories/2022-ukraine-war/</loc>
+    <loc>https://jimway71.github.io/categories/2022-russian-invasion-of-ukraine/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jimway71.github.io/p/2022-ukraine-war/</loc>
+    <loc>https://jimway71.github.io/p/2022-russian-invasion-of-ukraine/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/russia/</loc>
@@ -275,16 +287,187 @@
     <loc>https://jimway71.github.io/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2022-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jimway71.github.io/tags/2022-russian-invasion-of-ukraine/</loc>
-    <lastmod>2022-03-01T16:41:16+08:00</lastmod>
+    <loc>https://jimway71.github.io/tags/garage-mouse-without-borders/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/keyboard/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/microsoft/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/categories/migration/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/mouse/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E9%94%AE%E7%9B%98/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E5%BE%AE%E8%BD%AF/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/%E5%BE%AE%E8%BD%AF%E6%97%A0%E7%95%8C%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%B7%9F%E9%9A%8F/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E6%97%A0%E7%95%8C%E9%BC%A0%E6%A0%87/</loc>
+    <lastmod>2022-06-02T16:45:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/cm520/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/newifi-d2/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/padavan/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/toolchains/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/ubuntu/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E7%BC%96%E8%AF%91/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E8%80%81%E6%AF%9B%E5%AD%90%E5%9B%BA%E4%BB%B6/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/%E4%B8%BAnewifi3%E7%BC%96%E8%AF%91padavan/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/categories/%E7%A1%AC%E4%BB%B6/</loc>
+    <lastmod>2022-05-28T20:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/ubuntu%E5%AE%98%E6%96%B9%E9%95%9C%E5%83%8F/</loc>
+    <lastmod>2022-05-28T12:41:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/windows-subsystem-for-linux/</loc>
+    <lastmod>2022-05-28T12:41:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/%EF%BD%97indows10-wsl--ubuntu/</loc>
+    <lastmod>2022-05-28T12:41:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/wsl/</loc>
+    <lastmod>2022-05-28T12:41:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/input/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/macbook/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/categories/modification/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/windows10/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/windows10%E8%87%AA%E5%B8%A6%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E9%A1%BF%E5%8F%B7/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E5%8F%A5%E5%8F%B7/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E5%85%A8%E8%A7%92%E6%A0%87%E7%82%B9/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E8%BE%93%E5%85%A5/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
+    <lastmod>2022-05-27T22:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/bootcamp/</loc>
+    <lastmod>2022-05-27T20:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/windows-sandbox/</loc>
+    <lastmod>2022-05-27T20:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/windows10%E7%9A%84windows%E6%B2%99%E7%9B%92%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2022-05-27T20:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/windows%E6%B2%99%E7%9B%92/</loc>
+    <lastmod>2022-05-27T20:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E6%B2%99%E7%9B%92%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2022-05-27T20:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E7%89%A9%E7%90%86%E6%9C%BA/</loc>
+    <lastmod>2022-05-27T20:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2022-05-27T20:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <lastmod>2022-05-27T20:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/defense/</loc>
+    <lastmod>2022-05-19T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/mariupol/</loc>
+    <lastmod>2022-05-19T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/mariupol-heroes/</loc>
+    <lastmod>2022-05-19T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/as4837/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/as9929/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/besttrace/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/bgp/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/cn2/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/equipment-losses-during-the-2022-ruzzian-invasion-of-ukraine/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/ntt/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/template-title/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/categories/template-categories/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/template-tags/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/vps/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/vps%E6%B5%8B%E9%80%9F/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E6%B5%8B%E9%80%9F/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E8%B7%AF%E7%94%B1%E4%BF%A1%E6%81%AF/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/p/%E5%BC%B1%E6%9C%BA%E5%90%AF%E7%A4%BA%E5%BD%95/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jimway71.github.io/tags/%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/</loc>
+    <lastmod>2022-03-18T01:47:00+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/banda-agency/</loc>
     <lastmod>2022-03-01T16:41:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/each-of-us/</loc>
-    <lastmod>2022-03-01T16:41:16+08:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/categories/migration/</loc>
     <lastmod>2022-03-01T16:41:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/stand-with-ukraine/</loc>
@@ -336,9 +519,6 @@
     <lastmod>2021-05-23T18:27:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/p/%E4%BD%BF%E7%94%A8github%E4%B8%BA%E5%A4%9A%E7%A7%8D%E8%AE%BE%E5%A4%87%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6/</loc>
-    <lastmod>2021-05-23T18:27:16+08:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/categories/%E7%A1%AC%E4%BB%B6/</loc>
     <lastmod>2021-05-23T18:27:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/kubesail/</loc>
@@ -533,9 +713,6 @@
     <loc>https://jimway71.github.io/tags/ntp/</loc>
     <lastmod>2021-04-03T22:57:16+08:00</lastmod>
   </url><url>
-    <loc>https://jimway71.github.io/tags/padavan/</loc>
-    <lastmod>2021-04-03T22:57:16+08:00</lastmod>
-  </url><url>
     <loc>https://jimway71.github.io/p/qa/</loc>
     <lastmod>2021-04-03T22:57:16+08:00</lastmod>
   </url><url>
@@ -555,9 +732,6 @@
     <lastmod>2021-04-03T22:57:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/sshd/</loc>
-    <lastmod>2021-04-03T22:57:16+08:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/tags/ubuntu/</loc>
     <lastmod>2021-04-03T22:57:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/useradd/</loc>
@@ -629,13 +803,7 @@
     <loc>https://jimway71.github.io/tags/lede/</loc>
     <lastmod>2020-06-01T01:06:16+08:00</lastmod>
   </url><url>
-    <loc>https://jimway71.github.io/tags/wsl/</loc>
-    <lastmod>2020-06-01T01:06:16+08:00</lastmod>
-  </url><url>
     <loc>https://jimway71.github.io/p/wsl%E4%B8%8B%E7%BC%96%E8%AF%91lede%E7%9A%84openwrt-%E7%94%A8%E4%BA%8E%E6%96%90%E8%AE%AFk2/</loc>
-    <lastmod>2020-06-01T01:06:16+08:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/tags/%E7%BC%96%E8%AF%91/</loc>
     <lastmod>2020-06-01T01:06:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/%E6%96%90%E8%AE%AFk2/</loc>
@@ -669,9 +837,6 @@
     <lastmod>2020-03-05T02:33:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/brook/</loc>
-    <lastmod>2020-03-05T01:53:16+08:00</lastmod>
-  </url><url>
-    <loc>https://jimway71.github.io/categories/modification/</loc>
     <lastmod>2020-03-05T01:53:16+08:00</lastmod>
   </url><url>
     <loc>https://jimway71.github.io/tags/nas/</loc>

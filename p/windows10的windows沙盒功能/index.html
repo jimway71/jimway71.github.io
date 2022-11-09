@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Windows Sandbox'><title>Windows10的”Windows沙盒”功能</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/windows10%E7%9A%84windows%E6%B2%99%E7%9B%92%E5%8A%9F%E8%83%BD/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='Windows10的”Windows沙盒”功能'>
+<meta property='og:description' content='Windows Sandbox'>
+<meta property='og:url' content='https://jimway71.github.io/p/windows10%E7%9A%84windows%E6%B2%99%E7%9B%92%E5%8A%9F%E8%83%BD/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='沙盒软件' /><meta property='article:tag' content='物理机' /><meta property='article:tag' content='系统安全' /><meta property='article:tag' content='虚拟机' /><meta property='article:tag' content='BOOTCAMP' /><meta property='article:tag' content='MACBOOK' /><meta property='article:tag' content='WINDOWS SANDBOX' /><meta property='article:tag' content='WINDOWS沙盒' /><meta property='article:published_time' content='2022-05-27T20:25:00&#43;08:00'/><meta property='article:modified_time' content='2022-05-27T20:25:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-53.jpg' />
+<meta name="twitter:title" content="Windows10的”Windows沙盒”功能">
+<meta name="twitter:description" content="Windows Sandbox"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-53.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/windows10%E7%9A%84windows%E6%B2%99%E7%9B%92%E5%8A%9F%E8%83%BD/">
+                
+                    <img src="/wallpaper/wallpaper-53.jpg" loading="lazy" alt="Featured image of post Windows10的”Windows沙盒”功能" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/migration/" >
+                Migration
+            </a>
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/windows10%E7%9A%84windows%E6%B2%99%E7%9B%92%E5%8A%9F%E8%83%BD/">Windows10的”Windows沙盒”功能</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Windows Sandbox
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 27, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="参考">参考</h2>
+<p><a class="link" href="https://zh.m.wikipedia.org/zh-hans/%E6%B2%99%E7%9B%92_%28%E9%9B%BB%E8%85%A6%E5%AE%89%E5%85%A8%29"  target="_blank" rel="noopener"
+    >沙盒 (电脑安全)</a><br>
+<a class="link" href="https://docs.microsoft.com/zh-cn/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview"  target="_blank" rel="noopener"
+    >Windows 沙盒</a><br>
+<a class="link" href="https://zhuanlan.zhihu.com/p/114057705"  target="_blank" rel="noopener"
+    >Win10开启沙盒功能和使用方法</a><br>
+<a class="link" href="https://zh.101-help.com/33beca1528-windows-10zhong-de-gu-jian-zhong-jin-yong-virtualization-support/"  target="_blank" rel="noopener"
+    >Windows 11/10 的固件中禁用了虚拟化支持(的报错)</a><br>
+<a class="link" href="https://www.cnblogs.com/it-tsz/p/12132680.html"  target="_blank" rel="noopener"
+    >Mac使用bootcamp安装windows运行Hyper-v时的硬件虚拟化没有启动的问题</a><br>
+♦ <a class="link" href="https://www.cnblogs.com/Ray898/p/4962318.html"  target="_blank" rel="noopener"
+    >Mac 使用bootcamp安装windows 运行Hyper-v时的硬件虚拟化没有启动的问题</a><br>
+♦ <a class="link" href="https://bbs.csdn.net/topics/391043064"  target="_blank" rel="noopener"
+    >Mac book air装的win8.1，如何设置开启虚拟化，以正常启动hyper-v</a><br>
+♦ <a class="link" href="https://dea.nbird.com.au/2017/02/24/enabling-vt-x-on-mac-book-air-in-bootcamp/"  target="_blank" rel="noopener"
+    >Enabling VT-x on Mac Book Air in Bootcamp</a></p>
+<h2 id="安全问题">安全问题</h2>
+<p>经常会遇到计算机安全的问题, 下载的程序、邮件附件都有可能存在威胁，尽管在系统中安装了安全软件以处理这些问题，但是在本机系统上打开这些无法确认的文件总是让人不能放心。<br>
+一般的方法是在虚拟机内打开可能有安全风险的文件，比如使用vmware虚拟机。<br>
+但是，使用虚拟机会有别的问题：<br>
+✔ 一是占用系统资源，安装虚拟机软件本身就需要不少空间，而安装配置一台虚拟机，相当于重新安装一整套操作系统，这占用的空间更大，而把虚拟机运行起来，还要占用各种系统资源，CPU、内存、虚拟内存要占用的硬盘空间，等等。<br>
+✔ 二是操作很复杂费时，打开虚拟机软件，开启一个虚拟机，把文件拷贝进去并运行，费时费力，很容易让人放弃继续这样的操作方式。</p>
+<h2 id="微软提供的处理方式">微软提供的处理方式</h2>
+<p>Ｗindows10原生提供了”Windows沙盒”功能来解决这个问题.</p>
+<blockquote>
+<p>沙盒（英语：sandbox，又译为沙箱）是一种安全机制，为执行中的程式提供的隔离环境。通常是作为一些来源不可信、具破坏力或无法判定程序意图的程序提供实验之用。<br>
+沙盒通常严格控制其中的程序所能访问的资源，比如，沙盒可以提供用后即回收的磁盘及内存空间。在沙盒中，网络访问、对真实系统的访问、对输入设备的读取通常被禁止或是严格限制。从这个角度来说，沙盒属于虚拟化的一种。<br>
+沙盒中的所有改动对操作系统不会造成任何损失。通常，这种技术被计算机技术人员广泛用于测试可能带毒的程序或是其他的恶意代码。</p>
+</blockquote>
+<p>Windows沙盒提供了轻型桌面环境，可以安全地在隔离状态下运行应用程序。 安装在 Windows 沙盒环境下的软件保持“沙盒”状态，并且与主机分开运行。<br>
+沙盒是临时的：<br>
+→ 每次关闭后，系统将删除所有软件和文件以及状态；而每次打开应用程序时，都会获得沙盒的全新实例。<br>
+安装在主机上的软件和应用程序不会直接出现在沙盒中。 如果需要在 Windows 沙盒环境中运行特定的应用程序，则相应的应用程序必须就是安装在沙盒环境中才行。<br>
+相比虚拟机和第三方的沙盒软件，Windows Sandbox启用后仅占用100MB硬盘空间，还能与物理机安全地共享部分内存空间。简单来说就是易用、免费、不卡机。</p>
+<blockquote>
+<p>由于要保证沙盒内的数据不泄露并影响物理系统，所有文件读写都经过了重定向，所以沙盒虚拟化对存储性能影响较大，建议用固态</p>
+</blockquote>
+<p>注：<br>
+● win10沙盒每次关闭都会自动清零<br>
+● 只有专业版、企业版或教育版系统支持</p>
+<h2 id="安装windows沙盒">安装Windows沙盒</h2>
+<p>使用任务栏上的搜索栏，并键入打开或关闭 Windows 功能来访问 Windows 可选功能工具。 选择“Windows 沙盒”，然后点击“确定”。 如果系统提示你重启电脑，请执行此操作。<br>
+<img src="/img/53-sandbox-01.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>Windows沙盒安装失败:<br>
+有的机器上安装Windows沙盒会失败↓<br>
+<img src="/img/53-sandbox-02.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>原因可能是系统不支持虚拟化或未开启虚拟化支持。<br>
+不支持虚拟化的系统不能安装Windows沙盒；如果系统硬件支持虚拟化但未开启，一般需要在系统BIOS里修改相关设置(现在的机器缺省设置都开启虚拟化支持)。</p>
+<p>MacBook类系统使用Bootcamp安装Windows后, Windows里虚拟化未开启的问题，解决方案:<br>
+● 启动Mac，在偏好设置中找到启动磁盘，打开启动磁盘，选择bootcamp分区，然后重新启动，启动后即可开启硬件虚拟化。<br>
+遗留问题：每次硬启动后硬件虚拟化会被关闭，需要再次进入mac中重启。<br>
+● 在windows系统下，打开bootcamp控制面板，选择启动磁盘，点击右侧的“重新启动（R）”即可。<br>
+虚拟化未启用的原因是windows在启动时未加载相关的固件信息，使用bootcamp选择启动一次磁盘，以后系统在启动时将会加载。<br>
+注：macbook默认开启VT，不需要单独设置。</p>
+<h2 id="windows沙盒的使用">Windows沙盒的使用</h2>
+<p>在开始菜单中打开Windows Sandbox:<br>
+<img src="/img/53-sandbox-03.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+><br>
+打开后,显示的是一个干净的系统(什么都没有)<br>
+<img src="/img/53-sandbox-04.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+><br>
+查看网络状态，可以看到沙盒通过DHCP分配到了一个另一子网段的地址，用的是桥接模式。<br>
+<img src="/img/53-sandbox-05.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+><br>
+从主机复制一份可执行文件（以及运行应用程序所需的任何其他文件），并将它们粘贴进“Windows 沙盒”窗口中，并在沙盒内运行可执行文件或安装程序。<br>
+<img src="/img/53-sandbox-06.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%B2%99%E7%9B%92%E8%BD%AF%E4%BB%B6/">沙盒软件</a>
+        
+            <a href="/tags/%E7%89%A9%E7%90%86%E6%9C%BA/">物理机</a>
+        
+            <a href="/tags/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/">系统安全</a>
+        
+            <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a>
+        
+            <a href="/tags/bootcamp/">BOOTCAMP</a>
+        
+            <a href="/tags/macbook/">MACBOOK</a>
+        
+            <a href="/tags/windows-sandbox/">WINDOWS SANDBOX</a>
+        
+            <a href="/tags/windows%E6%B2%99%E7%9B%92/">WINDOWS沙盒</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BE%AE%E8%BD%AF%E6%97%A0%E7%95%8C%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%B7%9F%E9%9A%8F/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-57.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-57.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">微软无界鼠标(键盘跟随)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8kubesail%E4%B8%8A%E6%90%AD%E5%BB%BAv2ray/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/NAFO-40-c.jpg" loading="lazy" data-key="" data-hash="/wallpaper/NAFO-40-c.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在kubesail上搭建V2Ray</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8heroku%E4%B8%8A%E9%83%A8%E7%BD%B2v2ray-trojan-go/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-37.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-37.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Heroku上部署V2Ray&#43;Trojan-go</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/openwrt-info/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-36.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-36.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Openwrt Info</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/wordpress-qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-34.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-34.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Wordpress Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#参考">参考</a></li>
+    <li><a href="#安全问题">安全问题</a></li>
+    <li><a href="#微软提供的处理方式">微软提供的处理方式</a></li>
+    <li><a href="#安装windows沙盒">安装Windows沙盒</a></li>
+    <li><a href="#windows沙盒的使用">Windows沙盒的使用</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
