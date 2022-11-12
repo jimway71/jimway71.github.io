@@ -1178,13 +1178,9 @@ WSL的Ubuntu采用桥接模式连接网络, 用ifconfig查看，可以看到另�
     &lt;/style&gt;
   &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;马里乌波尔保卫战，亚速钢铁厂被俄军狂轰乱炸，夷为废墟，地下保垒仍然坚守，守军勇士们浴血奋战，创造了人类现代城市巷战史奇迹，寸土必争，每一条街道、每一幢房屋争夺攻防，被围长达两个多月，迄今马里乌波尔仍然笑傲江湖，尽管如此，弹尽粮绝，乌军难以救援，危在旦夕。&lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://t.co/5mCK6C59QE&#34;&gt;https://t.co/5mCK6C59QE&lt;/a&gt;&lt;/p&gt;&amp;mdash; 金博士频道 GOLDENCHANNEL π (@christopherjing) &lt;a href=&#34;https://twitter.com/christopherjing/status/1521672560659746817?ref_src=twsrc%5Etfw&#34;&gt;May 4, 2022&lt;/a&gt;&lt;/blockquote&gt;
 &lt;br&gt;
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe loading=&#34;lazy&#34; 
-            src=&#34;https://www.youtube.com/embed/N_8yHFIvh8M&#34; 
-            allowfullscreen 
-            title=&#34;YouTube Video&#34;
-    &gt;
-    &lt;/iframe&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://player.vimeo.com/video/770153100&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;center&gt;&lt;big&gt;Defense of Mariupol&lt;/big&gt;&lt;/center&gt;  
@@ -1227,12 +1223,17 @@ Note: Equipment what Ukraine captured from Ruzzian are more than they lost&lt;br
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;06:07&lt;br&gt;2022年&lt;strong&gt;10月27日&lt;/strong&gt;（星期四） (GMT+3)&lt;br&gt;乌克兰的时间&lt;/td&gt;
+&lt;td&gt;18:43&lt;br&gt;2022年&lt;strong&gt;11月10日&lt;/strong&gt;（星期四） (GMT+2)&lt;br&gt;乌克兰的时间&lt;br&gt;&lt;br&gt;&lt;strong&gt;11 Nov, Russia announces withdrawal from Kherson&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;7717&lt;/strong&gt;, of which: destroyed: 4731, damaged: 184, abandoned: 296, captured: 2506&lt;br&gt;Tanks (1460, of which destroyed: 841, damaged: 62, abandoned: 54, captured: 503)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;2200&lt;/strong&gt;, of which: destroyed: 1280, damaged: 83, abandoned: 67, captured: 770&lt;br&gt;Tanks (347, of which destroyed: 192, damaged: 14, abandoned: 14, captured: 128)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;06:07&lt;br&gt;2022年&lt;strong&gt;10月27日&lt;/strong&gt;（星期四） (GMT+3)&lt;br&gt;乌克兰的时间&lt;br&gt;&lt;br&gt;&lt;strong&gt;1 Oct, AFU recaptured the city of Lyman&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;7595&lt;/strong&gt;, of which: destroyed: 4657, damaged: 168, abandoned: 308, captured: 2462&lt;br&gt;Tanks (1425, of which destroyed: 820, damaged: 56, abandoned: 55, captured: 495)&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;2106&lt;/strong&gt;, of which: destroyed: 1203, damaged: 73, abandoned: 63, captured: 766&lt;br&gt;Tanks (336, of which destroyed: 185, damaged: 10, abandoned: 14, captured: 128)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;17:11&lt;br&gt;2022年&lt;strong&gt;9月11日&lt;/strong&gt;（星期日） (GMT+3)&lt;br&gt;乌克兰的时间&lt;/td&gt;
+&lt;td&gt;17:11&lt;br&gt;2022年&lt;strong&gt;9月11日&lt;/strong&gt;（星期日） (GMT+3)&lt;br&gt;乌克兰的时间&lt;br&gt;&lt;br&gt;&lt;strong&gt;11 Sep, AFU recaptured the city of Izyum&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;5698&lt;/strong&gt;, of which: destroyed: 3662, damaged: 136, abandoned: 302, captured: 1598&lt;br&gt;Tanks (1049, of which destroyed: 643, damaged: 44, abandoned: 51, captured: 311)&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;1572&lt;/strong&gt;, of which: destroyed: 888, damaged: 41, abandoned: 43, captured: 604&lt;br&gt;Tanks (255, of which destroyed: 137, damaged: 5, abandoned: 8, captured: 105)&lt;/td&gt;
 &lt;/tr&gt;
@@ -1487,7 +1488,7 @@ Note: Equipment what Ukraine captured from Ruzzian are more than they lost&lt;br
 &lt;td&gt;674, of which: destroyed: 296, damaged: 19, abandoned: 37, captured: 322&lt;br&gt;Tanks (92, of which destroyed: 35, damaged: 2, abandoned: 9, captured: 44)&lt;br&gt;Armoured Fighting Vehicles (65, of which destroyed: 26, abandoned: 4, captured: 36)&lt;br&gt;Infantry Fighting Vehicles (74, of which destroyed: 34, damaged: 2, abandoned: 9, captured: 29)&lt;br&gt;Armoured Personnel Carriers (31, of which destroyed: 5, damaged: 1, abandoned: 2, captured: 22)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;7:16 PM&lt;br&gt;Saturday, April 2, 2022 (GMT+3)&lt;br&gt;Time in Ukraine&lt;/td&gt;
+&lt;td&gt;7:16 PM&lt;br&gt;Saturday, April 2, 2022 (GMT+3)&lt;br&gt;Time in Ukraine&lt;br&gt;&lt;br&gt;&lt;strong&gt;2 Apr, Ukrainian forces retook control over all of Kyiv Oblast including Irpin, Bucha, and Hostomel.&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;2282, of which: destroyed: 1156, damaged: 41, abandoned: 233, captured: 852&lt;br&gt;Tanks (389, of which destroyed: 179, damaged: 6, abandoned: 42, captured: 162)&lt;br&gt;Armoured Fighting Vehicles (265, of which destroyed: 124, abandoned: 32, captured: 109)&lt;br&gt;Infantry Fighting Vehicles (375, of which destroyed: 212, damaged: 2, abandoned: 31, captured: 129)&lt;br&gt;Armoured Personnel Carriers (81, of which destroyed: 21, damaged: 1, abandoned: 17, captured: 42)&lt;/td&gt;
 &lt;td&gt;659, of which: destroyed: 285, damaged: 18, abandoned: 37, captured: 319&lt;br&gt;Tanks (88, of which destroyed: 33, damaged: 1, abandoned: 9, captured: 43)&lt;br&gt;Armoured Fighting Vehicles (64, of which destroyed: 26, abandoned: 4, captured: 35)&lt;br&gt;Infantry Fighting Vehicles (72, of which destroyed: 33, damaged: 2, abandoned: 9, captured: 28)&lt;br&gt;Armoured Personnel Carriers (31, of which destroyed: 5, damaged: 1, abandoned: 2, captured: 22)&lt;/td&gt;
 &lt;/tr&gt;
@@ -1573,6 +1574,12 @@ Note: Equipment what Ukraine captured from Ruzzian are more than they lost&lt;br
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;另:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://renzhn.github.io/posts/cheap-vps/#%E5%9B%9Bvmiss&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vmiss优惠&lt;/a&gt;&lt;br&gt;
+如果日本可到CAD$35/年, 可以考虑&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://tos.vss.im/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vmiss TOS&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -1967,7 +1974,8 @@ Note: Equipment what Ukraine captured from Ruzzian are more than they lost&lt;br
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;RCP&lt;/a&gt;&lt;br&gt;&lt;font color=red&gt;①&lt;/font&gt;&lt;br&gt;&lt;font color=blue&gt;①②③④&lt;/font&gt;&lt;/td&gt;
 &lt;td&gt;19.99&lt;br&gt;&lt;strong&gt;备用?&lt;/strong&gt; 做主用流量少了&lt;/td&gt;
-&lt;td&gt;1C1G/20G SSD/1*IPv4 &lt;font color=blue&gt;④&lt;/font&gt;&lt;strong&gt;&lt;u&gt;100G/M&lt;/u&gt;&lt;/strong&gt; 100Mbps 日本AS9929&lt;br&gt;活动时间：2022年11月24日UTC到2022年11月29日UTC&lt;br&gt;即&lt;strong&gt;北京时间：2022年11月24日早上八点开始&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;1C1G/20G SSD/1&lt;em&gt;IPv4 &lt;font color=blue&gt;④&lt;/font&gt;&lt;strong&gt;&lt;u&gt;100G/M&lt;/u&gt;&lt;/strong&gt; 100Mbps 日本AS9929&lt;br&gt;活动时间：2022年11月24日UTC到2022年11月29日UTC&lt;br&gt;即&lt;strong&gt;北京时间：2022年11月24日早上八点开始&lt;/strong&gt;&lt;br&gt;1C1G/20G SSD/1&lt;/em&gt;IPv4 150G/M 150Mbps $26.99&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://clients.rcp.net/aff.php?aff=2362&amp;amp;pid=43&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;1C1G/20G SSD/1*IPv4 300G/M 300Mbps $29.99&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://clients.rcp.net/aff.php?aff=2362&amp;amp;pid=41&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;idcoffer链接&lt;/a&gt;&lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://clients.rcp.net/aff.php?aff=2297&amp;amp;pid=41&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;主机资讯链接&lt;/a&gt;&lt;/td&gt;
@@ -1986,6 +1994,13 @@ Note: Equipment what Ukraine captured from Ruzzian are more than they lost&lt;br
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;另参考:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://renzhn.github.io/posts/cheap-vps/#%E5%9B%9Bvmiss&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vmiss优惠&lt;/a&gt;, 如果日本可到CAD$35/Y(~=$26.37), 可入(经实测, 当前仅Korea-1C1G/10G SSD/1*IPv4 3000G/M 80Mbps/US可用7折优惠)&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://tos.vss.im/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vmiss TOS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhujiceping.com/56131.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#黑五# gcore：新注册用户送200欧元，有效期1年，白女票至少1年的云服务器、CDN、块存储、web防御&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
