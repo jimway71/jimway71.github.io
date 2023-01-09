@@ -5029,6 +5029,8 @@ Linux AmlR3300l 5.3.0-aml-g12 #5.97 SMP PREEMPT Mon Sep 23 14:33:30 MSK 2019 aar
     &gt;OpenWrt for Amlogic TV Boxes&lt;/a&gt; Github上为Amlogic电视盒子写的OpenWrt系统&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ophub/amlogic-s9xxx-armbian&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Armbian for Amlogic and Rockchip&lt;/a&gt; Github上为Amlogic和Rockchip写的Armbian系统&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ophub/luci-app-amlogic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;luci-app-amlogic / Amlogic Service&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;openwrt-for-docker&#34;&gt;Openwrt for Docker&lt;/h2&gt;
 &lt;h3 id=&#34;资源-2&#34;&gt;资源&lt;/h3&gt;
