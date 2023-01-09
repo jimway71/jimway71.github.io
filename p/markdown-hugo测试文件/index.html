@@ -9,7 +9,7 @@
 <meta property='og:description' content='测试环境, 用于学习并测试Markdown&#43;Hugo'>
 <meta property='og:url' content='https://jimway71.github.io/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/'>
 <meta property='og:site_name' content='点滴随记'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='learn' /><meta property='article:tag' content='测试' /><meta property='article:tag' content='链接' /><meta property='article:published_time' content='2022-08-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-08-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-02.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='markdown测试' /><meta property='article:tag' content='learn' /><meta property='article:tag' content='测试' /><meta property='article:tag' content='链接' /><meta property='article:published_time' content='2022-08-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-08-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-02.jpg' />
 <meta name="twitter:title" content="Markdown&#43;Hugo测试文件">
 <meta name="twitter:description" content="测试环境, 用于学习并测试Markdown&#43;Hugo"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-02.jpg' />
@@ -1128,6 +1128,195 @@ than from <a class="link" href="http://search.yahoo.com/"  title="Yahoo Search"
         <td>row 2, cell 2</td>
     </tr>
 </table>
+<div class="mermaid" align=" center ">
+      
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+
+</div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
+ 
+<script>
+var config = {
+    startOnLoad:true,
+    flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+    },
+    sequence: { 
+        showSequenceNumbers: true,
+        actorMargin: 50, 
+        diagramMarginX:10, 
+        diagramMarginY:10 
+    },
+};
+mermaid.initialize(config);
+</script>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph TD;
+</span></span><span class="line"><span class="cl">    A--&gt;B;
+</span></span><span class="line"><span class="cl">    A--&gt;C;
+</span></span><span class="line"><span class="cl">    B--&gt;D;
+</span></span><span class="line"><span class="cl">    C--&gt;D;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="mermaid" align=" center ">
+      
+graph TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+  
+
+</div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
+ 
+<script>
+var config = {
+    startOnLoad:true,
+    flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+    },
+    sequence: { 
+        showSequenceNumbers: true,
+        actorMargin: 50, 
+        diagramMarginX:10, 
+        diagramMarginY:10 
+    },
+};
+mermaid.initialize(config);
+</script>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sequenceDiagram
+</span></span><span class="line"><span class="cl">    participant Alice
+</span></span><span class="line"><span class="cl">    participant Bob
+</span></span><span class="line"><span class="cl">    Alice-&gt;John: Hello John, how are you?
+</span></span><span class="line"><span class="cl">    loop Healthcheck
+</span></span><span class="line"><span class="cl">        John-&gt;John: Fight against hypochondria
+</span></span><span class="line"><span class="cl">    end
+</span></span><span class="line"><span class="cl">    Note right of John: Rational thoughts &lt;br/&gt;prevail...
+</span></span><span class="line"><span class="cl">    John--&gt;Alice: Great!
+</span></span><span class="line"><span class="cl">    John-&gt;Bob: How about you?
+</span></span><span class="line"><span class="cl">    Bob--&gt;John: Jolly good!
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="mermaid" align=" center ">
+      
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+
+</div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
+ 
+<script>
+var config = {
+    startOnLoad:true,
+    flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+    },
+    sequence: { 
+        showSequenceNumbers: true,
+        actorMargin: 50, 
+        diagramMarginX:10, 
+        diagramMarginY:10 
+    },
+};
+mermaid.initialize(config);
+</script>
+
+<div class="mermaid" align=" center ">
+      
+        graph LR
+        gantt
+        dateFormat  YYYY-MM-DD
+        title 软件开发甘特图
+        section 设计
+        需求                      :done,    des1, 2014-01-06,2014-01-08
+        原型                      :active,  des2, 2014-01-09, 3d
+        UI设计                     :         des3, after des2, 5d
+    未来任务                     :         des4, after des3, 5d
+        section 开发
+        学习准备理解需求                      :crit, done, 2014-01-06,24h
+        设计框架                             :crit, done, after des2, 2d
+        开发                                 :crit, active, 3d
+        未来任务                              :crit, 5d
+        耍                                   :2d
+        section 测试
+        功能测试                              :active, a1, after des3, 3d
+        压力测试                               :after a1  , 20h
+        测试报告                               : 48h
+
+</div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js"></script>
+ 
+<script>
+var config = {
+    startOnLoad:true,
+    flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+    },
+    sequence: { 
+        showSequenceNumbers: true,
+        actorMargin: 50, 
+        diagramMarginX:10, 
+        diagramMarginY:10 
+    },
+};
+mermaid.initialize(config);
+</script>
+
+
 </section>
 
 
@@ -1138,6 +1327,8 @@ than from <a class="link" href="http://search.yahoo.com/"  title="Yahoo Search"
             <a href="/tags/hugo/">hugo</a>
         
             <a href="/tags/markdown/">markdown</a>
+        
+            <a href="/tags/markdown%E6%B5%8B%E8%AF%95/">markdown测试</a>
         
             <a href="/tags/learn/">learn</a>
         
@@ -1283,7 +1474,9 @@ than from <a class="link" href="http://search.yahoo.com/"  title="Yahoo Search"
     <section class="copyright">
         &copy; 
         
-        2022 点滴随记
+            2022 - 
+        
+        2023 点滴随记
     </section>
     
     <section class="powerby">

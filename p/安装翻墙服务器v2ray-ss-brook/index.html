@@ -379,7 +379,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 9 分钟
+                    阅读时长: 10 分钟
                 </time>
             </div>
         
@@ -535,6 +535,80 @@ crontab -e是编辑用户任务, crontab -l是显示用户任务.</p>
 <p>22/10/20</p>
 <h3 id="操作系统选用ubuntu-2204lts">操作系统选用Ubuntu 22.04LTS</h3>
 <p>由于PacificRack只支持Ubuntu22, 所以只能选Ubuntu22</p>
+<h3 id="设置交换分区如果需要">设置交换分区(如果需要)</h3>
+<p>参考: <a class="link" href="https://blog.inkuang.com/2019/517/"  target="_blank" rel="noopener"
+    >Linux 系统添加和删除 Swap 交换文件</a></p>
+<ul>
+<li>
+<p>以root身份操作</p>
+</li>
+<li>
+<p>在/var/目录下生成交换分区文件, 并激活<br>
+交换分区文件大小设置为2G</p>
+<blockquote>
+<p># dd if=/dev/zero of=/var/swapfile bs=1M count=2048<br>
+# mkswap /var/swapfile<br>
+# swapon /var/swapfile</p>
+</blockquote>
+</li>
+<li>
+<p>修改交换分区文件读写权限, 以保证系统安全</p>
+<blockquote>
+<p># chmod 0600 /var/swapfile</p>
+</blockquote>
+</li>
+<li>
+<p>查看交换分区状态</p>
+<blockquote>
+<p># swapon<br>
+或<br>
+# swapon -s</p>
+</blockquote>
+<ul>
+<li>
+<p>查看内存状态</p>
+<blockquote>
+<p># free<br>
+或<br>
+# top</p>
+</blockquote>
+</li>
+<li>
+<p>查看存储空间使用情况</p>
+<blockquote>
+<p># df</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>设置/etc/fstab, 添加开机自动挂载交换分区的设置</p>
+<blockquote>
+<p># vim /etc/fstab<br>
+# 在文件最后添加:<br>
+/var/swapfile    swap   swap defaults      0 0</p>
+</blockquote>
+</li>
+</ul>
+<p>另 . 如何停用交换分区:</p>
+<ul>
+<li>取消激活相应交换分区文件
+<blockquote>
+<p># swapoff /var/swapfile</p>
+</blockquote>
+</li>
+<li>删除交换分区文件
+<blockquote>
+<p># rm /var/swapfile</p>
+</blockquote>
+</li>
+<li>编辑/etc/fstab, 删除相关设置
+<blockquote>
+<p># vi /etc/fstab<br>
+删除掉自动挂载交换分区文件的设置</p>
+</blockquote>
+</li>
+</ul>
 <h3 id="重置服务器并配置-如果需要">重置服务器并配置 (如果需要)</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1077,7 +1151,40 @@ crontab -e是编辑用户任务, crontab -l是显示用户任务.</p>
 </span></span><span class="line"><span class="cl">10 4 * * 0,1,2,3,4,5,6 systemctl restart trojan-go.service
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="系统中的trojan与nginx">系统中的Trojan与Nginx</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 以root用户身份查看netstat -ap, 可以看到占用socket端口的进程程序名+进程ID号  
+</span></span><span class="line"><span class="cl">user@machine:~$ sudo netstat -ap | grep tcp
+</span></span><span class="line"><span class="cl">[sudo] password for user:
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">tcp        0      0 0.0.0.0:http            0.0.0.0:*               LISTEN      686/nginx: master p
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">tcp6       0      0 [::]:https              [::]:*                  LISTEN      652/trojan-go
+</span></span><span class="line"><span class="cl">......
+</span></span></code></pre></td></tr></table>
 </div>
+</div><p>可以看到, Trojan监听https, Nginx监听http。<br>
+来自https端口的访问先由Trojan处理, 其中非Trojan包由Trojan转发到本机80端口(http), 由Nginx处理。<br>
+参考: <a class="link" href="https://github.com/h31105/deployX.sh/issues/25"  target="_blank" rel="noopener"
+    >关于trojan-go的配置文件 #25</a>, 其中Trojan-go配置文件server.json中&quot;ssl&quot;下的&quot;fallback_addr&quot;和&quot;fallback_port&quot;定义了转发的目的地址:端口。</p>
+<p>当然, 其实也可以反过来, 由Nginx监听https, 需要Trojan处理的, 由Nginx转发给Trojan的端口。
+但是, 由于Nginx无法区分Trojan包与https包, 需要有标记, 考虑使用SNI做分发标记, 参考:</p>
+<ul>
+<li><a class="link" href="https://www.chengxiaobai.com/trouble-maker/trojan-shared-443-port-scheme"  target="_blank" rel="noopener"
+    >Trojan 共用 443 端口方案</a></li>
+</ul>
+
 </section>
 
 
@@ -1233,7 +1340,9 @@ crontab -e是编辑用户任务, crontab -l是显示用户任务.</p>
     <section class="copyright">
         &copy; 
         
-        2022 点滴随记
+            2022 - 
+        
+        2023 点滴随记
     </section>
     
     <section class="powerby">
@@ -1350,10 +1459,12 @@ crontab -e是编辑用户任务, crontab -l是显示用户任务.</p>
     <li><a href="#在ubuntu22上安装trojan服务">在Ubuntu22上安装Trojan服务</a>
       <ol>
         <li><a href="#操作系统选用ubuntu-2204lts">操作系统选用Ubuntu 22.04LTS</a></li>
+        <li><a href="#设置交换分区如果需要">设置交换分区(如果需要)</a></li>
         <li><a href="#重置服务器并配置-如果需要">重置服务器并配置 (如果需要)</a></li>
         <li><a href="#安装trojan-go-简单安装">安装trojan-go 简单安装</a></li>
         <li><a href="#更换伪装网站页面">更换伪装网站页面</a></li>
         <li><a href="#设置时钟--设置定时重启">设置时钟 + 设置定时重启</a></li>
+        <li><a href="#系统中的trojan与nginx">系统中的Trojan与Nginx</a></li>
       </ol>
     </li>
   </ol>

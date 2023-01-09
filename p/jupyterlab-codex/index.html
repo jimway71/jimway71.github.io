@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Based on OpenAI'><title>Jupyterlab Codex</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/jupyterlab-codex/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='Jupyterlab Codex'>
+<meta property='og:description' content='Based on OpenAI'>
+<meta property='og:url' content='https://jimway71.github.io/p/jupyterlab-codex/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='OpenAI' /><meta property='article:tag' content='GPT-3' /><meta property='article:tag' content='chatGPT' /><meta property='article:tag' content='jupyter lab' /><meta property='article:tag' content='jupyterlab codex' /><meta property='article:published_time' content='2022-12-05T16:00:00&#43;08:00'/><meta property='article:modified_time' content='2022-12-05T16:00:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-63.jpg' />
+<meta name="twitter:title" content="Jupyterlab Codex">
+<meta name="twitter:description" content="Based on OpenAI"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-63.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/jupyterlab-codex/">
+                
+                    <img src="/wallpaper/wallpaper-63.jpg" loading="lazy" alt="Featured image of post Jupyterlab Codex" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/ai/" >
+                AI
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/jupyterlab-codex/">Jupyterlab Codex</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Based on OpenAI
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 05, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="information">Information</h2>
+<h3 id="openai">OpenAI</h3>
+<ul>
+<li>
+<p>官网及相关网站</p>
+<ul>
+<li><a class="link" href="https://openai.com/"  target="_blank" rel="noopener"
+    >OpenAI</a></li>
+<li><a class="link" href="https://beta.openai.com/"  target="_blank" rel="noopener"
+    >Beta OpenAI</a></li>
+</ul>
+</li>
+<li>
+<p>官方社区</p>
+<ul>
+<li><a class="link" href="https://community.openai.com/c/openai-codex/17"  target="_blank" rel="noopener"
+    >OpenAI API Community Forum - OpenAI Codex</a>
+<ul>
+<li><a class="link" href="https://community.openai.com/t/jupyterlab-plugin-for-codex/8866"  target="_blank" rel="noopener"
+    >JupyterLab Plugin for Codex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>应用</p>
+<ul>
+<li><a class="link" href="https://openai.com/blog/chatgpt/"  target="_blank" rel="noopener"
+    >chatgpt</a> Optimizing Language Models for Dialogue
+<ul>
+<li>Try <a class="link" href="https://chat.openai.com/"  title="是一个大型语言模型，被OpenAI训练而来。可以回答问题，讨论当前事务，或者就任何感兴趣的主题进行讨论"
+     target="_blank" rel="noopener"
+    >chatGPT</a><br>
+<a class="link" href="https://chat.openai.com/"  title="是一个大型语言模型，被OpenAI训练而来。可以回答问题，讨论当前事务，或者就任何感兴趣的主题进行讨论"
+     target="_blank" rel="noopener"
+    >chatGPT</a> &amp; <a class="link" href="https://chrome.google.com/webstore/detail/chatgpt-for-google/jgjaeacdkonaoafenlfkkkmbaopkbilf"  title="This is a simple extension that show response from ChatGPT beside your Google Search results"
+     target="_blank" rel="noopener"
+    >ChatGPT for Google</a> Q&amp;A: <a class="link" href="/p/chatgpt%e9%97%ae%e7%ad%94/" >chatGPT问答</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="jupyterlab">JupyterLab</h3>
+<p>JupyterLab: JupyterLab是一个交互式的开发环境，是Jupyter Notebook的下一代产品，可以使用它编写Notebook、操作终端、编辑MarkDown文本、打开交互模式、查看csv文件及图片等功能。 可以说，JupyterLab是开发者们下一阶段更主流的开发环境。</p>
+<ul>
+<li><a class="link" href="https://github.com/jupyterlab/jupyterlab"  title="An extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture."
+     target="_blank" rel="noopener"
+    >JupyterLab</a></li>
+</ul>
+<p><a class="link" href="https://github.com/jupyterlab/jupyterlab"  title="An extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture."
+     target="_blank" rel="noopener"
+    >JupyterLab</a>官网及相关网站</p>
+<ul>
+<li><a class="link" href="https://jupyter.org/"  target="_blank" rel="noopener"
+    >Jupyter</a></li>
+<li><a class="link" href="https://github.com/jupyterlab/jupyterlab"  title="An extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture."
+     target="_blank" rel="noopener"
+    >jupyterlab</a> jupyterlab开源官网</li>
+<li><a class="link" href="https://github.com/jupyterlab/language-packs/"  title="Jupyterlab language packs"
+     target="_blank" rel="noopener"
+    >jupyterlab language-packs</a> 多语言支持
+<ul>
+<li><a class="link" href="https://github.com/jupyterlab/language-packs/tree/main/language-packs"  title="Folders in here refer to individual python packages for a given language pack"
+     target="_blank" rel="noopener"
+    >jupyterlab language-packs list</a> 支持的语言包列表</li>
+</ul>
+</li>
+</ul>
+<p>官方文档</p>
+<ul>
+<li><a class="link" href="https://jupyterlab.readthedocs.io/"  target="_blank" rel="noopener"
+    >JupyterLab Documentation</a></li>
+</ul>
+<p>介绍</p>
+<ul>
+<li><a class="link" href="https://zh.wikipedia.org/zh-tw/Jupyter"  target="_blank" rel="noopener"
+    >Jupyter - wiki</a></li>
+<li><a class="link" href="https://blog.infuseai.io/jupyterlab-3-0-%E9%87%8B%E5%87%BA-9c953cdb039f"  target="_blank" rel="noopener"
+    >JupyterLab 3.0 釋出</a></li>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/87403131"  target="_blank" rel="noopener"
+    >JupyterLab，极其强大的下一代notebook！</a></li>
+</ul>
+<p>参考(教程)</p>
+<ul>
+<li><a class="link" href="https://www.jianshu.com/p/c0275f9113e3"  target="_blank" rel="noopener"
+    >Jupyter lab安装和基本设置</a>
+<ul>
+<li><a class="link" href="https://www.coonote.com/jupyter-note/jupyterlab-installation-conf.html"  target="_blank" rel="noopener"
+    >Jupyter lab安装和基本设置</a></li>
+</ul>
+</li>
+<li><a class="link" href="https://blog.csdn.net/weixin_42416683/article/details/112300633"  target="_blank" rel="noopener"
+    >教你如何安装jupyter lab并启动jupyter lab</a></li>
+<li><a class="link" href="https://read01.com/zh-hk/J8ADAJg.html#.Y5KXs3ZBxOc"  target="_blank" rel="noopener"
+    >JupyterLab 3.0 最新入門教程</a> 包括语言配置, 使用等信息</li>
+</ul>
+<h3 id="jupyterlab-codex">JupyterLab Codex</h3>
+<ul>
+<li><a class="link" href="https://pypi.org/project/jupyterlab-codex/"  target="_blank" rel="noopener"
+    >pipy - jupyterlab codex</a> JupyterLab extension that unlocks the power of OpenAI&rsquo;s Codex Model.<br>
+by <a class="link" href="https://avatars.githubusercontent.com/u/1154575?v=4"  target="_blank" rel="noopener"
+    >Simon Liang</a></li>
+<li><a class="link" href="https://github.com/lhr0909/jupyterlab-codex/blob/main/RELEASE.md"  target="_blank" rel="noopener"
+    >jupyterlab codex</a></li>
+</ul>
+<h3 id="学习">学习</h3>
+<ul>
+<li><a class="link" href="https://learn.microsoft.com/zh-cn/training/modules/python-create-run-jupyter-notebook/"  target="_blank" rel="noopener"
+    >Microsoft Learn - 适用于 Python 的 Jupyter 笔记本入门</a></li>
+</ul>
+<h3 id="参考">参考</h3>
+<ul>
+<li>
+<p><a class="link" href="https://blog.csdn.net/weixin_45934622/article/details/126603329"  target="_blank" rel="noopener"
+    >NLP实战一 利用OpenAI Codex实现中文转python代码</a></p>
+</li>
+<li>
+<p>Demo</p>
+<ul>
+<li><a class="link" href="https://beta.openai.com/codex-javascript-sandbox"  target="_blank" rel="noopener"
+    >jupyterlab codex Demo</a><br>
+by <a class="link" href="https://www.youtube.com/@simon_liang"  target="_blank" rel="noopener"
+    >西门良</a><br>
+<div class="video-wrapper">
+            <iframe loading="lazy" 
+                    src="https://www.youtube.com/embed/zmnTMHZXpKs" 
+                    allowfullscreen 
+                    title="YouTube Video"
+            >
+            </iframe>
+        </div>
+</li>
+<li><a class="link" href="https://beta.openai.com/playground"  target="_blank" rel="noopener"
+    >GPT-3 Demo</a><br>
+<div class="video-wrapper">
+            <iframe loading="lazy" 
+                    src="https://www.youtube.com/embed/DIqx2J6u6Og" 
+                    allowfullscreen 
+                    title="YouTube Video"
+            >
+            </iframe>
+        </div>
+</li>
+</ul>
+</li>
+<li>
+<p>工具</p>
+<ul>
+<li><a class="link" href="https://jsfiddle.net/"  target="_blank" rel="noopener"
+    >jsfiddle</a> 在线WebDeveloper工具</li>
+</ul>
+</li>
+</ul>
+<h2 id="安装配置jupyterlab">安装配置JupyterLab</h2>
+<h3 id="在window下安装配置jupyterlab">在Window下安装配置JupyterLab</h3>
+<p>环境: Windows 10</p>
+<h4 id="安装python3和pip3">安装Python3和pip3</h4>
+<p>已安装, 版本信息</p>
+<blockquote>
+<p>c:\&gt;python --version<br>
+Python 3.10.6<br>
+c:\&gt;pip &ndash;version<br>
+pip 22.2.2 from C:\Users\username\AppData\Local\Programs\Python\Python310\lib\site-packages\pip (python 3.10)</p>
+</blockquote>
+<h4 id="建立python虚拟环境">建立Python虚拟环境</h4>
+<p>目标: 把JupyterLab的虚拟环境建到&quot;d:\虚拟机\python\jlab_venv&quot;目录下</p>
+<ul>
+<li>&ldquo;d:\虚拟机&quot; 虚拟机目录</li>
+<li>&ldquo;d:\虚拟机\python&quot; python虚拟环境目录</li>
+<li>&ldquo;d:\虚拟机\python\jlab_venv&quot; JupyterLab的虚拟环境</li>
+</ul>
+<blockquote>
+<p>c:\&gt; d:<br>
+c:\&gt; cd 虚拟机<br>
+c:\&gt; mkdir python<br>
+c:\&gt; cd python</p>
+</blockquote>
+<p>建立python虚拟环境</p>
+<blockquote>
+<p>c:\&gt; python -m venv d:\虚拟机\python\jlab_venv</p>
+</blockquote>
+<p>进入python虚拟环境</p>
+<blockquote>
+<p>c:\&gt; d:\虚拟机\python\jlab_venv\Scripts\activate.bat</p>
+</blockquote>
+<h4 id="在python虚拟环境中安装jupyterlab">在python虚拟环境中安装JupyterLab</h4>
+<p>在虚拟环境中安装jupyterlab</p>
+<blockquote>
+<p>(jlab_venv) D:\虚拟机\python&gt; pip install jupyterlab</p>
+</blockquote>
+<p>在虚拟环境中安装中文语言包</p>
+<blockquote>
+<p>(jlab_venv) D:\虚拟机\python&gt; pip install jupyterlab-language-pack-zh-CN</p>
+</blockquote>
+<p>在虚拟环境中安装JupyterLab Codex</p>
+<blockquote>
+<p>(jlab_venv) D:\虚拟机\python&gt; pip install jupyterlab-codex</p>
+</blockquote>
+<p>在python虚拟环境中运行Jupyter Lab</p>
+<blockquote>
+<p>(jlab_venv) D:\虚拟机\python&gt; jupyter lab</p>
+</blockquote>
+<p>正常启动后, 会自动使用浏览器访问JupyterLab</p>
+<h3 id="在linux下安装配置jupyterlab">在Linux下安装配置JupyterLab</h3>
+<p>环境: Ubuntu 22.10 server, 未安装Xwindow</p>
+<h4 id="安装python3和pip3-1">安装Python3和pip3</h4>
+<blockquote>
+<p># (需要以root用户操作)安装Python3<br>
+# apt install python3<br>
+# 安装pip3<br>
+# apt install python3-pip</p>
+</blockquote>
+<h4 id="安装和配置python虚拟环境">安装和配置python虚拟环境</h4>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://note.qidong.name/2019/03/python-virtualenv/"  target="_blank" rel="noopener"
+    >Python中的虚拟环境（Virtualenv）及其工作原理</a></li>
+</ul>
+<blockquote>
+<p># (以root用户身份操作)安装python-venv(python虚拟环境)<br>
+# apt install python3.10-venv<br>
+# 以非root用户操作, 建立python虚拟环境<br>
+# 这是抄windows下的命令, Linux下命令应该是: virtualenv -p python3 ~/jlab_venv. 但windows命令也有效<br>
+$ python3 -m venv ~/jlab_venv<br>
+# 进入python虚拟环境<br>
+$ source ~/jlab_venv/bin/activate<br>
+(jlab_venv) user@host:~$</p>
+</blockquote>
+<p>确认进入了python虚拟环境, 后面python操作都在python虚拟环境中执行</p>
+<h4 id="配置nginx代理"><del>配置Nginx代理</del></h4>
+<ul>
+<li><del>JupyterLab运行于127.0.0.1:8888端口的处理方案一: 使用Nginx做反向代理</del><br>
+<strong>Nginx做反向代理方案使JupyterLab运行不正常:</strong> 在ipynb中的python语句不能运行后显示结果<br>
+<u>通过对比测试, 确认了上述结论</u><br>
+原因: 可能是未开户某些协议的支持</li>
+</ul>
+<p><del>说明:</del></p>
+<ul>
+<li><del>缺省配置下, JupyterLab运行时会监听127.0.0.1:8888端口</del><br>
+<del>在本机能跑浏览器的情况下, 这完全没有问题</del><br>
+<del>但是, 在Ubuntu Server中, 缺省没有安装Xwindow</del>
+<ul>
+<li><del>没有Xwindow, 不能跑窗口界面</del></li>
+<li><del>没有窗口界面, 不能跑浏览器</del></li>
+</ul>
+</li>
+</ul>
+<p><del>而且,</del></p>
+<ul>
+<li><del>JupyterLab所监听的127.0.0.1:8888端口, 也不能被其它同在同一网络的机器访问</del></li>
+</ul>
+<p><del>因此, 这个端口需要被代理出来, 转换成在网络上可被访问</del><br>
+<del>最适合的工具就是Nginx, 方法就是做反向代理</del></p>
+<p><del>安装Nginx</del></p>
+<blockquote>
+<p><del># apt install nginx</del></p>
+</blockquote>
+<p><del>配置Nginx前向代理</del></p>
+<blockquote>
+<p><del>$ cat /etc/nginx/sites-enabled/default</del></p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen 80 default_server;
+</span></span><span class="line"><span class="cl">        listen [::]:80 default_server;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root /var/www/html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # Add index.php to the list if you are using PHP
+</span></span><span class="line"><span class="cl">        index index.html index.htm index.nginx-debian.html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server_name _;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">                proxy_pass http://127.0.0.1:8888;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">......
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><del>配置后, 重启nginx</del></p>
+<blockquote>
+<p><del># service nginx restart</del></p>
+</blockquote>
+<p><del>即可，网络上可以用&quot;http://主机名/&ldquo;访问之后搭建的JupyterLab</del></p>
+<h4 id="安装和运行jupyterlab">安装和运行JupyterLab</h4>
+<p>(在python虚拟环境中操作)</p>
+<blockquote>
+<p># 需要以非root用户操作, 安装JupyterLab<br>
+$ pip install jupyterlab<br>
+# (以非root用户操作)启动JupyterLab(后台运行)<br>
+$ jupyter lab &amp;</p>
+</blockquote>
+<p>运行开始后, 在目录&rdquo;~/.local/share/jupyter/runtime&quot;下会生成运行的一些记录文件, 文件名中的数字是jupyter的运行进程PID</p>
+<ul>
+<li>
+<p><del><strong>JupyterLab运行于127.0.0.1:8888端口的处理方案二: 修改运行参数</strong></del></p>
+</li>
+<li>
+<p><u>修改jupyter lab运行参数, 使其在0.0.0.0上监听</u><br>
+(在python虚拟环境中操作)<br>
+查看jupyter lab参数:</p>
+<blockquote>
+<p>$ jupyter lab --help<br>
+&hellip;<br>
+--ip=<Unicode><br>
+The IP address the Jupyter server will listen on.<br>
+Default: &rsquo;localhost&rsquo;<br>
+Equivalent to: [--ServerApp.ip]<br>
+--port=<Int><br>
+The port the server will listen on (env: JUPYTER_PORT).<br>
+Default: 0<br>
+Equivalent to: [--ServerApp.port]<br>
+&hellip;</p>
+</blockquote>
+<p>运行命令:</p>
+<blockquote>
+<p>$ jupyter lab --ip=0.0.0.0 &amp;</p>
+</blockquote>
+<p>即改为在0.0.0.0:8888上监听</p>
+</li>
+</ul>
+<h4 id="配置中文界面">配置中文界面</h4>
+<p>JypterLab语言包:</p>
+<ul>
+<li><a class="link" href="https://github.com/jupyterlab/language-packs/"  title="Jupyterlab language packs"
+     target="_blank" rel="noopener"
+    >jupyterlab language-packs</a> 多语言支持
+<ul>
+<li><a class="link" href="https://github.com/jupyterlab/language-packs/tree/main/language-packs"  title="Folders in here refer to individual python packages for a given language pack"
+     target="_blank" rel="noopener"
+    >jupyterlab language-packs list</a> 支持的语言包列表</li>
+</ul>
+</li>
+</ul>
+<p>(在python虚拟环境中操作)<br>
+以非root用户身份运行</p>
+<blockquote>
+<p>$ pip install jupyterlab-language-pack-zh-CN</p>
+</blockquote>
+<p>即可完成安装JypterLab中文语言包<br>
+重启JupyterLab，通过&quot;Settings→Language&quot;更改语言为中文, 即可切换为中文界面</p>
+<h4 id="安装jupyterlab-codex">安装JupyterLab Codex</h4>
+<p>(在python虚拟环境中操作)<br>
+以非root用户身份运行</p>
+<blockquote>
+<p>$ pip install jupyterlab-codex</p>
+</blockquote>
+<p>安装完成后, 可以在Jupyter Lab的web界面上的插件管理器里看到这个插件</p>
+<h3 id="其它相关参考">其它相关参考</h3>
+<p>Jupyter lab 的安裝與使用<br>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/dqn0LzUW89Q" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+<br>
+Installing and running Jupyter Notebook Lab<br>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/G35JCVzSk" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+<br>
+Installing Anaconda Python on Windows 10 and launching JupyterLab<br>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/bViKWpYopnw" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+<br>
+Run/Access Jupyter Notebook From Remote Server<br>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/R3TfFRFazow" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+<br>
+How To Setup Jupyter Lab in 2022 | Data Science for Developers | 14 minutes tutorial
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/BtYXPY-A9_M" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+</p>
+<h2 id="使用codex">使用Codex</h2>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/openai/">OpenAI</a>
+        
+            <a href="/tags/gpt-3/">GPT-3</a>
+        
+            <a href="/tags/chatgpt/">chatGPT</a>
+        
+            <a href="/tags/jupyter-lab/">jupyter lab</a>
+        
+            <a href="/tags/jupyterlab-codex/">jupyterlab codex</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/chatgpt%E9%97%AE%E7%AD%94/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-64.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-64.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">chatGPT问答</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/midjourney/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-65.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-65.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Midjourney</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nemiks-nanifesto/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-Nemik%27s%20manifesto.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-Nemik&#39;s manifesto.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nemik&#39;s Nanifesto</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/anki-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%BE%85%E5%8A%A9%E8%AE%B0%E5%BF%86%E8%BD%AF%E4%BB%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-66.png" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-66.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Anki 强大的辅助记忆软件</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-61.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-61.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">翻墙系列</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#information">Information</a>
+      <ol>
+        <li><a href="#openai">OpenAI</a></li>
+        <li><a href="#jupyterlab">JupyterLab</a></li>
+        <li><a href="#jupyterlab-codex">JupyterLab Codex</a></li>
+        <li><a href="#学习">学习</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ol>
+    </li>
+    <li><a href="#安装配置jupyterlab">安装配置JupyterLab</a>
+      <ol>
+        <li><a href="#在window下安装配置jupyterlab">在Window下安装配置JupyterLab</a>
+          <ol>
+            <li><a href="#安装python3和pip3">安装Python3和pip3</a></li>
+            <li><a href="#建立python虚拟环境">建立Python虚拟环境</a></li>
+            <li><a href="#在python虚拟环境中安装jupyterlab">在python虚拟环境中安装JupyterLab</a></li>
+          </ol>
+        </li>
+        <li><a href="#在linux下安装配置jupyterlab">在Linux下安装配置JupyterLab</a>
+          <ol>
+            <li><a href="#安装python3和pip3-1">安装Python3和pip3</a></li>
+            <li><a href="#安装和配置python虚拟环境">安装和配置python虚拟环境</a></li>
+            <li><a href="#配置nginx代理">配置Nginx代理</a></li>
+            <li><a href="#安装和运行jupyterlab">安装和运行JupyterLab</a></li>
+            <li><a href="#配置中文界面">配置中文界面</a></li>
+            <li><a href="#安装jupyterlab-codex">安装JupyterLab Codex</a></li>
+          </ol>
+        </li>
+        <li><a href="#其它相关参考">其它相关参考</a></li>
+      </ol>
+    </li>
+    <li><a href="#使用codex">使用Codex</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

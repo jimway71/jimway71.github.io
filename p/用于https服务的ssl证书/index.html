@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SSL certificate for https service'><title>用于https服务的SSL证书</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='用于https服务的SSL证书'>
+<meta property='og:description' content='SSL certificate for https service'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='SSL证书' /><meta property='article:tag' content='SSL certificate' /><meta property='article:tag' content='Renew SSL certificate' /><meta property='article:tag' content='Let&#39;s Encrypt' /><meta property='article:tag' content='Certbot' /><meta property='article:tag' content='Cloudflare' /><meta property='article:published_time' content='2022-12-01T16:47:00&#43;08:00'/><meta property='article:modified_time' content='2022-12-01T16:47:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-62.jpg' />
+<meta name="twitter:title" content="用于https服务的SSL证书">
+<meta name="twitter:description" content="SSL certificate for https service"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-62.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/">
+                
+                    <img src="/wallpaper/wallpaper-62.jpg" loading="lazy" alt="Featured image of post 用于https服务的SSL证书" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/">用于https服务的SSL证书</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            SSL certificate for https service
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 01, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="仅考虑可用于https的ssl证书">仅考虑可用于https的SSL证书</h2>
+<p>并可使相应网站被识别为安全网站</p>
+<h2 id="免费ssl证书">免费SSL证书</h2>
+<h3 id="参考">参考</h3>
+<ul>
+<li><a class="link" href="https://blog.csdn.net/u013670453/article/details/114077571"  target="_blank" rel="noopener"
+    >「Certbot」- 在内网中申请证书的方法 @20210225</a></li>
+<li><a class="link" href="https://blog.51cto.com/wzlinux/2391231"  target="_blank" rel="noopener"
+    >nginx 配置 https 并强制跳转(lnmp一键安装包)</a></li>
+<li><a class="link" href="https://blog.51cto.com/wzlinux/2385116"  target="_blank" rel="noopener"
+    >Nginx 通过 certbot 为网站自动配置 SSL 证书并续期</a></li>
+<li><a class="link" href="https://www.begindot.com/zh-CN/%E8%8E%B7%E5%BE%97%E5%85%8D%E8%B4%B9%E7%9A%84-ssl-%E8%AF%81%E4%B9%A6/"  target="_blank" rel="noopener"
+    >12 个最适合您网站的免费 SSL 证书来源</a></li>
+<li><a class="link" href="https://www.liuhaolin.com/note/434.html"  target="_blank" rel="noopener"
+    >let’s encrypt 使用 certbot 强制更新指定的证书</a></li>
+</ul>
+<h3 id="lets-encrypt">Let&rsquo;s Encrypt</h3>
+<p>官网: <a class="link" href="https://letsencrypt.org/"  title="Let&#39;s Encrypt is a free, automated, and open certificate authority brought to you by the nonprofit Internet Security Research Group (ISRG)."
+     target="_blank" rel="noopener"
+    >Let&rsquo;s Encrypt</a><br>
+工具: <a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a><br>
+<a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>相关文档</p>
+<ul>
+<li><a class="link" href="https://eff-certbot.readthedocs.io/en/stable/using.html"  target="_blank" rel="noopener"
+    >Certbot用户手册</a></li>
+<li>$ man certbot<br>
+Linux下的帮助文档</li>
+<li><a class="link" href="https://tyloafer.github.io/posts/28158/"  target="_blank" rel="noopener"
+    >免费SSL证书制作 - Lets Encrypt</a><br>
+其中有提到<a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>参数
+<ul>
+<li>&ndash;cert-name CERTNAME：指定要更新的证书。Certbot 用这个名称来管理证书文件。名称不影响证书内容。可以用 certbot certificates 命令查看证书名。</li>
+<li><em><strong>&ndash;dry-run</strong></em>：用于测试，只获取测试证书，不保存至磁盘。只有 certonly 和 renew 两个子命令可以用这个参数。仍然会会改写 Apache 或 Nginx 服务器的配置文件并重启服务器。仍然会调用 &ndash;pre-hook 和 &ndash;post-hook 命令（只要定义过）。只是不再调用 &ndash;deploy-hook 命令。</li>
+<li>&ndash;force-renewal, &ndash;renew-by-default：强制更新域名的证书，即使离过期时间还远得很。</li>
+<li>&ndash;allow-subset-of-names：在域名所有权认证时，即使认证失败，也产生证书。在更新多个域名时有效，因为有可能部分域名不再指向当前主机。注意：不能和参数 &ndash;csr 同时使用。</li>
+<li>-q, &ndash;quiet：静默执行。</li>
+<li>&ndash;debug-challenges：调试模式，提交至 CA 前需要用户确认。</li>
+<li>&ndash;preferred-challenges：验证域名所有权的方式，”dns” 或 “tls-sni-01,http,dns” 等。每个服务器插件支持有限种类的方式。</li>
+<li><strong>&ndash;pre-hook</strong> PRE_HOOK：在获取证书前要执行的 shell 命令。比如暂时关闭服务器软件以防止可能的冲突。只有在自动获取/更新证书时才会执行。如果更新多个证书时，只执行第一个命令。</li>
+<li><strong>&ndash;post-hook</strong> POST_HOOK：在获取证书后要执行的 shell 命令。比如部署新证书，或重启服务器软件。如果更新多个证书时，只执行第一个命令。</li>
+<li>&ndash;deploy-hook DEPLOY_HOOK：每个有效的认证都会触发一次的 shell 命令。对这个命令，shell 变量 $RENEWED_LINEAGE 表示包含域名证书和私钥的配置目录，比如 /etc/letsencrypt/live/example.com。$RENEWED_DOMAINS 表示空格分隔的刚更新的域名列表，比如 example.com <a class="link" href="https://www.example.com"  target="_blank" rel="noopener"
+    >www.example.com</a>。</li>
+<li>&ndash;disable-hook-validation：验证 &ndash;pre-hook/&ndash;post-hook/&ndash;deploy-hook 的 shell 命令是否有效，提前发现错误。</li>
+<li>&ndash;no-directory-hooks：更新证书时不执行 hook 目录中的命令。</li>
+</ul>
+</li>
+</ul>
+<h2 id="在内网使用免费ssl证书">在内网使用免费SSL证书</h2>
+<h3 id="关于cloudflare证书">关于Cloudflare证书</h3>
+<p>参考：</p>
+<ul>
+<li><a class="link" href="/p/%E5%85%B3%E4%BA%8Ecloudflare/#cloudflare%E8%AF%81%E4%B9%A6" >Cloudflare证书</a></li>
+</ul>
+<p><a class="link" href="https://cloudflare.com/"  title="Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable."
+     target="_blank" rel="noopener"
+    >Cloudflare</a>可下载的免费证书, 包括源证书、客户端证书, 并不适用于通常的https服务</p>
+<h3 id="在内网申请免费ssl证书">在内网申请免费SSL证书</h3>
+<h4 id="在内网申请lets-encrypt的免费ssl证书">在内网申请Let&rsquo;s Encrypt的免费SSL证书</h4>
+<p>环境和工具:</p>
+<ul>
+<li>操作系统<br>
+(lsb_release -a / cat /proc/version / uname -a)<br>
+Ubuntu Bionic with Armbian Linux 5.3.0-aml-g12 (Ubuntu 18.04.3 LTS)</li>
+<li>证书颁发机构 (CA)<br>
+<a class="link" href="https://letsencrypt.org/"  title="Let&#39;s Encrypt is a free, automated, and open certificate authority brought to you by the nonprofit Internet Security Research Group (ISRG)."
+     target="_blank" rel="noopener"
+    >Let&rsquo;s Encrypt</a></li>
+<li>工具<br>
+Certbot From <a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a></li>
+<li>DNS管理机构<br>
+<a class="link" href="https://cloudflare.com/"  title="Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable."
+     target="_blank" rel="noopener"
+    >Cloudflare</a></li>
+</ul>
+<p>安装Certbot</p>
+<blockquote>
+<p># 更新apt源<br>
+# apt update<br>
+# 使用apt安装Certbot<br>
+# apt install certbot</p>
+</blockquote>
+<p>申请内网机器证书</p>
+<blockquote>
+<p># 手动为域名mydomain申请SSL证书<br>
+# certbot certonly &ndash;manual &ndash;preferred-challenges dns -d mydomain</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Saving debug log to /var/log/letsencrypt/letsencrypt.log
+</span></span><span class="line"><span class="cl">Plugins selected: Authenticator manual, Installer None
+</span></span><span class="line"><span class="cl">Obtaining a new certificate
+</span></span><span class="line"><span class="cl">Performing the following challenges:
+</span></span><span class="line"><span class="cl">dns-01 challenge for mydomain
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">NOTE: The IP of this machine will be publicly logged as having requested this
+</span></span><span class="line"><span class="cl">certificate. If you&#39;re running certbot in manual mode on a machine that is not
+</span></span><span class="line"><span class="cl">your server, please ensure you&#39;re okay with that.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Are you OK with your IP being logged?
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">(Y)es/(N)o: y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">Please deploy a DNS TXT record under the name
+</span></span><span class="line"><span class="cl">_acme-challenge.mydomain with the following value:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Before continuing, verify the record is deployed.
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">Press Enter to Continue
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后, 按照说明在<a class="link" href="https://cloudflare.com/"  title="Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable."
+     target="_blank" rel="noopener"
+    >Cloudflare</a>上设置相应的域名TXT记录:<br>
+<img src="/img/62-ssl-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+><br>
+设置完成后, 可以看到相关域名TXT记录信息:<br>
+<img src="/img/62-ssl-02.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+><br>
+<u>等待该记录生效后</u>(<a class="link" href="https://blog.csdn.net/u013670453/article/details/114077571"  target="_blank" rel="noopener"
+    >参考文件</a>中所说&quot;dig +short -t txt _acme-challenge.example.com 命令验证DNS是否生效&quot;, 似乎并不可用), 回到<a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>运行界面, 按回车键继续:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Waiting for verification...
+</span></span><span class="line"><span class="cl">Cleaning up challenges
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">IMPORTANT NOTES:
+</span></span><span class="line"><span class="cl"> - Congratulations! Your certificate and chain have been saved at:
+</span></span><span class="line"><span class="cl">   /etc/letsencrypt/live/mydomain/fullchain.pem
+</span></span><span class="line"><span class="cl">   Your key file has been saved at:
+</span></span><span class="line"><span class="cl">   /etc/letsencrypt/live/mydomain/privkey.pem
+</span></span><span class="line"><span class="cl">   Your cert will expire on 2020-01-01. To obtain a new or tweaked
+</span></span><span class="line"><span class="cl">   version of this certificate in the future, simply run certbot
+</span></span><span class="line"><span class="cl">   again. To non-interactively renew *all* of your certificates, run
+</span></span><span class="line"><span class="cl">   &#34;certbot renew&#34;
+</span></span><span class="line"><span class="cl"> - If you like Certbot, please consider supporting our work by:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Donating to ISRG / Let&#39;s Encrypt:   https://letsencrypt.org/donate
+</span></span><span class="line"><span class="cl">   Donating to EFF:                    https://eff.org/donate-le
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/img/62-ssl-03.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<center>在内网使用Certbot命令申请SSL证书界面截图</center>  
+<h3 id="更新ssl证书">更新SSL证书</h3>
+<p>SSL证书会有一个有效期, 临近或过期时, 需要对相应SSL证书进行更新, 以避免服务出现异常。</p>
+<h4 id="更新lets-encrypt的免费ssl证书">更新Let’s Encrypt的免费SSL证书</h4>
+<p><a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>更新相关文档</p>
+<ul>
+<li><a class="link" href="https://eff-certbot.readthedocs.io/en/stable/using.html#renewal"  target="_blank" rel="noopener"
+    >Certbot用户手册之更新证书</a></li>
+<li><a class="link" href="https://eff-certbot.readthedocs.io/en/stable/using.html#automated-renewals"  target="_blank" rel="noopener"
+    >Certbot用户手册之自动更新证书</a></li>
+</ul>
+<p>参考</p>
+<ul>
+<li>
+<p><a class="link" href="https://serverdiary.com/linux/auto-renew-lets-encrypt-ssl-certificate-using-systemd-and-restart-nginx-apache-if-success/"  target="_blank" rel="noopener"
+    >Auto renew Let’s Encrypt SSL Certificate using Systemd and restart Nginx / Apache if success</a></p>
+</li>
+<li>
+<p><em><strong><a class="link" href="https://www.google.com.hk/search?q=how&#43;to&#43;change&#43;systemd&#43;certbot.service&#43;renew&#43;cert&#43;nginx&amp;newwindow=1&amp;sxsrf=ALiCzsY9zYzZGVVg0IiO_AjqLwlC6KiM_w%3A1669915880516&amp;ei=6OSIY-yKH6ei2roPpsOigAI&amp;ved=0ahUKEwjsnvO2-dj7AhUnkVYBHaahCCAQ4dUDCA8&amp;uact=5&amp;oq=how&#43;to&#43;change&#43;systemd&#43;certbot.service&#43;renew&#43;cert&#43;nginx&amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDoKCAAQRxDWBBCwAzoHCCMQsAIQJ0oECEEYAEoECEYYAFDDG1inLmDCM2gBcAF4AIAB8AKIAZkUkgEFMi0zLjWYAQCgAQHIAQrAAQE&amp;sclient=gws-wiz-serp"  target="_blank" rel="noopener"
+    >Google: how to change systemd certbot.service renew cert nginx</a></strong></em></p>
+</li>
+<li>
+<p><a class="link" href="https://serverfault.com/questions/790772/best-practices-for-setting-a-cron-job-for-lets-encrypt-certbot-renewal"  target="_blank" rel="noopener"
+    >Best practices for setting a cron job for Let&rsquo;s Encrypt (Certbot) renewal?</a></p>
+</li>
+<li>
+<p><a class="link" href="p/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%AE%B0%E5%BD%95/#ubuntu%E4%B8%8B%E7%9A%84systemd%E5%AE%9A%E6%97%B6%E5%99%A8" >Ubuntu下的Systemd定时器</a></p>
+</li>
+<li>
+<p><a class="link" href="https://blog.miniasp.com/post/2021/05/09/Create-SSL-TLS-certificates-from-LetsEncrypt-using-Certbot-2"  target="_blank" rel="noopener"
+    >如何使用 Certbot 建立免費的 TLS/SSL 網域憑證並自動產生 PFX 憑證</a></p>
+</li>
+</ul>
+<p>[Let’s Encrypt]免费提供的SSL证书有效期是三个月, 需要定期更新证书。<br>
+使用apt安装<a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>后, 已经在系统里建立了<a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>定时器, 用于更新证书
+其中包括以下两个文件:</p>
+<blockquote>
+<p># ll /lib/systemd/system/certbot.*<br>
+-rw-r&ndash;r&ndash; 1 root root 233 Feb 11  2019 /lib/systemd/system/certbot.service<br>
+-rw-r&ndash;r&ndash; 1 root root 156 Feb 11  2019 /lib/systemd/system/certbot.timer</p>
+</blockquote>
+<p>查看<a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>任务:</p>
+<blockquote>
+<p># systemctl list-timers &ndash;all<br>
+NEXT                         LEFT          LAST                         PASSED       UNIT                         ACTIVATE<br>
+&hellip;&hellip;<br>
+Fri 2022-12-02 07:42:23 CST  6h left       Thu 2022-12-01 12:46:10 CST  12h ago      certbot.timer                certbot.<br>
+&hellip;&hellip;</p>
+<p>7 timers listed.</p>
+<p># systemctl list-unit-files &ndash;type timer<br>
+UNIT FILE                    STATE<br>
+&hellip;&hellip;<br>
+certbot.timer                enabled<br>
+&hellip;&hellip;</p>
+<p>8 unit files listed.</p>
+</blockquote>
+<p>查看<a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>服务和定时器状态:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># systemctl status certbot.service
+</span></span><span class="line"><span class="cl">* certbot.service - Certbot
+</span></span><span class="line"><span class="cl">   Loaded: loaded (/lib/systemd/system/certbot.service; static; vendor preset: enabled)
+</span></span><span class="line"><span class="cl">   Active: inactive (dead) since Thu 2022-12-01 12:46:13 CST; 12h ago
+</span></span><span class="line"><span class="cl">     Docs: file:///usr/share/doc/python-certbot-doc/html/index.html
+</span></span><span class="line"><span class="cl">           https://letsencrypt.readthedocs.io/en/latest/
+</span></span><span class="line"><span class="cl">  Process: 22375 ExecStart=/usr/bin/certbot -q renew (code=exited, status=0/SUCCESS)
+</span></span><span class="line"><span class="cl"> Main PID: 22375 (code=exited, status=0/SUCCESS)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Dec 01 12:46:10 Aml_R3300L systemd[1]: Starting Certbot...
+</span></span><span class="line"><span class="cl">Dec 01 12:46:13 Aml_R3300L systemd[1]: Started Certbot.
+</span></span><span class="line"><span class="cl">root@Aml_R3300L:/lib/systemd/system# systemctl status certbot.timer
+</span></span><span class="line"><span class="cl">* certbot.timer - Run certbot twice daily
+</span></span><span class="line"><span class="cl">   Loaded: loaded (/lib/systemd/system/certbot.timer; enabled; vendor preset: enabled)
+</span></span><span class="line"><span class="cl">   Active: active (waiting) since Thu 2022-12-01 11:26:07 CST; 13h ago
+</span></span><span class="line"><span class="cl">  Trigger: Fri 2022-12-02 07:42:23 CST; 6h left
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Dec 01 11:26:07 Aml_R3300L systemd[1]: Started Run certbot twice daily.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>参考:</p>
+<ul>
+<li><a class="link" href="https://serverdiary.com/linux/auto-renew-lets-encrypt-ssl-certificate-using-systemd-and-restart-nginx-apache-if-success/"  target="_blank" rel="noopener"
+    >Auto renew Let’s Encrypt SSL Certificate using Systemd and restart Nginx / Apache if success</a></li>
+</ul>
+<p>由于更新SSL证书后, 需要重启Nginx(或其他相关的服务), 因此需要修改文件certbot.service如下(ExecStart行):</p>
+<blockquote>
+<p>ExecStart=/usr/local/bin/certbot renew &ndash;post-hook &ldquo;systemctl reload nginx&rdquo;</p>
+</blockquote>
+<p>如果不让certbot输出信息(静默模式), 可修改为:</p>
+<blockquote>
+<p>ExecStart=/usr/local/bin/certbot -q renew &ndash;post-hook &ldquo;systemctl reload nginx&rdquo;</p>
+</blockquote>
+<p><a class="link" href="https://certbot.eff.org/"  title="Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS."
+     target="_blank" rel="noopener"
+    >Certbot</a>参数说明可以参考:</p>
+<ul>
+<li><a class="link" href="/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/#lets-encrypt" >Let’s Encrypt</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ssl%E8%AF%81%E4%B9%A6/">SSL证书</a>
+        
+            <a href="/tags/ssl-certificate/">SSL certificate</a>
+        
+            <a href="/tags/renew-ssl-certificate/">Renew SSL certificate</a>
+        
+            <a href="/tags/lets-encrypt/">Let&#39;s Encrypt</a>
+        
+            <a href="/tags/certbot/">Certbot</a>
+        
+            <a href="/tags/cloudflare/">Cloudflare</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-59.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-59.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nginx服务器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-61.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-61.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">翻墙系列</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%85%B3%E4%BA%8Ecloudflare/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/cloudflare-1536x1023.jpg" loading="lazy" data-key="" data-hash="/wallpaper/cloudflare-1536x1023.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于Cloudflare</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B0%86ionos%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%85%A5cloudflare/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-43.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-43.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">将IONOS域名转入Cloudflare</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nemiks-nanifesto/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-Nemik%27s%20manifesto.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-Nemik&#39;s manifesto.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nemik&#39;s Nanifesto</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#仅考虑可用于https的ssl证书">仅考虑可用于https的SSL证书</a></li>
+    <li><a href="#免费ssl证书">免费SSL证书</a>
+      <ol>
+        <li><a href="#参考">参考</a></li>
+        <li><a href="#lets-encrypt">Let&rsquo;s Encrypt</a></li>
+      </ol>
+    </li>
+    <li><a href="#在内网使用免费ssl证书">在内网使用免费SSL证书</a>
+      <ol>
+        <li><a href="#关于cloudflare证书">关于Cloudflare证书</a></li>
+        <li><a href="#在内网申请免费ssl证书">在内网申请免费SSL证书</a>
+          <ol>
+            <li><a href="#在内网申请lets-encrypt的免费ssl证书">在内网申请Let&rsquo;s Encrypt的免费SSL证书</a></li>
+          </ol>
+        </li>
+        <li><a href="#更新ssl证书">更新SSL证书</a>
+          <ol>
+            <li><a href="#更新lets-encrypt的免费ssl证书">更新Let’s Encrypt的免费SSL证书</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

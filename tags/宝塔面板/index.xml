@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>宝塔面板 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</link>
+        <description>Recent content in 宝塔面板 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 21 Nov 2022 20:47:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>HTTP(S)上的通用服务</title>
+        <link>https://jimway71.github.io/p/https%E4%B8%8A%E7%9A%84%E9%80%9A%E7%94%A8%E6%9C%8D%E5%8A%A1/</link>
+        <pubDate>Mon, 21 Nov 2022 20:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/https%E4%B8%8A%E7%9A%84%E9%80%9A%E7%94%A8%E6%9C%8D%E5%8A%A1/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-60.jpg" alt="Featured image of post HTTP(S)上的通用服务" /&gt;&lt;h2 id=&#34;aapanel&#34;&gt;aaPanel&lt;/h2&gt;
+&lt;p&gt;官方网站:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aapanel.com/&#34;  title=&#34;-&amp;gt;A&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;aaPanel&lt;/a&gt;: aaPanel, 宝塔面板国际版&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/aaPanel/aaPanel&#34;  title=&#34;-&amp;gt;Ag&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;aaPanel开源&lt;/a&gt;: aaPanel, 宝塔面板国际版Docker部署版&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bt.cn/&#34;  title=&#34;-&amp;gt;B&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;宝塔面板&lt;/a&gt;: 宝塔面板国内版, &lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%BC%BA%E5%88%B6%E7%BB%91%E5%AE%9A%E8%B4%A6%E5%8F%B7&amp;amp;newwindow=1&amp;amp;sxsrf=ALiCzsbovZAGmxFkGHIcEz5Lbtumfb8hVg%3A1669035879900&amp;amp;ei=Z3d7Y--5NsTbhwOJ2a-QCQ&amp;amp;ved=0ahUKEwivifSVq7_7AhXE7WEKHYnsC5IQ4dUDCA8&amp;amp;uact=5&amp;amp;oq=%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%BC%BA%E5%88%B6%E7%BB%91%E5%AE%9A%E8%B4%A6%E5%8F%B7&amp;amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQA0oECEEYAEoECEYYAFAAWABg6wNoAHABeACAAdQCiAHUApIBAzMtMZgBAKABAqABAcABAQ&amp;amp;sclient=gws-wiz-serp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;强制绑定手机账号&lt;/a&gt; 2022年有爆出后门事件&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/aaPanel/BaoTa&#34;  title=&#34;-&amp;gt;Bg&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;宝塔面板开源&lt;/a&gt;: 曾经开源, 现在应该没开源, 安装用的shell都不是Github网站上的。&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于&lt;a class=&#34;link&#34; href=&#34;https://www.bt.cn/&#34;  title=&#34;-&amp;gt;B&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;宝塔面板&lt;/a&gt;有后门的历史, 上面的&lt;strong&gt;用户密码都得改&lt;/strong&gt;。&lt;br&gt;
+&lt;u&gt;放在在不常用的设备上使用。&lt;/u&gt;&lt;/p&gt;
+&lt;h2 id=&#34;x-ui&#34;&gt;x-ui&lt;/h2&gt;
+&lt;p&gt;官方网站:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vaxilu/x-ui&#34;  title=&#34;-&amp;gt;X&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x-ui&lt;/a&gt;: Github开源项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;xterm-for-web&#34;&gt;xterm for web&lt;/h2&gt;
+&lt;p&gt;找类似&lt;a class=&#34;link&#34; href=&#34;https://www.aapanel.com/&#34;  title=&#34;-&amp;gt;A&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;aaPanel&lt;/a&gt;中的Xterm功能&lt;/p&gt;
+&lt;h2 id=&#34;组合&#34;&gt;组合&lt;/h2&gt;
+&lt;h3 id=&#34;x-ui与宝塔组合&#34;&gt;X-UI与宝塔组合&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/559206269&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;X-UI与宝塔共存&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linuxword.com/?p=3996&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;X-ui配合宝塔nginx实现Nginx反代实现v2-ui 面板和网站共存&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>markdown测试 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/markdown%E6%B5%8B%E8%AF%95/</link>
+        <description>Recent content in markdown测试 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 10 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jimway71.github.io/tags/markdown%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Markdown&#43;Hugo测试文件</title>
+        <link>https://jimway71.github.io/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</link>
+        <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/p/markdown-hugo%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-02.jpg" alt="Featured image of post Markdown&#43;Hugo测试文件" /&gt;&lt;h2 id=&#34;常用链接&#34;&gt;常用链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt; Markdown 中文文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 主题 Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具链接&#34;&gt;工具链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://192.168.1.40/cgi-bin/resume.cgi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;启动BFL-LS-WVL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.opensubtitles.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;opensubtitles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;  
+&lt;br /&gt;  
+&lt;hr&gt;
+&lt;h2 id=&#34;练习确定区&#34;&gt;练习确定区&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h3 id=&#34;多级3级下的引用-参考u在openwrt上建立docker环境pe59ca8openwrte4b88ae5bbbae7ab8bdockere78eafe5a283u&#34;&gt;多级(3级)下的引用, 参考&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%9C%A8openwrt%E4%B8%8A%E5%BB%BA%E7%AB%8Bdocker%E7%8E%AF%E5%A2%83/&#34; &gt;在Openwrt上建立Docker环境&lt;/a&gt;&lt;/u&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;二级下的引用&#34;&gt;二级下的引用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;111
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
+&amp;gt;=Go 1.18版本的go&lt;br&gt;
+=Go 1.18版本的go&lt;/p&gt;
+&lt;/blockquote&gt;
+222-2&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* 111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        \&amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 333   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;111
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;br&gt;
+&amp;gt;=Go 1.18版本的go&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;=Go 1.18版本的go&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+222-2&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* 111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; \&amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt; &amp;gt;=Go 1.18版本的go  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        222-2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    * 333   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;硬回车&#34;&gt;硬回车&lt;/h3&gt;
+&lt;p&gt;111&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;222&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;333&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
+444&lt;/p&gt;
+&lt;p&gt;555&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Code:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;111  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;222  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;333  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;br /&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;444  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;555  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;默认链接&#34;&gt;默认链接&lt;/h3&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt; than from
+&lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I get 10 times more traffic from [Google][] than from
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Yahoo][] or [MSN][].
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [google]: http://google.com/        &amp;#34;Google Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [yahoo]:  http://search.yahoo.com/  &amp;#34;Yahoo Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [msn]:    http://search.msn.com/    &amp;#34;MSN Here&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;单双重音符号的不同&#34;&gt;单双重音符号的不同&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;There is a literal backtick (&lt;/code&gt;) here.`&lt;br&gt;
+Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`There is a literal backtick (`) here.`
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;br&gt;
+Code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;``There is a literal backtick (`) here.``
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;引用视频&#34;&gt;引用视频&lt;/h3&gt;
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://player.vimeo.com/video/745041187&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+Code:&lt;br&gt;
+?&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/0ZXpBHbTHV8&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+Code:&lt;br&gt;
+?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;练习区&#34;&gt;练习区&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;heading-1&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;本地视频&#34;&gt;本地视频&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;video id=&amp;#34;video&amp;#34; controls=&amp;#34;&amp;#34; preload=&amp;#34;none&amp;#34; poster=&amp;#34;封面&amp;#34;&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &amp;lt;source id=&amp;#34;mp4&amp;#34; src=&amp;#34;/img/2022-Russian-invasion-of-Ukraine/test-01.mp4&amp;#34; type=&amp;#34;video/mp4&amp;#34;&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/videos&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;不行&lt;br&gt;
+可能使用 &lt;a class=&#34;link&#34; href=&#34;https://www.zaqizaba.xyz/posts/%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E8%A7%86%E9%A2%91%E5%88%B0hugo%E5%8D%9A%E5%AE%A2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;添加本地视频到hugo博客&lt;/a&gt; 的方法&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;下划线文本&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;111&lt;br&gt;
+This is a regular paragraph.&lt;/p&gt;
+&lt;h2 id=&#34;你好&#34;&gt;你好&lt;/h2&gt;
+&lt;table&gt;  
+    &lt;tr&gt;  
+        &lt;td&gt;Foo&lt;/td&gt;  
+    &lt;/tr&gt;  
+&lt;/table&gt;  
+&lt;p&gt;This is another regular paragraph.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://images.google.com/images?num=30&amp;amp;q=larry&amp;#43;bird&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://images.google.com/images?num=30&amp;q=larry+bird&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://images.google.com/images?num=30&amp;amp;amp;q=larry&amp;#43;bird&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://images.google.com/images?num=30&amp;amp;q=larry+bird&lt;/a&gt;&lt;br&gt;
+©&lt;br&gt;
+©&lt;br&gt;
+AT&amp;amp;T&lt;br&gt;
+AT&amp;amp;T&lt;br&gt;
+4 &amp;lt; 5&lt;br&gt;
+4 &amp;lt; 5&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;111&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;222&lt;br&gt;
+&lt;br /&gt;&lt;br&gt;
+333&lt;/p&gt;
+&lt;p&gt;444&lt;/p&gt;
+&lt;h1 id=&#34;this-is-an-h1&#34;&gt;This is an H1&lt;/h1&gt;
+&lt;h2 id=&#34;this-is-an-h2&#34;&gt;This is an H2&lt;/h2&gt;
+&lt;h1 id=&#34;this-is-an-h1-1&#34;&gt;This is an H1&lt;/h1&gt;
+&lt;h2 id=&#34;this-is-an-h2-1&#34;&gt;This is an H2&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;以下语句会导致&amp;#34;暗色模式&amp;#34;失效:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###### This is an H6  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##### This is an H5  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;即五级标题 和 六级标题。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;原因并不清楚, 避免使用即可。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;this-is-an-h1-2&#34;&gt;This is an H1&lt;/h1&gt;
+&lt;h2 id=&#34;this-is-an-h2-2&#34;&gt;This is an H2&lt;/h2&gt;
+&lt;h3 id=&#34;this-is-an-h3&#34;&gt;This is an H3&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is the first level of quoting.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is nested blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Back to the first level.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;000&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下面这个方式可以用哦!&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;111&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/blockquote&gt;
+222-2
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;This&lt;/strong&gt; is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/blockquote&gt;
+222-3
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;222-4&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;111&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;222&lt;br&gt;
+222-1
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/blockquote&gt;
+222-2&lt;/li&gt;
+&lt;li&gt;333&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is the &lt;em&gt;&lt;strong&gt;first&lt;/strong&gt;&lt;/em&gt; level of quoting.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is &lt;em&gt;nested&lt;/em&gt; blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Back to the &lt;strong&gt;first&lt;/strong&gt; level.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;this-is-a-header&#34;&gt;This is a header.&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;This is the first list item.&lt;/li&gt;
+&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here&amp;rsquo;s some example code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;this-is-a-header-1&#34;&gt;This is a header.&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;This is the first list item.&lt;/li&gt;
+&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here&amp;rsquo;s some example code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;this-is-a-header-2&#34;&gt;This is a header.&lt;/h2&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;This is the first list item.&lt;/li&gt;
+&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here&amp;rsquo;s some example code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;dd _ End&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McHale&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parish&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McHale&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parish&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;heading-2&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;1&#34;&gt;1&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;  
+&lt;h1 id=&#34;heading-3&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;2&#34;&gt;2&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McHale&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parish&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McHale&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parish&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magic&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;Magic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Bird&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magic&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;This is a list item with two paragraphs. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+mi posuere lectus.&lt;/p&gt;
+&lt;p&gt;Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+sit amet velit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This is a list item with two paragraphs.&lt;/p&gt;
+&lt;p&gt;This is the second paragraph in the list item. You&amp;rsquo;re
+only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another item in the same list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A list item with a blockquote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a &lt;strong&gt;blockquote&lt;/strong&gt;
+inside a list item.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;` 引用 This is a **blockquote**
+inside a list item.    
+`  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;引用 This is a **blockquote** inside a list item.   &lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ddd&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A list item with a code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;code goes here&amp;gt;    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;1986&#34;&gt;
+&lt;li&gt;What a great season.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1986. What a great season.&lt;/p&gt;
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a code block.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a code block.
+&lt;/code&gt;&lt;/pre&gt;    
+&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tell application &amp;quot;Foo&amp;quot;
+    beep
+end tell
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tell application &#34;Foo&#34;
+    beep
+end tell
+&lt;/code&gt;&lt;/pre&gt;    
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;
+    &amp;amp;copy; 2004 Foo Corporation
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&#34;footer&#34;&amp;gt;
+    &amp;amp;copy; 2004 Foo Corporation
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;    
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;This is &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Title&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;an example&lt;/a&gt; inline link.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;This link&lt;/a&gt; has no title attribute.&lt;/p&gt;
+&lt;p&gt;This is &lt;a href=&#34;http://example.com/&#34; title=&#34;Title&#34;&gt;
+an example&lt;/a&gt; inline link.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://example.net/&#34;&gt;This link&lt;/a&gt; has no
+title attribute.&lt;/p&gt;
+&lt;p&gt;See my &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/about/&#34; &gt;About&lt;/a&gt; page for details.&lt;/p&gt;
+&lt;p&gt;This is &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Optional Title Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
+&lt;p&gt;This is [an example] &lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  title=&#34;Optional Title Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;id&lt;/a&gt; reference-style link.&lt;/p&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;1&lt;/a&gt; than from
+&lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Search&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Search&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;3&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt; than from
+&lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Here&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a class=&#34;link&#34; href=&#34;http://google.com/&#34;  title=&#34;Google&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt;
+than from &lt;a class=&#34;link&#34; href=&#34;http://search.yahoo.com/&#34;  title=&#34;Yahoo Search&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yahoo&lt;/a&gt; or
+&lt;a class=&#34;link&#34; href=&#34;http://search.msn.com/&#34;  title=&#34;MSN Search&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;un&lt;strong&gt;frigging&lt;/strong&gt;believable&lt;/p&gt;
+&lt;p&gt;*this text is surrounded by literal asterisks*&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;There is a literal backtick (&lt;/code&gt;) here.`&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Please don&amp;rsquo;t use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;amp;#8212;&lt;/code&gt; is the decimal-encoded equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/path/to/img.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/path/to/img.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:address@example.com&#34; &gt;address@example.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:address@example.com&#34; &gt;address@example.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;*literal asterisks*&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;\   backslash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`   backtick
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*   asterisk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;_   underscore
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{}  curly braces
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[]  square brackets
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;()  parentheses
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   hash mark
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+   plus sign
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-   minus sign (hyphen)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.   dot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!   exclamation mark
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;++文本++&lt;br&gt;
+&lt;u&gt;下划线文本&lt;/u&gt;&lt;br&gt;
+&lt;span style=&#34;border-bottom:2px dashed yellow;&#34;&gt;下划线文本&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;text-decoration: underline
+&lt;span style=&#34;border-bottom:1px dashed green;&#34;&gt;所添加的需要加下划线的行内文字&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;用数学公式：
+下划线 $\underline{X}$
+上划线 $\overline{X}$&lt;/p&gt;
+&lt;table border=&#34;1&#34;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, cell 1  
+&lt;pre&gt;&lt;code&gt;    Row 1.2, cel 1.2
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 2
+    row 2.2, cel 2.2
+    &amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 1  
+
+    Row 1.2, cel 1.2
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Row 1, cell 2
+    row 2.2, cel 2.2
+    &amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/table&gt;
+&lt;table border=&#34;1&#34;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Heade
+        r 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;row 1, cell 1&lt;/td&gt;
+        &lt;td&gt;row 1, cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;row 2, cell 1&lt;/td&gt;
+        &lt;td&gt;row 2, cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;div class=&#34;mermaid&#34; align=&#34; center &#34;&gt;
+      
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts prevail...
+    John--&gt;Alice: Great!
+    John-&gt;Bob: How about you?
+    Bob--&gt;John: Jolly good!
+
+&lt;/div&gt;
+  
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js&#34;&gt;&lt;/script&gt;
+ 
+&lt;script&gt;
+var config = {
+    startOnLoad:true,
+    flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+    },
+    sequence: { 
+        showSequenceNumbers: true,
+        actorMargin: 50, 
+        diagramMarginX:10, 
+        diagramMarginY:10 
+    },
+};
+mermaid.initialize(config);
+&lt;/script&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;graph TD;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    A--&amp;gt;B;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    A--&amp;gt;C;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    B--&amp;gt;D;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    C--&amp;gt;D;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;mermaid&#34; align=&#34; center &#34;&gt;
+      
+graph TD
+    A[Christmas] --&gt;|Get money| B(Go shopping)
+    B --&gt; C{Let me think}
+    C --&gt;|One| D[Laptop]
+    C --&gt;|Two| E[iPhone]
+    C --&gt;|Three| F[fa:fa-car Car]
+  
+
+&lt;/div&gt;
+  
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js&#34;&gt;&lt;/script&gt;
+ 
+&lt;script&gt;
+var config = {
+    startOnLoad:true,
+    flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+    },
+    sequence: { 
+        showSequenceNumbers: true,
+        actorMargin: 50, 
+        diagramMarginX:10, 
+        diagramMarginY:10 
+    },
+};
+mermaid.initialize(config);
+&lt;/script&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sequenceDiagram
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    participant Alice
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    participant Bob
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Alice-&amp;gt;John: Hello John, how are you?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    loop Healthcheck
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        John-&amp;gt;John: Fight against hypochondria
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    end
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    John--&amp;gt;Alice: Great!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    John-&amp;gt;Bob: How about you?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Bob--&amp;gt;John: Jolly good!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;mermaid&#34; align=&#34; center &#34;&gt;
+      
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail...
+    John--&gt;Alice: Great!
+    John-&gt;Bob: How about you?
+    Bob--&gt;John: Jolly good!
+
+&lt;/div&gt;
+  
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js&#34;&gt;&lt;/script&gt;
+ 
+&lt;script&gt;
+var config = {
+    startOnLoad:true,
+    flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+    },
+    sequence: { 
+        showSequenceNumbers: true,
+        actorMargin: 50, 
+        diagramMarginX:10, 
+        diagramMarginY:10 
+    },
+};
+mermaid.initialize(config);
+&lt;/script&gt;
+
+&lt;div class=&#34;mermaid&#34; align=&#34; center &#34;&gt;
+      
+        graph LR
+        gantt
+        dateFormat  YYYY-MM-DD
+        title 软件开发甘特图
+        section 设计
+        需求                      :done,    des1, 2014-01-06,2014-01-08
+        原型                      :active,  des2, 2014-01-09, 3d
+        UI设计                     :         des3, after des2, 5d
+    未来任务                     :         des4, after des3, 5d
+        section 开发
+        学习准备理解需求                      :crit, done, 2014-01-06,24h
+        设计框架                             :crit, done, after des2, 2d
+        开发                                 :crit, active, 3d
+        未来任务                              :crit, 5d
+        耍                                   :2d
+        section 测试
+        功能测试                              :active, a1, after des3, 3d
+        压力测试                               :after a1  , 20h
+        测试报告                               : 48h
+
+&lt;/div&gt;
+  
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js&#34;&gt;&lt;/script&gt;
+ 
+&lt;script&gt;
+var config = {
+    startOnLoad:true,
+    flowchart:{
+        useMaxWidth:false,
+        htmlLabels:true
+    },
+    sequence: { 
+        showSequenceNumbers: true,
+        actorMargin: 50, 
+        diagramMarginX:10, 
+        diagramMarginY:10 
+    },
+};
+mermaid.initialize(config);
+&lt;/script&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

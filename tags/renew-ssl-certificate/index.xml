@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Renew SSL certificate on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/renew-ssl-certificate/</link>
+        <description>Recent content in Renew SSL certificate on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 01 Dec 2022 16:47:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/renew-ssl-certificate/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>用于https服务的SSL证书</title>
+        <link>https://jimway71.github.io/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/</link>
+        <pubDate>Thu, 01 Dec 2022 16:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-62.jpg" alt="Featured image of post 用于https服务的SSL证书" /&gt;&lt;h2 id=&#34;仅考虑可用于https的ssl证书&#34;&gt;仅考虑可用于https的SSL证书&lt;/h2&gt;
+&lt;p&gt;并可使相应网站被识别为安全网站&lt;/p&gt;
+&lt;h2 id=&#34;免费ssl证书&#34;&gt;免费SSL证书&lt;/h2&gt;
+&lt;h3 id=&#34;参考&#34;&gt;参考&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/u013670453/article/details/114077571&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;「Certbot」- 在内网中申请证书的方法 @20210225&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/wzlinux/2391231&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx 配置 https 并强制跳转(lnmp一键安装包)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/wzlinux/2385116&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 通过 certbot 为网站自动配置 SSL 证书并续期&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.begindot.com/zh-CN/%E8%8E%B7%E5%BE%97%E5%85%8D%E8%B4%B9%E7%9A%84-ssl-%E8%AF%81%E4%B9%A6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;12 个最适合您网站的免费 SSL 证书来源&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.liuhaolin.com/note/434.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;let’s encrypt 使用 certbot 强制更新指定的证书&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lets-encrypt&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/h3&gt;
+&lt;p&gt;官网: &lt;a class=&#34;link&#34; href=&#34;https://letsencrypt.org/&#34;  title=&#34;Let&amp;#39;s Encrypt is a free, automated, and open certificate authority brought to you by the nonprofit Internet Security Research Group (ISRG).&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;&lt;br&gt;
+工具: &lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;相关文档&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://eff-certbot.readthedocs.io/en/stable/using.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot用户手册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$ man certbot&lt;br&gt;
+Linux下的帮助文档&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tyloafer.github.io/posts/28158/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;免费SSL证书制作 - Lets Encrypt&lt;/a&gt;&lt;br&gt;
+其中有提到&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;参数
+&lt;ul&gt;
+&lt;li&gt;&amp;ndash;cert-name CERTNAME：指定要更新的证书。Certbot 用这个名称来管理证书文件。名称不影响证书内容。可以用 certbot certificates 命令查看证书名。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&amp;ndash;dry-run&lt;/strong&gt;&lt;/em&gt;：用于测试，只获取测试证书，不保存至磁盘。只有 certonly 和 renew 两个子命令可以用这个参数。仍然会会改写 Apache 或 Nginx 服务器的配置文件并重启服务器。仍然会调用 &amp;ndash;pre-hook 和 &amp;ndash;post-hook 命令（只要定义过）。只是不再调用 &amp;ndash;deploy-hook 命令。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;force-renewal, &amp;ndash;renew-by-default：强制更新域名的证书，即使离过期时间还远得很。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;allow-subset-of-names：在域名所有权认证时，即使认证失败，也产生证书。在更新多个域名时有效，因为有可能部分域名不再指向当前主机。注意：不能和参数 &amp;ndash;csr 同时使用。&lt;/li&gt;
+&lt;li&gt;-q, &amp;ndash;quiet：静默执行。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;debug-challenges：调试模式，提交至 CA 前需要用户确认。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;preferred-challenges：验证域名所有权的方式，”dns” 或 “tls-sni-01,http,dns” 等。每个服务器插件支持有限种类的方式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ndash;pre-hook&lt;/strong&gt; PRE_HOOK：在获取证书前要执行的 shell 命令。比如暂时关闭服务器软件以防止可能的冲突。只有在自动获取/更新证书时才会执行。如果更新多个证书时，只执行第一个命令。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ndash;post-hook&lt;/strong&gt; POST_HOOK：在获取证书后要执行的 shell 命令。比如部署新证书，或重启服务器软件。如果更新多个证书时，只执行第一个命令。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;deploy-hook DEPLOY_HOOK：每个有效的认证都会触发一次的 shell 命令。对这个命令，shell 变量 $RENEWED_LINEAGE 表示包含域名证书和私钥的配置目录，比如 /etc/letsencrypt/live/example.com。$RENEWED_DOMAINS 表示空格分隔的刚更新的域名列表，比如 example.com &lt;a class=&#34;link&#34; href=&#34;https://www.example.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.example.com&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;disable-hook-validation：验证 &amp;ndash;pre-hook/&amp;ndash;post-hook/&amp;ndash;deploy-hook 的 shell 命令是否有效，提前发现错误。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;no-directory-hooks：更新证书时不执行 hook 目录中的命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;在内网使用免费ssl证书&#34;&gt;在内网使用免费SSL证书&lt;/h2&gt;
+&lt;h3 id=&#34;关于cloudflare证书&#34;&gt;关于Cloudflare证书&lt;/h3&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%85%B3%E4%BA%8Ecloudflare/#cloudflare%E8%AF%81%E4%B9%A6&#34; &gt;Cloudflare证书&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloudflare.com/&#34;  title=&#34;Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;可下载的免费证书, 包括源证书、客户端证书, 并不适用于通常的https服务&lt;/p&gt;
+&lt;h3 id=&#34;在内网申请免费ssl证书&#34;&gt;在内网申请免费SSL证书&lt;/h3&gt;
+&lt;h4 id=&#34;在内网申请lets-encrypt的免费ssl证书&#34;&gt;在内网申请Let&amp;rsquo;s Encrypt的免费SSL证书&lt;/h4&gt;
+&lt;p&gt;环境和工具:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;操作系统&lt;br&gt;
+(lsb_release -a / cat /proc/version / uname -a)&lt;br&gt;
+Ubuntu Bionic with Armbian Linux 5.3.0-aml-g12 (Ubuntu 18.04.3 LTS)&lt;/li&gt;
+&lt;li&gt;证书颁发机构 (CA)&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://letsencrypt.org/&#34;  title=&#34;Let&amp;#39;s Encrypt is a free, automated, and open certificate authority brought to you by the nonprofit Internet Security Research Group (ISRG).&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;工具&lt;br&gt;
+Certbot From &lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DNS管理机构&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://cloudflare.com/&#34;  title=&#34;Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装Certbot&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 更新apt源&lt;br&gt;
+# apt update&lt;br&gt;
+# 使用apt安装Certbot&lt;br&gt;
+# apt install certbot&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;申请内网机器证书&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 手动为域名mydomain申请SSL证书&lt;br&gt;
+# certbot certonly &amp;ndash;manual &amp;ndash;preferred-challenges dns -d mydomain&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Saving debug log to /var/log/letsencrypt/letsencrypt.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Plugins selected: Authenticator manual, Installer None
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Obtaining a new certificate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Performing the following challenges:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dns-01 challenge for mydomain
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NOTE: The IP of this machine will be publicly logged as having requested this
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certificate. If you&amp;#39;re running certbot in manual mode on a machine that is not
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;your server, please ensure you&amp;#39;re okay with that.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Are you OK with your IP being logged?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(Y)es/(N)o: y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Please deploy a DNS TXT record under the name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;_acme-challenge.mydomain with the following value:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Before continuing, verify the record is deployed.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Press Enter to Continue
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后, 按照说明在&lt;a class=&#34;link&#34; href=&#34;https://cloudflare.com/&#34;  title=&#34;Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;上设置相应的域名TXT记录:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/62-ssl-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+设置完成后, 可以看到相关域名TXT记录信息:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/62-ssl-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;u&gt;等待该记录生效后&lt;/u&gt;(&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/u013670453/article/details/114077571&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考文件&lt;/a&gt;中所说&amp;quot;dig +short -t txt _acme-challenge.example.com 命令验证DNS是否生效&amp;quot;, 似乎并不可用), 回到&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;运行界面, 按回车键继续:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Waiting for verification...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning up challenges
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;IMPORTANT NOTES:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; - Congratulations! Your certificate and chain have been saved at:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   /etc/letsencrypt/live/mydomain/fullchain.pem
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Your key file has been saved at:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   /etc/letsencrypt/live/mydomain/privkey.pem
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Your cert will expire on 2020-01-01. To obtain a new or tweaked
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   version of this certificate in the future, simply run certbot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   again. To non-interactively renew *all* of your certificates, run
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;certbot renew&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; - If you like Certbot, please consider supporting our work by:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Donating to ISRG / Let&amp;#39;s Encrypt:   https://letsencrypt.org/donate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Donating to EFF:                    https://eff.org/donate-le
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/62-ssl-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;center&gt;在内网使用Certbot命令申请SSL证书界面截图&lt;/center&gt;  
+&lt;h3 id=&#34;更新ssl证书&#34;&gt;更新SSL证书&lt;/h3&gt;
+&lt;p&gt;SSL证书会有一个有效期, 临近或过期时, 需要对相应SSL证书进行更新, 以避免服务出现异常。&lt;/p&gt;
+&lt;h4 id=&#34;更新lets-encrypt的免费ssl证书&#34;&gt;更新Let’s Encrypt的免费SSL证书&lt;/h4&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;更新相关文档&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://eff-certbot.readthedocs.io/en/stable/using.html#renewal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot用户手册之更新证书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://eff-certbot.readthedocs.io/en/stable/using.html#automated-renewals&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot用户手册之自动更新证书&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://serverdiary.com/linux/auto-renew-lets-encrypt-ssl-certificate-using-systemd-and-restart-nginx-apache-if-success/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Auto renew Let’s Encrypt SSL Certificate using Systemd and restart Nginx / Apache if success&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=how&amp;#43;to&amp;#43;change&amp;#43;systemd&amp;#43;certbot.service&amp;#43;renew&amp;#43;cert&amp;#43;nginx&amp;amp;newwindow=1&amp;amp;sxsrf=ALiCzsY9zYzZGVVg0IiO_AjqLwlC6KiM_w%3A1669915880516&amp;amp;ei=6OSIY-yKH6ei2roPpsOigAI&amp;amp;ved=0ahUKEwjsnvO2-dj7AhUnkVYBHaahCCAQ4dUDCA8&amp;amp;uact=5&amp;amp;oq=how&amp;#43;to&amp;#43;change&amp;#43;systemd&amp;#43;certbot.service&amp;#43;renew&amp;#43;cert&amp;#43;nginx&amp;amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDoKCAAQRxDWBBCwAzoHCCMQsAIQJ0oECEEYAEoECEYYAFDDG1inLmDCM2gBcAF4AIAB8AKIAZkUkgEFMi0zLjWYAQCgAQHIAQrAAQE&amp;amp;sclient=gws-wiz-serp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google: how to change systemd certbot.service renew cert nginx&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://serverfault.com/questions/790772/best-practices-for-setting-a-cron-job-for-lets-encrypt-certbot-renewal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Best practices for setting a cron job for Let&amp;rsquo;s Encrypt (Certbot) renewal?&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;p/%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%AE%B0%E5%BD%95/#ubuntu%E4%B8%8B%E7%9A%84systemd%E5%AE%9A%E6%97%B6%E5%99%A8&#34; &gt;Ubuntu下的Systemd定时器&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.miniasp.com/post/2021/05/09/Create-SSL-TLS-certificates-from-LetsEncrypt-using-Certbot-2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何使用 Certbot 建立免費的 TLS/SSL 網域憑證並自動產生 PFX 憑證&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[Let’s Encrypt]免费提供的SSL证书有效期是三个月, 需要定期更新证书。&lt;br&gt;
+使用apt安装&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;后, 已经在系统里建立了&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;定时器, 用于更新证书
+其中包括以下两个文件:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ll /lib/systemd/system/certbot.*&lt;br&gt;
+-rw-r&amp;ndash;r&amp;ndash; 1 root root 233 Feb 11  2019 /lib/systemd/system/certbot.service&lt;br&gt;
+-rw-r&amp;ndash;r&amp;ndash; 1 root root 156 Feb 11  2019 /lib/systemd/system/certbot.timer&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;任务:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# systemctl list-timers &amp;ndash;all&lt;br&gt;
+NEXT                         LEFT          LAST                         PASSED       UNIT                         ACTIVATE&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;br&gt;
+Fri 2022-12-02 07:42:23 CST  6h left       Thu 2022-12-01 12:46:10 CST  12h ago      certbot.timer                certbot.&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;7 timers listed.&lt;/p&gt;
+&lt;p&gt;# systemctl list-unit-files &amp;ndash;type timer&lt;br&gt;
+UNIT FILE                    STATE&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;br&gt;
+certbot.timer                enabled&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;8 unit files listed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;服务和定时器状态:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# systemctl status certbot.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* certbot.service - Certbot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Loaded: loaded (/lib/systemd/system/certbot.service; static; vendor preset: enabled)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Active: inactive (dead) since Thu 2022-12-01 12:46:13 CST; 12h ago
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     Docs: file:///usr/share/doc/python-certbot-doc/html/index.html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           https://letsencrypt.readthedocs.io/en/latest/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Process: 22375 ExecStart=/usr/bin/certbot -q renew (code=exited, status=0/SUCCESS)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; Main PID: 22375 (code=exited, status=0/SUCCESS)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Dec 01 12:46:10 Aml_R3300L systemd[1]: Starting Certbot...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Dec 01 12:46:13 Aml_R3300L systemd[1]: Started Certbot.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@Aml_R3300L:/lib/systemd/system# systemctl status certbot.timer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* certbot.timer - Run certbot twice daily
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Loaded: loaded (/lib/systemd/system/certbot.timer; enabled; vendor preset: enabled)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Active: active (waiting) since Thu 2022-12-01 11:26:07 CST; 13h ago
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Trigger: Fri 2022-12-02 07:42:23 CST; 6h left
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Dec 01 11:26:07 Aml_R3300L systemd[1]: Started Run certbot twice daily.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://serverdiary.com/linux/auto-renew-lets-encrypt-ssl-certificate-using-systemd-and-restart-nginx-apache-if-success/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Auto renew Let’s Encrypt SSL Certificate using Systemd and restart Nginx / Apache if success&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于更新SSL证书后, 需要重启Nginx(或其他相关的服务), 因此需要修改文件certbot.service如下(ExecStart行):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ExecStart=/usr/local/bin/certbot renew &amp;ndash;post-hook &amp;ldquo;systemctl reload nginx&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果不让certbot输出信息(静默模式), 可修改为:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ExecStart=/usr/local/bin/certbot -q renew &amp;ndash;post-hook &amp;ldquo;systemctl reload nginx&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://certbot.eff.org/&#34;  title=&#34;Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Certbot&lt;/a&gt;参数说明可以参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/#lets-encrypt&#34; &gt;Let’s Encrypt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

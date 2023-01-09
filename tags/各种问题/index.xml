@@ -385,6 +385,760 @@ Usage: eval `lesspipe`&lt;/li&gt;
 &lt;/div&gt;&lt;h3 id=&#34;ubuntu官方镜像站列表&#34;&gt;Ubuntu官方镜像站列表&lt;/h3&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://launchpad.net/ubuntu/&amp;#43;cdmirrors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Official CD Mirrors for Ubuntu&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;查看程序占用的socket端口信息&#34;&gt;查看程序占用的socket端口信息&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 以root用户身份查看netstat -ap, 可以看到占用socket端口的进程程序名+进程ID号  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user@machine:~$ sudo netstat -ap | grep tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[sudo] password for user:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN      597/systemd-resolve
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 localhost:3010          0.0.0.0:*               LISTEN      57431/sshd: user@
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 0.0.0.0:http            0.0.0.0:*               LISTEN      686/nginx: master p
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 0.0.0.0:ssh           0.0.0.0:*               LISTEN      694/sshd: /usr/sbin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0     64 4.44.70.19.sta:ssh 23.22.35.87:53607   ESTABLISHED 57341/sshd: user
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 4.44.70.19.sta:ssh 23.22.35.87:53608   ESTABLISHED 57367/sshd: user
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 [::]:https              [::]:*                  LISTEN      652/trojan-go
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 [::]:ssh              [::]:*                  LISTEN      694/sshd: /usr/sbin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 localhost:3010          [::]:*                  LISTEN      57431/sshd: user@
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用ps -aux可以查看进程程序名与进程ID号对应表
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user@machine:~$ ps -aux | grep trojan
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root         652  0.0  1.2 4924136 12028 ?       Ssl  05:11   0:04 /tmp/trj/trojan-go -config /tmp/trj/server.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user     57701  0.0  0.2   7004  2176 pts/0    S+   11:00   0:00 grep --color=auto trojan
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user@machine:~$ ps -aux | grep nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root         686  0.0  0.0  10536   812 ?        Ss   05:11   0:00 nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root         689  0.0  0.4  11592  3972 ?        S    05:11   0:00 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user     57733  0.0  0.2   7004  2180 pts/0    S+   11:00   0:00 grep --color=auto nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 以非root用户身份查看netstat -ap, 可以看到socket端口占用情况, 但看不到相关的进程信息  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user@machine:~$ netstat -ap | grep tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(Not all processes could be identified, non-owned process info
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; will not be shown, you would have to be root to see it all.)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN      -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 localhost:3010          0.0.0.0:*               LISTEN      -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 0.0.0.0:http            0.0.0.0:*               LISTEN      -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 0.0.0.0:ssh           0.0.0.0:*               LISTEN      -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0    864 4.44.70.19.sta:ssh 23.22.35.87:53607   ESTABLISHED -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 4.44.70.19.sta:ssh 23.22.35.87:53608   ESTABLISHED -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 [::]:https              [::]:*                  LISTEN      -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 [::]:ssh              [::]:*                  LISTEN      -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 localhost:3010          [::]:*                  LISTEN      -
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;ubuntu1804启用rclocal设置开机启动脚本&#34;&gt;Ubuntu18.04启用rc.local设置开机启动脚本&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/u013554213/article/details/102947060&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ubuntu-18.04 启用 rc.local 设置开机启动脚本&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;修改/lib/systemd/system/rc-local.service, 添加rc-local.service&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /lib/systemd/system/rc-local.service&lt;br&gt;
+# 在最后加入以下内容&lt;br&gt;
+[Install]&lt;br&gt;
+WantedBy=multi-user.target&lt;br&gt;
+Alias=rc-local.server&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将 /lib/systemd/system/rc-local.service 链接到 /etc/systemd/system/ 目录下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# sudo systemctl enable rc-local.service&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建/etc/rc.local文件，赋可执行权限&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#touch /etc/rc.local&lt;br&gt;
+# chmod 0755 /etc/rc.local&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编辑rc.local，添加需要开机启动的任务&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /etc/rc.local&lt;br&gt;
+#!/bin/bash&lt;br&gt;
+# 测试代码&lt;br&gt;
+echo &amp;ldquo;test rc&amp;rdquo; &amp;gt; /tmp/test.log&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;完成。&lt;/p&gt;
+&lt;h3 id=&#34;ubuntu下的systemd定时器&#34;&gt;Ubuntu下的Systemd定时器&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ruanyifeng.com/blog/2018/03/systemd-timer.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Systemd 定时器教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.miniasp.com/post/2021/05/09/Create-SSL-TLS-certificates-from-LetsEncrypt-using-Certbot-2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何使用 Certbot 建立免費的 TLS/SSL 網域憑證並自動產生 PFX 憑證&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;系统:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Armbian Linux 5.3.0-aml-g12(Ubuntu 18.04.3 LTS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简单查看地systemd定时器状态&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux的Systemd也可以设置定时器, 可以使用&amp;quot;systemctl list-timers --all&amp;quot;查看所有Timer单元
+&lt;blockquote&gt;
+&lt;p&gt;# systemctl list-timers --all&lt;br&gt;
+NEXT                         LEFT          LAST                         PASSED       UNIT                         ACTIVATES&lt;br&gt;
+Fri 2022-12-02 01:01:58 CST  47min left    Thu 2022-12-01 14:00:14 CST  10h ago      motd-news.timer              motd-news.service&lt;br&gt;
+Fri 2022-12-02 03:26:22 CST  3h 11min left n/a                          n/a          certbot.timer                certbot.service&lt;br&gt;
+Fri 2022-12-02 06:13:50 CST  5h 59min left Thu 2022-12-01 06:37:14 CST  17h ago      apt-daily-upgrade.timer      apt-daily-upgrade.service&lt;br&gt;
+Fri 2022-12-02 12:15:20 CST  12h left      Thu 2022-12-01 19:18:14 CST  4h 56min ago apt-daily.timer              apt-daily.service&lt;br&gt;
+Fri 2022-12-02 15:54:14 CST  15h left      Thu 2022-12-01 15:54:14 CST  8h ago       systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service&lt;br&gt;
+Mon 2022-12-05 00:00:00 CST  2 days left   Mon 2022-11-28 00:00:14 CST  4 days ago   fstrim.timer                 fstrim.service&lt;/p&gt;
+&lt;p&gt;6 timers listed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于Systemd任务类型、任务文件目录&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由于Systemd要做的事情太多，导致单元有很多不同的种类，大概一共有12种。举例来说，Service 单元负责后台服务，Timer 单元负责定时器，Slice 单元负责资源的分配。&lt;br&gt;
+每个单元都有一个单元描述文件，它们分散在三个目录。
+&lt;ul&gt;
+&lt;li&gt;/lib/systemd/system：系统默认的单元文件&lt;/li&gt;
+&lt;li&gt;/etc/systemd/system：用户安装的软件的单元文件&lt;/li&gt;
+&lt;li&gt;/usr/lib/systemd/system：用户自己定义的单元文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Systemd定时器相关文件包括&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Service单元(文件, 文件名后缀.service, 比如certbot.service)&lt;/li&gt;
+&lt;li&gt;Timer单元(文件, 文件名后缀.timer, 比如certbot.timer)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Service单元就是所要执行的任务&lt;br&gt;
+文件内容格式如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# cat certbot.service&lt;br&gt;
+[Unit]&lt;br&gt;
+Description=Certbot&lt;br&gt;
+Documentation=file:///usr/share/doc/python-certbot-doc/html/index.html&lt;br&gt;
+Documentation=https://letsencrypt.readthedocs.io/en/latest/&lt;br&gt;
+[Service]&lt;br&gt;
+Type=oneshot&lt;br&gt;
+ExecStart=/usr/bin/certbot -q renew&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Service单元定义了如何执行任务&lt;br&gt;
+要定时执行这个Service，还必须定义Timer单元&lt;br&gt;
+文件内容格式如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# cat certbot.timer&lt;br&gt;
+[Unit]&lt;br&gt;
+Description=Run certbot twice daily&lt;/p&gt;
+&lt;p&gt;[Timer]&lt;br&gt;
+OnCalendar=&lt;em&gt;-&lt;/em&gt;-* 00,12:00:00&lt;br&gt;
+RandomizedDelaySec=43200&lt;br&gt;
+Persistent=true&lt;/p&gt;
+&lt;p&gt;[Install]&lt;br&gt;
+WantedBy=timers.target&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中, [Timer]部分定制定时器。Systemd 提供以下一些字段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OnActiveSec：定时器生效后，多少时间开始执行任务&lt;/li&gt;
+&lt;li&gt;OnBootSec：系统启动后，多少时间开始执行任务&lt;/li&gt;
+&lt;li&gt;OnStartupSec：Systemd 进程启动后，多少时间开始执行任务&lt;/li&gt;
+&lt;li&gt;OnUnitActiveSec：该单元上次执行后，等多少时间再次执行&lt;/li&gt;
+&lt;li&gt;OnUnitInactiveSec： 定时器上次关闭后多少时间，再次执行&lt;/li&gt;
+&lt;li&gt;OnCalendar：基于绝对时间，而不是相对时间执行&lt;/li&gt;
+&lt;li&gt;AccuracySec：如果因为各种原因，任务必须推迟执行，推迟的最大秒数，默认是60秒&lt;/li&gt;
+&lt;li&gt;Unit：真正要执行的任务，默认是同名的带有.service后缀的单元&lt;/li&gt;
+&lt;li&gt;Persistent：如果设置了该字段，即使定时器到时没有启动，也会自动执行相应的单元&lt;/li&gt;
+&lt;li&gt;WakeSystem：如果系统休眠，是否自动唤醒系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面的命令可以查看所有的单元文件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 查看所有单元&lt;br&gt;
+$ systemctl list-unit-files&lt;/p&gt;
+&lt;p&gt;# 查看所有 Service 单元&lt;br&gt;
+$ systemctl list-unit-files --type service&lt;/p&gt;
+&lt;p&gt;# 查看所有 Timer 单元&lt;br&gt;
+$ systemctl list-unit-files --type timer&lt;br&gt;
+# 或&lt;br&gt;
+$ systemctl list-timers --all&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以下是定时器的相关命令:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 启动mytimer.timer定时器&lt;br&gt;
+$ sudo systemctl start mytimer.timer&lt;/p&gt;
+&lt;p&gt;# 查看mytimer.timer定时器的状态&lt;br&gt;
+$ systemctl status mytimer.timer&lt;/p&gt;
+&lt;p&gt;# 查看所有正在运行的定时器&lt;br&gt;
+$ systemctl list-timers&lt;/p&gt;
+&lt;p&gt;# 关闭mytimer.timer定时器&lt;br&gt;
+$ sudo systemctl stop myscript.timer&lt;/p&gt;
+&lt;p&gt;# 下次开机，自动运行这个定时器&lt;br&gt;
+$ sudo systemctl enable myscript.timer&lt;/p&gt;
+&lt;p&gt;# 关闭定时器的开机自启动&lt;br&gt;
+$ sudo systemctl disable myscript.timer&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;另外, Systemd的日志功能很强，提供统一的命令, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 查看整个日志&lt;br&gt;
+$ sudo journalctl&lt;/p&gt;
+&lt;p&gt;# 查看 mytimer.timer 的日志&lt;br&gt;
+$ sudo journalctl -u mytimer.timer&lt;/p&gt;
+&lt;p&gt;# 查看 mytimer.timer 和 mytimer.service 的日志&lt;br&gt;
+$ sudo journalctl -u mytimer&lt;/p&gt;
+&lt;p&gt;# 从结尾开始查看最新日志&lt;br&gt;
+$ sudo journalctl -f&lt;/p&gt;
+&lt;p&gt;# 从结尾开始查看 mytimer.timer 的日志&lt;br&gt;
+$ journalctl -f -u timer.timer&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;使用浏览器访问linux终端&#34;&gt;使用浏览器访问Linux终端&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Web-based_SSH&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Web-based SSH&lt;/a&gt;&lt;br&gt;
+介绍基于web的ssh服务器概况&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用时, 多通过&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/&#34;  title=&#34;A web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx&lt;/a&gt;做反代&lt;br&gt;
+修改Nginx配置文件/etc/nginx/sites-enabled/default,&lt;br&gt;
+用例如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# vim /etc/nginx/sites-enabled/default  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server {  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    location /abcdefghijk {  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        proxy_pass http://127.0.0.1:4200;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;服务器列表&lt;font color=lightgrey&gt;(看过的)&lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Shellinabox&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+Shell In A Box实现了一个Web服务器，可以将任意命令行工具导出到基于Web的终端仿真器。任何支持JavaScript和CSS的Web浏览器都可以访问该模拟器，并且不需要任何额外的浏览器插件。
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/wikis/shellinaboxd_man.wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox - shellinaboxd_man.wiki&lt;/a&gt; shellinabox官方wiki&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/shellinabox/shellinabox&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github shellinabox&lt;/a&gt; Shell In A Box官方项目的一个分支。创建分支是因为原始项目不是由授权作者维护的。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/shellinabox/shellinabox/wiki/shellinaboxd_man&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;man shellinaboxd&lt;/a&gt; shellinabox的man手册&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://ports.ubuntu.com/pool/universe/s/shellinabox/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ports shellinabox&lt;/a&gt; shellinabox的嵌入式系统版本安装包下载列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/tsl0922/ttyd&#34;  title=&#34;ttyd is a simple command-line tool for sharing terminal over the web.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ttyd&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt; 一个简单的命令行工具，用于通过网络共享终端&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;A Linux operating system targeting embedded devices&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWrt&lt;/a&gt;可用&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/webssh/&#34;  title=&#34;A simple web application to be used as an ssh client to connect to your ssh servers. It is written in Python, base on tornado, paramiko and xterm.js.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyPI webssh&lt;/a&gt;&lt;br&gt;
+用Python写的webssh工具&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Jrohy/webssh&#34;  title=&#34;简易在线ssh和sftp工具, 可在线敲命令和上传下载文件, Opensource&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jrohy webssh&lt;/a&gt;&lt;br&gt;
+简易在线ssh和sftp工具, 可在线敲命令和上传下载文件; 也提供Docker版本&lt;br&gt;
+Jrohy的开源webssh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Shellinabox&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=jqBYUG_0CBM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Youtube video: How To Install Shellinabox On Ubuntu 18.04&lt;/a&gt;&lt;/strong&gt; 确认可用&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://help.ubuntu.com/community/shellinabox&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt; shellinabox安装、配置、使用说明, 简单且清晰&lt;br&gt;
+来源: &lt;a class=&#34;link&#34; href=&#34;https://help.ubuntu.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ubuntu官方文档&lt;/a&gt; Community Help Wiki&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/code1992/p/10287418.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Web终端之使用shellinabox在浏览器进行ssh登录&lt;/a&gt;&lt;br&gt;
+在Ubuntu 18.0.3/4上, 使用apt install shellinabox安装, shellinabox版本为2.20build1, 启动运行没问题, 但无法使用浏览器访问, 浏览器显示:&lt;br&gt;
+&amp;ldquo;未发送任何数据。&lt;br&gt;
+ERR_EMPTY_RESPONSE&amp;rdquo;&lt;br&gt;
+&lt;u&gt;与缺省使用&amp;quot;https&amp;quot;协议有关, 改为使用&amp;quot;http&amp;quot;协议后问题解决&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/tsl0922/ttyd&#34;  title=&#34;ttyd is a simple command-line tool for sharing terminal over the web.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ttyd&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/chanjiaozhan5779/article/details/100969253&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;更优于Shellinabox的web shell工具 -- ttyd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/webssh/&#34;  title=&#34;A simple web application to be used as an ssh client to connect to your ssh servers. It is written in Python, base on tornado, paramiko and xterm.js.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyPI webssh&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://tweenpath.net/install-webssh-debian/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Install webssh on Debian&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt; &lt;font color=lightgrey&gt;Tried&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linuxshelltips.com/webssh-connect-linux-terminal-browser/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebSSH – Connect Linux Terminal from Your Web Browser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.ttlsa.com/linux/wssh-use-web-access-linux/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用浏览器访问Linux服务器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.51cto.com/article/398928.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用浏览器访问Linux终端的方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;系统:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Armbian Linux 5.3.0-aml-g12(Ubuntu 18.04.3 LTS)&lt;/li&gt;
+&lt;li&gt;Ubuntu 18.04.2LTS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;安装shellinabox-可用&#34;&gt;安装Shellinabox &lt;strong&gt;可用&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;注:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在Ubuntu 18.04.x(PC)上, 已确认
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://archive.ubuntu.com/ubuntu/pool/universe/s/shellinabox/shellinabox_2.21_amd64.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox_2.21_amd64.deb&lt;/a&gt;版本, &lt;strong&gt;可用&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://archive.ubuntu.com/ubuntu/pool/universe/s/shellinabox/shellinabox_2.21build1_amd64.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox_2.21build1_amd64.deb&lt;/a&gt;版本, &lt;em&gt;&lt;strong&gt;改为http协议后可用&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;ShellInABox version 2.10 (revision 239) apt安装包, &lt;em&gt;&lt;strong&gt;改为http协议后可用&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在Armbian Linux 5.3.0-aml-g12(Ubuntu 18.04.3 LTS)上, 已确认
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://ports.ubuntu.com/pool/universe/s/shellinabox/shellinabox_2.21_arm64.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox_2.21_arm64.deb&lt;/a&gt;版本 &lt;em&gt;&lt;strong&gt;可用(需改设置)&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;shellinabox arm64 2.20build1 apt安装包, &lt;em&gt;&lt;strong&gt;改为http协议后可用&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;所测原生apt安装包都可使用, 只需将协议由&amp;quot;https&amp;quot;改为&amp;quot;http&amp;rdquo;:&lt;/strong&gt;&lt;br&gt;
+修改/etc/default/shellinabox, 参数&amp;quot;SHELLINABOX_ARGS&amp;quot;改为(增加&amp;quot;-t&amp;quot;参数):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SHELLINABOX_ARGS=&amp;quot;--no-beep -t&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即协议由原&amp;quot;https&amp;quot;, 改为&amp;quot;http&amp;quot;后, 确认可以正常访问并使用。&lt;br&gt;
+&lt;u&gt;考虑到&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;都会由&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/&#34;  title=&#34;A web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx&lt;/a&gt;反向代理, 所以使用http协议没有问题。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;按照&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=jqBYUG_0CBM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Youtube video: How To Install Shellinabox On Ubuntu 18.04&lt;/a&gt;进行操作:&lt;br&gt;
+下载shellinabox_2.14-1_amd64.deb安装包&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# wget &lt;a class=&#34;link&#34; href=&#34;http://archive.ubuntu.com/ubuntu/pool/universe/s/shellinabox/shellinabox_2.14-1_amd64.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://archive.ubuntu.com/ubuntu/pool/universe/s/shellinabox/shellinabox_2.14-1_amd64.deb&lt;/a&gt;&lt;br&gt;
+&amp;ndash;2021-11-02 03:34:17&amp;ndash;  &lt;a class=&#34;link&#34; href=&#34;http://archive.ubuntu.com/ubuntu/pool/universe/s/shellinabox/shellinabox_2.14-1_amd64.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://archive.ubuntu.com/ubuntu/pool/universe/s/shellinabox/shellinabox_2.14-1_amd64.deb&lt;/a&gt;&lt;br&gt;
+Resolving archive.ubuntu.com (archive.ubuntu.com)&amp;hellip; 91.189.91.38, 91.189.91.39, 185.125.190.36, &amp;hellip;&lt;br&gt;
+Connecting to archive.ubuntu.com (archive.ubuntu.com)|91.189.91.38|:80&amp;hellip; connected.&lt;br&gt;
+HTTP request sent, awaiting response&amp;hellip; 200 OK&lt;br&gt;
+Length: 129124 (126K) [application/x-debian-package]&lt;br&gt;
+Saving to: ‘shellinabox_2.14-1_amd64.deb’&lt;/p&gt;
+&lt;p&gt;shellinabox_2.14-1_amd6 100%[===============================&amp;gt;] 126.10K   167KB/s    in 0.8s&lt;/p&gt;
+&lt;p&gt;2021-11-02 03:34:21 (167 KB/s) - ‘shellinabox_2.14-1_amd64.deb’ saved [129124/129124]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用dpkg进行安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# dpkg -i shellinabox_2.14-1_amd64.deb&lt;br&gt;
+Selecting previously unselected package shellinabox.&lt;br&gt;
+(Reading database &amp;hellip; 69727 files and directories currently installed.)&lt;br&gt;
+Preparing to unpack shellinabox_2.14-1_amd64.deb &amp;hellip;&lt;br&gt;
+Unpacking shellinabox (2.14-1) &amp;hellip;&lt;br&gt;
+Setting up shellinabox (2.14-1) &amp;hellip;&lt;br&gt;
+Installing new version of config file /etc/shellinabox/options-available/01+Color Terminal.css &amp;hellip;&lt;br&gt;
+Installing new version of config file /etc/shellinabox/options-available/00+Black on White.css &amp;hellip;&lt;br&gt;
+Installing new version of config file /etc/shellinabox/options-available/00_White On Black.css &amp;hellip;&lt;br&gt;
+Installing new version of config file /etc/shellinabox/options-available/01_Monochrome.css &amp;hellip;&lt;br&gt;
+Installing new version of config file /etc/init.d/shellinabox &amp;hellip;&lt;br&gt;
+Processing triggers for systemd (237-3ubuntu10.56) &amp;hellip;&lt;br&gt;
+Processing triggers for ureadahead (0.100.0-20) &amp;hellip;&lt;br&gt;
+Processing triggers for man-db (2.8.3-2ubuntu0.1) &amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;重启&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service shellinabox restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;状态&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service shellinabox status&lt;br&gt;
+● shellinabox.service - LSB: Shell In A Box Daemon&lt;br&gt;
+Loaded: loaded (/etc/init.d/shellinabox; generated)&lt;br&gt;
+Active: active (running) since Fri 2021-11-02 03:35:02 UTC; 3s ago&lt;br&gt;
+Docs: man:systemd-sysv-generator(8)&lt;br&gt;
+Process: 7563 ExecStop=/etc/init.d/shellinabox stop (code=exited, status=0/SUCCESS)&lt;br&gt;
+Process: 7628 ExecStart=/etc/init.d/shellinabox start (code=exited, status=0/SUCCESS)&lt;br&gt;
+Tasks: 2 (limit: 1028)&lt;br&gt;
+CGroup: /system.slice/shellinabox.service&lt;br&gt;
+├─7663 /usr/bin/shellinaboxd -q --background=/var/run/shellinaboxd.pid -c /var/lib/sh&lt;br&gt;
+└─7664 /usr/bin/shellinaboxd -q --background=/var/run/shellinaboxd.pid -c /var/lib/sh&lt;/p&gt;
+&lt;p&gt;Dec 02 03:35:01 testdev systemd[1]: Starting LSB: Shell In A Box Daemon&amp;hellip;&lt;br&gt;
+Dec 02 03:35:02 testdev systemd[1]: Started LSB: Shell In A Box Daemon.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看监听端口&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# netstat -ap | grep shell&lt;br&gt;
+tcp        0      0 0.0.0.0:4200            0.0.0.0:*               LISTEN      7663/shellinaboxd&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看网络配置&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# ip r&lt;br&gt;
+default via 192.168.1.1 dev eth0 proto dhcp src 192.168.1.72 metric 100&lt;br&gt;
+192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.72&lt;br&gt;
+192.168.1.1 dev eth0 proto dhcp scope link src 192.168.1.72 metric 100&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用浏览器打开&amp;quot;https://192.168.1.72:4200&amp;quot;, 即可访问&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;的shell&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/18-qa-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;修改&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;的配置&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://linoxide.com/web-remote-your-server/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Shell in a Box - Remote to your Linux Server via Web Browser&lt;/a&gt;&lt;br&gt;
+Ubuntu上&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;的配置文件是: /etc/default/shellinaboxd, 在该文件中&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SHELLINABOX_PORT 监听端口&lt;/li&gt;
+&lt;li&gt;SHELLINABOX_ARGS 运行参数&lt;br&gt;
+运行参数改为&amp;quot;--no-beep -t&amp;quot;, 即改为使用http协议, 即改为访问&amp;quot;http://地址:端口&amp;quot;(缺省安装为用https协议)&lt;br&gt;
+运行参数改为&amp;quot;--no-beep -t --localhost-only&amp;quot;, 即改为使用http协议监听127.0.0.1, 即改为访问&amp;quot;http://localhost:端口&amp;quot;(缺省安装为用https协议, 监听0.0.0.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在Ubuntu 18.04.2LTS上, 使用apt安装shellinabox, shellinabox可以正常运行, &lt;strong&gt;但无法使用浏览器访问shellinabox&lt;/strong&gt;(见后面注)&lt;br&gt;
+下载的shellinabox版本为2.20build1&lt;br&gt;
+注: 后面的测试发现, 将协议由https改为http后, 也可以使用 - 修改/etc/default/shellinabox, &amp;ldquo;SHELLINABOX_ARGS&amp;quot;增加&amp;rdquo;-t&amp;quot;参数&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# apt install shellinabox&lt;br&gt;
+Reading package lists&amp;hellip; Done&lt;br&gt;
+Building dependency tree&lt;br&gt;
+Reading state information&amp;hellip; Done&lt;br&gt;
+The following NEW packages will be installed:&lt;br&gt;
+shellinabox&lt;br&gt;
+0 upgraded, 1 newly installed, 0 to remove and 111 not upgraded.&lt;br&gt;
+Need to get 126 kB of archives.&lt;br&gt;
+After this operation, 517 kB of additional disk space will be used.&lt;br&gt;
+Get:1 &lt;a class=&#34;link&#34; href=&#34;https://mirrors.cloud.tencent.com/ubuntu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mirrors.cloud.tencent.com/ubuntu&lt;/a&gt; bionic/universe amd64 shellinabox amd64 2.20build1 [126 kB]&lt;br&gt;
+Fetched 126 kB in 1s (169 kB/s)&lt;br&gt;
+Selecting previously unselected package shellinabox.&lt;br&gt;
+(Reading database &amp;hellip; 69716 files and directories currently installed.)&lt;br&gt;
+Preparing to unpack &amp;hellip;/shellinabox_2.20build1_amd64.deb &amp;hellip;&lt;br&gt;
+Unpacking shellinabox (2.20build1) &amp;hellip;&lt;br&gt;
+Setting up shellinabox (2.20build1) &amp;hellip;&lt;br&gt;
+Processing triggers for man-db (2.8.3-2ubuntu0.1) &amp;hellip;&lt;br&gt;
+Processing triggers for ureadahead (0.100.0-20) &amp;hellip;&lt;br&gt;
+Processing triggers for systemd (237-3ubuntu10.56) &amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之后用apt remove后, 改为前述方法用dpkg重新安装shellinabox后即可正常使用&lt;br&gt;
+不清楚问题的原因&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;安装wssh-失败&#34;&gt;安装wssh &lt;em&gt;&lt;strong&gt;失败&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tweenpath.net/install-webssh-debian/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Install webssh on Debian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linuxshelltips.com/webssh-connect-linux-terminal-browser/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebSSH – Connect Linux Terminal from Your Web Browser&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装python3-pip工具&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# apt install python3-pip&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用pip3安装webssh&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# pip3 install webssh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;报错:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ModuleNotFoundError: No module named &amp;lsquo;setuptools&amp;rsquo;&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/14426491/python-3-importerror-no-module-named-setuptools&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python 3: ImportError &amp;ldquo;No Module named Setuptools&amp;rdquo;&lt;/a&gt;&lt;br&gt;
+安装python3-setuptools&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# apt install python3-setuptools&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Complete output from command python setup.py egg_info:&lt;br&gt;
+c/_cffi_backend.c:2:10: fatal error: Python.h: No such file or directory&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fatal error: Python.h: No such file or directory&lt;/a&gt;&lt;br&gt;
+安装python3-dev&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# apt install python3-dev&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ModuleNotFoundError: No module named &amp;lsquo;setuptools_rust&amp;rsquo;&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://github.com/MISP/misp-docker/issues/113&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ModuleNotFoundError: No module named &amp;lsquo;setuptools_rust&amp;rsquo; #113&lt;/a&gt;&lt;br&gt;
+安装setuptools-rust&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# pip3 install setuptools-rust&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ERROR: Failed to build one or more wheels&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/53204916/what-is-the-meaning-of-failed-building-wheel-for-x-in-pip-install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;What is the meaning of &amp;ldquo;Failed building wheel for X&amp;rdquo; in pip install?&lt;/a&gt;&lt;br&gt;
+安装wheel&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# pip3 install wheel&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装wheel后, 还是报同样的错误&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;放弃&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/webssh/&#34;  title=&#34;A simple web application to be used as an ssh client to connect to your ssh servers. It is written in Python, base on tornado, paramiko and xterm.js.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyPI webssh&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;linux安装包的来源列表&#34;&gt;Linux安装包的来源列表&lt;/h3&gt;
+&lt;p&gt;以&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;为例&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;软件包官网&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox官网&lt;/a&gt;下的&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Downloads&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;软件包开源站&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/shellinabox/shellinabox&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github shellinabox&lt;/a&gt;下的&lt;a class=&#34;link&#34; href=&#34;https://github.com/shellinabox/shellinabox/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases&lt;/a&gt;&lt;br&gt;
+但是,  &lt;a class=&#34;link&#34; href=&#34;https://github.com/shellinabox/shellinabox&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github shellinabox&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://github.com/shellinabox/shellinabox/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases&lt;/a&gt;里没有安装包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;操作系统的源&lt;br&gt;
+如&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ubuntu可以查看/etc/apt/sources.list文件&lt;br&gt;
+看到源网站信息为: &lt;a class=&#34;link&#34; href=&#34;https://mirrors.cloud.tencent.com/ubuntu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mirrors.cloud.tencent.com/ubuntu&lt;/a&gt;&lt;br&gt;
+并跟踪到&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;目录: &lt;a class=&#34;link&#34; href=&#34;https://mirrors.cloud.tencent.com/ubuntu/pool/universe/s/shellinabox/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mirrors.cloud.tencent.com/ubuntu/pool/universe/s/shellinabox/&lt;/a&gt;&lt;br&gt;
+这里有很多&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;相关文件&lt;/li&gt;
+&lt;li&gt;Armbian同样可查看/etc/apt/sources.list文件&lt;br&gt;
+&lt;u&gt;Armbian和ubuntu是同类系统&lt;/u&gt;&lt;br&gt;
+看到源网站信息为: &lt;a class=&#34;link&#34; href=&#34;http://ports.ubuntu.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://ports.ubuntu.com/&lt;/a&gt;&lt;br&gt;
+并跟踪到&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;目录: &lt;a class=&#34;link&#34; href=&#34;http://ports.ubuntu.com/pool/universe/s/shellinabox/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://ports.ubuntu.com/pool/universe/s/shellinabox/&lt;/a&gt;&lt;br&gt;
+这里同样有很多&lt;a class=&#34;link&#34; href=&#34;https://code.google.com/archive/p/shellinabox/&#34;  title=&#34;Implements a web server that can export arbitrary command line tools to a web based terminal emulator.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shellinabox&lt;/a&gt;相关文件, 由于armbian是为嵌入式硬件编写, 因此目录下有标识为arm/ppc/risc等的包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用搜索引擎进行查找&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;macbook相关问题&#34;&gt;Macbook相关问题&lt;/h2&gt;
+&lt;h3 id=&#34;macbook在windows系统-如何使用windows自带的截屏功能&#34;&gt;Macbook在Windows系统, 如何使用windows自带的截屏功能&lt;/h3&gt;
+&lt;p&gt;问题来源: Macbook键盘上没有Print Screen按键&lt;br&gt;
+处理:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全屏截图：fn+shift+F11&lt;/li&gt;
+&lt;li&gt;窗口截图：fn+option+shift+F11&lt;/li&gt;
+&lt;li&gt;如果使用长Mac键盘的，可以使用F14作为截图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;vmware相关问题&#34;&gt;Vmware相关问题&lt;/h2&gt;
+&lt;h3 id=&#34;vmware-workstation上安装ubuntu1804lts报错的问题&#34;&gt;Vmware workstation上安装Ubuntu18.04LTS报错的问题&lt;/h3&gt;
+&lt;p&gt;环境:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统&lt;br&gt;
+Windows 10 + Vmware workstation 17&lt;br&gt;
+虚拟机用Ubuntu server 18.04LTS&lt;/li&gt;
+&lt;li&gt;错误信息&lt;br&gt;
+&lt;u&gt;VMware Workstation 不可恢复错误: (mks) ISBRendererComm: Lost connection to mksSandbox (2784)&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_41273101/article/details/122283882&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vmware安装win10报错&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理方式: 在虚拟机关机后, 进入该&lt;u&gt;&amp;ldquo;虚拟机设置&amp;rdquo;-&amp;ldquo;硬件&amp;rdquo;-&amp;ldquo;显示器&amp;rdquo;-&amp;ldquo;3D图形&amp;rdquo;, 取消勾选&amp;quot;3D加速图形(3)&amp;quot;&lt;/u&gt;&lt;br&gt;
+虽然与&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_41273101/article/details/122283882&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vmware安装win10报错&lt;/a&gt;中的错误数字号不同(2784/2878), 但处理方式相同&lt;/p&gt;
+&lt;h3 id=&#34;vmware-workstation-17设置自动启动报错-font-colorredbfailedbfont&#34;&gt;Vmware workstation 17设置自动启动报错 &lt;font color=red&gt;&lt;B&gt;Failed&lt;/B&gt;&lt;/font&gt;&lt;/h3&gt;
+&lt;p&gt;报错信息如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无法更新&amp;quot;自动启动&amp;quot;配置。&lt;br&gt;
+请确保存在vmAutoStart.xml文件, 并且您有权写入此文件。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/18-qa-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.vmware.com/cn/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-44497201-A4AC-4867-BEE7-1BDC7641E66C.html?hWord=N4IghgNiBcKFeBgKpUPQqDBaYYfaNBc5iAvkA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;为 Windows 主机上的本地虚拟机启用自动启动&lt;/a&gt; 来自Vmware官方文库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;需要确认以下几点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;该虚拟机配置文件(.vmx, 在该虚拟机文件目录下)的所有者(或称属主) 为 用户A&lt;/li&gt;
+&lt;li&gt;在指定目录(当前环境下为C:\ProgramData\VMware\VMware Workstation目录)下存在vmAutoStart.xml文件, 且用户A有写权限&lt;/li&gt;
+&lt;li&gt;已安装VMware自动启动服务&lt;/li&gt;
+&lt;li&gt;在VMware自动启动服务中, 设置以用户A的身份执行操作&lt;/li&gt;
+&lt;li&gt;启动VMware自动启动服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;操作:&lt;br&gt;
+虚拟机名为testas&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虚拟机配置文件testas.vmx所有者(或称属主) 为 userA&lt;/li&gt;
+&lt;li&gt;修改&amp;quot;C:\ProgramData\VMware\VMware Workstation\vmAutoStart.xml&amp;quot;文件属性, 在&amp;quot;安全&amp;quot;里, 点击编辑, 并为userA添加写入权限&lt;/li&gt;
+&lt;li&gt;运行&amp;quot;services.msc&amp;quot;, 并确认到已安装了VMware自动启动服务&lt;/li&gt;
+&lt;li&gt;VMware自动启动服务的&amp;quot;属性&amp;quot;-&amp;ldquo;登录&amp;quot;中, 设置以userA身份登录&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/18-qa-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;设置完成后启动VMware自动启动服务&lt;/li&gt;
+&lt;li&gt;即可回到Vmware workstation中去设置虚拟机随系统自动启动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结果:&lt;br&gt;
+设置虚拟机随系统自动启动操作成功完成, 但是, &lt;u&gt;经过测试, 并未能实现vmware虚拟机跟随windows系统启动&lt;/u&gt;&lt;br&gt;
+&lt;font color=red&gt;&lt;B&gt;失败&lt;/B&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;h3 id=&#34;vmware上使用网络桥接方式的ubuntu虚拟机无法连接网络的问题&#34;&gt;vmware上使用网络桥接方式的ubuntu虚拟机无法连接网络的问题&lt;/h3&gt;
+&lt;p&gt;环境:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;硬件: Mackbook pro笔记本电脑, 使用wifi连接网络&lt;/li&gt;
+&lt;li&gt;Vmware workstation pro 17
+Ubuntu 18.04LTS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现象:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;该ubuntu虚拟机启动时, 有时能连上网络, 有时连不上, 此时, 宿主机的无线网络连接都是ok的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/xiaolang666/p/15194451.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VMware 桥接模式配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原因分析:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由于可桥接的设备过多, 让vmware出现选择困难&lt;br&gt;
+需要手动选定桥接的网卡: 由于Macbook只有一块网卡, 所以是个固定选项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;操作:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在vmware workstation中, 选择我的计算机, 在菜单中&amp;quot;编辑&amp;rdquo;-&amp;ldquo;虚拟网络编辑器&amp;rdquo;, 出现对话框后, 点击右下角&amp;quot;更改设置&amp;quot;&lt;/li&gt;
+&lt;li&gt;将桥接模式中的设备行为无线网卡实体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;见图&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/18-qa-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/18-qa-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;hugo服务器相关问题&#34;&gt;Hugo服务器相关问题&lt;/h2&gt;
 &lt;h3 id=&#34;hugo服务器不支持html标签的问题&#34;&gt;Hugo服务器不支持html标签的问题&lt;/h3&gt;
@@ -455,6 +1209,173 @@ Usage: eval `lesspipe`&lt;/li&gt;
     &gt;如何绕开referrer防盗链&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhangjava.com/%E7%A0%B4%E8%A7%A3%E9%98%B2%E7%9B%97%E9%93%BE/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;破解防盗链&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hugo服务器支持甘特图&#34;&gt;Hugo服务器支持甘特图&lt;/h3&gt;
+&lt;p&gt;Markdown支持甘特图相关参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/markdown/md-advance.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Markdown 高级技巧&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://baike.baidu.com/item/%E7%94%98%E7%89%B9%E5%9B%BE/113232&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;百度: 甘特图&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mermaid相关参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mermaid-js/mermaid&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid&lt;/a&gt;  Generation of diagrams like flowcharts or sequence diagrams from text in a similar manner as markdown&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mermaid-js/mermaid/blob/develop/README.zh-CN.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid 简中&lt;/a&gt; Mermaid 是一个基于 Javascript 的图表绘制工具，通过解析类 Markdown 的文本语法来实现图表的创建和动态修改。Mermaid 诞生的主要目的是让文档的更新能够及时跟上开发进度。
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mermaid-js/mermaid/blob/develop/docs/community/n00b-overview.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mermaid-js/mermaid/blob/develop/docs/config/usage.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid usage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mermaid-js/mermaid/blob/develop/docs/config/Tutorials.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid Tutorials&lt;/a&gt; 包括教程, 以及代码示例&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mermaid-js/mermaid/blob/develop/docs/misc/integrations.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid integrations&lt;/a&gt; 集成
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Markdown Preview Mermaid Support&lt;/a&gt; VS插件&lt;br&gt;
+用于Adds Mermaid diagram and flowchart support to VS Code&amp;rsquo;s builtin markdown preview&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://unpkg.com/browse/mermaid@9.2.2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid CDN&lt;/a&gt; MermaidJS CDN, 可用, 版本全&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mermaid-js.github.io/mermaid/#/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid教程&lt;/a&gt; 教程
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mermaid-js.github.io/mermaid/#/integrations&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid Intergrations&lt;/a&gt; Mermaid集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hellowac.github.io/2021/12/21/mermaid%E6%96%87%E6%A1%A3%E4%B8%AD%E6%96%87%E7%89%88-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mermaid文档中文版-快速开始&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://mermaid-js.github.io/mermaid-live-editor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mermaid-live-editor&lt;/a&gt; Mermaid在线编辑工具&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hugo增加shorcodes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://navendu.me/posts/adding-diagrams-to-your-hugo-blog-with-mermaid/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Adding Diagrams to Your Hugo Blog With Mermaid&lt;/a&gt; 使用Mermaid将图表添加到您的Hugo博客&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.qfleng.com/p/hugo-%E7%94%A8mermaid%E6%98%BE%E7%A4%BA%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%94%98%E7%89%B9%E5%9B%BE/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo-用Mermaid显示流程图、甘特图&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=%E7%94%98%E7%89%B9%E5%9B%BE&amp;#43;Shortcode&amp;#43;hugo&amp;amp;oq=%E7%94%98%E7%89%B9%E5%9B%BE&amp;#43;Shortcode&amp;#43;hugo&amp;amp;aqs=chrome..69i57j33i160.26105j0j7&amp;amp;sourceid=chrome&amp;amp;ie=UTF-8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google &amp;ldquo;甘特图 Shortcode hugo&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Shortcodes in HUGO&lt;/a&gt; 在Hugo中使用Shortcodes&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.andbible.com/post/hugo-templates-shortcode-templates/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo框架中文文档Templates创建短代码模板&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.netlify.app/en/shortcodes/mermaid/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Learn Hugo-Shortcodes-Mermaid&lt;/a&gt; Hugo中的Shortcodes with Mermaid&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ttys3.dev/post/add-mermaid-shortcode-to-hugo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;给Hugo博客添加mermaid短代码支持&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mermaid绘图&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.thisfaner.com/p/mermaid/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mermaid绘图入门&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/zpsoe/p/markdown_mermaid.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid 绘图总结&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hellowac.github.io/2021/12/21/mermaid%E6%96%87%E6%A1%A3%E4%B8%AD%E6%96%87%E7%89%88-%E8%AF%AD%E6%B3%95-%E7%94%98%E7%89%B9%E5%9B%BE.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mermaid文档中文版-语法-甘特图&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装Mermaid:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;有说法是使用npm进行安装, 命令大概是:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# npm install mermaid&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.thelinuxfaq.com/npm/npm-packages/mermaid&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How to Install mermaid software package in NPM Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/qinshulei/ubuntu-install/blob/master/software-install/install-mermaid&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;install-mermaid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=how&amp;#43;to&amp;#43;install&amp;#43;mermaid&amp;#43;ubuntu&amp;amp;oq=how&amp;#43;to&amp;#43;install&amp;#43;mermaid&amp;#43;&amp;#43;ubuntu&amp;amp;aqs=chrome..69i57j33i160l2.13020j0j7&amp;amp;sourceid=chrome&amp;amp;ie=UTF-8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google &amp;ldquo;how to install mermaid ubuntu&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中npm可以用apt命令安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# apt install npm&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但使用npm安装mermaid失败了&lt;br&gt;
+由于网上有多家CDN提供Mermaid可供调用, 不再尝试安装。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;网上可用的Mermaid:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://unpkg.com/browse/mermaid@9.2.2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UNPKG Mermaid&lt;/a&gt;: &lt;a class=&#34;link&#34; href=&#34;https://unpkg.com/browse/mermaid@9.2.2/dist/mermaid.min.js&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://unpkg.com/browse/mermaid@9.2.2/dist/mermaid.min.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cdnjs.cloudflare.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare CDN JS&lt;/a&gt;: &lt;a class=&#34;link&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cdn.jsdelivr.net/npm/mermaid/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mermaid CDN by jsDeliv&lt;/a&gt;: &lt;a class=&#34;link&#34; href=&#34;https://cdn.jsdelivr.net/npm/mermaid@9.2.2/dist/mermaid.min.js&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://cdn.jsdelivr.net/npm/mermaid@9.2.2/dist/mermaid.min.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.staticfile.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;七牛云&lt;/a&gt;: &lt;a class=&#34;link&#34; href=&#34;https://cdn.staticfile.org/mermaid/9.2.2/mermaid.min.js&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://cdn.staticfile.org/mermaid/9.2.2/mermaid.min.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=mermaid.min.js&amp;amp;oq=mermaid.min.js&amp;amp;aqs=chrome..69i57j0i512j0i30j69i60l2j5i44.618j0j15&amp;amp;sourceid=chrome&amp;amp;ie=UTF-8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google &amp;ldquo;mermaid.min.js&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;出现的问题:&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/templates/shortcode-templates/#shortcode-template-lookup-order&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Shortcode Template Lookup Order&lt;/a&gt; 短代码模板查找顺序&lt;br&gt;
+问题:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;把Mermaid短代码模板文件mermaid.html放到/layouts/shortcodes/目录下时, Mermaid短代码模板未生效&lt;br&gt;
+改放到/themes/&amp;lt;THEME&amp;gt;/layouts/shortcodes/目录下时, Mermaid短代码模板生效&lt;br&gt;
+按照参考文档中所说的短代码模板查找顺序:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;/layouts/shortcodes/&amp;lt;SHORTCODE&amp;gt;.html&lt;/li&gt;
+&lt;li&gt;/themes/&amp;lt;THEME&amp;gt;/layouts/shortcodes/&amp;lt;SHORTCODE&amp;gt;.html&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;短代码模板文件放到/layouts/shortcodes/目录下时也应当是生效的。&lt;br&gt;
+而且, 一般来说, &lt;u&gt;新增或修改的文件也不应该放在模板目录下!&lt;/u&gt;&lt;br&gt;
+处理:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原因不明, 未处理&lt;br&gt;
+影响不大(代码管理有点乱)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;openwrt&#34;&gt;OpenWrt&lt;/h2&gt;
+&lt;h3 id=&#34;使用github的action为newifi3-d2编译的openwrt固件-启动时不自动开启wifi的问题&#34;&gt;使用Github的Action为Newifi3-D2编译的OpenWrt固件, 启动时不自动开启wifi的问题&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-4056993-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[AC2100(RM2100)] 求助，怎么让openwrt每次重启后自动开启wifi&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;测试参考中提到的方法:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ifconfig ra0 up   #2G&lt;br&gt;
+ifconfig rai0 up  #5G&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;确认, 不仅DHCP服务出了问题, 无线侧的网络也出了问题:&lt;br&gt;
+即使使用手动分配地址, 也无法访问OpenWrt管理界面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决方法:&lt;br&gt;
+通过另一个无线连入, 再转有线, 辗转接入OpenWrt管理界面后, 点击&amp;quot;重启无线&amp;quot;按钮(可能相当于&amp;quot;ifconfig ra0 restart&amp;quot;类似命令), 即可正常启动无线, 并且网络功能正常使用。&lt;br&gt;
+见图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/18-qa-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;网络&#34;&gt;网络&lt;/h2&gt;

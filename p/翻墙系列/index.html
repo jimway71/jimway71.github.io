@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='问题 大规模封锁的问题 2022年10月3日以来的针对基于TLS翻墙软件的大规模封锁 近期大范围的服务器封锁及对策 #1237 Upgrade trojan-go client&amp;rsquo;s TLS fingerprints to some of the most popular ones #464 其中'><title>翻墙系列</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='翻墙系列'>
+<meta property='og:description' content='问题 大规模封锁的问题 2022年10月3日以来的针对基于TLS翻墙软件的大规模封锁 近期大范围的服务器封锁及对策 #1237 Upgrade trojan-go client&amp;rsquo;s TLS fingerprints to some of the most popular ones #464 其中'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Fingerprint' /><meta property='article:tag' content='指纹伪造' /><meta property='article:tag' content='Trojan' /><meta property='article:tag' content='Trojan-go' /><meta property='article:tag' content='V2Ray' /><meta property='article:tag' content='XRAY' /><meta property='article:tag' content='SSL证书' /><meta property='article:tag' content='Cloudflare' /><meta property='article:tag' content='CDN' /><meta property='article:tag' content='X-ui' /><meta property='article:tag' content='Nginx' /><meta property='article:tag' content='V2rayN' /><meta property='article:tag' content='V2rayNG' /><meta property='article:tag' content='openwrt' /><meta property='article:tag' content='ShadowSocksR Plus&#43;' /><meta property='article:published_time' content='2022-11-24T18:03:00&#43;08:00'/><meta property='article:modified_time' content='2022-11-24T18:03:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-61.jpg' />
+<meta name="twitter:title" content="翻墙系列">
+<meta name="twitter:description" content="问题 大规模封锁的问题 2022年10月3日以来的针对基于TLS翻墙软件的大规模封锁 近期大范围的服务器封锁及对策 #1237 Upgrade trojan-go client&amp;rsquo;s TLS fingerprints to some of the most popular ones #464 其中"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-61.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/">
+                
+                    <img src="/wallpaper/wallpaper-61.jpg" loading="lazy" alt="Featured image of post 翻墙系列" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/">翻墙系列</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 24, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 17 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="问题">问题</h2>
+<ul>
+<li>
+<p>大规模封锁的问题</p>
+<ul>
+<li><a class="link" href="https://github.com/net4people/bbs/issues/129#issuecomment-1266617327"  target="_blank" rel="noopener"
+    >2022年10月3日以来的针对基于TLS翻墙软件的大规模封锁</a></li>
+<li><a class="link" href="https://github.com/XTLS/Xray-core/issues/1237"  target="_blank" rel="noopener"
+    >近期大范围的服务器封锁及对策 #1237</a></li>
+<li><a class="link" href="https://github.com/p4gefau1t/trojan-go/pull/464"  target="_blank" rel="noopener"
+    >Upgrade trojan-go client&rsquo;s TLS fingerprints to some of the most popular ones #464</a></li>
+</ul>
+<p>其中都提到了Clienthello指纹, 或TLS Fingerprint</p>
+<ul>
+<li><a class="link" href="https://tlsfingerprint.io/"  target="_blank" rel="noopener"
+    >TLS Fingerprint</a> 相关信息</li>
+</ul>
+<p>处理:</p>
+<ul>
+<li>建立一个备用的服务器端(trojan-go客户端+CDN)</li>
+<li>选用相应的Trojan-go客户端
+<ul>
+<li>桌面客户端: V2rayN<br>
+<u>为了安全, 设置全部服务器的Fingerprint为&quot;Chrome&quot; (在V2rayN里设置fingerprint(uTLS))</u></li>
+<li>安卓客户端: v2rayNG <u>有报告使用时被封</u><br>
+<u>为了安全, 设置全部服务器的Fingerprint为&quot;Chrome&quot; (在V2rayNG里设置uTLS)</u></li>
+<li>桌面客户端: Qv2ray<br>
+<u>Qv2ray不能设置Fingerprint</u></li>
+</ul>
+</li>
+<li>Openwrt固件支持Trojan-go<br>
+<u>当前使用的ShadowSocksR Plus+版本中使用的&quot;V2Ray/XRay&quot;中&quot;Trojan&quot; 经测试, 可以支持Trojan-go服务器(websocket传输)。</u><br>
+<u>为了安全, 设置Trojan-go服务器的指纹伪造为&quot;Chrome&quot; </u></li>
+</ul>
+</li>
+</ul>
+<h2 id="参考">参考</h2>
+<h3 id="trojantrojan-go">Trojan/Trojan-go</h3>
+<ul>
+<li><a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a> 开源官网, <u>但很久未更新了</u>
+<ul>
+<li><a class="link" href="https://github.com/gfw-report/trojan-go"  target="_blank" rel="noopener"
+    >gfw-report/trojan-go</a> 这个Fork在<strong>近期有更新</strong>, 参看<a class="link" href="https://github.com/cary-sas/v2ray_bin/issues/50"  target="_blank" rel="noopener"
+    >考虑更新trojan-go核心到这个版本 #50</a></li>
+</ul>
+</li>
+<li><a class="link" href="https://p4gefau1t.github.io/trojan-go/"  target="_blank" rel="noopener"
+    >Trojan-go Docs</a> 开源文档官网</li>
+<li><a class="link" href="https://github.com/h31105/deployX.sh"  target="_blank" rel="noopener"
+    >TSP &amp; Trojan-Go / V2Ray 容器化管理部署脚本</a> 开源官网
+<ul>
+<li><a class="link" href="https://github.com/h31105/deployX.sh/issues/25"  target="_blank" rel="noopener"
+    >关于Trojan-go的配置文件 #25</a> issue讨论</li>
+</ul>
+</li>
+<li><a class="link" href="https://www.chengxiaobai.com/trouble-maker/trojan-shared-443-port-scheme"  target="_blank" rel="noopener"
+    >Trojan 共用 443 端口方案</a> 使用SNI做分发标记</li>
+<li><a class="link" href="https://p4gefau1t.github.io/trojan-go/advance/websocket/"  target="_blank" rel="noopener"
+    >使用Websocket进行CDN转发和抵抗中间人攻击</a> <strong>Trojan-go怎样利用websocket套用CDN</strong></li>
+</ul>
+<h4 id="支持的客户端">支持的客户端</h4>
+<ul>
+<li>
+<p><u>桌面客户端</u> <strong><a class="link" href="https://github.com/2dust/v2rayN"  target="_blank" rel="noopener"
+    >v2rayN</a></strong><br>
+支持Windows系统<br>
+<a class="link" href="https://github.com/2dust/v2rayN/releases"  target="_blank" rel="noopener"
+    >V2rayN Releases</a> 可下载, 两个zip压缩文件, 直接解压后即可运行<br>
+非常简单方便, 无需其他程序, 不需要设置。<br>
+经测试, <strong>支持Trojan-go</strong><br>
+<strong>为了安全, 在使用V2rayN客户端时, 需要设置全部服务器的Fingerprint为&quot;Chrome&quot;(在V2rayN里设置fingerprint(uTLS))</strong></p>
+</li>
+<li>
+<p><font color=grey><u>桌面客户端</u> <del><a class="link" href="https://github.com/Qv2ray/Qv2ray"  target="_blank" rel="noopener"
+    ><strong>Qv2ray</strong></a> <a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>官方说明中支持, 但开发组于2021-08-17声明该项目已不再维护</del><br>
+支持Linux/MacOS/Windows系统<br>
+<a class="link" href="https://github.com/Qv2ray/Qv2ray/releases"  target="_blank" rel="noopener"
+    >Qv2ray Releases</a> 可下载<br>
+<u>安装配置比较复杂</u></p>
+<ul>
+<li>需要V2ray-core
+<ul>
+<li><a class="link" href="https://github.com/v2fly/v2ray-core"  target="_blank" rel="noopener"
+    >v2fly - v2ray-core</a> v2ray核心, 下载Release</li>
+<li><del><a class="link" href="https://github.com/v2ray/v2ray-core/"  target="_blank" rel="noopener"
+    >v2ray-core</a></del> 已移到<a class="link" href="https://github.com/v2fly/v2ray-core"  target="_blank" rel="noopener"
+    >v2fly - v2ray-core</a></li>
+</ul>
+</li>
+<li>需要trojan/trojan-go插件
+<ul>
+<li><a class="link" href="https://github.com/Qv2ray/QvPlugin-Trojan/"  target="_blank" rel="noopener"
+    >QvPlugin-Trojan</a> Trojan插件</li>
+<li><a class="link" href="https://github.com/Qv2ray/QvPlugin-Trojan-Go/"  target="_blank" rel="noopener"
+    >QvPlugin-Trojan-Go</a> Trojan-go插件</li>
+<li><a class="link" href="https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.5/trojan-go-windows-amd64.zip"  target="_blank" rel="noopener"
+    >trojan-go-windows-amd64</a> From <a class="link" href="https://github.com/p4gefau1t/trojan-go/releases"  target="_blank" rel="noopener"
+    >Trojan-go Releases</a>, 在界面的&quot;插件&quot;-&ldquo;Trojan-go&rdquo;-&ldquo;设定&quot;里选择(必选)</li>
+</ul>
+</li>
+</ul>
+<p>经测试, <strong>支持Trojan-go</strong><br>
+<u>但Qv2ray不能设置Fingerprint</u><br>
+</font></p>
+</li>
+<li>
+<p><u>安卓客户端</u> <a class="link" href="https://play.google.com/store/apps/details?id=com.v2ray.ang"  target="_blank" rel="noopener"
+    >v2rayNG</a> <u>有报告使用时被封</u><br>
+开源代码: <a class="link" href="https://github.com/2dust/v2rayNG"  target="_blank" rel="noopener"
+    >Github v2rayNG</a><br>
+<strong>支持Trojan/Trojan-go</strong><br>
+<u>为了安全, 在使用V2rayNG客户端时, 需要设置全部服务器的Fingerprint为&quot;Chrome&rdquo; (在V2rayNG里设置uTLS)</u></p>
+</li>
+<li>
+<p><font color=grey><del><u>安卓客户端</u> <a class="link" href="https://github.com/p4gefau1t/trojan-go-android"  target="_blank" rel="noopener"
+    >Trojan-go-android</a> <a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>官方说明中支持</del><br>
+forked from <a class="link" href="https://github.com/trojan-gfw/igniter"  target="_blank" rel="noopener"
+    >trojan-gfw/igniter</a>, <u>也很久未更新</u><br>
+支持Android<br>
+<u>官网上无apk安装包可下载, 网上也没找到可用的apk</u><br>
+<a class="link" href="https://play.google.com/"  target="_blank" rel="noopener"
+    >Google Play Store</a>中也没有</p>
+</li>
+<li>
+<p><del><u>安卓客户端</u> <a class="link" href="https://github.com/SagerNet/SagerNet"  target="_blank" rel="noopener"
+    ><strong>SagerNet</strong> Github</a></del><br>
+<a class="link" href="https://sagernet.org/"  target="_blank" rel="noopener"
+    >SagerNet</a><br>
+Android 的通用代理工具链，用Kotlin语言编写<br>
+<a class="link" href="https://github.com/SagerNet/SagerNet/releases"  target="_blank" rel="noopener"
+    >SegnerNet Releases</a> 可下载<br>
+从<a class="link" href="https://sagernet.org/configuration/"  target="_blank" rel="noopener"
+    >SegnerNet Config</a>中可以看到, 支持Socks5/HTTP、Shadowsocks、ShadowsocksR、VMESS/VLESS、Trojan-Go等协议<br>
+从<a class="link" href="https://github.com/SagerNet/SagerNet/releases"  target="_blank" rel="noopener"
+    >SegnerNet Releases</a>中可以看到, 还支持Hysteria、Naive、Mieru、Tuic等较新的协议<br>
+使用trojan/trojan-go需要用到插件: <a class="link" href="https://github.com/SagerNet/SagerNet/releases/tag/trojan-go-plugin-0.10.6"  target="_blank" rel="noopener"
+    >trojan-go-plugin</a><br>
+<a class="link" href="https://play.google.com/"  target="_blank" rel="noopener"
+    >Google Play Store</a>中有SagerNet Apk, 也有trojan-go-plugin<br>
+<strong>注意</strong>: 在SagerNet Apk中使用trojan/trojan-go协议时, 需要修改&quot;设置&quot;中的&quot;协议设置&quot;, Trojan提供程序修改为Trojan-Go(否则使用上可能有问题)<br>
+经测试, <strong>支持trojan-go, 但非常不稳定</strong><br>
+</font></p>
+</li>
+<li>
+<p><u>固件客户端</u> <a class="link" href="https://github.com/coolsnowwolf/lede"  target="_blank" rel="noopener"
+    >Lede Openwrt</a><br>
+<u>当前使用的ShadowSocksR Plus+版本中使用的&quot;V2Ray/XRay&quot;中&quot;Trojan&quot; 经测试, 可以支持Trojan-go服务器(websocket传输)。</u><br>
+<u>为了安全, 设置Trojan-go服务器的指纹伪造为&quot;Chrome&quot; </u></p>
+</li>
+</ul>
+<p>Trojan-Go访问原理 (Copy from <a class="link" href="https://ssrvps.org/archives/7708"  target="_blank" rel="noopener"
+    >一键搭建Trojan-Go面板，Trojan-Go支持WebSocket，免费开启CDN隐藏自己VPS的真实IP，从而实现不被墙！</a>):</p>
+<blockquote>
+<p>当一个客户端试图连接Trojan-Go的监听端口时，会发生下面的事情：<br>
+● 如果TLS握手成功，检测到TLS的内容非Trojan协议（有可能是HTTP请求，或者来自GFW的主动探测）。Trojan-Go将TLS连接代理到本地127.0.0.1:80上的HTTP服务。这时在远端看来，Trojan-Go服务就是一个HTTPS网站。<br>
+● 如果TLS握手成功，并且被确认是Trojan协议头部，并且其中的密码正确，那么服务器将解析来自客户端的请求并进行代理，否则和上一步的处理方法相同。<br>
+● 如果TLS握手失败，说明对方使用的不是TLS协议进行连接。此时Trojan-Go将这个TCP连接代理到本地127.0.0.1:1234上运行的HTTPS服务（或者HTTP服务），返回一个展示400 Bad Reqeust的HTTP页面。fallback_port是一个可选选项，如果没有填写，Trojan-Go会直接终止连接。虽然是可选的，但是还是强烈建议填写。</p>
+</blockquote>
+<h3 id="x-ui">X-ui</h3>
+<ul>
+<li><a class="link" href="https://github.com/vaxilu/x-ui"  target="_blank" rel="noopener"
+    >X-ui</a> 开源官网</li>
+<li><a class="link" href="https://www.vzse.cn/?p=277"  target="_blank" rel="noopener"
+    >vps搭建x-ui面板</a></li>
+<li><a class="link" href="https://coderfan.net/how-to-use-x-ui-pannel-to-set-up-proxies-for-bypassing-gfw.html"  target="_blank" rel="noopener"
+    >科学上网：使用X-UI面板快速搭建多协议、多用户代理服务，支持CDN</a></li>
+</ul>
+<h3 id="cdn相关">CDN相关</h3>
+<ul>
+<li><a class="link" href="https://zh.m.wikipedia.org/zh-hans/WebSocket"  target="_blank" rel="noopener"
+    >WebSocket</a></li>
+<li><a class="link" href="https://ssrvps.org/archives/10188"  target="_blank" rel="noopener"
+    >Trojan+CDN搭建代理服务器，救活被墙VPS IP（Trojan-Go+TLS+Cloudflare CDN）</a></li>
+</ul>
+<h3 id="一键安装">一键安装</h3>
+<ul>
+<li><a class="link" href="https://github.com/jinwyp/one_click_script"  target="_blank" rel="noopener"
+    >一键安装脚本</a> 开源官网</li>
+</ul>
+<h2 id="用例">用例</h2>
+<h3 id="trojantrojan-go-1">Trojan/Trojan-go</h3>
+<h4 id="trojan-go套nginx">Trojan-go套Nginx</h4>
+<ul>
+<li>
+<p>部署结构<br>
+<a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>监听0.0.0.0:443端口, 接收https请求;<br>
+<a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>监听127.0.0.1:80/1080(来自<a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>的fallback)端口, 接收来自<a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>转发的(http)请求</p>
+</li>
+<li>
+<p>环境<br>
+Ubuntu 18.0.4LTS</p>
+</li>
+<li>
+<p><a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a><br>
+使用apt命令安装</p>
+<blockquote>
+<p># apt install nginx</p>
+</blockquote>
+<p>并修改配置文件<br>
+主要配置文件都未做修改(包括/etc/nginx/nginx.conf)<br>
+仅修改了/etc/nginx/sites-enabled/default文件, 增加在1080端口监听的http服务, 并选择了不同的根目录 - /nginx/html<br>
+修改后的内容如下:<br>
+注: nginx -t命令可检查配置文件的有效性。</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># cat /etc/nginx/sites-enabled/default  
+</span></span><span class="line"><span class="cl">...  
+</span></span><span class="line"><span class="cl"># Default server configuration
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen 127.0.0.1:80;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # SSL configuration
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # listen 443 ssl default_server;
+</span></span><span class="line"><span class="cl">        # listen [::]:443 ssl default_server;
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # Note: You should disable gzip for SSL traffic.
+</span></span><span class="line"><span class="cl">        # See: https://bugs.debian.org/773332
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # Read up on ssl_ciphers to ensure a secure configuration.
+</span></span><span class="line"><span class="cl">        # See: https://bugs.debian.org/765782
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # Self signed certs generated by the ssl-cert package
+</span></span><span class="line"><span class="cl">        # Don&#39;t use them in a production server!
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # include snippets/snakeoil.conf;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root /var/www/html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # Add index.php to the list if you are using PHP
+</span></span><span class="line"><span class="cl">        index index.html index.htm index.nginx-debian.html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server_name _;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">                # First attempt to serve request as file, then
+</span></span><span class="line"><span class="cl">                # as directory, then fall back to displaying a 404.
+</span></span><span class="line"><span class="cl">                try_files $uri $uri/ =404;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # pass PHP scripts to FastCGI server
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        #location ~ \.php$ {
+</span></span><span class="line"><span class="cl">        #       include snippets/fastcgi-php.conf;
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        #       # With php-fpm (or other unix sockets):
+</span></span><span class="line"><span class="cl">        #       fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+</span></span><span class="line"><span class="cl">        #       # With php-cgi (or other tcp sockets):
+</span></span><span class="line"><span class="cl">        #       fastcgi_pass 127.0.0.1:9000;
+</span></span><span class="line"><span class="cl">        #}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # deny access to .htaccess files, if Apache&#39;s document root
+</span></span><span class="line"><span class="cl">        # concurs with nginx&#39;s one
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        #location ~ /\.ht {
+</span></span><span class="line"><span class="cl">        #       deny all;
+</span></span><span class="line"><span class="cl">        #}
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen 127.0.0.1:1080;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root /nginx/html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        index index.html index.htm index.nginx-debian.html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server_name _;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">                try_files $uri $uri/ =404;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">...  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># nginx -t
+</span></span><span class="line"><span class="cl">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+</span></span><span class="line"><span class="cl">nginx: configuration file /etc/nginx/nginx.conf test is successful
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># service nginx restart
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"># service nginx status
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">Nov 25 15:08:38 testdev systemd[1]: Stopped A high performance web server and a reverse proxy server.
+</span></span><span class="line"><span class="cl">Nov 25 15:08:38 testdev systemd[1]: Starting A high performance web server and a reverse proxy server...
+</span></span><span class="line"><span class="cl">Nov 25 15:08:38 testdev systemd[1]: nginx.service: Failed to parse PID from file /run/nginx.pid: Invalid argument
+</span></span><span class="line"><span class="cl">Nov 25 15:08:38 testdev systemd[1]: Started A high performance web server and a reverse proxy server.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上面&quot;service nginx status&quot;命令报错: &ldquo;nginx.service: Failed to parse PID from file /run/nginx.pid: Invalid argument&rdquo;<br>
+参考: <a class="link" href="https://bobcares.com/blog/failed-to-parse-pid-from-file-run-nginx-pid-invalid-argument/"  target="_blank" rel="noopener"
+    >Failed to parse pid from file /run/nginx.pid invalid argument</a><br>
+→ &ldquo;This is an example of Nginx and systemd fighting over resources. This warning is unimportant since systemd only uses the PIDFile option to remove PIDFile after the Nginx service has terminated.&rdquo;<br>
+由于<a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>运行正常, 因此可以忽略这个错误。</p>
+<ul>
+<li><a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>
+<blockquote>
+<p># 建立trojan-go保存目录:<br>
+# mkdir /nginx<br>
+# chown user:user /nginx<br>
+# su user -<br>
+$ mkdir /nginx/trojan<br>
+$ cd /nginx/trojan<br>
+# 从<a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>官网<a class="link" href="https://github.com/p4gefau1t/trojan-go/releases"  target="_blank" rel="noopener"
+    >Releases</a>中下载for linux-amd64的最新版本(当前是v0.10.6版, Sep 14, 2021)<br>
+$ wget <a class="link" href="https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip"  target="_blank" rel="noopener"
+    >https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip</a><br>
+# 解压到/nginx/trojan目录<br>
+# 先安装zip<br>
+$ sudo apt install zip<br>
+# 解压zip包<br>
+$ unzip trojan-go-linux-amd64.zip<br>
+# 复制服务器配置文件例子<br>
+$ mkdir conf<br>
+$ cp example/server.json conf/<br>
+# 准备其它目录(证书目录cert/、log目录log/)<br>
+$ mkdir cert<br>
+$ mkdir log<br>
+# 拷入证书文件<br>
+$ cp /tmp/certname.pem /nginx/trojan/cert/<br>
+$ cp /tmp/certname.key /nginx/trojan/cert/<br>
+# 手动修改例子配置文件server.json<br>
+$ vim conf/server.json<br>
+&hellip;<br>
+# conf/server.json文件内容见后面<br>
+# 启动trojan-go<br>
+$ ./trojan-go -config /nginx/trojan/conf/server.json</p>
+</blockquote>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 配置文件/nginx/trojan/conf/server.json修改后如下:  
+</span></span><span class="line"><span class="cl"># 注意: 
+</span></span><span class="line"><span class="cl"># trojan-go启动时会检查端口remote_addr/remote_port和fallback_addr/fallback_port是否可连接;
+</span></span><span class="line"><span class="cl"># 如果不可连接, trojan-go会直接退出  
+</span></span><span class="line"><span class="cl">$ cat /nginx/trojan/conf/server.json  
+</span></span><span class="line"><span class="cl">{  
+</span></span><span class="line"><span class="cl">    &#34;run_type&#34;: &#34;server&#34;,  
+</span></span><span class="line"><span class="cl">    &#34;local_addr&#34;: &#34;0.0.0.0&#34;,  
+</span></span><span class="line"><span class="cl">    &#34;local_port&#34;: 443,  
+</span></span><span class="line"><span class="cl">    &#34;remote_addr&#34;: &#34;127.0.0.1&#34;,  
+</span></span><span class="line"><span class="cl">    &#34;remote_port&#34;: 80,  
+</span></span><span class="line"><span class="cl">    &#34;password&#34;: [  
+</span></span><span class="line"><span class="cl">        &#34;mypassword&#34;  
+</span></span><span class="line"><span class="cl">    ],  
+</span></span><span class="line"><span class="cl">    &#34;log_level&#34;: 1,  
+</span></span><span class="line"><span class="cl">    &#34;log_file&#34;: &#34;/nginx/trojan/log/trojan-access.log&#34;,  
+</span></span><span class="line"><span class="cl">    &#34;ssl&#34;: {  
+</span></span><span class="line"><span class="cl">        &#34;verify&#34;: true,  
+</span></span><span class="line"><span class="cl">        &#34;cert&#34;: &#34;/nginx/trojan/cert/certname.pem&#34;,  
+</span></span><span class="line"><span class="cl">        &#34;key&#34;: &#34;/nginx/trojan/cert/certname.key&#34;,  
+</span></span><span class="line"><span class="cl">        &#34;sni&#34;: &#34;mydomain&#34;,  
+</span></span><span class="line"><span class="cl">        &#34;fallback_addr&#34;: &#34;127.0.0.1&#34;,  
+</span></span><span class="line"><span class="cl">        &#34;fallback_port&#34;: 1080,  
+</span></span><span class="line"><span class="cl">        &#34;fingerprint&#34;: &#34;chrome&#34;  
+</span></span><span class="line"><span class="cl">    },  
+</span></span><span class="line"><span class="cl">    &#34;websocket&#34;: {  
+</span></span><span class="line"><span class="cl">        &#34;enabled&#34;: true,  
+</span></span><span class="line"><span class="cl">        &#34;path&#34;: &#34;/113a3256&#34;,  
+</span></span><span class="line"><span class="cl">        &#34;host&#34;: &#34;mydomain&#34;  
+</span></span><span class="line"><span class="cl">    }  
+</span></span><span class="line"><span class="cl">}  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>查看nginx+trojan-go运行状态</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ sudo netstat -ap | grep tcp
+</span></span><span class="line"><span class="cl">[sudo] password for user:
+</span></span><span class="line"><span class="cl">...  
+</span></span><span class="line"><span class="cl">tcp        0      0 localhost.localdom:http 0.0.0.0:*               LISTEN      32337/nginx: master
+</span></span><span class="line"><span class="cl">tcp        0      0 localhost.localdo:socks 0.0.0.0:*               LISTEN      32337/nginx: master
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">tcp6       0      0 [::]:https              [::]:*                  LISTEN      1294/./trojan-go
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">$ ps -aux | grep nginx
+</span></span><span class="line"><span class="cl">root     32337  0.0  0.1 141116  1556 ?        Ss   15:24   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+</span></span><span class="line"><span class="cl">www-data 32339  0.0  0.6 143736  6356 ?        S    15:24   0:00 nginx: worker process
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">$ ps -aux | grep trojan
+</span></span><span class="line"><span class="cl">root      1294  0.0  1.4 4909504 13892 pts/0   Sl+  07:52   0:03 ./trojan-go -config /nginx/trojan/conf/server.json
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>经测试, 运行符合预期</p>
+<h4 id="nginx套trojan-go">Nginx套Trojan-go</h4>
+<p>注: 在有CDN/无CDN的两种情况下, 实际使用中, Trojan-go线程需要两个, 在配置文件中提供不同的证书: cloudflare源证书、域名证书, 以配合。</p>
+<ul>
+<li>
+<p>参考</p>
+<ul>
+<li><a class="link" href="https://www.chengxiaobai.com/trouble-maker/trojan-shared-443-port-scheme"  target="_blank" rel="noopener"
+    >Trojan 共用 443 端口方案</a></li>
+<li><a class="link" href="https://www.aiopsclub.com/nginx/nginx_stream_proxy/"  target="_blank" rel="noopener"
+    >Nginx系列之nginx四层反向代理</a></li>
+<li><a class="link" href="https://github.com/cuber/ngx_http_google_filter_module"  target="_blank" rel="noopener"
+    >ngx_http_google_filter_module</a> Nginx Module for Google
+<ul>
+<li><a class="link" href="https://www.linuxbabe.com/nginx/set-nginx-reverse-proxy-google-com"  target="_blank" rel="noopener"
+    >Set Up Nginx Reverse Proxy for Google.com on a Ubuntu VPS</a> 详细说明了在使用apt安装的nginx上怎么编译google模块并使用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>部署结构<br>
+<a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>监听0.0.0.0:443端口, 接收https请求, 并监听127.0.0.1:80/81端口, 处理来自<a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>的fallback;</p>
+<ul>
+<li>在443端口上根据sni判断目的:
+<ul>
+<li>tt.mydomain转127.0.0.1:544端口Trojan/Trojan-go;</li>
+<li>cftt.mydomain转127.0.0.1:545端口Trojan/Trojan-go(仿真经过[Cloudfloud][]cdn);</li>
+<li>gg.mydomain转google(暂时未使用<a class="link" href="https://github.com/cuber/ngx_http_google_filter_module"  target="_blank" rel="noopener"
+    >ngx_http_google_filter_module</a>模块), 直接server <a class="link" href="https://www.google.com.hk"  target="_blank" rel="noopener"
+    >www.google.com.hk</a>:443失败;</li>
+<li>gh.mydomain转github(仅转发)</li>
+<li>其它, 127.0.0.1:543处理https</li>
+</ul>
+</li>
+<li>在80端口处理来自tt.mydomain-&gt;(https)trojan(127.0.0.1:544)-&gt;(http)80的https消息.</li>
+<li>在81端口处理来自cftt.mydomain-&gt;(https)trojan(127.0.0.1:545)-&gt;(http)81的https消息.</li>
+<li>在127.0.0.1:543端口处理来自其它域名的https访问</li>
+</ul>
+<p><a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>程序1监听127.0.0.1:544端口(https), 接收来自<a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>转发的Trojan/Trojan-go请求, remote/fallback转发到127.0.0.1:80端口的<a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>处理<br>
+<a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>程序2监听127.0.0.1:545端口(https), 接收来自<a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>转发的Trojan/Trojan-go请求, remote/fallback转发到127.0.0.1:81端口的<a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>处理</p>
+</li>
+<li>
+<p>参考<br>
+<a class="link" href="https://www.chengxiaobai.com/trouble-maker/trojan-shared-443-port-scheme"  target="_blank" rel="noopener"
+    >Trojan 共用 443 端口方案</a> 使用SNI做分发标记</p>
+</li>
+<li>
+<p>环境<br>
+Ubuntu 18.0.4LTS</p>
+</li>
+<li>
+<p><a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a><br>
+使用apt命令安装</p>
+<blockquote>
+<p># apt install nginx</p>
+</blockquote>
+<p>并修改配置文件<br>
+主要配置文件都未做修改(包括/etc/nginx/nginx.conf)<br>
+修改了/etc/nginx/nginx.conf和/etc/nginx/sites-enabled/default文件, 监听以下端口:</p>
+<ul>
+<li>0.0.0.0:443 https(入口)</li>
+<li>127.0.0.1:543 https</li>
+<li>127.0.0.1:80 http</li>
+<li>127.0.0.1:81 http</li>
+</ul>
+</li>
+</ul>
+<p>修改后的内容如下:<br>
+注: nginx -t命令可检查配置文件的有效性。<br>
+/etc/nginx/nginx.conf:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># nginx.conf仅增加了stream这一段配置
+</span></span><span class="line"><span class="cl"># cat /etc/nginx/nginx.conf
+</span></span><span class="line"><span class="cl">user www-data;
+</span></span><span class="line"><span class="cl">worker_processes auto;
+</span></span><span class="line"><span class="cl">pid /run/nginx.pid;
+</span></span><span class="line"><span class="cl">include /etc/nginx/modules-enabled/*.conf;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">events {
+</span></span><span class="line"><span class="cl">        worker_connections 768;
+</span></span><span class="line"><span class="cl">        # multi_accept on;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 流量转发核心配置
+</span></span><span class="line"><span class="cl">stream {
+</span></span><span class="line"><span class="cl">        # SNI识别, 并装域名映射成为配置名
+</span></span><span class="line"><span class="cl">        map $ssl_preread_server_name $backend_name {
+</span></span><span class="line"><span class="cl">                tt.mydomain trojan;
+</span></span><span class="line"><span class="cl">                cftt.mydomain cftrojan;
+</span></span><span class="line"><span class="cl">                gg.mydomain google;
+</span></span><span class="line"><span class="cl">                gh.mydomain github;
+</span></span><span class="line"><span class="cl">                # 都不匹配
+</span></span><span class="line"><span class="cl">                default web;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # web, 转本地443
+</span></span><span class="line"><span class="cl">        upstream web {
+</span></span><span class="line"><span class="cl">                server 127.0.0.1:543;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # trojan
+</span></span><span class="line"><span class="cl">        upstream trojan {
+</span></span><span class="line"><span class="cl">                server 127.0.0.1:544;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # cloudflare 做CDN 的 trojan
+</span></span><span class="line"><span class="cl">        upstream cftrojan {
+</span></span><span class="line"><span class="cl">                server 127.0.0.1:545;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # google
+</span></span><span class="line"><span class="cl">        upstream google {
+</span></span><span class="line"><span class="cl">        #       google on;
+</span></span><span class="line"><span class="cl">                server www.google.com.hk:443;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # github
+</span></span><span class="line"><span class="cl">        upstream github {
+</span></span><span class="line"><span class="cl">                server github.com:443;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 监听443端口, 并开启ssl_preread
+</span></span><span class="line"><span class="cl">        server {
+</span></span><span class="line"><span class="cl">                listen 443 reuseport;
+</span></span><span class="line"><span class="cl">                listen [::]:443 reuseport;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#               proxy_protocol off;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                proxy_pass  $backend_name;
+</span></span><span class="line"><span class="cl">                ssl_preread on;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">http {
+</span></span><span class="line"><span class="cl">......
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>/etc/nginx/sites-enabled/default:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># cat /etc/nginx/sites-enabled/default  
+</span></span><span class="line"><span class="cl">...  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen 127.0.0.1:543 ssl;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root /var/www/shtml;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # Add index.php to the list if you are using PHP
+</span></span><span class="line"><span class="cl">        index index.html index.htm index.nginx-debian.html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server_name _;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # ssl证书地址
+</span></span><span class="line"><span class="cl">        ssl_certificate     /var/cert/mydomain.pem;  # pem文件的路径
+</span></span><span class="line"><span class="cl">        ssl_certificate_key  /var/cert/mydomain.key; # key文件的路径
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">                try_files $uri $uri/ =404;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen 127.0.0.1:80;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root /var/www/html1;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        index index.html index.htm index.nginx-debian.html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server_name _;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">                try_files $uri $uri/ =404;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen 127.0.0.1:81;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root /var/www/html2;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        index index.html index.htm index.nginx-debian.html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server_name _;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">                try_files $uri $uri/ =404;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">......  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p># 检查nginx配置文件是否正常<br>
+# nginx -t<br>
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok<br>
+nginx: configuration file /etc/nginx/nginx.conf test is successful</p>
+</blockquote>
+<blockquote>
+<p>重启nginx, 并查看运行状态<br>
+# service nginx restart<br>
+&hellip;<br>
+# service nginx status<br>
+&hellip;</p>
+</blockquote>
+<ul>
+<li><a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>
+<blockquote>
+<p># 建立trojan-go保存目录:<br>
+# mkdir /nginx<br>
+# chown user:user /nginx<br>
+# su user -<br>
+$ mkdir /usr/local/bin/trojan<br>
+$ cd /usr/local/bin/trojan<br>
+# 从<a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>官网<a class="link" href="https://github.com/p4gefau1t/trojan-go/releases"  target="_blank" rel="noopener"
+    >Releases</a>中下载for linux-amd64的最新版本(当前是v0.10.6版, Sep 14, 2021)<br>
+$ wget <a class="link" href="https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip"  target="_blank" rel="noopener"
+    >https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip</a><br>
+# 解压到/usr/local/bin/trojan目录<br>
+# 先安装zip<br>
+$ sudo apt install zip<br>
+# 解压zip包<br>
+$ unzip trojan-go-linux-amd64.zip<br>
+# 复制服务器配置文件例子<br>
+$ mkdir conf<br>
+$ cp example/server.json conf/server1.json<br>
+$ cp example/server.json conf/server2.json<br>
+# 准备其它目录(证书目录cert/、log目录log/)<br>
+$ mkdir cert<br>
+$ mkdir log<br>
+# 拷入证书文件<br>
+$ cp /tmp/mydomain.pem /var/cert/<br>
+$ cp /tmp/mydomain.key /var/cert/<br>
+# 手动修改例子配置文件server.json<br>
+$ vim /usr/local/bin/trojan/conf/server1.json<br>
+&hellip;<br>
+$ vim /usr/local/bin/trojan/conf/server2.json<br>
+&hellip;<br>
+# conf/server.json文件内容见后面<br>
+# 启动trojan-go<br>
+$ /usr/local/bin/trojan/trojan-go -config /usr/local/bin/trojan/conf/server1.json &amp;<br>
+$ /usr/local/bin/trojan/trojan-go -config /usr/local/bin/trojan/conf/server2.json &amp;</p>
+</blockquote>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 配置文件/usr/local/bin/trojan/conf/server1.json和/usr/local/bin/trojan/conf/server2.json修改后如下:  
+</span></span><span class="line"><span class="cl"># 注意: 
+</span></span><span class="line"><span class="cl"># trojan-go启动时会检查端口remote_addr/remote_port和fallback_addr/fallback_port是否可连接;
+</span></span><span class="line"><span class="cl"># 如果不可连接, trojan-go会直接退出  
+</span></span><span class="line"><span class="cl">$ cat /usr/local/bin/trojan/conf/server1.json
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;run_type&#34;: &#34;server&#34;,
+</span></span><span class="line"><span class="cl">    &#34;local_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">    &#34;local_port&#34;: 544,
+</span></span><span class="line"><span class="cl">    &#34;remote_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">    &#34;remote_port&#34;: 80,
+</span></span><span class="line"><span class="cl">    &#34;password&#34;: [
+</span></span><span class="line"><span class="cl">        &#34;123456a&#34;
+</span></span><span class="line"><span class="cl">    ],
+</span></span><span class="line"><span class="cl">    &#34;log_level&#34;: 1,
+</span></span><span class="line"><span class="cl">    &#34;log_file&#34;: &#34;/usr/local/bin/trojan/log/trojan1-access.log&#34;,
+</span></span><span class="line"><span class="cl">    &#34;ssl&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;verify&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;cert&#34;: &#34;/var/cert/mydomain.pem&#34;,
+</span></span><span class="line"><span class="cl">        &#34;key&#34;: &#34;/var/cert/mydomain.key&#34;,
+</span></span><span class="line"><span class="cl">        &#34;sni&#34;: &#34;tt.mydomain&#34;,
+</span></span><span class="line"><span class="cl">        &#34;fallback_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">        &#34;fallback_port&#34;: 80,
+</span></span><span class="line"><span class="cl">        &#34;fingerprint&#34;: &#34;chrome&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;websocket&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;enabled&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;path&#34;: &#34;/713a5254&#34;,
+</span></span><span class="line"><span class="cl">        &#34;host&#34;: &#34;tt.mydomain&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">$ cat /usr/local/bin/trojan/conf/server2.json
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;run_type&#34;: &#34;server&#34;,
+</span></span><span class="line"><span class="cl">    &#34;local_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">    &#34;local_port&#34;: 545,
+</span></span><span class="line"><span class="cl">    &#34;remote_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">    &#34;remote_port&#34;: 81,
+</span></span><span class="line"><span class="cl">    &#34;password&#34;: [
+</span></span><span class="line"><span class="cl">        &#34;123456a&#34;
+</span></span><span class="line"><span class="cl">    ],
+</span></span><span class="line"><span class="cl">    &#34;log_level&#34;: 1,
+</span></span><span class="line"><span class="cl">    &#34;log_file&#34;: &#34;/usr/local/bin/trojan/log/trojan2-access.log&#34;,
+</span></span><span class="line"><span class="cl">    &#34;ssl&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;verify&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;cert&#34;: &#34;/var/cert/mydomain.pem&#34;,
+</span></span><span class="line"><span class="cl">        &#34;key&#34;: &#34;/var/cert/mydomain.key&#34;,
+</span></span><span class="line"><span class="cl">        &#34;sni&#34;: &#34;cftt.mydomain&#34;,
+</span></span><span class="line"><span class="cl">        &#34;fallback_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">        &#34;fallback_port&#34;: 81,
+</span></span><span class="line"><span class="cl">        &#34;fingerprint&#34;: &#34;chrome&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;websocket&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;enabled&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;path&#34;: &#34;/713a5254&#34;,
+</span></span><span class="line"><span class="cl">        &#34;host&#34;: &#34;tt.mydomain&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>查看nginx+trojan-go运行状态</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ sudo netstat -ap | grep tcp
+</span></span><span class="line"><span class="cl">[sudo] password for user:
+</span></span><span class="line"><span class="cl">...  
+</span></span><span class="line"><span class="cl">tcp        0      0 localhost.localdom:http 0.0.0.0:*               LISTEN      12501/nginx: master
+</span></span><span class="line"><span class="cl">tcp        0      0 localhost.localdomai:81 0.0.0.0:*               LISTEN      12501/nginx: master
+</span></span><span class="line"><span class="cl">tcp        0      0 0.0.0.0:https           0.0.0.0:*               LISTEN      12501/nginx: master
+</span></span><span class="line"><span class="cl">tcp        0      0 localhost.locald:klogin 0.0.0.0:*               LISTEN      12501/nginx: master
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">tcp        0      0 localhost.locald:kshell 0.0.0.0:*               LISTEN      5838/trojan-go
+</span></span><span class="line"><span class="cl">tcp        0      0 localhost.localdoma:545 0.0.0.0:*               LISTEN      5872/trojan-go
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">tcp6       0      0 [::]:https              [::]:*                  LISTEN      12501/nginx: master
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">$ ps -aux | grep nginx
+</span></span><span class="line"><span class="cl">root     24830  0.0  0.1 145520  1648 ?        Ss   03:34   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+</span></span><span class="line"><span class="cl">www-data 24834  0.0  0.6 148148  6504 ?        S    03:34   0:00 nginx: worker process
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">$ ps -aux | grep trojan
+</span></span><span class="line"><span class="cl">root      5838  0.0  1.5 4910912 14656 pts/2   Sl   02:41   0:01 /usr/local/bin/trojan/trojan-go -config /usr/local/bin/trojan/conf/server1.json
+</span></span><span class="line"><span class="cl">root      5872  0.0  1.4 4910400 13876 pts/2   Sl   02:41   0:00 /usr/local/bin/trojan/trojan-go -config /usr/local/bin/trojan/conf/server2.json
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>经测试, 运行符合预期<br>
+把trojan-go的启动放在/etc/rc.loca里, 跟随系统启动, 但好像有些问题, 在log文件里看到是:</p>
+<blockquote>
+<p>github.com/p4gefau1t/trojan-go/proxy.(*Node).BuildNext:stack.go:29 invalid fallback address | dial tcp 127.0.0.1:81: connect: connection refused</p>
+</blockquote>
+<p>应该是nginx还没启动</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cat /etc/rc.local
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sleep <span class="m">2</span>
+</span></span><span class="line"><span class="cl">/usr/local/bin/trojan/trojan-go -config /usr/local/bin/trojan/conf/server1.json <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">/usr/local/bin/trojan/trojan-go -config /usr/local/bin/trojan/conf/server2.json <span class="p">&amp;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="nginxtrojan-go-on-ipv6-vps">Nginx+Trojan-go On IPV6 VPS</h4>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://www.jianshu.com/p/ed709fcc54c6"  title="-&gt;"
+     target="_blank" rel="noopener"
+    >ubuntu 20.04 使用systemd创建自定义服务</a></li>
+</ul>
+<p>环境、目标及方案:</p>
+<ul>
+<li>VPS网络环境<br>
+1*IPV6地址, 可以访问Internet, 可以从Internet访问<br>
+1*IPV4地址, 可以访问Internet, 不可以从Internet访问</li>
+<li>目标<br>
+网上IPV4/IPV6的机器均可访问该VPS提供的Trojan-go服务, 且用浏览器访问时, 可以正常访问其网页。</li>
+<li>操作系统(命令&quot;lsb_release -a&quot;查看)<br>
+Ubuntu 18.0.4LTS</li>
+<li>部署结构
+<ul>
+<li>网络<br>
+通过使用<a class="link" href="https://www.cloudflare.com/"  title="C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>的CDN, IPV4/IPV6的网络设置可通过https访问VPS的443端口<br>
+&mdash; 最简单的处理方式</li>
+<li><a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a><br>
+监听443端口, 并将请求转给Trojan(127.0.0.1:1443)处理(在传输层_stream层处理)<br>
+监听127.0.0.1:80, 处理来自Trojan-go转发的(http)请求</li>
+<li><a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a><br>
+监听127.0.0.1:1443端口, 处理Trojan/Trojan-go消息, 并(在应用层_http层)将非Trojan/Trojan-go消息转发到127.0.0.1:80(为http消息), 给<a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>处理</li>
+</ul>
+</li>
+</ul>
+<h5 id="使用cloudflare设置cdn">使用Cloudflare设置CDN</h5>
+<p>在<a class="link" href="https://www.cloudflare.com/"  title="C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>的DNS中进行设置, 让相关域名被&quot;Proxied&quot;</p>
+<h5 id="配置nginx">配置Nginx</h5>
+<p><a class="link" href="https://nginx.org/"  title="N"
+     target="_blank" rel="noopener"
+    >Nginx</a>使用apt命令进行安装, 版本信息如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">nginx</span> <span class="o">-</span><span class="nc">V</span>
+</span></span><span class="line"><span class="cl"><span class="nv">nginx</span> <span class="nv">version</span><span class="p">:</span> <span class="nv">nginx</span><span class="o">/</span><span class="mf">1.14.0</span> <span class="p">(</span><span class="nc">Ubuntu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">built</span> <span class="nv">with</span> <span class="nc">OpenSSL</span> <span class="mf">1.1.1</span>  <span class="mi">11</span> <span class="nc">Sep</span> <span class="mi">2018</span>
+</span></span><span class="line"><span class="cl"><span class="nc">TLS</span> <span class="nc">SNI</span> <span class="nv">support</span> <span class="nv">enabled</span>
+</span></span><span class="line"><span class="cl"><span class="nv">configure</span> <span class="nv">arguments</span><span class="p">:</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">cc</span><span class="o">-</span><span class="nv">opt</span><span class="o">=</span><span class="s1">&#39;-g -O2 -fdebug-prefix-map=/build/nginx-YlUNvj/nginx-1.14.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2&#39;</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">ld</span><span class="o">-</span><span class="nv">opt</span><span class="o">=</span><span class="s1">&#39;-Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC&#39;</span> <span class="o">--</span><span class="nv">prefix</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">share</span><span class="o">/</span><span class="nv">nginx</span> <span class="o">--</span><span class="nv">conf</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">nginx</span><span class="p">.</span><span class="nv">conf</span> <span class="o">--</span><span class="nv">http</span><span class="o">-</span><span class="nv">log</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">access</span><span class="p">.</span><span class="nv">log</span> <span class="o">--</span><span class="kt">error</span><span class="o">-</span><span class="nv">log</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="kt">error</span><span class="p">.</span><span class="nv">log</span> <span class="o">--</span><span class="k">lock</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="k">lock</span><span class="o">/</span><span class="nv">nginx</span><span class="p">.</span><span class="k">lock</span> <span class="o">--</span><span class="nv">pid</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">run</span><span class="o">/</span><span class="nv">nginx</span><span class="p">.</span><span class="nv">pid</span> <span class="o">--</span><span class="nv">modules</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">modules</span> <span class="o">--</span><span class="nv">http</span><span class="o">-</span><span class="nv">client</span><span class="o">-</span><span class="nv">body</span><span class="o">-</span><span class="nv">temp</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">body</span> <span class="o">--</span><span class="nv">http</span><span class="o">-</span><span class="nv">fastcgi</span><span class="o">-</span><span class="nv">temp</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">fastcgi</span> <span class="o">--</span><span class="nv">http</span><span class="o">-</span><span class="nv">proxy</span><span class="o">-</span><span class="nv">temp</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">proxy</span> <span class="o">--</span><span class="nv">http</span><span class="o">-</span><span class="nv">scgi</span><span class="o">-</span><span class="nv">temp</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">scgi</span> <span class="o">--</span><span class="nv">http</span><span class="o">-</span><span class="nv">uwsgi</span><span class="o">-</span><span class="nv">temp</span><span class="o">-</span><span class="nv">path</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">nginx</span><span class="o">/</span><span class="nv">uwsgi</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">debug</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">pcre</span><span class="o">-</span><span class="nv">jit</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_ssl_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_stub_status_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_realip_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_auth_request_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_v2_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_dav_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_slice_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">threads</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_addition_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_geoip_module</span><span class="o">=</span><span class="nv">dynamic</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_gunzip_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_gzip_static_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_image_filter_module</span><span class="o">=</span><span class="nv">dynamic</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_sub_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">http_xslt_module</span><span class="o">=</span><span class="nv">dynamic</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">stream</span><span class="o">=</span><span class="nv">dynamic</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">stream_ssl_module</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">mail</span><span class="o">=</span><span class="nv">dynamic</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">mail_ssl_module</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置文件&quot;/etc/nginx/nginx.conf&quot;中增加了&quot;stream&quot;段, 如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># cat /etc/nginx/nginx.conf
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">events段
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">stream {
+</span></span><span class="line"><span class="cl">        upstream trojan-go {
+</span></span><span class="line"><span class="cl">                server 127.0.0.1:1443;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server {
+</span></span><span class="line"><span class="cl">                listen 443 reuseport;
+</span></span><span class="line"><span class="cl">                listen [::]:443 reuseport;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                proxy_pass trojan-go;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">http段
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置文件&quot;/etc/nginx/sites-enabled/default&quot;如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        # listen 80;
+</span></span><span class="line"><span class="cl">        listen 127.0.0.1:80;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root /var/www/html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        index index.html index.htm index.nginx-debian.html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server_name _;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">                try_files $uri $uri/ =404;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>只有一个监听127.0.0.1:80的http服务。</p>
+<h5 id="配置trojan-go">配置Trojan-go</h5>
+<p><a class="link" href="https://github.com/p4gefau1t/trojan-go"  title="T"
+     target="_blank" rel="noopener"
+    >Trojan-go</a>文件放在/usr/local/bin/trojan目录下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># ll /usr/local/bin/trojan/
+</span></span><span class="line"><span class="cl">total 13300
+</span></span><span class="line"><span class="cl">drwxr-xr-x 8 root root     4096 Nov 29 21:41 ./
+</span></span><span class="line"><span class="cl">drwxr-xr-x 3 root root     4096 Nov 29 20:20 ../
+</span></span><span class="line"><span class="cl">drwxr-xr-x 2 root root     4096 Nov 29 20:53 cert/
+</span></span><span class="line"><span class="cl">drwxr-xr-x 2 root root     4096 Nov 29 21:25 conf/
+</span></span><span class="line"><span class="cl">drwxr-xr-x 2 root root     4096 Nov 29 20:20 example/
+</span></span><span class="line"><span class="cl">drwxr-xr-x 2 root root     4096 Nov 29 20:21 geo/
+</span></span><span class="line"><span class="cl">drwxr-xr-x 2 root root     4096 Nov 29 23:25 log/
+</span></span><span class="line"><span class="cl">-rwxr-xr-x 1 root root 13582336 Sep 14  2021 trojan-go*
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 root root      515 Nov 29 21:38 trojan-go.service
+</span></span><span class="line"><span class="cl">drwxr-xr-x 2 root root     4096 Nov 29 20:21 zip/ 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中:<br>
+* cert目录: 证书<br>
+* conf目录: 配置文件server.json<br>
+* log目录: log文件<br>
+* trojan-go.service: 自定义Trojan-go服务文件</p>
+<p>配置文件&quot;server.json&quot;如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># cat /usr/local/bin/trojan/conf/server.json 
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;run_type&#34;: &#34;server&#34;,
+</span></span><span class="line"><span class="cl">    &#34;local_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">    &#34;local_port&#34;: 1443,
+</span></span><span class="line"><span class="cl">    &#34;remote_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">    &#34;remote_port&#34;: 80,
+</span></span><span class="line"><span class="cl">    &#34;password&#34;: [
+</span></span><span class="line"><span class="cl">        &#34;123456a&#34;
+</span></span><span class="line"><span class="cl">    ],
+</span></span><span class="line"><span class="cl">    &#34;log_level&#34;: 1,
+</span></span><span class="line"><span class="cl">    &#34;log_file&#34;: &#34;/usr/local/bin/trojan/log/trojan-access.log&#34;,
+</span></span><span class="line"><span class="cl">    &#34;ssl&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;cert&#34;: &#34;/usr/local/bin/trojan/cert/mydomain.pem&#34;,
+</span></span><span class="line"><span class="cl">        &#34;key&#34;: &#34;/usr/local/bin/trojan/cert/mydomain.key&#34;,
+</span></span><span class="line"><span class="cl">        &#34;sni&#34;: &#34;vps.mydomain&#34;,
+</span></span><span class="line"><span class="cl">        &#34;fallback_addr&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">        &#34;fallback_port&#34;: 80,
+</span></span><span class="line"><span class="cl">        &#34;fingerprint&#34;: &#34;chrome&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;websocket&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;enabled&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;path&#34;: &#34;/---------&#34;,
+</span></span><span class="line"><span class="cl">        &#34;host&#34;: &#34;vps.mydomain&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>自定义服务Trojan-go服务文件如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># cat /usr/local/bin/trojan/trojan-go.service 
+</span></span><span class="line"><span class="cl">[Unit]
+</span></span><span class="line"><span class="cl">Description=Trojan-Go - An unidentifiable mechanism that helps you bypass GFW
+</span></span><span class="line"><span class="cl">Documentation=https://p4gefau1t.github.io/trojan-go/
+</span></span><span class="line"><span class="cl">After=network.target nss-lookup.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Service]
+</span></span><span class="line"><span class="cl">User=root
+</span></span><span class="line"><span class="cl">CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+</span></span><span class="line"><span class="cl">AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+</span></span><span class="line"><span class="cl">NoNewPrivileges=true
+</span></span><span class="line"><span class="cl">ExecStart=/usr/local/bin/trojan/trojan-go -config /usr/local/bin/trojan/conf/server.json
+</span></span><span class="line"><span class="cl">Restart=on-failure
+</span></span><span class="line"><span class="cl">RestartSec=10s
+</span></span><span class="line"><span class="cl">LimitNOFILE=infinity
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Install]
+</span></span><span class="line"><span class="cl">WantedBy=multi-user.target
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这是用例子文件/usr/local/bin/trojan/example/trojan-go.service修改的, 仅修改了两处:</p>
+<ul>
+<li>Service-&gt;ExecStart 目录和文件名都不一样</li>
+<li>Service-&gt;User 原为nobody, 改为root<br>
+原用nobody时, 启动时会报错, 应该是权限不够<br>
+(linux对于非root权限用户不能使用1024以下的端口, 或者, 目录与文件访问权限不够 - 很可能是后面这个问题)。</li>
+</ul>
+<h5 id="设置trojan-go自启动">设置Trojan-go自启动</h5>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://www.jianshu.com/p/ed709fcc54c6"  title="-&gt;"
+     target="_blank" rel="noopener"
+    >ubuntu 20.04 使用systemd创建自定义服务</a></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 服务文件要放在/lib/systemd/system/目录下
+</span></span><span class="line"><span class="cl"># cp /usr/local/bin/trojan/trojan-go.service /lib/systemd/system/
+</span></span><span class="line"><span class="cl"># 重新加载服务配置
+</span></span><span class="line"><span class="cl"># systemctl daemon-reload
+</span></span><span class="line"><span class="cl"># 设置trojan-go开机启动
+</span></span><span class="line"><span class="cl"># systemctl enable trojan-go.service
+</span></span><span class="line"><span class="cl">Created symlink /etc/systemd/system/multi-user.target.wants/trojan-go.service → /lib/systemd/system/trojan-go.service.
+</span></span><span class="line"><span class="cl"># service trojan-go restart
+</span></span><span class="line"><span class="cl"># service trojan-go status
+</span></span><span class="line"><span class="cl">● trojan-go.service - Trojan-Go - An unidentifiable mechanism that helps you bypass GFW
+</span></span><span class="line"><span class="cl">   Loaded: loaded (/lib/systemd/system/trojan-go.service; enabled; vendor preset: enabled)
+</span></span><span class="line"><span class="cl">   Active: active (running) since Tue 2020-10-29 23:31:17 CST; 1h 51min ago
+</span></span><span class="line"><span class="cl">     Docs: https://p4gefau1t.github.io/trojan-go/
+</span></span><span class="line"><span class="cl"> Main PID: 1962 (trojan-go)
+</span></span><span class="line"><span class="cl">    Tasks: 4 (limit: 513)
+</span></span><span class="line"><span class="cl">   CGroup: /system.slice/trojan-go.service
+</span></span><span class="line"><span class="cl">           └─1962 /usr/local/bin/trojan/trojan-go -config /usr/local/bin/trojan/conf/server.json
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Oct 29 23:31:17 VPS systemd[1]: Started Trojan-Go - An unidentifiable mechanism that helps you bypass GFW.
+</span></span><span class="line"><span class="cl">Oct 29 23:31:17 VPS trojan-go[1962]: [INFO]  2020/10/29 23:31:17 trojan-go v0.10.6 initializing
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>经测试, 该服务器运行符合预期。</p>
+<h2 id="未解决问题"><strong>未解决问题</strong></h2>
+<h3 id="使用ngx_http_google_filter_module代理google">使用ngx_http_google_filter_module代理Google</h3>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://github.com/cuber/ngx_http_google_filter_module"  target="_blank" rel="noopener"
+    >ngx_http_google_filter_module</a> Nginx Module for Google
+<ul>
+<li><a class="link" href="https://www.linuxbabe.com/nginx/set-nginx-reverse-proxy-google-com"  target="_blank" rel="noopener"
+    >Set Up Nginx Reverse Proxy for Google.com on a Ubuntu VPS</a> 详细说明了在使用apt安装的nginx上怎么编译google模块并使用</li>
+</ul>
+</li>
+</ul>
+<p><a class="link" href="https://chinadigitaltimes.net/chinese/607420.html"  target="_blank" rel="noopener"
+    ><img src="/img/61-01.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/fingerprint/">Fingerprint</a>
+        
+            <a href="/tags/%E6%8C%87%E7%BA%B9%E4%BC%AA%E9%80%A0/">指纹伪造</a>
+        
+            <a href="/tags/trojan/">TROJAN</a>
+        
+            <a href="/tags/trojan-go/">TROJAN-GO</a>
+        
+            <a href="/tags/v2ray/">V2RAY</a>
+        
+            <a href="/tags/xray/">XRAY</a>
+        
+            <a href="/tags/ssl%E8%AF%81%E4%B9%A6/">SSL证书</a>
+        
+            <a href="/tags/cloudflare/">Cloudflare</a>
+        
+            <a href="/tags/cdn/">CDN</a>
+        
+            <a href="/tags/x-ui/">x-ui</a>
+        
+            <a href="/tags/nginx/">nginx</a>
+        
+            <a href="/tags/v2rayn/">V2rayN</a>
+        
+            <a href="/tags/v2rayng/">V2rayNG</a>
+        
+            <a href="/tags/openwrt/">Openwrt</a>
+        
+            <a href="/tags/shadowsocksr-plus&#43;/">ShadowSocksR Plus&#43;</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-59.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-59.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nginx服务器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/qa/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-29.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q&amp;A</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%85%B3%E4%BA%8Ecloudflare/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/cloudflare-1536x1023.jpg" loading="lazy" data-key="" data-hash="/wallpaper/cloudflare-1536x1023.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于Cloudflare</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B0%86ionos%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%85%A5cloudflare/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-43.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-43.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">将IONOS域名转入Cloudflare</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9C%A8kubesail%E4%B8%8A%E6%90%AD%E5%BB%BAv2ray/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/NAFO-40-c.jpg" loading="lazy" data-key="" data-hash="/wallpaper/NAFO-40-c.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在kubesail上搭建V2Ray</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#问题">问题</a></li>
+    <li><a href="#参考">参考</a>
+      <ol>
+        <li><a href="#trojantrojan-go">Trojan/Trojan-go</a>
+          <ol>
+            <li><a href="#支持的客户端">支持的客户端</a></li>
+          </ol>
+        </li>
+        <li><a href="#x-ui">X-ui</a></li>
+        <li><a href="#cdn相关">CDN相关</a></li>
+        <li><a href="#一键安装">一键安装</a></li>
+      </ol>
+    </li>
+    <li><a href="#用例">用例</a>
+      <ol>
+        <li><a href="#trojantrojan-go-1">Trojan/Trojan-go</a>
+          <ol>
+            <li><a href="#trojan-go套nginx">Trojan-go套Nginx</a></li>
+            <li><a href="#nginx套trojan-go">Nginx套Trojan-go</a></li>
+            <li><a href="#nginxtrojan-go-on-ipv6-vps">Nginx+Trojan-go On IPV6 VPS</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#未解决问题"><strong>未解决问题</strong></a>
+      <ol>
+        <li><a href="#使用ngx_http_google_filter_module代理google">使用ngx_http_google_filter_module代理Google</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

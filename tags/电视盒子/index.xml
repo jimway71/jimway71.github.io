@@ -731,7 +731,7 @@ guest ok = yes&lt;/p&gt;
 &lt;h3 id=&#34;硬件准备&#34;&gt;硬件准备&lt;/h3&gt;
 &lt;p&gt;● 给板子的TTL接口焊上排针&lt;br&gt;
 ● 用排线连接板子上TTL针脚和USB转TTL模块，连接如下:&lt;br&gt;
-(收发对倒连接)  &lt;/p&gt;
+(收发对倒连接)&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;

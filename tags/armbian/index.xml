@@ -172,7 +172,7 @@ Filesystem 1K-blocks Used Available Use% Mounted on&lt;br&gt;
 tmpfs 410140 8 410132 1% /tmp&lt;br&gt;
 …&lt;/p&gt;
 &lt;/blockquote&gt;
-可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。 
+可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。
 由于/root的空间够用, 因此改为/root下目录做为/tmp:&lt;br&gt;
 新建tmp的目录:
 &lt;blockquote&gt;
@@ -1148,6 +1148,8 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[global]  
@@ -1188,8 +1190,10 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = no  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        force create mode = 0644  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用smbpasswd设置用户密码(用adduser增加smb用户)  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd XXXXXXX  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用smbpasswd设置用户密码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# * 先用adduser增加smb用户同名linux系统用户  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# * 再用smbpasswd -a增加smb用户, 并设置用户密码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd -a XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;u&gt;注: 找不到smbpasswd文件, 但samba用户是可用的&lt;/u&gt;&lt;/p&gt;
@@ -1354,6 +1358,48 @@ Linux AmlR3300l 5.3.0-aml-g12 #5.97 SMP PREEMPT Mon Sep 23 14:33:30 MSK 2019 aar
 &lt;p&gt;可以简化为:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;# ifconfig eth0|grep inet|grep -v inet6|awk &amp;lsquo;{print $2}&amp;rsquo;|tr -d &amp;ldquo;addr:&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Openwrt相关资源</title>
+        <link>https://jimway71.github.io/p/openwrt%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/</link>
+        <pubDate>Fri, 09 Apr 2021 08:56:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/openwrt%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-36.jpg" alt="Featured image of post Openwrt相关资源" /&gt;&lt;h1 id=&#34;openwrt&#34;&gt;OpenWrt&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://openwrt.org/&#34;  title=&#34;a Linux operating system targeting embedded devices&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWrt&lt;/a&gt; OpenWrt官方代码网站&lt;/p&gt;
+&lt;h2 id=&#34;openwrt-1&#34;&gt;OpenWrt&lt;/h2&gt;
+&lt;h3 id=&#34;资源&#34;&gt;资源&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://git.openwrt.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWrt GIT&lt;/a&gt; OpenWrt官方代码仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;openwrt-for-tv-boxes&#34;&gt;OpenWrt for TV Boxes&lt;/h2&gt;
+&lt;h3 id=&#34;资源-1&#34;&gt;资源&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ophub/amlogic-s9xxx-openwrt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWrt for Amlogic TV Boxes&lt;/a&gt; Github上为Amlogic电视盒子写的OpenWrt系统&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ophub/amlogic-s9xxx-armbian&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Armbian for Amlogic and Rockchip&lt;/a&gt; Github上为Amlogic和Rockchip写的Armbian系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;openwrt-for-docker&#34;&gt;Openwrt for Docker&lt;/h2&gt;
+&lt;h3 id=&#34;资源-2&#34;&gt;资源&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://githubmemory.com/repo/unifreq/openwrt_packit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy 的 Openwrt 打包源码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.right.com.cn/forum/thread-958173-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy的openwrt 4 docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/unifreq/openwrt-aarch64&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flippy的openwrt4docker源: unifreq/openwrt-aarch64&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运行&#34;&gt;运行&lt;/h3&gt;
+&lt;h4 id=&#34;openwrt在docker下运行&#34;&gt;Openwrt在Docker下运行&lt;/h4&gt;
+&lt;p&gt;执行命令:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# docker run --restart always --name openwrt -p 80:80 -d --privileged unifreq/openwrt-aarch64&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         </item>

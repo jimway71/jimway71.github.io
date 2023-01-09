@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='An open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more'><title>Nginx服务器</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='Nginx服务器'>
+<meta property='og:description' content='An open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more'>
+<meta property='og:url' content='https://jimway71.github.io/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Nginx' /><meta property='article:tag' content='SSL证书' /><meta property='article:tag' content='SSL certificate' /><meta property='article:tag' content='Cloudflare' /><meta property='article:tag' content='Cloudflare免费SSL证书' /><meta property='article:tag' content='ppa源' /><meta property='article:published_time' content='2022-11-17T22:51:00&#43;08:00'/><meta property='article:modified_time' content='2022-11-17T22:51:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-59.jpg' />
+<meta name="twitter:title" content="Nginx服务器">
+<meta name="twitter:description" content="An open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-59.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                
+                    <img src="/wallpaper/wallpaper-59.jpg" loading="lazy" alt="Featured image of post Nginx服务器" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/">Nginx服务器</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            An open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 17, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 7 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <ul>
+<li><a class="link" href="https://yutsuki.moe/2020/03/e8d8fd18/"  target="_blank" rel="noopener"
+    >被 CloudFlare 耽误的 v2ray ws+tls</a> 实际上, 是<strong>V2怎么套CDN的问题</strong></li>
+<li><a class="link" href="https://blog.51cto.com/u_14867519/4003502"  target="_blank" rel="noopener"
+    >Nginx反向代理web服务器&mdash;&ndash;简单代理</a></li>
+</ul>
+<h2 id="关于nginx">关于Nginx</h2>
+<p>Nginx (pronounced &ldquo;engine x&rdquo;[7] /ˌɛndʒɪnˈɛks/ EN-jin-EKS) is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004.[8] Nginx is free and open-source software, released under the terms of the 2-clause BSD license. A large fraction of web servers use Nginx,[9] often as a load balancer.[10] (From <a class="link" href="https://en.wikipedia.org/wiki/Nginx"  target="_blank" rel="noopener"
+    >Wiki - Nginx</a>)</p>
+<p>官方网站:</p>
+<ul>
+<li><a class="link" href="https://nginx.org/"  title="-&gt;N"
+     target="_blank" rel="noopener"
+    >NGINX</a></li>
+<li><a class="link" href="https://nginx.p2hp.com/"  title="-&gt;Nc"
+     target="_blank" rel="noopener"
+    >Nginx中文</a></li>
+<li><a class="link" href="https://github.com/nginx/nginx"  target="_blank" rel="noopener"
+    >Github Nginx</a></li>
+</ul>
+<p>维基:</p>
+<ul>
+<li><a class="link" href="https://en.wikipedia.org/wiki/Nginx"  target="_blank" rel="noopener"
+    >Wiki - Nginx</a></li>
+<li><a class="link" href="https://zh.m.wikipedia.org/zh/Nginx"  target="_blank" rel="noopener"
+    >维基 - Nginx</a></li>
+</ul>
+<p>文档&amp;教程:</p>
+<ul>
+<li>
+<p><a class="link" href="https://nginx.org/en/docs/"  target="_blank" rel="noopener"
+    >nginx (official) documentation</a></p>
+</li>
+<li>
+<p><a class="link" href="https://nginx.org/en/docs/faq.html"  target="_blank" rel="noopener"
+    >nginx (official) FAQ</a></p>
+</li>
+<li>
+<p><a class="link" href="https://github.com/dunwu/nginx-tutorial#nginx-%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B"  target="_blank" rel="noopener"
+    >Nginx 极简教程</a></p>
+</li>
+<li>
+<p><a class="link" href="https://github.com/Tinywan/lua-nginx-redis#nginx-%E6%95%99%E7%A8%8B"  target="_blank" rel="noopener"
+    >Nginx 教程</a></p>
+</li>
+<li>
+<p>配置指令</p>
+<ul>
+<li><a class="link" href="https://www.google.com.hk/search?q=nginx&#43;%E9%85%8D%E7%BD%AE&#43;%E6%8C%87%E4%BB%A4&#43;%E5%8F%82%E6%95%B0&#43;listen&amp;oq=nginx&#43;%E9%85%8D%E7%BD%AE&#43;%E6%8C%87%E4%BB%A4&#43;%E5%8F%82%E6%95%B0&#43;listen&amp;aqs=chrome..69i57j0i30i546j0i546l2.20005j0j7&amp;sourceid=chrome-mobile&amp;ie=UTF-8"  target="_blank" rel="noopener"
+    >Google &ldquo;nginx 配置 指令 参数 listen&rdquo;</a></li>
+<li><a class="link" href="https://www.hxstrive.com/subject/nginx/750.htm"  target="_blank" rel="noopener"
+    >Nginx 教程</a>
+<ul>
+<li><a class="link" href="https://www.hxstrive.com/subject/nginx.htm?id=896&amp;p=824"  target="_blank" rel="noopener"
+    >listen 指令</a></li>
+</ul>
+</li>
+<li><a class="link" href="https://www.weixueyuan.net/nginx/"  target="_blank" rel="noopener"
+    >Nginx教程</a>
+<ul>
+<li><a class="link" href="https://www.weixueyuan.net/a/635.html"  target="_blank" rel="noopener"
+    >Nginx端口监听（listen指令）</a></li>
+<li><a class="link" href="https://www.weixueyuan.net/a/751.html"  target="_blank" rel="noopener"
+    >Nginx stream模块简述</a></li>
+</ul>
+</li>
+<li><a class="link" href="https://www.aiopsclub.com/nginx/"  target="_blank" rel="noopener"
+    >Nginx系列，带你走进nginx的世界</a>
+<ul>
+<li><a class="link" href="https://www.aiopsclub.com/nginx/nginx_stream_proxy/"  target="_blank" rel="noopener"
+    >Nginx系列之nginx四层反向代理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/59-isol7-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<center>ISO7层协议</center>  
+<p>电子书:</p>
+<ul>
+<li><a class="link" href="https://nginx.org/en/books.html"  target="_blank" rel="noopener"
+    >nginx (official) books</a> 书目列表, 部分是可免费下载的电子书</li>
+<li>PDF电子书 <a class="link" href="https://github.com/Tinywan/lua-nginx-redis/blob/master/docs/Complete-NGINX-Cookbook-2019.pdf"  target="_blank" rel="noopener"
+    >NGINX Cookbook(2019).pdf</a> 英文版</li>
+</ul>
+<p>工具:</p>
+<ul>
+<li><a class="link" href="https://nginx.p2hp.com/config/"  target="_blank" rel="noopener"
+    >在线生成nginx配置</a></li>
+</ul>
+<p><a class="link" href="https://hellogithub.com/report/netcraft"  target="_blank" rel="noopener"
+    >Lastest服务器排行榜</a></p>
+<h2 id="nginx模块">Nginx模块</h2>
+<ul>
+<li>
+<p><a class="link" href="https://github.com/cuber/ngx_http_google_filter_module"  target="_blank" rel="noopener"
+    >ngx_http_google_filter_module</a> Nginx Module for Google</p>
+<ul>
+<li><a class="link" href="https://www.linuxbabe.com/nginx/set-nginx-reverse-proxy-google-com"  target="_blank" rel="noopener"
+    >Set Up Nginx Reverse Proxy for Google.com on a Ubuntu VPS</a> 详细说明了在使用apt安装的nginx上怎么编译google模块并使用</li>
+</ul>
+<p>ngx_http_google_filter_module is a filter module which makes google mirror much easier to deploy.<br>
+Regular expressions, uri locations and other complex configurations have been built-in already.<br>
+The native nginx module ensure the efficiency of handling cookies, gstatic scoures and redirections.<br>
+Let&rsquo;s see how easy it is to setup a google mirror.</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">location / {  
+</span></span><span class="line"><span class="cl">  google on;  
+</span></span><span class="line"><span class="cl">}  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="关于ssl证书">关于SSL证书</h2>
+<h3 id="cloudflare免费ssl证书">Cloudflare免费SSL证书</h3>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl/"  title="Enable Universal SSL certificates"
+     target="_blank" rel="noopener"
+    >Cloudflare启用通用SSL证书</a></li>
+<li><a class="link" href="https://www.dimm.cc/33.html"  target="_blank" rel="noopener"
+    >记录一次使用cloudflare生成15年的SSL证书</a></li>
+<li><a class="link" href="https://65536.io/2020/03/607.html"  target="_blank" rel="noopener"
+    >申请CloudFlare免费SSL证书并应用到nginx</a></li>
+</ul>
+<p>参照<a class="link" href="https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl/"  title="Enable Universal SSL certificates"
+     target="_blank" rel="noopener"
+    >Cloudflare启用通用SSL证书</a>的说明, 默认情况下，<a class="link" href="https://www.cloudflare.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>向所有<a class="link" href="https://www.cloudflare.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>域颁发并续订免费、非共享、<u>公开信任</u>的SSL证书。<br>
+<a class="link" href="https://www.cloudflare.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>提供了最长15年有效期的通用SSL证书, 用户可以在<a class="link" href="https://www.cloudflare.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>上为其拥有的由<a class="link" href="https://www.cloudflare.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>管理的域生成证书并使用。操作如下:</p>
+<p>登录<a class="link" href="https://www.cloudflare.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>, 点击需要生成证书的域名后, 选择&quot;SSL/TLS&quot; - &ldquo;源服务器&rdquo;,<br>
+<img src="/img/59-ssl-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image"
+	
+	
+><br>
+点击创建证书,<br>
+<img src="/img/59-ssl-02.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image"
+	
+	
+><br>
+保持默认设置, 点击创建,<br>
+<img src="/img/59-ssl-03.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image"
+	
+	
+><br>
+证书已经生成, 需要分别复制证书内容, 创建并保存对应的证书、密钥文件。</p>
+<h2 id="相关概念">相关概念</h2>
+<h3 id="正向代理与反向代理">正向代理与反向代理</h3>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://cloud.tencent.com/developer/article/1418457"  target="_blank" rel="noopener"
+    >终于有人把正向代理和反向代理解释的明明白白了</a></li>
+</ul>
+<p>正向代理就是原来的代理服务器, 而反向代理的代理服务器是隐形的:<br>
+<img src="/img/59-%e6%ad%a3%e5%90%91%e4%bb%a3%e7%90%86%e6%9c%8d%e5%8a%a1.jpeg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+><br>
+<img src="/img/59-%e5%8f%8d%e5%90%91%e4%bb%a3%e7%90%86%e6%9c%8d%e5%8a%a1.jpeg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="安装nginx">安装Nginx</h2>
+<h3 id="在ubuntu1804上使用apt安装nginx">在Ubuntu(18.0.4)上使用apt安装Nginx</h3>
+<p>使用apt命令安装nginx非常简单, 命令如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 更新apt库信息  
+</span></span><span class="line"><span class="cl"># apt update  
+</span></span><span class="line"><span class="cl"># 安装nginx  
+</span></span><span class="line"><span class="cl"># apt install nginx  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看已安装的nginx版本  
+</span></span><span class="line"><span class="cl"># nginx -V  
+</span></span><span class="line"><span class="cl">nginx version: nginx/1.14.0 (Ubuntu)
+</span></span><span class="line"><span class="cl">build with OpenSSL 1.1.1  11 Sep 2018
+</span></span><span class="line"><span class="cl">TLS SNI support enabled  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当然, Ubuntu通用apt安装的版本都比较旧一些, 从<a class="link" href="https://nginx.org/en/download.html"  target="_blank" rel="noopener"
+    >Nginx:download</a>可以看到, 当前最新的稳定版本是nginx-1.22.1<br>
+Ubuntu的apt仓库版本较陈旧是老问题, 当然, 也有使用ppa源获得相对较新版本的方式, 可以参考<a class="link" href="/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/#%E5%9C%A8ubuntu%E4%B8%8A%E5%AE%89%E8%A3%85-%E6%9B%B4%E6%96%B0-%E7%9A%84python%E7%89%88%E6%9C%AC%E5%8F%8Apip%E5%B7%A5%E5%85%B7" >在Ubuntu上安装 “更新” 的Python版本及pip工具</a></p>
+<h3 id="在armbian530上使用apt安装nginx">在Armbian(5.3.0)上使用apt安装Nginx</h3>
+<p>在Armbian上使用apt命令安装nginx也同样非常简单, 命令如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 更新apt库信息  
+</span></span><span class="line"><span class="cl"># apt update  
+</span></span><span class="line"><span class="cl"># 安装nginx  
+</span></span><span class="line"><span class="cl"># apt install nginx  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看已安装的nginx版本  
+</span></span><span class="line"><span class="cl"># nginx -v  
+</span></span><span class="line"><span class="cl">nginx version: nginx/1.14.0 (Ubuntu)  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>和上述Ubuntu(18.0.4)上一样, 使用apt安装的版本都比较旧一些。</p>
+<h2 id="配置nginx">配置Nginx</h2>
+<p>参考:</p>
+<ul>
+<li>
+<p><a class="link" href="https://www.runoob.com/w3cnote/nginx-setup-intro.html"  target="_blank" rel="noopener"
+    >Nginx 配置详解</a></p>
+</li>
+<li>
+<p><a class="link" href="https://blog.51cto.com/doudio/3881324"  target="_blank" rel="noopener"
+    >ubuntu 安装 nginx 并配置 ssl 证书</a></p>
+</li>
+<li>
+<p><a class="link" href="https://cloud.tencent.com/developer/article/1700794"  target="_blank" rel="noopener"
+    >Nginx——ubuntu安装Nginx并配置https</a></p>
+</li>
+<li>
+<p><a class="link" href="https://segmentfault.com/a/1190000022673232"  target="_blank" rel="noopener"
+    >Nginx 安装 SSL 配置 HTTPS 超详细完整全过程</a></p>
+</li>
+<li>
+<p><a class="link" href="https://blog.csdn.net/u013519290/article/details/122020113"  target="_blank" rel="noopener"
+    >ubuntu nginx添加SSL证书访问</a></p>
+</li>
+<li>
+<p><a class="link" href="https://blog.51cto.com/wzlinux/2391231"  target="_blank" rel="noopener"
+    >nginx 配置 https 并强制跳转(lnmp一键安装包)</a>: 主要关注https证书配置</p>
+</li>
+<li>
+<p><a class="link" href="https://kalacloud.com/blog/how-to-install-nginx-on-ubuntu-20-04/"  target="_blank" rel="noopener"
+    >如何在 Ubuntu 20.04 中安装和配置 Nginx</a></p>
+</li>
+</ul>
+<h3 id="在ubuntu1804上配置nginx">在Ubuntu(18.0.4)上配置Nginx</h3>
+<p>前述在Ubuntu上使用apt安装的Nginx, 配置文件在/etc/nginx, 主要的配置文件是nginx.conf以及其中include的相关配置文件</p>
+<h4 id="配置nginx上的https服务器">配置Nginx上的https服务器</h4>
+<p>nginx.conf中关于http项的配置中, 最后有两条include, 如下:</p>
+<blockquote>
+<p>include /etc/nginx/conf.d/*.conf;<br>
+include /etc/nginx/sites-enabled/*;</p>
+</blockquote>
+<p>其中/etc/nginx/sites-enabled/default文件中配置的http和https服务<br>
+修改/etc/nginx/sites-enabled/default, 屏蔽掉http服务(端口80), 增加https服务(端口443), 并配置ssl, 如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server{
+</span></span><span class="line"><span class="cl">    # listen 80 default_server;
+</span></span><span class="line"><span class="cl">    # listen [::]:80 default_server;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    listen 443 default_server;
+</span></span><span class="line"><span class="cl">    listen [::]:443 default_server;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ssl on;
+</span></span><span class="line"><span class="cl">    ssl_certificate /etc/nginx/cert/mydomain.pem;
+</span></span><span class="line"><span class="cl">    ssl_certificate_key /etc/nginx/cert/mydomain.key;           
+</span></span><span class="line"><span class="cl">    ssl_session_cache shared:SSL:1m;
+</span></span><span class="line"><span class="cl">    ssl_session_timeout 5m;
+</span></span><span class="line"><span class="cl">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置文件见下图:<br>
+<img src="/img/59-nginx-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image"
+	
+	
+><br>
+重启nginx服务:</p>
+<blockquote>
+<p># service nginx restart</p>
+</blockquote>
+<p>查看nginx运行状态<br>
+<img src="/img/59-nginx-02.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image"
+	
+	
+><br>
+由于该https服务器域名由<a class="link" href="https://www.cloudflare.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>代理, 且SSL/TLS加密模式为完全(严格), 见下图:<br>
+<img src="/img/59-ssl-04.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image"
+	
+	
+><br>
+可以确认nginx的https服务器配置正确有效。<br>
+经下载文件测速, 发现由<a class="link" href="https://www.cloudflare.com/"  title="-&gt;C"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>代理后, 服务器下载速度不稳定, 在800kbps~4Mbps间波动。</p>
+<h3 id="在armbian530上配置nginx">在Armbian(5.3.0)上配置Nginx</h3>
+<p>前述在Armbian上使用apt安装的Nginx, 配置文件在/etc/nginx, 主要的配置文件是nginx.conf以及其中include的相关配置文件<br>
+查看/etc/nginx下的文件列表如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/etc/nginx# ll
+</span></span><span class="line"><span class="cl">total 72
+</span></span><span class="line"><span class="cl">drwxr-xr-x  8 root root 4096 Nov 18 22:49 ./
+</span></span><span class="line"><span class="cl">drwxr-xr-x 98 root root 4096 Nov 18 22:49 ../
+</span></span><span class="line"><span class="cl">drwxr-xr-x  2 root root 4096 Nov 10 14:38 conf.d/
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root 1077 Apr  6  2018 fastcgi.conf
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root 1007 Apr  6  2018 fastcgi_params
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root 2837 Apr  6  2018 koi-utf
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root 2223 Apr  6  2018 koi-win
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root 3957 Apr  6  2018 mime.types
+</span></span><span class="line"><span class="cl">drwxr-xr-x  2 root root 4096 Nov 10 14:38 modules-available/
+</span></span><span class="line"><span class="cl">drwxr-xr-x  2 root root 4096 Nov 18 22:49 modules-enabled/
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root 1482 Apr  6  2018 nginx.conf
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root  180 Apr  6  2018 proxy_params
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root  636 Apr  6  2018 scgi_params
+</span></span><span class="line"><span class="cl">drwxr-xr-x  2 root root 4096 Nov 18 22:49 sites-available/
+</span></span><span class="line"><span class="cl">drwxr-xr-x  2 root root 4096 Nov 18 22:49 sites-enabled/
+</span></span><span class="line"><span class="cl">drwxr-xr-x  2 root root 4096 Nov 18 22:49 snippets/
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root  664 Apr  6  2018 uwsgi_params
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 root root 3071 Apr  6  2018 win-utf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="配置nginx上的https服务器-1">配置Nginx上的https服务器</h4>
+<p>(与前述的Ubuntu上的nginx一样)nginx.conf中关于http项的配置中, 最后有两条include, 如下:</p>
+<blockquote>
+<p>include /etc/nginx/conf.d/*.conf;<br>
+include /etc/nginx/sites-enabled/*;</p>
+</blockquote>
+<p>其中/etc/nginx/sites-enabled/default文件中配置的http和https服务<br>
+修改/etc/nginx/sites-enabled/default, 屏蔽掉http服务(端口80), 增加https服务(端口443), 并配置ssl, 如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server{
+</span></span><span class="line"><span class="cl">    # listen 80 default_server;
+</span></span><span class="line"><span class="cl">    # listen [::]:80 default_server;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    listen 443 default_server;
+</span></span><span class="line"><span class="cl">    listen [::]:443 default_server;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ssl on;
+</span></span><span class="line"><span class="cl">    ssl_certificate /etc/nginx/cert/mydomain.pem;
+</span></span><span class="line"><span class="cl">    ssl_certificate_key /etc/nginx/cert/mydomain.key;           
+</span></span><span class="line"><span class="cl">    ssl_session_cache shared:SSL:1m;
+</span></span><span class="line"><span class="cl">    ssl_session_timeout 5m;
+</span></span><span class="line"><span class="cl">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改后, 配置文件/etc/nginx/sites-enabled/default的主要有效部分如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        # listen 80 default_server;
+</span></span><span class="line"><span class="cl">        # listen [::]:80 default_server;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # SSL configuration
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # listen 443 ssl default_server;
+</span></span><span class="line"><span class="cl">        # listen [::]:443 ssl default_server;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        listen 443 default_server;
+</span></span><span class="line"><span class="cl">        listen [::]:443 default_server;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        ssl on;
+</span></span><span class="line"><span class="cl">        ssl_certificate /etc/nginx/cert/mydomain.pem;
+</span></span><span class="line"><span class="cl">        ssl_certificate_key /etc/nginx/cert/mydomain.key;
+</span></span><span class="line"><span class="cl">        ssl_session_cache shared:SSL:1m;
+</span></span><span class="line"><span class="cl">        ssl_session_timeout 5m;
+</span></span><span class="line"><span class="cl">        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # Note: You should disable gzip for SSL traffic.
+</span></span><span class="line"><span class="cl">        # See: https://bugs.debian.org/773332
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # Read up on ssl_ciphers to ensure a secure configuration.
+</span></span><span class="line"><span class="cl">        # See: https://bugs.debian.org/765782
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # Self signed certs generated by the ssl-cert package
+</span></span><span class="line"><span class="cl">        # Don&#39;t use them in a production server!
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # include snippets/snakeoil.conf;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root /var/www/html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # Add index.php to the list if you are using PHP
+</span></span><span class="line"><span class="cl">        index index.html index.htm index.nginx-debian.html;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        server_name _;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">                # First attempt to serve request as file, then
+</span></span><span class="line"><span class="cl">                # as directory, then fall back to displaying a 404.
+</span></span><span class="line"><span class="cl">                try_files $uri $uri/ =404;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # pass PHP scripts to FastCGI server
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        #location ~ \.php$ {
+</span></span><span class="line"><span class="cl">        #       include snippets/fastcgi-php.conf;
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        #       # With php-fpm (or other unix sockets):
+</span></span><span class="line"><span class="cl">        #       fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+</span></span><span class="line"><span class="cl">        #       # With php-cgi (or other tcp sockets):
+</span></span><span class="line"><span class="cl">        #       fastcgi_pass 127.0.0.1:9000;
+</span></span><span class="line"><span class="cl">        #}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # deny access to .htaccess files, if Apache&#39;s document root
+</span></span><span class="line"><span class="cl">        # concurs with nginx&#39;s one
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        #location ~ /\.ht {
+</span></span><span class="line"><span class="cl">        #       deny all;
+</span></span><span class="line"><span class="cl">        #}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>重启nginx服务:</p>
+<blockquote>
+<p># service nginx restart</p>
+</blockquote>
+<p>查看nginx运行状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 查看服务状态  
+</span></span><span class="line"><span class="cl"># service nginx status
+</span></span><span class="line"><span class="cl">* nginx.service - A high performance web server and a reverse proxy server
+</span></span><span class="line"><span class="cl">   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+</span></span><span class="line"><span class="cl">   Active: active (running) since Fri 2022-11-18 23:13:08 CST; 17s ago
+</span></span><span class="line"><span class="cl">     Docs: man:nginx(8)
+</span></span><span class="line"><span class="cl">  Process: 12129 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+</span></span><span class="line"><span class="cl">  Process: 12128 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+</span></span><span class="line"><span class="cl"> Main PID: 12130 (nginx)
+</span></span><span class="line"><span class="cl">    Tasks: 5 (limit: 643)
+</span></span><span class="line"><span class="cl">   CGroup: /system.slice/nginx.service
+</span></span><span class="line"><span class="cl">           |-12130 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+</span></span><span class="line"><span class="cl">           |-12131 nginx: worker process
+</span></span><span class="line"><span class="cl">           |-12132 nginx: worker process
+</span></span><span class="line"><span class="cl">           |-12134 nginx: worker process
+</span></span><span class="line"><span class="cl">           `-12135 nginx: worker process
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Nov 18 23:13:08 myhostname systemd[1]: Starting A high performance web server and a reverse proxy server...
+</span></span><span class="line"><span class="cl">Nov 18 23:13:08 myhostname systemd[1]: Started A high performance web server and a reverse proxy server.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看https端口占用  
+</span></span><span class="line"><span class="cl"># netstat -a | grep tcp
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">tcp        0      0 0.0.0.0:https           0.0.0.0:*               LISTEN
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">tcp6       0      0 [::]:https              [::]:*                  LISTEN
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 用wget访问https网站主页    
+</span></span><span class="line"><span class="cl"># wget https://mydomain/
+</span></span><span class="line"><span class="cl">--2022-11-18 23:14:40--  https://mydomain/
+</span></span><span class="line"><span class="cl">Resolving mydomain (mydomain)... 192.168.59.140
+</span></span><span class="line"><span class="cl">Connecting to mydomain (mydomain)|192.168.59.140|:443... connected.
+</span></span><span class="line"><span class="cl">ERROR: cannot verify mydomain&#39;s certificate, issued by &#39;ST=California,L=San Francisco,OU=CloudFlare Origin SSL Certificate Authority,O=CloudFlare\\, Inc.,C=US&#39;:
+</span></span><span class="line"><span class="cl">  Unable to locally verify the issuer&#39;s authority.
+</span></span><span class="line"><span class="cl">To connect to mydomain insecurely, use `--no-check-certificate&#39;.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 用wget访问https网站主页, 使用--no-check-certificate参数忽略证书问题      
+</span></span><span class="line"><span class="cl"># wget https://mydomain/ --no-check-certificate
+</span></span><span class="line"><span class="cl">--2022-11-18 23:22:27--  https://mydomain/
+</span></span><span class="line"><span class="cl">Resolving mydomain (mydomain)... 192.168.59.140
+</span></span><span class="line"><span class="cl">Connecting to mydomain (mydomain)|192.168.59.140|:443... connected.
+</span></span><span class="line"><span class="cl">WARNING: cannot verify mydomain&#39;s certificate, issued by &#39;ST=California,L=San Francisco,OU=CloudFlare Origin SSL Certificate Authority,O=CloudFlare\\, Inc.,C=US&#39;:
+</span></span><span class="line"><span class="cl">  Unable to locally verify the issuer&#39;s authority.
+</span></span><span class="line"><span class="cl">HTTP request sent, awaiting response... 200 OK
+</span></span><span class="line"><span class="cl">Length: 612 [text/html]
+</span></span><span class="line"><span class="cl">Saving to: &#39;index.html&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">index.html                                          100%[=================================================================================================================&gt;]     612  --.-KB/s    in 0s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2022-11-18 23:22:27 (13.7 MB/s) - &#39;index.html&#39; saved [612/612]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>确认nginx配置可用。<br>
+将用hugo生成的网页拷到/var/www/html(nginx存放网页的目录)后, 确认页面可以工作。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/nginx/">nginx</a>
+        
+            <a href="/tags/ssl%E8%AF%81%E4%B9%A6/">SSL证书</a>
+        
+            <a href="/tags/ssl-certificate/">SSL certificate</a>
+        
+            <a href="/tags/cloudflare/">Cloudflare</a>
+        
+            <a href="/tags/cloudflare%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6/">Cloudflare免费SSL证书</a>
+        
+            <a href="/tags/ppa%E6%BA%90/">ppa源</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-61.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-61.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">翻墙系列</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%94%A8%E4%BA%8Ehttps%E6%9C%8D%E5%8A%A1%E7%9A%84ssl%E8%AF%81%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-62.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-62.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">用于https服务的SSL证书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%85%B3%E4%BA%8Ecloudflare/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/cloudflare-1536x1023.jpg" loading="lazy" data-key="" data-hash="/wallpaper/cloudflare-1536x1023.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于Cloudflare</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B0%86ionos%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%85%A5cloudflare/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-43.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-43.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">将IONOS域名转入Cloudflare</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nemiks-nanifesto/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-Nemik%27s%20manifesto.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-Nemik&#39;s manifesto.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nemik&#39;s Nanifesto</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#关于nginx">关于Nginx</a></li>
+    <li><a href="#nginx模块">Nginx模块</a></li>
+    <li><a href="#关于ssl证书">关于SSL证书</a>
+      <ol>
+        <li><a href="#cloudflare免费ssl证书">Cloudflare免费SSL证书</a></li>
+      </ol>
+    </li>
+    <li><a href="#相关概念">相关概念</a>
+      <ol>
+        <li><a href="#正向代理与反向代理">正向代理与反向代理</a></li>
+      </ol>
+    </li>
+    <li><a href="#安装nginx">安装Nginx</a>
+      <ol>
+        <li><a href="#在ubuntu1804上使用apt安装nginx">在Ubuntu(18.0.4)上使用apt安装Nginx</a></li>
+        <li><a href="#在armbian530上使用apt安装nginx">在Armbian(5.3.0)上使用apt安装Nginx</a></li>
+      </ol>
+    </li>
+    <li><a href="#配置nginx">配置Nginx</a>
+      <ol>
+        <li><a href="#在ubuntu1804上配置nginx">在Ubuntu(18.0.4)上配置Nginx</a>
+          <ol>
+            <li><a href="#配置nginx上的https服务器">配置Nginx上的https服务器</a></li>
+          </ol>
+        </li>
+        <li><a href="#在armbian530上配置nginx">在Armbian(5.3.0)上配置Nginx</a>
+          <ol>
+            <li><a href="#配置nginx上的https服务器-1">配置Nginx上的https服务器</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

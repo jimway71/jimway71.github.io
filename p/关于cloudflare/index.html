@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='提供内容交付网络(CDN)和DNS服务，以优化网站和应用程序的性能、可交付性和在线安全性'><title>关于Cloudflare</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/%E5%85%B3%E4%BA%8Ecloudflare/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='关于Cloudflare'>
+<meta property='og:description' content='提供内容交付网络(CDN)和DNS服务，以优化网站和应用程序的性能、可交付性和在线安全性'>
+<meta property='og:url' content='https://jimway71.github.io/p/%E5%85%B3%E4%BA%8Ecloudflare/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Cloudflare' /><meta property='article:tag' content='cloudflared' /><meta property='article:tag' content='Spectrum' /><meta property='article:tag' content='WARP' /><meta property='article:tag' content='Github' /><meta property='article:tag' content='Zero Trust' /><meta property='article:published_time' content='2022-11-19T12:20:00&#43;08:00'/><meta property='article:modified_time' content='2022-11-19T12:20:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/cloudflare-1536x1023.jpg' />
+<meta name="twitter:title" content="关于Cloudflare">
+<meta name="twitter:description" content="提供内容交付网络(CDN)和DNS服务，以优化网站和应用程序的性能、可交付性和在线安全性"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/cloudflare-1536x1023.jpg' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%85%B3%E4%BA%8Ecloudflare/">
+                
+                    <img src="/wallpaper/cloudflare-1536x1023.jpg" loading="lazy" alt="Featured image of post 关于Cloudflare" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%85%B3%E4%BA%8Ecloudflare/">关于Cloudflare</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            提供内容交付网络(CDN)和DNS服务，以优化网站和应用程序的性能、可交付性和在线安全性
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 19, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 8 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <ul>
+<li>查Cloudflare使用&quot;使用自选/优选ip&quot;, 实现类CDN(而非点亮云)</li>
+</ul>
+<h2 id="关于cloudflare">关于Cloudflare</h2>
+<p><a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>是互联网上运行的最大网络之一。人们使用<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>服务的目的是使其网站和服务更安全、更高效。<br>
+<a class="link" href="https://developers.cloudflare.com/"  target="_blank" rel="noopener"
+    >Cloudflare Docs</a>网站上提供了相当丰富的文档资源, <a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>网站的&quot;资源&quot;引导也非常清晰。<br>
+<a class="link" href="https://community.cloudflare.com/"  title="-&gt;Cc"
+     target="_blank" rel="noopener"
+    >Cloudflare社区</a>是<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>的官方社区。<br>
+<a class="link" href="https://www.youtube.com/@cloudflare"  title="-&gt;CY"
+     target="_blank" rel="noopener"
+    >Cloudflare Youtube</a>是<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>的Youtube帐号。</p>
+<p>关于收费:</p>
+<ul>
+<li><a class="link" href="https://www.cloudflare.com/zh-cn/plans/"  target="_blank" rel="noopener"
+    >Cloudflare的Plans</a></li>
+</ul>
+<h2 id="cloudflare证书">Cloudflare证书</h2>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://tyhardware.cn/cloudfare-ssl/"  target="_blank" rel="noopener"
+    >Cloudflare免费通配符SSL/TLS证书最长15年申请教程</a></li>
+</ul>
+<p><a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>证书类型:</p>
+<ul>
+<li>源证书<br>
+生成由 Cloudflare 签名的免费 TLS 证书，以安装在源服务器上。<br>
+源证书仅对 Cloudflare 与源服务器之间的加密有效。<br>
+<u>可下载, 如用于https-web服务器, 在web浏览器会有安全警告。</u></li>
+<li>客户端证书<br>
+使用客户端证书保护和验证您的 API 和 Web 应用程序。<br>
+通过 mTLS 规则阻止不具备有效客户端 SSL/TLS 证书的设备发出的流量。<br>
+<u>可生成下载, 是给API和web应用使用的, 但没试过在https-web服务器使用</u></li>
+<li>边缘证书<br>
+管理和购买将提供给您的 Web 访问者的 SSL 证书。<br>
+这是Cloudflare 通用 SSL 证书，自定义主机名的是商业证书需要购买。<br>
+免费套餐中不允许您上传任何 SSL 证书，但是可以订购自动续订证书或升级到 Business 计划来启用此功能。<br>
+<u>不可下载</u>, 当然也没法用。</li>
+</ul>
+<p>还得找可用的SSL证书:</p>
+<ul>
+<li><a class="link" href="https://www.begindot.com/zh-CN/%E8%8E%B7%E5%BE%97%E5%85%8D%E8%B4%B9%E7%9A%84-ssl-%E8%AF%81%E4%B9%A6/"  target="_blank" rel="noopener"
+    >12 个最适合您网站的免费 SSL 证书来源</a></li>
+</ul>
+<h2 id="cloudflare提供的服务">Cloudflare提供的服务</h2>
+<h3 id="cloudflared">Cloudflared</h3>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/"  target="_blank" rel="noopener"
+    >Cloudflare Tunnel</a></li>
+<li><a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/#set-up-a-tunnel-locally-cli-setup"  target="_blank" rel="noopener"
+    >Set up a tunnel locally</a></li>
+<li><a class="link" href="https://dmesg.app/argo-tunnel.html"  target="_blank" rel="noopener"
+    >Cloudflare Argo Tunnel 小试：我终于可以用树莓派做网站啦</a></li>
+<li><a class="link" href="https://nova.moe/accelerate-and-secure-with-cloudflared/"  target="_blank" rel="noopener"
+    >使用 Cloudflare Argo Tunnel(cloudflared) 来加速和保护你的网站</a></li>
+<li><a class="link" href="https://www.minebbs.com/threads/cloudflare-ipv6-ipv4.5892/"  target="_blank" rel="noopener"
+    >利用Cloudflare为你的纯IPV6主机建站并允许IPV4访问</a></li>
+<li><a class="link" href="https://nova.moe/accelerate-and-secure-with-cloudflared/"  target="_blank" rel="noopener"
+    >使用 Cloudflare Argo Tunnel(cloudflared) 来加速和保护你的网站</a></li>
+</ul>
+<p><a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>是<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>提供的隧道客户端, 以前被称为&quot;Cloudflare Argo Tunnel&quot;。<br>
+<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>免费开放了<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>隧道客户端, 而且<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>是<a class="link" href="https://github.com/"  title="-&gt;G"
+     target="_blank" rel="noopener"
+    >Github</a>上的开源项目。</p>
+<p><a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>隧道客户端的功能, 简单的说, 通过使用<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>隧道客户端, 就是在任何可以访问<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>的机器和<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>中搭建一个安全的加密隧道，然后这个隧道可以用来承载很多不同种类型的流量，比如http(<strong>会被自动转换成 https</strong>)、tcp、ssh、smb、rdp, 甚至是unix套接字, 当前在<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>相关文档中(<a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/local-management/ingress/#supported-protocols"  target="_blank" rel="noopener"
+    >文档一</a>、<a class="link" href="https://github.com/cloudflare/cloudflared#cloudflare-tunnel-client"  target="_blank" rel="noopener"
+    >文档二</a>中, 明确说明以下协议可以被<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>支持:</p>
+<ul>
+<li>HTTP/S</li>
+<li>HTTP over Unix socket</li>
+<li>HTTPS over Unix socket</li>
+<li>TCP</li>
+<li>SSH</li>
+<li>RDP</li>
+<li>kubectl bastion mode</li>
+<li>Hello World</li>
+<li>HTTP status</li>
+</ul>
+<p>通过使用<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>隧道客户端,</p>
+<ul>
+<li>可以保证设备的安全(不需要开放更多端口以提供外部访问)</li>
+<li>可以利用<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>网络在全球提高访问速度</li>
+<li>可以为通常无法在外部直接访问的设备, 如在NAT内部设备、仅有IPV4/IPV6的设备(而不能被仅有IPV6/IPV4的设备访问), 提供全球范围的访问。</li>
+</ul>
+<p>简单的说, 就是:</p>
+<ul>
+<li>保护(设备)安全</li>
+<li>加快访问速度</li>
+<li>提供访问(通道)</li>
+</ul>
+<p>注意:</p>
+<ul>
+<li>被访问设备(下面描述中为设备A)位于中国大陆时, 运行cloudflared tunnel run, 建立隧道时会报Err错误, 无法成功建立连接, 原因暂无法确认。</li>
+</ul>
+<h4 id="通过使用cloudflared隧道客户端-使ipv6设备的ssh端口可被ipv4设备访问">通过使用Cloudflared隧道客户端, 使IPV6设备的SSH端口可被IPV4设备访问</h4>
+<p>场景:</p>
+<ul>
+<li>被访问设备A: 位于公网上, 有 1*IPV6公网地址 + 1*IPV4内网地址<br>
+可以通过IPV4/IPV6访问公网, 但仅可以通过IPV6地址被访问</li>
+<li>访问设备B: 位于内网中, 网络只有IPV4地址<br>
+只能访问IPV4地址的设备</li>
+<li>目标: 设备B能访问设备A的SSH服务</li>
+</ul>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://www.youtube.com/watch?v=lq7WpGJZvk4"  target="_blank" rel="noopener"
+    >Create SSH connections with Cloudflare Access</a> <a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>官方视频讲解, 访问设备B的配置有点复杂(下载Cloudflared+配置.ssh/config+ssh用户需要登录 - 5:27开始)</li>
+<li><a class="link" href="https://blog.viakiba.cn/2022/09/08/cloudflare-tunnel-ssh/"  target="_blank" rel="noopener"
+    ><strong>cloudflare tunnel ssh</strong></a></li>
+<li><a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/use_cases/ssh/"  target="_blank" rel="noopener"
+    >Connect with SSH through Cloudflare Tunnel</a></li>
+<li><a class="link" href="https://www.qiniu.com/qfans/qnso-70891443"  target="_blank" rel="noopener"
+    >如何使用VS远程SSH与Cloudflare代理的域名</a></li>
+<li><a class="link" href="https://developers.cloudflare.com/cloudflare-one/faq/teams-troubleshooting/"  target="_blank" rel="noopener"
+    >Troubleshooting</a></li>
+</ul>
+<p>注: 当前的设备A为ARM64设备。<br>
+操作:<br>
+✿ <a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>帐号和<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>管理下的域名</p>
+<ul>
+<li>注册<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >cloudflare</a>帐号<br>
+略</li>
+<li>购买或转移域名到<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >cloudflare</a>帐号<br>
+略</li>
+</ul>
+<p>✿ 下载<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 查看环境变量PATH中包括的目录  
+</span></span><span class="line"><span class="cl"># echo $PATH  
+</span></span><span class="line"><span class="cl">/opt/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games  
+</span></span><span class="line"><span class="cl"># 确定把下载的Cloudflared放到/usr/loca/bin目录下  
+</span></span><span class="line"><span class="cl"># 建立/usr/local/bin目录, 并进入到/usr/local/bin目录中  
+</span></span><span class="line"><span class="cl"># cd /usr/local  
+</span></span><span class="line"><span class="cl"># mkdir /usr/local/bin  
+</span></span><span class="line"><span class="cl"># pwd
+</span></span><span class="line"><span class="cl">/usr/local/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 下载当前最新版本的ARM64版本cloudflared - 从Github网页 https://github.com/cloudflare/cloudflared 中, 可以找到Lastest的Releases链接  
+</span></span><span class="line"><span class="cl"># wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/download/2022.10.3/cloudflared-linux-arm64
+</span></span><span class="line"><span class="cl">--2021-12-10 14:51:09--  https://github.com/cloudflare/cloudflared/releases/download/2022.10.3/cloudflared-linux-arm64
+</span></span><span class="line"><span class="cl">Resolving github.com (github.com)... 140.82.112.3
+</span></span><span class="line"><span class="cl">Connecting to github.com (github.com)|140.82.112.3|:443... connected.
+</span></span><span class="line"><span class="cl">HTTP request sent, awaiting response... 302 Found
+</span></span><span class="line"><span class="cl">Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/106867604/cce7afe8-9433-4fd9-8a67-00faab60ad7b?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221120%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221120T065110Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=b9757cc00caec8bf2f13d5770e94fd68c05ffbe9994205a1622d7b013cbfe7d8&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=106867604&amp;response-content-disposition=attachment%3B%20filename%3Dcloudflared-linux-arm64&amp;response-content-type=application%2Foctet-stream [following]
+</span></span><span class="line"><span class="cl">--2021-12-10 14:51:10--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/106867604/cce7afe8-9433-4fd9-8a67-00faab60ad7b?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221120%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221120T065110Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=b9757cc00caec8bf2f13d5770e94fd68c05ffbe9994205a1622d7b013cbfe7d8&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=106867604&amp;response-content-disposition=attachment%3B%20filename%3Dcloudflared-linux-arm64&amp;response-content-type=application%2Foctet-stream
+</span></span><span class="line"><span class="cl">Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+</span></span><span class="line"><span class="cl">Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+</span></span><span class="line"><span class="cl">HTTP request sent, awaiting response... 200 OK
+</span></span><span class="line"><span class="cl">Length: 33669864 (32M) [application/octet-stream]
+</span></span><span class="line"><span class="cl">Saving to: &#39;cloudflared&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cloudflared               100%[==================================&gt;]  32.11M  7.47MB/s    in 10s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2021-12-10 14:51:24 (3.07 MB/s) - &#39;cloudflared&#39; saved [33669864/33669864]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 为cloudflared增加执行权限  
+</span></span><span class="line"><span class="cl"># chmod +x cloudflared
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>✿ 建立<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>隧道</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 设备A登录Cloudflare, 并自动下载证书  
+</span></span><span class="line"><span class="cl"># cloudflared tunnel login
+</span></span><span class="line"><span class="cl">Please open the following URL and log in with your Cloudflare account:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">https://dash.cloudflare.com/argotunnel?callback=https%3A%2F%2Flogin.cloudflareaccess.org%2Fovvq2nYEarpQ8ynsIhftx4YwLSYVOWk-cTU4fJR7Rkw%3D
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Leave cloudflared running to download the cert automatically.
+</span></span><span class="line"><span class="cl">2021-12-10T08:31:42Z INF Waiting for login...
+</span></span><span class="line"><span class="cl">You have successfully logged in.
+</span></span><span class="line"><span class="cl">If you wish to copy your credentials to a server, they have been saved to:
+</span></span><span class="line"><span class="cl">/root/.cloudflared/cert.pem
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 建立Cloudflared隧道
+</span></span><span class="line"><span class="cl"># cloudflared tunnel create &lt;隧道名&gt;
+</span></span><span class="line"><span class="cl">Tunnel credentials written to /root/.cloudflared/&lt;隧道UUID&gt;.json. cloudflared chose this file based on where your origin certificate was found. Keep this file secret. To revoke these credentials, delete the tunnel.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Created tunnel &lt;隧道名&gt; with id &lt;隧道UUID&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看Cloudflared隧道列表  
+</span></span><span class="line"><span class="cl"># cloudflared tunnel list
+</span></span><span class="line"><span class="cl">You can obtain more detailed information for each tunnel with `cloudflared tunnel info &lt;name/uuid&gt;`
+</span></span><span class="line"><span class="cl">ID                                   NAME       CREATED              CONNECTIONS
+</span></span><span class="line"><span class="cl">&lt;隧道UUID&gt;                          &lt;隧道名&gt; 2021-12-10T08:34:14Z     &lt;连接状态&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 删除命令: 如果需要删除已建的Cloudflared隧道  
+</span></span><span class="line"><span class="cl"># cloudflared tunnel delete &lt;隧道UUID 或 隧道名&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>✿ 添加DNS记录, 关联到已建立的<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>隧道</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 使用cloudflared命令增加与隧道相关的DNS记录  
+</span></span><span class="line"><span class="cl"># cloudflared tunnel route dns &lt;隧道UUID, 可能写隧道名也行&gt; &lt;目标域名&gt;
+</span></span><span class="line"><span class="cl">2022-11-20T08:49:52Z INF Added CNAME &lt;目标域名&gt; which will route to this tunnel tunnelID=&lt;隧道UUID, 可能写隧道名也行&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>也可以在<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a>网站-&gt;域名-&gt;DNS设置里添加CNAME记录, 目标(Target)里写&quot;&lt;隧道UUID&gt;.cfargotunnel.com&quot;, 如下图所示:<br>
+<img src="/img/cloudflare-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="添加CNAME记录"
+	
+	
+></p>
+<p>✿ 将需要的服务配置输出到建立<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>隧道</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 失败  
+</span></span><span class="line"><span class="cl"># cloudflared tunnel run --url=ssh://cfhk.otcg.win:22 cfhk  
+</span></span><span class="line"><span class="cl"># 成功  
+</span></span><span class="line"><span class="cl"># cloudflared tunnel run --url=https://cfhk.otcg.win:443 cfhk  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注: /etc/hosts添加了以下行<br>
+127.0.0.1   cfhk.otcg.win</p>
+<p>在<a class="link" href="https://community.cloudflare.com/"  title="-&gt;Cc"
+     target="_blank" rel="noopener"
+    >Cloudflare社区</a>上的问题:</p>
+<ul>
+<li><a class="link" href="https://community.cloudflare.com/t/using-cloudflared-tunnel-ssh-fail-even-tunnel-https-success/436931"  target="_blank" rel="noopener"
+    >Using cloudflared tunnel ssh fail, Even tunnel https success</a></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># cloudflared -v
+</span></span><span class="line"><span class="cl">cloudflared version 2022.10.3 (built 2022-10-26-1031 UTC)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="通过使用cloudflared隧道客户端-使ipv4内网设备的https服务可被ipv4ipv6设备访问">通过使用Cloudflared隧道客户端, 使IPV4内网设备的HTTPS服务可被IPV4/IPV6设备访问</h4>
+<p>场景:</p>
+<ul>
+<li>被访问设备A: 位于IPV4内网上<br>
+可以通过IPV4访问公网, 但不能被来自公网的设备访问</li>
+<li>访问设备B: 全球任一IP网络上设备<br>
+可以通过IPV4或IPV6访问公网</li>
+<li>目标: 设备B能访问设备A的HTTPS服务</li>
+</ul>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://blog.zapic.moe/archives/tutorial-176.html"  target="_blank" rel="noopener"
+    >使用Cloudflare Argo Tunnel快速免公网IP建站</a></li>
+</ul>
+<h3 id="cloudflare-spectrum">Cloudflare Spectrum</h3>
+<p><a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a><a class="link" href="https://www.cloudflare.com/zh-cn/products/cloudflare-spectrum/"  target="_blank" rel="noopener"
+    >Spectrum</a> (收费服务)<br>
+Internet 不仅仅是网络。它包含许多其他与 Web 服务具有相同基本需求的 TCP / UDP 应用程序——都需要速度、安全性和可靠性。<br>
+Cloudflare Spectrum 是一种反向代理产品，可将 Cloudflare 的优势扩展到全部 TCP/UDP 应用程序。<br>
+**Cloudflare Spectrum 与 Argo Smart Routing集成，以比“尽最大努力”的互联网更快的速度发送 TCP 流量。**Cloudflare 的网络从数百万个互联网资产的流量中学习，从而实时绕过网络拥塞，实现基于机器学习（ML）的智能路由。<br>
+<u>感觉是<a class="link" href="https://github.com/cloudflare/cloudflared"  title="-&gt;Cfd"
+     target="_blank" rel="noopener"
+    >Cloudflared</a>的加强版本。</u></p>
+<h3 id="cloudflare-warp">Cloudflare WARP</h3>
+<p><a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a> <a class="link" href="https://blog.cloudflare.com/1111-warp-better-vpn/"  title="-&gt;W"
+     target="_blank" rel="noopener"
+    >WARP</a> (基本版本免费, WARP+收费)。<br>
+Cloudflare的移动终端VPN, 从技术角度来看，<a class="link" href="https://blog.cloudflare.com/1111-warp-better-vpn/"  title="-&gt;W"
+     target="_blank" rel="noopener"
+    >WARP</a>是一个VPN, 但它是为与传统VPN截然不同的用户设计的:</p>
+<ul>
+<li><a class="link" href="https://blog.cloudflare.com/1111-warp-better-vpn/"  title="-&gt;W"
+     target="_blank" rel="noopener"
+    >WARP</a>不是用来让你在旅行时访问受地理限制的内容的。</li>
+<li>它不会在您访问的网站中隐藏您的IP地址。</li>
+</ul>
+<p>如果您正在寻找这种高安全性的保护，那么传统的VPN或Tor之类的服务可能是更好的选择。<br>
+<a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a> <a class="link" href="https://blog.cloudflare.com/1111-warp-better-vpn/"  title="-&gt;W"
+     target="_blank" rel="noopener"
+    >WARP</a>的目的是:</p>
+<ul>
+<li>保护所有流量</li>
+<li>同时使其更快、更可靠</li>
+</ul>
+<p>在安卓Play Store上的APP名称是&quot;1.1.1.1&quot;, 搜索&quot;WARP&quot;也可以找到:</p>
+<ul>
+<li><a class="link" href="https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone"  target="_blank" rel="noopener"
+    >1.1.1.1 + WARP: Safer Internet</a></li>
+</ul>
+<p>但是, Unfortunately, <strong>在中国大陆似乎无法正常使用这个APP。</strong></p>
+<h3 id="cloudflare-zero-trust">Cloudflare Zero Trust</h3>
+<p><a class="link" href="https://www.cloudflare.com/"  title="-&gt;Cf"
+     target="_blank" rel="noopener"
+    >Cloudflare</a><a class="link" href="https://www.cloudflare.com/zh-cn/products/zero-trust/"  target="_blank" rel="noopener"
+    >Zero Trust</a> (收费服务)<br>
+Cloudflare Zero Trust 大致相当于VPN，终端访问网络的安全技术。<br>
+最快的 Zero Trust 应用访问和互联网浏览平台。<br>
+增加可见性，消除复杂性，降低远程和办公室用户的风险。杜绝数据丢失、恶意软件和网络钓鱼，保护用户、应用程序和设备安全。</p>
+<p>Cloudflare Zero Trust 大致相当于VPN，终端访问网络的安全技术 - fee
+最快的 Zero Trust 应用访问和互联网浏览平台
+增加可见性，消除复杂性，降低远程和办公室用户的风险。杜绝数据丢失、恶意软件和网络钓鱼，保护用户、应用程序和设备安全。</p>
+<p>使用 Cloudflare Argo Tunnel(cloudflared) 来加速和保护你的网站</p>
+<h3 id="更多参考">更多参考</h3>
+<ul>
+<li><a class="link" href="https://zelikk.blogspot.com/2022/05/domain-cloudflare-worker-dev.html"  target="_blank" rel="noopener"
+    >在自己的域名下 设置路由 指向 Cloudflare worker 解决 workers.dev被墙问题</a></li>
+</ul>
+<p>参考视频</p>
+<ul>
+<li>【史上最快】节点永不被墙！一个节点变成1000个节点，CDN优选IP新方法，最方便、最快速的优选IP方式，支持cloudflare、cloudfront、Gcore等任意CDN提供商<br>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/r2WunEyqMeQ" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/cloudflare/">Cloudflare</a>
+        
+            <a href="/tags/cloudflared/">cloudflared</a>
+        
+            <a href="/tags/spectrum/">Spectrum</a>
+        
+            <a href="/tags/warp/">WARP</a>
+        
+            <a href="/tags/github/">Github</a>
+        
+            <a href="/tags/zero-trust/">Zero Trust</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-61.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-61.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">翻墙系列</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-59.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-59.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nginx服务器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B0%86ionos%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%85%A5cloudflare/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-43.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-43.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">将IONOS域名转入Cloudflare</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nemiks-nanifesto/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-Nemik%27s%20manifesto.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-Nemik&#39;s manifesto.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nemik&#39;s Nanifesto</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/anki-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%BE%85%E5%8A%A9%E8%AE%B0%E5%BF%86%E8%BD%AF%E4%BB%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-66.png" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-66.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Anki 强大的辅助记忆软件</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#关于cloudflare">关于Cloudflare</a></li>
+    <li><a href="#cloudflare证书">Cloudflare证书</a></li>
+    <li><a href="#cloudflare提供的服务">Cloudflare提供的服务</a>
+      <ol>
+        <li><a href="#cloudflared">Cloudflared</a>
+          <ol>
+            <li><a href="#通过使用cloudflared隧道客户端-使ipv6设备的ssh端口可被ipv4设备访问">通过使用Cloudflared隧道客户端, 使IPV6设备的SSH端口可被IPV4设备访问</a></li>
+            <li><a href="#通过使用cloudflared隧道客户端-使ipv4内网设备的https服务可被ipv4ipv6设备访问">通过使用Cloudflared隧道客户端, 使IPV4内网设备的HTTPS服务可被IPV4/IPV6设备访问</a></li>
+          </ol>
+        </li>
+        <li><a href="#cloudflare-spectrum">Cloudflare Spectrum</a></li>
+        <li><a href="#cloudflare-warp">Cloudflare WARP</a></li>
+        <li><a href="#cloudflare-zero-trust">Cloudflare Zero Trust</a></li>
+        <li><a href="#更多参考">更多参考</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

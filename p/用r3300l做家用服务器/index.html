@@ -847,6 +847,8 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 </span><span class="lnt">38
 </span><span class="lnt">39
 </span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[global]  
@@ -887,8 +889,10 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 </span></span><span class="line"><span class="cl">        public = no  
 </span></span><span class="line"><span class="cl">        valid users = XXXXXXX  
 </span></span><span class="line"><span class="cl">        force create mode = 0644  
-</span></span><span class="line"><span class="cl"># 用smbpasswd设置用户密码(用adduser增加smb用户)  
-</span></span><span class="line"><span class="cl"># smbpasswd XXXXXXX  
+</span></span><span class="line"><span class="cl"># 用smbpasswd设置用户密码
+</span></span><span class="line"><span class="cl"># * 先用adduser增加smb用户同名linux系统用户  
+</span></span><span class="line"><span class="cl"># * 再用smbpasswd -a增加smb用户, 并设置用户密码
+</span></span><span class="line"><span class="cl"># smbpasswd -a XXXXXXX  
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><u>注: 找不到smbpasswd文件, 但samba用户是可用的</u></p>
@@ -1216,7 +1220,9 @@ Linux AmlR3300l 5.3.0-aml-g12 #5.97 SMP PREEMPT Mon Sep 23 14:33:30 MSK 2019 aar
     <section class="copyright">
         &copy; 
         
-        2022 点滴随记
+            2022 - 
+        
+        2023 点滴随记
     </section>
     
     <section class="powerby">

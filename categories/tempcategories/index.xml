@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>TempCategories on 点滴随记</title>
+        <link>https://jimway71.github.io/categories/tempcategories/</link>
+        <description>Recent content in TempCategories on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 18 Mar 2022 01:47:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/categories/tempcategories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>TemplateTitle</title>
+        <link>https://jimway71.github.io/p/templatetitle/</link>
+        <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/templatetitle/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/TempWallpaper.png" alt="Featured image of post TemplateTitle" /&gt;&lt;p&gt;TemplateContents&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

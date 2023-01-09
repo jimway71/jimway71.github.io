@@ -172,7 +172,7 @@ Filesystem 1K-blocks Used Available Use% Mounted on&lt;br&gt;
 tmpfs 410140 8 410132 1% /tmp&lt;br&gt;
 …&lt;/p&gt;
 &lt;/blockquote&gt;
-可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。 
+可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。
 由于/root的空间够用, 因此改为/root下目录做为/tmp:&lt;br&gt;
 新建tmp的目录:
 &lt;blockquote&gt;
@@ -1148,6 +1148,8 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[global]  
@@ -1188,8 +1190,10 @@ Openwrt的网络配置文件是/etc/config/network, 也许手动修改配置文�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        public = no  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        valid users = XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        force create mode = 0644  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用smbpasswd设置用户密码(用adduser增加smb用户)  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd XXXXXXX  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用smbpasswd设置用户密码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# * 先用adduser增加smb用户同名linux系统用户  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# * 再用smbpasswd -a增加smb用户, 并设置用户密码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# smbpasswd -a XXXXXXX  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;u&gt;注: 找不到smbpasswd文件, 但samba用户是可用的&lt;/u&gt;&lt;/p&gt;
@@ -2190,7 +2194,7 @@ guest ok = yes&lt;/p&gt;
 &lt;h3 id=&#34;硬件准备&#34;&gt;硬件准备&lt;/h3&gt;
 &lt;p&gt;● 给板子的TTL接口焊上排针&lt;br&gt;
 ● 用排线连接板子上TTL针脚和USB转TTL模块，连接如下:&lt;br&gt;
-(收发对倒连接)  &lt;/p&gt;
+(收发对倒连接)&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;

@@ -6,7 +6,367 @@
         <description>Recent content in Tags on 点滴随记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 04 Nov 2022 23:46:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 09 Jan 2023 23:11:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Andor</title>
+        <link>https://jimway71.github.io/tags/andor/</link>
+        <pubDate>Mon, 09 Jan 2023 23:11:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/andor/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Nemik&#39;s Nanifesto</title>
+        <link>https://jimway71.github.io/tags/nemiks-nanifesto/</link>
+        <pubDate>Mon, 09 Jan 2023 23:11:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/nemiks-nanifesto/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Star Wars</title>
+        <link>https://jimway71.github.io/tags/star-wars/</link>
+        <pubDate>Mon, 09 Jan 2023 23:11:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/star-wars/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Anki</title>
+        <link>https://jimway71.github.io/tags/anki/</link>
+        <pubDate>Wed, 07 Dec 2022 12:02:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/anki/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>背单词</title>
+        <link>https://jimway71.github.io/tags/%E8%83%8C%E5%8D%95%E8%AF%8D/</link>
+        <pubDate>Wed, 07 Dec 2022 12:02:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E8%83%8C%E5%8D%95%E8%AF%8D/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>翻译</title>
+        <link>https://jimway71.github.io/tags/%E7%BF%BB%E8%AF%91/</link>
+        <pubDate>Wed, 07 Dec 2022 12:02:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E7%BF%BB%E8%AF%91/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AI绘画</title>
+        <link>https://jimway71.github.io/tags/ai%E7%BB%98%E7%94%BB/</link>
+        <pubDate>Tue, 06 Dec 2022 19:11:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ai%E7%BB%98%E7%94%BB/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Midjourney</title>
+        <link>https://jimway71.github.io/tags/midjourney/</link>
+        <pubDate>Tue, 06 Dec 2022 19:11:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/midjourney/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>chatGPT</title>
+        <link>https://jimway71.github.io/tags/chatgpt/</link>
+        <pubDate>Tue, 06 Dec 2022 11:49:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/chatgpt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Google</title>
+        <link>https://jimway71.github.io/tags/google/</link>
+        <pubDate>Tue, 06 Dec 2022 11:49:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/google/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GPT-3</title>
+        <link>https://jimway71.github.io/tags/gpt-3/</link>
+        <pubDate>Tue, 06 Dec 2022 11:49:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/gpt-3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>OpenAI</title>
+        <link>https://jimway71.github.io/tags/openai/</link>
+        <pubDate>Tue, 06 Dec 2022 11:49:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/openai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>jupyter lab</title>
+        <link>https://jimway71.github.io/tags/jupyter-lab/</link>
+        <pubDate>Mon, 05 Dec 2022 16:00:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/jupyter-lab/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>jupyterlab codex</title>
+        <link>https://jimway71.github.io/tags/jupyterlab-codex/</link>
+        <pubDate>Mon, 05 Dec 2022 16:00:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/jupyterlab-codex/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Certbot</title>
+        <link>https://jimway71.github.io/tags/certbot/</link>
+        <pubDate>Thu, 01 Dec 2022 16:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/certbot/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Cloudflare</title>
+        <link>https://jimway71.github.io/tags/cloudflare/</link>
+        <pubDate>Thu, 01 Dec 2022 16:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/cloudflare/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Let&#39;s Encrypt</title>
+        <link>https://jimway71.github.io/tags/lets-encrypt/</link>
+        <pubDate>Thu, 01 Dec 2022 16:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/lets-encrypt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Renew SSL certificate</title>
+        <link>https://jimway71.github.io/tags/renew-ssl-certificate/</link>
+        <pubDate>Thu, 01 Dec 2022 16:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/renew-ssl-certificate/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SSL certificate</title>
+        <link>https://jimway71.github.io/tags/ssl-certificate/</link>
+        <pubDate>Thu, 01 Dec 2022 16:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ssl-certificate/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SSL证书</title>
+        <link>https://jimway71.github.io/tags/ssl%E8%AF%81%E4%B9%A6/</link>
+        <pubDate>Thu, 01 Dec 2022 16:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ssl%E8%AF%81%E4%B9%A6/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CDN</title>
+        <link>https://jimway71.github.io/tags/cdn/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/cdn/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Fingerprint</title>
+        <link>https://jimway71.github.io/tags/fingerprint/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/fingerprint/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>nginx</title>
+        <link>https://jimway71.github.io/tags/nginx/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/nginx/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Openwrt</title>
+        <link>https://jimway71.github.io/tags/openwrt/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/openwrt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ShadowSocksR Plus&#43;</title>
+        <link>https://jimway71.github.io/tags/shadowsocksr-plus&#43;/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/shadowsocksr-plus&#43;/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>TROJAN</title>
+        <link>https://jimway71.github.io/tags/trojan/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/trojan/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>TROJAN-GO</title>
+        <link>https://jimway71.github.io/tags/trojan-go/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/trojan-go/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>V2RAY</title>
+        <link>https://jimway71.github.io/tags/v2ray/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/v2ray/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>V2rayN</title>
+        <link>https://jimway71.github.io/tags/v2rayn/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/v2rayn/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>V2rayNG</title>
+        <link>https://jimway71.github.io/tags/v2rayng/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/v2rayng/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>x-ui</title>
+        <link>https://jimway71.github.io/tags/x-ui/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/x-ui/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>XRAY</title>
+        <link>https://jimway71.github.io/tags/xray/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/xray/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>指纹伪造</title>
+        <link>https://jimway71.github.io/tags/%E6%8C%87%E7%BA%B9%E4%BC%AA%E9%80%A0/</link>
+        <pubDate>Thu, 24 Nov 2022 18:03:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E6%8C%87%E7%BA%B9%E4%BC%AA%E9%80%A0/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>aaPanel</title>
+        <link>https://jimway71.github.io/tags/aapanel/</link>
+        <pubDate>Mon, 21 Nov 2022 20:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/aapanel/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>xterm</title>
+        <link>https://jimway71.github.io/tags/xterm/</link>
+        <pubDate>Mon, 21 Nov 2022 20:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/xterm/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>宝塔面板</title>
+        <link>https://jimway71.github.io/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</link>
+        <pubDate>Mon, 21 Nov 2022 20:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>后门</title>
+        <link>https://jimway71.github.io/tags/%E5%90%8E%E9%97%A8/</link>
+        <pubDate>Mon, 21 Nov 2022 20:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E5%90%8E%E9%97%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>cloudflared</title>
+        <link>https://jimway71.github.io/tags/cloudflared/</link>
+        <pubDate>Sat, 19 Nov 2022 12:20:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/cloudflared/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Github</title>
+        <link>https://jimway71.github.io/tags/github/</link>
+        <pubDate>Sat, 19 Nov 2022 12:20:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/github/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Spectrum</title>
+        <link>https://jimway71.github.io/tags/spectrum/</link>
+        <pubDate>Sat, 19 Nov 2022 12:20:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/spectrum/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WARP</title>
+        <link>https://jimway71.github.io/tags/warp/</link>
+        <pubDate>Sat, 19 Nov 2022 12:20:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/warp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Zero Trust</title>
+        <link>https://jimway71.github.io/tags/zero-trust/</link>
+        <pubDate>Sat, 19 Nov 2022 12:20:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/zero-trust/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Cloudflare免费SSL证书</title>
+        <link>https://jimway71.github.io/tags/cloudflare%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6/</link>
+        <pubDate>Thu, 17 Nov 2022 22:51:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/cloudflare%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ppa源</title>
+        <link>https://jimway71.github.io/tags/ppa%E6%BA%90/</link>
+        <pubDate>Thu, 17 Nov 2022 22:51:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ppa%E6%BA%90/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ukraine</title>
+        <link>https://jimway71.github.io/tags/ukraine/</link>
+        <pubDate>Mon, 14 Nov 2022 21:24:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/ukraine/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>电影</title>
         <link>https://jimway71.github.io/tags/%E7%94%B5%E5%BD%B1/</link>
         <pubDate>Fri, 04 Nov 2022 23:46:00 +0800</pubDate>
@@ -119,19 +479,19 @@
         <description></description>
         </item>
         <item>
-        <title>Ukraine</title>
-        <link>https://jimway71.github.io/tags/ukraine/</link>
-        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/ukraine/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>War</title>
         <link>https://jimway71.github.io/tags/war/</link>
         <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
         
         <guid>https://jimway71.github.io/tags/war/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>FutureTools</title>
+        <link>https://jimway71.github.io/tags/futuretools/</link>
+        <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/futuretools/</guid>
         <description></description>
         </item>
         <item>
@@ -143,11 +503,11 @@
         <description></description>
         </item>
         <item>
-        <title>Cloudflare</title>
-        <link>https://jimway71.github.io/tags/cloudflare/</link>
-        <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
+        <title>开源</title>
+        <link>https://jimway71.github.io/tags/%E5%BC%80%E6%BA%90/</link>
+        <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://jimway71.github.io/tags/cloudflare/</guid>
+        <guid>https://jimway71.github.io/tags/%E5%BC%80%E6%BA%90/</guid>
         <description></description>
         </item>
         <item>
@@ -263,14 +623,6 @@
         <description></description>
         </item>
         <item>
-        <title>Openwrt</title>
-        <link>https://jimway71.github.io/tags/openwrt/</link>
-        <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/openwrt/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>play to Devices</title>
         <link>https://jimway71.github.io/tags/play-to-devices/</link>
         <pubDate>Mon, 15 Aug 2022 23:33:00 +0800</pubDate>
@@ -327,11 +679,35 @@
         <description></description>
         </item>
         <item>
+        <title>Newifi3-D2</title>
+        <link>https://jimway71.github.io/tags/newifi3-d2/</link>
+        <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/newifi3-d2/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Q&amp;A</title>
         <link>https://jimway71.github.io/tags/qa/</link>
         <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/qa/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>systemd</title>
+        <link>https://jimway71.github.io/tags/systemd/</link>
+        <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/systemd/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>timer</title>
+        <link>https://jimway71.github.io/tags/timer/</link>
+        <pubDate>Mon, 15 Aug 2022 16:22:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/timer/</guid>
         <description></description>
         </item>
         <item>
@@ -391,6 +767,14 @@
         <description></description>
         </item>
         <item>
+        <title>markdown格试</title>
+        <link>https://jimway71.github.io/tags/markdown%E6%A0%BC%E8%AF%95/</link>
+        <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/markdown%E6%A0%BC%E8%AF%95/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>stack主题</title>
         <link>https://jimway71.github.io/tags/stack%E4%B8%BB%E9%A2%98/</link>
         <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
@@ -404,6 +788,14 @@
         <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
         
         <guid>https://jimway71.github.io/tags/learn/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>markdown测试</title>
+        <link>https://jimway71.github.io/tags/markdown%E6%B5%8B%E8%AF%95/</link>
+        <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/markdown%E6%B5%8B%E8%AF%95/</guid>
         <description></description>
         </item>
         <item>
@@ -815,6 +1207,14 @@
         <description></description>
         </item>
         <item>
+        <title>Arch Linux</title>
+        <link>https://jimway71.github.io/tags/arch-linux/</link>
+        <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/arch-linux/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>AS4837</title>
         <link>https://jimway71.github.io/tags/as4837/</link>
         <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
@@ -847,11 +1247,35 @@
         <description></description>
         </item>
         <item>
+        <title>Centos</title>
+        <link>https://jimway71.github.io/tags/centos/</link>
+        <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/centos/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>CN2</title>
         <link>https://jimway71.github.io/tags/cn2/</link>
         <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/cn2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Debian</title>
+        <link>https://jimway71.github.io/tags/debian/</link>
+        <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/debian/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Fedoa</title>
+        <link>https://jimway71.github.io/tags/fedoa/</link>
+        <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/fedoa/</guid>
         <description></description>
         </item>
         <item>
@@ -868,6 +1292,14 @@
         <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/template-tags/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>TempTags</title>
+        <link>https://jimway71.github.io/tags/temptags/</link>
+        <pubDate>Fri, 18 Mar 2022 01:47:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/temptags/</guid>
         <description></description>
         </item>
         <item>
@@ -991,14 +1423,6 @@
         <description></description>
         </item>
         <item>
-        <title>Github</title>
-        <link>https://jimway71.github.io/tags/github/</link>
-        <pubDate>Sun, 23 May 2021 18:27:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/github/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>编译固件</title>
         <link>https://jimway71.github.io/tags/%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6/</link>
         <pubDate>Sun, 23 May 2021 18:27:16 +0800</pubDate>
@@ -1015,35 +1439,11 @@
         <description></description>
         </item>
         <item>
-        <title>V2RAY</title>
-        <link>https://jimway71.github.io/tags/v2ray/</link>
-        <pubDate>Wed, 28 Apr 2021 19:46:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/v2ray/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>HEROKU</title>
         <link>https://jimway71.github.io/tags/heroku/</link>
         <pubDate>Wed, 28 Apr 2021 14:17:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/heroku/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>TROJAN</title>
-        <link>https://jimway71.github.io/tags/trojan/</link>
-        <pubDate>Wed, 28 Apr 2021 14:17:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/trojan/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>TROJAN-GO</title>
-        <link>https://jimway71.github.io/tags/trojan-go/</link>
-        <pubDate>Wed, 28 Apr 2021 14:17:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/trojan-go/</guid>
         <description></description>
         </item>
         <item>
@@ -1087,6 +1487,14 @@
         <description></description>
         </item>
         <item>
+        <title>Amlogic</title>
+        <link>https://jimway71.github.io/tags/amlogic/</link>
+        <pubDate>Fri, 09 Apr 2021 08:56:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/amlogic/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Flippy</title>
         <link>https://jimway71.github.io/tags/flippy/</link>
         <pubDate>Fri, 09 Apr 2021 08:56:16 +0800</pubDate>
@@ -1100,6 +1508,22 @@
         <pubDate>Fri, 09 Apr 2021 08:56:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/source-code/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>TV Boxes</title>
+        <link>https://jimway71.github.io/tags/tv-boxes/</link>
+        <pubDate>Fri, 09 Apr 2021 08:56:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/tv-boxes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>电视盒</title>
+        <link>https://jimway71.github.io/tags/%E7%94%B5%E8%A7%86%E7%9B%92/</link>
+        <pubDate>Fri, 09 Apr 2021 08:56:16 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/tags/%E7%94%B5%E8%A7%86%E7%9B%92/</guid>
         <description></description>
         </item>
         <item>
@@ -1412,14 +1836,6 @@
         <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
         
         <guid>https://jimway71.github.io/tags/lanproxy/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>nginx</title>
-        <link>https://jimway71.github.io/tags/nginx/</link>
-        <pubDate>Sat, 03 Apr 2021 22:57:16 +0800</pubDate>
-        
-        <guid>https://jimway71.github.io/tags/nginx/</guid>
         <description></description>
         </item>
         <item>

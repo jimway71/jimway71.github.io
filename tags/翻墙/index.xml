@@ -154,6 +154,80 @@ crontab -e是编辑用户任务, crontab -l是显示用户任务.&lt;/p&gt;
 &lt;p&gt;22/10/20&lt;/p&gt;
 &lt;h3 id=&#34;操作系统选用ubuntu-2204lts&#34;&gt;操作系统选用Ubuntu 22.04LTS&lt;/h3&gt;
 &lt;p&gt;由于PacificRack只支持Ubuntu22, 所以只能选Ubuntu22&lt;/p&gt;
+&lt;h3 id=&#34;设置交换分区如果需要&#34;&gt;设置交换分区(如果需要)&lt;/h3&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.inkuang.com/2019/517/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux 系统添加和删除 Swap 交换文件&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;以root身份操作&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在/var/目录下生成交换分区文件, 并激活&lt;br&gt;
+交换分区文件大小设置为2G&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# dd if=/dev/zero of=/var/swapfile bs=1M count=2048&lt;br&gt;
+# mkswap /var/swapfile&lt;br&gt;
+# swapon /var/swapfile&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改交换分区文件读写权限, 以保证系统安全&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# chmod 0600 /var/swapfile&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看交换分区状态&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# swapon&lt;br&gt;
+或&lt;br&gt;
+# swapon -s&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;查看内存状态&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# free&lt;br&gt;
+或&lt;br&gt;
+# top&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看存储空间使用情况&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# df&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置/etc/fstab, 添加开机自动挂载交换分区的设置&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# vim /etc/fstab&lt;br&gt;
+# 在文件最后添加:&lt;br&gt;
+/var/swapfile    swap   swap defaults      0 0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;另 . 如何停用交换分区:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;取消激活相应交换分区文件
+&lt;blockquote&gt;
+&lt;p&gt;# swapoff /var/swapfile&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;删除交换分区文件
+&lt;blockquote&gt;
+&lt;p&gt;# rm /var/swapfile&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;编辑/etc/fstab, 删除相关设置
+&lt;blockquote&gt;
+&lt;p&gt;# vi /etc/fstab&lt;br&gt;
+删除掉自动挂载交换分区文件的设置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;重置服务器并配置-如果需要&#34;&gt;重置服务器并配置 (如果需要)&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -696,7 +770,40 @@ crontab -e是编辑用户任务, crontab -l是显示用户任务.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10 4 * * 0,1,2,3,4,5,6 systemctl restart trojan-go.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;h3 id=&#34;系统中的trojan与nginx&#34;&gt;系统中的Trojan与Nginx&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 以root用户身份查看netstat -ap, 可以看到占用socket端口的进程程序名+进程ID号  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user@machine:~$ sudo netstat -ap | grep tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[sudo] password for user:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 0.0.0.0:http            0.0.0.0:*               LISTEN      686/nginx: master p
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 [::]:https              [::]:*                  LISTEN      652/trojan-go
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;可以看到, Trojan监听https, Nginx监听http。&lt;br&gt;
+来自https端口的访问先由Trojan处理, 其中非Trojan包由Trojan转发到本机80端口(http), 由Nginx处理。&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://github.com/h31105/deployX.sh/issues/25&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;关于trojan-go的配置文件 #25&lt;/a&gt;, 其中Trojan-go配置文件server.json中&amp;quot;ssl&amp;quot;下的&amp;quot;fallback_addr&amp;quot;和&amp;quot;fallback_port&amp;quot;定义了转发的目的地址:端口。&lt;/p&gt;
+&lt;p&gt;当然, 其实也可以反过来, 由Nginx监听https, 需要Trojan处理的, 由Nginx转发给Trojan的端口。
+但是, 由于Nginx无法区分Trojan包与https包, 需要有标记, 考虑使用SNI做分发标记, 参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.chengxiaobai.com/trouble-maker/trojan-shared-443-port-scheme&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Trojan 共用 443 端口方案&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
         </item>
         
     </channel>

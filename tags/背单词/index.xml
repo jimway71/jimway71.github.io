@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>背单词 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/%E8%83%8C%E5%8D%95%E8%AF%8D/</link>
+        <description>Recent content in 背单词 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 07 Dec 2022 12:02:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/%E8%83%8C%E5%8D%95%E8%AF%8D/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Anki 强大的辅助记忆软件</title>
+        <link>https://jimway71.github.io/p/anki-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%BE%85%E5%8A%A9%E8%AE%B0%E5%BF%86%E8%BD%AF%E4%BB%B6/</link>
+        <pubDate>Wed, 07 Dec 2022 12:02:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/anki-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%BE%85%E5%8A%A9%E8%AE%B0%E5%BF%86%E8%BD%AF%E4%BB%B6/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-66.png" alt="Featured image of post Anki 强大的辅助记忆软件" /&gt;&lt;h2 id=&#34;相关资料&#34;&gt;相关资料&lt;/h2&gt;
+&lt;h3 id=&#34;官网&#34;&gt;官网&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt; 功能强大的智能闪存卡, 记住事情变得容易多了&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;在Windows、MacOs、Linux、iPhone/Android这些平上都可以运行&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.ankiweb.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki Manual&lt;/a&gt;  官方手册(英文)
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.ankiweb.net/platform/windows/installing.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installing &amp;amp; Upgrading Anki on Windows&lt;/a&gt; 在Windows系统上安装和升级Anki&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.ankichina.net/manual/anki/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki手册&lt;/a&gt; 官方手册中文翻译版本(不保证是最新版本)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ankitects/anki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki开源官网&lt;/a&gt; 这个仓库包含Anki计算机版本的源代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;程序插件&#34;&gt;程序插件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/addons/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Add-ons for Anki&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;插件列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;共享记忆库shared-decks牌组卡组集合&#34;&gt;共享记忆库(Shared Decks/牌组(卡组)/集合)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/decks/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Shared Decks&lt;/a&gt; 共享的APK牌组/集合&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/decks/chinese&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chinese&lt;/a&gt; 共享的中文APK牌组/集合&lt;br&gt;
+试着下载
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/info/1024139463&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;4000 Essential English Words, all books (English-Chinese)&lt;/a&gt;&lt;/strong&gt; 4000个基本英语单词，所有书籍（英汉）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/info/1426285493&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;English Roots&lt;/a&gt;&lt;/strong&gt; 英语词根&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/decks/english&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;English&lt;/a&gt; 共享的英语APK牌组/集合&lt;br&gt;
+试着下载
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/info/1104981491&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;4000 Essential English Words (all books) [en-en]&lt;/a&gt; 4000 个基本英语单词(英-英)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/info/27053954&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cambridge Vocabulary for IELTS Advanced&lt;/a&gt; 剑桥雅思高级词汇&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;卡片模板&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChristinaHyh/ICE-9/releases/tag/1.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDF.js+Chrome+Anki=任性学习专业英语工具包&lt;/a&gt; 其中&amp;quot;anki.apkg&amp;quot; 是Anki卡片模版, 用于导入卡片&lt;br&gt;
+代替参考文档&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/120863859&#34;  title=&#34;配置Anki, 用于在阅读时添加词卡&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki单词一键取词+制卡，强力提升你的学习效率&lt;/a&gt;中所说的&amp;quot;「浏览器划词.apkg」&amp;ldquo;模板&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装参考&#34;&gt;安装参考&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/120863859&#34;  title=&#34;配置Anki, 用于在阅读时添加词卡&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki单词一键取词+制卡，强力提升你的学习效率&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hyahui.com/pdf-js-anki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDF.js+Chrome+Anki=构建语境习词库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;更多参考&#34;&gt;更多参考&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/more-links/#languages&#34; &gt;更多链接 - languages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;资源&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/21550428&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;资源篇——2005-2014考研真题阅读词汇 - 余时行的文章 - 知乎&lt;/a&gt;  s&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装配置&#34;&gt;安装配置&lt;/h2&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;h4 id=&#34;windows系统安装anki&#34;&gt;Windows系统安装Anki&lt;/h4&gt;
+&lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;官网下载Windows安装包, 并进行安装&lt;/p&gt;
+&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+&lt;h4 id=&#34;windows系统下配置anki&#34;&gt;Windows系统下配置Anki&lt;/h4&gt;
+&lt;p&gt;在菜单&amp;quot;工具&amp;rdquo;-&amp;ldquo;配置&amp;quot;里, 选择&amp;quot;简体中文&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;插件&#34;&gt;插件&lt;/h3&gt;
+&lt;h4 id=&#34;windows系统下安装anki插件&#34;&gt;Windows系统下安装Anki插件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在菜单&amp;quot;工具&amp;quot;-&amp;ldquo;插件&amp;quot;里, 点击&amp;quot;获取插件&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;在弹出的&amp;quot;安装插件&amp;quot;对话框里, 点击&amp;quot;插件官网&amp;quot;, 会在浏览器里打开&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/addons/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;插件列表&lt;/a&gt;, 在列表中查找需要的插件, 点击打开后, 在说明页面中&amp;quot;Download&amp;quot;后会显示一个Download &amp;ldquo;code&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;在&amp;quot;代码&amp;quot;中输入上面查到的Download &amp;ldquo;code&amp;rdquo;, 点击&amp;quot;确定&amp;quot;即可安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;共享记忆库shared-decks牌组卡组集合-1&#34;&gt;共享记忆库(Shared Decks/牌组(卡组)/集合)&lt;/h3&gt;
+&lt;h4 id=&#34;windows系统下导入共享记忆库shared-decks牌组卡组集合&#34;&gt;Windows系统下导入共享记忆库(Shared Decks/牌组(卡组)/集合)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;点击记忆库列表底部的&amp;quot;获取记忆库&amp;quot;(获取牌组)按钮, 会在浏览器里打开&lt;a class=&#34;link&#34; href=&#34;https://ankiweb.net/shared/decks/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Shared Decks&lt;/a&gt;, 在列表中查找需要的共享记忆库&lt;/li&gt;
+&lt;li&gt;点击打开共享记忆库后, 在说明页面中有&amp;quot;Download&amp;quot;按钮, 点击即可下载&lt;/li&gt;
+&lt;li&gt;下载后, 使用菜单&amp;quot;文件&amp;quot;-&amp;ldquo;导入&amp;quot;即可导入到&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;中 &lt;br&gt;
+或者&lt;br&gt;
+在&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;管理正在运行中时, 在文件管理器里双击文件, 即可导入&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;anki功能进阶&#34;&gt;Anki功能进阶&lt;/h2&gt;
+&lt;h3 id=&#34;一键取词制卡&#34;&gt;一键取词+制卡&lt;/h3&gt;
+&lt;h4 id=&#34;在windows上配置一键取词制卡&#34;&gt;在Windows上配置一键取词+制卡&lt;/h4&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/120863859&#34;  title=&#34;配置Anki, 用于在阅读时添加词卡&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki单词一键取词+制卡，强力提升你的学习效率&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;安装ankiconnectreplay-buttons-on-card插件&#34;&gt;安装&amp;quot;AnkiConnect&amp;rdquo;+&amp;ldquo;Replay Buttons on Card&amp;quot;插件&lt;/h5&gt;
+&lt;p&gt;在windows上给Anki程序安装插件, 插件信息为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AnkiConnect&lt;br&gt;
+插件编码：2055492159&lt;/li&gt;
+&lt;li&gt;Replay Buttons on Card&lt;br&gt;
+插件编码：498789867&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;导入anki卡片模版&#34;&gt;导入Anki卡片模版&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChristinaHyh/ICE-9/releases/download/1.0/anki.apkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki卡片模版&lt;/a&gt;(anki.apkg)&lt;/li&gt;
+&lt;li&gt;在windows中, 用Anki程序用导入&amp;quot;打包的Anki牌组/集合(*.apkg *.colpkg *.zip)&amp;ldquo;的方式导入该Anki卡片模板&lt;/li&gt;
+&lt;li&gt;导入成功后主页面将显示出名称为「浏览器划词」的记忆库(deck)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;完成后, 关闭&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;并重新启动&lt;/p&gt;
+&lt;h5 id=&#34;在浏览器上安装插件实现网页浏览实时翻译一键取词一键制卡&#34;&gt;在浏览器上安装插件实现网页浏览实时翻译、一键取词、一键制卡&lt;/h5&gt;
+&lt;h6 id=&#34;在chrome上安装在线词典助手插件&#34;&gt;在Chrome上安装&amp;quot;在线词典助手&amp;quot;插件&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://chrome.google.com/webstore/detail/online-dictionary-helper/lppjdajkacanlmpbbcdkccjkdbpllajb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Online Dictionary Helper&lt;/a&gt; 在线词典助手-Chrome应用商店&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://chrome.google.com/webstore/detail/online-dictionary-helper/lppjdajkacanlmpbbcdkccjkdbpllajb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Online Dictionary Helper&lt;/a&gt;页面中点击&amp;quot;添加至Chrome&amp;quot;按钮, 即可开始安装插件&lt;br&gt;
+插件安装完成后, 在&lt;u&gt;确认&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;正在运行中&lt;/u&gt;的情况下, 对插件进行配置(见图)&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/66-anki-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Chrome插件配置&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/66-anki-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Chrome插件配置&#34;
+	
+	
+&gt;&lt;br&gt;
+然后在Chrome浏览器上打开&lt;a class=&#34;link&#34; href=&#34;chrome://extensions/&#34; &gt;扩展程序&lt;/a&gt;, 点击&amp;quot;在线词典助手&amp;rdquo;-&amp;ldquo;详情&amp;quot;进行配置(见图)&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/66-anki-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Chrome插件配置&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;配置完成, 现在可以在Chrome浏览器上实现一键取词并制卡, 热键(当前设置)为&lt;kbd&gt;Shift&lt;/kbd&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/66-anki-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Chrome一键取词&#34;
+	
+	
+&gt;&lt;br&gt;
+点击卡片上的&lt;font color=green size=6&gt; + &lt;/font&gt;即可将卡片添加到&lt;a class=&#34;link&#34; href=&#34;https://apps.ankiweb.net/&#34;  title=&#34;Powerful, intelligent flash cards. Remembering things just became much easier.&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anki&lt;/a&gt;&lt;br&gt;
+实际了在浏览网页时实时翻译、一键取词、一键制卡。&lt;/p&gt;
+&lt;h5 id=&#34;使用浏览工具实现pdf文件浏览实时翻译一键取词一键制卡&#34;&gt;使用浏览工具实现pdf文件浏览实时翻译、一键取词、一键制卡&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChristinaHyh/ICE-9/releases/download/1.0/pdfjs.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pdf浏览工具&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;操作如下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChristinaHyh/ICE-9/releases/download/1.0/pdfjs.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pdf浏览工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;解压下载的文件, 解压后会出现两个目录, 其中一个是web目录, web目录中有viewer.html文件&lt;/li&gt;
+&lt;li&gt;双击打开&amp;quot;web/viewer.html&amp;quot;文件, &amp;ldquo;web/viewer.html&amp;quot;文件会在chrome浏览器中打开&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;Open File&amp;quot;图标, 选择pdf文件, 并打开&lt;/li&gt;
+&lt;li&gt;在打开的pdf文件中, 可以使用热键(当前设置)&lt;kbd&gt;Shift&lt;/kbd&gt;实时翻译、一键取词、一键制卡&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/66-anki-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;pdf浏览取词&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

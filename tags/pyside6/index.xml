@@ -142,8 +142,7 @@ easycython.py is a script that will attempt to automatically convert one or more
     &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
 使用以下命令进行安装:
 &lt;blockquote&gt;
-&lt;p&gt;c:\&amp;gt; pip install -U &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/archive/develop.zip%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/Nuitka/Nuitka/archive/develop.zip&#34;&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;c:\&amp;gt; pip install -U &amp;quot;https://github.com/Nuitka/Nuitka/archive/develop.zip&amp;quot;&lt;br&gt;
 #  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)&lt;br&gt;
 c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -163,7 +162,7 @@ c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;center&gt;↑ Nuitka安装界面&lt;/center&gt;
 &lt;p&gt;在Windows下常用的编译命令:
-注: helloworld代码参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-hello-world.html&#34;  title=&#34;-&amp;gt;&#34;
+注: helloworld代码参考&amp;quot;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-hello-world.html&#34;  title=&#34;-&amp;gt;&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;使用PySide6创建Hello World程序&lt;/a&gt;&amp;quot;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -312,7 +311,7 @@ c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
     &gt;Windows installer (64-bit)&lt;/a&gt;进行安装, 安装目录选择缺省目录, 安装最后选择&amp;quot;disable path length limit&amp;rdquo;。&lt;br&gt;
 安装完成后, 需要在系统环境变量path中增加python和python下scripts目录:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;在Windows搜索框中，键入&amp;quot;高级系统设置&amp;quot;，打开高级系统设置窗口; 
+&lt;li&gt;在Windows搜索框中，键入&amp;quot;高级系统设置&amp;quot;，打开高级系统设置窗口;
 &lt;img src=&#34;https://jimway71.github.io/img/28-Python-03.jpg&#34;
 	
 	
@@ -323,7 +322,7 @@ c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
 	
 	
 &gt;&lt;/li&gt;
-&lt;li&gt;按下&amp;quot;环境变量&amp;quot;按钮，在打开的窗口中可以在&amp;quot;系统变量&amp;quot;框中选择Path，按&amp;quot;编辑&amp;quot;按钮; 
+&lt;li&gt;按下&amp;quot;环境变量&amp;quot;按钮，在打开的窗口中可以在&amp;quot;系统变量&amp;quot;框中选择Path，按&amp;quot;编辑&amp;quot;按钮;
 &lt;img src=&#34;https://jimway71.github.io/img/28-Python-04.png&#34;
 	
 	

@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cloudflare免费SSL证书 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/cloudflare%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6/</link>
+        <description>Recent content in Cloudflare免费SSL证书 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 17 Nov 2022 22:51:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/cloudflare%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Nginx服务器</title>
+        <link>https://jimway71.github.io/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Thu, 17 Nov 2022 22:51:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-59.jpg" alt="Featured image of post Nginx服务器" /&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://yutsuki.moe/2020/03/e8d8fd18/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;被 CloudFlare 耽误的 v2ray ws+tls&lt;/a&gt; 实际上, 是&lt;strong&gt;V2怎么套CDN的问题&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/u_14867519/4003502&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx反向代理web服务器&amp;mdash;&amp;ndash;简单代理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;关于nginx&#34;&gt;关于Nginx&lt;/h2&gt;
+&lt;p&gt;Nginx (pronounced &amp;ldquo;engine x&amp;rdquo;[7] /ˌɛndʒɪnˈɛks/ EN-jin-EKS) is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004.[8] Nginx is free and open-source software, released under the terms of the 2-clause BSD license. A large fraction of web servers use Nginx,[9] often as a load balancer.[10] (From &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wiki - Nginx&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;官方网站:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/&#34;  title=&#34;-&amp;gt;N&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NGINX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.p2hp.com/&#34;  title=&#34;-&amp;gt;Nc&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx中文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nginx/nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;维基:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wiki - Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.m.wikipedia.org/zh/Nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;维基 - Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文档&amp;amp;教程:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx (official) documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/docs/faq.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx (official) FAQ&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dunwu/nginx-tutorial#nginx-%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 极简教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Tinywan/lua-nginx-redis#nginx-%E6%95%99%E7%A8%8B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置指令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=nginx&amp;#43;%E9%85%8D%E7%BD%AE&amp;#43;%E6%8C%87%E4%BB%A4&amp;#43;%E5%8F%82%E6%95%B0&amp;#43;listen&amp;amp;oq=nginx&amp;#43;%E9%85%8D%E7%BD%AE&amp;#43;%E6%8C%87%E4%BB%A4&amp;#43;%E5%8F%82%E6%95%B0&amp;#43;listen&amp;amp;aqs=chrome..69i57j0i30i546j0i546l2.20005j0j7&amp;amp;sourceid=chrome-mobile&amp;amp;ie=UTF-8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google &amp;ldquo;nginx 配置 指令 参数 listen&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.hxstrive.com/subject/nginx/750.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 教程&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.hxstrive.com/subject/nginx.htm?id=896&amp;amp;p=824&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;listen 指令&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.weixueyuan.net/nginx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx教程&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.weixueyuan.net/a/635.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx端口监听（listen指令）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.weixueyuan.net/a/751.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx stream模块简述&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aiopsclub.com/nginx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx系列，带你走进nginx的世界&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aiopsclub.com/nginx/nginx_stream_proxy/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx系列之nginx四层反向代理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/59-isol7-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;center&gt;ISO7层协议&lt;/center&gt;  
+&lt;p&gt;电子书:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/books.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx (official) books&lt;/a&gt; 书目列表, 部分是可免费下载的电子书&lt;/li&gt;
+&lt;li&gt;PDF电子书 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Tinywan/lua-nginx-redis/blob/master/docs/Complete-NGINX-Cookbook-2019.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NGINX Cookbook(2019).pdf&lt;/a&gt; 英文版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;工具:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.p2hp.com/config/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在线生成nginx配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://hellogithub.com/report/netcraft&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lastest服务器排行榜&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;nginx模块&#34;&gt;Nginx模块&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/cuber/ngx_http_google_filter_module&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ngx_http_google_filter_module&lt;/a&gt; Nginx Module for Google&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linuxbabe.com/nginx/set-nginx-reverse-proxy-google-com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Set Up Nginx Reverse Proxy for Google.com on a Ubuntu VPS&lt;/a&gt; 详细说明了在使用apt安装的nginx上怎么编译google模块并使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ngx_http_google_filter_module is a filter module which makes google mirror much easier to deploy.&lt;br&gt;
+Regular expressions, uri locations and other complex configurations have been built-in already.&lt;br&gt;
+The native nginx module ensure the efficiency of handling cookies, gstatic scoures and redirections.&lt;br&gt;
+Let&amp;rsquo;s see how easy it is to setup a google mirror.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location / {  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  google on;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;关于ssl证书&#34;&gt;关于SSL证书&lt;/h2&gt;
+&lt;h3 id=&#34;cloudflare免费ssl证书&#34;&gt;Cloudflare免费SSL证书&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl/&#34;  title=&#34;Enable Universal SSL certificates&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare启用通用SSL证书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.dimm.cc/33.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;记录一次使用cloudflare生成15年的SSL证书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://65536.io/2020/03/607.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;申请CloudFlare免费SSL证书并应用到nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参照&lt;a class=&#34;link&#34; href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl/&#34;  title=&#34;Enable Universal SSL certificates&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare启用通用SSL证书&lt;/a&gt;的说明, 默认情况下，&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;向所有&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;域颁发并续订免费、非共享、&lt;u&gt;公开信任&lt;/u&gt;的SSL证书。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;提供了最长15年有效期的通用SSL证书, 用户可以在&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;上为其拥有的由&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;管理的域生成证书并使用。操作如下:&lt;/p&gt;
+&lt;p&gt;登录&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;, 点击需要生成证书的域名后, 选择&amp;quot;SSL/TLS&amp;quot; - &amp;ldquo;源服务器&amp;rdquo;,&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-ssl-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+点击创建证书,&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-ssl-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+保持默认设置, 点击创建,&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-ssl-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+证书已经生成, 需要分别复制证书内容, 创建并保存对应的证书、密钥文件。&lt;/p&gt;
+&lt;h2 id=&#34;相关概念&#34;&gt;相关概念&lt;/h2&gt;
+&lt;h3 id=&#34;正向代理与反向代理&#34;&gt;正向代理与反向代理&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1418457&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;终于有人把正向代理和反向代理解释的明明白白了&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正向代理就是原来的代理服务器, 而反向代理的代理服务器是隐形的:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-%e6%ad%a3%e5%90%91%e4%bb%a3%e7%90%86%e6%9c%8d%e5%8a%a1.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-%e5%8f%8d%e5%90%91%e4%bb%a3%e7%90%86%e6%9c%8d%e5%8a%a1.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装nginx&#34;&gt;安装Nginx&lt;/h2&gt;
+&lt;h3 id=&#34;在ubuntu1804上使用apt安装nginx&#34;&gt;在Ubuntu(18.0.4)上使用apt安装Nginx&lt;/h3&gt;
+&lt;p&gt;使用apt命令安装nginx非常简单, 命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 更新apt库信息  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装nginx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt install nginx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看已安装的nginx版本  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# nginx -V  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx version: nginx/1.14.0 (Ubuntu)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;build with OpenSSL 1.1.1  11 Sep 2018
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;TLS SNI support enabled  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;当然, Ubuntu通用apt安装的版本都比较旧一些, 从&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx:download&lt;/a&gt;可以看到, 当前最新的稳定版本是nginx-1.22.1&lt;br&gt;
+Ubuntu的apt仓库版本较陈旧是老问题, 当然, 也有使用ppa源获得相对较新版本的方式, 可以参考&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/#%E5%9C%A8ubuntu%E4%B8%8A%E5%AE%89%E8%A3%85-%E6%9B%B4%E6%96%B0-%E7%9A%84python%E7%89%88%E6%9C%AC%E5%8F%8Apip%E5%B7%A5%E5%85%B7&#34; &gt;在Ubuntu上安装 “更新” 的Python版本及pip工具&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;在armbian530上使用apt安装nginx&#34;&gt;在Armbian(5.3.0)上使用apt安装Nginx&lt;/h3&gt;
+&lt;p&gt;在Armbian上使用apt命令安装nginx也同样非常简单, 命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 更新apt库信息  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装nginx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt install nginx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看已安装的nginx版本  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# nginx -v  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx version: nginx/1.14.0 (Ubuntu)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;和上述Ubuntu(18.0.4)上一样, 使用apt安装的版本都比较旧一些。&lt;/p&gt;
+&lt;h2 id=&#34;配置nginx&#34;&gt;配置Nginx&lt;/h2&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/w3cnote/nginx-setup-intro.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 配置详解&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/doudio/3881324&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ubuntu 安装 nginx 并配置 ssl 证书&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1700794&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx——ubuntu安装Nginx并配置https&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000022673232&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 安装 SSL 配置 HTTPS 超详细完整全过程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/u013519290/article/details/122020113&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ubuntu nginx添加SSL证书访问&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/wzlinux/2391231&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx 配置 https 并强制跳转(lnmp一键安装包)&lt;/a&gt;: 主要关注https证书配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kalacloud.com/blog/how-to-install-nginx-on-ubuntu-20-04/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何在 Ubuntu 20.04 中安装和配置 Nginx&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在ubuntu1804上配置nginx&#34;&gt;在Ubuntu(18.0.4)上配置Nginx&lt;/h3&gt;
+&lt;p&gt;前述在Ubuntu上使用apt安装的Nginx, 配置文件在/etc/nginx, 主要的配置文件是nginx.conf以及其中include的相关配置文件&lt;/p&gt;
+&lt;h4 id=&#34;配置nginx上的https服务器&#34;&gt;配置Nginx上的https服务器&lt;/h4&gt;
+&lt;p&gt;nginx.conf中关于http项的配置中, 最后有两条include, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;include /etc/nginx/conf.d/*.conf;&lt;br&gt;
+include /etc/nginx/sites-enabled/*;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中/etc/nginx/sites-enabled/default文件中配置的http和https服务&lt;br&gt;
+修改/etc/nginx/sites-enabled/default, 屏蔽掉http服务(端口80), 增加https服务(端口443), 并配置ssl, 如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # listen 80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # listen [::]:80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen 443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen [::]:443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_certificate /etc/nginx/cert/mydomain.pem;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_certificate_key /etc/nginx/cert/mydomain.key;           
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_session_cache shared:SSL:1m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_session_timeout 5m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置文件见下图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-nginx-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+重启nginx服务:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service nginx restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看nginx运行状态&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-nginx-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+由于该https服务器域名由&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;代理, 且SSL/TLS加密模式为完全(严格), 见下图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-ssl-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+可以确认nginx的https服务器配置正确有效。&lt;br&gt;
+经下载文件测速, 发现由&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;代理后, 服务器下载速度不稳定, 在800kbps~4Mbps间波动。&lt;/p&gt;
+&lt;h3 id=&#34;在armbian530上配置nginx&#34;&gt;在Armbian(5.3.0)上配置Nginx&lt;/h3&gt;
+&lt;p&gt;前述在Armbian上使用apt安装的Nginx, 配置文件在/etc/nginx, 主要的配置文件是nginx.conf以及其中include的相关配置文件&lt;br&gt;
+查看/etc/nginx下的文件列表如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/nginx# ll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 72
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  8 root root 4096 Nov 18 22:49 ./
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x 98 root root 4096 Nov 18 22:49 ../
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 10 14:38 conf.d/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 1077 Apr  6  2018 fastcgi.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 1007 Apr  6  2018 fastcgi_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 2837 Apr  6  2018 koi-utf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 2223 Apr  6  2018 koi-win
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 3957 Apr  6  2018 mime.types
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 10 14:38 modules-available/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 18 22:49 modules-enabled/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 1482 Apr  6  2018 nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root  180 Apr  6  2018 proxy_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root  636 Apr  6  2018 scgi_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 18 22:49 sites-available/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 18 22:49 sites-enabled/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 18 22:49 snippets/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root  664 Apr  6  2018 uwsgi_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 3071 Apr  6  2018 win-utf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置nginx上的https服务器-1&#34;&gt;配置Nginx上的https服务器&lt;/h4&gt;
+&lt;p&gt;(与前述的Ubuntu上的nginx一样)nginx.conf中关于http项的配置中, 最后有两条include, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;include /etc/nginx/conf.d/*.conf;&lt;br&gt;
+include /etc/nginx/sites-enabled/*;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中/etc/nginx/sites-enabled/default文件中配置的http和https服务&lt;br&gt;
+修改/etc/nginx/sites-enabled/default, 屏蔽掉http服务(端口80), 增加https服务(端口443), 并配置ssl, 如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # listen 80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # listen [::]:80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen 443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen [::]:443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_certificate /etc/nginx/cert/mydomain.pem;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_certificate_key /etc/nginx/cert/mydomain.key;           
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_session_cache shared:SSL:1m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_session_timeout 5m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;修改后, 配置文件/etc/nginx/sites-enabled/default的主要有效部分如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # listen 80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # listen [::]:80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # SSL configuration
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # listen 443 ssl default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # listen [::]:443 ssl default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        listen 443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        listen [::]:443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_certificate /etc/nginx/cert/mydomain.pem;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_certificate_key /etc/nginx/cert/mydomain.key;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_session_cache shared:SSL:1m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_session_timeout 5m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Note: You should disable gzip for SSL traffic.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # See: https://bugs.debian.org/773332
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Read up on ssl_ciphers to ensure a secure configuration.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # See: https://bugs.debian.org/765782
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Self signed certs generated by the ssl-cert package
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Don&amp;#39;t use them in a production server!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # include snippets/snakeoil.conf;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        root /var/www/html;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Add index.php to the list if you are using PHP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        index index.html index.htm index.nginx-debian.html;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        server_name _;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        location / {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                # First attempt to serve request as file, then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                # as directory, then fall back to displaying a 404.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                try_files $uri $uri/ =404;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # pass PHP scripts to FastCGI server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #location ~ \.php$ {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       include snippets/fastcgi-php.conf;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       # With php-fpm (or other unix sockets):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       # With php-cgi (or other tcp sockets):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       fastcgi_pass 127.0.0.1:9000;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # deny access to .htaccess files, if Apache&amp;#39;s document root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # concurs with nginx&amp;#39;s one
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #location ~ /\.ht {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       deny all;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;重启nginx服务:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service nginx restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看nginx运行状态&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看服务状态  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service nginx status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* nginx.service - A high performance web server and a reverse proxy server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Active: active (running) since Fri 2022-11-18 23:13:08 CST; 17s ago
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     Docs: man:nginx(8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Process: 12129 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Process: 12128 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; Main PID: 12130 (nginx)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Tasks: 5 (limit: 643)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   CGroup: /system.slice/nginx.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           |-12130 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           |-12131 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           |-12132 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           |-12134 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           `-12135 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Nov 18 23:13:08 myhostname systemd[1]: Starting A high performance web server and a reverse proxy server...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Nov 18 23:13:08 myhostname systemd[1]: Started A high performance web server and a reverse proxy server.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看https端口占用  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# netstat -a | grep tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 0.0.0.0:https           0.0.0.0:*               LISTEN
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 [::]:https              [::]:*                  LISTEN
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用wget访问https网站主页    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# wget https://mydomain/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--2022-11-18 23:14:40--  https://mydomain/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Resolving mydomain (mydomain)... 192.168.59.140
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connecting to mydomain (mydomain)|192.168.59.140|:443... connected.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR: cannot verify mydomain&amp;#39;s certificate, issued by &amp;#39;ST=California,L=San Francisco,OU=CloudFlare Origin SSL Certificate Authority,O=CloudFlare\\, Inc.,C=US&amp;#39;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Unable to locally verify the issuer&amp;#39;s authority.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;To connect to mydomain insecurely, use `--no-check-certificate&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用wget访问https网站主页, 使用--no-check-certificate参数忽略证书问题      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# wget https://mydomain/ --no-check-certificate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--2022-11-18 23:22:27--  https://mydomain/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Resolving mydomain (mydomain)... 192.168.59.140
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connecting to mydomain (mydomain)|192.168.59.140|:443... connected.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WARNING: cannot verify mydomain&amp;#39;s certificate, issued by &amp;#39;ST=California,L=San Francisco,OU=CloudFlare Origin SSL Certificate Authority,O=CloudFlare\\, Inc.,C=US&amp;#39;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Unable to locally verify the issuer&amp;#39;s authority.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HTTP request sent, awaiting response... 200 OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Length: 612 [text/html]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Saving to: &amp;#39;index.html&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;index.html                                          100%[=================================================================================================================&amp;gt;]     612  --.-KB/s    in 0s
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2022-11-18 23:22:27 (13.7 MB/s) - &amp;#39;index.html&amp;#39; saved [612/612]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确认nginx配置可用。&lt;br&gt;
+将用hugo生成的网页拷到/var/www/html(nginx存放网页的目录)后, 确认页面可以工作。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

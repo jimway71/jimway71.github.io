@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ppa源 on 点滴随记</title>
+        <link>https://jimway71.github.io/tags/ppa%E6%BA%90/</link>
+        <description>Recent content in ppa源 on 点滴随记</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 17 Nov 2022 22:51:00 +0800</lastBuildDate><atom:link href="https://jimway71.github.io/tags/ppa%E6%BA%90/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Nginx服务器</title>
+        <link>https://jimway71.github.io/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Thu, 17 Nov 2022 22:51:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-59.jpg" alt="Featured image of post Nginx服务器" /&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://yutsuki.moe/2020/03/e8d8fd18/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;被 CloudFlare 耽误的 v2ray ws+tls&lt;/a&gt; 实际上, 是&lt;strong&gt;V2怎么套CDN的问题&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/u_14867519/4003502&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx反向代理web服务器&amp;mdash;&amp;ndash;简单代理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;关于nginx&#34;&gt;关于Nginx&lt;/h2&gt;
+&lt;p&gt;Nginx (pronounced &amp;ldquo;engine x&amp;rdquo;[7] /ˌɛndʒɪnˈɛks/ EN-jin-EKS) is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004.[8] Nginx is free and open-source software, released under the terms of the 2-clause BSD license. A large fraction of web servers use Nginx,[9] often as a load balancer.[10] (From &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wiki - Nginx&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;官方网站:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/&#34;  title=&#34;-&amp;gt;N&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NGINX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.p2hp.com/&#34;  title=&#34;-&amp;gt;Nc&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx中文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nginx/nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;维基:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wiki - Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zh.m.wikipedia.org/zh/Nginx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;维基 - Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文档&amp;amp;教程:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx (official) documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/docs/faq.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx (official) FAQ&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dunwu/nginx-tutorial#nginx-%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 极简教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Tinywan/lua-nginx-redis#nginx-%E6%95%99%E7%A8%8B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置指令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.hk/search?q=nginx&amp;#43;%E9%85%8D%E7%BD%AE&amp;#43;%E6%8C%87%E4%BB%A4&amp;#43;%E5%8F%82%E6%95%B0&amp;#43;listen&amp;amp;oq=nginx&amp;#43;%E9%85%8D%E7%BD%AE&amp;#43;%E6%8C%87%E4%BB%A4&amp;#43;%E5%8F%82%E6%95%B0&amp;#43;listen&amp;amp;aqs=chrome..69i57j0i30i546j0i546l2.20005j0j7&amp;amp;sourceid=chrome-mobile&amp;amp;ie=UTF-8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google &amp;ldquo;nginx 配置 指令 参数 listen&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.hxstrive.com/subject/nginx/750.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 教程&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.hxstrive.com/subject/nginx.htm?id=896&amp;amp;p=824&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;listen 指令&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.weixueyuan.net/nginx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx教程&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.weixueyuan.net/a/635.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx端口监听（listen指令）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.weixueyuan.net/a/751.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx stream模块简述&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aiopsclub.com/nginx/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx系列，带你走进nginx的世界&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aiopsclub.com/nginx/nginx_stream_proxy/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx系列之nginx四层反向代理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/59-isol7-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;center&gt;ISO7层协议&lt;/center&gt;  
+&lt;p&gt;电子书:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/books.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx (official) books&lt;/a&gt; 书目列表, 部分是可免费下载的电子书&lt;/li&gt;
+&lt;li&gt;PDF电子书 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Tinywan/lua-nginx-redis/blob/master/docs/Complete-NGINX-Cookbook-2019.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NGINX Cookbook(2019).pdf&lt;/a&gt; 英文版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;工具:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nginx.p2hp.com/config/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在线生成nginx配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://hellogithub.com/report/netcraft&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lastest服务器排行榜&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;nginx模块&#34;&gt;Nginx模块&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/cuber/ngx_http_google_filter_module&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ngx_http_google_filter_module&lt;/a&gt; Nginx Module for Google&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linuxbabe.com/nginx/set-nginx-reverse-proxy-google-com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Set Up Nginx Reverse Proxy for Google.com on a Ubuntu VPS&lt;/a&gt; 详细说明了在使用apt安装的nginx上怎么编译google模块并使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ngx_http_google_filter_module is a filter module which makes google mirror much easier to deploy.&lt;br&gt;
+Regular expressions, uri locations and other complex configurations have been built-in already.&lt;br&gt;
+The native nginx module ensure the efficiency of handling cookies, gstatic scoures and redirections.&lt;br&gt;
+Let&amp;rsquo;s see how easy it is to setup a google mirror.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location / {  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  google on;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;关于ssl证书&#34;&gt;关于SSL证书&lt;/h2&gt;
+&lt;h3 id=&#34;cloudflare免费ssl证书&#34;&gt;Cloudflare免费SSL证书&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl/&#34;  title=&#34;Enable Universal SSL certificates&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare启用通用SSL证书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.dimm.cc/33.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;记录一次使用cloudflare生成15年的SSL证书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://65536.io/2020/03/607.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;申请CloudFlare免费SSL证书并应用到nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参照&lt;a class=&#34;link&#34; href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl/&#34;  title=&#34;Enable Universal SSL certificates&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare启用通用SSL证书&lt;/a&gt;的说明, 默认情况下，&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;向所有&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;域颁发并续订免费、非共享、&lt;u&gt;公开信任&lt;/u&gt;的SSL证书。&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;提供了最长15年有效期的通用SSL证书, 用户可以在&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;上为其拥有的由&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;管理的域生成证书并使用。操作如下:&lt;/p&gt;
+&lt;p&gt;登录&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;, 点击需要生成证书的域名后, 选择&amp;quot;SSL/TLS&amp;quot; - &amp;ldquo;源服务器&amp;rdquo;,&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-ssl-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+点击创建证书,&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-ssl-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+保持默认设置, 点击创建,&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-ssl-03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+证书已经生成, 需要分别复制证书内容, 创建并保存对应的证书、密钥文件。&lt;/p&gt;
+&lt;h2 id=&#34;相关概念&#34;&gt;相关概念&lt;/h2&gt;
+&lt;h3 id=&#34;正向代理与反向代理&#34;&gt;正向代理与反向代理&lt;/h3&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1418457&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;终于有人把正向代理和反向代理解释的明明白白了&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正向代理就是原来的代理服务器, 而反向代理的代理服务器是隐形的:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-%e6%ad%a3%e5%90%91%e4%bb%a3%e7%90%86%e6%9c%8d%e5%8a%a1.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-%e5%8f%8d%e5%90%91%e4%bb%a3%e7%90%86%e6%9c%8d%e5%8a%a1.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装nginx&#34;&gt;安装Nginx&lt;/h2&gt;
+&lt;h3 id=&#34;在ubuntu1804上使用apt安装nginx&#34;&gt;在Ubuntu(18.0.4)上使用apt安装Nginx&lt;/h3&gt;
+&lt;p&gt;使用apt命令安装nginx非常简单, 命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 更新apt库信息  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装nginx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt install nginx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看已安装的nginx版本  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# nginx -V  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx version: nginx/1.14.0 (Ubuntu)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;build with OpenSSL 1.1.1  11 Sep 2018
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;TLS SNI support enabled  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;当然, Ubuntu通用apt安装的版本都比较旧一些, 从&lt;a class=&#34;link&#34; href=&#34;https://nginx.org/en/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx:download&lt;/a&gt;可以看到, 当前最新的稳定版本是nginx-1.22.1&lt;br&gt;
+Ubuntu的apt仓库版本较陈旧是老问题, 当然, 也有使用ppa源获得相对较新版本的方式, 可以参考&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/#%E5%9C%A8ubuntu%E4%B8%8A%E5%AE%89%E8%A3%85-%E6%9B%B4%E6%96%B0-%E7%9A%84python%E7%89%88%E6%9C%AC%E5%8F%8Apip%E5%B7%A5%E5%85%B7&#34; &gt;在Ubuntu上安装 “更新” 的Python版本及pip工具&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;在armbian530上使用apt安装nginx&#34;&gt;在Armbian(5.3.0)上使用apt安装Nginx&lt;/h3&gt;
+&lt;p&gt;在Armbian上使用apt命令安装nginx也同样非常简单, 命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 更新apt库信息  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装nginx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# apt install nginx  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看已安装的nginx版本  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# nginx -v  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx version: nginx/1.14.0 (Ubuntu)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;和上述Ubuntu(18.0.4)上一样, 使用apt安装的版本都比较旧一些。&lt;/p&gt;
+&lt;h2 id=&#34;配置nginx&#34;&gt;配置Nginx&lt;/h2&gt;
+&lt;p&gt;参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/w3cnote/nginx-setup-intro.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 配置详解&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/doudio/3881324&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ubuntu 安装 nginx 并配置 ssl 证书&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1700794&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx——ubuntu安装Nginx并配置https&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000022673232&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nginx 安装 SSL 配置 HTTPS 超详细完整全过程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/u013519290/article/details/122020113&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ubuntu nginx添加SSL证书访问&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/wzlinux/2391231&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nginx 配置 https 并强制跳转(lnmp一键安装包)&lt;/a&gt;: 主要关注https证书配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kalacloud.com/blog/how-to-install-nginx-on-ubuntu-20-04/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何在 Ubuntu 20.04 中安装和配置 Nginx&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在ubuntu1804上配置nginx&#34;&gt;在Ubuntu(18.0.4)上配置Nginx&lt;/h3&gt;
+&lt;p&gt;前述在Ubuntu上使用apt安装的Nginx, 配置文件在/etc/nginx, 主要的配置文件是nginx.conf以及其中include的相关配置文件&lt;/p&gt;
+&lt;h4 id=&#34;配置nginx上的https服务器&#34;&gt;配置Nginx上的https服务器&lt;/h4&gt;
+&lt;p&gt;nginx.conf中关于http项的配置中, 最后有两条include, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;include /etc/nginx/conf.d/*.conf;&lt;br&gt;
+include /etc/nginx/sites-enabled/*;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中/etc/nginx/sites-enabled/default文件中配置的http和https服务&lt;br&gt;
+修改/etc/nginx/sites-enabled/default, 屏蔽掉http服务(端口80), 增加https服务(端口443), 并配置ssl, 如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # listen 80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # listen [::]:80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen 443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen [::]:443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_certificate /etc/nginx/cert/mydomain.pem;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_certificate_key /etc/nginx/cert/mydomain.key;           
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_session_cache shared:SSL:1m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_session_timeout 5m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置文件见下图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-nginx-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+重启nginx服务:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service nginx restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看nginx运行状态&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-nginx-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+由于该https服务器域名由&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;代理, 且SSL/TLS加密模式为完全(严格), 见下图:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/59-ssl-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;br&gt;
+可以确认nginx的https服务器配置正确有效。&lt;br&gt;
+经下载文件测速, 发现由&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  title=&#34;-&amp;gt;C&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare&lt;/a&gt;代理后, 服务器下载速度不稳定, 在800kbps~4Mbps间波动。&lt;/p&gt;
+&lt;h3 id=&#34;在armbian530上配置nginx&#34;&gt;在Armbian(5.3.0)上配置Nginx&lt;/h3&gt;
+&lt;p&gt;前述在Armbian上使用apt安装的Nginx, 配置文件在/etc/nginx, 主要的配置文件是nginx.conf以及其中include的相关配置文件&lt;br&gt;
+查看/etc/nginx下的文件列表如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/nginx# ll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 72
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  8 root root 4096 Nov 18 22:49 ./
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x 98 root root 4096 Nov 18 22:49 ../
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 10 14:38 conf.d/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 1077 Apr  6  2018 fastcgi.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 1007 Apr  6  2018 fastcgi_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 2837 Apr  6  2018 koi-utf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 2223 Apr  6  2018 koi-win
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 3957 Apr  6  2018 mime.types
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 10 14:38 modules-available/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 18 22:49 modules-enabled/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 1482 Apr  6  2018 nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root  180 Apr  6  2018 proxy_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root  636 Apr  6  2018 scgi_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 18 22:49 sites-available/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 18 22:49 sites-enabled/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  2 root root 4096 Nov 18 22:49 snippets/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root  664 Apr  6  2018 uwsgi_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 root root 3071 Apr  6  2018 win-utf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置nginx上的https服务器-1&#34;&gt;配置Nginx上的https服务器&lt;/h4&gt;
+&lt;p&gt;(与前述的Ubuntu上的nginx一样)nginx.conf中关于http项的配置中, 最后有两条include, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;include /etc/nginx/conf.d/*.conf;&lt;br&gt;
+include /etc/nginx/sites-enabled/*;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中/etc/nginx/sites-enabled/default文件中配置的http和https服务&lt;br&gt;
+修改/etc/nginx/sites-enabled/default, 屏蔽掉http服务(端口80), 增加https服务(端口443), 并配置ssl, 如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # listen 80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # listen [::]:80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen 443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen [::]:443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_certificate /etc/nginx/cert/mydomain.pem;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_certificate_key /etc/nginx/cert/mydomain.key;           
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_session_cache shared:SSL:1m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_session_timeout 5m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;修改后, 配置文件/etc/nginx/sites-enabled/default的主要有效部分如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # listen 80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # listen [::]:80 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # SSL configuration
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # listen 443 ssl default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # listen [::]:443 ssl default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        listen 443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        listen [::]:443 default_server;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_certificate /etc/nginx/cert/mydomain.pem;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_certificate_key /etc/nginx/cert/mydomain.key;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_session_cache shared:SSL:1m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_session_timeout 5m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Note: You should disable gzip for SSL traffic.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # See: https://bugs.debian.org/773332
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Read up on ssl_ciphers to ensure a secure configuration.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # See: https://bugs.debian.org/765782
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Self signed certs generated by the ssl-cert package
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Don&amp;#39;t use them in a production server!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # include snippets/snakeoil.conf;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        root /var/www/html;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # Add index.php to the list if you are using PHP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        index index.html index.htm index.nginx-debian.html;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        server_name _;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        location / {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                # First attempt to serve request as file, then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                # as directory, then fall back to displaying a 404.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                try_files $uri $uri/ =404;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # pass PHP scripts to FastCGI server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #location ~ \.php$ {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       include snippets/fastcgi-php.conf;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       # With php-fpm (or other unix sockets):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       # With php-cgi (or other tcp sockets):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       fastcgi_pass 127.0.0.1:9000;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # deny access to .htaccess files, if Apache&amp;#39;s document root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # concurs with nginx&amp;#39;s one
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #location ~ /\.ht {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #       deny all;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;重启nginx服务:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# service nginx restart&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看nginx运行状态&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看服务状态  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# service nginx status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* nginx.service - A high performance web server and a reverse proxy server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Active: active (running) since Fri 2022-11-18 23:13:08 CST; 17s ago
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     Docs: man:nginx(8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Process: 12129 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Process: 12128 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; Main PID: 12130 (nginx)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Tasks: 5 (limit: 643)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   CGroup: /system.slice/nginx.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           |-12130 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           |-12131 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           |-12132 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           |-12134 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           `-12135 nginx: worker process
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Nov 18 23:13:08 myhostname systemd[1]: Starting A high performance web server and a reverse proxy server...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Nov 18 23:13:08 myhostname systemd[1]: Started A high performance web server and a reverse proxy server.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看https端口占用  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# netstat -a | grep tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp        0      0 0.0.0.0:https           0.0.0.0:*               LISTEN
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcp6       0      0 [::]:https              [::]:*                  LISTEN
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用wget访问https网站主页    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# wget https://mydomain/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--2022-11-18 23:14:40--  https://mydomain/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Resolving mydomain (mydomain)... 192.168.59.140
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connecting to mydomain (mydomain)|192.168.59.140|:443... connected.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR: cannot verify mydomain&amp;#39;s certificate, issued by &amp;#39;ST=California,L=San Francisco,OU=CloudFlare Origin SSL Certificate Authority,O=CloudFlare\\, Inc.,C=US&amp;#39;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Unable to locally verify the issuer&amp;#39;s authority.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;To connect to mydomain insecurely, use `--no-check-certificate&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用wget访问https网站主页, 使用--no-check-certificate参数忽略证书问题      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# wget https://mydomain/ --no-check-certificate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--2022-11-18 23:22:27--  https://mydomain/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Resolving mydomain (mydomain)... 192.168.59.140
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connecting to mydomain (mydomain)|192.168.59.140|:443... connected.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WARNING: cannot verify mydomain&amp;#39;s certificate, issued by &amp;#39;ST=California,L=San Francisco,OU=CloudFlare Origin SSL Certificate Authority,O=CloudFlare\\, Inc.,C=US&amp;#39;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Unable to locally verify the issuer&amp;#39;s authority.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HTTP request sent, awaiting response... 200 OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Length: 612 [text/html]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Saving to: &amp;#39;index.html&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;index.html                                          100%[=================================================================================================================&amp;gt;]     612  --.-KB/s    in 0s
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2022-11-18 23:22:27 (13.7 MB/s) - &amp;#39;index.html&amp;#39; saved [612/612]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确认nginx配置可用。&lt;br&gt;
+将用hugo生成的网页拷到/var/www/html(nginx存放网页的目录)后, 确认页面可以工作。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>安装Python运行环境</title>
+        <link>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
+        <pubDate>Tue, 30 Aug 2022 11:53:00 +0800</pubDate>
+        
+        <guid>https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;img src="https://jimway71.github.io/wallpaper/wallpaper-28.jpg" alt="Featured image of post 安装Python运行环境" /&gt;&lt;p&gt;一些Python相关链接: &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e7%9f%a5%e4%b9%8e%e9%93%be%e6%8e%a5/#python&#34; &gt;Links&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;zen-of-pythonpython之禅&#34;&gt;Zen of Python（Python之禅）&lt;/h2&gt;
+&lt;p&gt;From &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/111843067&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Zen of Python（Python之禅）的最佳翻译 - Python-Jack的文章 - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Beautiful is better than ugly. （优美比丑陋好）&lt;br&gt;
+Explicit is better than implicit.（清晰比晦涩好）&lt;br&gt;
+Simple is better than complex.（简单比复杂好）&lt;br&gt;
+Complex is better than complicated.（复杂比错综复杂好）&lt;br&gt;
+Flat is better than nested.（扁平比嵌套好）&lt;br&gt;
+Sparse is better than dense.（稀疏比密集好）&lt;br&gt;
+Readability counts.（可读性很重要）&lt;br&gt;
+Special cases aren&amp;rsquo;t special enough to break the rules.（特殊情况也不应该违反这些规则）&lt;br&gt;
+Although practicality beats purity.（但现实往往并不那么完美）&lt;br&gt;
+Errors should never pass silently.（异常不应该被静默处理）&lt;br&gt;
+Unless explicitly silenced.（除非你希望如此）&lt;br&gt;
+In the face of ambiguity, refuse the temptation to guess.（遇到模棱两可的地方，不要胡乱猜测）&lt;br&gt;
+There should be one&amp;ndash; and preferably only one &amp;ndash;obvious way to do it.（肯定有一种通常也是唯一一种最佳的解决方案）&lt;br&gt;
+Although that way may not be obvious at first unless you&amp;rsquo;re Dutch.（虽然这种方案并不是显而易见的，因为你不是那个荷兰人[这里指的是Python之父Guido]）&lt;br&gt;
+Now is better than never.（现在开始做比不做好）&lt;br&gt;
+Although never is often better than &lt;em&gt;right&lt;/em&gt; now.（不做比盲目去做好[极限编程中的YAGNI原则]）&lt;br&gt;
+If the implementation is hard to explain, it&amp;rsquo;s a bad idea.（如果一个实现方案难于理解，它就不是一个好的方案）&lt;br&gt;
+If the implementation is easy to explain, it may be a good idea.（如果一个实现方案易于理解，它很有可能是一个好的方案）&lt;br&gt;
+Namespaces are one honking great idea &amp;ndash; let&amp;rsquo;s do more of those!（命名空间非常有用，我们应当多加利用）&lt;/p&gt;
+&lt;h2 id=&#34;在windows系统上安装python运行环境&#34;&gt;在Windows系统上安装Python运行环境&lt;/h2&gt;
+&lt;h3 id=&#34;python语言相关&#34;&gt;Python语言相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Python官网: &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python官网当前最新版本(Python 3.10.6)安装包: &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-3106/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/downloads/release/python-3106/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python官网安装说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/zh-tw/3/using/windows.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在Windows上使用Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Microsoft Store中也提供了Python包, Python官网的说明如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Microsoft Store 包 is a simple installation of Python that is suitable for running scripts and packages, and using IDLE or other development environments. It requires Windows 10 and above, but can be safely installed without corrupting other programs. It also provides many convenient commands for launching Python and its tools.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但我使用Microsoft Store安装Python后(应该是Python 3.7), 再安装auto-py-to-exe, 发现auto-py-to-exe不能正常运行, 报错说&amp;quot;不能找到指定目录的Python&amp;quot;, 因此还是需要使用Python官网提供的安装包进行安装。&lt;/p&gt;
+&lt;h3 id=&#34;pycharm开发环境&#34;&gt;Pycharm开发环境&lt;/h3&gt;
+&lt;p&gt;PyCharm是一个用于计算机编程的集成开发环境(IDE)，主要用于Python语言开发，由捷克公司&lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JetBrains&lt;/a&gt;开发，提供代码分析、图形化调试器，集成测试器、集成版本控制系统，并支持使用&lt;a class=&#34;link&#34; href=&#34;https://www.djangoproject.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Django&lt;/a&gt;进行网页开发。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyCharm官网: &lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/pycharm/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.jetbrains.com/pycharm/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.py.cn/tools/pycharm/19641.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pycharm如何配置python环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/fmyhust/article/details/104548217&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm 外部工具设置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt图形框架模块pyside6&#34;&gt;Qt图形框架模块PySide6&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;是来自于Qt for Python项目的官方Python模块，它提供了对完整Qt 6.0+框架的访问。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PySide6官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/PySide6/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;关于Qt开发: &lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qtforpython/deployment.html#deployment-guides&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qt for Python Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;关于选用PySide, 参考: &lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E8%B0%83%E6%9F%A5%E4%BA%94%E6%AC%BEpython-gui%E6%A1%86%E6%9E%B6/&#34; &gt;调查五款Python GUI框架&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于常用编译打包系统的支持情况:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The following table summarizes the platform support for those packaging tools:&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;编译打包工具&#34;&gt;编译打包工具&lt;/h3&gt;
+&lt;h4 id=&#34;auto-py-to-exe&#34;&gt;auto-py-to-exe&lt;/h4&gt;
+&lt;p&gt;Auto PY to EXE是一个基于Eel 和PyInstaller构建的、通过简单的UI界面将python项目中的.py文件(可以是单个py文件或多个py文件)打包为.exe文件的简单工具，与PyInstaller相比，Auto PY to EXE更简单直观，可以自动生成执行转换代码，进而将python程序打包为exe文件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/auto-py-to-exe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/auto-py-to-exe/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;简单说明: 图形化的&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/pyinstaller/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyInstaller&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://pyinstaller.org/en/stable/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyInstaller手册&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;使用参考: &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/cfld/p/16258446.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;python打包教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;easycython&#34;&gt;easycython&lt;/h4&gt;
+&lt;p&gt;easycython.py是一个脚本，它将尝试自动将一个或多个.pyx 文件转换为相应的已编译.pyd|.so的二进制模块。&lt;br&gt;
+easycython.py is a script that will attempt to automatically convert one or more .pyx files into the corresponding compiled .pyd|.so binary modules。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网: &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/easycython/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/easycython/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;nuitka编译器&#34;&gt;nuitka编译器&lt;/h4&gt;
+&lt;p&gt;Nuitka是一个Python的替代编译器。 它可以无缝地替代和扩展Python的解释和编译工作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nuitka官网: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nuitka.net/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;参考文档:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.libhunt.com/compare-Nuitka-vs-pyinstaller&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Compare Nuitka VS Pyinstaller&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/137785388&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Nuitka之乾坤大挪移-让天下的Python都可以打包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://yinhe.co/archives/20211127_pyside6_001.html#nuitka&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6学习笔记&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在Windows系统中使用时:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要安装gcc编译器
+&lt;ul&gt;
+&lt;li&gt;安装参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MinGW-w64 - for 32 and 64 bit Windows Files&lt;/a&gt;中的&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x86_64-win32-sjlj&lt;/a&gt;(当前为GCC-8.1.0版本)&lt;br&gt;
+下载完成后, 解压到选定目录下, 并在系统环境变量PATH中增加gcc.exe(在某目录/bin下)目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;当然, 还需要安装Nuitka
+&lt;ul&gt;
+&lt;li&gt;安装参考: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/doc/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka Downloads&lt;/a&gt; 及 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+使用以下命令进行安装:
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install -U &amp;quot;https://github.com/Nuitka/Nuitka/archive/develop.zip&amp;quot;&lt;br&gt;
+#  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)&lt;br&gt;
+c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://jimway71.github.io/img/28-Python-02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;pip install Nuitka:&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;center&gt;↑ Nuitka安装界面&lt;/center&gt;
+&lt;p&gt;在Windows下常用的编译命令:
+注: helloworld代码参考&amp;quot;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-hello-world.html&#34;  title=&#34;-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用PySide6创建Hello World程序&lt;/a&gt;&amp;quot;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; nuitka --mingw64 --standalone --show-progress --show-memory --enable-plugin=pyside6 --output-dir=r:\helloworld \helloworld.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用PySide6框架编写的Python图形界面程序, 使用Nuitka编译后, 独立运行需要的文件有:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;编译生成的运行exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyside6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6core.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6gui.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6network.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6svg.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6widgets.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shiboken6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的PySide6目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的shiboken6目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;在Windows下使用Nuitka编译时遇到的报错信息及处理:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;ordered sets&amp;quot;相关警告信息, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nuitka:WARNING: Using very slow fallback for ordered sets, please install &amp;lsquo;orderedset&amp;rsquo; PyPI package for best Python&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/issues/1673&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka can&amp;rsquo;t run on Android termux #1673&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于Python版本的错误信息:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Too old gcc exe ((8, 1, 0) &amp;lt; (11, 2)) ignored&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(当使用Python3.7时)报错后, 编译操作会停止。&lt;br&gt;
+当改用Python3.10后, 虽然也有报错, 但编译操作会继续: 即使用Python3.10时, 无需处理本错误。&lt;/p&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/xiaohouzi112233/article/details/122581734&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka打包python为.exe时遇到的坑&lt;/a&gt;&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/bigcarp/article/details/123152166&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka打包python为.exe时遇到的坑&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;br&gt;
+修改&amp;quot;C:\Users\myusr\venv\Lib\site-packages\nuitka\build\SconsCompilerSettings.py&amp;rdquo;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if isGccName(the_cc_name):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                gcc_version = myDetectVersion(env, compiler_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#                min_version = (11, 2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                min_version = (8, 1, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                if gcc_version is not None and (
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    gcc_version &amp;lt; min_version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    or &amp;#34;force-winlibs-gcc&amp;#34; in env.experimental_flags
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    scons_logger.info(
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;Too old gcc %r (%r &amp;lt; %r) ignored!&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        % (compiler_path, gcc_version, min_version)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    )
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    # This also will trigger using it to use our own gcc in branch below.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    compiler_path = None
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    env[&amp;#34;CC&amp;#34;] = None
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关于&amp;quot;libiconv-2.dll&amp;quot;的错误, 信息如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于找不到libiconv-2.dll，无法继续执行代码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_37363702/article/details/124177907&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;“由于找不到libiconv-2.dll，无法继续执行代码”问题处理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理操作(命令):&lt;br&gt;
+未处理, 未再现(原因未明)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;WinError&amp;quot;相关错误信息, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OSError: [WinError 1] 鍑芥暟涓嶆纭€? &amp;lsquo;R:\hw\helloworld.dist\PySide6&amp;rsquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;现象为当用Nuitka编译的程序位于ImDisk虚拟盘上时, 运行该程序会报上述错误。&lt;/p&gt;
+&lt;p&gt;相关帖子:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/72603982/oserror-winerror-1-incorrect-function&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OSError: [WinError 1] Incorrect function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mesonbuild/meson/issues/7295&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issue under MSYS2 on Windows when using ImDisk RAM disk #7295&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分析原因:&lt;br&gt;
+根据&lt;a class=&#34;link&#34; href=&#34;https://github.com/mesonbuild/meson/issues/7295&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issue under MSYS2 on Windows when using ImDisk RAM disk #7295&lt;/a&gt;分析, 估计是&lt;u&gt;Python有些版本有这个问题&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;处理操作:&lt;br&gt;
+改用最新版本Python(当前为3.10.6)后, 未再出现这个问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在windows下安装python运行环境的完整安装过程在sandbox上再操作了一遍&#34;&gt;在Windows下安装Python运行环境的完整安装过程(在sandbox上再操作了一遍)&lt;/h3&gt;
+&lt;h4 id=&#34;在windows系统上安装python&#34;&gt;在Windows系统上安装Python&lt;/h4&gt;
+&lt;p&gt;下载当前最新的&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-3106/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;3.10版本&lt;/a&gt;, 选择&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows installer (64-bit)&lt;/a&gt;进行安装, 安装目录选择缺省目录, 安装最后选择&amp;quot;disable path length limit&amp;rdquo;。&lt;br&gt;
+安装完成后, 需要在系统环境变量path中增加python和python下scripts目录:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在Windows搜索框中，键入&amp;quot;高级系统设置&amp;quot;，打开高级系统设置窗口;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-03.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;按下&amp;quot;环境变量&amp;quot;按钮，在打开的窗口中可以在&amp;quot;系统变量&amp;quot;框中选择Path，按&amp;quot;编辑&amp;quot;按钮;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;在(path环境变量)其中添加Python执行文件的目录, 在我的系统中, python.exe位于&amp;quot;C:\Users\WDAGUtilityAccount\AppData\Local\Programs\Python\Python310&amp;quot;目录下;&lt;/li&gt;
+&lt;li&gt;并在(path环境变量)其中添加该目录下的scripts目录, 即&amp;quot;C:\Users\WDAGUtilityAccount\AppData\Local\Programs\Python\Python310\Scripts&amp;quot;目录 - pip等工具安装在这个目录。&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统属性&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;设置完成后, 就可以在命令行中执行python/pip等命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;在windows系统上安装pycharm&#34;&gt;在Windows系统上安装Pycharm&lt;/h4&gt;
+&lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/pycharm/download/#section=windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Download PyCharm&lt;/a&gt;下载Windows+Community版本。&lt;br&gt;
+当前版本为&lt;a class=&#34;link&#34; href=&#34;https://download-cdn.jetbrains.com/python/pycharm-community-2022.2.1.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm-Community-2022.2.1&lt;/a&gt;。&lt;br&gt;
+安装使用的是当前可下载的Pycharm-Community-2022.2.1版本。&lt;br&gt;
+安装后的目录可以当绿色版本直接使用。&lt;/p&gt;
+&lt;p&gt;安装完成后, 需要做以下配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置外观&lt;br&gt;
+在设置-&amp;gt;外观与行为-&amp;gt;外观里, 将主题改为&amp;quot;Windows 10 Light&amp;quot;方案。&lt;/li&gt;
+&lt;li&gt;配置中文环境, 参考&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/sinat_26811377/article/details/106182672&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pycharm 简单一步设置成官方中文版&lt;/a&gt;&lt;br&gt;
+曾遇到的问题:&lt;br&gt;
+在使用&lt;strong&gt;Pycharm-Community-2019.2版本(旧版)&lt;/strong&gt;(原来下载的版本)的安装中, 在Plugins-&amp;gt;Marketplace库中找不到&amp;quot;Chinese ​(Simplified)​ Language Pack / 中文语言包&amp;quot;;&lt;br&gt;
+手动从&lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JetBrains官方插件网站&lt;/a&gt;下载的&lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----/versions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chinese ​(Simplified)​ Language Pack / 中文语言包&lt;/a&gt; For &amp;ldquo;Pycharm Community&amp;quot;插件, 在安装时报&amp;quot;不兼容&amp;quot;错误, 如下:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-06.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;中文插件安装时报&amp;#34;不兼容&amp;#34;错误&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;u&gt;改用当前最新版本2022.2.1后问题解决。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;配置Python环境, 参考&lt;a class=&#34;link&#34; href=&#34;https://www.py.cn/tools/pycharm/19641.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pycharm如何配置python环境&lt;/a&gt;&lt;br&gt;
+实际上, 在安装后, Pycharm的配置里已自动加入了Python解释器, 包括pip/setuptools/wheel。
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-07.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;中文插件安装时报&amp;#34;不兼容&amp;#34;错误&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;在windows系统上安装pyside6httpspypiorgprojectpyside6&#34;&gt;在Windows系统上安装&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/PySide6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可以在&amp;quot;Window命令提示符&amp;quot;里安装PySide6, 也可以在PyCharm的&amp;quot;终端&amp;quot;里操作(建议), 命令很简单, 如下:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pip3 install PySide6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装后, 在Python目录下的&amp;quot;Lib\site-packages\PySide6&amp;quot;目录中可以看到PySide6相关文件, 其中designer.exe可以直接运行(如果运行时报缺dll库错误, 只需要将所指dll文件拷到Pyside6目录下即可)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Pycharm中设置外部工具: Pyside6-Designer和Pyside6-UIC&lt;br&gt;
+参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/445661017&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Pycharm安装配置Pyside6&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;问题:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本次安装后, 在Pycharm中试着运行Helloworld.py(需要PySide6支持)时, 报&amp;quot;ModuleNotFoundError: No module named &amp;lsquo;PySide6&amp;rsquo;&amp;ldquo;错误。&lt;br&gt;
+本问题未确认原因, 也未找到解决方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;在windows系统上安装nuitkahttpsnuitkanetindexhtml&#34;&gt;在Windows系统上安装&lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;安装gcc编译器&lt;br&gt;
+安装参考: &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+下载&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MinGW-w64 - for 32 and 64 bit Windows Files&lt;/a&gt;中的&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/sjlj/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x86_64-win32-sjlj&lt;/a&gt;(当前为GCC-8.1.0版本)&lt;br&gt;
+下载完成后, 解压到选定目录下, 并在系统环境变量PATH中增加gcc.exe(在某目录/bin下)目录。
+完成后, 可以在cmd中使用以下命令以检查安装是否正常
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; gcc --version&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;安装Nuitka&lt;br&gt;
+安装参考: &lt;a class=&#34;link&#34; href=&#34;https://nuitka.net/doc/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka Downloads&lt;/a&gt; 及 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/133303836&#34;  title=&#34;About Nuitka-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎 - Python打包exe的王炸-Nuitka&lt;/a&gt;&lt;br&gt;
+使用以下命令进行安装:
+&lt;blockquote&gt;
+&lt;p&gt;c:\&amp;gt; pip install -U &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Nuitka/Nuitka/archive/develop.zip%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Nuitka/Nuitka/archive/develop.zip&#34;&lt;/a&gt;&lt;br&gt;
+#  用上面命令安装后, 编译时会警告, 并提示使用下面的命令(在报错信息及处理中有详细描述)&lt;br&gt;
+c:\&amp;gt;pip install ordered-set Nuitka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;安装完成后-可以使用nuitka进行编译&#34;&gt;安装完成后, 可以使用Nuitka进行编译&lt;/h4&gt;
+&lt;p&gt;Nuitka编译常用参数(From &lt;a class=&#34;link&#34; href=&#34;https://www.cxymm.net/article/djj199301111/120535999&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nuitka 打包常用命令&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-disable-console   #不显示控制台窗口(CMD控制窗口)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-icon=ICON_PATH    #添加ico
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--nofollow-imports          # 所有的import不编译，交给python3x.dll执行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--follow-import-to=need     #need为你需要编译成C/C++的py文件夹命名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--mingw64                   #mingw(官方建议编译器)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--standalone                #独立环境，这是必须的(否则拷给别人无法使用)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--output-dir=out            #生成文件路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--show-progress             #显示编译的进度，很直观
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--show-memory               #显示内存的占用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--include-qt-plugins=sensible,styles #打包后PyQt的样式就不会变了
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=qt-plugins  #需要加载的PyQt插件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=tk-inter    #打包tkinter模块的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=numpy       #打包numpy,pandas,matplotlib模块的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=torch       #打包pytorch的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--plugin-enable=tensorflow  #打包tensorflow的刚需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-uac-admin=Windows #用户可以使用管理员权限来安装
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--onefile                   #打包成单个exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在Windows下常用的编译命令参考:&lt;br&gt;
+注: helloworld代码参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-hello-world.html&#34;  title=&#34;-&amp;gt;&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用PySide6创建Hello World程序&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress --show-memory --enable-plugin=pyside6 --output-dir=x:\helloworld\ helloworld.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在Windows下编译使用Designer创建的UI程序&lt;br&gt;
+参考:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perfcode.com/p/pyside6-uses-the-ui-created-by-qt-designer.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PySide6使用Qt Designer创建的UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/a359680405/article/details/45148717&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyQt5学习笔记05&amp;mdash;-Qt Designer信号槽&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;创建程序及编译:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用Qt Designer生成了login.ui&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用pyside6-uic将login.ui转换生成ui_login.py&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; pyside6-uic.exe login.ui -o ui_login.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用nuitka编译生成可执行文件(.exe)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;c:&amp;gt; dir&lt;br&gt;
+2022/09/05  23:26    &amp;lt;DIR&amp;gt;          .&lt;br&gt;
+2022/09/05  23:26    &amp;lt;DIR&amp;gt;          ..&lt;br&gt;
+2022/09/05  23:26               588 login.py&lt;br&gt;
+2022/09/05  23:23             2,378 login.ui&lt;br&gt;
+2022/09/05  23:24             2,581 ui_login.py&lt;br&gt;
+c:&amp;gt; nuitka --mingw64 --standalone --windows-disable-console --show-progress --show-memory --enable-plugin=pyside6 --output-dir=x:\login\ login.py&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关于独立运行的依赖文件:&lt;/strong&gt;&lt;br&gt;
+使用Nuitka编译的基于PySide6的图形界面程序(helloworld.exe), 独立运行时至少需要以下文件:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;生成的运行exe文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyside6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6core.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6gui.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6network.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6svg.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qt6widgets.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shiboken6.abi3.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的PySide6目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完整的shiboken6目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注: 以上文件列表, 在不同的机器上, 可能会不一样!&lt;/p&gt;
+&lt;p&gt;在编译过程中如果遇到异常, 可以参考&amp;rdquo;&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%AE%89%E8%A3%85python%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/#nuitka%E7%BC%96%E8%AF%91%E5%99%A8&#34; &gt;nuitka编译器&lt;/a&gt;&amp;ldquo;后面所列的&lt;strong&gt;报错信息及处理&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;在armbian系统上安装python运行环境&#34;&gt;在Armbian系统上安装Python运行环境&lt;/h2&gt;
+&lt;p&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_33289175/article/details/117389760&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;armbian下安装不同版本python3&lt;/a&gt;&lt;br&gt;
+结果: &lt;strong&gt;&lt;font color=red&gt;安装(部分)失败, 无法使用&lt;/font&gt;&lt;/strong&gt; _ 无法使用streamlit, 改到Ubuntu22.04上使用。&lt;/p&gt;
+&lt;h3 id=&#34;armbian系统环境&#34;&gt;Armbian系统环境&lt;/h3&gt;
+&lt;p&gt;使用的Armbian系统参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;p/armbian-on-tv-box/&#34; &gt;Armbian on TV box&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;p/%e7%94%a8r3300l%e5%81%9a%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8/&#34; &gt;用R3300L做家用服务器&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;已安装的Python版本信息如下:&lt;br&gt;
+&lt;img src=&#34;https://jimway71.github.io/img/28-Python-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;br&gt;
+考虑到&lt;a class=&#34;link&#34; href=&#34;https://streamlit.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;streamlit&lt;/a&gt;的要求, Python版本应该为3.7、3.8、3.9 或 3.10, 因此需要安装3.7以上版本的Python&lt;br&gt;
+strealit对Python版本要求参考官网说明: &lt;a class=&#34;link&#34; href=&#34;https://docs.streamlit.io/knowledge-base/using-streamlit/sanity-checks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Are you using a Streamlit-supported version of Python&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;在armbian上编译安装python&#34;&gt;在Armbian上编译安装Python&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;由于Armbian系统特别保守, 对软件求稳定而不求新, 因此使用apt命令查询得到, 当前可更新版本的Python版本号为3.6.9-1, 并不符合streamlit和大多数主流Python代码的要求(&amp;gt;3.7), 因此无法使用apt进行安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python官网&lt;/a&gt;上的&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载列表&lt;/a&gt;中仅给Linux/Unix类提供了源代码包, 因此需要编译安装。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先下载Python源代码包: &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-3108/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Latest Python 3 Release - Python 3.10.8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;由于硬件系统的限制, 可能需要增加交换分区&lt;br&gt;
+参考&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%E5%9C%A8r3300l%E7%B1%BB-armbian%E4%B8%8A%E5%AE%89%E8%A3%85hugo%E6%9C%8D%E5%8A%A1%E5%99%A8/#%E7%BC%96%E8%AF%91%E6%93%8D%E4%BD%9C&#34; &gt;在R3300L类+Armbian上安装Hugo服务器#编译操作&lt;/a&gt;中&amp;quot;在R3300L上准备编译Hugo的环境&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;操作命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 以普通用户(jim)身份运行  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Python源代码包文件Python-3.10.8.tgz位于/tmp/目录下  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 进行用户package目录  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd /usr/lib/  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 解压源代码包, 以超级用户身份运行(sudo)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo tar zxvf /tmp/Python-3.10.8.tgz  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 进行解压后的源代码目录  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd Python-3.10.8/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 将源代码目录文件属主改为普通用户(jim)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo chown jim:jim * -R  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 开始编译python: 执行./configure
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./configure --prefix=/usr/local/lib/Python-3.10.8  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 编译  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装, 以超级用户身份执行(sudo)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo make install  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看编译生成的python运行文件版本信息  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./python -V  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 将编译生成的python建立软链接到/usr/bin/python3, 以超级用户身份执行(sudo)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo ln -snf /usr/lib/Python-3.10.8/python /usr/bin/python3  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看做软链接后的python3版本信息  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python3 -V  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;更新pip:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python3 -m ensurepip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python3 -m pip install --upgrade pip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;跟着参考文档一通操作, ./configure成功, make成功, make install失败, Python3可以运行, 确认版本也正确, 但有时会报一堆错误。&amp;hellip; 不找原因了。&lt;br&gt;
+改&lt;strong&gt;在WSL(Ubuntu 18.0.4LTS)上操作, &lt;del&gt;一切正常&lt;/del&gt; 还是有问题&lt;/strong&gt;。&lt;br&gt;
+(Ubuntu18.0.4LTS上原缺省安装的python版本是3.6.9)&lt;/p&gt;
+&lt;p&gt;另一可供参考文档:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://bynss.com/linux/474572.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;怎样在 Debian 10 上安装 Streamlit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;改用apt安装, 参考:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/bz0446/article/details/105500585&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ubuntu18.04通过apt安装python3.7.7与pip3.7最新版本&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;在ubuntu上安装-更新-的python版本及pip工具&#34;&gt;在Ubuntu上安装 &amp;ldquo;&lt;strong&gt;更新&lt;/strong&gt;&amp;rdquo; 的Python版本及pip工具&lt;/h3&gt;
+&lt;p&gt;同样适用于Armbian系统(在Ubuntu Bionic with Armbian Linux 5.3.0-aml-g12上测试过, 并成功安装Python3.7/Python3.8, 但无法用apt安装pip, 可能需要按下述参考中的说明操作)&lt;/p&gt;
+&lt;p&gt;由于Ubuntu发行版经常提供较旧但稳定的软件版本, 因此经常会发现在Ubuntu软件仓库里能下载的软件总比相应软件可找到的版本旧, 而且可能旧到无法满足要求。&lt;br&gt;
+除了从源代码安装外, 由于部分软件维护了ppa源, 所以这部分软件还可以通过ppa源安装较新的版本。&lt;/p&gt;
+&lt;p&gt;用法参考: &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/bz0446/article/details/105500585&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ubuntu18.04通过apt安装python3.7.7与pip3.7最新版本（python3.8同理）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本方法也同样适用于在Ubuntu(Armbian)上安装&amp;quot;更新&amp;quot;的其它Ubuntu未提供版本的应用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;● 更新软件包列表并安装必备组件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# update更新  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 用于添加ppa源的小工具, ubuntu server缺省没有安装  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt install software-properties-common  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;● 将Deadsnakes PPA添加到来源列表中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 有确认提示按回车继续  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo add-apt-repository ppa:deadsnakes/ppa  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;● 使用以下命令安装&lt;strong&gt;更新版本&lt;/strong&gt;Python&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 搜索指定版本  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt search python3.8  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装指定版本
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt install python3.8  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;● 确认安装的版本信息&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python3.8 -V  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Python 3.8.0  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;● 安装pip&lt;br&gt;
+如果未安装curl, 需要使用命令&amp;quot;sudo apt install curl&amp;quot;进行安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 下载最新的官方pip  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 安装 python-distutils  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt install python3-distutils  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;~~# 或 高版本的python3(测试中未调用)~~  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;~~$ sudo apt install python3.9-distutils~~  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 直接获取 pip3.8  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo python3.8 get-pip.py  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 测试安装(launchpadlib)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pip3.8 install launchpadlib  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;● 测试是否安装成功&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pip3.8 --version  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip 22.3 from /usr/local/lib/python3.8/dist-packages/pip (python 3.8)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;上述命令在在Armbian(Ubuntu Bionic with Armbian Linux 5.3.0-aml-g12)上测试并通过&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;● 使用pip3.8安装&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/python%e5%89%8d%e7%ab%af%e6%a1%86%e6%9e%b6%e6%af%94%e8%be%83%e5%8f%8a%e9%80%89%e6%8b%a9/#%e6%af%94%e8%be%83streamlitpywebiobrythonremi%e8%bf%99%e5%9b%9b%e7%a7%8d%e5%89%8d%e6%ae%b5%e6%a1%86%e6%9e%b6&#34; &gt;streamlit&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pip3.8 install streamlit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      aarch64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -fPIC -I/usr/include/python3.8 -c lib/zoneinfo_module.c -o build/temp.linux-aarch64-cpython-38/lib/zoneinfo_module.o -std=c99
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      lib/zoneinfo_module.c:1:10: fatal error: Python.h: No such file or directory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       #include &amp;#34;Python.h&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ^~~~~~~~~~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      compilation terminated.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      error: command &amp;#39;/usr/bin/aarch64-linux-gnu-gcc&amp;#39; failed with exit code 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      [end of output]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  note: This error originates from a subprocess, and is likely not a problem with pip.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ERROR: Failed building wheel for backports.zoneinfo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Building wheel for pyrsistent (pyproject.toml) ... done
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Created wheel for pyrsistent: filename=pyrsistent-0.18.1-cp38-cp38-linux_aarch64.whl size=56386 sha256=70e6458eae430b5065d6e229f19e7f0f96b55456d32162c31ff47846aa6d6d6b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Stored in directory: /home/XXXXXXX/.cache/pip/wheels/a5/15/17/a3a9eec63321dd22dc53130d06b7d25f00d129693bec6fc36e
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Successfully built validators pyrsistent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Failed to build backports.zoneinfo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;使用pip3.8安装streamlit失败, 可能与gcc版本有关(放弃)。&lt;/p&gt;
+&lt;h2 id=&#34;基于windowswsl-安装ubuntu2204&#34;&gt;基于Windows+WSL, 安装Ubuntu22.04&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;当前Ubuntu18.04LTS已经比较旧了, 很多仓库里的软件版本旧到无法使用。&lt;/li&gt;
+&lt;li&gt;试用了最新的Ubuntu22.04, 发现缺省有crontab, /etc/rc.local的问题解决起来似乎也不太麻烦 (参考: &lt;a class=&#34;link&#34; href=&#34;https://sevenrts.com/40.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ubuntu22.04 解决开机无法自动启动服务&lt;/a&gt;)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以是时候用Ubuntu22.04代替Ubuntu18.04了。&lt;br&gt;
+注: &lt;strong&gt;WSL中不存放重要数据&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;在windows卸载原有wsl-ubuntu1804&#34;&gt;在Windows卸载(原有)WSL Ubuntu18.04&lt;/h3&gt;
+&lt;p&gt;在Windows菜单里找到Ubuntu18.04LTS, 右键点击并选择应用设置-&amp;gt;卸载&lt;/p&gt;
+&lt;h3 id=&#34;在windows中安装wsl-ubuntu2204&#34;&gt;在Windows中安装WSL Ubuntu22.04&lt;/h3&gt;
+&lt;p&gt;● 打开&amp;quot;Microsoft Store&amp;quot;, 搜索Ubuntu, 点击选择Ubuntu22.04, 下载并安装后, 点击使用。&lt;br&gt;
+● 进入WSL界面后, 更新软件仓库信息。&lt;br&gt;
+修改镜像软件源参考: &lt;a class=&#34;link&#34; href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;清华大学开源软件镜像站&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/%e5%90%84%e7%a7%8d%e9%97%ae%e9%a2%98%e6%b1%87%e6%80%bb%e8%ae%b0%e5%bd%95/#ubuntu%e5%ae%98%e6%96%b9%e9%95%9c%e5%83%8f%e7%ab%99%e5%88%97%e8%a1%a8&#34; &gt;Ubuntu官方镜像站列表&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 修改为国内镜像软件源  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo sed -i &amp;#34;s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&amp;#34; /etc/apt/sources.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo sed -i &amp;#34;s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&amp;#34; /etc/apt/sources.list  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt update  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;在windows-wsl-ubuntu220中安装python3pipstreamlit&#34;&gt;在Windows WSL Ubuntu22.0中安装Python3+pip+streamlit&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt install python-is-python3  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python -V  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Python 3.10.6  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo apt install python3-pip  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pip -V  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;● 用pip安装&lt;a class=&#34;link&#34; href=&#34;https://jimway71.github.io/p/python%e5%89%8d%e7%ab%af%e6%a1%86%e6%9e%b6%e6%af%94%e8%be%83%e5%8f%8a%e9%80%89%e6%8b%a9/#%e6%af%94%e8%be%83streamlitpywebiobrythonremi%e8%bf%99%e5%9b%9b%e7%a7%8d%e5%89%8d%e6%ae%b5%e6%a1%86%e6%9e%b6&#34; &gt;streamlit&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ pip install streamlit&lt;br&gt;
+&amp;hellip;&amp;hellip;&lt;br&gt;
+Successfully installed altair-4.2.0 cachetools-5.2.0 commonmark-0.9.1 decorator-5.1.1 entrypoints-0.4 gitdb-4.0.9 gitpython-3.1.29 numpy-1.23.4 packaging-21.3 pandas-1.5.1 pillow-9.2.0 protobuf-3.20.3 pyarrow-9.0.0 pydeck-0.8.0b4 pygments-2.13.0 pympler-1.0.1 python-dateutil-2.8.2 pytz-deprecation-shim-0.1.0.post0 rich-12.6.0 semver-2.13.0 smmap-5.0.0 streamlit-1.13.0 toml-0.10.2 toolz-0.12.0 tornado-6.2 typing-extensions-4.4.0 tzdata-2022.5 tzlocal-4.2 validators-0.20.0 watchdog-2.1.9&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;● streamlit安装在~/.local/bin/目录下。&lt;br&gt;
+查看streamlit版本信息:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ ~/.local/bin/streamlit  &amp;ndash;version&lt;br&gt;
+Streamlit, version 1.13.0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;测试streamlit内置hello程序:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/.local/bin/streamlit hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Welcome to Streamlit. Check out our demo in your browser.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Network URL: http://192.168.1.230:8501
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  External URL: http://84.133.63.150:8501
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ready to create your own Python apps super quickly?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Head over to https://docs.streamlit.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  May you create awesome apps!  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;使用正常。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

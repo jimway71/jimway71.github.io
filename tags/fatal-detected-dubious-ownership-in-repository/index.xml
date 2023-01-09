@@ -172,7 +172,7 @@ Filesystem 1K-blocks Used Available Use% Mounted on&lt;br&gt;
 tmpfs 410140 8 410132 1% /tmp&lt;br&gt;
 …&lt;/p&gt;
 &lt;/blockquote&gt;
-可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。 
+可以看到, /tmp的全部空间是400M, 确认需要临时增加/tmp的空间。
 由于/root的空间够用, 因此改为/root下目录做为/tmp:&lt;br&gt;
 新建tmp的目录:
 &lt;blockquote&gt;

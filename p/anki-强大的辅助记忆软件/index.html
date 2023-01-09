@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='开源、跨平台、免费的基于間隔重複的字卡軟體'><title>Anki 强大的辅助记忆软件</title>
+
+<link rel='canonical' href='https://jimway71.github.io/p/anki-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%BE%85%E5%8A%A9%E8%AE%B0%E5%BF%86%E8%BD%AF%E4%BB%B6/'>
+
+<link rel="stylesheet" href="/scss/style.min.24899bc96d1d24fe510507ecd55d992af784bd8b97058eb3612aab9b99e2069d.css"><meta property='og:title' content='Anki 强大的辅助记忆软件'>
+<meta property='og:description' content='开源、跨平台、免费的基于間隔重複的字卡軟體'>
+<meta property='og:url' content='https://jimway71.github.io/p/anki-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%BE%85%E5%8A%A9%E8%AE%B0%E5%BF%86%E8%BD%AF%E4%BB%B6/'>
+<meta property='og:site_name' content='点滴随记'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Anki' /><meta property='article:tag' content='翻译' /><meta property='article:tag' content='背单词' /><meta property='article:published_time' content='2022-12-07T12:02:00&#43;08:00'/><meta property='article:modified_time' content='2022-12-07T12:02:00&#43;08:00'/><meta property='og:image' content='https://jimway71.github.io/wallpaper/wallpaper-66.png' />
+<meta name="twitter:title" content="Anki 强大的辅助记忆软件">
+<meta name="twitter:description" content="开源、跨平台、免费的基于間隔重複的字卡軟體"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://jimway71.github.io/wallpaper/wallpaper-66.png' />
+    <link rel="shortcut icon" href="/FixFrmRes/NAFO_Freud_Fella.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/FlexFrmRes/Ukraine-stamps-03_hua17d13b86cd762970dd15d732d3e5026_136519_300x0_resize_q75_box.jpg" width="300"
+                            height="189" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">点滴随记</a></h1>
+            <h2 class="site-description">Scientia vincere tenebras.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="✱ GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://nas.otcg.win/cgi-bin/resume.cgi'
+                        target="_blank"
+                        title="✲ 启动BFL-LS-WVL"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://wall.alphacoders.com/?lang=Chinese'
+                        target="_blank"
+                        title="✳ Wallpaper Abyss 高清壁纸"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.sioe.cn/zifu.htm'
+                        target="_blank"
+                        title="✴ 特殊字符"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/p/more-links/'
+                        target="_blank"
+                        title="✵ 更多链接"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/anki-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%BE%85%E5%8A%A9%E8%AE%B0%E5%BF%86%E8%BD%AF%E4%BB%B6/">
+                
+                    <img src="/wallpaper/wallpaper-66.png" loading="lazy" alt="Featured image of post Anki 强大的辅助记忆软件" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" >
+                Blog
+            </a>
+        
+            <a href="/categories/%E5%BA%94%E7%94%A8/" >
+                应用
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/anki-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%BE%85%E5%8A%A9%E8%AE%B0%E5%BF%86%E8%BD%AF%E4%BB%B6/">Anki 强大的辅助记忆软件</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            开源、跨平台、免费的基于間隔重複的字卡軟體
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 07, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="相关资料">相关资料</h2>
+<h3 id="官网">官网</h3>
+<ul>
+<li><a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a> 功能强大的智能闪存卡, 记住事情变得容易多了<br>
+<a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a>在Windows、MacOs、Linux、iPhone/Android这些平上都可以运行</li>
+<li><a class="link" href="https://docs.ankiweb.net/"  target="_blank" rel="noopener"
+    >Anki Manual</a>  官方手册(英文)
+<ul>
+<li><a class="link" href="https://docs.ankiweb.net/platform/windows/installing.html"  target="_blank" rel="noopener"
+    >Installing &amp; Upgrading Anki on Windows</a> 在Windows系统上安装和升级Anki</li>
+<li><a class="link" href="http://www.ankichina.net/manual/anki/"  target="_blank" rel="noopener"
+    >Anki手册</a> 官方手册中文翻译版本(不保证是最新版本)</li>
+</ul>
+</li>
+<li><a class="link" href="https://github.com/ankitects/anki"  target="_blank" rel="noopener"
+    >Anki开源官网</a> 这个仓库包含Anki计算机版本的源代码</li>
+</ul>
+<h3 id="程序插件">程序插件</h3>
+<ul>
+<li><a class="link" href="https://ankiweb.net/shared/addons/"  target="_blank" rel="noopener"
+    >Add-ons for Anki</a> <a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a>插件列表</li>
+</ul>
+<h3 id="共享记忆库shared-decks牌组卡组集合">共享记忆库(Shared Decks/牌组(卡组)/集合)</h3>
+<ul>
+<li>
+<p><a class="link" href="https://ankiweb.net/shared/decks/"  target="_blank" rel="noopener"
+    >Shared Decks</a> 共享的APK牌组/集合</p>
+<ul>
+<li><a class="link" href="https://ankiweb.net/shared/decks/chinese"  target="_blank" rel="noopener"
+    >Chinese</a> 共享的中文APK牌组/集合<br>
+试着下载
+<ul>
+<li><strong><a class="link" href="https://ankiweb.net/shared/info/1024139463"  target="_blank" rel="noopener"
+    >4000 Essential English Words, all books (English-Chinese)</a></strong> 4000个基本英语单词，所有书籍（英汉）</li>
+<li><strong><a class="link" href="https://ankiweb.net/shared/info/1426285493"  target="_blank" rel="noopener"
+    >English Roots</a></strong> 英语词根</li>
+</ul>
+</li>
+<li><a class="link" href="https://ankiweb.net/shared/decks/english"  target="_blank" rel="noopener"
+    >English</a> 共享的英语APK牌组/集合<br>
+试着下载
+<ul>
+<li><a class="link" href="https://ankiweb.net/shared/info/1104981491"  target="_blank" rel="noopener"
+    >4000 Essential English Words (all books) [en-en]</a> 4000 个基本英语单词(英-英)</li>
+<li><a class="link" href="https://ankiweb.net/shared/info/27053954"  target="_blank" rel="noopener"
+    >Cambridge Vocabulary for IELTS Advanced</a> 剑桥雅思高级词汇</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>卡片模板</p>
+<ul>
+<li><a class="link" href="https://github.com/ChristinaHyh/ICE-9/releases/tag/1.0"  target="_blank" rel="noopener"
+    >PDF.js+Chrome+Anki=任性学习专业英语工具包</a> 其中&quot;anki.apkg&quot; 是Anki卡片模版, 用于导入卡片<br>
+代替参考文档<a class="link" href="https://zhuanlan.zhihu.com/p/120863859"  title="配置Anki, 用于在阅读时添加词卡"
+     target="_blank" rel="noopener"
+    >Anki单词一键取词+制卡，强力提升你的学习效率</a>中所说的&quot;「浏览器划词.apkg」&ldquo;模板</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装参考">安装参考</h3>
+<ul>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/120863859"  title="配置Anki, 用于在阅读时添加词卡"
+     target="_blank" rel="noopener"
+    >Anki单词一键取词+制卡，强力提升你的学习效率</a></li>
+<li><a class="link" href="https://hyahui.com/pdf-js-anki"  target="_blank" rel="noopener"
+    >PDF.js+Chrome+Anki=构建语境习词库</a></li>
+</ul>
+<h3 id="更多参考">更多参考</h3>
+<ul>
+<li><a class="link" href="/p/more-links/#languages" >更多链接 - languages</a></li>
+</ul>
+<p>资源</p>
+<ul>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/21550428"  target="_blank" rel="noopener"
+    >资源篇——2005-2014考研真题阅读词汇 - 余时行的文章 - 知乎</a>  s</li>
+</ul>
+<h2 id="安装配置">安装配置</h2>
+<h3 id="安装">安装</h3>
+<h4 id="windows系统安装anki">Windows系统安装Anki</h4>
+<p>从<a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a>官网下载Windows安装包, 并进行安装</p>
+<h3 id="配置">配置</h3>
+<h4 id="windows系统下配置anki">Windows系统下配置Anki</h4>
+<p>在菜单&quot;工具&rdquo;-&ldquo;配置&quot;里, 选择&quot;简体中文&rdquo;</p>
+<h3 id="插件">插件</h3>
+<h4 id="windows系统下安装anki插件">Windows系统下安装Anki插件</h4>
+<ul>
+<li>在菜单&quot;工具&quot;-&ldquo;插件&quot;里, 点击&quot;获取插件&rdquo;</li>
+<li>在弹出的&quot;安装插件&quot;对话框里, 点击&quot;插件官网&quot;, 会在浏览器里打开<a class="link" href="https://ankiweb.net/shared/addons/"  target="_blank" rel="noopener"
+    >插件列表</a>, 在列表中查找需要的插件, 点击打开后, 在说明页面中&quot;Download&quot;后会显示一个Download &ldquo;code&rdquo;</li>
+<li>在&quot;代码&quot;中输入上面查到的Download &ldquo;code&rdquo;, 点击&quot;确定&quot;即可安装</li>
+</ul>
+<h3 id="共享记忆库shared-decks牌组卡组集合-1">共享记忆库(Shared Decks/牌组(卡组)/集合)</h3>
+<h4 id="windows系统下导入共享记忆库shared-decks牌组卡组集合">Windows系统下导入共享记忆库(Shared Decks/牌组(卡组)/集合)</h4>
+<ul>
+<li>点击记忆库列表底部的&quot;获取记忆库&quot;(获取牌组)按钮, 会在浏览器里打开<a class="link" href="https://ankiweb.net/shared/decks/"  target="_blank" rel="noopener"
+    >Shared Decks</a>, 在列表中查找需要的共享记忆库</li>
+<li>点击打开共享记忆库后, 在说明页面中有&quot;Download&quot;按钮, 点击即可下载</li>
+<li>下载后, 使用菜单&quot;文件&quot;-&ldquo;导入&quot;即可导入到<a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a>中 <br>
+或者<br>
+在<a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a>管理正在运行中时, 在文件管理器里双击文件, 即可导入<a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a></li>
+</ul>
+<h2 id="anki功能进阶">Anki功能进阶</h2>
+<h3 id="一键取词制卡">一键取词+制卡</h3>
+<h4 id="在windows上配置一键取词制卡">在Windows上配置一键取词+制卡</h4>
+<p>参考:</p>
+<ul>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/120863859"  title="配置Anki, 用于在阅读时添加词卡"
+     target="_blank" rel="noopener"
+    >Anki单词一键取词+制卡，强力提升你的学习效率</a></li>
+</ul>
+<h5 id="安装ankiconnectreplay-buttons-on-card插件">安装&quot;AnkiConnect&rdquo;+&ldquo;Replay Buttons on Card&quot;插件</h5>
+<p>在windows上给Anki程序安装插件, 插件信息为</p>
+<ul>
+<li>AnkiConnect<br>
+插件编码：2055492159</li>
+<li>Replay Buttons on Card<br>
+插件编码：498789867</li>
+</ul>
+<h5 id="导入anki卡片模版">导入Anki卡片模版</h5>
+<ul>
+<li>下载<a class="link" href="https://github.com/ChristinaHyh/ICE-9/releases/download/1.0/anki.apkg"  target="_blank" rel="noopener"
+    >Anki卡片模版</a>(anki.apkg)</li>
+<li>在windows中, 用Anki程序用导入&quot;打包的Anki牌组/集合(*.apkg *.colpkg *.zip)&ldquo;的方式导入该Anki卡片模板</li>
+<li>导入成功后主页面将显示出名称为「浏览器划词」的记忆库(deck)</li>
+</ul>
+<p>完成后, 关闭<a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a>并重新启动</p>
+<h5 id="在浏览器上安装插件实现网页浏览实时翻译一键取词一键制卡">在浏览器上安装插件实现网页浏览实时翻译、一键取词、一键制卡</h5>
+<h6 id="在chrome上安装在线词典助手插件">在Chrome上安装&quot;在线词典助手&quot;插件</h6>
+<ul>
+<li><a class="link" href="https://chrome.google.com/webstore/detail/online-dictionary-helper/lppjdajkacanlmpbbcdkccjkdbpllajb"  target="_blank" rel="noopener"
+    >Online Dictionary Helper</a> 在线词典助手-Chrome应用商店</li>
+</ul>
+<p>在<a class="link" href="https://chrome.google.com/webstore/detail/online-dictionary-helper/lppjdajkacanlmpbbcdkccjkdbpllajb"  target="_blank" rel="noopener"
+    >Online Dictionary Helper</a>页面中点击&quot;添加至Chrome&quot;按钮, 即可开始安装插件<br>
+插件安装完成后, 在<u>确认<a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a>正在运行中</u>的情况下, 对插件进行配置(见图)<br>
+<img src="/img/66-anki-01.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Chrome插件配置"
+	
+	
+><br>
+<img src="/img/66-anki-02.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Chrome插件配置"
+	
+	
+><br>
+然后在Chrome浏览器上打开<a class="link" href="chrome://extensions/" >扩展程序</a>, 点击&quot;在线词典助手&rdquo;-&ldquo;详情&quot;进行配置(见图)<br>
+<img src="/img/66-anki-03.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Chrome插件配置"
+	
+	
+></p>
+<p>配置完成, 现在可以在Chrome浏览器上实现一键取词并制卡, 热键(当前设置)为<kbd>Shift</kbd><br>
+<img src="/img/66-anki-04.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Chrome一键取词"
+	
+	
+><br>
+点击卡片上的<font color=green size=6> + </font>即可将卡片添加到<a class="link" href="https://apps.ankiweb.net/"  title="Powerful, intelligent flash cards. Remembering things just became much easier."
+     target="_blank" rel="noopener"
+    >Anki</a><br>
+实际了在浏览网页时实时翻译、一键取词、一键制卡。</p>
+<h5 id="使用浏览工具实现pdf文件浏览实时翻译一键取词一键制卡">使用浏览工具实现pdf文件浏览实时翻译、一键取词、一键制卡</h5>
+<ul>
+<li><a class="link" href="https://github.com/ChristinaHyh/ICE-9/releases/download/1.0/pdfjs.zip"  target="_blank" rel="noopener"
+    >pdf浏览工具</a></li>
+</ul>
+<p>操作如下</p>
+<ul>
+<li>下载<a class="link" href="https://github.com/ChristinaHyh/ICE-9/releases/download/1.0/pdfjs.zip"  target="_blank" rel="noopener"
+    >pdf浏览工具</a></li>
+<li>解压下载的文件, 解压后会出现两个目录, 其中一个是web目录, web目录中有viewer.html文件</li>
+<li>双击打开&quot;web/viewer.html&quot;文件, &ldquo;web/viewer.html&quot;文件会在chrome浏览器中打开</li>
+<li>点击&quot;Open File&quot;图标, 选择pdf文件, 并打开</li>
+<li>在打开的pdf文件中, 可以使用热键(当前设置)<kbd>Shift</kbd>实时翻译、一键取词、一键制卡<br>
+<img src="/img/66-anki-05.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="pdf浏览取词"
+	
+	
+></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/anki/">Anki</a>
+        
+            <a href="/tags/%E7%BF%BB%E8%AF%91/">翻译</a>
+        
+            <a href="/tags/%E8%83%8C%E5%8D%95%E8%AF%8D/">背单词</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under  the GNU General Public License v2.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/nemiks-nanifesto/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-Nemik%27s%20manifesto.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-Nemik&#39;s manifesto.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nemik&#39;s Nanifesto</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/midjourney/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-65.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-65.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Midjourney</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/chatgpt%E9%97%AE%E7%AD%94/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-64.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-64.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">chatGPT问答</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/jupyterlab-codex/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-63.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-63.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Jupyterlab Codex</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BF%BB%E5%A2%99%E7%B3%BB%E5%88%97/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/wallpaper/wallpaper-61.jpg" loading="lazy" data-key="" data-hash="/wallpaper/wallpaper-61.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">翻墙系列</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 点滴随记
+    </section>
+    
+    <section class="powerby">
+        
+            Jimway <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.13.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#相关资料">相关资料</a>
+      <ol>
+        <li><a href="#官网">官网</a></li>
+        <li><a href="#程序插件">程序插件</a></li>
+        <li><a href="#共享记忆库shared-decks牌组卡组集合">共享记忆库(Shared Decks/牌组(卡组)/集合)</a></li>
+        <li><a href="#安装参考">安装参考</a></li>
+        <li><a href="#更多参考">更多参考</a></li>
+      </ol>
+    </li>
+    <li><a href="#安装配置">安装配置</a>
+      <ol>
+        <li><a href="#安装">安装</a>
+          <ol>
+            <li><a href="#windows系统安装anki">Windows系统安装Anki</a></li>
+          </ol>
+        </li>
+        <li><a href="#配置">配置</a>
+          <ol>
+            <li><a href="#windows系统下配置anki">Windows系统下配置Anki</a></li>
+          </ol>
+        </li>
+        <li><a href="#插件">插件</a>
+          <ol>
+            <li><a href="#windows系统下安装anki插件">Windows系统下安装Anki插件</a></li>
+          </ol>
+        </li>
+        <li><a href="#共享记忆库shared-decks牌组卡组集合-1">共享记忆库(Shared Decks/牌组(卡组)/集合)</a>
+          <ol>
+            <li><a href="#windows系统下导入共享记忆库shared-decks牌组卡组集合">Windows系统下导入共享记忆库(Shared Decks/牌组(卡组)/集合)</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#anki功能进阶">Anki功能进阶</a>
+      <ol>
+        <li><a href="#一键取词制卡">一键取词+制卡</a>
+          <ol>
+            <li><a href="#在windows上配置一键取词制卡">在Windows上配置一键取词+制卡</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
